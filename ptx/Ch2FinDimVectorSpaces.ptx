@@ -1,0 +1,28 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch2FinDimVectorSpaces">
+  <title>Finite-dimensional vector spaces</title>
+  <introduction>
+    <p>
+      In this course we concentrate on
+      <em>finite-dimensional</em> vector spaces,
+      which we will define in this chapter.
+    </p>
+
+    <assemblage>
+      <p>
+        <em>Warning</em>: From now on, I will use shorthand and write scalar multiplication
+        <m>k \smul\ve{v}</m> simply as <m>k \ve{v}</m>!
+      </p>
+    </assemblage>
+  </introduction>
+
+
+  <xi:include  href="Ch2Sec1LinearCombinationSpan.ptx" />
+  <xi:include  href="Ch2Sec2LinearIndependence.ptx" />
+  <xi:include  href="Ch2Sec3BasisDimension.ptx" />
+  <xi:include  href="Ch2Sec4CoordinateVectors.ptx" />
+  <xi:include  href="Ch2Sec5ChangeOfBasis.ptx" />
+
+</chapter>
+

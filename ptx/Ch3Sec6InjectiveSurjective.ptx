@@ -1,0 +1,241 @@
+
+
+<section xml:id="Ch3Sec6InjectiveSurjective">
+  <title>Injective and surjective linear maps</title>
+  <definition>
+    <statement>
+      <p>
+        A function <m>f : X \rightarrow Y</m> from a set <m>X</m> to a set <m>Y</m> is called <term>one-to-one</term>
+        (or <term>injective</term>)
+        if whenever <m>f(x) = f(x')</m> for some
+        <m>x,
+        x' \in X</m> it necessarily holds that <m>x = x'</m>.
+        The function <m>f</m> is called <term>onto</term>
+        (or <term>surjective</term>)
+        if for all <m>y \in Y</m> there exists an <m>x \in X</m> such that <m>f(x) = y</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    If <m>f</m> is a <em>linear map</em> between vector spaces
+    (and not just an arbitrary function between sets),
+    there is a simple way to check if <m>f</m> is injective.
+  </p>
+
+  <lemma xml:id="injective-kernel-lemma">
+    <statement>
+      <p>
+        Let <m>T : V \rightarrow W</m> be a linear map between vector spaces.
+        Then:
+        <me>
+          \mbox{(}T\mbox{ is injective}  \Longleftrightarrow \mbox{(} \Ker(T) = \{\ve{0}_V\} \mbox{)} 
+        </me>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      <m>\Rightarrow</m>.
+      Suppose <m>T : V \rightarrow W</m> is one-to-one.
+      We already know one element in <m>\Ker(T)</m>, namely <m>\ve{0}_V</m>,
+      since <m>T(\ve{0}_V) = \ve{0}_W</m> as <m>T</m> is linear.
+      Since <m>T</m> is one-to-one,
+      this must be the only element in <m>\Ker(T)</m>.
+    </p>
+
+    <p>
+      <m>\Leftarrow</m>.
+      Suppose <m>\Ker(T) = \{\ve{0}_V\}</m>.
+      Now, suppose that
+      <me>
+        T(\ve{v}) = T(\ve{v}')
+      </me>
+      for some vectors <m>\ve{v}, \ve{v}' \in V</m>.
+      Then we have <m>T(\ve{v}) - T(\ve{v}') = \ve{0}_W</m>,
+      and since <m>T</m> is linear,
+      this means <m>T(\ve{v} - \ve{v}') = \ve{0}_W</m>.
+      Hence <m>\ve{v} - \ve{v}' \in \Ker(T)</m>,
+      and so <m>\ve{v} - \ve{v}' = \ve{0}_V</m>,
+      in other words, <m>\ve{v} = \ve{v}'</m>,
+      which is what we wanted to show.
+    </p>
+  </proof>
+
+  <p>
+    Another simplification occurs if <m>T</m> is a linear map from a vector space <m>V</m> to itself (i.e.
+    <m>T</m> is a linear operator on <m>V</m>),
+    and <m>V</m> is finite-dimensional.
+  </p>
+
+  <lemma xml:id="inj-surj">
+    <statement>
+      <p>
+        Let <m>T : V \rightarrow V</m> be a linear operator on a finite-dimensional vector space <m>V</m>.
+        Then:
+        <me>
+          T \mbox{ is injective}  \Longleftrightarrow T \mbox{ is surjective} 
+        </me>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      <m>\Rightarrow</m>.
+      Suppose <m>T</m> is injective.
+      <md>
+        <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp (<xref ref="injective-kernel-lemma"/>) </mrow>
+        <mrow>\amp \therefore \Nullity(T) = 0</mrow>
+        <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  \text{(by Rank-Nullity Theorem)}</mrow>
+        <mrow>\amp \therefore \Im(T) = V \amp \amp   (<xref ref="lin-ind-implies-basis"/>)</mrow>
+      </md>
+    </p>
+
+    <p>
+      Hence <m>T</m> is surjective.
+    </p>
+
+    <p>
+      <m>\Leftarrow</m>.
+      Suppose <m>T</m> is surjective.
+      <md>
+        <mrow>\amp \therefore \Im(T) = V</mrow>
+        <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
+        <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  \text{(by Rank-Nullity Theorem)}</mrow>
+        <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
+        <mrow>\amp \therefore T \mbox{ is injective. }   \amp \amp  (<xref ref="lin-ind-implies-basis"/>)</mrow>
+      </md>
+    </p>
+  </proof>
+
+  <proposition xml:id="iso-inj-surj">
+    <statement>
+      <p>
+        A linear map <m>T : V \rightarrow W</m> is an isomorphism if and only if <m>T</m> is injective and surjective.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      <m>\Rightarrow</m>.
+      Suppose <m>V</m> and <m>W</m> are isomorphic.
+      That is, there exists a pair of linear maps <m>T : V\rightleftarrows W : S</m> such that
+      <m>T \circ S = \id_W</m> and <m>S \circ T = \id_C</m>.
+      We will show that <m>T</m> is injective and surjective.
+      <md>
+        <mrow>\mbox{Suppose that }  T(\ve{v}_1) \amp = T(\ve{v}_2).</mrow>
+        <mrow>\therefore S(T(\ve{v}_1)) \amp = S(T(\ve{v}_2))</mrow>
+        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \mbox{(using } S \circ T = \id_V)</mrow>
+        <mrow>\therefore \ve{v}_1 \amp = \ve{v}_2</mrow>
+      </md>
+      which shows that <m>T</m> is injective.
+      To show that <m>T</m> is surjective, let <m>\ve{w} \in W</m>.
+      We must show that there exists
+      <m>\ve{v} \in V</m> such that <m>T(\ve{v}) = \ve{w}</m>.
+      Indeed, set <m>\ve{v} := S(\ve{w})</m>.
+      Then
+      <md>
+        <mrow>T(\ve{v}) \amp = T(S(\ve{w}))</mrow>
+        <mrow>\amp = \id_W (\ve{w})  \mbox{(using } T \circ S = \id_W)</mrow>
+        <mrow>\amp = \ve{w}</mrow>
+      </md>.
+    </p>
+
+    <p>
+      <m>\Leftarrow</m>.
+      Suppose that there exists a linear map
+      <m>T : V \rightarrow W</m> which is injective and surjective.
+      We will show that there exists a linear map <m>S : W \rightarrow V</m> such that
+      <m>S \circ T = \id_V</m> and <m>T \circ S = \id_W</m>,
+      which will prove that <m>V</m> and <m>W</m> are isomorphic.
+    </p>
+
+    <p>
+      We define the inverse map <m>S</m> as follows:
+      <md>
+        <mrow>S : W \amp  \rightarrow V</mrow>
+        <mrow>\ve{w} \amp  \mapsto \mbox{the unique } \ve{v} \in V \text{ such that } T(\ve{v}) = \ve{w}.</mrow>
+      </md>
+    </p>
+
+    <p>
+      This map is well-defined.
+      Indeed, given <m>\ve{w} \in W</m>,
+      the fact that <m>T</m> is surjective means there does exist <em>some</em>
+      <m>\ve{v} \in V</m> such that <m>T(\ve{v}) = \ve{w}</m>.
+      The fact that <m>T</m> is injective implies that this <m>\ve{v}</m> is unique.
+      For if there exists another
+      <m>\ve{v}' \in V</m> with <m>S(\ve{v}') = \ve{w}</m>,
+      then we have <m>\ve{v}' = \ve{v}</m> since <m>T</m> is injective.
+    </p>
+
+    <p>
+      At this point we have a well-defined <em>function</em>
+      <m>S : W \rightarrow V</m> which satisfies
+      <m>T \circ S = \id_W</m> and <m>S \circ T = \id_V</m>.
+      We only need to check that <m>S</m> is linear.
+    </p>
+    <p>
+      Let <m>\ve{w}_1, \ve{w}_2 \in W</m>.
+      Then
+      <md>
+        <mrow>S( a \ve{w}_1 + b \ve{w}_2) \amp = S\big(a T(S(\ve{w}_1)) + b T(S(\ve{w}_2)) \big) \amp \amp  (\text{using } T \circ S = \id_W )</mrow>
+        <mrow>\amp = S\big( a T(\ve{v}_1) + b T(\ve{v}_2) \big) \amp \amp \left(\text{setting }  \ve{v}_1 := S(\ve{w}_1), 
+        \ve{v}_2 := S(\ve{w}_2)) \right) </mrow>
+        <mrow>\amp = S\big(T(a \ve{v}_1 + b \ve{v}_2)\big) \amp \amp  (T \text{ is linear})</mrow>
+        <mrow>\amp = a \ve{v}_1 + b \ve{v}_2 \amp \amp   ((S \circ T = \id_V)</mrow>
+      </md>
+    </p>
+
+    <p>
+      Hence <m>S</m> is linear, which completes the proof.
+    </p>
+  </proof>
+
+  <proposition xml:id="equiv-inj-sur-iso">
+    <statement>
+      <p>
+        Let <m>T : V \rightarrow V</m> be a linear operator on a finite-dimensional vector space <m>V</m>.
+        The following statements are equivalent:
+
+        <ul>
+          <li>
+            <title>1.</title>
+            <p>
+              <m>T</m> is injective.
+            </p>
+          </li>
+
+          <li>
+            <title>2.</title>
+            <p>
+              <m>T</m> is surjective.
+            </p>
+          </li>
+
+          <li>
+            <title>3.</title>
+            <p>
+              <m>T</m> is an isomorphism.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      (1) is equivalent to (2) by <xref ref="inj-surj">Lemma</xref>.
+      On the other hand, (1) and (2) is equivalent to (3) by <xref ref="iso-inj-surj">Proposition</xref>.
+    </p>
+  </proof>
+
+<!--  <solutions divisional="solution answer" /> -->
+
+
+</section>
+

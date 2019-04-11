@@ -1,0 +1,736 @@
+
+
+<section xml:id="ACh1Sec1Intro">
+  <title>Inleiding</title>
+  <subsection>
+    <title>Drie verskillende versamelings</title>
+    <p>
+      Ons begin met 'n speletjie.
+      In wiskunde is 'n <em>versameling</em> <m>X</m> maar
+      net 'n kolleksie van onderskeibare objekte.
+      Hierdie objekte word
+      <em>elemente</em> van <m>X</m> genoem.
+    </p>
+
+    <p>
+      Ek gaan drie verskillende versamelings aan jou toon en jy moet s&#xea;
+      watter eienskappe hulle in gemeen het.
+    </p>
+
+    <p>
+      Die eerste versameling, <m>A</m>,
+      word gedefinieer as die versameling van alle
+      geordende pare <m>(x, y)</m>,
+      waar <m>x</m> en <m>y</m> re&#xeb;le getalle is.
+    </p>
+
+    <assemblage>
+      <p>
+        Kom ons stop hier vir 'n oomblik en vertaal die definisie van Afrikaans
+        na wiskundige simbole.
+        Die vertaling is:
+        <men>
+          A := \{ (a_1,\, a_2) : a_1,a_2 \in \mathbb{R}  \} 
+        </men>.
+      </p>
+
+      <p>
+        Die <m>:=</m> staan vir <sq>is gedefinieer as</sq>.
+        Die <m>\{</m> en <m>\}</m> simbole staan
+        vir <sq>die versalmeling van alle</sq>.
+        Die enkele dubbelpunt <m>:</m> staan vir
+        <sq>waar</sq> of <sq>sodat</sq>.
+        Die komma tussen <m>a</m> en <m>b</m> staan vir <sq>en</sq>.
+        Die
+        <m>\in</m> staan vir `'n element van'. En <m>\mathbb{R}</m> staan vir die
+        versameling van alle re&#xeb;le getalle.
+        Veels geluk!
+        <mdash /> jy gebruik die
+        taal van wiskunde!
+      </p>
+    </assemblage>
+
+    <p>
+      'n Element van <m>A</m> is 'n arbitr&#xea;re paar van re&#xeb;le getalle
+      <m>\ve{a} = (a_1, \, a_2)</m>.
+      Byvoorbeeld, <m>(1, \, 2) \in A</m> en
+      <m>(3.891, \,
+      e^\pi)</m> is elemente van <m>A</m>.
+      Let ook op dat ek 'n vetdruk <m>\ve{a}</m> gebruik
+      om na 'n element van <m>A</m> te verwys.
+      Dit is sodat ons <m>\ve{a}</m> kan onderskei
+      van sy <em>komponente</em> <m>a_1</m> en <m>a_2</m>, wat net gewone getalle is
+      (nie
+      elemente van <m>A</m> nie).
+    </p>
+
+    <p>
+      Ons kan 'n element <m>\ve{a}</m> van <m>A</m> visualiseer as 'n punt in die
+      Cartesiese vlak waarvan die <m>x</m>-ko&#xf6;rdinaat <m>a_1</m> en die
+      <m>y</m>-ko&#xf6;rdinaat <m>a_2</m> is:
+      <sidebyside valign="middle" margins="20% 40%">
+        <p> <m> \ve{a} \xmapsto{\text{visualiseer as}} </m> </p>
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
+              % \draw[->, thick] (0,0) -- (1.3, 1);
+              \draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+              \draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+              \node[color=red] at (1.6,1) {$\ve{a}$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
+    </p>
+
+    <p>
+      Die tweede versameling, <m>B</m>,
+      word gedefinieer as die versameling van alle
+      geordende re&#xeb;le drietalle
+      <m>(u_1, \, u_2, \, u_3)</m>, wat <m>u_1 - u_2 + u_3
+      = 0</m> bevredig.
+      In wiskundige simbole is dit soos volg:
+      <men>
+        B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \mbox{ en } 
+        b_1 - b_2 + b_3 = 0\} 
+      </men>.
+    </p>
+
+    <p>
+      Byvoorbeeld, <m>(2,3, 1) \in B</m>,
+      maar <m>(1,1,1) \notin B</m>.
+      Ons kan 'n element
+      <m>\ve{b}</m> van <m>B</m> visualiseer as 'n punt in die vlak in 3-dimensionele
+      ruimte wat deur die vergelyking <m>x-y+z = 0</m> daargestel word:
+        <sidebyside valign="middle" margins="20% 40%">
+        <p> <m> \ve{b} \xmapsto{\text{visualiseer as}} </m> </p>
+        <image width="30%">
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+            \draw[->] (0, 0) -- (2,0) node[right] {$y$};
+            \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+            \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+            \node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) {};
+            \node[color=red] at (0.5, 0.9) {$\ve{b}$};
+            \draw[thick] (-0.1, -1) -- (-1, 0.4);
+            \draw[thick] (-1, 0.4) -- (0.3, 1.5);
+            \draw[thick] (0.3, 1.5) -- (1.5, 0.4);
+            \draw[thick] (1.5, 0.4) -- (-0.1, -1);
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
+    </p>
+
+    <p>
+      Die derde versameling, <m>C</m>,
+      is die versameling van alle vierdegraadse
+      polinome.
+      Omgesit in wiskundige simbole, ,
+      <men>
+        C := \{ \mbox{polinome met graad \(\leq 4\)} \}
+      </men>.
+    </p>
+
+    <p>
+      Onthou dat die <em>graad</em> van 'n polinoom is die grootse mag van <m>x</m> wat
+      daarin verskyn.
+      Byvoorbeeld, <m>\ve{c} = x^4 - 3 x^3 + 2x^2</m> is
+      'n vierdegraadse polinoom; so ook is <m>\ve{p} = 2x^3 + \pi x</m>.
+      So <m>\ve{c}</m>
+      en <m>\ve{p}</m> is elemente van <m>C</m>.
+      Maar <m>\ve{r} = 8x^5 - 7</m> en
+      <m>\ve{s} =
+      \sin(x)</m> is nie elemente van <m>C</m> nie.
+      Ons kan 'n element <m>\ve{c} \in C</m>
+      (i.e. 'n vierdegraadse polinoom) met sy
+      <em>grafiek</em> visualiseer.
+      Byvoorbeeld,
+      die polinoom <m>\ve{c} = x^4 - 3x^3 + 2x^2 \in C</m> word soos volg
+      visualiseer:
+      <sidebyside valign="middle" margins="20% 40%">
+        <p> <m> \ve{c} \xmapsto{\text{visualiseer as}} </m> </p>
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}[domain=-0.5:2.2]
+            \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+            \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+            \draw[color=red, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)}) 
+            node[right] {$\ve{c}$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
+    </p>
+
+    <p>
+      Daar het jy dit.
+      Ek het drie versamelings definieer:
+      <m>A</m>, <m>B</m> en <m>C</m>, en ek
+      het verduidelik hoe elkeen visualiseer kan word.
+      Die drie versamelings lyk
+      aanvanklik redelik verskillend.
+      Elemente van <m>A</m> is arbitr&#xea;re punte in
+      <m>\mathbb{R}^2</m>.
+      Elemente van <m>B</m> is punte in <m>\mathbb{R}^3</m> wat 'n sekere
+      vergelyking bevredig.
+      Elemente van <m>C</m> is almal polinome.
+    </p>
+
+    <p>
+      Watter kenmerke het hierdie versamelings in gemeen?
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Gedeelde kenmerke van die versamelings</title>
+    <introduction>
+      <p>
+        Ek wil fokus op twee kenmerke wat versamelings in <m>A</m>,
+        <m>B</m> en <m>C</m> in gemeen
+        het.
+      </p>
+    </introduction>
+
+    <subsubsection>
+      <title>Sommering</title>
+      <p>
+        Eerstens het aldrie hierdie versamelings 'n natuurlike
+        <em>sommeringsbewerking</em>.
+        Ons kan twee elemente in 'n versameling
+        bymekaar tel om 'n derde element in dieselfde versameling te kry.
+      </p>
+
+      <p>
+        In Versameling <m>A</m> kan ons twee elmente <m>\ve{a} = (a_1, \, a_2)</m> en
+        <m>\ve{a}'= (a_1', \, a_2')</m> bymekaar tel deur hulle onderskeie komponente
+        bymekaar te tel om 'n nuwe element <m>\ve{a} + \ve{a}' \in A</m> te vorm:
+        <men xml:id="add_in_A">
+          \underbrace{(a_1, \, a_2)}_{\ve{a}} + \underbrace{(a'_1, \,a'_2)}_{\ve{a}'}
+          := \underbrace{(a_1 + a_1', \, a_2 + a_2')}_{\ve{a} + \ve{a}'}
+        </men>
+      </p>
+
+      <p>
+        Byvoorbeeld, <m>(1, \,3) + (2, \,-1.6) = (3, \,1.4)</m>.
+        Ons kan die
+        sommeringsbewerking soos volg visualiseer:
+        <sidebyside valign="middle" widths="20% 5% 20% 5% 20%">
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {} ;
+              \draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+              \draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+              \node[color=red] at (1.6,1) {$\ve{a}$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+        <p>+</p>
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (0.5, 0.3) {} ;
+              \draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
+              \draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
+              \node[color=red] at (0.9,0.4) {$\ve{a}'$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+        <p>=</p>
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.8, 1.3) {} ;
+              \draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
+              \draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
+              \node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
+      </p>
+
+      <p>
+        Ons kan 'n soortgelyke benadering in versameling <m>B</m> volg.
+        Versonderstel
+        ons het twee elemente van <m>B</m>,
+        <m>\ve{b} = (b_1, \,b_2, \,b_3)</m> en <m>\ve{b}'
+        = (b_1', \, b_2', \, b_3')</m>.
+        Let daarop dat, omdat <m>\ve{b}\in B</m>, bevredig
+        <m>\ve{b}</m> se komponente die vergelyking <m>b_1 - b_2 + b_3 = 0</m>.
+        So bevredig
+        <m>b'</m> ook <m>b'_1 - b'_2 + b'_3 = 0</m>.
+        Ons kan <m>\ve{b}</m> en <m>\ve{b}'</m> saamtel om
+        'n nuwe element <m>\ve{b} + \ve{b}'</m> van <m>B</m> te kry,
+        deur hulle komponente
+        saam te tel soos tevore:
+        <men xml:id="new_add_in_B">
+          \underbrace{(b_1, \, b_2, \, b_3)}_{\ve{b}} + \underbrace{(b'_1, \,b'_2, \,
+          b'_3)}_{\ve{b}'} := \underbrace{(b_1 + b_1', \, b_2 + b_2', \, b_3 +
+          b'_3)}_{\ve{b} + \ve{b}'}
+        </men>
+      </p>
+
+      <p>
+        Nou moet ons versigtig wees.
+        Hoe weet ons dat die uitdrukking aan die
+        regterkant regtig 'n element van <m>B</m> is?
+        Ons moet seker maak dat dit die
+        vergelyking <sq>die eerste komponent minus die tweede komponent plus die derde
+        komponent is gelyk aan nul</sq> bevredig.
+        Kom ons doen dit formeel:
+        <md>
+          <mrow>(\ve{b} + \ve{b}')_1 - (\ve{b}+\ve{b}')_2 + (\ve{b}+\ve{b}')_3 \amp = (b_1
+          + b'_1) - (b_2 + b'_2) + (b_3 + b'_3)</mrow>
+          <mrow>.
+          \amp = (b_1 - b_2 + b_3) + (b'_1 - b'_2 + b'_3)</mrow>
+          <mrow>\amp = 0 + 0</mrow>
+          <mrow>\amp = 0</mrow>
+        </md>.
+      </p>
+
+      <p>
+        <m>B</m> kan op die selfde manier as <m>A</m> visualiseer word.
+      </p>
+
+      <p>
+        Daar is ook 'n sommeringsbewerking in die versameling <m>C</m>.
+        Ons kan twee
+        polinome algebra&#xef;es bymekaartel deur hulle ooreenstemmende
+        ko&#xeb;ffisi&#xeb;nte
+        bymekaar te tel:
+        <mdn>
+         <mrow number="no">[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
+          <mrow xml:id="add_in_C">:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
+        </mdn>
+      </p>
+
+      <p>
+        Byvoorbeeld,
+        <me>
+          [2x^4  + x^2 - 3x + 2] + [2x^3 - 7x^2 + x]
+          = 2x^4 + 2x^3 - 6x^2 -2x + 2
+        </me>.
+      </p>
+
+      <p>
+        Daar is nog 'n manier om aan die sommering van polinome te dink.
+        Elke
+        polinoom <m>\ve{c}</m> kan gesien word as 'n
+        <em>funksie</em>, in die sin dat ons
+        'n arbitr&#xea;re waarde <m>x</m> in die polinoom <m>\ve{c}</m> in kan vervang, en dit
+        sal 'n waarde <m>\ve{c}(x)</m> voortbring.
+        Byvoorbeeld, as <m>\ve{c}(x) = 3x^2 -
+        1</m>, dan is <m>\ve{c}(2) = 11</m>.
+        As ons polinome as funksies beskou, dan kan
+        aan die som <m>\ve{c} + \ve{d}</m> van twee polinome gedink word as 'n nuwe
+        funksie wat,
+        wanneer 'n getal <m>x</m> invervang word, dit die waarde
+        <m>\ve{c}(x) + \ve{d}(x)</m> teruggee.
+        Wiskundig geskryf,
+       <men xml:id="add_in_C2">
+          (\ve{c} + \ve{d})(x) := \ve{c}(x) + \ve{d}(x)
+        </men>
+      </p>
+
+      <p>
+        Deur so te dink,
+        kan ons die grafiek van <m>\ve{c} + \ve{d}</m> as die som van
+        die grafieke van <m>\ve{c}</m> en <m>\ve{d}</m> voorstel:
+        <sidebyside>
+              <image>
+              <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+  circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+  \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+    \draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
+        node[right] {$\ve{c}$};
+    \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
+    \draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7, -0.6069);
+\end{tikzpicture}
+\quad + \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+  circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+  \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+    \draw[color=red, thick] plot[id=p] (\x ,{-0.2*\x*\x})
+        node[right] {$\ve{d}$};
+   \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
+    \draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7, -0.578);
+\end{tikzpicture} = \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+  circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+  \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+  \draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};    
+    \draw[color=red, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
+        node[above right] {$\ve{c}+\ve{d}$};
+   \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
+    \draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);       
+\end{tikzpicture}
+]]>
+              </latex-image>
+              </image>
+        </sidebyside>
+      </p>
+    </subsubsection>
+
+    <subsubsection>
+      <title>Nul-element</title>
+      <p>
+        In aldrie versamelings <m>A</m>,
+        <m>B</m> en <m>C</m>, bestaan daar 'n spesifieke element
+        (die <em>nul-element</em>) <m>\ve{0}</m> wat,
+        as dit by 'n ander element getel
+        word, lewer dit weer dieselfde element onveranderd terug.
+      </p>
+
+      <p>
+        In <m>A</m> word die nul-element <m>\ve{0}</m> definieer deur
+        <men xml:id="zero_in_A">
+          \ve{0} := (0,0) \in A
+        </men>.
+      </p>
+
+      <p>
+        Wanneer jy hierdie punt by 'n ander punt <m>(a_1, \, a_2) \in A</m> tel, gebeur
+        niks nie!
+        <me>
+          (0, \,0) + (a_1, \, a_2) = (a_1, \, a_2)
+        </me>.
+      </p>
+
+      <p>
+        Moenie die nul-element <m>\ve{0} \in A</m> met die re&#xeb;le getal nul (<m>0 \in
+        \mathbb{R}</m>) verwar nie.
+        Dit is nog 'n rede hoekom ek vetdruk gebruik! (Jy
+        moet elemente van <m>A</m> onderstreep om die onderskeid te tref.)
+      </p>
+
+      <p>
+        <m>(0,0,0) \in B</m> is die nul-element <m>\ve{0}</m> in <m>B</m>.
+        As jy dit by 'n ander
+        punt <m>(u_1, u_2, u_3) \in B</m> tel, gebeur niks nie!
+        <me>
+          (0, \, 0, \, 0) + (u_1, \, u_2, \, u_3) = (u_1, \, u_2, \, u_3)
+        </me>.
+      </p>
+
+      <p>
+        In <m>C</m> is die <em>nul-polinoom</em>
+        die nul-element <m>\ve{0}</m>.
+        Algebra&#xef;es
+        is dit die vierdegraadse polinoom waarvan die ko&#xeb;ffisi&#xeb;nte almal
+        nul is:
+        <men xml:id="zero_in_C">
+          \ve{0} = 0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0
+        </men>
+      </p>
+
+      <p>
+        As ons aan die polinoom as 'n funksie dink, dan is die nul-polinoom
+        <m>\ve{0}</m> die funksie wat vir alle waardes van <m>x</m> nul is, i.e.
+        <m>\ve{0} (x)
+        = 0</m> vir alle <m>x</m>.
+        Hoe ons ookal daaraan dink, as ons die nul-polinoom by
+        'n ander polinoom tel, gebeur niks nie!
+<md>
+          <mrow> [0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0] + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
+          <mrow>= [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
+        </md>
+      </p>
+    </subsubsection>
+
+    <subsubsection>
+      <title>Skalaarvermenigvuldiging</title>
+      <p>
+        Die laaste kenmerk wat <m>A</m>,
+        <m>B</m> en <m>C</m> in gemeen het is dat met elke
+        versameling, hul elemente met re&#xeb;le getalle
+        <em>vermenigvuldig</em> kan
+        word en steeds in die versameling sal wees.
+      </p>
+
+      <p>
+        Byvoorbeeld,
+        as <m>\ve{a} = (a_1, a_2)</m> 'n elment van <m>A</m> is,
+        dan kan ons dit
+        met 'n arbitr&#xea;re re&#xeb;le getal, s&#xea;
+        maar <m>9</m>, vermenigvuldig, om
+        'n nuwe element <m>9\cdot a</m> van <m>A</m> te kry.
+        Hierdie vermenigvuldiging word
+        komponentgewys gedoen:
+        <men xml:id="sm_in_A">
+          9 \cdot (a_1, \,a_2) := (9 a_1, \, 9a_2)
+        </men>.
+      </p>
+
+      <p>
+        In die algemeen,
+        as <m>k \in \mathbb{R}</m> 'n arbitr&#xea;re re&#xeb;le getal is,
+        dan kan ons 'n arbitr&#xea;re element
+        <m>\ve{a} \in A</m> met <m>k</m> vermenigvuldig
+        om 'n nuwe element <m>k \cdot \ve{a} \in A</m> te kry deur elke komponent van
+        <m>\ve{a}</m> met <m>k</m> te vermenigvuldig:
+        <me>
+          \underbrace{k.(a_1, \, a_2)}_{\text{ Skalaarvermenigvuldiging} } := (\underbrace{k a_1}_{\text{Vermenigvuldig twee getalle} }, \, \underbrace{k a_2})
+        </me>
+      </p>
+
+      <p>
+        Wees versigtig om te onderskei tussen skalaarvermenigvuldiging
+        <m>k \cdot
+        \ve{a}</m> (aangedui met <m>\cdot</m>) en gewone vermenigvuldiging van re&#xeb;le
+        getalle <m>k a_1</m>
+        (aangedui sonder enige simbool,
+        die twee simbole word bloot
+        langs mekaar geplaas).
+        Later gaan ons 'n kortpad neem en ophou om die
+        <m>\cdot</m> eksplisiet uit te skryf <mdash /> wees gewaarsku!
+      </p>
+
+      <p>
+        Visueel <em>skaleer</em> die vermenigvuldigingsbewerking <m>\ve{a}</m> met 'n
+        faktor van <m>k</m>.
+        Dit is hoekom ons dit <em>skalaarvermenigvuldiging</em>
+        noem.
+      </p>
+
+      <p>
+        Daar is 'n soortgelyke skalaarvermenigvuldigingsbewerking in <m>B</m>:
+        <men xml:id="sm_in_B">
+          k (u_1, \, u_2, \, u_3) := (k u_1, \, k u_2, \, k u_3)
+        </men>
+      </p>
+
+      <p>
+        Daar is ook 'n skalaarvermenigvuldigingsbewerking in <m>C</m>.
+        Ons
+        vermenigvuldig elke ko&#xeb;ffisient van 'n polinoom <m>\ve{c} \in C</m> met <m>k</m>:
+        <men xml:id="sm_in_C">
+          k \cdot [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] = k c_0 x^4 + k c_3 x^3
+          + k c_2 x^2 + k c_1 x + k c_0
+        </men>
+      </p>
+
+      <p>
+        As ons aan 'n polinoom <m>\ve{c}</m> as 'n funksie dink,
+        dan korrespondeer dit
+        met vertikale <em>skalering</em>
+        van die grafiek met 'n faktor van <m>k</m>.
+      </p>
+    </subsubsection>
+
+  </subsection>
+
+  <subsection>
+    <title>Kenmerkse wat die versamelings <em>nie</em> het nie</title>
+    <p>
+      Kom on noem 'n paar kenmerke wat die versamelings
+      <em>nie</em> het nie, of
+      ten minste nie in gemeen het nie.
+
+      <ul>
+        <li>
+          <p>
+            Die versameling <m>A = \mathbb{R}^2</m> het 'n
+            <em>vermenigvuldigingsbewerking</em>.
+            Dit is omdat ons <m>\mathbb{R}^2</m>
+            as die komplekse vlak <m>\mathbb{C}</m> kan beskou; ons weet hoe om
+            komplekse getalle kan vermenigvuldig.
+            Daar is geen duidelike
+            kandidaat vir 'n vermenigvuldigingsbewerking op <m>B</m> nie.
+            Dieselfde
+            geld vir <m>C</m>: as jy twee vierdegraadse polinome in <m>C</m>
+            vermenigvuldig,
+            eindig jy met 'n agtstegraadse polinoom, wat nie in
+            <m>C</m> is nie!
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Daar is 'n <em><sq>bereken die afgeleide</sq></em>-bewerking op <m>C</m>,
+            <me>
+              \ve{c} \mapsto \frac{d}{dx} \ve{c}
+            </me>
+            wat ons later weer sal te&#xeb;kom.
+            Let op dat die wanneer die
+            afgeleide bereken word, die graad van 'n polinoom met 1 afneem, so
+            die resultaat bly in <m>C</m>,
+            wat beteken dat dit 'n goedgedefinieerde
+            afbeelding van <m>C</m> na <m>C</m> is.
+            Daar is geen ooreenstemmende
+            bewerking hiervoor in <m>A</m> en <m>B</m> nie.
+
+            <assemblage>
+              <p>
+                Let daarop dat daar geen <em>integrasie</em>-afbeelding van <m>C</m>
+                na <m>C</m> is nie, want integrasie van 'n polinoom <em>verhoog</em>
+                die graad met <m>1</m>, so die resultaat mag dalk 'n polinoom van
+                graad <m>5</m> wees, wat nie in <m>C</m> is nie!
+              </p>
+            </assemblage>
+
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Re&#xeb;ls</title>
+    <p>
+      Ons het gevind dat elk van ons drie versamelings <m>A</m>,
+      <m>B</m> en <m>C</m> 'n
+      <em>sommeringsbewerking</em> <m>+</m>, 'n
+      <em>nul-element</em> <m>\ve{0}</m> en 'n
+      <em>skalaarvermenigvuldigingsbewerking</em> <m>\cdot</m> het.
+      Kan ons enige
+      re&#xeb;ls
+      identifiseer waaraan hierdie bewerkings in al drie versamelings moet
+      voldoen?
+    </p>
+
+    <p>
+      Byvoorbeeld,
+      ons kan aan die sommeringsbewerking in <m>A</m> dink as 'n funksie
+      wat aan elke elementpaar <m>\ve{a}</m> en <m>\ve{a}'</m> in <m>A</m> 'n nuwe element
+      <m>\ve{a} + \ve{a}'</m> in <m>A</m> toeken.
+      Voldoen hierdie bewerking aan enige
+      re&#xeb;ls?
+    </p>
+
+    <p>
+      Kom ons kyk.
+      Laat <m>\ve{a} = (a_1, \,a_2)</m> en <m>\ve{a}' = (a'_1, \, a'_2)</m>
+      elemente van <m>A</m> wees.
+      Ons kan hulle in twee verskillende volgordes
+      bymekaar tel,
+      <me>
+        \ve{a} + \ve{a}' = (a_1 + a'_1, \, a_2 + a'_2)
+      </me>
+      en
+      <me>
+        \ve{a}' + \ve{a} = (a'_1 + a_1, \, a'_2 + a_2)
+      </me>.
+    </p>
+
+    <p>
+      Kom dit op dieselfde neer?
+      In ander woorde, geld
+      <men xml:id="comm_in_A">
+        \ve{a} + \ve{a}' = \ve{a}' + \ve{a}
+      </men>
+      as 'n re&#xeb;l?
+      Die antwoord is <em>ja</em>, maar hoekom?
+      Om na te gaan of
+      twee elemente van <m>A</m> dieselfde is,
+      moet ons nagaan of elkeen van hulle
+      komponente gelyk is.
+      Die eerste komponent van <m>\ve{a} + \ve{a}'</m> is <m>a_1 +
+      a'_1</m>.
+      Die eerste komponent van <m>\ve{a}' + \ve{a}</m> is <m>a'_1 + a_1</m>.
+      Is
+      <m>a_1 + a'_1 = a'_1 + a_1</m>?
+      Ja <mdash /> want beide is net gewone re&#xeb;le
+      getalle (nie elemente van <m>A</m> nie),
+      en ons weet dat vir gewone re&#xeb;le
+      getalle kan jy in enige orde saamtel met dieselfde resultaat.
+      So die
+      eerste komponent van <m>\ve{a} + \ve{a}'</m> is gelyk aan die eerste komponent
+      van <m>a' + a</m>.
+      Net so kan ons nagaan dat die tweede komponent van
+      <m>\ve{a} +
+      \ve{a}'</m> gelyk is aan die tweede komponent van <m>\ve{a}' + \ve{a}</m>.
+      So all
+      die komponente van <m>\ve{a} + \ve{a}'</m> is gelyk aan al die ooreenstemmende
+      komponente van <m>\ve{a}' + \ve{a}</m>.
+      So, uiteindelik kan ons tot die
+      gevolgtrekking kom dat <m>\ve{a} + \ve{a}' = \ve{a}' + \ve{a}</m>.
+    </p>
+
+    <p>
+      Geld hierdie re&#xeb;l <xref ref="comm_in_A" /> ook vir sommeringsoperators in <m>B</m>
+      en <m>C</m>?
+      Ja.
+      Byvoorbeeld, kom ons gaan na dat dit vir <m>C</m> geld.
+      Veronderstel dat <m>\ve{c}</m> en <m>\ve{c}'</m> polinome in <m>C</m> is.
+      Geld die
+      re&#xeb;l
+      <men xml:id="must_check">
+        \ve{c} + \ve{c}' = \ve{c}' + \ve{c}
+      </men>
+      steeds?
+    </p>
+
+    <p>
+      Die linker- en regterkante van <xref ref="must_check" /> is elemente van <m>C</m>.
+      En
+      alle elemente van <m>C</m> is polinome.
+      Om na te gaan of twee polinome gelyk
+      is, moet ons nagaan of hulle gelyk is
+      <em>as funksies</em>, met ander woorde,
+      of jy identiese resultate uitkry vir enige moontlike insetwaarde van <m>x</m>
+      wat invervang word.
+    </p>
+
+    <p>
+      By 'n arbitr&#xea;re insetwaarde <m>x</m> is die linkerkant <m>(\ve{c} +
+      \ve{c}')(x) = \ve{c}(x) + \ve{c}'(x)</m>.
+      Aan die anderkant is die regterkant
+      <m>(\ve{c}' + \ve{c})(x) = \ve{c}'(x) + \ve{c}(x)</m>.
+      Nou, let op dat
+      <m>\ve{c}(x)</m> en <m>\ve{c}'(x)</m> gewone getalle is
+      (en nie polinome nie).
+      So
+      <m>\ve{c}(x) + \ve{c}'(x) = \ve{c}'(x) + \ve{c}(x)</m>,
+      want dit is waar vir
+      gewone getalle.
+      So vir elke insetwaarde <m>x</m>,
+      <m>(\ve{c} + \ve{c}') (x) =
+      (\ve{c}' + \ve{c})(x)</m>.
+      Daarom is die polinome <m>\ve{c}+\ve{c}'</m> en
+      <m>\ve{c}' + \ve{c}</m> gelyk,
+      hulle uitsetwaarde is dieselfde vir alle getalle
+      <m>x</m>.
+    </p>
+
+    <p>
+      Daar is ander re&#xeb;ls wat ook vir al drie versamelings geld.
+      Byvoorbeeld, in al drie versamelings geld die re&#xeb;l
+      <men>
+        (\ve{x} + \ve{y}) + \ve{z} = \ve{x} + (\ve{y} + \ve{z})
+      </men>
+      vir alle elemente <m>\ve{x}</m>,
+      <m>\ve{y}</m> en <m>\ve{z}</m>.
+      Kan jy ander re&#xeb;ls
+      identifiseer wat vir al drie versamelings geld?
+    </p>
+  </subsection>
+
+</section>
+

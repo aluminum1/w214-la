@@ -1,0 +1,168 @@
+<section xml:id="Tut2">
+<title>W214 2019, Linear Algebra Tutorial 2</title>
+<shorttitle>Tutorial 2</shorttitle>
+
+<p>Note: You are welcome to use SageMath to help you solve some of the problems below. You can either just type into one of the provided Sage cells, or you can use the <url href="https://sagecell.sagemath.org/">SageMath cell server</url>.</p>
+
+<exercises>
+
+<assemblage><title>1.6 Subspaces</title>
+</assemblage>
+
+
+<exercise>
+<statement> <p> Read through the webpage version of <xref ref="soln-diff-eqns-sec"/> (Solutions to homogenous linear differential equations), which is new and contains a lot of SageMath examples.   </p>
+
+</statement>
+</exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Show that the set
+        <me>
+          V := \{ (a, -a, b, -b) : a, b \in \mathbb{R} \}
+        </me>
+        is a subspace of <m>\mathbb{R}^4</m>.
+      </p>
+    </statement>
+  </exercise>
+
+ <exercise>
+    <statement>
+      <p>
+        Consider the set
+        <me>
+          V := \{ \mathbf{f} \in \Diff((-1, 1)) : f'(0) = 2 \}
+        </me>
+      </p>
+
+      <p>
+        Is <m>V</m> a subspace of <m>\Diff((-1,1))</m>?
+        If you think it is, <em>prove</em> that it is.
+        If you think it is not, <em>prove</em> that it is not!
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Is <m>\mathbb{R}^+ := \{ \ve{x} \in \mathbb{R} : \ve{x} \geq 0 \}</m> a subspace of <m>\mathbb{R}</m>?
+        If you think it is, <em>prove</em> that it is.
+        If you think it is not, <em>prove</em> that it is not!
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a nonempty subset <m>V</m> of
+        <m>\mathbb{R}^2</m> which is closed under scalar multiplication,
+        but <m>V</m> is not a subspace of <m>\mathbb{R}^2</m>.
+      </p>
+    </statement>
+  </exercise>
+
+<assemblage><title>2.1 Linear Combinations and Span</title>
+</assemblage>
+
+ <exercise>
+ 	<statement><p>Can the polynomial <m>p = x^3 -x + 2 \in \Poly_3</m> be expressed as a linear combination of
+ 	<me>
+  p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1 \text{ ?}
+ </me>
+ Setup the appropriate system of simultaneous linear equations. Then solve these by hand, or using SageMath, as in Example <xref ref="poly_example_lin_comb"/>. </p>
+ <sage>
+ 	<input>
+ 	</input>
+ </sage>
+ 	</statement>
+ </exercise>
+
+ <exercise>
+ 	<statement><p>Carrying on from the previous question, can the same polynomial <m>p = x^3 -x + 2 \in \Poly_3</m> be expressed as a linear combination of
+ 	<me>
+  p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1, p_4 = 1-x  \text{ ?}
+ </me>
+ Setup the appropriate system of simultaneous linear equations. Then solve these by hand, or using SageMath, as in Example <xref ref="poly_example_lin_comb"/>. </p>
+
+  <sage>
+ 	<input>
+ 	</input>
+ </sage>
+ 	</statement>
+ </exercise>
+
+ <exercise><statement> <p>Show that the polynomials 
+ 	<me>
+  p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1, p_4 = 1-x 
+ </me>
+ from the previous question span <m>\Poly_3</m>.  Setup the appropriate system of simultaneous linear equations. Then solve these by hand, or using SageMath, as in Example <xref ref="three_vectors_spanning_R2_example"/>. </p>
+  <sage>
+ 	<input>
+ 	</input>
+ </sage>
+</statement>
+</exercise>
+
+
+<assemblage><title>2.2 (Linear Independence) </title></assemblage>
+
+<exercise> <statement> <p>Read through the webpage version of <xref ref="Ch2Sec1LinearCombinationSpan"/>. I have added some new material, and gave examples of how to use SageMath to solve systems of linear equations. </p></statement></exercise>
+
+<exercise xml:id="exercise-span-omission">
+    <statement> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
+    </statement>
+  </exercise>
+
+<exercisegroup>
+<introduction>
+	<p>Consider the following list of matrices, thought of as vectors in <m>\Mat_{2,2}</m>:</p>
+         <me>
+\ve{v}_1 = \begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 1
+\end{bmatrix},\,
+\ve{v}_2 = \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix},\,
+\ve{v}_3 = \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix},\,
+\ve{v}_4 = \begin{bmatrix}
+0 &amp; 3 \\
+1 &amp; -1
+\end{bmatrix},\,
+\ve{v}_5 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+      </me>
+   </introduction>
+   <exercise> <statement> <p>Show that the list is linearly dependent. You are welcome to use SageMath (you will first need to setup the appropriate system of linear equations). </p>
+   	<sage>
+   		<input>
+   		</input>
+   	</sage>
+   </statement>
+</exercise>
+
+<exercise> <statement><p> Go through the same steps as in <xref ref="app_of_prop_preceding">Example</xref>
+        to find the first vector in the list which is either the zero vector or a linear combination of the preceding vectors. You are welcome to use SageMath at the points in your calculation when you need to solve a system of simultaneous linear equations.</p>
+        <sage>
+        	<input>
+        	</input>
+        </sage>
+</statement>
+</exercise>
+</exercisegroup>
+
+</exercises>
+
+</section>
+
+

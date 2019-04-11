@@ -1,0 +1,324 @@
+<section xml:id="Tut2Afr">
+<title>W214 2019, Lineêre Algebra Tutoriaal 4</title>
+<shorttitle>Tutoriaal 4</shorttitle>
+
+<p>Let op: Jy is welkom om die <url href="https://sagecell.sagemath.org/">SageMath cell server</url> te gebruik om jou te help om van die probleme op te los, of om jou berekeninge te kontrolleer.  </p>
+
+<exercises>
+
+
+<assemblage><title>2.4 Koördinaatevektore</title>
+</assemblage>
+
+  <exercise xml:id="matrix_basis_exercise-tut">
+    <statement>
+      <p>
+        Laat <m>\basis{B} = \bopen \mat{B}_1, \mat{B}_2, \mat{B}_3, \mat{B}_4 \bclose</m> die
+        volgende basis van <m>\Mat_{2,2}</m> wees:
+        <me>
+ \mat{B}_1 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}, \mat{B}_2 =
+ \begin{bmatrix}
+1 &amp; 0\\
+0&amp; -1
+\end{bmatrix},
+ \mat{B}_3 = \begin{bmatrix}
+1 &amp; 1\\
+1 &amp; 1
+\end{bmatrix},
+ \mat{B}_4 = \begin{bmatrix}
+0 &amp; 1\\
+-1 &amp; 0
+\end{bmatrix}
+ </me>.
+      </p>
+
+      <p>
+        Bereken <m>[\mat{A}]_\basis{B}</m>, waar
+        <me>
+          \mat{A} =  \begin{bmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{bmatrix}.
+        </me>
+      </p>
+    </statement>
+  </exercise>
+
+    <exercise>
+    <statement>
+        <ol>
+          <li>
+            <title>(a)</title>
+            <p>Bepaal 'n basis  <m>\basis{B}</m> vir die vektorruimte
+        <me>
+          V := \{ p \in \Poly_2 : p(2) = 0 \}
+        </me>.
+      </p>
+          </li>
+          <li>
+            <title>(b)</title>
+            <p>
+               Beskou <m>p(x) = x^2 + x - 6</m>. Toon aan dat <m>p \in V</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              Bepaal die koëffisiënte van <m>p</m> met betrekking tot jou basis <m>\basis{B}</m>,
+              m.a.w. bepaal <m>[p]_\basis{B}</m>.
+            </p>
+          </li>
+        </ol>
+    </statement>
+  </exercise>
+
+<exercise>
+  <statement> <p>Beskou die vektorruimte <m>W</m> uit <xref ref="dimension_of_hyperplane"/>,
+  <me>
+  W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \},
+</me>
+en die volgende basisse vir <m>W</m>:
+<me>
+ \basis{B} = \bopen \ve{a}, \ve{b} \bclose, \quad  \basis{C} = \bopen \ve{u}, \ve{v} \bclose
+</me>
+where
+<md>
+ <mrow> \ve{a} \amp = (1, 0, -\frac{1}{3}), \amp \ve{b} \amp = (0, 1, - \frac{2}{3}) </mrow>
+ <mrow> \ve{u} \amp = (1, 2, -\frac{5}{3}), \amp \ve{v} \amp = (-4, 2, 0) </mrow>
+</md>
+Beskou die vektor <m>\ve{w} = (-2, 4, -2) \in \mathbb{R}^3</m>. 
+ <ol>
+  <li>Toon aan dat <m>\ve{w} \in W</m>. </li>
+  <li>Bereken <m>[\ve{w}]_{\basis{B}}</m>.</li>
+  <li>Bereken <m>[\ve{w}]_{\basis{C}}</m>. </li>
+ </ol>
+</p>
+</statement>
+</exercise>
+
+    <exercise>
+    <statement>
+      <p>Laat <m>V</m> die vektorruimte van oplossings van die volgende differensiaalvergelyking wees:
+      <men xml:id="diff_eqn_exerc_1_tut">
+        y^{''} + y = 0.
+      </men>
+      </p>
+      <ol>
+        <li> <p> Toon aan dat <m>\basis{B} = \bopen \cos x, \, \sin x \bclose </m> 'n basis vir  <m>V</m> is. </p> </li>
+        <li> <p> Laat <m>y \in V</m> gedefineer word as die unieke oplossing van die differensiaalvergelyking <xref ref="diff_eqn_exerc_1_tut"/> wat die volgende beginwaardes bevredig:
+        <me>
+        y(\frac{\pi}{6}) = 1, \quad y'(\frac{\pi}{6}) = 0.
+      </me>
+      (Let op dat ons kan inderdaad  <m>y</m> in hierdie manier in 'n unieke manier defineer as gevolg van <xref ref="diff_eqn_exist_unique"/>.) Bereken <m>[y]_\basis{B}</m>. </p>
+    </li>
+    <li> <p>Laat <m>z(x) = \cos\left(x - \frac{\pi}{3} \right)</m>.</p>
+      <ol>
+        <li>Toon aan dat <m>z \in V</m> deur te kontrolleer dat dit die differensiaalvergelyking  <xref ref="diff_eqn_exerc_1_tut"/> op los.</li>
+        <li>Bereken <m>[z]_{\basis{B}}</m>. </li>
+
+      </ol>
+
+    </li>
+      </ol>
+    </statement>
+    </exercise>
+
+<assemblage><title>2.5 Verandering van basis</title>
+</assemblage>
+
+
+    <exercise>
+      <statement>
+        <p>
+          Dit is 'n voortsetting van <xref ref="matrix_basis_exercise-tut">Oefening</xref>.
+          Beskou die volgende twee basisse vir
+          <m>\Mat_{2,2}</m>:
+          <me>
+\basis B = \left\{ 
+\text{B}_1 =   \begin{bmatrix} 1 &amp;  0 \\ 0 &amp;  11 \end{bmatrix}, \,
+\text{B}_2 =   \begin{bmatrix} 1 &amp;  0\\ 0 &amp;  -1 \end{bmatrix}, \, 
+\text{B}_3 =   \begin{bmatrix} 1 &amp;  1 \\ 1 &amp;  1 \end{bmatrix}, \,
+\text{B}_4 =   \begin{bmatrix} 0 &amp;  1 \\ -1 &amp; 0 \end{bmatrix}               
+\right\}
+      </me>
+          <me>
+\basis C = \left\{ 
+\text{C}_1 =   \begin{bmatrix} 1 &amp;  1 \\ 0 &amp;  0  \end{bmatrix}, \,
+\text{C}_2 =   \begin{bmatrix} 1 &amp;  -1 \\ 0 &amp;  0 \end{bmatrix}, \, 
+\text{C}_3 =   \begin{bmatrix} 0 &amp;  0 \\ 1 &amp;  1 \end{bmatrix}, \,
+\text{C}_4 =   \begin{bmatrix} 0 &amp;  0 \\ 1 &amp; -1 \end{bmatrix}               
+\right\}
+      </me>
+          <dl>
+            <li>
+              <title>(a)</title>
+              <p>
+                Bereken die basisomskakelingmatrikse
+                <m>\mat{P}_{\basis{C}
+                \leftarrow \basis{B}}</m> en <m>\mat{P}_{\basis{B} \leftarrow
+                \basis{C}}</m>.
+              </p>
+            </li>
+
+            <li>
+              <title>(b)</title>
+              <p>
+                Bereken <m>[\mat{A}]_\basis{B}</m> en <m>[\mat{A}]_\basis{C}</m>,
+                waar
+                <me>
+                A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
+              </me>.
+              </p>
+            </li>
+
+            <li>
+              <title>(c)</title>
+              <p>
+                Gaan na dat <m>[\mat{A}]_\basis{C} = \mat{P}_{\basis{C}
+                \leftarrow \basis{B}} [\mat{A}]_\basis{B}</m> en dat
+                <m>[\mat{A}]_\basis{B} = \mat{P}_{\basis{B} \leftarrow \basis{C}}
+                [\mat{A}]_\basis{C}</m>.
+              </p>
+            </li>
+          </dl>
+        </p>
+      </statement>
+    </exercise>
+
+  <exercise>
+    <statement><p><xref ref="w_in_b_basis_exc_tut"/> vertoon \n basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> vir <m>\mathbb{R}^2</m>, 'n agtergrond van integrale lineêre kombinasies van <m>\ve{b}_1</m> and <m>\ve{b}_2</m>, en 'n sekere vektor <m>\ve{w} \in \mathbb{R}^2</m>. Soortgelyk, <xref ref="w_in_c_basis_exc_tut"/> vertoon nog 'n basis <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose</m> vir <m>\mathbb{R}^2</m>, 'n agtergrond van integrale lineêre kombinasies van <m>\ve{c}_1</m> en <m>\ve{c}_2</m>, en dieselfde vektor <m>\ve{w} \in \mathbb{R}^2</m>. </p>
+    <sidebyside>
+      <figure xml:id="w_in_b_basis_exc_tut">
+      <caption>Die vektor <m>\ve{w}</m> teen 'n agtergrond van integrale lineêre kombinasies van die basisvektore uit <m>\basis{B}</m>. </caption>
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+  \draw[red, dotted] (-3, -9) -- (9, -3);
+  \draw[red, dotted] (-4, -7) -- (8, -1);  
+  \draw[red, dotted] (-5, -5) -- (7, 1);
+  \draw[red, dotted] (-6, -3) -- (6, 3);
+  \draw[red, dotted] (-7, -1) -- (5, 5);
+  \draw[red, dotted] (-8, 1) -- (4, 7);
+  \draw[red, dotted] (-9, 3) -- (3, 9);
+
+  \draw[red, dotted] (-3, -9) -- (-9, 3);
+  \draw[red, dotted] (-1, -8) -- (-7, 4);
+  \draw[red, dotted] (1, -7) -- (-5, 5);
+  \draw[red, dotted] (3, -6) -- (-3, 6);
+  \draw[red, dotted] (5, -5) -- (-1, 7);
+  \draw[red, dotted] (7, -4) -- (1, 8);
+  \draw[red, dotted] (9, -3) -- (3, 9);
+
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (-1,2);
+  \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (3,-1);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </figure>
+
+  <figure xml:id="w_in_c_basis_exc_tut">
+    <caption>Die vektor <m>\ve{w}</m> teen 'n agtergrond van integrale lineêre kombinasies van die basisvektore uit  <m>\basis{C}</m>. </caption>
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+  \draw[blue, dotted] (0, -6) -- (6, 0);
+  \draw[blue, dotted] (-1, -5) -- (5, 1);
+  \draw[blue, dotted] (-2, -4) -- (4, 2);
+  \draw[blue, dotted] (-3, -3) -- (3, 3);
+  \draw[blue, dotted] (-4, -2) -- (2, 4);
+  \draw[blue, dotted] (-5, -1) -- (1, 5);
+  \draw[blue, dotted] (-6, 0) -- (0, 6);
+
+  \draw[blue, dotted] (0, -6) -- (-6, 0);
+  \draw[blue, dotted] (1, -5) -- (-5, 1);
+  \draw[blue, dotted] (2, -4) -- (-4, 2);
+  \draw[blue, dotted] (3, -3) -- (-3, 3);
+  \draw[blue, dotted] (4, -2) -- (-2, 4);
+  \draw[blue, dotted] (5, -1) -- (-1, 5);
+  \draw[blue, dotted] (6, 0) -- (0, 6);
+
+  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (1,1); 
+  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (-1,1);
+  \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (3,-1);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+    </figure>
+  </sidebyside>
+    <ol>
+      <li xml:id="ch-basis-exercise2-tut">
+        <p> Bepaal <m>[\ve{w}]_\basis{B}</m>, direk uit <xref ref="w_in_b_basis_exc"/>. </p>
+      </li>
+      <li xml:id="ch-basis-exercise3-tut">
+        <p> Bepaal <m>[\ve{w}]_\basis{C}</m>, direk uit <xref ref="w_in_c_basis_exc"/>. </p>
+      </li>
+      <li xml:id="ch-basis-exercise1-tut"> <p>Die volgende figuur vertoon die <m>\basis{B}</m> basis teen 'n agtergrond van integrale lineêre kombinasies van  die <m>\basis{C}</m> basis:
+
+    <sidebyside>
+    <image width="60%">
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+
+  \draw[blue, dotted] (0, -6) -- (6, 0);
+  \draw[blue, dotted] (-1, -5) -- (5, 1);
+  \draw[blue, dotted] (-2, -4) -- (4, 2);
+  \draw[blue, dotted] (-3, -3) -- (3, 3);
+  \draw[blue, dotted] (-4, -2) -- (2, 4);
+  \draw[blue, dotted] (-5, -1) -- (1, 5);
+  \draw[blue, dotted] (-6, 0) -- (0, 6);
+
+  \draw[blue, dotted] (0, -6) -- (-6, 0);
+  \draw[blue, dotted] (1, -5) -- (-5, 1);
+  \draw[blue, dotted] (2, -4) -- (-4, 2);
+  \draw[blue, dotted] (3, -3) -- (-3, 3);
+  \draw[blue, dotted] (4, -2) -- (-2, 4);
+  \draw[blue, dotted] (5, -1) -- (-1, 5);
+  \draw[blue, dotted] (6, 0) -- (0, 6);
+
+  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (1,1); 
+  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (-1,1);
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (-1,2);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+  </sidebyside>
+        Bereken die verandering-van-basis matriks <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m>. (U mag aanneem dat alle koëffisiënte óf heelgetalle óf half-heelgetalle is.)</p>
+      </li>
+      <li> Vermenigvuldig die matriks was jy in <xref ref="ch-basis-exercise1-tut" text="title">(c)</xref> bereken het met die kolomvektor wat jy in  <xref ref="ch-basis-exercise2-tut" text="title">(a)</xref> bereken het. Dit wil sê, bereken die produk <m>\mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{w}]_{\basis{B}}</m>. Is jou antwoord diselfde as wat jy in  <xref ref="ch-basis-exercise3-tut" text="title">(b)</xref> bereken het?
+    </li>
+    </ol>
+    </statement>
+  </exercise>
+
+
+<exercise>
+  <statement>
+    Beskou die volgende drie basisse vir <m>\mathbb R^3</m>:
+    <md>
+    <mrow>  \mathcal A = \bopen (1,0,0), (0,1,0), (0,0,1) \bclose </mrow>
+      <mrow> \mathcal B = \bopen (2,1,1) , (1,1,1), (0,2,1) \bclose </mrow>
+     <mrow> \mathcal C= \bopen (1,2,3),(0,1,0),(1,0,1) \bclose</mrow>.
+    </md>
+    Bereken <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}, \mat{P}_{\basis{B} \leftarrow \basis{A}}, \mat{P}_{\basis{C} \leftarrow \basis{A}}</m> en verifieer die vergelyking
+    <me>
+\mat{P}_{\basis{C} \leftarrow \basis{B}}  \mat{P}_{\basis{B} \leftarrow \basis{A}} =  \mat{P}_{\basis{C} \leftarrow \basis{A}}.
+  </me>
+  </statement>
+</exercise>
+  
+
+
+
+
+
+
+</exercises>
+
+</section>

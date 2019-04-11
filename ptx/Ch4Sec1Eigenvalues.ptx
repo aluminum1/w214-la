@@ -1,0 +1,436 @@
+
+
+<section xml:id="Ch4Sec1Eigenvalues">
+  <title>Eigenvalues</title>
+  <definition>
+    <statement>
+      <p>
+        Let <m>T : V \rightarrow V</m> be a linear operator on a vector space <m>V</m>.
+        We say that <m>\lambda \in \mathbb{R}</m> is an
+        <term>eigenvalue of <m>T</m></term>
+        if there exists a nonzero vector
+        <m>\ve{v} \in V</m> such that <m>T(\ve{v}) = \lambda \ve{v}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <proposition xml:id="prop_eigenvalue">
+    <statement>
+      <p>
+        Suppose that <m>T : V \rightarrow V</m> is a linear map,
+        and <m>V</m> is finite-dimensional.
+        Then the following are equivalent:
+
+        <ul>
+          <li>
+            <title>1.</title>
+            <p>
+              <m>\lambda</m> is an eigenvalue of <m>T</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>2.</title>
+            <p>
+              <m>\lambda \id_V - T</m> is not injective.
+            </p>
+          </li>
+
+          <li>
+            <title>3.</title>
+            <p>
+              <m>\lambda \id_V - T</m> is not surjective.
+            </p>
+          </li>
+
+          <li>
+            <title>4.</title>
+            <p>
+              <m>\lambda \id_V - T</m> is not invertible.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </proposition>
+
+  <assemblage>
+    <p>
+      I hope you understand the notation here.
+      If <m>S, T : V \rightarrow W</m> are linear maps,
+      we can <em>add them</em> together to get a new linear map
+      <me>
+        S+T : V \rightarrow W
+      </me>
+      defined by <m>(S+T)(\ve{v}) := S(\ve{v}) + T(\ve{v})</m>.
+      So when I write <sq><m>T - \lambda \id_V</m></sq>, I am referring to the linear map <m>V \rightarrow V</m> defined by
+      <me>
+        (\lambda \id_V - T) (\ve{v}) := \lambda \id_V(\ve{v}) - T (\ve{v}) = \lambda \ve{v} - T(\ve{v})
+      </me>.
+    </p>
+  </assemblage>
+
+  <proof>
+    <p>
+      (1) <m>\Rightarrow</m> (2).
+      Suppose <m>\lambda</m> is an eigenvalue of <m>T</m>.
+      <md>
+        <mrow>\amp \therefore \mbox{There exists a nonzero \(\ve{v} \in V\) such that \(T(\ve{v}) = \lambda \ve{v}\).}</mrow>
+        <mrow>\amp \therefore \lambda \ve{v} - T(\ve{v}) = \ve{0}</mrow>
+        <mrow>\amp  \therefore (\lambda \id_V - T)(\ve{v}) = \ve{0}</mrow>
+        <mrow>\amp  \therefore \ve{v} \in \Ker(\lambda \id_V - T)</mrow>
+      </md>
+    </p>
+
+    <p>
+      But <m>\ve{v}</m> is nonzero.
+      So we have a nonzero vector in the kernel of <m>\lambda \id_V - T</m>,
+      so <m>\lambda \id_V - T</m> is not injective,
+      by <xref ref="injective-kernel-lemma">Lemma</xref>.
+    </p>
+
+    <p>
+      (2) <m>\Rightarrow</m> (1).
+      Suppose <m>\lambda \id_V - T</m> is not injective.
+      <md>
+        <mrow>\amp  \therefore \Ker(\lambda \id_V - T) \neq \{\ve{0} \} \amp \amp  \mbox{(by <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
+        <mrow>\amp  \therefore \mbox{there exists a nonzero \(\ve{v} \in V\) such that}</mrow>
+        <mrow>\amp   (\lambda \id_V - T)(\ve{v}) = \ve{0}.</mrow>
+        <mrow>\amp  \mbox{That is, \(T(\ve{v}) = \lambda \ve{v}\), so \(\lambda\) is an eigenvalue of \(T\).}</mrow>
+      </md>
+    </p>
+
+    <p>
+      Clearly (2) <m>\Leftrightarrow</m> (3)
+      <m>\Leftrightarrow</m> (4) by <xref ref="equiv-inj-sur-iso">Proposition</xref>.
+    </p>
+  </proof>
+
+  <p>
+    We have a simple test for when a <em>matrix</em>
+    <m>A</m> is invertible: simply
+    compute the determinant <m>\det(A)</m>.
+    If <m>\det(A) = 0</m>, then the matrix is
+    <em>not</em> invertible.
+    If <m>\det(A) \neq 0</m>, the matrix is invertible.
+  </p>
+
+  <assemblage>
+    <p>
+      Indeed, this is where the word <sq>determinant</sq> comes from!
+      It <em>determines</em> whether a matrix is invertible or not.
+    </p>
+  </assemblage>
+
+  <p>
+    But how do we know when a <em>linear operator</em> is invertible?
+  </p>
+
+  <definition xml:id="determinant_lin_op">
+    <statement>
+      <p>
+        The <term>determinant</term> of a linear operator
+        <m>T : V \rightarrow V</m> on a finite-dimensional vector space <m>V</m> is the determinant of the matrix of <m>T</m> relative to any basis <m>\basis{B}</m> of <m>V</m>.
+        That is,
+        <me>
+          \det(T) := \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right),  \basis{B} \text{ any basis for \(V\). }
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <lemma>
+    <statement>
+      <p>
+        The determinant of a linear operator,
+        as defined above, is well-defined.
+        That is, if <m>\basis{B}</m> and
+        <m>\basis{C}</m> are bases for <m>V</m>, then
+        <me>
+          \det\left( [T]_{\basis{C} \leftarrow \basis{C}} \right) = \det\left( [T]_{\basis{B} \leftarrow \basis{B}} \right)
+        </me>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      We know from <xref ref="matrix-in-different-basis">Theorem</xref> that
+      <me>
+        [T]_{\basis{C} \leftarrow \basis{C}} = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} \mat{P}
+      </me>
+      where <m>\mat{P} = \mat{P}_{\basis{B} \leftarrow \basis{C}}</m>.
+      Therefore,
+      <md>
+        <mrow>\det\left( [T]_{\basis{C} \leftarrow \basis{C}} \right) \amp = \det \left( \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} \mat{P} \right)</mrow>
+        <mrow>\amp = \det(\mat{P}^{-1}) \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})  \amp \amp  \mbox{(\(\det(\mat{A} \mat{B}) = \det(\mat{A}) \det (\mat{B})\))}</mrow>
+        <mrow>\amp = \frac{1}{\det(\mat{P})} \det\left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})</mrow>
+        <mrow>\amp = \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
+      </md>.
+    </p>
+  </proof>
+
+  <p>
+    Now that we know how to define the determinant of a linear operator,
+    we can make the following definition.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>characteristic polynomial</term>
+        <m>\chi_T</m> of a linear operator
+        <m>T : V \rightarrow V</m> on a finite-dimensional vector space <m>V</m> is defined by
+        <me>
+          \chi_T (\lambda) := \det(\lambda \id - T)
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <assemblage>
+    <p>
+      The reason that <m>\chi_T</m> is a <em>polynomial</em>
+      (and not just an arbitrary function)
+      comes from the formula for the determinant.
+      More on this later.
+    </p>
+  </assemblage>
+
+  <p>
+    In summary, we see that <m>\lambda</m> is an eigenvalue of a linear operator <m>T</m> if and only if <m>\lambda</m> is a root of the characteristic polynomial of <m>T</m>.
+    Let us record this formally as an extension of <xref ref="prop_eigenvalue">Proposition</xref>.
+  </p>
+
+  <proposition xml:id="eigvalue_root_charpoly">
+    <statement>
+      <p>
+        Let <m>T</m> be a linear operator on a finite-dimensional vector space <m>V</m>,
+        and <m>\lambda \in \mathbb{R}</m>.
+        Then the following are equivalent:
+
+        <ul>
+          <li>
+            <title>1.</title>
+            <p>
+              <m>\lambda</m> is an eigenvalue of <m>T</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>2.</title>
+            <p>
+              <m>\lambda \id - T</m> is not invertible.
+            </p>
+          </li>
+
+          <li>
+            <title>3.</title>
+            <p>
+              <m>\chi_T(\lambda) = 0</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      The only thing left to show is that (2) <m>\Leftrightarrow</m> (3).
+      Indeed, if <m>\basis{B}</m> is a basis for <m>V</m>, then
+      <md>
+        <mrow>\amp \mbox{\(\lambda \id - T\) is not invertible}</mrow>
+        <mrow>\amp  \Leftrightarrow \mbox{the matrix \([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}}\) is not invertible}  \amp \amp  \mbox{(<xref ref="map-iso-matrix-iso">Corollary</xref>)}</mrow>
+        <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) = 0 \amp \amp  \mbox{(Property of \(\det\))}</mrow>
+        <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \mbox{(Defn of \(\chi_T(\lambda)\))}</mrow>
+      </md>
+    </p>
+  </proof>
+
+  <example xml:id="poly-example-eigenvalue">
+    <statement>
+      <p>
+        Find the eigenvalues of the linear operator
+        <me>
+          T : \Poly_2 \rightarrow \Poly_2
+        </me>
+        defined by
+        <me>
+          T(p)(x) := p(2x+3)
+        </me>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We first need to determine the matrix of <m>T</m> relative to some basis for <m>\Poly_2</m>.
+        Let
+        <me>
+          \basis{B} := \bopen p_0, p_1, p_2 \bclose
+        </me>
+        be the standard basis for <m>\Poly_2</m>, that is
+        <me>
+          p_0(x) = 1,  p_1(x) = x,  p_2(x) = x^2
+        </me>.
+      </p>
+
+      <p>
+        Then
+        <md>
+          <mrow>T(p_0)(x) \amp = p_0 (2x+3) \nonumber</mrow>
+          <mrow>\amp = 1 \nonumber</mrow>
+          <mrow>\therefore T(p_0) \amp = p_0</mrow>
+        </md>
+        <md>
+          <mrow>T(p_1)(x) \amp = p_1 (2x+3) \nonumber</mrow>
+          <mrow>\amp = 2x+3  \nonumber</mrow>
+          <mrow>\therefore T(p_1) \amp = 3p_0 + 2p_1</mrow>
+        </md>
+        <md>
+          <mrow>T(p_2)(x) \amp = p_2 (2x+3) \nonumber</mrow>
+          <mrow>\amp = (2x+3)^2 \nonumber</mrow>
+          <mrow>\amp = 4x^2 + 12x + 9 \nonumber</mrow>
+          <mrow>\therefore T(p_2) \amp = 9p_0 + 12p_1 + 4p_0</mrow>
+        </md>.
+      </p>
+
+      <p>
+        So the matrix of <m>T</m> relative to <m>\basis{B}</m> is
+        <md>
+          [T]_{\basis{B} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  3 \amp  9 \\ 0 \amp  2 \amp  12 \\ 0 \amp  0 \amp  4}
+        </md>
+      </p>
+
+      <p>
+        So the characteristic polynomial of <m>T</m> is
+        <md>
+          <mrow>\chi_T (\lambda) \amp = \det(\lambda \id - T) \amp \amp  \mbox{(defn of \(\chi_T\))}</mrow>
+          <mrow>\amp = \det \left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) \amp \amp  \mbox{(defn of \(\det\))}</mrow>
+          <mrow>\amp = \det \left( [\lambda \id]_{\basis{B} \leftarrow \basis{B}} - [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
+          <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9</mrow>
+          <mrow>0 \amp  \lambda - 2 \amp  -12</mrow>
+          <mrow>0 \amp  0 \amp  4}} \right)</mrow>
+          <mrow>\amp = (\lambda - 1)(\lambda - 2)(\lambda - 4)</mrow>
+        </md>.
+      </p>
+
+      <p>
+        The eigenvalues of <m>T</m> are the roots of the characteristic polynomial of <m>T</m>.
+        So the eigenvalues of <m>T</m> are <m>1</m>, <m>2</m> and <m>4</m>.
+      </p>
+    </solution>
+  </example>
+
+  <p>
+    When we speak about the eigenvalues and eigenvectors of an <m>n\times n</m>
+    <em>matrix</em> <m>\mat{A}</m>,
+    we are referring to the eigenvalues and eigenvectors of the associated linear operator
+    <md>
+      <mrow>T_{\mat{A}} : \Col_n \amp \rightarrow \Col_n</mrow>
+      <mrow>\ve{v} \amp  \mapsto \mat{A} \ve{v} </mrow>
+    </md>.
+  </p>
+
+  <p>
+    Now <m>\Col_n</m> has the standard basis
+    <me>
+      \mat{e}_1 = \cmatrix{1 \\ 0  \\ \vdots \\ 0}, \, \mat{e}_2 = \cmatrix{0 \\ 1 \\ \vdots \\ 0}, \, \cdots \, , \, \mat{e}_n = \cmatrix{0 \\ 0 \\ \vdots \\ 1}
+    </me>.
+  </p>
+
+  <p>
+    The matrix of <m>T_{\mat{A}}</m> with respect to this standard basis
+    <m>\basis{B} = \bopen \mat{e}_1, \ldots, \mat{e}_n \bclose</m> is just <m>\mat{A}</m> itself.
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Check this.
+        In other words, check that for an
+        <m>n \times n</m> matrix <m>\mat{A}</m>,
+        <m>[T_{\mat{A}}]_{\basis{B} \leftarrow \basis{B}} = \mat{A}</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <p>
+    So the eigenvalues of a matrix <m>\mat{A}</m> are just the solutions of the equation <m>\det (\lambda I - \mat{A}) = 0</m>.
+  </p>
+
+  <p>
+    The following examples come from the online Desmos worksheet on eigenvalues at <c>student.desmos.com</c>,
+    class code <c>RGJ93S</c>.
+    In the Desmos worksheet,
+    you find the eigenvalues graphically, by inspection.
+    Work through that worksheet first,
+    and only then follow the algebraic method presented below.
+  </p>
+
+  <example xml:id="desmos_matrix">
+    <statement>
+      <p>
+        Find the eigenvalues of <m>A = \cmatrix{2 \amp 1 \\ \frac{1}{2} \amp \frac{5}{2}}</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The characteristic polynomial of <m>A</m> is
+        <md>
+          <mrow>\chi_A(\lambda) \amp = \det \left({\cmatrix{ \lambda - 2 \amp  -1</mrow>
+          <mrow>-\frac{1}{2} \amp  \lambda - \frac{5}{2} }} \right)</mrow>
+          <mrow>\amp = (\lambda - 2)(\lambda - \frac{5}{2}) - \frac{1}{2}</mrow>
+          <mrow>\amp = \Leftrightarrow \lambda^2 - \frac{9}{2} \lambda + \frac{9}{2}</mrow>
+        </md>.
+      </p>
+
+      <p>
+        The eigenvalues are the roots of the characteristic polynomial.
+        So:
+        <md>
+          <mrow>\chi_A (\lambda) = 0 \amp \Leftrightarrow (\lambda - \frac{3}{2})(\lambda - 3) = 0</mrow>
+          <mrow>\amp  \Leftrightarrow \lambda = \frac{3}{2} \text{ or }  \lambda = 3</mrow>
+        </md>.
+      </p>
+
+      <p>
+        So the eigenvalues of <m>A</m> are
+        <m>\lambda = \frac{3}{2}</m> and <m>\lambda = 3</m>.
+        This can be checked visually in the Desmos worksheet:
+        for certain vectors <m>\ve{v}</m>,
+        <m>A \ve{v} = \frac{3}{2} \ve{v}</m> and for certain other vectors <m>\ve{v}</m>,
+        <m>A \ve{v} = 3 \ve{v}</m>.
+      </p>
+    </solution>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Find the eigenvalues of <m>A = \cmatrix{1 \amp 3 \\ -2 \amp 2}</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The characteristic polynomial of <m>A</m> is
+        <md>
+          \det (\lambda I - A) = \det \cmatrix{ \lambda - 1 \amp  3 \\ \lambda + 2 \amp  2} = \lambda^2 - 3\lambda + 8.
+        </md>
+      </p>
+
+      <p>
+        The equation for eigenvalues is thus
+        <me>
+          \lambda^2 - 3\lambda + 8 = 0
+        </me>
+        which has no real roots.
+        So <m>A</m> has no eigenvalues.
+        This can be confirmed visually on the Desmos worksheet:
+        roughly speaking,
+        <m>A\ve{v}</m> rotates the vector <m>\ve{v}</m> clockwise by a certain amount.
+        So <m>A \ve{v}</m> can never be a multiple of <m>\ve{v}</m>.
+      </p>
+    </solution>
+  </example>
+</section>
+

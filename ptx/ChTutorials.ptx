@@ -1,0 +1,14 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch1AbstractVectorSpaces">
+  <title>Tutorials</title>
+ 
+  <xi:include  href="Tut1.ptx" />
+  <xi:include  href="Tut2.ptx" />
+  <xi:include  href="Tut3.ptx" />
+  <xi:include  href="Tut4.ptx" />
+
+
+
+</chapter>
+

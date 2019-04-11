@@ -1,0 +1,303 @@
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AppAReminderAboutMatrices">
+  <title>Reminder about matrices</title>
+  <p>
+    Let us recall a few things about matrices, and set up our notation.
+  </p>
+
+  <p>
+    An <em><m>n \times m</m> matrix</em>
+    <m>\mat{A}</m> is just a rectangular array of numbers,
+    with <m>n</m> rows and <m>m</m> columns:
+    <me>
+      \mat{A} = \left[ \begin{array}{cccc} \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1m} \\
+      \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2m} \\
+      \vdots \amp  \amp  \ddots \amp  \vdots \\
+      \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nm}
+      \end{array}  \right]
+    </me>
+  </p>
+
+  <assemblage>
+    <p>
+      I will always write matrices in <sq>sans serif</sq> font, eg.
+      <m>\mat{A}</m>.
+      It is difficult to <sq>change fonts</sq> in handwritten text,
+      but I encourage you to at least reserve the letters <m>\mat{A}</m>,
+      <m>\mat{B}</m>, <m>\mat{C}</m>,
+      etc. for matrices, and <m>S</m>,
+      <m>T</m>, etc. for linear maps!
+    </p>
+  </assemblage>
+
+  <p>
+    Two <m>n \times m</m> matrices <m>\mat{A}</m> and <m>\mat{B}</m> can be added,
+    to get a new <m>n \times m</m> matrix <m>\mat{A} + \mat{B}</m>:
+    <me>
+      (\mat{A} + \mat{B})_{ij} := \mat{A}_{ij} + \mat{B}_{ij}
+    </me>
+  </p>
+
+  <p>
+    There is the <em>zero <m>n \times m</m> matrix</em>:
+    <me>
+      \mat{0} = \left[ \begin{array}{cccc} 
+      0 \amp  0 \amp   \cdots \amp 0 \\
+      0 \amp  0 \amp   \cdots \amp  0 \\
+      \vdots \amp  \amp  \ddots \amp  \vdots \\
+      0 \amp  0 \amp  \cdots \amp  0
+      \end{array}  \right]
+    </me>
+  </p>
+
+  <p>
+    You can also multiply an <m>n \times m</m> matrix <m>\mat{A}</m> by a scalar <m>k</m>,
+    to get a new <m>n \times m</m> matrix <m>k \mat{A}</m>:
+    <me>
+      (k\mat{A})_{ij} := k \mat{A}_{ij}
+    </me>
+  </p>
+
+  <lemma>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Equipped with these operations,
+            the set <m>\Mat_{n, m}</m> of all
+            <m>n \times m</m> matrices is a vector space.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The dimension of <m>\Mat_{nm}</m> is <m>nm</m>,
+            with basis given by the matrices
+            <me>
+              \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
+            </me>
+            which have a <m>1</m> in the <m>i</m>th row and <m>j</m>th column and zeroes everywhere else.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      Left as an exercise.
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+      <p>
+        <m>\Mat_{2,2}</m> has basis
+        <me>
+          \mat{E}_{11} = \left[ \begin{array}{cc} 1 \amp  0 \\ 0 \amp  0
+          \end{array}  \right], \, \mat{E}_{12} = \left[ \begin{array}{cc} 0 \amp  1 \\ 0 \amp  0
+          \end{array}  \right], \mat{E}_{21} = \left[ \begin{array}{cc} 0 \amp  0 \\ 1 \amp  0
+          \end{array}  \right], \mat{E}_{22} = \left[ \begin{array}{cc} 0 \amp  0 \\ 0 \amp  1
+          \end{array}  \right]
+        </me>.
+      </p>
+    </statement>
+  </example>
+
+  <assemblage>
+    <p>
+      Usually <m>\mat{A}</m> is a matrix,
+      and <m>\mat{A}_{ij}</m> is the element of the matrix at position <m>(i,j)</m>.
+      But now <m>\mat{E}_{ij}</m> is a matrix in its own right!
+      Its element at position <m>(k,l)</m> will be written as <m>(\mat{E}_{ij})_{kl}</m>.
+      I hope you don't find this too confusing.
+      In fact, we can write down an elegant formula for the elements of
+      <m>\mat{E}_{ij}</m> using the Kronecker delta symbol:
+      <men xml:id="kronecker_for_matrix_basis-2">
+        (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
+      </men>
+    </p>
+  </assemblage>
+
+
+  <exercise>
+    <statement>
+      <p>
+        Check that <xref ref="kronecker_for_matrix_basis-2" /> is indeed the correct formula for the matrix elements of <m>\mat{E}_{ij}</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <statement>
+      <p>
+        We will write <m>\Col_n</m> for the vector space
+        <m>\Mat_{n,1}</m> of <m>n</m>-dimensional
+        <em>column vectors</em>,
+        and we will write the standard basis vectors
+        <m>{\mathbf \mat{E}}_{i1}</m> of <m>\Col_n</m> more simply as <m>\col{e}_i</m>:
+        <me>
+          \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
+          \end{array}  \right], \, 
+          \col{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
+          \end{array}  \right], \, 
+          \ldots, \,
+          \col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
+          \end{array}  \right] 
+        </me>.
+      </p>
+
+      <p>
+        Vectors in <m>\Col_n</m> will be written in bold sans-serif font eg.
+        <m>\col{v} \in \Col_n</m>.
+      </p>
+    </statement>
+  </example>
+
+
+  <p>
+    Equipped with these operations,
+    the set <m>\Mat_{n, m}</m> of all
+    <m>n \times m</m> matrices is a vector space
+    <!--(see <xref ref="matrices_example_vec_space">Example</xref>),CHANGE THIS BACK-->
+    with dimension <m>nm</m>
+    <!--(see <xref ref="dimension_of_matrix_space_example">Example</xref>)-->.
+    We write <m>\Col_n</m> for the vector space
+    <m>\Mat_{n,1}</m> of <m>n</m>-dimensional
+    <em>column vectors</em>.
+  </p>
+
+  <p>
+    The most important operation is
+    <em>matrix multiplication</em>.
+    An <m>n \times k</m> matrix <m>\mat{A}</m> can be multiplied from the right with a
+    <m>k \times m</m> matrix <m>\mat{B}</m> to get a
+    <m>n \times m</m> matrix <m>\mat{AB}</m>,
+    <md>
+      \left[ \begin{array}{cccc} \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1k} \\
+      \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2k} \\
+      \vdots \amp  \amp  \ddots \amp  \vdots \\
+      \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nk}
+      \end{array}  \right] \left[ \begin{array}{cccc} \mat{B}_{11} \amp  \mat{B}_{12} \amp  \cdots \amp  \mat{B}_{1m} \\
+      \mat{B}_{21} \amp  \mat{B}_{22} \amp  \cdots \amp  \mat{B}_{2m} \\
+      \vdots \amp  \amp  \ddots \amp  \vdots \\
+      \mat{B}_{k1} \amp  \mat{B}_{k2} \amp  \cdots \amp  \mat{B}_{km}
+      \end{array}  \right] \, = \\ 
+      \left[ \begin{array}{cccc} (\mat{AB})_{11} \amp  (\mat{AB})_{12} \amp  \cdots \amp  (\mat{AB}_{1m} \\
+      (\mat{AB})_{21} \amp  (\mat{AB})_{22} \amp  \cdots \amp  (\mat{AB})_{2m} \\
+      \vdots \amp  \amp  \ddots \amp  \vdots \\
+      (\mat{AB})_{k1} \amp  (\mat{AB})_{k2} \amp  \cdots \amp  (\mat{AB})_{nm}
+      \end{array}  \right]
+    </md>
+    by defining the entries of <m>\mat{AB}</m> to be
+    <me>
+      (\mat{AB})_{ij} := \mat{A}_{i1} \mat{B}_{1j} + \mat{A}_{i2} \mat{B}_{2j} + \cdots + \mat{A}_{ik} \mat{B}_{kj}
+    </me>.
+  </p>
+
+  <proposition xml:id="props_of_matrix_ops">
+    <statement>
+      <p>
+        The above operations on matrices satisfy the following rules whenever the sums and products involved are defined:
+
+        <ol>
+          <li>
+            <p>
+              <m>(\mat{A} + \mat{B}) \mat{C} = \mat{A} \mat{C} + \mat{B} \mat{C}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\mat{A} (\mat{B} + \mat{C}) = \mat{A} \mat{B} + \mat{A} \mat{C}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(k \mat{A}) \mat{B} = \mat{A} (k \mat{B}) = k (\mat{A} \mat{B})</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(\mat{A} \mat{B}) \mat{C} = \mat{A} (\mat{B} \mat{C})</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      The proofs of (1) - (3) are all routine checks which you have hopefully done before.
+      Let us prove (4), to practice using <m>\Sigma</m>-notation!
+      Suppose <m>\mat{A}</m>,
+      <m>\mat{B}</m> and <m>\mat{C}</m> have sizes <m>n \times k</m>,
+      <m>k \times r</m> and <m>r \times m</m> respectively,
+      so that the matrix products make sense.
+      Then:
+      <md>
+        <mrow>((\mat{A}\mat{B})\mat{C})_{ij} \amp = \sum_{p=1}^r (\mat{A} \mat{B})_{ip} \mat{C}_{pj}</mrow>
+        <mrow>\amp = \sum_{p=1}^r \left(\sum_{q=1}^k \mat{A}_{iq} \mat{B}_{qp} \right) \mat{C}_{pj}</mrow>
+        <mrow>\amp = \sum_{p,q} \mat{A}_{iq} \mat{B}_{qp} \mat{C}_{pj}</mrow>
+        <mrow>\amp = \sum_{q=1}^k \mat{A}_{iq} \left( \sum_{p=1}^r \mat{B}_{qp} \mat{C}_{pj}\right)</mrow>
+        <mrow>\amp = \sum_{q=1}^k \mat{A}_{iq} (\mat{B} \mat{C} )_{qj}</mrow>
+        <mrow>\amp = (\mat{A} (\mat{B} \mat{C}))_{ij}</mrow>
+      </md>.
+    </p>
+  </proof>
+
+  <assemblage>
+    <p>
+      I hope the <m>\Sigma</m>-notation does not confuse you in the above proof!
+      Let me write out the exact same proof
+      <em>without</em> <m>\Sigma</m>-notation,
+      in the simple case where <m>\mat{A}</m>,
+      <m>\mat{B}</m> and <m>\mat{C}</m> are all <m>2 \times 2</m> matrices,
+      and we are trying to calculate, say,
+      the entry at position <m>11</m>.
+      <md>
+        <mrow>((\mat{A}\mat{B})\mat{C})_{11} \amp = (\mat{A}\mat{B})_{11} \mat{C}_{11} + (\mat{A} \mat{B})_{12} \mat{C}_{21}</mrow>
+        <mrow>\amp = (\mat{A}_{11} \mat{B}_{11} + \mat{A}_{12} \mat{B}_{21}) \mat{C}_{11} + (\mat{A}_{11} \mat{B}_{12} + \mat{A}_{12} \mat{B}_{22}) \mat{C}_{21}</mrow>
+        <mrow>\amp = \mat{A}_{11} \mat{B}_{11} \mat{C}_{11} + \mat{A}_{12} \mat{B}_{21} \mat{C}_{11} + \mat{A}_{11} \mat{B}_{12} \mat{C}_{21} + \mat{A}_{12} \mat{B}_{22} \mat{C}_{21}</mrow>
+        <mrow>\amp = \mat{A}_{11} (\mat{B}_{11} \mat{C}_{11} + \mat{B}_{12} \mat{C}_{21}) + \mat{A}_{12} ( \mat{B}_{21} \mat{C}_{11} + \mat{B}_{22} \mat{C}_{21})</mrow>
+        <mrow>\amp = \mat{A}_{11} (\mat{B} \mat{C})_{11} + \mat{A}_{12} (\mat{B} \mat{C})_{21}</mrow>
+        <mrow>\amp = (\mat{A} (\mat{B} \mat{C}))_{11}</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Do you understand the <m>\Sigma</m>-notation proof now?
+      The crucial step
+      (going from the second to the fourth lines)
+      is called <em>exchanging the order of summation</em>.
+    </p>
+  </assemblage>
+
+  <p>
+    The <em>transpose</em> of an
+    <m>n \times m</m> matrix <m>\mat{A}</m> is the <m>m \times n</m> matrix
+    <m>\mat{A}^T</m> whose entries are given by
+    <me>
+      (\mat{A}^T)_{ij} := \mat{A}_{ji}
+    </me>.
+  </p>
+
+     <exercise>
+    <statement>
+      Prove that if <m>A \in \Mat_{2,2}</m> satisfies
+      <me>
+AB = BA
+    </me>
+    for all <m>B \in \Mat_{2,2}</m>, then <m>A</m> is of the form
+    <me>
+      \mat{A} = \begin{bmatrix} a \mamp 0 \\
+      0 \mamp a
+      \end{bmatrix}  .
+    </me>
+    </statement>
+  </exercise>
+
+</appendix>
+

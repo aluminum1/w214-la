@@ -1,0 +1,624 @@
+
+
+<section xml:id="ACh2Sec2LinearIndependence">
+  <title>Line&#xea;re onafhanklikheid</title>
+  <definition xml:id="defn_of_linear_ind">
+    <statement>
+      <p>
+        'n Lys van vektore <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots,
+        \ve{v}_n \bclose</m> in 'n vektorruimte <m>V</m> is
+        <term>line&#xea;r onafhanklik</term> as
+        die vergelyking
+        <men xml:id="lin_independence_eqn">
+          k_1 \ve{v}_1 + k_2 \ve{e}_2 + \cdots k_n \ve{v}_n = \ve{0}
+        </men>
+        slegs die triviale oplossing <m>k_1 = k_2 = \cdots = k_n = 0</m> het.
+        Andersins word die lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m>
+        <term>line&#xea;r afhanklik</term> genoem.
+      </p>
+    </statement>
+  </definition>
+
+  <remark xml:id="remark_about_lin_dependence">
+    <title>Nulvektor impliseer lineêr onafhanklik</title>
+      <p>
+      Veronderstel een van die vektore <m>\ve{v}_i</m> in die lys <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> is die nulvektor <m>\ve{0}</m>. Dan is die lys <m>\basis{B}</m> lineêr afhanklik, want die vergelyking <xref ref="lin_independence_eqn" /> het die nie-triviale oplossing
+      <me>
+        0 \ve{v}_1 + \cdots + 0 \ve{v}_{i-1} + 1 \ve{v}_i + 0 \ve{v}_{i+1} + \cdots + 0 \ve{v}_n = \ve{0},
+      </me>
+      met ander woorde, 
+      <me>
+       k_1 = 0, \ldots, k_{i-1} = 0, k_i = 1, k_{i+1} = 0, \ldots, k_n = 0.
+      </me>
+      So: <em>'n lineêr onafhanklike lys bevat nooit die nulvektor nie!</em>
+    </p>
+
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        Die lys van vektore <m>\ve{f}_1 = (-1, \, 2)</m> en
+        <m>\ve{f}_2 =
+        (1, \,1)</m> uit <xref ref="three_vectors_spanning_R2_example">Voorbeeld</xref> is
+        line&#xea;r onafhanklik, omdat die vergelyking
+        <me>
+          k_1 (-1, \, 2) + k_2 (1, \, 1) = (0, \, 0)
+        </me>
+        ekwivalent is aan die sisteem van vergelykings
+        <men xml:id="system_from_r2_example">
+       -k_1 + k_2 = 0, \quad 2k_1 + k_2 = 0
+      </men>
+        wat slegs die trivale oplossing <m>k_1 = 0</m> en <m>k_2 = 0</m> het.
+      </p>
+    </statement>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>
+        Bevestig dat <xref ref="system_from_r2_example" /> slegs die
+        triviale oplossing het.
+      </p>
+    </statement>
+          <solution>
+        <p>
+<me>
+(2k_1 + k_2) - (-k_1 + k_2) = 0 = 3k_2 \implies k_2 = 0 \implies k_1 = 0.
+</me>
+        </p>
+      </solution>
+
+  </exercise>
+
+  <example xml:id="example_about_lin_dep_1">
+    <statement>
+      <p>
+        Die lys van vektore <m>\ve{f}_1 =
+        (-1, \, 2)</m>, <m>\ve{f}_2 = (1, \,1)</m>,
+        <m>\ve{f}_3 = (2, \, -1)</m> uit
+        <xref ref="three_vectors_spanning_R2_example">Voorbeeld</xref> is line&#xea;r
+        afhanklik, want die vergelyking
+        <men xml:id="eqn_to_check_lin_ind">
+          k_1 (-1, \, 2) + k_2 (1, \, 1) + k_3 (2, \, -1) = (0, \, 0)
+        </men>
+        is ekwivalent aan die sisteem van vergelykings
+        <men xml:id="system_from_r2_example_new">
+       -k_1 + k_2 + 2k_3 = 0, \quad 2k_1 + k_2 - k_3 = 0
+      </men>
+        wat 'n een-dimansionele vektorruimte van oplossings het wat deur <m>t</m>
+        parameteriseer word,
+        <men xml:id="supposed_soln">
+          k_1 = t, \, k_2 = -t, \, k_3 = t,  t \in \mathbb{R}
+        </men>.
+      </p>
+
+      <p>
+        Byvoorbeeld, vir <m>t=2</m>, is
+        <me>
+          2 (-1, \, 2) - 2 (1, \, 1) + 2 (2, \, -1) = (0, \, 0)
+        </me>
+        sodat <xref ref="eqn_to_check_lin_ind" /> non-triviale oplossings het.
+      </p>
+    </statement>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat <xref ref="system_from_r2_example_new" /> die
+        oplossingsversameling <xref ref="supposed_soln" /> het.
+      </p>
+    </statement>
+      <solution> 
+        <!-- TO DO: Translate -->
+<p>
+We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have 3 unknowns but only 2 equations, we do not have a unique solution. Let <m>k_1</m> be free, i.e. <m> k_1 = t, t \in \mathbb{R}</m>. Then
+<me>
+(-k_1 + k_2 + 2k_3) - (2k_1 + k_2 - k_3) = 0 = -3k_1 + 3k_3 \\
+\implies -k_1 + k_3 = 0 \implies k_3 = t.
+-t + k_2 + 2t = 0 \implies k_2 = -t
+</me>
+</p>
+<!-- translation ends -->
+      </solution>
+
+  </exercise>
+
+  <example xml:id="new_basis_for_poly_3">
+    <statement>
+      <p>
+        Die lys polinome
+        <me>
+          \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x) := x, \,\, \ve{q}_2 (x) :=
+          2x^2 - 1, \,\, \ve{q}_3 (x) := 4x^3 - 3x
+        </me>
+        uit <xref ref="chebyshev_example">Voorbeeld</xref> is line&#xea;r onafhanklik in
+        <m>\Poly_3</m>.
+        Dit is omdat die vergelyking
+        <me>
+          k_0 \ve{q}_0 + k_1 \ve{q}_1 + k_2 \ve{q}_2 + k_3 \ve{q}_3 = \ve{0}
+        </me>
+        vereenvoudig as die volgende polinoomvergelyking:
+        <me>
+          4k_3 x^3 + 2k_2 x^2 + (-3k_3 + k_1) x + (-k_2 + k_0) = 0
+        </me>
+      </p>
+
+      <p>
+        Hierdie is ekwivalent aan die volgende stelsel vergelykings,
+           <me>
+          4k_3 = 0, \quad 2k_2 = 0, \quad -3 k_3 + k_1 = 0, \quad k_0 - k_2 = 0
+        </me>
+        wat slegs die triviale oplossing <m>k_0 = k_1 = k_2 = k_3 = 0</m> het.
+      </p>
+    </statement>
+  </example>
+
+<p>Hier is twee meer maniere om hoe van lineêre afhanklike lyste vektore te dink.</p>
+
+<!-- TO DO: Translate this -->
+  <proposition xml:id="lin_dependence_prop">
+    <title>Equivalent Criterions for Linear Dependence</title>
+    <statement>
+      <p>
+        Let <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> be a list of vectors in a vector space <m>V</m>.
+        The following statements are equivalent:
+        <ol>
+          <li xml:id="defn_lin_dep"> The list of vectors <m>\basis{B}</m> is linearly dependent. 
+          </li>
+
+          <li xml:id="lin_comb_other_vec"> 
+            <emph>(Linear Combination of Other Vectors)</emph>
+            <p> One of the vectors in the list <m>\basis{B}</m> is a linear combination of the other vectors in <m>\basis{B}</m>.
+            </p>
+          </li>
+
+          <li xml:id="lin_comb_prec_vec"> <emph>(Linear Combination of Preceding Vectors)</emph><title>Linear Combination of Preceding Vectors</title>
+            <p>
+              Either <m>\ve{v}_1 = \ve{0}</m>,
+              or for some <m>r \in \{2, 3, \ldots,
+              n\}</m>, <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1</m>,
+              <m>\ve{v}_2</m>, <m>\ldots</m>, <m>\ve{v}_{r-1}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </proposition>
+
+  <proof> <p>We will show that (1) <m>\Leftrightarrow</m> (2), (1) <m>\Rightarrow</m> (3) and (3) <m>\Rightarrow</m> (2), and conclude that each statement implies the others.</p>
+
+      <p> (1) <m>\Rightarrow</m> (2). Suppose that <m>\basis{B}</m> is linearly dependent. This means that there are scalars <m>k_1</m>,
+      <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, not all zero, such that
+      <men xml:id="lin_dep_lem_another_eqn">
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
+      </men>.
+      Let <m>k_s</m> be one of the nonzero coefficients. Then, by taking the other vectors to the other side of the equation, and multuplying by <m>\frac{1}{k_s}</m> we can solve for <m>\ve{v}_s</m> in terms of the other vectors:
+      <md>
+        <mrow>
+        \ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \mbox{(No } \ve{v}_i \mbox{ terms on RHS)}
+      </mrow>
+    </md>
+    Therefore, (2) is true.
+    </p>
+
+    <p> (2) <m>\Rightarrow</m> (1). Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is, 
+    <md>
+      <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \mbox{(No }<m>\ve{v}_s</m> \mbox{term on RHS.)} </mrow>
+    </md>
+    Rearranging this equation gives:
+    <men xml:id="rearranged_lin_dep">
+      k_1 \ve{v}_1 + \ldots + (-1)\ve{v}_s + \ldots + k_n \ve{v}_n = \ve{0}.
+    </men>
+    Not all the coefficients on the LHS of <xref ref="rearranged_lin_dep"/> are zero, since the coefficient of <m>\ve{v}_s</m> is equal to <m>-1</m>. Therefore, <m>\basis{B}</m> is linearly dependent.
+  </p>
+
+      <p> (1) <m>\Rightarrow</m> (3).
+      Suppose that the list <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> is linearly dependent.
+      This means that there are scalars <m>k_1</m>,
+      <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, not all zero, such that
+      <men xml:id="lin_dep_lem_first_eqn">
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
+      </men>.
+    </p>
+
+    <p>
+      Let <m>r \in \{1, \,2, \ldots, \, n\}</m> be the largest index such that <m>k_r \neq 0</m>.
+      (We are told that not all the <m>k_i</m> are zero, so this makes sense.)
+      If <m>r=1</m>,
+      then <xref ref="lin_dep_lem_first_eqn" /> is simply the equation
+      <me>
+        k_1 \ve{v}_1 = \ve{0},  \mbox{where }  k_1 \neq 0
+      </me>.
+    </p>
+
+    <p>
+      Therefore <m>\ve{v}_1 = \ve{0}</m> by <xref ref="dichotomy_lem">Lemma</xref>,
+      and we are done.
+      On the other hand, suppose <m>r \neq 1</m>.
+      Then <xref ref="lin_dep_lem_first_eqn" /> becomes the equation
+      <me>
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_r \neq 0
+      </me>.
+    </p>
+
+    <p>
+      By dividing by <m>k_r</m>,
+      we can now solve for <m>\ve{v}_r</m> in terms of the preceding vectors <m>\ve{v}_1</m>,
+      <m>\ve{v}_2</m>, <m>\ldots</m>, <m>\ve{v}_{r-1}</m>:
+      <me>
+        \therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r} \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \,
+      </me>
+      Therefore, (3) is true.
+    </p>
+
+     <p> (3) <m>\Rightarrow</m> (2) Suppose that (3) is true. In other words, either:
+        <ul>
+          <li> <m>\ve{v}_1 = \ve{0}</m>. Therefore, <m>\basis{B}</m> is linearly dependent, by <xref ref="remark_about_lin_dependence"/>. In other words, (1) is true. Therefore, since we have already proved that (1) <m>\Rightarrow </m> (2), we conclude that (2) is true. </li>
+          <li> For some <m>r \in \{2, \ldots, n\}</m>, <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m>. In this case, clearly <m>\ve{v}_r</m> is a linear combination of the other vectors in <m>\basis{B}</m>, so (2) is true.</li>
+        </ul>
+        In both cases, (2) is true. So, (3) <m>\Rightarrow</m> (2).
+    </p>
+  </proof>
+
+<!-- Translation job ends -->
+
+  <example xml:id="app_of_prop_preceding">
+    <statement>
+      <p>
+        Ons het in <xref ref="example_about_lin_dep_1">Voorbeeld</xref>
+        gesien dat die lys vektore
+        <m>\ve{f}_1 =
+        (-1, \, 2)</m>, <m>\ve{f}_2 = (1, \,1)</m>,
+        <m>\ve{f}_3 = (2, \, -1)</m> in
+        <m>\mathbb{R}^3</m> line&#xea;r afhanklik is. Gee twee alternatiewe bewyse hiervan, deur gebruik te maak van <xref ref="lin_dependence_prop" />.
+      </p>
+    </statement>
+
+    <solution>
+      <p>Ons kontrolleer <xref ref="lin_comb_other_vec"/> uit <xref ref="lin_dependence_prop"/>. Dit wil sê, ons kontrolleer of een van die vektore in die lys 'n lineêre kombinasie van die ander vektore is. Inderdaad, ons sien deur inspeksie dat
+      <men>
+       \ve{f}_2 = \ve{f}_1 + \ve{f}_3.
+     </men>
+     Dus, <m>\basis{B}</m> is lineêr afhanklik.
+   </p>
+    </solution>
+
+
+    <solution>
+      <p>Ons kontrolleer <xref ref="lin_comb_prec_vec"/> uit <xref ref="lin_dependence_prop"/>. Dit wil sê, ons kontrolleer:
+
+        <ul>
+          <li>
+            <p>
+              <m>\ve{f}_1 = \ve{0}</m>
+              (nie waar nie),
+              &#xf3;f
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ve{f}_2</m> is 'n skalaarveelvoud van <m>\ve{f}_1</m>
+              (nie waar
+              nie),
+              &#xf3;f
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ve{f}_3</m> is 'n line&#xea;re kombinasie van <m>\ve{f}_1</m> en
+              <m>\ve{f}_2</m>, wat waar is:
+              <me>
+                \ve{f}_3 = - \ve{f}_1 + \ve{f}_2
+              </me>
+            </p>
+          </li>
+        </ul>
+      </p>
+  </solution>
+  </example>
+
+  <proposition xml:id="bumping_off_lemma">
+    <title>Afstampproposisie</title>
+    <statement>
+      <p>
+        Veronderstel <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2,
+        \ldots, \ve{l}_m \bclose</m> is 'n line&#xea;r onafhanklike lys vektore in 'n
+        vektorruimte <m>V</m> en dat <m>\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose</m> vir <m>V</m>
+        span.
+        Dan is <m>m \leq n</m>.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      Begin met die oorspronglike lys vektore
+      <men>
+        \basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose      
+      </men>
+      wat <m>V</m> span en oorweeg die <sq>opgeblase</sq> lys
+      <men xml:id="bloated_list">
+        \basis{S^{\prime}} = \bopen \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
+        \ve{s}_n \bclose
+      </men>
+    </p>
+
+    <p>
+      Nou, omdat <m>\basis{S}</m> vir <m>V</m> span, weet ons in besonder dat <m>\ve{l}_1</m> kan uitgedruk word as 'n lineêre kombinasie van die vektore <m>\ve{s}_1, \ldots, \ve{s}_n</m>. Dus, deur <xref ref="lin_comb_other_vec"/> van <xref ref="lin_dependence_prop"/>, weet ons dat  <m>\basis{S}'</m> lineêr afhanklik is. Dus, deur <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/>, óf:</p>
+      <ul>
+        <li> <m>\ve{l}_1 = \ve{0}</m>. Dit kan nie waar wees nie, want dan sou <m>\basis{L}</m> lineêr afhanklik wees weens <xref ref="remark_about_lin_dependence"/>, wat in teenstryding is met ons oorspronklike aanname. </li>
+        <li> een van die <m>\ve{s}</m>-vectore, noem dit <m>\ve{s}_r</m>, kan uitgedruk word as 'n lineêre kombinasie van die voorafgaande vektore. Ons kan dan <m>\ve{s}_r</m> uit die lys <m>\basis{S}'</m> verwyder (<sq>afstamp</sq>), en die resulterende lys
+      <men>
+        \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}
+      </men>
+      sal nog steeds vir <m>V</m> span, deur <xref ref="exercise-span-omission"/>. </li>
+    </ul>
+    <p> In hierdie manier kan ons aangaan: elke keer 'n <m>\ve{l}</m>-vektor oor te dra en 'n <m>\ve{s}</m>-vektor te verwyder, en die resulterende lys sal nog steeds vir  <m>V</m> span:
+      <md>
+        <mrow> 
+        \basis{L} \amp = \bopen \ve{l}_1, \ldots, \ve{l}_m \bclose \amp \basis{S} \amp = \bopen \ve{s}_1, \ldots, \ve{s}_n \bclose 
+      </mrow>
+      <mrow>
+        \basis{L}_1 \amp = \bopen \ve{l}_2, \ldots, \ve{l}_m \bclose \amp \basis{S}_1 \amp = \bopen \ve{l}_1, \underbrace{\ve{s}_1, \ldots, \ve{s}_n}_{n-1} \bclose </mrow>
+      <mrow>
+        \basis{L}_2 \amp = \bopen \ve{l}_3, \ldots, \ve{l}_m \bclose \amp \basis{S}_2 \amp = \bopen \ve{l}_2, \ve{l}_1, \underbrace{\ve{s}_1, \ldots, \ve{s}_n}_{n-2} \bclose </mrow>
+      <mrow> \amp \vdots \amp \amp \vdots </mrow>
+      </md>
+    </p>
+    <p>
+      Nou, veronderstel dat <m>m > n</m>. Wanneer ons die <m>n</m>ste stadium van hierdie proses bereik, sal <m>\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose</m>, en dit sal vir <m>V</m> span. Dus, in besonder, <m>\ve{l}_{n+1}</m> (let op dat hierdie vektore wel bestaan, want <m>m > n </m>) sal 'n lineêre kombinasie van <m>\ve{l}_1, \ldots, \ve{l}_n</m> wees. Maar dan, deur <xref ref="lin_comb_other_vec"/> van <xref ref="lin_dependence_prop"/>, lei ons af dat <m>\basis{L}</m> lineêr afhanklik is. Maar ons het aangeneem van die begin af dat  <m>\basis{L}</m>  lineêr <em>on</em>afhanklik is. So ons het 'n teenstryding. Dus, ons aanname dat  <m>m > n</m> moet vals wees. Dus, dit moet waar wees dat <m>m \leq n</m>. 
+    </p>
+  </proof>
+
+ <exercises>
+
+  <exercise xml:id="exercise_for_new_basis">
+    <statement>
+      <p>
+        Wys dat die lys vektore <m>(2,
+        \, 3, \, 1)</m>, <m>(1, \, -1, \,
+        2)</m>, <m>(7, \, 3, \, c)</m> line&#xea;r afhanklik in <m>\mathbb{R}^3</m> is as en
+        slegs as <m>c=8</m>.
+      </p>
+    </statement>
+      <solution>
+      <p>
+We set up a linear equation and find the necessary conditions on <m>c</m>. Suppose some linear combination of the vectors equals 0:
+<me>
+k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
+</me>
+This vector equation gives rise to a system of 3 linear equations:
+<me>
+2k_1 + k_2 + 7k_3 = 0,\\
+3k_1 - k_2 + 3k_3 = 0,\\
+k_1 + 2k_2 + ck_3 = 0.
+</me>
+The corresponding matrix equation is 
+<me>
+\begin{bmatrix}
+2 \mamp 1 \mamp 7 \\
+3 \mamp -1 \mamp 3\\
+1 \mamp 2 \mamp c
+\end{bmatrix} 
+\begin{bmatrix}
+k_1 \\
+k_2 \\
+k_3\\
+\end{bmatrix} 
+=
+\begin{bmatrix}
+0 \\ 
+0 \\
+0
+\end{bmatrix} 
+</me>
+This matrix is non-invertible if and only if its determinant is 0. Furthermore, the matrix being non-invertible will mean we can find a non-trivial solution to the intial equation. We compute the determinant:s
+<me>
+\det\begin{bmatrix}
+2 \mamp 1 \mamp 7 \\
+3 \mamp -1 \mamp 3\\
+1 \mamp 2 \mamp c
+\end{bmatrix} = -5c + 40
+</me>
+which is 0 if and only if <m> c =8 </m>.
+</p>
+    </solution>
+
+  </exercise>
+
+  <exercise xml:id="x2_by_2_matrices_lin_dep">
+    <statement>
+      <p>
+        Die lys vektore in
+        <m>\Mat_{2,2}</m> gegee deur
+        <me>
+\ve{v}_1 = \begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 1
+\end{bmatrix},\,
+\ve{v}_2 = \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix},\,
+\ve{v}_3 = \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix},\,
+\ve{v}_4 = \begin{bmatrix}
+0 &amp; 3 \\
+1 &amp; -1
+\end{bmatrix},\,
+\ve{v}_5 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+      </me>
+        is line&#xea;r onafhanklik
+        (ons sal dit in <xref ref="checking_matrices_lin_dep">Oefening</xref> bewys,
+        maar ter wille van hierdie vraag
+        kan jy aanvaar dat dit waar is).
+        Herhaal dieselfde stappe as in
+        <xref ref="app_of_prop_preceding">Voorbeeld</xref>
+        om die eerste vektor in die lys
+        te vind wat of die nulvektor of 'n line&#xea;re kombinasie van die
+        voorafgaande vektore is.
+      </p>
+    </statement>
+      <solution>
+<p>
+Firstly note that <m> \ve v_1  </m> is non-zero, so we consider <m> \ve v_2 </m>. <m> \ve v_2 </m> cannnot be a scalar multiple of <m> \ve v_1</m> by considering the matrix entry in position (1,2). We now consider <m> \ve v_3 </m>. Suppose
+<me>
+a\begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 1
+\end{bmatrix} + b \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix} = \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix}
+</me>
+This gives rise to a system of four linear equations. In particular, we have the equation for the matrix entry in position (1,2):
+<me>
+2a + 0b = 0
+</me>
+And hence <m> a = 0 </m>. But clearly
+<me>
+b \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix} \neq \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix}
+</me>
+for any choice of <m> b</m>. Hence <m> \ve v_3 </m> is not a scalar multiple of <m> \ve v_1 </m> and <m> \ve v_2</m>. We consider <m> \ve v_4 </m> next. Suppose
+<me>
+a\begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 1
+\end{bmatrix} +
+b \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix} +
+c \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix} = 
+\begin{bmatrix}
+0 &amp; 3 \\
+1 &amp; -1
+\end{bmatrix}
+</me>
+The equation for the entry in position (1,2) is simply 
+<me>
+2a = 3
+</me>
+and so <m> a = \frac{3}{2}</m>. The corresponding equation for the entry in position (1,1) is thus
+<me>
+\frac{3}{2} + b + c = 0.
+</me>
+Using this result, we consider the equation for the entry in position (2,2) and compute:
+<me>
+\frac{3}{2} + b + 3c = -1 \\
+\implies \frac{3}{2} + b + c + 2c = -1 \\
+\implies 2c = -1
+\implies c = -\frac{1}{2}
+</me>
+and so <m> b = -1 </m>. SHOW THAT THIS IS INCONSISTENT WITH (2,1).
+</p>
+    </solution>
+
+  </exercise>
+
+
+  <exercise xml:id="exercise-span-omission">
+    <statement> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
+    </statement>
+    <solution>
+<p>
+To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <m> \ve v \in V </m> there exist scalars <m> (a_i^{\ve v}) </m> depending on <m>\ve v</m> such that
+<me>
+\sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v
+</me>. But of course, it is also true that 
+<me>
+0 \ve w + \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v 
+</me> because <m> 0 \ve w = 0 </m> and so has no effect on the sum. Hence any vector in <m> V </m> is a linear combination of <m>\ve{w}, \ve{v}_1, \ldots, \ve{v}_n </m> which is to say that the set <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m>  spans <m>V</m>.
+</p>
+    </solution>
+  </exercise>
+
+
+
+    <exercise>
+      <statement>
+        <p>
+          Laat <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n
+          \right\}</m> 'n line&#xea;r onafhanklike lys vektore in 'n vektorruimte <m>V</m>
+          wees.
+          Veronderstel dat <m>\ve{v}</m> 'n vektor in <m>V</m> is wat nie as 'n
+          line&#xea;re kombinasie van die vektore uit <m>\basis{B}</m> geskryf kan word
+          nie.
+          Toon aan dat die lys <m>\basis{B}' = \left\{ \ve{v}_1, \ldots,
+          \ve{v}_n, \ve{v} \right\}</m> line&#xea;r onafhanklik is.
+          (Wenk: Gebruik die
+          Line&#xea;re Kombinasie van Voorafgaande Vektore Proposisie.)
+        </p>
+      </statement>
+      <!--
+      <solution>
+      <p>
+        If we use the Linear Combination of Preceding Vectors Proposition, the proof is very slick! <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>) cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m> or else we would contradict the Linear Combination of Preceding Vectors Proposition. It is given that <m> \ve v </m> is not a linear combination of  <m> \ve v_1 \ldots \ve v_{n} </m>. Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is a linear combination of the previous vectors. Thus by the Linear Combination of Preceding Vectors Proposition, <m> {B}' </m> must be linearly independent.
+      </p>
+    </solution>
+   -->
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+Consider the vector space of functions on the closed unit interval, <m>\Fun ([0,1])</m>. Show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m>\Fun ([0,1])</m>.
+      </p>
+    </statement>
+<!--    <solution>
+<p>
+Given <m> n \in \mathbb N </m>, consider the set of <m> n </m> functions
+<me>
+X = \left \{ f_m \, : \, f_m\left(\frac{1}{m}\right) = 1, f_m(x) = 0 \text{ otherwise} \right\}.
+</me>
+We shall show that this collections is linearly independent. Suppose there is a linear relation on <m>X</m>. In other words, suppose
+<men xml:id="func_01_lin_rel">
+a_1 f_1(x) + a_2 f_2(x) + \cdots + a_n f_n(x) = 0
+</men>
+for all <m> x \in [0,1] </m>. Plug <m>\frac{1}{n}</m> into <xref ref = "func_01_lin_rel"/>. We obtain
+<me>
+\frac{a_n}{n} = 0
+</me>
+and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-1}</m> into <xref ref = "func_01_lin_rel"/> to conclude <m> a_{n-1} = 0</m> and so forth. Hence all <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> must be 0. Thus <m>X</m> is linearly independent.
+</p>
+  </solution>
+-->
+  </exercise>
+
+<exercise>
+  <statement>
+<p>
+  (Bonus) Try adapt the argument in the question above to show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m> \Cont([0,1])</m>, the vector space of all <emph>continuous</emph> real valued functions on <m>[0,1]</m>.
+</p>
+</statement>
+</exercise>
+
+
+</exercises>
+
+<solutions divisional="solution answer" />
+
+
+</section>
+

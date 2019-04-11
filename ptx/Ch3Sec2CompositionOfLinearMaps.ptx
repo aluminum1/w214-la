@@ -1,0 +1,241 @@
+
+
+<section xml:id="Ch3Sec2CompositionOfLinearMaps">
+  <title>Composition of linear maps</title>
+  <definition>
+    <statement>
+      <p>
+        If <m>S : U \rightarrow V</m> and <m>T : V \rightarrow W</m> are linear maps,
+        then the <term>composition of <m>T</m> with <m>S</m></term>
+        is the map <m>T \circ S : U \rightarrow W</m> defined by
+        <me>
+          (T \circ S) (\ve{u}) := T(S(\ve{u}))
+        </me>
+        where <m>\ve{u}</m> is in <m>U</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    See <xref ref="composition_of_linear_maps_fig">Figure</xref>.
+  </p>
+
+  <figure xml:id="composition_of_linear_maps_fig">
+    <caption>Composition of linear maps.</caption>
+    <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[xscale=1.2]
+    \draw (0, 0) circle (1);
+    \draw (-4,0) circle (1);
+    \draw (-8,0) circle (1);
+    \node at (0, -1.3) {\(U\)};
+    \node at (-4, -1.3) {\(V\)};
+    \node at (-8, -1.3) {\(W\)};
+    \draw[->] (-1.2, 0.3) to[out=150, in=30] node[above] {\(S\)} (-2.8, 0.3);
+    \draw[->] (-5.2, 0.3) to[out=150, in=30] node[above] {\(T\)} (-6.8, 0.3);
+    \draw[->] (-1.2, 0.6) to[out=140, in=40] node[above] {\(T\circ S\)} (-7, 0.6);
+    \node (u) at (0, -0.5) {\(\ve{u}\)};
+    \node (v) at (-4, -0.5) {\(S(\ve{u})\)};
+    \node (w) at (-8, -0.5) {\(T(S(\ve{u}))\)};
+    \draw[|->] (u) to[out=170, in=10] (v);
+    \draw[|->] (v) to[out=170, in=10] (w);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+
+  </figure>
+
+  <assemblage>
+    <p>
+      The standard convention in mathematics is to write the evaluation of a function from right-to-left, eg.
+      <m>f(x)</m>.
+      That is, you start with the right hand symbol <m>x</m>,
+      then you apply <m>f</m>.
+      So the most natural way to draw these pictures is from right-to-left!
+    </p>
+  </assemblage>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>S : \mathbb{R}^3 \rightarrow \Poly_2</m> and
+        <m>T : \Poly_2 \rightarrow \Poly_4</m> be the linear maps defined by
+        <me>
+          S( (a,b,c) ) := ax^2 + (a-b)x + c,  T(p(x)) = x^2 p(x)
+        </me>
+      </p>
+
+      <p>
+        Then <m>T\circ S</m> can be computed as follows:
+        <md>
+          <mrow>(T \circ S)((a,b,c)) \amp = T(S((a,b,c)))</mrow>
+          <mrow>\amp = T(ax^2 + (a-b)x + c)</mrow>
+          <mrow>\amp = x^2 (ax^2 + (a-b)x + c)</mrow>
+          <mrow>\amp = ax^4 + (a-b)x^3 + cx^2</mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+
+  <proposition>
+    <statement>
+      <p>
+        If <m>S : U \rightarrow V</m> and <m>T : V \rightarrow W</m> are linear maps,
+        then <m>T \circ S : U \rightarrow W</m> is also a linear map.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      Let <m>\ve{u_1}, \ve{u}_2 \in U</m>.
+      Then:
+      <md>
+        <mrow>(T \circ S) (\ve{u}_1 + \ve{u}_2)   \amp = T(S(\ve{u}_1 + \ve{u}_2)) \amp  \mbox{(defn of \(T \circ S\))}</mrow>
+        <mrow>\amp = T(S(\ve{u}_1) + S(\ve{u}_2)) \amp  \mbox{ (\(S\) is linear)}</mrow>
+        <mrow>\amp = T(S(\ve{u}_1)) + T(S(\ve{u}_2)) \amp  \mbox{ (\(T\) is linear)}</mrow>
+        <mrow>\amp = (T \circ S) (\ve{u}_1) + (T \circ S)(\ve{u}_2) \amp  \mbox{(defn of \(T \circ S\))}</mrow>
+      </md>
+    </p>
+
+    <p>
+      Similarly,
+      <md>
+        <mrow>(T \circ S) (k \ve{u}) \amp = T(S(k \ve{u})) \amp  \mbox{(defn of \(T \circ S\))}</mrow>
+        <mrow>\amp = T(kS(\ve{u})) \amp  \mbox{(\(S\) is linear)}</mrow>
+        <mrow>\amp = k T(S(\ve{u})) \amp  \mbox{(\(T\) is linear)}</mrow>
+        <mrow>\amp = k (T \circ S) (\ve{u}) \amp  \mbox{(defn of \(T \circ S\))}</mrow>
+      </md>
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+    <p>
+      Consider the antiderivative (<m>A</m>) and derivative (<m>D</m>) linear maps
+      <md>
+        <mrow>A : \Poly_n \amp  \rightarrow \Poly_{n+1}</mrow>
+        <mrow>D : \Poly_{n+1} \amp  \rightarrow \Poly_n</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Is <m>D \circ A = \id_{\Poly_n}</m>?
+    </p>
+    <solution>
+      <p>
+        We compute the action of <m>D \circ A</m> on the basis <m>x^k</m>,
+        <m>k=0 \ldots n</m> of <m>\Poly_n</m>:
+        <me>
+          x^k \stackrel{A}{\mapsto} \frac{x^{k+1}}{k+1} \stackrel{D}{\mapsto} \frac{k+1}{k+1} x^k = x^k
+        </me>
+      </p>
+
+      <p>
+        Hence for <m>k=0 \ldots n</m>,
+        <md>
+          <mrow>(D \circ A) (x^k) \amp = x^k</mrow>
+          <mrow>\amp = \id_{\Poly_n} (x^k)</mrow>
+        </md>.
+      </p>
+
+      <p>
+        Since <m>D \circ A</m> and
+        <m>\id_{\Poly_n}</m> agree on a basis for <m>\Poly_n</m>,
+        they agree on all vectors <m>\ve{p} \in \Poly_n</m> by <xref ref="defining_linear_map_on_basis">Proposition</xref>.
+        Hence <m>D \circ A = \id_{\Poly_n}</m>.
+      </p>
+
+      <assemblage>
+        <p>
+          In fact, the statement that
+          <m>D \circ A = \id_{\Poly_n}</m> is precisely Part I of the Fundamental Theorem of Calculus,
+          applied to the special case of polynomials!
+        </p>
+      </assemblage>
+
+    </solution>
+
+
+    </statement>
+  </example>
+
+      <exercise>
+      <statement>
+        <p>
+          Is <m>A \circ D = \id_{\Poly_{n+1}}</m>?
+          If it is, prove it.
+          If it is not, give an explicit counterexample.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+The statement is not true! For example, let <m> \ve p(x) = x + 1 </m>.
+Then
+<me>
+(A \circ D)(x + 1)  = A(1) = x \neq x + 1.
+</me>
+</p>
+      </solution>
+    </exercise>
+
+
+  <exercises>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>R_\theta : \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> be the <sq>rotation by <m>\theta</m></sq> map from <xref ref="rotation-map-example-complete">Example</xref>,
+        <me>
+          R( (x,y)) = (x \cos \theta - y \sin \theta, \, x \sin \theta + y \cos \theta)
+        </me>.
+      </p>
+
+      <p>
+        Check algebraically that <m>R_\phi \circ R_\theta = R_{\phi + \theta}</m> by computing the action of the linear maps on both sides of this equation on an arbitrary vector <m>(x,y) \in \mathbb{R}^2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <md>
+        <mrow>R_\phi R_\theta (x,y) \amp = R_\phi (x\cos\theta - y\sin\theta, x\sin\theta + y\cos\theta)</mrow>
+        <mrow>\amp =  \left((x\cos\theta-y\sin\theta)\cos\phi - (x\sin\theta + y \cos\theta)\sin\phi ,\, (x\cos\theta - y\sin\theta)\sin\phi + (x\sin\theta + y\cos\theta)\cos \phi\right) </mrow>
+        <mrow> \amp = \left(x(\cos\theta\cos\phi - \sin\theta\sin\phi) - y(\sin\theta\cos\phi + \cos\theta\sin\phi),\, x(\cos\theta\sin\phi + \sin\theta\cos\phi) + y(\cos\theta\cos\phi - \sin\theta\sin\phi)\right) </mrow>
+        <mrow> \amp = \left(x\cos(\theta + \phi) - y\sin(\theta + \phi), \,x\sin(\theta+\phi) + y\cos(\theta + \phi_)\right) </mrow>
+        <mrow> \amp = R_{\phi + \theta}(x,y) </mrow>
+      </md>
+</p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>M : \Poly_3 \rightarrow \Poly_4</m> be the <sq>multiplication by <m>x</m></sq> map,
+        <m>M(p)(x) = x p(x)</m>.
+        Let <m>S : \Poly_4 \rightarrow \Poly_4</m> be the map <m>S(p(x)) = p(x-1)</m>.
+        Similarly let <m>T : \Poly_3 \rightarrow \Poly_3</m> be the map <m>T(p(x)) = p(x-1)</m>.
+        Compute <m>S \circ M</m> and <m>M \circ T</m>.
+        Are they equal?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <me>
+        (S \circ M)(p(x)) = S(M(p(x))) = S(x p(x)) = (x-1)p(x-1)
+      </me>
+      whereas
+      <me>
+      (M \circ S)(p(x)) = M(p(x-1)) = xp(x-1).
+    </me>
+Thus <m> S \circ M \neq M \circ S </m>.
+      </p>
+    </solution>
+  </exercise>
+  </exercises>
+
+ <!-- <solutions divisional="solution answer" />  -->
+
+
+</section>
+

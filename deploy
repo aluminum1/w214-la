@@ -1,0 +1,23 @@
+set -x
+cd ptx/html
+makehtml
+cd ../latex
+makelatex
+pdflatex w214-lin-alg.tex
+pdflatex w214-lin-alg.tex
+cd ..
+cd ..
+cd ptxaf/html
+makehtml
+cd ../latex
+makelatex
+pdflatex W214-Lin-Alg-Af.tex
+pdflatex W214-Lin-Alg-Af.tex
+cd ..
+cd ..
+rsync -av --exclude makehtml --exclude makesvg ptx/html/ math@math.sun.ac.za:/home/math/public_html/bbartlett/w214-lin-alg/html/
+rsync -av ptx/latex/w214-lin-alg.pdf math@math.sun.ac.za:/home/math/public_html/bbartlett/w214-lin-alg/pdf/
+rsync -av --exclude makehtml --exclude makesvg ptxaf/html/ math@math.sun.ac.za:/home/math/public_html/bbartlett/w214-lin-alg/htmlaf/
+rsync -av ptxaf/latex/w214-lin-alg-af.pdf math@math.sun.ac.za:/home/math/public_html/bbartlett/w214-lin-alg/pdfaf/
+
+

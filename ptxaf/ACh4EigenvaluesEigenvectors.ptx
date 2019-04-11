@@ -1,0 +1,9 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ACh4EigenvaluesEigenvectors">
+  <title>Eiewaardes en eievektore</title>
+  <xi:include  href="ACh4Sec1DefsAndExamples.ptx" />
+  <xi:include  href="ACh4Sec2Eigenvectors.ptx" />
+  <xi:include  href="ACh4Sec3DiagonalizingMatricies.ptx" />
+</chapter>
+

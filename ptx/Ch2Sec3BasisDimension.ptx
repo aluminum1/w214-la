@@ -1,0 +1,1476 @@
+<section xml:id="Ch2Sec3BasisDimension">
+  <title>Basis and dimension</title>
+  <introduction> 
+    <p>
+      In this section we introduce the notions of:
+  <ul>
+  <li> a <em>basis</em> of a vector space </li>, and
+  <li> the <em>dimension</em> of a vector space. </li>
+</ul>
+Then we compute the dimensions of the vector spaces we have introduced up to now. We end by explaining the <em>sifting algorithm</em> which allows us to prove some useful results concerning bases and dimension. </p>
+
+    <definition xml:id="defn_of_basis">
+      <statement>
+        <p>
+          A list of vectors <m>\basis{B} = \bopen \ve{e}_1,
+          \ve{e}_2,\ldots,
+         \ve{e}_n\bclose</m> in a vector space <m>V</m> is called a <term>basis</term>
+          for <m>V</m> if it is linearly independent and spans <m>V</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="inv_dim">
+      <title>Invariance of dimension</title>
+      <statement>
+        <p>
+          If <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_m \right\}</m> and
+          <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2, \ldots, \ve{c}_n\right\}</m> are bases of a vector space <m>V</m>,
+          then <m>m=n</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        This is a consequence of <xref ref="bumping_off_lemma">Proposition</xref>
+        (the Bumping Off Proposition).
+        Since the <m>\ve{b}</m>-vectors are linearly independent and the <m>\ve{c}</m>-vectors span <m>V</m>,
+        we have <m>m \leq n</m>.
+        On the other hand,
+        since the <m>\ve{c}</m>-vectors are linearly independent and the <m>\ve{b}</m>-vectors span <m>V</m>,
+        we have <m>n \leq m</m>.
+        Hence <m>m=n</m>.
+      </p>
+    </proof>
+
+    <definition xml:id="dim_vec_space">
+      <statement>
+        <p>
+          A vector space <m>V</m> is <term>finite-dimensional</term> if there exists a basis <m>\basis{B}</m> for <m>V</m>.
+          In that case, the <term>dimension</term>
+          of <m>V</m> is the number of vectors in the basis <m>\basis{B}</m>.
+          A vector space is <term>infinte-dimensional</term>
+          if it is not finite-dimensional.
+        </p>
+      </statement>
+    </definition>
+
+    <assemblage>
+      <p>
+        Note that the concept of <sq>dimension of a vector space</sq> is only well-defined because of <xref ref="inv_dim">Theorem</xref>.
+      </p>
+    </assemblage>
+
+    <assemblage xml:id="defn_dim_zero_vec_space">
+      <p>The case of the zero vector space <m>Z = \{\ve{0}\}</m> is not explicitly handled in <xref ref="dim_vec_space"/> and we treat it as a special case. Namely, we <em>define</em> the dimension of the zero vector space <m>Z</m> to be <m>0</m>. So, by definition, <m>Z</m> is finite-dimensional, and its dimension equals <m>0</m>. </p>
+    </assemblage>
+  </introduction>
+
+  <subsection>
+    <title>Dimensions of some familiar vector spaces</title>
+
+    <example xml:id="standard_basis_R_n_ex">
+      <title>Standard basis for <m>\mathbb{R}^n</m></title>
+      <statement>
+        <p>
+          The list of vectors
+          <me>
+            \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots, 0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
+          </me>
+          is a basis for <m>\mathbb{R}^n</m>.
+          We already saw in <xref ref="Rn_spanning_set">Example</xref>
+          that this list spans <m>\mathbb{R}^n</m>.
+          We need to check that it is linearly independent.
+          So, suppose that
+          <me>
+            a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}
+          </me>.
+        </p>
+
+        <p>
+          Expanding out the left hand side in components using the definition of the standard basis vectors
+          <m>\ve{e}_i</m>, this becomes the equation
+          <me>
+            (a_1, 0, 0, \ldots, 0) + (0, a_2, 0, \ldots, 0) + \cdots + (0, 0, 0,
+            \ldots, a_n) = (0, 0, 0, \ldots, 0)
+          </me>.
+        </p>
+
+        <p>
+          In other words, we have
+          <me>
+            (a_1, a_2, a_3, \ldots, a_n) = (0, 0, 0, \ldots, 0)
+          </me>
+          which says precisely that <m>a_1 = a_2 = a_3 = \cdots = a_n = 0</m>,
+          which is what we needed to prove.
+          Thus the list of vectors <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m> is linearly independent,
+          and is hence a basis for <m>\mathbb{R}^n</m>.
+          So <m>\mathbb{R}^n</m> has dimension <m>n</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <title>A basis for <m>\mathbb{R}^4</m></title>
+      <statement> <p> Check whether the following list of vectors
+        <men>
+       \ve{v}_1 = (1, 0, 2, -3), \, \ve{v}_2 = (1, 3, -1, 2), \, \ve{v}_3 = (0, 1, 2, -1), \ve{v}_4 = (1, 2, 3, 4)
+      </men>
+      is a basis for <m>\mathbb{R}^4</m>. </p></statement>
+
+      <solution> 
+        <p>
+          First we check if the list of vectors is <xref ref="defn_of_linear_ind" text="title">linearly independent</xref>. Consider the equation
+          <mdn>
+            <mrow> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{0} </mrow>
+            <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (0, 0, 0, 0) </mrow>
+            <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (0,0,0,0) </mrow>
+        </mdn>
+        So the list of vectors is linearly indepedent if and only if the following equations have only the trivial solution <m>a_1 = 0, a_2 = 0, a_3 = 0, a_4 = 0</m>:
+        <mdn>
+    <mrow xml:id="R4-example-eqn1"> a_1 - a_2 + a_4 \amp = 0 </mrow>
+    <mrow> 3a_1 + a_3 + 2a_4 \amp = 0 </mrow>
+    <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = 0 </mrow>
+    <mrow xml:id="R4-example-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = 0 </mrow>
+        </mdn>
+        We can compute the solutions to equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  by hand, or using SageMath.
+        </p> 
+        <sage>
+          <input>
+            var('a1, a2, a3, a4')
+
+            solve([a1 - a2 + a4 == 0,
+                  3*a1 + a3 + 2*a4 == 0,
+                  2*a1 - a2 + 2*a3 + 3*a4 == 0,
+                  -3*a1 + 2*a2 - a3 + 4*a4 == 0],
+                  [a1, a2, a3, a4])
+          </input>
+        </sage>    
+      <p> SageMath outputs:
+      <sidebyside>
+       <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
+      </sidebyside>     
+      So indeed,  equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  have only the trivial solution. Therefore the list of vectors is linearly independent. </p>
+
+      <p> Next, we need to check that the list of vectors spans <m>\mathbb{R}^4</m>. (There is a shorter way of doing this, using <xref ref="lin-ind-implies-basis"/> below, but for now we prove it from first principles.) So, let <m>\ve{w} = (w_1, w_2, w_3, w_4)</m> be an arbitrary vector in <m>\mathbb{R}^4</m>. We need to show that there exists at least one way to express <m>\ve{w}</m> as a linear combination of the vectors <m>\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4</m>. In other words, we need to check if there exists at least one solution to the following equation:
+         <mdn>
+            <mrow xml:id="fund_eqn_span_r4_ex"> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{w} </mrow>
+            <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (w_1, w_2, w_3, w_4) </mrow>
+            <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (w_1, w_2, w_3, w_4) </mrow>
+        </mdn>
+        So the list of vectors spans <m>\mathbb{R}^4</m> if and only if the following equations for <m>a_1, a_2, a_3, a_4</m> always have a solution, no matter what the values of <m>w_1, w_2, w_3, w_4</m> are:
+           <mdn>
+    <mrow xml:id="R4-example-span-eqn1"> a_1 - a_2 + a_4 \amp = w_1 </mrow>
+    <mrow> 3a_1 + a_3 + 2a_4 \amp = w_2 </mrow>
+    <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = w_3 </mrow>
+    <mrow xml:id="R4-example-span-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = w_4 </mrow>
+        </mdn>
+        We can compute the solutions to equations <xref first="R4-example-span-eqn1" last="R4-example-span-eqn4"/>  by hand, or using SageMath:</p>
+        <sage>
+          <input>
+            var('a1, a2, a3, a4, w1, w2, w3, w4')
+
+            solve([a1 - a2 + a4 == w1,
+                  3*a1 + a3 + 2*a4 == w2,
+                  2*a1 - a2 + 2*a3 + 3*a4 == w3,
+                  -3*a1 + 2*a2 - a3 + 4*a4 == w4],
+                  [a1, a2, a3, a4])
+          </input>
+        </sage>    
+        <p>Note that we ask SageMath to solve for <c>a1, a2, a3, a4</c>, since <c>w1, w2, w3, w4</c> are regarded as constants in the equation... we are not trying to solve for them, they are fixed, but arbitrary! SageMath outputs:</p>
+        <sidebyside>
+          <p>
+            <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </c>
+          </p>
+        </sidebyside>
+        <p>In other words, there does indeed exist a solution, no matter what <m>(w_1, w_2, w_3, w_4)</m> is. For instance, if <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, then the solution is
+        <me>
+           a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{36}.
+      </me>
+        In other words, 
+        <me>
+          (3, 1, 2, 4) = \frac{1}{18} \ve{v}_1 - \frac{19}{12} \ve{v}_2 - \frac{17}{9} \ve{v}_3 + \frac{49}{36} \ve{v}_4.
+      </me>
+      Since there exists a solution to equation <xref ref="fund_eqn_span_r4_ex"/> for each vector <m>\ve{w} \in \mathbb{R}^4</m>, we conclude that <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m> spans <m>\mathbb{R}^4</m>. </p>
+
+      <p>Hence <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m>  is a basis for <m>\mathbb{R}^4</m>, since it is linearly independent and spans <m>\mathbb{R}^4</m>.</p>
+      </solution>
+
+    </example>
+
+    <example>
+      <title>Dimension of <m>\Poly_n</m></title>
+      <statement>
+        <p>
+          The list of polynomials
+          <me>
+            \ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \, \ldots, \, \ve{p}_n (x) := x^n
+          </me>
+          is a basis for <m>\Poly_n</m>,
+          so <m>\Dim \Poly_n = n+1</m>.
+          Indeed, this list spans <m>\Poly_n</m> by definition,
+          so we just need to check that it is linearly independent.
+          Suppose that
+          <me>
+            a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n = \ve{0}
+          </me>.
+        </p>
+
+        <p>
+          <em>This is an equation between functions,
+          so it holds for all <m>x \in \mathbb{R}</m>!</em> In other words,
+          for all <m>x \in \mathbb{R}</m>,
+          the following equation holds:
+          <men xml:id="root_of_poly">
+            a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0
+          </men>
+        </p>
+
+        <p>Think about this carefully. Equation <xref ref="root_of_poly"/> represents an <em>infinite</em> family of equations for the unknowns <m>a_0, a_1, \ldots, a_n</m>. There is one equation for each value of <m>x \in \mathbb{R}</m>. For example: 
+        <mdn>
+          <mrow xml:id="poly-example-first-eqn"> (x=1) \amp \amp a_0 + a_1 + a_2 + \cdots + a_n \amp = 0 </mrow>
+          <mrow> (x= -1) \amp \amp a_0 - a_1 + a_2 + \cdots + (-1)^n a_n \amp = 0 </mrow>
+          <mrow> (x= 2) \amp \amp a_0 + 2a_1 + 4a_3 + \cdots + 2^n a_n = 0 </mrow>
+          <mrow> (x= 3) \amp \amp a_0 + 3a_1 + 9a_3 + \cdots + 3^n a_n = 0 </mrow>
+          <mrow xml:id ="poly-example-last-eqn"> \amp \amp \vdots </mrow>
+        </mdn>
+        </p>
+
+        <p>Suppose we find values for <m>a_0, a_1, a_2, \ldots, a_n </m> which solve <em>all</em> these infinitely many equations <xref first="poly-example-first-eqn" last="poly-example-last-eqn" />. We can now change our point of view. Namely, substitute these fixed values for <m>a_0, a_1, \ldots, a_n</m> into Equation <xref ref="root_of_poly"/> and regard Equation <xref ref="root_of_poly"/> as an equation for the unknown <m>x</m> (the coefficients <m>a_0, a_1, \ldots, a_n</m> are now <em>fixed</em>.) We conclude that <em>every <m>x \in \mathbb{R}</m> </em> is a root of this polynomial equation!
+      </p>
+
+
+        <p>
+          But, we know from algebra that a polynomial equation of the form <xref ref="root_of_poly" /> with nonzero coefficients has <em>at most</em>
+          <m>n</m> roots <m>x_1, x_2, \ldots, x_n</m>.
+          So, in order for <xref ref="root_of_poly" /> to hold for
+          <em>all</em> real numbers <m>x</m>,
+          the coefficients must be zero, i.e.
+          <m>a_0 = a_1 = a_2 = \cdots = a_n = 0</m>,
+          which is what we needed to show.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="dim_poly_many_variables">
+      <title>Dimension of <m>\Poly_n[x,y]</m></title>
+      <statement>
+      <p>
+        Recall from <xref ref="poly_many_variables_example"/> the vector space <m>\Poly_n[x,y]</m> of polynomials in variables <m>x</m> and <m>y</m> of degree less than or equal to <m>n</m>.</p>
+
+        <p> A basis for <m>\Poly_0[x,y]</m> is given by the constant polynomial
+        <me>
+         1
+       </me>
+       so that <m>\Dim \Poly_0 [x,y] = 1</m>. Similarly, a basis for <m>\Poly_1[x,y]</m> is given by the polynomials
+        <me>
+                1, x, y
+      </me>
+      so that <m>\Dim \Poly_1[x,y] = 3</m>. Similarly, a basis for <m>\Poly_2[x,y]</m> is given by the polynomials
+      <me>
+        1, x, y, x^2, xy, y^2
+      </me>
+      so that <m>\Dim \Poly_2[x,y] = 6</m>. Reasoning in this way, we see that
+      <md>
+            <mrow> \Dim \Poly_n [x,y] \amp = 1 + 2 + 3 + \cdots n+1 </mrow>
+            <mrow> \amp =  \frac{n(n+1)}{2}. </mrow>
+      </md>
+      </p>
+    </statement>
+    </example>
+
+    <example xml:id="dim_poly_vec_fields">
+      <title>Dimension of <m>\Vect_n (\mathbb{R}^2)</m> </title>
+      <statement>
+      <p>Recall from <xref ref="poly_vector_fields_example"/> the vector space <m>\Vect_n (\mathbb{R}^2)</m> of polynomial vector fields on <m>\mathbb{R}^2</m> whose component functions have degree less than or equal to <m>n</m>.</p>
+
+      <p>A basis for <m>\Vect_0 (\mathbb{R}^2)</m> is given by the polynomial vector fields
+      <me>
+        (1, 0), (0, 1)
+    </me>
+    so that <m>\Dim \Vect_0(\mathbb{R}^2) = 1 + 1 = 2</m>. Similarly, a basis for <m>\Vect_1(\mathbb{R}^2)</m> is given by the polynomial vector fields
+        <me>
+                (1, 0), (x, 0), (y, 0), (0, 1), (0, x), (0, y)
+      </me>
+      so that <m>\Dim \Vect_1(\mathbb{R}^2) = 3+3 = 6</m>. Similarly, a basis for <m>\Vect_2(\mathbb{R}^2)</m> is given by the polynomial vector fields
+      <md>
+          <mrow>      (1, 0), (x, 0), (y, 0), (x^2, 0), (xy, 0), (y^2, 0),  </mrow>
+          <mrow>      (0, 1), (0, x), (0, y), (0, x^2), (0, xy), (0, y^2)      </mrow>
+      </md>
+      so that <m>\Dim \Vect_2(\mathbb{R}^2) = 6 + 6 = 12</m>. Reasoning in this way, we see that
+      <md>
+        <mrow> \Dim \Vect_n(\mathbb{R}^2) \amp = \Dim \Poly_n[x,y] + \Dim \Poly_n[x,y] </mrow>
+        <mrow> \amp = (n+1)(n+2). </mrow>
+      </md>
+      </p>
+    </statement>
+    </example>
+
+    <example>
+      <statement>
+      <p>
+        Suppose <m>X</m> is a finite set.
+        Then <m>\Fun(X)</m> is finite-dimensional,
+        with dimension <m>|X|</m>,
+        with basis given by the functions <m>f_a</m>,
+        <m>a \in X</m>, defined by:
+        <men xml:id="defn_of_basis_of_functions">
+          f_a (x) :=  \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ otherwise}  \end{cases}
+        </men>
+      </p>
+
+      <p>
+        We will prove this in a series of exercises.
+      </p>
+
+      <assemblage>
+        <p>
+          The formula on the right hand side of <xref ref="defn_of_basis_of_functions" /> occurs so often in mathematics we give it a symbol of its own,
+          <m>\delta_{ab}</m>
+          (the <sq>Kronecker delta</sq>).
+          This symbol stands for the formula:
+          <q>If <m>a=b</m>, return a 1.
+          If <m>a \neq b</m>, return a <m>0</m></q>.
+          In this language,
+          we can rewrite the definition of the functions <m>f_a</m> as
+          <men>
+            f_a (x) := \delta_{ax}
+          </men>.
+        </p>
+      </assemblage>
+      </statement>
+    </example>
+
+    <exercise>
+        <statement>
+          <p>
+            
+            Suppose <m>X = \left\{a, b, c\right\}</m>.
+
+            <ol>
+              <li>
+                <p>
+                  Evaluate the function <m>f_{b }</m> at each <m>x \in X</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Show that <m>\bopen f_a, f_b, f_c \bclose</m> is a basis for <m>\Fun(X)</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Now let <m>X</m> be an arbitrary finite set.
+            Consider the collection of functions
+            <me>
+             \basis{B} = \bopen f_a : \, a \in X \bclose 
+            </me>
+          </p>
+          <p>
+            Show that <m>\basis{B}</m> is a basis for <m>\Fun(X)</m>.
+          </p>
+        </statement>
+      </exercise>
+
+
+
+    <example>
+      <statement>
+        <p>
+          <m>\Trig_n</m> is <m>(2n+1)</m>-dimensional, with basis
+          <md>
+            <mrow>\ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x) := \sin x, \, \ve{T}_3 (x) := \cos 2x, </mrow>
+            <mrow> \ve{T}_4 (x) := \sin 2x, \, \ldots, \, \ve{T}_{2n-1} (x) := \cos nx , \, \ve{T}_{2n} (x) := \sin nx.</mrow>
+          </md>
+        </p>
+
+        <p>
+          You know that these functions span <m>\Trig_n</m>, by definition.
+          They are also linearly independent,
+          though we will not prove this.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="dimension_of_matrix_space_example">
+      <statement>
+      <p>
+        The dimension of <m>\Mat_{n,m}</m> is <m>nm</m>,
+        with basis given by the matrices
+        <me>
+          \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
+        </me>
+        which have a <m>1</m> in the <m>i</m>th row and <m>j</m>th column and zeroes everywhere else.
+      </p>
+
+      <assemblage>
+        <p>
+          Usually <m>\mat{A}</m> is a matrix,
+          and <m>\mat{A}_{ij}</m> is the element of the matrix at position <m>(i,j)</m>.
+          But now <m>\mat{E}_{ij}</m> is a matrix in its own right!
+          Its element at position <m>(k,l)</m> will be written as <m>(\mat{E}_{ij})_{kl}</m>.
+          I hope you don't find this too confusing.
+          In fact, we can write down an elegant formula for the elements of
+          <m>\mat{E}_{ij}</m> using the Kronecker delta symbol:
+          <men xml:id="kronecker_for_matrix_basis">
+            (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
+          </men>
+        </p>
+      </assemblage>
+      </statement>
+    </example>
+
+    <exercise>
+        <statement>
+          <p>
+            Check that <xref ref="kronecker_for_matrix_basis" /> is indeed the correct formula for the matrix elements of <m>\mat{E}_{ij}</m>.
+          </p>
+        </statement>
+      </exercise>
+
+    <example>
+      <statement>
+        <p>
+          The standard basis of <m>\Mat_{2,2}</m> is
+          <me>
+            \mat{E}_{11} = \left[ \begin{array}{cc} 1 \amp  0 \\ 0 \amp  0
+            \end{array}  \right], \, \mat{E}_{12} = \left[ \begin{array}{cc} 0 \amp  1 \\ 0 \amp  0
+            \end{array}  \right], \mat{E}_{21} = \left[ \begin{array}{cc} 0 \amp  0 \\ 1 \amp  0
+            \end{array}  \right], \mat{E}_{22} = \left[ \begin{array}{cc} 0 \amp  0 \\ 0 \amp  1
+            \end{array}  \right]
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          The standard basis of <m>\Col_n</m> is
+          <me>
+            \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
+            \end{array}  \right], \, 
+            \col{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
+            \end{array}  \right], \, 
+            \ldots, \,
+            \col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
+            \end{array}  \right] 
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id ="dimension_of_hyperplane">
+      <title>Dimension of a hyperplane</title>
+    <statement>
+      <p> Let <m>\ve{v} \in \mathbb{R}^n</m> be a fixed vector, and consider the hyperplane <m>W \subset \mathbb{R}^n</m> orthogonal to <m>\ve{v}</m> as in <xref ref="hyperplanes_example_subspace"/>. Then you will prove in Exercise <xref ref="dimension_of_hyperplane_exercise"/> that <m>\Dim(W) = n-1</m>. </p>
+
+      <p>For instance, consider the specific example from <xref ref="hyperplanes_example_subspace"/>, namely the plane <m>W \subset \mathbb{R}^3</m> of vectors orthogonal to <m>\ve{v} = (1,2,3)</m>. In other words,
+      <men xml:id="eqn_for_W_1">
+      W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.
+    </men>
+    There is no 'standard' basis for <m>W</m>. But, here is one basis (as good as any other):
+    <men xml:id="ab_basis_orth_plane">
+    \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{2}{3}).
+  </men>
+    You will show this is indeed a basis for <m>W</m> in <xref ref="prove_basis_for_ex_hyperplane"/> below. I computed these vectors as follows. To obtain <m>\ve{a}</m>, I simply set <m>w_1 = 1, w_2 = 0</m> and then solved for <m>w_3</m> using Equation <xref ref="eqn_for_W_1"/>. Similarly, for <m>\ve{b}</m>, I simply set <m>w_1 = 0, w_2 = 1</m> and then solved for <m>w_3</m> using <xref ref="eqn_for_W_1"/>.</p>
+
+    <p> There is nothing special about my method above for computing a basis for <m>W</m>. Here is a different basis for <m>W</m>, which I arrived at by choosing random values of <m>w_1</m> and <m>w_2</m> and then calculating what <m>w_3</m> must be in order to satisfy Equation <xref ref="eqn_for_W_1"/>:
+    <men>
+    \ve{u} = (1, 2, -\frac{5}{3}), \quad \ve{v} = (-4, 2, 0).
+  </men>
+</p>
+<p>In any event, we see that <m>\Dim(W) = 2</m>.</p>
+    </statement>
+    </example>
+
+    <exercise xml:id="prove_basis_for_ex_hyperplane">
+      <statement><p> Show that the list of vectors <m>\bopen \ve{a}, \ve{b} \bclose </m> from <xref ref="ab_basis_orth_plane"/> in <xref ref="dimension_of_hyperplane"/> is a basis for <m>W</m>. </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="dimension_of_hyperplane_exercise">
+      <statement><p> Let <m>\ve{v} \in \mathbb{R}^n</m> be a fixed vector, and set
+      <me>
+      W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0 \}
+    </me>
+    Prove that <m>\Dim(W) = n-1</m>.</p>
+      </statement>
+      <hint>Find a basis for the solution space of the equation determining <m>W</m>.</hint>
+    </exercise>
+    </subsection>
+
+    <subsection>
+	<title>Dimension of space of solutions to a homogenous linear differential equation</title>
+	<introduction>
+		<p>We will now compute the dimension of the vector space of solutions to a homogenous linear ordinary differential equation. We will need the following theorem from the theory of differential equations, which we won't prove.
+			</p>
+	</introduction>
+	<theorem xml:id="diff_eqn_exist_unique">
+		<title>Existence and uniqueness of solutions to linear ODE's</title>
+		<statement>Let
+		<men xml:id="diff_eqn_in_thm">
+			y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y == 0
+		</men>
+		be a linear homogenous ordinary differential equation on an interval <m>I</m>, where <m>a_0(x), \cdots, a_{n-1}(x)</m> are continuous on <m>I</m>. Suppose we are given initial conditions
+		<mdn>
+			<mrow xml:id="diff_eqn_thm_ic1"> y(x_0) \amp = c_0 </mrow>
+			<mrow> y^{(1)}(x_0) \amp = c_1 </mrow>
+			<mrow> \vdots  \amp </mrow>
+			<mrow xml:id="diff_eqn_thm_iclast"> y^{(n-1)}(x_0) \amp = c_{n-1} </mrow>
+		</mdn>
+		where <m>x_0 \in I</m> and <m>c_0, \ldots, c_{n-1}</m> are arbitrary constants. Then there exists a unique function <m>y(x)</m> on <m>I</m> saisfying the differential equation <xref ref="diff_eqn_in_thm"/> and the initial conditions <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
+		</statement>
+	</theorem>
+  We will not cover the proof of <xref ref="diff_eqn_exist_unique"/>, which you can find in a course on Differential Equations. Instead, we are interested in the following Linear Algebra <em>consequence</em> of <xref ref="diff_eqn_exist_unique"/>.
+<corollary> 
+  <title>Dimension of space of solutions to a homogenous linear ODE of order <m>n</m></title>
+  <statement>Let <m>V</m> be the vector space of all solutions to an <m>n</m>th order homogenous linear ordinary differential equation on an interval <m>I</m>,
+      <men xml:id="diff_eqn_in_thm_2">
+     y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y = 0,
+    </men>
+where where <m>a_0(x), \cdots, a_{n-1}(x)</m> are continuous on <m>I</m>. Then
+<me>
+ \Dim(V) = n.
+  </me>
+  </statement>
+</corollary> 
+<proof> <p>Choose a fixed <m>a \in I</m>. By the <em>existence</em> part of <xref ref="diff_eqn_exist_unique"/>, we know that there exist
+<men>
+  y_0, \ldots, y_{n-1} \in V
+</men>
+satisfying
+<men xml:id="ics_delta_form">
+  y_i^{(j)} (a) = \delta_{ij}, \quad i,j = 1 \ldots n-1.
+</men>
+Here is <xref ref="ics_delta_form"/> written out in full:
+<mdn>
+<mrow xml:id="ics_delta_1"> y_0(a) \amp  = 1 \amp y_1(a) \amp = 0 \amp \amp \cdots \amp y_{n-1}(a) = 0 </mrow>
+<mrow> y^{(1)}_0(a) \amp  = 0 \amp y^{(1)}_1(a) \amp = 1 \amp \amp \cdots \amp y^{(1)}_{n-1}(a) = 0 </mrow>
+<mrow> \amp \vdots \amp \amp \amp \amp   \vdots </mrow>
+<mrow xml:id="ics_delta_n"> y^{(n-1)}_0(a) \amp  = 0 \amp y^{(n-1)}_1(a) \amp = 0 \amp \amp \cdots \amp y^{(n-1)}_{n-1}(a) = 1 </mrow>
+  </mdn>
+I claim that <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> is a basis for <m>V</m>.</p>
+
+<paragraphs>
+ <title>Step 1. <m> \bopen y_0, \ldots, y_{n-1} \bclose </m> is linearly independent.</title>
+ <p>Suppose
+  <men xml:id="lin_dep_no_wronskian">
+ k_0 y_0 + \cdots + k_{n-1}y_{n-1} = 0.
+</men>
+Differentiating Equation <xref ref="lin_dep_no_wronskian"/> successively gives us <m>n</m> equations:
+<mdn>
+ <mrow xml:id="no_wronskian_proof_1"> k_0 y_0 + \cdots + k_{n-1}y_{n-1} \amp = 0 </mrow>
+ <mrow xml:id="no_wronskian_proof_2"> k_0 y'_0 + \cdots + k_{n-1}y'_{n-1} \amp = 0 </mrow>
+ <mrow> \vdots </mrow>
+ <mrow> k_0 y^{(n-1)}_0 + \cdots + k_{n-1}y^{(n-1)}_{n-1} \amp = 0 </mrow>
+</mdn>
+Evaluating <xref ref="no_wronskian_proof_1"/> at <m>x=a</m> gives
+<md>
+ <mrow>  k_0 \underbrace{y_0 (a)}_{=1} + k_1 \underbrace{y_1(a)}_{=0} + \cdots + k_{n-1} \underbrace{y_{n-1}(a)}_{=0} \amp = 0</mrow> 
+ <mrow> \therefore k_0 \amp = 0.</mrow>
+</md>
+Similarly, evaluating <xref ref="no_wronskian_proof_2"/> at <m>x=a</m> gives
+<md>
+ <mrow>  k_0 \underbrace{y'_0 (a)}_{=0} + k_1 \underbrace{y'_1(a)}_{=1} + \cdots + k_{n-1} \underbrace{y'_{n-1}(a)}_{=0} \amp = 0</mrow> 
+ <mrow> \therefore k_1 \amp = 0.</mrow>
+</md>
+Similarly, evaluating the remaining higher derivatives at <m>x=a</m> gives <m>k_2 = 0, \ldots, k_{n-1} = 0</m>. Therefore, <m>\bopen y_0, \ldots, y_{n-1} \bclose</m> is linearly independent.</p>
+</paragraphs>
+
+<paragraphs>
+<title>Step 2. <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> spans <m>V</m>.</title>
+<p>Let <m>y</m> be an arbitrary solution to the differential equation <xref ref="diff_eqn_in_thm"/>. We need to show that <m>y</m> can be expressed as a linear combination of <m>y_0, \ldots, y_{n-1}</m>. </p>
+
+<p>Define scalars <m>c_0, \ldots, c_{n-1}</m> by evaluating the derivatives of <m>y</m> at <m>x=a</m>:
+<md>
+<mrow> c_0 \amp := y(a) </mrow>
+<mrow> c_1 \amp := y'(a) </mrow>
+<mrow> \vdots </mrow>
+<mrow> c_{n-1} \amp := y^{(n-1)}(a) </mrow>
+  </md>
+I claim that
+<men xml:id="span_ode_rtp">
+ y = c_0 y_0 + c_1 y_1 + \cdots + c_{n-1} y_{n-1}.
+</men>
+To prove this, let <m>f</m> be the function on the right hand side of <xref ref="span_ode_rtp"/>:
+<me> 
+ f :=c_0 y_0 + c_1 y_1 + \cdots + c_{n-1} y_{n-1} 
+</me> </p>
+<p>
+Clearly <m>f \in V</m>, in other words it is a solution of the differential equation <xref ref="diff_eqn_in_thm"/>.</p>
+<p>Moreover, consider successively differentiating <m>f</m> and evaluating at <m>x=a</m>. Using the initial conditions satisfied by the <m>y_i</m>, Equation <xref ref="ics_delta_form"/>, we compute: 
+<md>
+  <mrow> f(a) \amp = c_0 </mrow>
+  <mrow> f'(a) \amp = c_1 </mrow>
+  <mrow> \vdots </mrow>
+   <mrow> f^{(n-1)}(a) \amp = c_{n-1} </mrow>
+ </md>
+ These are precisely the same initial conditions satisfied by <m>y</m> in Equations <xref first="ics_delta_1" last="ics_delta_n"/>! Therefore, by the uniqueness part of <xref ref="diff_eqn_exist_unique"/>,  we conclude that <m>f = y</m>. Hence <xref ref="span_ode_rtp"/> is indeed true.
+</p>
+   </paragraphs>
+</proof>
+ Now let us do example computations illustrating these ideas. 
+
+	<example>
+		<title>Application of existence and uniqueness theorem of solutions to ODE</title>
+		<statement><p>Consider the ODE
+		<men>
+			x^2 y^{''} - 3xy^{'} + 5y = 0 \quad \mbox{on } (0, \infty)
+		</men>
+		from <xref ref="first_example_2nd_order_ode"/>. To apply <xref ref="diff_eqn_exist_unique"/>, we first rewrite it in the form
+		<men xml:id="diff_eqn_example_thm">
+			y^{''} - \frac{3}{x} y' + \frac{5}{x^2} y = 0 \quad \mbox{on } (0, \infty).
+		</men>
+		The coefficient functions <m>\frac{3}{x}</m> and <m>\frac{5}{x^2}</m> are continuous on <m>(0, \infty)</m> so we can apply <xref ref="diff_eqn_exist_unique"/>. Choose, say, <m>x_0 = 1</m> and arbitrary numbers <m>c_0, c_1</m>. Then <xref ref="diff_eqn_exist_unique"/> says that there exists a unique solution <m>y(x)</m> to the differential equation <xref ref="diff_eqn_example_thm"/> satisfying the initial conditions:
+		<mdn>
+			<mrow xml:id="ic1_diff_eqn_ex"> y(1) \amp = c_0 </mrow>
+			<mrow xml:id="ic2_diff_eqn_ex"> y'(1) \amp = c_1 </mrow>
+		</mdn> 
+		Let us verify this in SageMath. First, we ask SageMath to find the most general solution to the differential equation <xref ref="diff_eqn_example_thm"/>:
+		<sage>
+			<input>
+				x = var('x')
+				y = function('y')(x)
+
+				ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
+
+				show(desolve(ode, y))
+			</input>
+		</sage>
+		SageMath tells us that the most general solution to the differential equation <xref ref="diff_eqn_example_thm"/> is
+		<men xml:id="gen_soln_formula_ode">
+			y = K_1 x^2 \sin(\log(x)) + K_2 x^2 \cos(\log(x)). 
+		</men>
+		Let us now apply the initial conditions <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/>. We can compute <m>y(1)</m> and <m>y'(1)</m> using the formula for <m>y</m> from <xref ref="gen_soln_formula_ode"/>. So <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> becomes (check this):
+		<mdn>
+			<mrow xml:id="first_eqn_ks"> K_2 \amp = c_0 </mrow>
+			<mrow xml:id="second_eqn_ks"> K_1 + 2K_2 \amp = c_1 </mrow>
+		</mdn>
+		Equations <xref first="first_eqn_ks" last="second_eqn_ks"/> have a unique solution, namely <m>K_1 = c_1 - 2 c_0, K_2 = c_0</m>. So indeed, for any initial conditions <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/>, the differential equation <xref ref="diff_eqn_example_thm"/> has a unique solution, namely:
+		<me>
+			y = (c_1 - 2 c_0) x^2 \sin (\log(x)) + c_0 x^2\cos(\log(x))
+		</me>
+		For instance, if our initial conditions were
+		<mdn>
+			<mrow> y(1) \amp = 1 </mrow>
+			<mrow> y'(1) \amp = 0 </mrow>
+		</mdn> 
+		then the unique solution is
+		<men xml:id="soln_example_ic">
+			y = -2 x^2 \sin(\log(x)) + x^2 \cos(\log(x)).
+		</men>
+		You can also check this explicitly in SageMath, using the <c>ics=[1,1,0]</c> option of <c>desolve</c> (the first number is the value of <m>x_0</m>, the second number is the value of <m>y(x_0)</m>, and the third number is the value of y'(x_0), etc.):
+		<sage>
+			<input>
+				x = var('x')
+				y = function('y')(x)
+
+				ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
+
+				show(desolve(ode, y, ics=[1,1,0]))
+				
+			</input>
+		</sage>
+		SageMath outputs the same solution as in <xref ref="soln_example_ic"/>.
+
+		Similarly, if our initial conditions were
+		<mdn>
+			<mrow xml:id="ic1_diff_eqn_ex_ex"> y(1) \amp = 1 </mrow>
+			<mrow xml:id="ic2_diff_eqn_ex_ex"> y'(1) \amp = 0 </mrow>
+		</mdn> 
+		then the unique solution is
+		<me>
+			y = x^2 \sin(\log (x)).
+		</me>
+	</p>
+	</statement>
+	</example>   
+
+
+
+  </subsection>
+
+    <subsection>
+      <title>Dimensions of subspaces</title>
+    <p>
+      We now consider dimensions of subspaces of vector spaces.
+    </p>
+
+    <proposition xml:id="dim-of-subspace-prop">
+      <statement>
+        <p>
+          Let <m>W</m> be a subspace of a finite-dimensional vector space <m>V</m>.
+          Then <m>W</m> is finite-dimensional,
+          and <m>\Dim(W) \leq \Dim(V)</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <proof>
+      <p> Let
+     	<me>
+          \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose 
+        </me> 
+        be a basis for <m>V</m>, so that <m>\Dim(V) = n</m>. We just need to show that <m>W</m> is finite-dimensional, i.e. that there exists a basis
+      <me>
+        \basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_k \bclose
+      </me>
+      for <m>W</m>. For then <m>\basis{B}</m> will be a list of <m>k</m> linearly independent vectors which live in <m>W</m> (and hence also in <m>V</m>) and hence we must have <m>k \leq n</m> by <xref ref="bumping_off_lemma"/>, as <m>\basis{C}</m> spans <m>V</m>.</p>
+
+      <p>We show that <m>W</m> is finite-dimensional as follows.</p>
+
+      <p> If <m>W</m> is the zero vector space <m>\{ \ve{0} \} </m>, then <m>W</m> is finite-dimensional <xref ref="defn_dim_zero_vec_space" text="title">by definition</xref>. </p>
+
+      <p>If <m>W</m> is not the zero vector space, then there exists a nonzero vector <m>\ve{w}_1 \in W</m>. Consider the list <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Note that <m>\basis{B}_1</m> is linearly independent, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_1</m> spans <m>W</m>, then it is a basis for <m>W</m>, and so <m>W</m> is finite-dimensional and we are done.</p>
+
+      <p>If <m>\basis{B}_1</m> does not span <m>W</m>, then there exists a vector <m>\ve{w}_2 \in W</m> which is not a scalar multiple of <m>\ve{e}_1</m>.
+        Now consider the list <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>. Once again, <m>\basis{B}_2</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_2</m> spans <m>W</m>, then it is a basis for <m>W</m>, and we are done. </p>
+
+
+      <p>If <m>\basis{B}_2</m> does not span <m>W</m>, then there exists a vector
+        <m>\ve{w}_3 \in W</m> which is not a linear combination of <m>\ve{w}_1</m> and <m>\ve{w}_2</m>.
+        Now consider the list <m>\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}</m>. Again, <m>\basis{B}_3</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. If it does not span <m>W</m>, then there exists a vector <m>\ve{w}_4 \in W</m> which is not a linear combination of <m>\ve{w}_1, \ve{w}_2, \ve{w}_3</m>. So consider the list <m>\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose </m>. </p>
+
+       <p>This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="bumping_off_lemma"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.</p>
+    </proof>
+  </subsection>
+    <subsection>
+      <title>Infinite-dimensional vector spaces</title>
+
+    <p>
+      It is good to have an example of an infinite-dimensional vector space.
+    </p>
+
+    <proposition>
+      <statement>
+        <p>
+          <m>\Poly</m> is infinite-dimensional.
+        </p>
+      </statement>
+    </proposition>
+
+    <proof>
+      <p>
+        Suppose <m>\Poly</m> is finite-dimensional.
+        This means there exists a finite collection of polynomials
+        <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m> which spans <m>\Poly</m>.
+        But, let <m>d</m> be the highest degree of all the polynomials in the list <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m>.
+        Then <m>\ve{p} := x^{d+1}</m> is a polynomial which is not in the span of <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m>,
+        since adding polynomials together and multiplying them by scalars can never increase the degree.
+        We have arrived at a contradiction.
+        So our initial assumption cannot be correct, i.e.
+        <m>\Poly</m> cannot be finite-dimensional.
+      </p>
+    </proof>
+
+    <example>
+      <statement>
+        <p>
+          We will not prove this here,
+          but the following vector spaces are also infinite-dimensional:
+
+          <ul>
+            <li>
+              <p>
+                <m>\mathbb{R}^\infty</m>,
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Fun(X)</m> where <m>X</m> is an infinite set,
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Cont(I)</m> for any nonempty interval <m>I</m>, and
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Diff(I)</m> for any open interval <m>I</m>
+              </p>
+            </li>
+
+            <li> <p> <m>\Poly^k</m> </p> </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sifting_subsection">
+    <title>The sifting algorithm and its uses</title>
+    <p>
+      If we consider the proof of <xref ref="bumping_off_lemma">Proposition</xref>
+      (the <sq>Bumping off</sq> Proposition)
+      carefully, we find that it makes use of a
+      <em>sifting algorithm</em>.
+      This algorithm can actually be applied to <em>any</em>
+      list of vectors <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> in a vector space.
+      Consider each vector <m>\ve{v}_i</m> in the list consecutively.
+      If <m>\ve{v}_i</m> is the zero vector,
+      or if it is a linear combination of the preceding vectors
+      <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_{n-1}</m>, remove it from the list.
+    </p>
+
+    <example>
+      <statement>
+      <p>
+        Sift the following list of vectors in <m>\mathbb{R}^3</m>:
+        <md>
+          <mrow>\ve{v}_1 \amp = (1,2,-1), \amp  \ve{v}_2 \amp = (0, 0, 0), \amp  \ve{v}_3 \amp = (3, 6, -3)</mrow>
+          <mrow>\ve{v}_4 \amp = (1, 0, 5), \amp  \ve{v}_5 \amp = (5, 4, 13), \amp   \ve{v}_6 \amp = (1, 1, 0)</mrow>
+        </md>.
+      </p>
+
+      <p>
+        We start with <m>\ve{v}_1</m>.
+        Since it is not the zero vector,
+        and is not a linear combination of any preceding vectors,
+        it remains.
+        We move on to <m>\ve{v}_2</m>,
+        which is zero, so we remove it.
+        We move on to <m>\ve{v}_3</m>,
+        which by inspection is equal to <m>3 \ve{v}_1</m>, so we remove it.
+        We move on to <m>\ve{v}_4</m>.
+        It is not zero,
+        and cannot be expressed as a multiple of <m>\ve{v}_1</m>
+        (check this),
+        so it remains.
+        We move on to <m>\ve{v}_5</m>.
+        We check if it can be written as a linear combination
+        <me>
+          \ve{v}_5 = a\ve{v}_1 + b \ve{v}_4
+        </me>
+        and find the solution <m>a=2, b=3</m>
+        (check this),
+        so we remove it.
+        Finally we move on to <m>\ve{v}_6</m>.
+        We check if it can be written as a linear combination
+        <me>
+          \ve{v}_6 = a\ve{v}_1 + b \ve{v}_4
+        </me>
+        and find no solutions
+        (check this),
+        so it remains.
+        Our final sifted list is
+        <me>
+          \ve{v}_1, \ve{v}_4, \ve{v}_6
+        </me>.
+      </p>
+
+      
+
+      </statement>
+    </example>
+
+    <exercise>
+        <statement>
+          <p>
+            Do the three <sq>check this</sq> calculations above.
+          </p>
+        </statement>
+                <solution>
+        <p>
+        <ol>
+        <li>
+        <p>
+        Suppose <me> (a,2a,-a) = (1,0,5) </me>. Then the first entry requires that <m> a =1 </m> but the second entry requires that <m> a = 0 </m>. Hence there can be no <m> a </m> satisfying the equation.
+        </p>
+        </li>
+
+        <li>
+        <p>
+        <me>
+        2 \ve v_1 + 3 \ve v_2 = 2(1,2,-1) + 3(1,0,5) \\ = (2 + 3, 4 + 0, -2 + 15) =  (5,4,13) = \ve v_4
+        </me>
+        </p>
+        </li>
+
+
+        <li>
+          <p>
+        Suppose 
+        <me>
+        a \ve v_1 + b \ve v_4 = \ve v_6 
+        </me>
+        i.e.
+        <me>
+        (a,2a,-a) + (b,0,5b)= (1,1,0).
+        </me>
+        Consideration of the second entry gives <m> a = \frac{1}{2} </m> which, by looking at the first entry, forces <m> b = \frac{1}{2}</m> but then, if we look at the third entry, <m> -\frac{1}{2} + \frac{5}{2} \neq 0 </m>. Hence there are no solutions to the equation.
+        </p>
+        </li>
+
+
+        </ol>
+        </p>
+                </solution>
+      </exercise>
+
+    <p>
+      Sifting is a very useful way to construct a basis of a vector space!
+    </p>
+
+    <lemma xml:id="sift_lemma_basis">
+      <statement>
+        <p>
+          If a list of vectors <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> spans a vector space <m>V</m>,
+          then sifting the list will result in a basis for <m>V</m>.
+        </p>
+      </statement>
+    </lemma>
+
+    <proof>
+      <p>
+        At each step,
+        the vector that is removed from the list is either the zero vector,
+        or a linear combination of the vectors before it.
+        So if we remove this vector, the resulting list will still span <m>V</m>.
+        Thus by the end of the process,
+        the final sifted list of vectors still spans <m>V</m>.
+      </p>
+
+      <p>
+        To see that the final sifted list is linearly independent,
+        we can apply <xref ref="lin_dependence_prop">Proposition</xref>.
+        By construction,
+        no vector in the final sifted list is a linear combination of the preceding vectors
+        (if it was, it would have been removed!).
+        Hence the final sifted list is not linearly dependent,
+        so it must be linearly independent!
+      </p>
+    </proof>
+
+    <corollary xml:id="first_corollary_please">
+      <statement>
+        <p>
+          Any linearly independent list of vectors
+          <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k</m> in a finite-dimensional vector space <m>V</m> can be extended to a basis of <m>V</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <proof>
+      <p>
+        Since <m>V</m> is finite-dimensional,
+        it has a basis <m>\ve{e}_1, \ldots, \ve{e}_n</m>.
+        Now consider the list
+        <me>
+          L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n
+        </me>
+        which clearly spans <m>V</m>.
+        By sifting this list, we will arrive at a basis for <m>V</m>,
+        by <xref ref="sift_lemma_basis">Lemma</xref>.
+        Some of the <m>\ve{e}</m>-vectors may have been removed.
+        But none of the <m>\ve{v}</m>-vectors will have been removed,
+        since that would mean some
+        <m>\ve{v}_i</m> is a linear combination of the preceding vectors
+        <m>\ve{v}_1, \ldots, \ve{v}_{i-1}</m>, which is impossible,
+        as <m>\ve{v}_1, \ldots, \ve{v}_k</m> is linearly independent list.
+        Hence after sifting the list <m>L</m> we indeed extend our original list
+        <m>\ve{v}_1, \ldots, \ve{v}_k</m> to a basis of <m>V</m>.
+      </p>
+    </proof>
+
+    <corollary xml:id="lin-ind-implies-basis">
+      <statement>
+        <p>
+          If <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> is a linearly independent list of <m>n</m> vectors in an <m>n</m>-dimensional vector space <m>V</m>,
+          then it is a basis.
+        </p>
+      </statement>
+    </corollary>
+
+    <proof>
+      <p>
+        By <xref ref="first_corollary_please">Corollary</xref>,
+        we can extend <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> to a basis for <m>V</m>.
+        But <m>V</m> has dimension <m>n</m>,
+        so the basis must contain only <m>n</m> vectors by <xref ref="inv_dim">Theorem</xref> (Invariance of Dimension).
+        So we have not added any vectors at all!
+        Hence our original list was already a basis.
+      </p>
+    </proof>
+
+    <example>
+      <statement>
+        <p>
+          In <xref ref="new_basis_for_poly_3">Example</xref>
+          we showed that the list of polynomials
+          <me>
+            \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
+          </me>
+          is linearly independent in <m>\Poly_3</m>.
+          Since <m>\Dim \Poly_3 = 4</m>,
+          we see that it is a basis of <m>\Poly_3</m>.
+        </p>
+
+        <assemblage>
+          <p>
+            In <xref ref="chebyshev_example">Exercise</xref>,
+            you showed that <m>\ve{q}_0, \ldots, \ve{q}_3</m> is a basis for <m>\Poly_3</m> by <sq>brute force</sq>.
+            This new method is <em>different</em>!
+          </p>
+        </assemblage>
+
+      </statement>
+    </example>
+  </subsection>
+
+  <exercises xml:id="ch2sec3exercises">
+
+<exercise xml:id="exercise_for_new_basis">
+    <statement>
+      <p>
+        Sift the list of vectors
+        <md>
+          <mrow>\ve{v}_1 \amp = (0,0,0), \amp  \ve{v}_2 \amp = (1, 0, -1), \amp  \ve{v}_3 \amp = (1, 2, 3)</mrow>
+          <mrow>\ve{v}_4 \amp = (3, 4, 5), \amp  \ve{v}_5 \amp = (4, 8, 12), \amp   \ve{v}_6 \amp = (1, 1, 0)</mrow>
+        </md>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="true_false_span_lin_ind">
+    <statement>
+      <p>
+        Let <m>V</m> be a vector space of dimension <m>n</m>.
+        State whether each of the following statements is true or false.
+        If it is true, prove it.
+        If it is false, give a counterexample.
+
+        <ol>
+          <li>
+            <title>(a)</title>
+            <p>
+              Any linearly independent list of vectors in <m>V</m> contains at most <m>n</m> vectors. 
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Any list of vectors which spans <m>V</m> contains at least <m>n</m> vectors.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+             True
+             <proof>
+              <p>
+             Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\dim V \geq n+1 </m> contradicting, the fact that <m> \dim V = n</m>.
+           </p>
+           </proof>
+           </p>
+          </li>
+         
+          <li>
+            <p>
+            True
+            <proof>
+              <p>
+                Try it yourself! Your proof will be very similar to the one given for <m>a</m>.
+              </p>
+            </proof>
+          </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+
+  <exercise xml:id="n_lin_ind_is_basis">
+    <statement>
+      <p>
+        Complete the proof of the following lemma.
+      </p>
+
+      <p>
+        <em>Lemma.</em> Suppose <m>V</m> is a vector space of dimension <m>n</m>.
+        Then any linearly independent set of <m>n</m> vectors in <m>V</m> is a basis for <m>V</m>.
+      </p>
+
+      <p>
+        <em>Proof.</em> Let <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> be a linearly independent set of vectors in <m>V</m>.
+      </p>
+
+      <p>
+        Suppose that <m>\basis{B}</m> is
+        <em>not</em> a basis for <m>V</m>.
+      </p>
+
+      <p>
+        Therefore, <m>\basis{B}</m> does not span <m>V</m>, since ... (a)
+      </p>
+
+      <p>
+        Therefore, there exists <m>\ve{v} \in V</m> such that ... (b)
+      </p>
+
+      <p>
+        Now, add <m>\ve{v}</m> to the list
+        <m>\basis{B}</m> to obtain a new list <m>\basis{B}' :=</m> ... (c)
+      </p>
+
+      <p>
+        The new list <m>\basis{B}'</m> is linearly independent because ... (d)
+      </p>
+
+      <p>
+        This is a contradiction because ... (e)
+      </p>
+
+      <p>
+        Hence, <m>\basis{B}</m> must be a basis for <m>V</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+      <ol>
+        <li>
+          <p>
+Any linearly independent spanning set is by definition a basis, contradicting our assumption.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m> \ve v </m> is not a linearly combination of the vectors in <m> \basis B </m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m> \bopen \ve v_1 \ldots, \ve v_n , \ve v \bclose </m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+           No vector in  <m> \basis B'  </m> is a linear combination of the previous vectors and so the list is thus linearly indepedent by <xref ref = "lin_dependence_prop" />.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The vector subspace <m> W </m> of <m> V </m> spanned by the vectors in <m> \basis B' </m> has dimension <m> n + 1</m> and so <m> \dim(W) > \dim(V)</m> which contradicts <xref ref = "dim-of-subspace-prop" />.
+          </p>
+        </li>
+      </ol>
+      </p>
+</solution>
+
+  </exercise>
+
+  <exercise xml:id="checking_matrices_lin_dep">
+    <statement>
+      <p>
+        Use <xref ref="true_false_span_lin_ind">Exercise</xref>(a) to show that the list of matrices in
+        <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> is linearly dependent.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>\Mat_{2,2}</m> has dimension 4 since it is spanned by <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> where <m> \ve e_{i,j}</m> is the matrix with a <m> 1 </m> in the <m>ij^\text{th} </m> entry and 0's everywhere else. By <xref ref="true_false_span_lin_ind">Exercise</xref>(a), any linearly indepedent list of vectors in  <m>\Mat_{2,2}</m> has length at most 4. Since the list of matrices in
+        <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> has length 5, it cannot be linearly independent.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        In each case,
+        use the results in <xref ref="true_false_span_lin_ind">Exercise</xref>
+        and <xref ref="n_lin_ind_is_basis"></xref>
+        to determine if <m>\basis{B}</m> is a basis for <m>V</m>.
+
+        <ol>
+          <li>
+            <title>(a)</title>
+            <p>
+              <m>V = \Poly_2</m>,
+              <m>\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1 + x - 3x^2, \, x-x^2 \right\}</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              <m>V = \Mat_{2,2}</m>,
+              <me>\basis{B} = \left\{ 
+ \begin{bmatrix}
+1 &amp; 2 \\
+-1 &amp; 3
+\end{bmatrix},\,
+ \begin{bmatrix}
+0 &amp; 1\\
+3 &amp; -1
+\end{bmatrix},\,
+\begin{bmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{bmatrix}
+     \right\} </me>
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              <m>V = \Trig_2</m>,
+              <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+
+          <li>
+            <m> \Poly_2 </m> has a basis <m> \basis B' = \bopen 1 , x , x^2 \bclose </m> and so has dimension 3. Since <m> \basis B </m> has length 4, it cannot be linearly independent by <xref ref="true_false_span_lin_ind">Exercise</xref>(a). Hence <m> \basis B </m> cannot be a basis for  <m> \Poly_2 </m>.
+          </li>
+
+          <li>
+          <m> \Mat_{2,2} </m> has dimension 4. Since <m> \basis B </m> has length 3, it cannot span <m> \Mat_{2,2} </m>. Hence  <m> \basis B </m> cannot be a basis for <m> \Mat_{2,2} </m>.
+          </li>
+
+          <li>
+<m> \Trig_2 </m> has dimension 5. Since <m> \basis B </m> has length 5, it cannot span <m> \Trig_2 </m>. Hence <m> \basis B </m> cannot be a basis for <m> \Trig_2 </m>.
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> be a linearly independent list of vectors in a vector space <m>V</m>.
+        State whether each of the following statements is true or false.
+        If it is true, prove it.
+        If it is false, give a counterexample.
+        (Hint: Use the definition of linear independence.)
+
+        <ol>
+          <li>
+            <title>(a)</title>
+            <p>
+              The list <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              The list <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly independent.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+<p>
+<ol>
+<li>
+  <p>
+True. Suppose there is a linear relation on  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m>:
+<me>
+a( \ve{u} + \ve{v}) + b(\ve{v} + \ve{w}) + c(\ve{u} + \ve{w}).
+</me>
+This induces a linear relation on <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m>:
+<m>
+(a + c)\ve u + (a +b )\ve v + (b + c)w = \ve 0
+</m>
+Since <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> is linearly independent, we must have that
+<me>
+a + c = 0 \qquad (1) \\
+a + b = 0 \qquad (2) \\
+b + c = 0 \qquad (3)
+</me>
+<m> (1) + (2) </m> combined with <m> (3) </m> gives us that <m> a = 0 </m> and so <m> b = c = 0 </m> too. We conclude that  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
+  </p>
+</li>
+
+
+<li>
+  <p>
+False. Let <m> V = \mathbb{R}^3 </m>. Let
+<me>
+\ve u = (1,0,0) \, \ve v = (0,1,0), \, \ve w = (0,0,1)
+</me>
+and so
+<me>
+\ve u - \ve v = (1,-1,0) \\  \ve v - \ve w = (0,1,-1) \\ \ve u - \ve w = (1,0,-1)
+</me>.
+By inspection, we see that 
+<me>
+ (1,-1,0) + (0,1,-1) = (1,0,-1)
+</me>
+and so  <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly dependent.</p>
+
+<p>
+Alternatively, we could have noticed that for any vectors <m> \ve u , \ve v , \ve w </m>:
+<me>
+(\ve u - \ve v) + (\ve v - \ve w) = \ve u - \ve w.
+</me>
+Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m>  satisfies <xref ref = "lin_dependence_prop" /> and so is linearly dependent.
+</p>
+</li>
+
+</ol>
+  </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="dim_poly_at_2_ex">
+    <statement>
+      <p>
+        For each of the following,
+        show that <m>V</m> is a subspace of <m>\Poly_2</m>,
+        find a basis for <m>V</m>, and compute <m>\Dim V</m>.
+
+        <ol>
+          <li>
+            <title>(a)</title>
+            <p>
+              <m>V = \{ p \in \Poly_2 : p(2) = 0 \}</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              <m>V = \{ p \in \Poly_2 : xp'(x) = p(x) \}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+<ol>
+
+  <li>
+    We omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m> since it is routine. Let us now construct a basis for <m> V </m>. Begin with a non-zero vector <m> \ve v_1 </m>  in <m> V </m>. We make the most obvious choice, let <m> \ve v_1 = x -2 </m>. Next pick any vector  <m> \ve v_2 </m> in <m> V </m> not in the span of <m> \left \{ \ve v_1 \right\} </m>. An obvious choice is <m> \ve v_2 = x(x-2) </m>. Since <m> V </m> is not all of <m>\Poly_2 </m>, we know that <m> \dim V \lt 3 </m>. Thus <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> is a basis for <m> V </m> and so <m> \dim V = 2 </m>.
+  </li>
+
+  <li>
+Once again, we omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m>. Pick any non-zero vector <m>\ve v_1 </m> in <m> V </m>. Let's choose <m> \ve v_1 = x </m>. It is not as obvious as before whether there are indeed any vectors in <m> V </m> not in the span of <m> \left\{ \ve v_1 \right\} </m>, and so we must do some computations. If <m> p(x) = ax^2 + bx + c</m> is in <m> V </m>, <m> p(x)</m> must satisfy
+<me>
+x(2ax + b) = ax^2 + bx + c \\
+\implies 2ax^2 + bx = ax^2 + bx + c.
+</me>
+Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples of <m> \ve v_1 = x </m>. Hence <m> \bopen \ve v_1 \bclose </m> is a basis for <m> V </m> and so <m> \dim V = 1</m>.
+  </li>
+</ol>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="ex_basis_no_deg_2">
+<statement >
+	<p>
+		Prove or disprove: there exits a basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> of <m>\Poly_3 </m> such that none of the polynomials <m> p_0, p_1, p_2, p_3</m> have degree 2.
+	</p>
+</statement>
+<solution>
+<p>
+	The basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> works. The check is routine.
+</p>
+</solution>
+  </exercise>
+
+  <exercise>
+  	<statement>
+  		<p>
+Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="title">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.) 
+  		</p>
+  	</statement>
+  	<solution>
+  		<p>
+  			We can disprove the statement with the following counterexample. Let <m> V = \mathbb{R}^3 </m>. Let <m>U</m> be the vector subspace with basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> and let <m>W</m> be the vector subspace with basis <m>\bopen (0,0,1), (0,1,0) \bclose</m>. Clearly <m>\dim U = \dim W = 2 </m> and thus <m> \dim(U) + \dim(V) = 4</m>. But since <m>U + W =  \mathbb{R}^3</m>, <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
+  		</p>
+  	</solution>
+  </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>V</m> be the vector space of solutions to the differential equation
+          <men xml:id="diff_eqn_exerc_3">
+        x^3 y''' + x^2 y'' - 2xy' + 2y =0
+      </men>
+        </p>
+        <p>
+          <ol>
+            <li>
+              Without performing any explicit calculations, determine the dimension of <m>V</m>.
+            </li>
+
+            <li>
+              Using Sage, find a basis for <m>V</m>. (If you're unsure of the syntax, look at the examples in <xref ref = "Ch2Sec3BasisDimension"/>.) Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.
+              <sage>
+      <input>
+      </input>
+    </sage>
+            </li>
+
+            <li>
+              Find that unique function <m>y_1</m> that is a solution to <xref ref = "diff_eqn_exerc_3"/> subject to the initial conditions
+              <me>
+                y_1(1) = 1 \quad y_1'(1) = 0 \quad y_1''(1) = 0.
+              </me>
+            </li>
+
+             <li>
+              Find that unique function <m>y_2</m> that is a solution to <xref ref = "diff_eqn_exerc_3"/> subject to the initial conditions
+              <me>
+                y_2(1) = 0 \quad y_2'(1) = 1 \quad y_2''(1) = 0.
+              </me>
+            </li>
+
+            <li>
+              Does the function <m> y_3 = y_1 + y_2 </m> also solve <xref ref = "diff_eqn_exerc_3"/>? By <xref ref = "diff_eqn_exist_unique"/>, <m>y_3</m> is the unique solution to an initial value problem involving <xref ref = "diff_eqn_exerc_3"/> - what are those initial conditions?
+            </li>
+
+            <li>
+              Read through <link xml:link="plot_sage" href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </link>. Use SageMath to plot a graph of <m>y_1, y_2, y_3</m> on the interval <m>[0,10]</m> .
+              <sage>
+      <input>
+      </input>
+    </sage>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    </exercises>
+
+ <solutions divisional="solution answer" scope="ch2sec3exercises" xml:id="my_solutions">
+</solutions>
+
+
+</section>
+

@@ -1,0 +1,57 @@
+
+
+<section xml:id="Ch4Sec3DiagonalizingMatricies">
+  <title>Diagonalizing matrices</title>
+  <definition>
+    <statement>
+      <p>
+        We say that an <m>n \times n</m> matrix <m>\mat{A}</m> is
+        <term>diagonalizable</term>
+        if there exists an invertible
+        <m>n \times n</m> matrix <m>\mat{P}</m> such that
+        <m>\mat{P}^{-1} \mat{A} \mat{P}</m> is a diagonal matrix.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        <m>\mat{A} = \cmatrix{ 2 \amp  1 \\ \frac{1}{2} \amp  \frac{5}{2} }</m> is diagonalizable,
+        since if we set
+        <md>
+          \mat{P} = \cmatrix{-2 \amp  1 \\ 1 \amp  1}
+        </md>
+        then
+        <md>
+          \mat{P}^{-1} = -\frac{1}{3} \cmatrix{1 \amp  -1 \\ -1 \amp  -2}
+        </md>
+        and we check,
+        <md>
+          <mrow>\mat{P}^{-1} \mat{A} \mat{P} \amp = -\frac{1}{3} {\cmatrix{1 \amp  -1</mrow>
+          <mrow>-1 \amp  -2}} {\cmatrix{2 \amp  1</mrow>
+          <mrow>\frac{1}{2} \amp  \frac{5}{3}}} {\cmatrix{ -2 \amp  1</mrow>
+          <mrow>1 \amp  1}}</mrow>
+          <mrow>\amp = - \frac{1}{3} {\cmatrix{ \frac{3}{2} \amp  - \frac{3}{2}</mrow>
+          <mrow>-3 \amp  -6}} {\cmatrix{-2 \amp  1</mrow>
+          <mrow>1 \amp  1}}</mrow>
+          <mrow>\amp = - \frac{1}{3} {\cmatrix{ - \frac{9}{2} \amp  0</mrow>
+          <mrow>0 \amp  -9}}</mrow>
+          <mrow>= {\cmatrix{\frac{3}{2} \amp  0</mrow>
+          <mrow>0 \amp  3}}</mrow>
+        </md>
+        which is indeed a diagonal matrix.
+        More on this in the second semester!
+        For now this is all you need to know.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    \begin{appendices}
+    \appendixpage
+    \noappendicestocpagenum
+    \addappheadtotoc
+  </p>
+</section>
+

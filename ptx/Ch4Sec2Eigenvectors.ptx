@@ -1,0 +1,575 @@
+
+
+<section xml:id="Ch4Sec2Eigenvectors">
+  <title>Eigenvectors</title>
+  <p>
+    In the previous section we focused on eigenvalues.
+    Now we turn our focus to eigenvectors.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        An <term>eigenvector</term> of a linear operator
+        <m>T : V \rightarrow V</m> is a nonzero vector <m>\ve{v} \in V</m> such that
+        <m>T(\ve{v}) = \lambda \ve{v}</m> for some scalar <m>\lambda \in \mathbb{R}</m>
+        (the associated eigenvalue).
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Note that we demand that <m>\ve{v}</m> be nonzero in order to call it an eigenvector of <m>T</m>.
+    The reason for this convention is that, otherwise,
+    the zero vector will be an eigenvector of
+    <em>every</em> operator <m>T</m>
+    (with eigenvalue <m>0</m>),
+    since we always have <m>T(\ve{0}) = 0 \ve{0}</m>.
+    In that case <sq>being an eigenvector</sq> wouldn't be a very special property of <m>T</m>.
+  </p>
+
+  <assemblage>
+    <p>
+      It is perfectly fine for a linear operator <m>T</m> to have a zero <em>eigenvalue</em>.
+      But our convention is that an <em>eigenvector</em>
+      cannot be the zero vector.
+    </p>
+  </assemblage>
+
+  <p>
+    Instead of considering just a <em>single</em>
+    vector <m>\ve{v} \in V</m> such that <m>T(\ve{v}) = \lambda \ve{v}</m>,
+    it is often more natural to consider the set of
+    <em>all</em> such vectors.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>T : V \rightarrow V</m> be a linear operator on a vector space <m>V</m>,
+        and let <m>\lambda</m> be an eigenvalue of <m>T</m>.
+        The <term>eigenspace of <m>T</m> corresponding to <m>\lambda</m></term> is the set
+        <me>
+          E_\lambda := \{ \ve{v} \in V : T(\ve{v}) = \lambda \ve{v}. \}
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <assemblage>
+    <p>
+      Note that if <m>\lambda</m> is an eigenvalue of <m>T</m>,
+      then the zero vector <m>\ve{0}</m> <em>is</em>
+      in the eigenspace <m>E_\lambda</m> of <m>T</m> associated to <m>\lambda</m>.
+      But it is not an <em>eigenvector</em> of <m>T</m>.
+      That is just terminology.
+    </p>
+  </assemblage>
+
+  <p>
+    Note that we can also express <m>E_\lambda</m> as
+    <men xml:id="eigenspace_as_kernel">
+      E_\lambda = \Ker(\lambda \id - T)
+    </men>
+    since <m>T(\ve{v}) = \lambda \ve{v}</m> is equivalent to saying that <m>(\lambda \id - T)(\ve{v}) = \ve{0}</m>.
+  </p>
+
+  <proposition xml:id="eigenspace-is-subspace">
+    <statement>
+      <p>
+        <m>E_\lambda</m> is a subspace of <m>V</m>.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      This follows immediately from the fact
+      (equation <xref ref="eigenspace_as_kernel" />)
+      that we can write <m>E_\lambda</m> as a kernel of a certain linear map.
+      The kernel of any linear operator on <m>V</m> is a subspace of <m>V</m>,
+      by <xref ref="ker-im-subspace">Lemma</xref>.
+    </p>
+  </proof>
+
+  <proposition xml:id="lin_ind_eig_distinct">
+    <title>Eigenvectors from Distinct Eigenspaces are Linearly Independent</title>
+    <statement>
+      <p>
+        Let <m>T : V \rightarrow V</m> be a linear operator on a finite-dimensional vector space <m>V</m>,
+        and suppose that <m>\ve{v}_1, \ldots, \ve{v}_k</m> are eigenvectors of <m>T</m> with distinct eigenvalues <m>\lambda_1, \ldots, \lambda_k</m> respectively.
+        Then <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> is linearly independent.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      Suppose that <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> is
+      <em>not</em> linearly independent,
+      in other words that it linearly dependent.
+      Then, by the Linear Combination of Preceding Vectors Proposition
+      (<xref ref="lin_dependence_prop">Proposition</xref>),
+      either <m>\ve{v}_1 = \ve{0}</m> (impossible,
+      since eigenvectors must be nonzero),
+      or one of the <m>\ve{v}_i</m> is a linear combination of the preceding vectors.
+      Let <m>i</m> be the <em>smallest</em>
+      index for which this is true.
+      So, for some <m>i</m> with <m>2 \leq i \leq k</m>, we have
+      <men xml:id="eigenvalue-1st-eqn">
+        \ve{v}_i = a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}
+      </men>
+      for some scalars <m>a_1, \ldots,
+      a_{i-1}</m>, not all zero, and moreover the list of vectors
+      <me>
+        \bopen \ve{v}_1, \ldots, \ve{v}_{i-1} \bclose
+      </me>
+      is linearly independent
+      (otherwise, <m>i</m> would not be the <em>smallest</em>
+      index for which <m>\ve{v}_i</m> is a linear combination of the preceding vectors).
+      Applying <m>T</m> to both sides of <xref ref="eigenvalue-1st-eqn" /> gives us a new equation:
+      <md>
+        <mrow>T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) \nonumber</mrow>
+        <mrow>\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  \mbox{(\(T\) is linear)} \nonumber</mrow>
+        <mrow>\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2 \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp  \mbox{(<m>T(\ve{v}_r) = \lambda_r \ve{v}_r</m>)}</mrow>
+      </md>
+    </p>
+
+    <p>
+      Multiplying equation <xref ref="eigenvalue-1st-eqn" /> by
+      <m>\lambda_i</m> and subtracting <xref ref="eigenvalue-2nd-eqn" /> gives:
+      <me>
+        \ve{0} = (\lambda_i - \lambda_1) a_1 \ve{v}_1 + (\lambda_i - \lambda_2) a_2 \ve{v}_2 + \cdots + (\lambda_i - \lambda_{i-1}) a_{i-1} \ve{v}_{i-1}
+      </me>.
+    </p>
+
+    <p>
+      Since the list of vectors <m>\bopen \ve{v}_1, \ldots, \ve{v}_{i-1} \bclose</m> is linearly independent, we have
+      <me>
+        (\lambda_i - \lambda_1) a_1 =0, \, (\lambda_i - \lambda_2) a_2 =0\, \, \ldots, \,  (\lambda_i - \lambda_{i-1}) a_{i-1}=0
+      </me>.
+    </p>
+
+    <p>
+      Now all the eigenvalues are distinct,
+      so we cannot have <m>\lambda_i - \lambda_r = 0</m> for <m>r \neq i</m>.
+      Hence <m>a_1 = 0</m>, <m>a_2 = 0</m>,
+      <m>\ldots</m>, <m>a_{i-1} = 0</m>.
+      But this contradicts <xref ref="eigenvalue-1st-eqn" /> which implied these scalars are <em>not</em> all zero.
+      So our initial assumption must be false.
+      Hence <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> is linearly independent.
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+      <p>
+        Determine the eigenvalues and corresponding eigenspaces of the linear operator
+        <md>
+          <mrow>T : \Poly_4 \amp  \rightarrow \Poly_4</mrow>
+          <mrow>T(p)(x) \amp = x^2 \frac{d^2}{dx^2} (p)</mrow>
+        </md>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Computing the action of <m>T</m> with respect to the standard basis of <m>\Poly_2</m>,
+        <me>
+          p_0(x) = 1, \, p_1 (x) = x, \, p_2(x) = x^2, \, p_3(x) = x^3, \, p_4(x) = x^4
+        </me>
+        gives:
+        <md>
+          <mrow>p_0 \amp  \mapsto 0</mrow>
+          <mrow>p_1 \amp  \mapsto 0</mrow>
+          <mrow>p_2 \amp  \mapsto 2p_2</mrow>
+          <mrow>p_3 \amp \mapsto 6p_3</mrow>
+          <mrow>p_4 \amp  \mapsto 12 p_4</mrow>
+        </md>
+      </p>
+
+      <p>
+        By inspection,
+        we see that <m>p_0</m> and <m>p_1</m> are eigenvectors with eigenvalue <m>0</m>,
+        <m>p_1</m> is an eigenvector with eigenvalue <m>2</m>,
+        <m>p_3</m> is an eigenvector with eigenvalue <m>6</m>,
+        and <m>p_4</m> is an eigenvector with eigenvalue <m>12</m>.
+        So the eigenvalues and associated eigenspaces of <m>T</m> are:
+        <md>
+          <mrow>\lambda = 0, \amp  \qquad E_0 = \{s p_0 + t p_1, \, s,t \in \mathbb{R} \}</mrow>
+          <mrow>\lambda = 2, \amp  \qquad E_1 = \{t p_2, \, t \in \mathbb{R} \}</mrow>
+          <mrow>\lambda = 6, \amp  \qquad E_2 = \{t p_3, \, t \in \mathbb{R} \}</mrow>
+          <mrow>\lambda = 12, \amp  \qquad E_12 = \{t p_4, \, t \in \mathbb{R} \}</mrow>
+        </md>.
+      </p>
+    </solution>
+  </example>
+
+  <example xml:id="eigenspaces-lin-op-T">
+    <statement>
+      <p>
+        Determine the eigenspaces of the linear operator
+        <md>
+          <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
+          <mrow>T(p)(x) \amp = p(2x + 3)</mrow>
+        </md>
+        from <xref ref="poly-example-eigenvalue">Example</xref>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The eigenvalues of <m>T</m> are <m>\lambda_1 = 1</m>,
+        <m>\lambda_2 = 2</m> and <m>\lambda_3 = 4</m>.
+        Let us think for a second.
+        Since the eigenvalues are all distinct,
+        if we find eigenvectors <m>q_1</m>,
+        <m>q_2</m> and <m>q_3</m> with eigenvalues <m>\lambda_1</m>,
+        <m>\lambda_2</m> and <m>\lambda_3</m> respectively,
+        then <m>\basis{Q} = \bopen q_1, q_2, q_3 \bclose</m> will be linearly independent by <xref ref="lin_ind_eig_distinct">Proposition</xref>.
+        This means that the eigenspaces <m>E_1</m>,
+        <m>E_2</m> and <m>E_4</m> associated with these eigenvalues will be 1-dimensional.
+        This is useful information.
+        Ok, now we are ready to start computing these eigenspaces.
+
+        <ul>
+          <li>
+            <p>
+              <m>\lambda = 1</m>: 
+
+              We seek polynomials <m>q</m> such that
+              <me>
+                T(q) = 1 q
+              </me>
+              By inspection of the formulas <xref ref="Tp0" />-<xref ref="Tp1" /> for how <m>T</m> works,
+              we already see one such polynomial,
+              namely <m>q = p_0</m>, since <m>T(p_0) = p_0</m>.
+              Since <m>E_1</m> is 1-dimensional,
+              we conclude that <m>p_0</m> is a basis for <m>E_1</m>, so
+              <me>
+                E_1 = \{ t p_0, \, t \in \mathbb{R}\}
+              </me>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\lambda = 2</m>:
+
+              We seek polynomials <m>q</m> such that
+              <me>
+                T(q) = 2q
+              </me>.
+              Expand <m>q</m> in the standard basis as
+              <me>
+                q = a_0 p_0 + a_1 p_1 + a_2 p_2
+              </me>.
+              So we seek scalars <m>a_0, a_1, a_2</m> such that
+              <men xml:id="Tq-2nd-eig">
+                T(a_0 p_0 + a_1 p_1 + a_2 p_2) = 2 (a_0 p_0 + a_1 p_1 + a_2 p_2)
+              </men>.
+              Using the formulas <xref ref="eigenspace_as_kernel" /> for how <m>T</m> acts on the standard basis,
+              <xref ref="Tq-2nd-eig" /> becomes
+              <me>
+                (-a_0 + 3a_1 + 9a_2) p_0 + 12a_2 p_1 + 2 a_2 p_2 = 0
+              </me>.
+              Since <m>\bopen p_0, p_1, p_2 \bclose</m> is linearly independent,
+              this becomes the following set of equations:
+              <men xml:id="eqns-eig-T-internal">
+                \systeme{-a_0 + 3a_1 + 9a_2 = 0, 12 a_2 = 0, 2a_2 = 0}
+              </men>
+              The general solution of these equations is
+              <me>
+                \cmatrix{a_0 \\ a_1 \\ a_2} = t \cmatrix{3 \\ 1 \\ 0}, \, t \in \mathbb{R}
+              </me>.
+              In other words,
+              an eigenvector of <m>T</m> with eigenvalue <m>2</m> is
+              <me>
+                q_2(x) = 3 + x
+              </me>,
+              and the whole eigenspace corresponding to the eigenvalue <m>2</m> is
+              <me>
+                E_2 = \{ t q_2, \, t \in \mathbb{R} \}
+              </me>.
+              Let us check this.
+              Consider computing <m>T(q_2)</m> using the
+              <em>definition</em> of <m>T</m>,
+              namely <m>T(p)(x) = p(2x + 3)</m> for any polynomial <m>p</m>.
+              We get:
+              <md>
+                <mrow>T(q_2)(x) \amp = q_1(2x+3)</mrow>
+                <mrow>\amp = 3 + 3(2x + 3)</mrow>
+                <mrow>\amp = 6 + 6x</mrow>
+                <mrow>\amp = 2(3 + 3x)</mrow>
+                <mrow>\amp = (2q_2)(x)</mrow>
+                <mrow>\therefore T(q_2) \amp = 2q_1 \mbox{ (as expected!)}</mrow>
+              </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\lambda = 4</m>:
+
+              We seek polynomials <m>q</m> such that
+              <me>
+                T(q) = 4q
+              </me>.
+              Expand <m>q</m> in the standard basis as
+              <me>
+                q = a_0 p_0 + a_1 p_1 + a_2 p_2
+              </me>
+              So we seek scalars <m>a_0, a_1, a_2</m> such that
+              <men xml:id="Tq-3rd-eig">
+                T(a_0 p_0 + a_1 p_1 + a_2 p_2) = 4 (a_0 p_0 + a_1 p_1 + a_2 p_2)
+              </men>.
+              Using the formulas <xref ref="eigenspace_as_kernel" /> for how <m>T</m> acts on the standard basis,
+              <xref ref="Tq-3rd-eig" /> becomes
+              <me>
+                (-3a_0 + 3a_1 + 9a_2) p_0 + (-2 a_1 + 12 a_2) p_1 + 0 p_2 = 0
+              </me>.
+              Since <m>\bopen p_0, p_1, p_2 \bclose</m> is linearly independent,
+              this becomes the following set of equations:
+              <men xml:id="eqns-eig-T-internal-2">
+                \systeme{-3a_0 + 3a_1 + 9a_2 = 0, -2a_1 + 12 a_2 = 0}
+              </men>
+              The general solution of these equations is
+              <me>
+                \cmatrix{a_0 \\ a_1 \\ a_2} = t \cmatrix{9 \\ 6 \\ 1}, \, t \in \mathbb{R}
+              </me>.
+              In other words,
+              an eigenvector of <m>T</m> with eigenvalue <m>4</m> is
+              <me>
+                q_4(x) = 9 + 6x + x^2
+              </me>,
+              and the whole eigenspace corresponding to the eigenvalue <m>4</m> is
+              <me>
+                E_2 = \{ t q_4, \, t \in \mathbb{R} \}
+              </me>.
+              Let us check this.
+              Consider computing <m>T(q_4)</m> using the
+              <em>definition</em> of <m>T</m>,
+              namely <m>T(p)(x) = p(2x + 3)</m> for any polynomial <m>p</m>.
+              We get:
+              <md>
+                <mrow>T(q_4)(x) \amp = q_4(2x+3)</mrow>
+                <mrow>\amp = 9 + 6(2x + 3) + (2x+3)^2</mrow>
+                <mrow>\amp = 36 + 24x + 4x^2</mrow>
+                <mrow>\amp = 4(9 + 6x + x^2)</mrow>
+                <mrow>\amp = (4q_4)(x)</mrow>
+                <mrow>\therefore T(q_4) \amp = 4q_4 \mbox{ (as expected!)}</mrow>
+              </md>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </solution>
+  </example>
+
+  <example xml:id="eigvectors_desmos_matrix">
+    <statement>
+      <p>
+        Determine the eigenspaces of the matrix
+        <md>
+          \mat{A} = \cmatrix{2 \amp  1 \\ \frac{1}{2} \amp  \frac{5}{2}}
+        </md>
+        from <xref ref="desmos_matrix">Example</xref>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        From <xref ref="eigenspace_as_kernel" />, the eigenspace <m>E_\lambda</m> can be computed as
+        <md>
+          E_\lambda = \Ker (\mat{A} - \lambda I) = \Ker \left( \cmatrix{2 - \lambda \amp  1 \\ \frac{1}{2} \amp  \frac{5}{2} - \lambda} \right)
+        </md>
+      </p>
+
+      <p>
+        The eigenvalues of <m>\mat{A}</m> are
+        <m>\lambda = \frac{3}{2}</m> and <m>\lambda = 3</m>.
+
+        <ul>
+          <li>
+            <p>
+              <m>\lambda = \frac{3}{2}</m>:
+              We must compute
+              <md>
+                E_{\frac{3}{2}} = \Ker \left( \cmatrix{\frac{1}{2} \amp  1 \\ \frac{1}{2} \amp  1} \right).
+              </md>
+              In other words,
+              we must find those column vectors <m>\cmatrix{v_1 \\ v_2}</m> such that
+              <md>
+                \cmatrix{\frac{1}{2} \amp  1 \\ \frac{1}{2} \amp  1} \cmatrix{v_1 \\ v_2} = \cmatrix{ 0 \\ 0}.
+              </md>
+              This boils down to the single equation
+              <me>
+                \frac{1}{2}v_1 + v_2 = 0
+              </me>
+              which has general solution <m>v_2 = t</m>,
+              <m>v_1 = -2t</m>, <m>t \in \mathbb{R}</m>.
+              Therefore,
+              <me>
+                E_{\frac{3}{2}} = \left\{ t \cmatrix{-2 \\ 1}, \, t \in \mathbb{R} \right\}
+              </me>.
+              You can verify visually that this line is indeed an eigenspace of <m>\mat{A}</m> with corresponding eigenvalue
+              <m>\frac{3}{2}</m> on the Desmos worksheet.
+              When you multiply vectors on this line with <m>\mat{A}</m>,
+              they get scaled by a factor of <m>\frac{3}{2}</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\lambda = 3</m>:
+              We must compute
+              <md>
+                E_3 = \Ker \left( \cmatrix{-1 \amp  1 \\ \frac{1}{2} \amp  -\frac{1}{2}} \right).
+              </md>
+              In other words,
+              we must find those column vectors <m>\cmatrix{v_1 \\ v_2}</m> such that
+              <md>
+                \cmatrix{-1 \amp  1 \\ \frac{1}{2} \amp  - \frac{1}{2}} \cmatrix{v_1 \\ v_2} = \cmatrix{ 0 \\ 0}.
+              </md>
+              This boils down to the single equation
+              <me>
+                -v_1 + v_2 = 0
+              </me>
+              which has general solution <m>v_2 = t</m>,
+              <m>v_1 = t</m>, <m>t \in \mathbb{R}</m>.
+              Therefore,
+              <me>
+                E_{\frac{3}{2}} = \left\{ t \cmatrix{-2 \\ 1}, \, t \in \mathbb{R} \right\}
+              </me>.
+              You can verify visually that this line is indeed an eigenspace of <m>\mat{A}</m> with corresponding eigenvalue <m>3</m> on the Desmos worksheet.
+              When you multiply vectors on this line with <m>\mat{A}</m>,
+              they get scaled by a factor of <m>3</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </solution>
+  </example>
+
+  <p>
+    Note that the <sq>kernel of a matrix</sq> method we used to compute the eigenspaces in <xref ref="eigvectors_desmos_matrix">Example</xref>
+    can be used to find the eigenvectors of
+    <em>any</em> linear operator.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Determine the eigenspaces of the linear operator <m>T</m> from <xref ref="eigenspaces-lin-op-T">Example</xref>
+        using the <sq>kernel-of-a-matrix</sq> method.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The eigenspace <m>E_\lambda</m> corresponding to the eigenvalue <m>\lambda</m> is the kernel of the linear operator <m>T - \lambda \id</m>.
+        That is, we seek polynomials <m>q \in \Poly_2</m> such that
+        <men xml:id="kernel-operator-this-ex">
+          (T - \lambda \id) (q) = 0
+        </men>.
+      </p>
+
+      <p>
+        We can expand <m>q</m> in the standard basis <m>\basis{B}</m>:
+        <men xml:id="q-stand-basis-ex1">
+          q = a_0 p_0 + a_1 p_1 + a_2 p_2
+        </men>
+      </p>
+
+      <p>
+        We can also compute the matrix of <m>T</m> with respect to the basis <m>\basis{B}</m>:
+        <md>
+          [T]_{\basis{B} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  3 \amp  9 \\ 0 \amp  2 \amp  12 \\ 0 \amp  0 \amp  4}.
+        </md>
+      </p>
+
+      <p>
+        Then equation <xref ref="kernel-operator-this-ex" /> can be written in matrix form:
+        <me>
+          [T - \lambda \id]_{\basis{B} \leftarrow \basis{B}} \cmatrix{a_0 \\ a_1 \\ a_2} = \cmatrix{0 \\ 0 \\ 0}
+        </me>
+      </p>
+
+      <p>
+        In other words, for each eigenvalue <m>\lambda</m>,
+        to compute <m>E_\lambda</m> we must compute the kernel of the <em>matrix</em>
+        <md>
+          \cmatrix{ 1 - \lambda \amp  3 \amp  9 \\
+          0 \amp  2 - \lambda \amp  12 \\
+          0 \amp  0 \amp  4-\lambda}
+        </md>
+        and then rewrite the resulting column vectors as polynomials,
+        in the form <xref ref="q-stand-basis-ex1" />.
+
+        <ul>
+          <li>
+            <p>
+              <m>\lambda = 1</m>:
+
+              We seek scalars <m>a_0</m>, <m>a_1</m>, <m>a_2</m> such that
+              <md>
+                \cmatrix{ 0 \amp  3 \amp  9 \\
+                0 \amp  1  \amp  12 \\
+                0 \amp  0 \amp  3} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\ 0 \\ 0}.
+              </md>
+              This equation has general solution
+              <me>
+                \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{1 \\ 0 \\ 0}, \, t \in \mathbb{R}
+              </me>.
+              So,
+              <me>
+                E_1 = \{t p_0, \, t \in \mathbb{R} \}
+              </me>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\lambda = 2</m>:
+
+              We seek scalars <m>a_0</m>, <m>a_1</m>, <m>a_2</m> such that
+              <md>
+                \cmatrix{ -1 \amp  3 \amp  9 \\
+                0 \amp  0  \amp  12 \\
+                0 \amp  0 \amp  2} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\ 0 \\ 0}.
+              </md>
+              This equation has general solution
+              <me>
+                \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{3 \\ 1 \\ 0}, \, t \in \mathbb{R}
+              </me>.
+              So,
+              <me>
+                E_2 = \{t q_2 , \, t \in \mathbb{R} \}
+              </me>
+              where <m>q_2(x) = 3 + x</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\lambda = 4</m>:
+
+              We seek scalars <m>a_0</m>, <m>a_1</m>, <m>a_2</m> such that
+              <md>
+                \cmatrix{ -3 \amp  3 \amp  9 \\
+                0 \amp  -2  \amp  12 \\
+                0 \amp  0 \amp  0} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\ 0 \\ 0}.
+              </md>
+              This equation has general solution
+              <me>
+                \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{9 \\ 6 \\ 1}, \, t \in \mathbb{R}
+              </me>.
+              So,
+              <me>
+                E_2 = \{t q_4 , \, t \in \mathbb{R} \}
+              </me>
+              where <m>q_4(x) = 9 + 6x + 1</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </solution>
+  </example>
+</section>
+

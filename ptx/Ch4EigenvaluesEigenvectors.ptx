@@ -1,0 +1,10 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch4EigenvaluesEigenvectors">
+  <title>Eigenvalues and eigenvectors</title>
+  <xi:include  href="Ch4Sec1Eigenvalues.ptx" />
+  <xi:include  href="Ch4Sec2Eigenvectors.ptx" />
+  <xi:include  href="section5-15x.ptx" />
+  <xi:include  href="Ch4Sec3DiagonalizingMatricies.ptx" />
+</chapter>
+

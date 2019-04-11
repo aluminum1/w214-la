@@ -1,0 +1,60 @@
+<section>
+  <title>Further exercises for \thesection</title>
+  <exercise>
+    <statement>
+      <p>
+        This is a continuation of <xref ref="matrix_basis_exercise">Exercise</xref>.
+        Consider the following two bases for <m>\Mat_{2,2}</m>:
+        <md>
+          \basis{B} = {  \bopen} \mat{B}_1 = \cmatrix{1 \amp  0 \\ 0 \amp  1}, \, \mat{B}_2 = \cmatrix{1 \amp  0 \\ 0 \amp  -1}, \, \mat{B}_3 = \cmatrix{1 \amp  1 \\ 1 \amp  1}, \, \mat{B}_4 = \cmatrix{0 \amp  1 \\ -1 \amp  0} { \bclose}
+        </md>
+        <md>
+          \basis{C} = { \bopen} \mat{C}_1 = \cmatrix{1 \amp  1 \\ 0 \amp  0}, \, \mat{C}_2 = \cmatrix{1 \amp  -1 \\ 0 \amp  0}, \, \mat{C}_3 = \cmatrix{0 \amp  0 \\ 1 \amp  1}, \, \mat{C}_4 = \cmatrix{0 \amp  0 \\ 1 \amp  -1} { \bclose}
+        </md>
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Determine the change-of-basis matrices
+              <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> and <m>\mat{P}_{\basis{B} \leftarrow \basis{C}}</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Determine <m>[\mat{A}]_\basis{B}</m> and <m>[\mat{A}]_\basis{C}</m> where
+              <md>
+                A = \cmatrix{1 \amp  2 \\ 3 \amp  4}
+              </md>
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              Check that <m>[\mat{A}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{A}]_\basis{B}</m> and that <m>[\mat{A}]_\basis{B} = \mat{P}_{\basis{B} \leftarrow \basis{C}} [\mat{A}]_\basis{C}</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Compute the change-of-basis matrix
+        <m>\mat{P}_{\basis{B} \leftarrow \basis{S}}</m> from the standard basis
+        <me>
+          \basis{S} = \bopen 1, \cos x, \sin x, \cos 2x, \sin 2x \bclose
+        </me>
+        of <m>\Trig_2</m> to the basis
+        <me>
+          \basis{B} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin^2 x \bclose \, 
+        </me>.
+      </p>
+    </statement>
+  </exercise>
+</section>
+

@@ -1,0 +1,163 @@
+<section xml:id="Tut2Afr">
+<title>W214 2019, Lineêre Algebra Tutoriaal 2</title>
+<shorttitle>Tutoriaal 2</shorttitle>
+
+<p>Let op: Jy is welkom om SageMath te gebruik om jou te help om van die probleme op te los. Jy kan of direk in die Sage cell intik hieronder (webblad weergawe), of jy kan die <url href="https://sagecell.sagemath.org/">SageMath cell server</url> gebruik.</p>
+
+<exercises>
+
+<assemblage><title>1.6 Deelruimtes</title>
+</assemblage>
+
+
+<exercise>
+<statement> <p> Lees deur die webblad weergawe van <xref ref="soln-diff-eqns-sec"/> (Solutions to homogenous linear differential equations), wat nuut is en 'n paar SageMath examples insluit. (Hierdie nuwe deel is net in Engels beskikbaar op hierdie stadium. Daar is geen probleme in hierdie tut hieroor nie, maar later sal ons dit 'n bietjie gebruik.)  </p>
+
+</statement>
+</exercise>
+
+  <exercise>
+    <statement>
+      <p>
+Toon aan dat die versameling
+        <me>
+          V := \{ (a, -a, b, -b) : a, b \in \mathbb{R} \}
+        </me>
+        'n deelruimte van <m>\mathbb{R}^4</m> is.
+      </p>
+    </statement>
+  </exercise>
+
+ <exercise>
+    <statement>
+      <p>
+        Beskou die versameling
+        <me>
+          V := \{ \mathbf{f} \in \Diff((-1, 1)) : f'(0) = 2 \}
+        </me>
+      </p>
+
+      <p>
+        Is <m>V</m> 'n deelruimte van <m>\Diff((-1,1))</m>? (Onthou:<m>\Diff((-1,1)</m> is die vektorruimte van alle diferensieerbare funksies op die interval <m>(-1,1)</m>. )
+        As jy dink dit is, <em>bewys</em> dat dit is.
+        As jy dink dit is nie, <em>bewys</em> dat dit is nie!
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Is <m>\mathbb{R}^+ := \{ \ve{x} \in \mathbb{R} : \ve{x} \geq 0 \}</m> 'n deelruimte van <m>\mathbb{R}</m>?
+        As jy dink dit is, <em>bewys</em> dat dit is.
+        As jy dink dit is nie, <em>bewys</em> dat dit is nie!      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Gee 'n voorbeeld van 'n nie-leë deelversameling <m>V \subseteq \mathbb{R}^2</m> 
+        wat geslote onder skalaar vermenigvuldiging is, maar wat nie 'n deelruimte van
+        <m>\mathbb{R}^2</m> is nie.
+      </p>
+    </statement>
+  </exercise>
+
+<assemblage><title>2.1 Lineêre kombinasies en Span</title>
+</assemblage>
+
+ <exercise>
+ 	<statement><p>Kan die polinoom <m>p = x^3 -x + 2 \in \Poly_3</m> uitgedruk word as 'n lineêre kombinasie van
+ 	<me>
+  p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1 \text{ ?}
+ </me>
+ Stel die toepaslike stelsel van gelyktidige lineêre vergelykings op. Dan los hulle "met die hand" op, of gebruik SageMath, soos in <xref ref="poly_example_lin_comb"/>. </p>
+ <sage>
+ 	<input>
+ 	</input>
+ </sage>
+ 	</statement>
+ </exercise>
+
+ <exercise>
+ 	<statement><p>Voortgaan van die vorige vraag. Kan die selfde polinoom <m>p = x^3 -x + 2 \in \Poly_3</m> uitgedruk word as 'n lineêre kombinasie van
+ 	<me>
+  p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1, p_4 = 1-x  \text{ ?}
+ </me>
+ Stel die toepaslike stelsel lineêre vergelykings op. Dan los hulle "met die hand" op, of  gebruik SageMath, soos in  <xref ref="poly_example_lin_comb"/>. </p>
+
+  <sage>
+ 	<input>
+ 	</input>
+ </sage>
+ 	</statement>
+ </exercise>
+
+ <exercise><statement> <p>Toon aan dat die polinoom
+ 	<me>
+  p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1, p_4 = 1-x 
+ </me>
+ uit die vorige vraag <m>\Poly_3</m> span.  Stel die toepaslike stelsel lineêre vergelykings op. Dan los hulle "met die hand" op, of  gebruik SageMath, soos in <xref ref="three_vectors_spanning_R2_example"/>. </p>
+  <sage>
+ 	<input>
+ 	</input>
+ </sage>
+</statement>
+</exercise>
+
+
+<assemblage><title>2.2 (Lineêre Onafhanklikheid) </title></assemblage>
+
+<exercise xml:id="exercise-span-omission">
+    <statement> Laat <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> 'n lys vektore in 'n vektorruimte  <m>V</m> wees. Veronderstel dat <m>\basis{S}</m> <m>V</m> span, en dat <m>w</m> is nog 'n vektor in <m>V</m>. Bewys dat die lys vektore  <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> ook <m>V</m> span.
+    </statement>
+  </exercise>
+
+<exercisegroup>
+<introduction>
+	<p>Beskou die volgende lys matrikse (ons beskou hulle as vektore in <m>\Mat_{2,2}</m>):</p>
+         <me>
+\ve{v}_1 = \begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 1
+\end{bmatrix},\,
+\ve{v}_2 = \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix},\,
+\ve{v}_3 = \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix},\,
+\ve{v}_4 = \begin{bmatrix}
+0 &amp; 3 \\
+1 &amp; -1
+\end{bmatrix},\,
+\ve{v}_5 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+      </me>
+   </introduction>
+   <exercise> <statement> <p>Toon aan dat die lys lineêr afhanklik is. Jy is welkom om SageMath te gebruik (jy sal eers die toepaslike stelsel lineêre vergelykings moet opstel.) </p>
+   	<sage>
+   		<input>
+   		</input>
+   	</sage>
+   </statement>
+</exercise>
+
+<exercise> <statement><p> Gaan deur dieselfde stappe as in <xref ref="app_of_prop_preceding">Example</xref>
+        om die eerste vektor in die lys te vind wat 'n lineêre kombinasie van die voorafgaande vektore is. Jy is welkom om SageMath te gebruik by die punte in jou berekening waar jy sal 'n stelsel lineêre vergelykings moet oplos.</p>
+        <sage>
+        	<input>
+        	</input>
+        </sage>
+</statement>
+</exercise>
+</exercisegroup>
+
+</exercises>
+
+</section>

@@ -1,0 +1,184 @@
+
+
+<section xml:id="ACh1Sec2DefVectorSpace">
+  <title>Definisie van 'n abstrakte vektorruimte</title>
+  <p>
+    Wiskunde behels die identifisering van patrone.
+    Ons het drie versamelings
+    gevind, <m>A</m>, <m>B</m> en <m>C</m>,
+    wat aanvanklik baie soortgelyk voorkom maar baie
+    in gemeen het.
+    In elke versamiling is daar 'n sommeringsbewerking, 'n
+    nulvektor en 'n skalaarvermenigvuldigingbewerking.
+    Verder geld dieselfde
+    re&#xeb;ls vir hierdie bewerkings.
+    Kom ons noteer hierdie patroon deur dit
+    'n naam te gee en die re&#xeb;ls eksplisiet neer te pen.
+  </p>
+
+  <definition xml:id="real_vec_space">
+    <statement>
+      <p>
+        A <term>vektorruimte</term> is 'n versameling <m>V</m> wat met die
+        volgende data toegerus is:
+
+        <dl>
+          <li xml:id="D1">
+            <title>D1.</title>
+            <p>
+              'n <em>Sommeringsbewerking</em>. (I.e. vir elke
+              elementpaar <m>\ve{v}, \ve{v}' \in V</m>, word 'n nuwe element
+              <m>\ve{v} + \ve{v}'</m> definieer.)
+            </p>
+          </li>
+
+          <li xml:id = "D2">
+            <title>D2.</title>
+            <p>
+              'n <em>Nul-vektor</em>. (I.e. 'n spesiale vektor <m>\ve{0}
+              \in V</m> word bepaal.)
+            </p>
+          </li>
+
+          <li xml:id="D3">
+            <title>D3.</title>
+            <p>
+              'n <em>Skalaarvermenigvuldigingsbewerking</em>. (I.e.,
+              vir elke re&#xeb;le getal <m>k</m> en elke element <m>\ve{v} \in V</m>
+              word 'n nuwe element <m>k \cdot \ve{v} \in V</m> definieer.)
+            </p>
+          </li>
+        </dl>
+      </p>
+
+
+      <p>
+        Hierdie data moet aan die volgende re&#xeb;ls vir alle
+        <m>\ve{u}, \ve{v},
+        \ve{w}</m> in <m>V</m> en vir alle re&#xeb;le getalle <m>k</m> en <m>l</m> voldoen:
+
+        <dl>
+          <li xml:id="R1">
+            <title>R1.</title>
+            <p>
+              <m>\ve{v} + \ve{w} = \ve{w} + \ve{v}</m>
+            </p>
+          </li>
+
+          <li xml:id="R2">
+            <title>R2.</title>
+            <p>
+              <m>(\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} +
+              \ve{w})</m>
+            </p>
+          </li>
+
+          <li xml:id="R3a">
+            <title>R3a.</title>
+            <p>
+              <m>\ve{0} + \ve{v} = \ve{v}</m>
+            </p>
+          </li>
+
+          <li xml:id="R3b">
+            <title>R3b.</title>
+            <p> <m>\ve{v} + \ve{0} = \ve{v}</m>
+            </p>
+          </li>
+
+          <li xml:id = "R4">
+            <title>R4.</title>
+            <p>
+              <m>k \cdot (\ve{v} + \ve{w}) = k \cdot \ve{v} + k \cdot
+              \ve{w}</m>
+            </p>
+          </li>
+
+          <li xml:id="R5">
+            <title>R5.</title>
+            <p>
+              <m>(k + l) \cdot \ve{v} = k \cdot \ve{v} + l \cdot
+              {\ve{v}}</m>
+            </p>
+          </li>
+
+          <li xml:id="R6">
+            <title>R6.</title>
+            <p>
+              <m>k \cdot (l \cdot \ve{v}) = (kl) \cdot \ve{v}</m>
+            </p>
+          </li>
+
+          <li xml:id="R7">
+            <title>R7.</title>
+            <p>
+              <m>1 \cdot \ve{v} = \ve{v}</m>
+            </p>
+          </li>
+
+          <li xml:id="R8">
+            <title>R8.</title>
+            <p>
+              <m>0 \cdot \ve{v} = \ve{0}</m>
+            </p>
+          </li>
+        </dl>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Ons noem elemente van 'n vektorruimte
+    <em>vektore</em> en ons skryf hulle in
+    vetdruk, bv.
+    <m>\ve{v} \in V</m>.
+    Dit is om vektore van re&#xeb;le getalle te
+    onderskei, wat ons <em>skalare</em>
+    noem en wat nie in vetdruk geskryf word
+    nie.
+    Dit is moeilik om vetdruk met handskrif uit te druk, so jy kan hulle
+    onderstreep, soos volg: <m>\underline{v}</m>.
+  </p>
+
+  <p>
+    In hierdie hoofstuk sal ons skalaarvermenigvuldiging met 'n <m>\cdot</m> skryf,
+    byvoorbeeld <m>k \cdot \ve{v}</m>,
+    maar in hieropvolgende hoofstukke sal on
+    doodgewoon <m>k \ve{v}</m> skryf, so weer versigtig!
+  </p>
+
+  <p>
+    Om te bewys dat 'n gegewe versameling 'n vektorruimte is,
+    moet 'n mens die
+    volgende doen:
+  </p>
+
+
+  <assemblage>
+    <p>
+    <ol>
+      <li>
+        <p>
+          Definieer die versameling <m>V</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+                    Definieer die data van 'n sommeringsbewerking (D1), 'n
+          nul-vektor (D2) en 'n skalaarvermenigvuldigingsbewerking (D3)
+          op <m>V</m>.
+
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Gaan na dat hierdie data aan re&#xeb;ls (R1) - (R8) voldoen.
+        </p>
+      </li>
+    </ol>
+  </p>
+  </assemblage>
+</section>
+

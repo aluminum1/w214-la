@@ -1,0 +1,385 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AAppBHypersurfaces">
+  <title>Hipervlakke</title>
+  <definition>
+    <statement>
+      <p>
+        Laat <m>f : \mathbb{R}^{n+1} \rightarrow \mathbb{R}</m> 'n
+        funksie wees.
+        Die <term>nul-versameling</term> van <m>f</m> is die deelversameling
+        <m>M \subset \mathbb{R}^{n+1}</m> gegee deur
+        <me>
+          M := \{ \ve{x} \in \mathbb{R}^{n+1} : f(\ve{x}) = 0 \} 
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        Ons s&#xea; 'n deelversameling
+        <m>M \subset
+        \mathbb{R}^{n+1}</m> is 'n <term><m>n</m>-dimensionele hipervlak</term> as daar 'n
+        funksie <m>f : \mathbb{R}^{n+1} \rightarrow \mathbb{R}</m> bestaan, sodat
+        <m>M</m> die nulversameling van <m>f</m> is,
+        en as vir alle <m>\ve{p} \in M</m>,
+        <me>
+          \nabla_{\ve{p}} f \mbox{ bestaan en is ongelyk aan }  \ve{0}
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="hyperbola_example">
+    <title>Hiperbool</title>
+    <statement>
+      <p>
+        Laat <m>f : \mathbb{R}^2
+        \rightarrow \mathbb{R}</m> die funksie
+        <me>
+          f(x,y) = y^2 - x^2 - 1
+        </me>
+        wees.
+        Teken 'n prentjie van die nul-versameling <m>M</m> van <m>f</m>,
+        en wys dat
+        dit 'n hipervlak is.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Die nul-vlak-versameling van <m>f</m> is
+        <me>
+          M = \{ (x,y) \in \mathbb{R}^2 : y^2 - x^2 - 1 = 0 \}
+        </me>
+        wat 'n hiperbool is:
+      </p>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[domain=-1.2:1.2]
+      \draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
+      \draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
+      \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
+      \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+      <p>
+        Om te wys dat <m>M</m> 'n hipervlak is, bereken ons eers die
+        gradi&#xeb;nt van <m>f</m> by 'n algemene punt <m>\ve{r} = (x,y) \in
+        \mathbb{R}^2</m>:
+        <me>
+          \nabla_\ve{r} f = (2y, -2x)
+        </me>
+      </p>
+
+      <p>
+        Die gradi&#xeb;nt bestaan duidelik oral.
+        Verder, vir 'n punt
+        <m>\ve{p} = (a,b)</m> op <m>M</m>, het ons
+        <me>
+          \nabla_\ve{p} f = (2b, -2a)  \mbox{where }  b^2 = 1 + a^2
+        </me>
+      </p>
+
+      <p>
+        Veronderstel <m>\nabla_\ve{p} f = (0,0)</m>.
+        Dan is, onder andere, <m>2b =
+        0</m>, sodat <m>b=0</m>, wat beteken dat <m>0 = 1 + a^2</m> volgens die
+        vergelyking vir <m>M</m>.
+        Dit is onmoontlik.
+        Daarom <m>\nabla_\ve{p} f
+        \neq (0,0)</m> vir alle <m>\ve{p} \in M</m>,
+        sodat <m>M</m> 'n hipervlak is.
+      </p>
+    </solution>
+  </example>
+
+  <example>
+    <title>Twee-sfeer</title>
+    <statement>
+      <p>
+        Laat <m>f : \mathbb{R}^3 \rightarrow \mathbb{R}</m>
+        die funksie
+        <me>
+          f(x,y,z) = x^2 + y^2 + z^2 -1
+        </me>.
+        wees.
+        Teken 'n prentjie van <m>M_f</m>,
+        en wys dat dit 'n differensieerbare
+        hipervlak is.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Dan is die vlakversameling van <m>f</m>
+        <me>
+          M_f = \{ (x,y,z) \in \mathbb{R}^3 : x^2 + y^2 + z^2 - 1 = 0 \}
+        </me>
+      </p>
+
+      <p>
+        Dit word die <em>2-sfeer</em> genoem,
+        en word hieronder uitgebeeld:
+        <me>
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\shade[ball color = gray!40, opacity = 0.4] (0,0) circle
+        (2cm);
+        \draw (0,0) circle (2cm);
+        \draw (-2,0) arc (180:360:2 and 0.6);
+        \draw[dashed] (2,0) arc (0:180:2 and 0.6);
+        \fill[fill=black] (0,0) circle (1pt);
+        \draw[->] (0,0) -- node[pos=1.2] {\(y\)} (2.5, 0);
+        \draw[->] (0,0) -- node[pos=1.2] {\(z\)} (0, 2.5);
+        \draw[->] (0,0) -- node[pos=1.2] {\(z\)} (-1, -2);\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+        </me>
+      </p>
+
+      <p>
+        Om te wys dat dit 'n hipervlak is,
+        bereken ons eers <m>\nabla f</m> by
+        'n algemene punt <m>\ve{r} = (x,y,z) \in \mathbb{R}^3</m>:
+        <me>
+          \nabla_\ve{r} f = (2x, 2y, 2z)
+        </me>
+      </p>
+
+      <p>
+        Dit bestaan duidelik oral.
+        Verder, vir 'n punt <m>\ve{p} = (a, b, c)</m>
+        op <m>M</m>, het ons
+        <me>
+          \nabla_\ve{p} f = (2a, 2b, 2c) \neq (0, 0, 0)
+        </me>
+        aangesien <m>a^2 + b^2 + c^2 = 1</m>.
+        Daarom is <m>M</m> 'n hipervlak.
+      </p>
+    </solution>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Laat <m>f : \mathbb{R}^3 \rightarrow \mathbb{R}</m> die funksie
+        <me>
+          f(x,y,z) = (2-\sqrt{x^2 + y^2})^2 + z^2 - 1
+        </me>.
+        wees.
+        Teken 'n prentjie van die vlak-versameling <m>M</m> van <m>f</m>, en bewys
+        dat dit 'n hipervlak is.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Die nul-versameling van <m>f</m> is
+        <me>
+          M = \{ (x,y,z) \in \mathbb{R}^3 : (2-\sqrt{x^2 + y^2})^2 + z^2
+          - 1 = 0 \}
+        </me>
+      </p>
+
+      <p>
+        Dit is 'n <em>torus</em>, en word hieronder uitgebeeld:
+        <me>
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\node at (0,0)
+        {\includegraphics[width=0.45\textwidth]{torus.pdf}};
+        \draw[->, very thick] (2.5,0) -- node[pos=1.4] {\(y\)} (3.2,
+        0);  
+        \draw[->, very thick] (0,0) -- node[pos=1.1] {\(z\)} (0,
+        2.5);
+        \draw[->, very thick] (-0.9, -0.9*4/3) -- node[pos=1.2]
+        {\(x\)} (-1.5, -2);\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+        </me>
+      </p>
+
+      <p>
+        Om te wys dat <m>M</m> 'n hipervlak is,
+        moet ons eers <m>\nabla f</m> by 'n
+        algemene punt <m>\ve{r} = (x,y,z) \in \mathbb{R}^3</m> bereken:
+        <me>
+          \nabla_\ve{r} f = \left( \frac{2x(2 - \sqrt{x^2 +
+          y^2)}}{\sqrt{x^2 + y^2}}, \, \frac{2y(2 - \sqrt{x^2 +
+          y^2)}}{\sqrt{x^2 + y^2}}, \, 2z \right)
+        </me>
+      </p>
+
+      <p>
+        Let daarop dat <m>\nabla f</m> nie
+        <em>oral</em> in <m>\mathbb{R}^3</m>
+        bestaan nie,
+        aangesien daar 'n probleem is as <m>x^2 + y^2 = 0</m>
+        (d.w.s. op die <m>z</m>-as).
+        Maar vir 'n punt <m>\ve{p} = (a, b, c)</m> op
+        <m>M</m>, kan ons nie <m>a^2 + b^2 = 0</m> kry nie, aangesien dit volgens die
+        vergelyking vir <m>M</m> sou impliseer dat
+        <me>
+          (2 - \sqrt{0})^2 + c^2 - 1 = 0
+        </me>,
+        met ander woord, <m>c^2 = -3</m>, wat onmoontlik is.
+        So <m>\nabla_\ve{p}
+        f</m> bestaan oral op <m>M</m>.
+        Verder, veronderstel <m>\nabla_\ve{p} f =
+        (0,0,0)</m> en <m>\ve{p}</m> l&#xea; op <m>M</m>.
+        Dan, onder andere, is <m>2c = 0</m>
+        so <m>c=0</m>, en daarom, volgens die vergelyking vir <m>M</m>,
+        <me>
+          (2 - \sqrt{a^2 + b^2})^2 = 1
+        </me>,
+        wat impliseer dat <m>a</m> en <m>b</m> nie albei nul kan wees nie.
+        Dit is 'n
+        teenstelling,
+        daarom is <m>\nabla_\ve{p} \neq \ve{0}</m> oral op <m>M</m>.
+        So <m>M</m> is 'n hipervlak.
+      </p>
+    </solution>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Laat <m>M \subset \mathbb{R}^{n+1}</m> 'n hipervlak
+        geassosieer met 'n funksie <m>f : \mathbb{R}^{n+1} \rightarrow
+        \mathbb{R}</m> wees.
+        Die <term>raakruimte</term> van <m>M</m> at <m>\ve{p} \in M</m>
+        is:
+        <me>
+          T_\ve{p} M := \{ \ve{v} \in \mathbb{R}^{n+1} \, : \, \nabla_\ve{p}
+          f \dotp \ve{v} = 0 \}
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <assemblage>
+    <p>
+      Uit Meerveranderlike Calculus, weet ons dat ons die
+      raakruimte van <m>M</m> by <m>p</m> soos volg kan uitdruk:
+      <md>
+        <mrow>T_\ve{p} M \amp =  \{ \ve{v} \in \mathbb{R}^{n+1} \, : \, D_\ve{v} f
+        (\ve{p}) = 0 \}</mrow>
+        <mrow>\amp =  \left\{ \ve{v} \in \mathbb{R}^{n+1} \, : \,
+        \frac{d}{dt}\Big|_{t=0} f(\ve{p} + t \ve{v}) = 0 \right\}</mrow>
+      </md>
+    </p>
+  </assemblage>
+
+  <lemma>
+    <statement>
+      <p>
+        As <m>M</m> ....
+      </p>
+    </statement>
+  </lemma>
+
+  <example>
+    <statement>
+      <p>
+        Bereken 'n basis vir die raakruimte aan die hiperbool <m>M</m>
+        in <xref ref="hyperbola_example">Voorbeeld</xref>
+        by <m>\ve{p} = (1, \sqrt{2})</m>.
+        Teken
+        'n prentjie om die resultaat te illustreer.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Ons het reeds die gradi(&#xeb;)nt van <m>f</m> by 'n punt <m>\ve{p} = (a,b)
+        \in M</m> bereken:
+        <me>
+          \nabla_\ve{p} = (2b, -2a)  \mbox{ where \(b^2 = 1 + a^2\)} 
+        </me>.
+      </p>
+
+      <p>
+        Gevolglik het ons by <m>\ve{p} = (1, \sqrt{2})</m> dat
+        <me>
+          \nabla_\ve{p} f = (2 \sqrt{2}, -2)
+        </me>.
+      </p>
+
+      <p>
+        Daarom
+        <md>
+          <mrow>T_\ve{p} M \amp = \{ (v_1, v_2) \in \mathbb{R}^2 : \nabla_\ve{p} f
+          \dotp (v_1, v_2) = 0 \}</mrow>
+          <mrow>\amp = \{ (v_1, v_2) \in \mathbb{R}^2 : 2 \sqrt{2} v_1 - 2v_2 = 0
+          \}</mrow>
+        </md>
+      </p>
+
+      <p>
+        'n Basis vir <m>T_\ve{p} M</m> is <m>\ve{u} = (1, \frac{1}{\sqrt{2}})</m>.
+        Die visualisering is:
+        <me>
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
+        \draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
+        \draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
+        \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
+        \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
+        \draw[very thick, red] plot[id=p] ({1.5*\x},
+        {1/sqrt(2)*(1.5*\x) + (sqrt(2)-1/sqrt(2))}); 
+        \draw[very thick, fill] (1, 1.414) circle (1pt) node[below
+        right] {\(\ve{p}\)};
+        \node at (-1.5, 1.4) {\(M\)};
+        \draw[line width=0.5mm, blue, ->] (1, 1.414) -- (1.5, 1.414
+        + 0.5*0.707) node[below right] {\(\ve{u}\)};\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+          \qquad
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
+      \draw[<->] (-2,0) -- (2,0) node[below] {\(v_1\)};
+      \draw[<->] (0, -2) -- (0,2) node[right] {\(v_2\)};
+      \draw[very thick, red] plot[id=p] ({1.5*\x},
+      {1/sqrt(2)*(1.5*\x)});
+      \node[red] at (2, 1.8) {\(T_\ve{p} M\)};
+      \draw[line width=0.5mm, blue, ->] (0,0) -- (0.5, 0.5*0.707)
+      node[right, yshift=-2pt] {\(\ve{u}\)};\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+        </me>
+      </p>
+
+      <assemblage>
+        <p>
+          Die rooi lyn in die eerste beeld, wat vir
+          illustrasiedoeleindes geteken is, is die raakruimte wat
+          geskuif is sodat dit deur <m>\ve{p}</m> loop.
+          Die ware raakruimte
+          <m>T_\ve{p} M</m> loop deur die oorsprong soos in die tweede beeld.
+        </p>
+      </assemblage>
+
+    </solution>
+  </example>
+
+  <p>
+    \end{appendices}
+  </p>
+</chapter>
+

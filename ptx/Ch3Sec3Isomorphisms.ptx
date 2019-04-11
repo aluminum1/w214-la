@@ -1,0 +1,555 @@
+
+
+<section xml:id="Ch3Sec3Isomorphisms">
+  <title>Isomorphisms of vector spaces</title>
+  <p>
+    Suppose you have two sets,
+    <me>
+      A = \{ \mbox{bird} , \mbox{eye} , \mbox{person}  \}  \mbox{and}    B = \left\{ \begin{aligned}<image width="100%" source="images/bird.png" /> 
+      \end{aligned}  , \begin{aligned}<image width="100%" source="images/eye.png" /> 
+      \end{aligned} , \begin{aligned}<image width="100%" source="images/person.png" /> 
+      \end{aligned}  \right\}
+    </me>.
+  </p>
+
+  <p>
+    The elements of <m>A</m> and <m>B</m> are not <em>the same</em>,
+    so <m>A</m> is not <em>equal</em> to <m>B</m>.
+    But this is unsatisfactory <mdash /> clearly the elements of <m>A</m> are just English versions of the Chinese symbols in <m>B</m>.
+    How can we make this mathematically precise?
+  </p>
+
+  <p>
+    We could define two maps, say
+    <md>
+      <mrow>S: A \amp \rightarrow B</mrow>
+      <mrow>\mbox{bird}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" /> 
+      \end{aligned}</mrow>
+      <mrow>\mbox{eye}  \amp \mapsto \begin{aligned}<image width="100%" source="images/eye.png" /> 
+      \end{aligned}</mrow>
+      <mrow>\mbox{cross}  \amp \mapsto \begin{aligned}<image width="100%" source="images/person.png" /> 
+      \end{aligned}</mrow>
+      <intertext>and</intertext>
+      <mrow>T : B \amp \rightarrow A</mrow>
+      <mrow>\begin{aligned}<image width="100%" source="images/bird.png" /> 
+      \end{aligned}  \amp  \mapsto \mbox{bird}</mrow>
+      <mrow>\begin{aligned}<image width="100%" source="images/eye.png" /> 
+      \end{aligned}  \amp  \mapsto \mbox{eye}</mrow>
+      <mrow>\begin{aligned}<image width="100%" source="images/person.png" /> 
+      \end{aligned}  \amp  \mapsto \mbox{cross}  </mrow>
+    </md>.
+  </p>
+
+  <p>
+    Then we observe that
+    <men xml:id="bijection_eqn">
+      T \circ S = \id_A  \mbox{and}   S \circ T = \id_B 
+    </men>.
+  </p>
+
+  <p>
+    A pair of maps <m>S : A \rightarrow B</m> and
+    <m>T : B \rightarrow A</m> satisfying <xref ref="bijection_eqn" /> is called an
+    <em>isomorphism of sets</em>
+    between <m>A</m> and <m>B</m>.
+    If you like,
+    you can rename <m>T</m> as <m>S^{-1}</m> since <m>S^{-1} \circ S = \id_A</m> and
+    <m>S \circ S^{-1} = \id_B</m>. (Calling <m>T</m> by the name <m>S^{-1}</m> from the beginning would have been presumptive of me.
+    I needed to first define it,
+    and then check that it satisfied <xref ref="bijection_eqn" />.
+    Only then did I have the right to call it <m>S^{-1}</m>!)
+  </p>
+
+  <p>
+    Perhaps you are somewhat of a penny-pincher.
+    You see the need for the English-to-Chinese map <m>S</m>,
+    but not the need for a Chinese-to-English map <m>T</m>.
+    After all, you say,
+    since no two different English symbols in <m>A</m> get mapped to the same Chinese symbol in <m>B</m> (<sq><m>S</m> is one-to-one</sq>) and every Chinese symbol <m>y \in B</m> is equal to <m>S(x)</m> for some <m>x \in A</m> (<sq><m>S</m> is onto</sq>),
+    we have no need for <m>T</m>.
+    It is an extravagance!
+  </p>
+
+  <p>
+    To this I respond: you are right,
+    but is it not useful to have the explicit Chinese-to-English map <m>T</m>?
+    In bookshops,
+    cross-language dictionaries like this most often come bundled as a pair,
+    in a single volume.
+    After all, if one needs to look up the English word for <m>\begin{aligned}<image width="100%" source="images/bird.png" /> 
+    \end{aligned}</m>,
+    it is a nuisance to have to traverse through the entire English-to-Chinese dictionary,
+    trying to find the English word which translates to <m>\begin{aligned}<image width="100%" source="images/bird.png" /> 
+    \end{aligned}</m>!
+  </p>
+
+  <p>
+    This motivates the following definition.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        We say that a linear map <m>S : V \rightarrow W</m> is an <term>isomorphism</term>
+        if there exists a linear map <m>T : W \rightarrow V</m> such that
+        <men xml:id="inverse_map_in_iso">
+          T \circ S = \id_V  \mbox{and}   S \circ T = \id_W
+        </men>.
+      </p>
+    </statement>
+  </definition>
+
+  <lemma>
+    <title>Uniqueness of Inverses</title>
+    <statement>
+      <p>
+        If <m>S : V \rightarrow W</m> is an isomorphism and <m>T, T' : W \rightarrow V</m> both satisfy
+        <md>
+          <mrow>T \circ S \amp = \id_V, \ \amp  S \circ T \amp = \id_W</mrow>
+          <mrow>T' \circ S \amp = \id_V, \ \amp  S \circ T' \amp = \id_W</mrow>
+        </md>
+        then <m>T = T'</m>.
+      </p>
+    </statement>
+  </lemma>
+
+  <assemblage>
+    <p>
+      This lemma justifies us calling <m>T</m>
+      <em>the</em> inverse of <m>S</m>
+      (as opposed to <em>an</em> inverse of <m>S</m>),
+      and also justifies us writing <m>T = S^{-1}</m>.
+    </p>
+  </assemblage>
+
+  <proof>
+    <p>
+      To show that <m>T = T'</m>,
+      we must show that for all <m>\ve{w} \in W</m>,
+      <m>T(\ve{w}) = T'(\ve{w})</m>.
+      Indeed:
+      <md>
+        <mrow>T(\ve{w}) \amp = T(\id_W (\ve{w})) \amp \amp  \mbox{(Defn of \(\id_W\))}</mrow>
+        <mrow>\amp = T( (S \circ T')(\ve{w})) \amp \amp  \mbox {($S \circ T' = \id_W$)}</mrow>
+        <mrow>\amp = T(S(T'(\ve{w}))) \amp \amp  \mbox {(Defn of $S \circ T'$)}</mrow>
+        <mrow>\amp = (T \circ S)(T'(\ve{w})) \amp \amp  \mbox {(Defn of $T \circ S$)}</mrow>
+        <mrow>\amp = \id_V (T'(\ve{w})) \amp \amp  \mbox{(\(T \circ S = \id_V\))}</mrow>
+        <mrow>\amp = T'(\ve{w}) \amp \amp  \mbox {(Defn of $\id_V$)}</mrow>
+      </md>.
+    </p>
+  </proof>
+
+  <definition>
+    <statement>
+      <p>
+        We say that two vector spaces <m>V</m> and <m>W</m> are <term>isomorphic</term>
+        if there exists an isomorphism between them.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+    <p>
+      Show that <m>\mathbb{R}^n</m> is isomorphic to <m>\Poly_{n-1}</m>
+    </p>
+    <p>
+    <solution>
+      <p>
+        We define a pair of linear maps
+        <md>
+          <mrow>S : \mathbb{R}^n \amp  \rightleftarrows \Poly_{n-1} : T</mrow>
+          <intertext>as follows:</intertext>
+          <mrow>(a_1, a_2, \ldots, a_n) \amp  \stackrel{S}{\mapsto} a_1 + a_2 x + \cdots + a_n x^{n-1}</mrow>
+          <mrow>(a_1, a_2, \ldots, a_n) \amp  \stackrel{T}{\mapsfrom} a_1 + a_2 x + \cdots + a_n x^{n-1}</mrow>
+        </md>
+      </p>
+    </solution>
+</p>
+   
+    <p>
+      We clearly have <m>T \circ S = \id_{\mathbb{R}^n}</m> and <m>S \circ T = \id_{\Poly_{n-1}}</m>.
+    </p>
+    </statement>
+  </example>
+
+ <exercise>
+      <statement>
+        <p>
+          Check that these maps are linear.
+        </p>
+      </statement>
+    </exercise>
+
+
+  <p>
+    We will now show that up to isomorphism,
+    there is only one vector space of each dimension!
+  </p>
+
+  <theorem xml:id="iso_same_dim">
+    <statement>
+      <p>
+        Two finite-dimensional vector spaces <m>V</m> and <m>W</m> are isomorphic if and only if they have the same dimension.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      <m>\Rightarrow</m>.
+      Suppose <m>V</m> and <m>W</m> are isomorphic,
+      via a pair of linear maps <m>S : V \rightleftarrows W : T</m>.
+      Let <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m> be a basis for <m>V</m>.
+      Then I claim that <m>\basis{C} = \bopen S(\ve{e}_1), \ldots, S(\ve{e}_m) \bclose</m> is a basis for <m>W</m>.
+      Indeed, the list of vectors
+      <m>\basis{C}</m> is linearly independent, since if
+      <me>
+        a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) = \ve{0}_W
+      </me>,
+      then applying <m>T</m> to both sides we obtain
+      <md>
+        <mrow>T(a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m)) \amp  = T(\ve{0}_W)</mrow>
+        <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  \mbox{(\(T\) is linear)}</mrow>
+        <mrow>\therefore a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m \amp = \ve{0}_V \amp \amp  \mbox{(\(T\circ S = \id_V\))}</mrow>
+      </md>
+      which implies that <m>a_1 = a_2 = \cdots = a_m = 0</m>,
+      since <m>\basis{B}</m> is linearly independent.
+      Moreover, the list of vectors <m>\basis{C}</m> spans <m>W</m>,
+      for if <m>\ve{w} \in W</m>, then applying <m>T</m>, we can write
+      <me>
+        T(\ve{w}) = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m
+      </me>
+      for some scalars <m>a_i</m> since <m>\basis{B}</m> spans <m>V</m>.
+      But then
+      <md>
+        <mrow>\ve{w} \amp = S(T(\ve{w})) \amp \amp  \mbox{(since \(S \circ T = \id_W\))}</mrow>
+        <mrow>\amp = S(a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m)</mrow>
+        <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp  \mbox{(\(S\) is linear)}</mrow>
+      </md>
+      so that <m>\basis{C}</m> spans <m>W</m>.
+      Hence <m>\basis{C}</m> is a basis for <m>V</m>,
+      so <m>\Dim V = \mbox{number of vectors in <m>\basis{B}</m>}</m> = <m>m</m>,
+      while <m>\Dim W = \mbox{number of vectors in <m>\basis{C}</m>}  = m</m>.
+    </p>
+
+    <p>
+      <m>\Leftarrow</m>.
+      Suppose <m>\Dim V = \Dim W</m>.
+      Let <m>\ve{e}_1, \ldots, \ve{e}_m</m> be a basis for <m>V</m>,
+      and let <m>\ve{f}_1, \ldots, \ve{f}_m</m> be a basis for <m>W</m>.
+      (We know that the number of basis vectors is the same since <m>\Dim V = \Dim W</m>.)
+    </p>
+
+    <p>
+      To define linear maps
+      <md>
+        <mrow>S : V \amp \rightleftarrows W : T</mrow>
+        <intertext>it is sufficient, by <xref ref="defining_linear_map_on_basis">Proposition</xref> (Sufficient to Define a Linear Map on a Basis), to define the action of <m>S</m> and <m>T</m> on the basis vectors. We set:</intertext>
+        <mrow>\ve{e}_i \amp  \stackrel{S}{\mapsto} \ve{f}_i</mrow>
+        <mrow>\ve{e}_i \amp  \stackrel{T}{\mapsfrom} \ve{f}_i</mrow>
+      </md>
+    </p>
+
+    <p>
+      Clearly we have <m>T \circ S = \id_V</m> and <m>S \circ T = \id_W</m>.
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+      <p>
+        Show that <m>\Mat_{n,m}</m> is isomorphic to <m>\mathbb{R}^{mn}</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We simply observe that by <xref ref="dimension_of_matrix_space_example">Example</xref>,
+        <m>\Dim \Mat_{n,m} = mn</m> while
+        from <xref ref="standard_basis_R_n_ex">Example</xref>,
+        <m>\Dim \mathbb{R}^{mn}</m> is also equal to <m>mn</m>.
+      </p>
+    </solution>
+  </example>
+
+  <p>
+    There is one very important isomorphism which we will use over and over.
+    Let <m>V</m> be a vector space with basis <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m>.
+    Consider the map
+    <md>
+      <mrow>_\basis{B} : V \amp  \rightarrow \Col_m</mrow>
+      <mrow>\ve{v} \amp  \mapsto [\ve{v}]_\basis{B}</mrow>
+    </md>
+    which sends a vector <m>\ve{v} \in V</m> to its corresponding coordinate vector <m>[\ve{v}]_\basis{B} \in \Col_m</m>.
+    <xref ref="lin_of_coord_vectors">Lemma</xref>
+    says precisely that <m>[ \smul]_\basis{B}</m> is a linear map.
+    We will now describe its inverse.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>V</m> be an <m>m</m>-dimensional vector space with basis <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m\bclose</m>.
+        Let <m>\mat{c} \in \Col_m</m> be an <m>m</m>-dimensional column vector.
+        Then the <term>vector in <m>V</m> corresponding to <m>\mat{c}</m> with respect to the basis <m>\basis{B}</m></term> is
+        <me>
+          \ve{vec}_{V, \basis{B}} (\mat{c}) := \mat{c}_1 \ve{e}_1 + \mat{c}_2 \ve{e}_2 + \cdots + \mat{c}_m \ve{e}_m
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        The polynomials <m>\basis{B} = \bopen \ve{p}_1, \ve{p}_2, \ve{p}_3 \bclose</m> where
+        <me>
+          \ve{p}_1 := 1 + x,  \ve{p}_2 := 1 + x + x^2, \ve{p}_3 := 1-x^2
+        </me>
+        are a basis of <m>\Poly_2</m>
+        (check this).
+        Then, for instance,
+        <md>
+          <mrow>\ve{vec}_{\Poly_3, \basis{B}} \left( \begin{bmatrix}  2 \\ -3 \\ 3\end{bmatrix}\right) \amp = 2(1+x) -3 (1+x+x^2) + 3(1-x^2)</mrow>
+          <mrow>\amp =  2 -x -6x^2 \in \Poly_3 \, </mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>
+        Show that:
+
+        <ol>
+          <li>
+            
+            <p>
+              <m>\ve{vec}_{V, \basis{B}} (\mat{c} + \mat{c}') = \ve{vec}_{V, \basis{B}} (\mat{c}) + \ve{vec}_{V, \basis{B}} (\mat{c}')</m>
+            </p>
+          </li>
+
+          <li>
+           
+            <p>
+              <m>\ve{vec}_{V, \basis{B}} (k\mat{c}) = k \, \ve{vec}_{V, \basis{B}} (\mat{c})</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        This means that <m>\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V</m> is a linear map.
+      </p>
+    </statement>
+    <solution>
+      <p>
+ <ol>
+          <li>
+             <p>
+              <md>
+              <mrow>\ve{vec}_{V, \basis B}(\mat c + \mat c') \amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} +  \begin{bmatrix}  c^\prime_1\\ \vdots \\ c^\prime_n\end{bmatrix}\right) </mrow>
+
+              <mrow>\amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1+ c^\prime_1 \\ \vdots \\c_n + c^\prime_n \end{bmatrix}\right) </mrow>
+
+              <mrow>\amp =  (c_1+ c^\prime_1)\ve e_1 +\cdots +  (c_n+ c^\prime_n)\ve e_n  </mrow>
+
+              <mrow> \amp = (c_1\ve e_1 + \cdots + c_n\ve e_n )  + (c_1^\prime\ve e_1 + \cdots + c^\prime_n\ve e_n ) </mrow>
+
+              <mrow> \amp = \ve{vec}_{V, \basis B}(\mat c) + \ve{vec}_{V, \basis B}(\mat c')</mrow>
+
+            </md>
+
+            </p>
+          </li>
+
+          <li>
+            <p>
+             <md>
+
+              <mrow>\ve{vec}_{V, \basis B}(k\mat c) \amp = \ve{vec}_{V, \basis B}\left(k \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} \right)  </mrow> 
+
+              <mrow> \amp =  \ve{vec}_{V, \basis B}\left(\begin{bmatrix}  kc_1 \\ \vdots \\kc_n\end{bmatrix} \right)</mrow>
+
+              <mrow> \amp = (kc_1\ve e_1 + \cdots + kc_n\ve e_n )</mrow>
+
+              <mrow> \amp = k(c_1\ve e_1 + \cdots + c_n\ve e_n ) </mrow>
+
+              <mrow> \amp = k\,\ve{vec}_{V, \basis B}(\mat c) </mrow>
+
+             </md>
+            </p>
+          </li>
+        </ol>
+
+
+</p>
+</solution>
+        </exercise>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>V</m> be a vector space with basis <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m\bclose</m>.
+        The maps
+        <md>
+          <mrow>_\basis{B} : V \amp  \rightleftarrows  \Col_m : \ve{vec}_{V, \basis{B}}</mrow>
+          <mrow>\ve{v} \amp  \mapsto [\ve{v}]_{\basis{B}}</mrow>
+          <mrow>\ve{vec}_{V, \basis{B}}(\mat{c}) \amp  \mapsfrom \mat{c}</mrow>
+        </md>
+        are an isomorphism of vector spaces.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Given <m>\ve{v} \in V</m>, expand it in the basis <m>\basis{B}</m>:
+      <me>
+        \ve{v} = a_1 \ve{e}_1 + \ldots + a_m \ve{e}_m 
+      </me>.
+    </p>
+
+    <p>
+      Then
+      <md>
+        <mrow>(\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} ) \big(\ve{v}\big) \amp = \ve{vec}_{V, \basis{B}} \big( [\ve{v}]_\basis{B} \big)</mrow>
+        <mrow>\amp = \ve{vec}_{V,\basis{B}} \left( \begin{bmatrix} a_1 \\ \vdots \\ a_m \end{bmatrix} \right)</mrow>
+        <mrow>\amp = a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m</mrow>
+        <mrow>\amp = \ve{v}</mrow>
+      </md>
+      so that <m>\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} = \id_V</m>.
+      Conversely, given
+      <me>
+        \mat{c} = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}\in \Col_m
+      </me>,
+      we have
+      <md>
+        <mrow>\big( [ \smul]_\basis{B} \circ \ve{vec}_{V, \basis{B}} \big)  \big( \mat{c} \big) \amp = 
+        \big[\ve{vec}_{V, \basis{B}} (\mat{c}) \big]_\basis{B}</mrow>
+        <mrow>\amp = \big[ \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m \big]</mrow>
+        <mrow>\amp = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}</mrow>
+        <mrow>\amp = \mat{c}</mrow>
+      </md>
+      where the second last step uses the <em>definition</em>
+      of the coordinate vector of <m>\ve{v} = \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m</m>.
+      Hence <m>[\cdot]_\basis{B} \circ \ve{vec}_{V, \basis{B}} = \id_{\Col_m}</m>.
+    </p>
+  </proof>
+
+  <assemblage>
+    <p>
+      The result above is very important in linear algebra.
+      It says that,
+      once we have chosen a basis for an abstract finite-dimensional vector space <m>V</m>,
+      we can treat the elements of <m>V</m> as if they were column vectors!
+    </p>
+  </assemblage>
+<exercises>
+   <exercise>
+    <statement>
+      <p>
+        Are the following vector spaces isomorphic?
+       <md>
+         <mrow> V \amp = \left\{ \mat{v} \in \Col_4 : \begin{bmatrix} 1 \mamp  2 \mamp  0 \mamp  -1 \\ -1 \mamp  1 \mamp  1 \mamp  0 \end{bmatrix}  \mat{v}  = \mat{0}  \right\} </mrow>
+      
+        
+          <mrow>W \amp = \left\{ p \in \Poly_2 : \int_0^2 p(x) dx = 0 \right\} </mrow>
+             </md>.
+      </p>
+
+      <p>
+        If they are, construct an explicit isomorphism between them.
+        If not, prove that they are not isomorphic.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        V consists of all vectors <m>(x,y,z,w)</m> satisyfing the linear equations
+        <md>
+
+         <mrow> x + 2y - w = 0 </mrow>
+
+         <mrow> -x + y + z = 0 </mrow>
+
+        </md>.
+
+        We are free to choose <m>x</m> and <m> y </m> arbitrarily, but then (1) above fixes <m> w </m> and (2) fixes <m> z </m>. Hence <m> V </m> is a 2 dimensional subspace.
+      </p>
+<p>
+Onto <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
+
+      
+        <me> 
+\int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
+      </me>
+     Thus, for any choice of <m> a </m> and <m> b </m>, <m> c </m> is uniquely determined. Hence <m>W</m> is a 2 dimensional subspace.
+      </p>
+      <p>
+Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are isomorphic by <xref ref = "iso_same_dim" />. To exhibit an explicit isomorphism between the <m> V</m> and <m> W </m> we shall need find bases for both spaces.
+      </p>
+
+      <p>
+        Since <m>V</m> is 2 dimensional, a basis for <m> V </m> consists of any two non-zero vectors in <m>V</m> that are not scalar multiples of one another. By inspection, we find the basis <m> \basis B_V = \bopen (1,0,1,1) , (0,1,-1,2) \bclose</m>. By similar reasoning, we find a basis <m> \basis B_W = \bopen  \frac{3}{8}x^2 - \frac{1}{2} , x - 1\bclose </m>. By <xref ref="defining_linear_map_on_basis" />, there is a unique linear map <m> T: V \to W </m> such that
+        <md>
+         <mrow> T((1,0,1,1)) \amp = \frac{3}{8}x^2 - \frac{1}{2} </mrow>
+
+         <mrow> T((0,1,-1,2)) \amp = x -1 </mrow>
+        </md>. This map is an isomorphism, as demonstrated by the proof of <xref ref ="iso_same_dim" />.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Are the following vector spaces isomorphic?
+        <me>
+          V = \{ \ve{v} \in \mathbb{R}^3 : \ve{v} \times (1,2,3) = \ve{0} \}
+        </me>
+        <me>
+          W = \left\{ M \in \Mat_{2,2} : M^T = -M \right\}
+        </me>.
+      </p>
+
+      <p>
+        If they are, construct an explicit isomorphism between them.
+        If not, prove that they are not isomorphic.
+      </p>
+    </statement>
+    <solution>
+    <p>
+      We use some geometry to find the dimension of <m> V</m>. <m> \ve v \in V  </m> if and only if
+      <me>
+|\ve v||(1,2,3)|\sin \theta =0 
+    </me>
+    where <m> \theta</m> is the angle between <m> \ve v </m> and <m> (1,2,3)</m>. Thus <m> V </m> consists of <m> \ve 0 </m> as well as all those vectors parallel to <m> (1,2,3)</m>. But this set is precisely all vectors of the form <m>k(1,2,3)</m> with <m> k \in \mathbb R </m>. Hence <m> V </m> is 1 dimensional with basis <m> \bopen (1,2,3) \bclose </m>.
+    </p>
+    <p>
+<m> W </m> consists of all matrices <m>(a_{ij})</m> satisfying
+<me>
+\begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}.
+</me>
+Thus <m> a_{11}  = a_{22} = 0 </m> and <m> b = -c</m>. So <m>W</m> consists of all those matrices  of the form
+<me>
+\begin{bmatrix} 0 \mamp k \\ -k \mamp 0\end{bmatrix}
+</me>.
+This also shows that 
+<me>
+\bopen \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix} \bclose
+</me>
+is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the isomorphism given by the unique linear map <m> V \to W</m> satisfying
+<me>
+(1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix}
+</me>
+    </p>
+  </solution>
+  </exercise>
+  
+</exercises>
+
+<!-- <solutions divisional="solution answer" />  -->
+
+</section>
+

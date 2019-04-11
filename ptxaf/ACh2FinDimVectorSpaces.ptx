@@ -1,0 +1,27 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ACh2FinDimVectorSpaces">
+  <title>Eindigdimensionele vektorruimtes</title>
+  <introduction>
+    <p>
+      In hierdie kursus konsentreer ons op
+      <em>eindigdimensionele</em>
+      vektorruimtes, wat ons in hierdie hoofstuk sal definieer.
+    </p>
+
+    <assemblage>
+      <p>
+        <em>Waarskuwing</em>: Van hier af verder gaan ek verkorte notasie
+        vir skalaarvermenigvuldiging gebruik en <m>k \cdot \ve{v}</m> bloot as <m>k
+        \ve{v}</m> skryf!
+      </p>
+    </assemblage>
+  </introduction>
+
+  <xi:include  href="ACh2Sec1LineereKombinasieSpan.ptx" />
+  <xi:include  href="ACh2Sec2LinearIndependence.ptx" />
+  <xi:include  href="ACh2Sec3BasisDimension.ptx" />
+  <xi:include  href="ACh2Sec4CoordinateVectors.ptx" />
+  <xi:include  href="ACh2Sec5ChangeOfBasis.ptx" />
+</chapter>
+

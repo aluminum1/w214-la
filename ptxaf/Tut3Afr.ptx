@@ -1,0 +1,289 @@
+<section xml:id="Tut3Afr">
+<title>W214 2019, Lineêre Algebra Tutoriaal 3</title>
+<shorttitle>Tutoriaal 3</shorttitle>
+
+<exercises>
+
+<assemblage>
+  <title>1.6 Deelruimtes</title> 
+</assemblage> 
+
+ <exercise> <statement>
+ <p>Bewys waar of vals: Die versameling
+  <me>
+  V := \{ p \in \Poly_2 : p(3) = 1 \}
+</me>
+is 'n deelruimte van <m>\Poly_2</m>. </p>
+ </statement>
+
+ </exercise>
+
+
+<assemblage><title>2.2 Lineêre Onafhanklikheid</title>
+</assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+Beskou die vektorruimte <m>V = \Fun ([0,1])</m> van funksies op die geslote eenheidinterval. Skryf neer 'n lineêr onafhanklike lys van <m>4</m> vektore in <m>V</m>.
+      </p>
+    </statement>
+<!--    <solution>
+<p>
+Given <m> n \in \mathbb N </m>, consider the set of <m> n </m> functions
+<me>
+X = \left \{ f_m \, : \, f_m\left(\frac{1}{m}\right) = 1, f_m(x) = 0 \text{ otherwise} \right\}.
+</me>
+We shall show that this collections is linearly independent. Suppose there is a linear relation on <m>X</m>. In other words, suppose
+<men xml:id="func_01_lin_rel">
+a_1 f_1(x) + a_2 f_2(x) + \cdots + a_n f_n(x) = 0
+</men>
+for all <m> x \in [0,1] </m>. Plug <m>\frac{1}{n}</m> into <xref ref = "func_01_lin_rel"/>. We obtain
+<me>
+\frac{a_n}{n} = 0
+</me>
+and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-1}</m> into <xref ref = "func_01_lin_rel"/> to conclude <m> a_{n-1} = 0</m> and so forth. Hence all <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> must be 0. Thus <m>X</m> is linearly independent.
+</p>
+  </solution>
+-->
+  </exercise>
+
+
+
+<assemblage><title>2.3 Basis en Dimensie</title>
+</assemblage>
+
+  <exercise>
+<statement >
+  <p>
+    Bewys waar of vals: daar bestaan 'n basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> van <m>\Poly_3 </m> met die eienskap dat geeneen van die polinome <m> p_0, p_1, p_2, p_3</m> graad 2 het.
+  </p>
+</statement>
+<!--
+<solution>
+<p>
+  The basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> works. The check is routine.
+</p>
+</solution>
+-->
+  </exercise>
+
+  <exercise>
+    <statement><p>Laat <m>W \subset \mathbb{R}^3</m> die vlak ortogonaal aan die vektor <m>\ve{v} = (1,2,3)</m> wees, soos in <xref ref="hyperplanes_example_subspace"/> en <xref ref="dimension_of_hyperplane"/>. Toon aan dat <m>\bopen \ve{a}, \ve{b} \bclose</m> 'n basis vir <m>W</m> is, waar
+  <me>
+    \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{1}{2}).
+</me>
+</p>
+</statement>
+</exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Vir elkeen van die volgende, toon aan dat <m>V</m> 'n deelruimte van
+        <m>\Poly_2</m> is, vind 'n basis vir <m>V</m>, en bereken <m>\Dim V</m>.
+
+        <ol>
+          <li>
+            <title>(a)</title>
+            <p>
+              <m>V = \{ p \in \Poly_2 : p(0) = 0, p(2)=0 \}</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              <m>V = \{ p \in \Poly_2 : \int_0^1 p(t) dt = 0 \}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+<exercise>
+    <statement>
+      <p>
+        Sif die lys vektore
+        <md>
+          <mrow>\ve{v}_1 \amp = (0,0,0), \amp  \ve{v}_2 \amp = (1, 0, -1), \amp  \ve{v}_3 \amp = (1, 2, 3)</mrow>
+          <mrow>\ve{v}_4 \amp = (3, 4, 5), \amp  \ve{v}_5 \amp = (4, 8, 12), \amp   \ve{v}_6 \amp = (1, 1, 0)</mrow>
+        </md>.
+      </p>
+    </statement>
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        Voltooi die volgende 'alternatiewe' bewys van <xref ref="lin-ind-implies-basis"/>.
+      </p>
+
+        <p>
+          <alert>Lemma.</alert> Veronderstel dat <m>V</m> 'n vektorruimte van dimensie <m>n</m> is.
+          Dan is enige line&#xea;r onafhanklike lys van <m>n</m> vektore in <m>V</m> 'n
+          basis vir <m>V</m>.
+        </p>
+
+        <p>
+          <em>Bewys.</em> Laat <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n
+          \right\}</m> 'n line&#xea;r onafhanklike lys vektore in <m>V</m> wees.
+        </p>
+
+        <p>
+          Veronderstel dat <m>\basis{B}</m> <em>nie</em>
+          'n basis vir <m>V</m> is nie.
+        </p>
+
+        <p>
+          Daarom span <m>\basis{B}</m> nie <m>V</m> nie, want... (a)
+        </p>
+
+        <p>
+          Daarom bestaan daar <m>\ve{v} \in V</m> sodanig dat ... (b)
+        </p>
+
+        <p>
+          Voeg nou <m>\ve{v}</m> by die lys
+          <m>\basis{B}</m> om 'n nuwe lys te vorm,
+          <m>\basis{B}' :=</m> ... (c)
+        </p>
+
+        <p>
+          Die nuwe lys <m>\basis{B}'</m> is line&#xea;r onafhanklik omdat ... (d)
+        </p>
+
+        <p>
+          Dit is 'n teenstelling, omdat ... (e)
+        </p>
+
+        <p>
+          Dus <m>\basis{B}</m> moet 'n basis vir <m>V</m> wees.
+        </p>
+    </statement>
+    <!--
+    <solution>
+      <p>
+      <ol>
+        <li>
+          <p>
+Any linearly independent spanning set is by definition a basis, contradicting our assumption.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m> \ve v </m> is not a linearly combination of the vectors in <m> \basis B </m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m> \bopen \ve v_1 \ldots, \ve v_n , \ve v \bclose </m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+           No vector in  <m> \basis B'  </m> is a linear combination of the previous vectors and so the list is thus linearly indepedent by <xref ref = "lin_dependence_prop" />.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The vector subspace <m> W </m> of <m> V </m> spanned by the vectors in <m> \basis B' </m> has dimension <m> n + 1</m> and so <m> \dim(W) > \dim(V)</m> which contradicts <xref ref = "dim-of-subspace-prop" />.
+          </p>
+        </li>
+      </ol>
+      </p>
+</solution>
+-->
+
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+Gebruik die <xref ref="bumping_off_lemma" text="title">Afstampproposisie</xref> of die <xref ref="inv_dim" text="title">Invariansie van Dimensie Stelling</xref> om te besluit of <m>\basis{B}</m> 'n basis vir <m>V</m> is.
+
+        <ol>
+          <li>
+            <title>(a)</title>
+            <p>
+              <m>V = \Poly_2</m>,
+              <m>\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1 + x - 3x^2, \, x-x^2 \right\}</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              <m>V = \Mat_{2,2}</m>,
+              <me>\basis{B} = \left\{ 
+ \begin{bmatrix}
+1 &amp; 2 \\
+-1 &amp; 3
+\end{bmatrix},\,
+ \begin{bmatrix}
+0 &amp; 1\\
+3 &amp; -1
+\end{bmatrix},\,
+\begin{bmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{bmatrix}
+     \right\} </me>
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              <m>V = \Trig_2</m>,
+              <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(d)</title>
+            <p>
+             <m>V = \Mat_{2,2}</m>,
+             <m>\basis{B} = \left\{         
+            \begin{bmatrix}
+            1 &amp; 2 \\
+            1 &amp; 1
+            \end{bmatrix},\,
+            \begin{bmatrix}
+            1 &amp; 0 \\
+            -2 &amp; 1
+            \end{bmatrix},\,
+            \begin{bmatrix}
+            1 &amp; 0 \\
+            2 &amp; 3
+            \end{bmatrix},\,
+            \begin{bmatrix}
+            0 &amp; 3 \\
+            1 &amp; -1
+            \end{bmatrix},\,
+            \ve{v}_5 = \begin{bmatrix}
+            1 &amp; 0 \\
+            0 &amp; 1
+            \end{bmatrix}\right\} </m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+</exercise>
+
+
+
+
+</exercises>
+
+</section>
+
+

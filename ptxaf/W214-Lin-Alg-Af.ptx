@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="af-ZA">
+
+  <docinfo>
+
+  <latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+
+\usepackage{pgfplots}
+
+</latex-image-preamble>
+
+<macros>
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{aligned}}
+\newcommand{\ea}{\end{aligned}}
+\newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
+\newcommand{\et}{\end{tikzpicture} \end{aligned}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathsf{#1}}
+\newcommand{\col}[1]{\boldsymbol{\mat{#1}}}
+\newcommand{\basis}[1]{{\mathcal #1}}
+\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
+\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\smul}{.}
+\newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
+\newcommand{\bopen}{\{\llap{-}}
+\newcommand{\bclose}{\rlap{-}\}}
+\newcommand{\mamp}{&amp;}
+\newcommand{\mapsfrom}{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+
+
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Cont}{Cont}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Poly}{Poly}
+\DeclareMathOperator{\Trig}{Trig}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\vc}{vec}
+\DeclareMathOperator{\Dim}{Dim}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Nullity}{Nullity}
+\DeclareMathOperator{\Rank}{Rank}
+
+</macros>
+
+
+  </docinfo>
+
+  <book xml:id="W214-Lin-Alg-Af">
+    <title>W214 Lineêre Algebra</title>
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>Bruce Bartlett</personname>
+        </author>
+      </titlepage>
+
+ <xi:include href="./ACh0NoteForStudent.ptx" />
+
+    </frontmatter>
+
+
+    <xi:include href="./ACh1AbstractVectorSpaces.ptx" />
+
+
+
+    <xi:include href="./ACh2FinDimVectorSpaces.ptx" />
+   
+
+
+    <xi:include href="./ACh3LinearMaps.ptx" />
+
+     <xi:include href="./AChTutorials.ptx"/>
+
+    <!--
+
+    <xi:include href="./ACh4EigenvaluesEigenvectors.ptx" />
+
+  -->
+
+    <xi:include href="./AAppAReminderAboutMatrices.ptx" />
+
+<!--
+
+    <xi:include href="./AAppBHypersurfaces.ptx" />
+
+  -->
+
+    <backmatter>
+      <xi:include href="./bibliography.ptx" />
+    </backmatter>
+  </book>
+</pretext>
+

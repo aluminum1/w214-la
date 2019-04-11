@@ -1,0 +1,543 @@
+
+
+<section xml:id="Ch2Sec1LinearCombinationSpan">
+  <title>Linear combinations and span</title>
+  <p>
+    We start with some basic definitions.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>linear combination</term>
+        of a finite collection <m>\ve{v}_1, \ldots, \ve{v}_n</m> of vectors in a vector space <m>V</m> is a vector of the form
+        <men>
+          a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_b \ve{v}_n
+        </men>
+        where <m>a_1, a_2, \ldots, a_n</m> are scalars.
+        If all the scalars <m>a_i</m> are <m>0</m>,
+        we say that it is the <term>trivial</term> linear combination.
+      </p>
+    </statement>
+  </definition>
+
+  <example> <title>First example of a linear combination</title>
+    <statement>
+      <p>
+        In <m>\mathbb{R}^3</m>, <m>(6, 2, -14)</m> is a linear combination of
+        <m>(-3, 1, 2)</m> and <m>(-2, 0, 3)</m> because
+        <me>
+          (6, 2, -14) = 2 (-3, 1, 2) -6 (-2, 0, 3)
+        </me>.
+      </p>
+    </statement>
+  </example>
+
+    <example> <title>Checking if a vector is a linear combination of other vectors</title>
+    <statement>
+      <p>
+        In <m>\mathbb{R}^4</m>, is <m>\ve{v}=(2, -1, 3, 0)</m> a linear combination of
+        <me>
+        \ve{v}_1 = (1, 3, 2, 0), \ve{v}_2=(5, 1, 2, 4), \text{ and } \ve{v}_3 = (-1, 0, 2, 1) \text{?}
+      </me>
+    </p>
+    <p>
+    To check this, we need to check if the equation
+    <men xml:id="first_span_ex_eqn">
+    \ve{v} = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3,
+    </men>
+    which is an equation in the unknowns <m>a_1, a_2, a_3</m>, has any solutions. Let us write out <xref ref="first_span_ex_eqn"/> explicitly:
+    <mdn>
+    <mrow> (2, -1, 3, 0) \amp = a_1 (1, 3, 2, 0) + a_2 (5, 1, 2, 4) + a_3 (-1, 0, 2, 1)     </mrow>
+    <mrow xml:id="last_eqn_in_lin_comb_ex"> \therefore (2, -1, 3, 0) \amp = (a_1 + 5a_2 -a_3, 3a_1 + a_2, 2a_1 + 2a_2 + 2a_3, 4a_2 + a_3) </mrow>
+    </mdn>
+    <xref ref="last_eqn_in_lin_comb_ex"/> is an equation between two vectors in <m>\mathbb{R}^4</m>. Two vectors in <m>\mathbb{R}^4</m> are equal if and only if their corresponding coefficients are equal. 
+     So, <xref ref="first_span_ex_eqn"/> is equivalent to the following system of simultaneous linear equations:
+      <mdn>
+        <mrow  xml:id="sim_lin_eqns_first_span_1ex">a_1 + 5a_2 -a_3 \amp = -2 </mrow>
+        <mrow>3a_1 + a_2 \amp = -1 </mrow>
+        <mrow> 2a_1 + 2a_2 + 2a_3 \amp = 3</mrow>
+        <mrow xml:id="sim_lin_eqns_first_span_4ex">4a_2 + a_3 \amp = 0 </mrow>
+      </mdn>
+    </p>
+    <p>In other words, our question becomes: do equations <xref first="sim_lin_eqns_first_span_1ex" last="sim_lin_eqns_first_span_4ex"/> have a solution?</p>
+
+    <p>This is the kind of problem you already know how to solve by hand, from first year. We can also use SageMath to do it for us. We simply tell it what our unknown variables are, and then ask it to solve the equation. Press <c>Evaluate (Sage)</c> to see the result.</p>
+    <sage>
+      <input>
+      var('a1, a2, a3')
+
+      solve([a1 + 5*a2 - a3 == 2, 
+            3*a1 + a2 == -1, 
+            2*a1 + 2*a2 + 2*a3 ==3,
+            4*a2 + a3 == 0], 
+            [a1, a2, a3])
+      </input>
+    </sage>
+    <p>
+    SageMath returns an empty list <c>[]</c>. In other words, there are no solutions to equations <xref first="sim_lin_eqns_first_span_1ex" last="sim_lin_eqns_first_span_4ex"/>. Therefore <m>\ve{v}</m> cannot be expressed as a linear combination of <m>\ve{v}_1, \ve{v}_2, \ve{v}_3</m>.</p>
+      </statement>
+  </example>
+
+<example xml:id="poly_example_lin_comb"><title>Checking if a polynomial is a linear combination of other polynomials</title>
+    <statement>
+      <p>
+        In <m>\Poly_2</m>, can <m>p=x^2 - 1</m> be expressed as a linear combination of
+        <me>
+        p_1 = 1+x^2, \, p_2 = x-3, \, p_3 = x^2+x+1, \, p_4 = x^2 + x - 1 \text{?}
+      </me>
+    </p>
+    <p>
+    To check this, we need to check if the equation
+    <men xml:id="second_span_ex_eqn">
+    p = a_1 p_1 + a_2 p_2 + a_3 p_3 + a_4 p_4,
+    </men>
+    which is an equation in the unknowns <m>a_1, a_2, a_3, a_4</m>, has any solutions. Let us write out <xref ref="second_span_ex_eqn"/> explicitly, grouping together powers of <m>x</m>:
+    <md>
+    <mrow> p \amp = a_1 p_1 + a_2 p_2 + a_3 p_3 + a_4 p_4     </mrow>
+    <mrow> \therefore x^2 - 1 \amp = 
+    a_1 (1+x^2) + a_2 (x-3) + a_3 (x^2 + x + 1) + a_4 (x^2 + x - 1) </mrow>
+    <mrow xml:id="last_eqn_pol_lin_comb"> \therefore -1 + x^2 \amp = (a_1 -3a_2 + a_3 - a_4) + (a_2 + a_3 + a_4) x + (a_1 + a_3 + a_4)x^2 
+  </mrow>
+    </md>
+    Now, two polynomials are equal if and only if all their coefficients are equal. So, <xref ref="second_span_ex_eqn"/> is equivalent to the following system of simultaneous linear equations:
+      <mdn>
+        <mrow  xml:id="sim_lin_eqns_second_span_1ex">a_1 - 3a_2 + a_3 - a_4 \amp = -1 </mrow>
+        <mrow> a_2 + a_3 + a_4 \amp = 0</mrow>
+        <mrow xml:id="sim_lin_eqns_second_span_4ex" > a_1 + a_3 + a_4 \amp = 1 </mrow>
+      </mdn>
+    </p>
+    <p>In other words, our question becomes: do equations <xref first="sim_lin_eqns_second_span_1ex" last="sim_lin_eqns_second_span_4ex"/> have a solution? We ask SageMath.</p>
+    <sage>
+      <input>
+      var('a1, a2, a3, a4')
+
+      solve([a1 - 3*a2 + a3 - a4 == -1, 
+            a2 + a3 + a4 == 0, 
+            a1 + a3 - a4 == 1], 
+            [a1, a2, a3, a4])  
+      </input>
+
+    </sage>
+    On my computer, Sage returns:
+    <sidebyside>
+    <p> <c> [[a1 == 2*r1 + 2/3, a2 == (2/3), a3 == -r1 + 1/3, a4 == r1]] </c> </p>
+    </sidebyside>
+   <p>Here, <c>r1</c> and <c>r2</c> are to be interpreted as free paramters. I'm going to call them  <m>s</m> and <m>t</m> instead, because that's what we usually call our free parameters! So, equations <xref first="sim_lin_eqns_second_span_1ex" last="sim_lin_eqns_second_span_4ex"/> have <em>infinitely</em> many solutions, parameterized by two free parameters <m>s</m> and <m>t</m>. In particular, there exists <em>at least one</em> solution. For instance, if we take <m>s=2</m> and <m>t = 1</m> (a totally arbitrary choice!), we get the following solution:</p>
+   <mdn>
+ <mrow> a_1 = \frac{8}{3}, \, a_2 = \frac{2}{3}, a_3 = -\frac{5}{3}, a_4 = 1 </mrow>
+ <mrow xml:id="soln_poly_span_prob"> \text{i.e. } p = \frac{8}{3} p_1 + \frac{2}{3} p_2 - \frac{5}{3} p_3 + p_4 </mrow>
+   </mdn>
+   <p>
+   You should expand out the right hand side of <xref ref="soln_poly_span_prob"/> by hand and check that it indeed is equal to <m>p</m>. </p>
+
+   <p> We conclude that <m>p</m> can indeed be expressed as a linear combination of <m>p_1</m>, <m>p_2</m>, <m>p_3</m> and <m>p_4</m>. </p>
+
+      </statement>
+  </example>
+
+
+  <example>
+    <statement>
+      <p>
+        Define the functions <m>\ve{f}, \ve{f}_1, \ve{f}_2 \in \Diff</m> by
+        <me>
+          \ve{f}(x) = \cos^3 x,  \ve{f}_1 (x) = \cos (x),  \ve{f}_2 (x) = \cos (3x)
+        </me>.
+      </p>
+
+      <p>
+        Then <m>\ve{f}</m> is a linear combination of <m>\ve{f}_1</m> and
+        <m>\ve{f}_2</m> because of the identity <m>\cos(3x) = \frac{1}{4} (3 \cos x  + \cos(3x))</m>.
+        See <xref ref="trig_poly_example">Example</xref>.
+        In other words,
+        <me>
+          \ve{f} = \frac{3}{4} \ve{f}_1 + \frac{1}{4} \ve{f}_2 
+        </me>.
+      </p>
+
+      <p>
+        This example shows that <m>\ve{f}</m> is also a trigonometric polynomial,
+        even though its original formula
+        <m>\ve{f}(x) = \cos(3x)</m> was not in the form <xref ref="formula_for_trig_poly" />.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        We say that a list of vectors
+        <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n \bclose </m> in a vector space <m>V</m> <term>spans</term>
+        <m>V</m> if every vector <m>\ve{v} \in V</m> is a linear combination of the vectors from <m>\basis{B}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        <m>\mathbb{R}^2</m> is spanned by
+        <me>
+          \ve{e}_1 := (1, \, 0), \, \, \ve{e}_2 := (0, 1)
+        </me>
+        because every vector <m>\ve{v} = (a_1, \, a_2)</m> can be written as the linear combination
+        <me>
+          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2
+        </me>.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="three_vectors_spanning_R2_example">
+    <title>Checking if a list of vectors spans the vector space</title>
+    <statement>
+    <p>
+      Is <m>\mathbb{R}^2</m> spanned by the following list of vectors?
+      <me>
+        \ve{f}_1 := (-1, 2), \, \ve{f}_2 := (1, 1), \, \ve{f}_3 := (2, -1) 
+      </me>
+    </p>
+    <p>
+    <figure xml:id="spanning_set_R2">
+    <caption>A list of vectors which spans <m>\mathbb{R}^2</m>.</caption>
+    <image width="70%">
+    <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
+      \draw[<->] (0, -2.5) -- (0, 2.5) node[right] {\(y\)};
+      \draw[very thick, red, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
+      \draw[very thick, red, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
+      \draw[very thick, red, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
+    </latex-image>
+    </image>
+    </figure>
+    </p>
+   </statement>
+   <solution>
+    <p>
+    To check this, we need check if every vector <m>\ve{v} \in V</m> can be written as a linear combination of <m>\ve{f}_1, \ve{f}_2</m> and <m> \ve{f}_3</m>.</p>
+
+    <p> So, let <m>\ve{v} = (v_1,v_2) </m> be a fixed, but arbitrary, vector in <m>\mathbb{R}^2</m>. We need to check if the following equation has a solution for <m>a_1, a_2, a_3</m>:
+    <men xml:id="eqn_for_R2_span">
+    \ve{v} = a_1 \ve{f}_1 + a_2 \ve{f}_2 + a_3 \ve{f}_3
+  </men>
+   Let us write this equation out explicitly:
+       <mdn>
+    <mrow> \ve{v} \amp = a_1 \ve{f}_1 + a_2 \ve{f}_2 + a_3 \ve{f}_3     </mrow>
+    <mrow> \therefore (v_1, v_2) \amp = 
+    a_1 (-1, 2) + a_2 (1, 1) + a_3 (2, -1) </mrow>
+    <mrow xml:id="last_eqn_span_example"> \therefore (v_1, v_2) \amp = (-a_1 + a_2 + 2a_3, 2a_1 + a_2 - a_3) 
+  </mrow>
+    </mdn>
+    <xref ref="last_eqn_span_example"/> is an equation between two vectors in <m>\mathbb{R}^2</m>. Two vectors in <m>\mathbb{R}^2</m> are equal if and only if their corresponding coefficients are equal. So, <xref ref="last_eqn_span_example"/> is equivalent to the following system of simultaneous linear equations:
+      <mdn>
+        <mrow xml:id="sim_lin_eqns_3ex"> -a_1 + a_2 + 2a_3 \amp = v_1 </mrow>
+        <mrow xml:id="sim_lin_eqns_3ex2"> 2a_1 + a_2 - a_3 \amp = v_2</mrow>
+      </mdn>
+    </p>
+    <p>In other words, the original question</p>
+    <assemblage>
+    <p> Is <m>\mathbb{R}^2</m> spanned by <m>\ve{f}_1, \ve{f}_2, \ve{f}_3 </m> ? </p>
+  </assemblage>
+   <p>is equivalent to the question</p>
+   <assemblage>
+    <p>Can we always solve <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/> for <m>a_1, a_2, a_3</m>, no matter what the fixed constants <m>\ve{v}_1, \ve{v}_2</m> are? </p>
+  </assemblage>
+  <p>You already know how to solve simultaneous linear equations such as <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/> by hand:
+    <mdn>
+        <mrow> -a_1 + a_2 + 2a_3 \amp = v_1 </mrow>
+        <mrow> 2a_1 + a_2 - a_3 \amp = v_2</mrow> 
+        <mrow> </mrow>
+        <mrow> \therefore -a_1 + a_2 + 2a_3 \amp = v_1 </mrow>
+        <mrow>  3a_2 + 3a_3 \amp = 2v_1 + v_2 \amp \amp R2 \rightarrow R2 + 2R1 
+      </mrow> 
+      <mrow> </mrow>
+      <mrow xml:id="span_ex_aa1"> \text{Let } a_3 \amp = t </mrow> 
+        <mrow> \therefore a_2 \amp = \frac{1}{3}(2v_1 + v_2) - t </mrow>
+        <mrow xml:id="span_ex_aa2"> \therefore a_1 \amp = -\frac{1}{3} (-v_1 + v_2) + t </mrow>
+    </mdn>
+  </p>
+  <p>
+    In other words, no matter what <m>v_1, v_2</m> are, there are always infinitely many solutions (they are parameterized a free parameter <m>t</m>) to <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/>, and hence to our original equation <xref ref="eqn_for_R2_span"/>. That is, we can express <em>any</em> <m>\ve{v} \in \mathbb{R}^2</m> as a linear combination of the vectors <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m>... and in fact there are <em>infinitely</em> many ways to do it, parameterized by a free parameter <m>t</m>! </p>
+
+    <p>
+    For instance, suppose we try to write <m>\ve{v} = (2,3)</m> as a linear combination of <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m>. If we take our general solution (<xref first="span_ex_aa1" last="span_ex_aa2"/>), and set <m>t=0</m>, then we get
+    <md>
+ <mrow> a_1 = \frac{1}{3}, \, a_2 = \frac{7}{3}, \, a_3 = 0 </mrow>
+ <mrow> \text{i.e. } \ve{v} = \frac{1}{3} \ve{f}_1 + \frac{7}{3} \ve{f}_2 </mrow>
+    </md>
+Or we could take, say, <m>t = 1</m>. Then our solution will be
+    <md>
+ <mrow> a_1 = \frac{4}{3}, \, a_2 = \frac{4}{3}, \, a_3 = 1 </mrow>
+ <mrow> \text{i.e. } \ve{v} = \frac{4}{3} \ve{f}_1 + \frac{4}{3} \ve{f}_2 + \ve{f}_3 </mrow>
+    </md>
+  </p>
+  <p>There are infinitely many solutions. But the important point is that <em>there is always a solution to <xref ref="eqn_for_R2_span"/> </em>, no matter what <m>\ve{v}</m> is. Therefore, the vectors <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m> indeed span <m>\mathbb{R}^2</m>.  </p>
+
+  <p>Finally, let us solve this problem using SageMath. Working by hand, we arrive at the simultanous linear equations <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/>, and then put it into a Sage cell:
+  <sage>
+    <input>
+      var('a1, a2, a3, v1, v2')
+
+      solve([-a1 + a2 + 2*a3 == v1,
+             2*a1 + a2 - a3  == v2],
+             [a1, a2, a3])
+    </input>
+  </sage>
+  Note that I needed to tell Sage that <c>v1</c> and <c>v2</c> are variables, and that I am asking it to solve for <c>a1</c>, <c>a2</c> and <c>a3</c>. On my computer, Sage outputs:
+  <sidebyside>
+    <p>
+  <c> [[a1 == r1 - 1/3*v1 + 1/3*v2, a2 == -r1 + 2/3*v1 + 1/3*v2, a3 == r1]] </c> </p>
+  </sidebyside>
+ Here, <c>r1</c> is to be interpreted as our free parameter <m>t</m>. So Sage is giving us the same solution as we found by hand, <xref first="span_ex_aa1" last="span_ex_aa2"/>.</p>
+</solution>>
+</example>
+
+  <example xml:id="Rn_spanning_set">
+    <statement>
+    <p>
+      <m>\mathbb{R}^n</m> is spanned by
+      <men xml:id="defn_of_e_i">
+        \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots, 0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
+      </men>
+      because every vector <m>\ve{v} = (a_1, \,a_2, \, \ldots, \, a_n)</m> can be written as the linear combination
+      <men xml:id="standard_basis_R_n">
+        \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+      </men>.
+    </p>
+
+    </statement>
+  </example>
+
+<exercise>
+      <statement>
+        <p>
+          Check equation <xref ref="standard_basis_R_n" />.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <me> 
+\ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = a_1(1, \ldots, 0) + \cdots a_n(0,\ldots,1) \\ = (a_1 , \ldots , 0 ) + \cdots + (0 ,\ldots, a_n) = (a_1, \ldots, a_n )
+        </me>
+        </p>
+      </solution>
+    </exercise>
+
+<p>
+  The next theorem provides a very convenient method for checking whether a given set <m>W</m> spans <m>V</m> if one already knows that <m>U</m> spans <m>V</m>.
+</p>
+
+<theorem xml:id ="spanning_check_thm">
+  <statement>
+    <p>
+    Let <m>V</m> be a vector space. Suppose <m> U = \{\ve u_1,\ldots,\ve u_m\} </m> spans <m>V</m>. Furthermore, suppose that <m> W = \{\ve w_1,\ldots,\ve w_n\}</m> has the property that for any <m> \ve u_i \in U</m>, <m>\ve u_i </m> is a linear combination of elements in <m> W</m>. That is, there exist scalars <m>a_{i,1},\ldots,a_{i,m}</m> such that
+    <me>
+\ve u_i = \sum_{k=1}^m  a_{i,1} \ve w_k.
+</me>
+Then <m>W</m> also spans <m>V</m>.
+</p>
+</statement>
+</theorem>
+<proof>
+  <p>
+Let <m> \ve v \in V </m> be arbitrary. Since <m> U </m> spans <m>V</m>, there exist constants <m>c_i</m> such that
+<me>
+\ve v= \sum_{i=1}^n c_i \ve u_i.
+</me>
+By assumption,
+    <me>
+\ve u_i = \sum_{k=1}^m  a_{i,1} \ve w_k.
+</me>
+Substituting the second equation into the first, we obtain
+<me>
+\ve v =  \sum_{i=1}^n c_i \sum_{k=1}^m  a_{i,1} \ve w_k.
+</me>
+Using the usual rules for addition and multiplication in a vector space, we find that <m> v </m> is a linear combination of the <m>w_i</m>'s. Since <m>v \in V </m> was arbitrary, we conclude that <m>W</m> must also span <m>V</m>.
+</p>
+  </proof>
+
+
+<exercises>
+  <exercise>
+    <statement>
+    <p>
+      Recall from <m>1^\text{st}</m> year that a function <m>f: \mathbb R \to \mathbb R </m> is <emp>even</emp> if <m> f(-x) = f(x) </m> and <emp> odd </emp> if  <m> f(-x) = -f(x) </m>. Show that every vector in the vector space <m>\Fun(\mathbb R)</m> is a linear combination of an even function and an odd function.
+    </p>
+  </statement>
+    <solution>
+    	<p>The solution is relatively straightforward. Define the following two functions:
+<me>
+f_{\text{even}} (x)= \frac{1}{2}\left(f(x) + f(-x) \right), \quad f_{\text{odd}} (x)= \frac{1}{2}\left( f(x) - f(-x) \right)
+</me>
+It is easy to see that, as the names suggest, <m>f_{\text{even}} </m> is an even function and <m>f_{\text{odd}} (x) </m> is an odd function. We simply sum <m> f_{\text{even}} </m> and <m>f_{\text{odd}}  </m>:
+<me>
+f_{\text{even}} (x) +  f_{\text{odd}} (x) = \frac{1}{2}\left(f(x) + f(-x) \right) + \frac{1}{2}\left( f(x) - f(-x) \right) = f(x).
+</me>
+</p>
+  </solution>
+  </exercise>
+
+
+<exercise>
+  <statement>
+    <p>
+      Suppose <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m>. Prove that <m> \ve v_1 - \ve v_2, \ve v_2 - \ve v_3, \ve v_3 - \ve v_4 , \ve v_4</m> also spans <m>V</m>.
+</p>
+</statement>
+<solution>
+<p>
+If we are given that <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m> then to show that any other collection of vectors in <m>V</m> spans <m>V</m> it suffices to show that each of <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> can be written has a linear combination of the new collection by <xref ref="spanning_check_thm"/>. <p>With this observation in hand, the exercise has an easy solution.</p>
+<md>
+<mrow> \ve v_1 \amp = (\ve v_1 - \ve v_2)  + (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
+<mrow> \ve v_2 \amp= (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
+<mrow> \ve v_3 \amp= (\ve v_3 - \ve v_4) + \ve v_4  </mrow>
+<mrow> \ve v_4 \amp= \ve v_4 </mrow>
+</md>
+</p>
+</solution>
+</exercise>
+
+ <exercise>
+    <statement>
+      <p>
+        Consider the following polynomials in <m>\Poly_2</m>:
+        <me>
+          \ve{r}_1 (x) := 3x^2 - 2, \, \ve{r}_2 (x) := x^2 + x, \, \ve{r}_3 (x) := x + 1, \, \ve{r}_4 (x) := x-1
+        </me>
+        <ol>
+          <li>
+            <p>
+              Can the polynomial <m>\ve{p}</m> with
+              <m>\ve{p}(x) = x^2 + 1</m> be written as a linear combination of <m>\ve{r}_1</m>,
+              <m>\ve{r}_2</m>,
+              <m>\ve{r}_3</m>, <m>\ve{r}_4</m>?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If so, in <em>how many ways</em> can this be done?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+<p>
+<ol>
+<li>
+We must set up the appropriate system of linear equations:
+<md>
+<mrow> \amp a\ve r_1(x) + b \ve r_2(x) + c \ve r_3(x) + d \ve r_4(x) \amp = \amp\ve p(x)</mrow>
+<mrow> \implies \amp a(3x^2 - 2) + b(x^2 + x) + c(x+1) + d(x-1) \amp  = \amp x^2 + 1 </mrow>
+</md>
+After grouping like powers of <m>x</m> we obtain
+<me>
+x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
+</me>
+We equate coefficients on both sides of the equation to obtain the following system of linear equations:
+<md>
+<mrow> 3a +  b +  0c +  0d  = 1,</mrow>
+<mrow>0a +  1b +  1c +  1d  = 0, </mrow>
+<mrow>-2a + 0b + 1c +  -1d  = 1 .</mrow>
+</md>
+Using your preferred method for solving a system of linear equations (such as Gauss reduction), we obtain a solution set of the form:
+<md>
+<mrow>\amp d \text{ is free},</mrow>
+<mrow>\amp  a = 2 + 2d, </mrow>
+<mrow>\amp  b = -5 - 6d, </mrow>
+<mrow>\amp  c = 5 + 5d. </mrow>
+</md>
+And so <m>\ve p (x)</m> is indeed a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m>.
+ </li>
+ <li>
+Since <m>d</m> is free in the above solution set, we can write <m>\ve p (x)</m> as a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m> in an uncountably infinite number of ways (one for each real number!).
+ </li>
+</ol>
+</p>
+    </solution>
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        Suppose that the vectors <m>\ve{e}_1</m>, <m>\ve{e}_2</m>,
+        <m>\ve{e}_3</m> and <m>\ve{e}_4</m> span a vector space <m>V</m>.
+        Show that the vectors <m>\ve{f}_1 := \ve{e}_2 - \ve{e}_1</m>,
+        <m>\ve{f}_2 := \ve{e}_3 - \ve{e}_2</m>,
+        <m>\ve{f}_3 := \ve{e}_4 - \ve{e}_3</m>,
+        <m>\ve{f}_4 := \ve{e}_4</m> also span <m>V</m>.
+      </p>
+    </statement>
+    <solution>
+    	<p>
+You could choose to show this directly or we could use a clever approach based on <m>\mathbf 2 </m> and <xref ref ="spanning_check_thm"/>. From <m>\mathbf 2  </m>, we know that <m> \ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4</m> must span <m> V </m>. But if these vectors span <m> V </m>, then non-zero multiples of the vectors also span <m>V</m>. Thus <m> \ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 </m> must span <m> V</m>.
+</p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="chebyshev_example">
+    <statement>
+      <p>
+        Show that the polynomials
+        <me>
+          \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
+        </me>
+        span <m>\Poly_3</m>.
+      </p>
+    </statement>
+    <solution>
+    	<p>
+    	Once again we base our strategy on <xref ref="spanning_check_thm"/>. Pick a spanning set for <m>\Poly_3</m>. We'll use <m>1, x , x^2 , x^3</m>, since it's the simplest. <m> 1, x</m> are certainly spanned by <m>\ve q_0x), \ve q_1, \ve q_2, \ve q_3</m> since <m>1 = \ve q_0(x)</m> and <m>x = \ve q_1(x)</m>. It can easily be seen that <me>
+x^2 = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) \\
+x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
+    </me>
+    completing the proof.
+    	</p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement> <p> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.</p>
+    </statement>
+  </exercise>
+
+
+  <exercise xml:id="exercise-span-omission">
+    <statement> <p> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that one of the vectors in the list, say <m>\ve{v}_r</m>, can be expressed as a linear combination of the preceding vectors:
+    <men xml:id="exercise-span-omission-1">
+   \ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}
+  </men>
+  Suppose that we remove <m>\ve{v}_r</m> from <m>\basis{S}</m>, to arrive at a new list
+  <me>
+   \basis{T} = \bopen \ve{v}_1, \ldots, \hat{\ve{v}_r}, \ldots, \ve{s}_n \bclose 
+</me>
+Prove that <m>\basis{T}</m> also spans <m>V</m>. </p>
+</statement>
+<solution><p> We must show that every vector <m>\ve{v} \in V</m> can be written as a linear combination of the vectors from <m>\basis{T}</m>. So let <m>\ve{v} \in V</m>. Since <m>\basis{S}</m> spans <m>V</m>, we know we can write <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{S}</m>:
+<men xml:id="exercise-span-omission-2">
+  \ve{v} = b_1 \ve{v}_1 + \cdots + b_r \ve{v}_r + \cdots + b_{n} \ve{v}_n
+</men>
+Substituting <xref ref="exercise-span-omission-1"/> into <xref ref="exercise-span-omission-2"/> gives
+<mdn> 
+<mrow> \ve{v} \amp = b_1 \ve{v}_1 + \cdots + b_r (a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}) + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
+<mrow xml:id="exercise-span-omission-3"> \amp = (b_1 + b_r a_1) \ve{v}_1 + \cdots + (b_r + b_r a_{r-1}) \ve{v}_{r-1} + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
+</mdn>
+Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{T}</m>. Hence <m>\basis{T}</m> spans V. </p>
+</solution>
+
+  </exercise>
+
+
+
+
+</exercises>
+
+<solutions divisional="solution answer" />
+
+
+</section>
+

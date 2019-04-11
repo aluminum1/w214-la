@@ -1,0 +1,967 @@
+<section xml:id="ACh1Sec6Subspaces">
+  <title>Deelruimtes</title>
+  <introduction>
+    <p>In hierdie deel san ons die konsep van 'n <em>deelruimte</em> bekend stel. Dié konsep sal ons toelaat om vinnig nuwe voorbeelde van
+    vektorruimtes te vind.
+  </p>
+  </introduction>
+
+<subsection>
+  <title>Definition of a subspace</title>
+
+  <definition xml:id="defn-subspace">
+    <statement>
+      <p>
+        'n deelversameling <m>U \subseteq V</m> van 'n vektor-ruimte
+        <m>V</m> is 'n <term>deelruimte van <m>V</m></term> as:
+
+        <ul>
+          <li>
+            <p>
+              Vir alle <m>\ve{u}, \ve{u}' \in U</m>,
+              <m>\ve{u}+\ve{u}' \in U</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ve{0} \in U</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Vir alle skalare <m>k</m> en alle vektore <m>\ve{u} \in U</m>,
+              <m>k \cdot
+              \ve{u} \in U</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="subspace_lem">
+    <statement>
+      <p>
+        As <m>U</m> 'n deelruimte van 'n vektorruimte <m>V</m> is,
+        dan is <m>U</m>
+        ook 'n vektorruimte, toegerus met dieselfde sommeringsbewerking,
+        nul-vektor en skalaarvermenigvuldigingsbewerking as <m>V</m>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      Aangesien <m>U</m> 'n deelruimte is,
+      weet ons dat dit sin maak om
+      dit <q>toe te rus met dieselfde sommeringsbewerking, nul-vektor en
+      skalaarvermenigvuldigingsbewerking as <m>V</m></q>.
+      (As <m>U</m> <em>nie</em> 'n
+      deelruimte was nie, dan sou ons byvoorbeeld kon vind dat
+      <m>\ve{u},
+      \ve{u}' \in U</m> maar <m>\ve{u}+\ve{u}' \notin U</m>, So die
+      sommeringsbewerking sou nie sin maak nie.)
+    </p>
+
+    <p>
+      So ons moet net re&#xeb;ls R1 tot R8 nagaan.
+      Aangesien die re&#xeb;ls
+      geld vir alle vektore <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>, Sal hulle beslis
+      geld vir alle vektore <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m>.
+      So re&#xeb;ls R1
+      tot R8 word bevredig.
+    </p>
+  </proof>
+</subsection>
+
+<subsection>
+  <title>Voorbeelde van deelruimtes</title>
+
+  <example>
+    <title>Lyn in <m>\mathbb{R}^2</m></title>
+    <statement>
+      <p>
+        'n Lyn <m>L</m> deur die oorsprong in
+        <m>\mathbb{R}^2</m> is 'n deelruimte van <m>\mathbb{R}^2</m>:
+      </p>
+    <sidebyside>
+      <figure xml:id="line-through-origin-R2-example">
+      <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
+      <image width="50%">
+      <latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+  \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+  \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+      </latex-image>
+      </image>
+      </figure>
+  </sidebyside>
+      
+
+      <p>
+        Onthou dat lyn <m>L</m> gespesifiseer kan word deur 'n homogene line&#xea;re
+        vergelyking van die form:
+        <men xml:id="eqn_of_L">
+          L = \{ (x,y) \in \mathbb{R}^2 : ax + by = 0 \}
+        </men>
+        vir konstantes <m>a</m> en <m>b</m>.
+        So, as <m>\ve{v} = (x, \, y)</m> en
+        <m>\ve{v}' =
+        (x', \, y')</m> op <m>L</m> l&#xea;, dan l&#xea;
+        hulle som <m>\ve{v} + \ve{v}' = (x
+        + x', \, y + y')</m> ook op <m>L</m>,
+        want hul komponente bevredig die
+        defini&#xeb;rende vergelyking <xref ref="eqn_of_L" />:
+        <md>
+          <mrow>\amp a(x + x') + b (y + y')</mrow>
+          <mrow>\amp  = (ax + by) + (ax' + by')</mrow>
+          <mrow>\amp = 0 + 0 \amp \amp  \mbox{(want \(ax + by = 0\) en \(ax' + by' = 0\))}</mrow>
+          <mrow>\amp = 0</mrow>
+        </md>.
+      </p>
+
+      <p>
+        Dit maak ook meetkundig sin: As jy na beeld <xref ref="line-through-origin-R2-example" /> kyk, sal
+        jy sien dat die som van twee vektore <m>\ve{v}, \ve{v}'</m> op <m>L</m> met die
+        kop-op-stert-metode 'n verdere vektor op <m>L</m> tot gevolg sal h&#xea;.
+      </p>
+    </statement>
+  </example>
+
+
+  <exercise>
+    <statement>
+      <p>
+        Voltooi die bewys dat <m>L</m> 'n deelruimte van
+        <m>\mathbb{R}^2</m> is deur na te gaan dat die nul-vektor op lyn <m>L</m> is
+        en dat die vermenigvuldiging van 'n vektor in <m>L</m> met 'n skalaar 'n
+        vektor op <m>L</m> lewer.
+      </p>
+    </statement>
+  </exercise>
+
+  <example xml:id="lines_planes_R3">
+    <title>Lyne en vlakke in <m>\mathbb{R}^3</m></title>
+    <statement>      <p>
+        'n Lyn <m>L</m> en 'n vlak <m>P</m>
+        deur die oorsprong in <m>\mathbb{R}^3</m> is ook 'n deelruimte van
+        <m>\mathbb{R}^3</m>:
+        <sidebyside width="40%">
+        <figure xml:id="line-in-R3-example-subspace">
+          <caption>A line through the origin in <m>\mathbb{R}^3</m>.</caption>
+          <image>
+          <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+            \draw[->] (0, 0) -- (2,0) node[right] {$y$};
+            \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+            \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+            \draw[thick, red] (-2, 1) node[above] {$L$} -- (2, -1);
+          \end{tikzpicture}
+          ]]>
+          </latex-image>
+          </image>
+        </figure>
+
+        <figure xml:id="plane-in-R3-example-subspace">
+          <caption>A plane through the origin in <m>\mathbb{R}^3</m>.</caption>
+          <image>
+          <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+            \draw[->] (0, 0) -- (2,0) node[right] {$y$};
+            \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+            \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+            \draw[thick, red] (-0.1, -1) -- (-1, 0.4);
+            \draw[thick, red] (-1, 0.4) -- (0.3, 1.5);
+            \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
+            \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);
+          \end{tikzpicture}
+          ]]>
+          </latex-image>
+          </image>
+        </figure>
+        </sidebyside>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Nul-vektorruimte</title>
+    <statement>
+      <p>
+        As <m>V</m> 'n vektorruimte is, dan is die
+        versameling <m>\{\ve{0}\} \subseteq V</m> wat slegs die nul-vektor <m>\ve{0}</m>
+        'n deelruimte van <m>V</m>.
+      </p>
+    </statement>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>
+        Gaan na dat dit waar is.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <title>Nie 'n vektorruimte nie: 'n Lyn nie deur die oorsprong nie</title>
+    <statement>
+      <p>
+        Wees versigtig <mdash /> nie <em>elke</em>
+        lyn <m>L \subset \mathbb{R}^2</m> vorm 'n
+        deelruimte van <m>\mathbb{R}^2</m> nie.
+        As <m>L</m> nie deur die oorsprong loop
+        nie, dan vind ons dat <m>\ve{0} \notin L</m>,
+        so <m>L</m> is nie 'n deelruimte
+        nie.
+      </p>
+
+      <p>
+        Nog 'n rede dat <m>L</m> nie 'n deelruimte is nie is dat dit nie geslote
+        onder sommering is nie: As ons twee nie-nul vektore <m>\ve{v}</m> en
+        <m>\ve{v}'</m> op <m>L</m> bymekaar tel,
+        kry ons 'n vektor <m>\ve{v} + \ve{v}'</m> wat
+        nie op <m>L</m> l&#xea; nie:
+        <sidebyside>
+          <figure xml:id="line-not-through-origin-non-example">
+            <caption>A line which does not pass through the origin is not closed under addition.</caption>
+            <image>
+            <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}
+                \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+                \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+                \draw[thick, red] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
+                \draw[very thick, blue, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
+                \draw[very thick, blue, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
+                \draw[very thick, blue, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+            </image>
+        </figure>
+      </sidebyside>
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="hyperplanes_example_subspace">
+    <title>Hyperplanes orthogonal to a fixed vector</title>
+    <statement><p>This example generalizes <xref ref="lines_planes_R3"/> to higher dimensions. Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. The <em>hyperplane orthogonal to <m>\ve{v}</m></em> is the set <m>W</m> of all vectors orthogonal to <m>\ve{v}</m>, that is,
+    <men>
+    W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+    </men>
+    You will prove in Exercise <xref ref="prove_hyperplane_subspace"/> that <m>W</m> is a subspace of <m>\mathbb{R}^n</m>.  </p>
+
+    <p>For example, consider the vector <m>\ve{v} = (1,2,3) \in \mathbb{R}^3</m>. Then the hyperplane orthogonal to <m>\ve{v}</m> is
+    <men>
+      W = \{ \ve{w} \in \mathbb{R}^3 : \ve{v} \dotp \ve{w} = 0 \}.
+  </men>
+    If we write <m>\ve{w} = (w_1, w_2, w_3)</m> then <m>\ve{v} \dotp \ve{w} = 0</m> translates into the equation
+    <men xml:id="explicit_eqn_hyperplane1">
+      w_1 + 2 w_2 + 3w_3 = 0.
+    </men>
+    So, <m>W</m> can be regarded as the set of vectors in <m>\mathbb{R}^3</m> whose components satisfy <xref ref="explicit_eqn_hyperplane1"/>.</p> 
+</statement>
+</example>
+
+<!-- TO DO: translate hyperplane example below and also polynomials in many variables -->
+
+    <exercise xml:id="prove_hyperplane_subspace">
+      <statement>
+    Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. Show that 
+        <me>
+    W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+    </me>
+    is a subspace of <m>\mathbb{R}^n</m>.
+    </statement>
+    <solution>
+    <paragraphs>
+      <title>Closed under addition.</title>
+      <p> Suppose <m>\ve{w}, \ve{w}' \in W</m>. </p>
+      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m> and <m>\ve{v} \dotp \ve{w}' = 0 </m>.  </p>
+      <p> We must show that <m>\ve{w} + \ve{w}' \in W</m>. </p>
+      <p> That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>. </p>
+      <p> Indeed, 
+        <md>
+      <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
+      <mrow> \amp = 0 + 0 </mrow>
+      <mrow> \amp = 0. </mrow>
+      </md>
+      </p>
+    </paragraphs>
+
+    <paragraphs>
+      <title>Contains the zero vector.</title>
+      <p> Since <m>\ve{v} \dotp \ve{0} = 0</m>, we conclude that <m>\ve{0} \in W</m>.
+      </p>
+    </paragraphs>
+
+    <paragraphs>
+      <title>Closed under scalar multiplication.</title>
+      <p> Suppose <m>\ve{w} \in W</m> and <m>k</m> is a scalar. </p>
+      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m>.  </p>
+      <p> We must show that <m>k \smul \ve{w}  \in W</m>. </p>
+      <p> That is, we must show that <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>. </p>
+      <p> Indeed, 
+        <md>
+      <mrow> \ve{v} \dotp (k \smul \ve{w}) \amp = k \smul (\ve{v} \dotp \ve{w}) </mrow>
+      <mrow> \amp = (k)(0) </mrow>
+      <mrow> \amp = 0. </mrow>
+      </md>
+      </p>
+    </paragraphs>
+  </solution>
+  
+  </exercise>
+
+
+  <example>
+    <title>Kontinue funksies as 'n deelruimte</title>
+    <statement>
+      <p>
+        Die versameling
+        <me>
+          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} 
+          \mbox{ kontinu}  \}
+        </me>
+        van alle kontinue funksies op die interval <m>I</m> is 'n deelruimte van die
+        versameling <m>\Fun(I)</m> van <em>alle</em> funksies op <m>I</m>.
+        Kom ons bevestig
+        dat dit die definisie bevredig.
+        Jy weet reeds van vorige kursusse dat:
+
+        <ul>
+          <li>
+            <p>
+              As <m>\ve{f}</m> en <m>\ve{g}</m> kontinue funksies op <m>I</m> is, dan is
+              <m>\ve{f} + \ve{g}</m> ook 'n kontinue funksie.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Die nul-funksie <m>\ve{0}</m> gedefinieer as <m>\ve{0}(x) = 0</m> vir
+              alle <m>x \in I</m> is 'n kontinue funksie.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              As <m>\ve{f}</m> 'n kontinue funksie is en <m>k</m> 'n skalaar is, dan
+              is <m>k \cdot \ve{f}</m> ook kontinu.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        Daarom, deur <xref ref="subspace_lem">Lemma</xref>,
+        is <m>\Cont(I)</m> 'n vektorruimte in
+        eie reg.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Differensieerbare funksies as 'n deelruimte</title>
+    <statement>
+      <p>
+        So ook is die
+        versameling
+        <me>
+          \Diff(I) := \{ \ve{f}: (0,1) \rightarrow \mathbb{R}, \, \ve{f}
+          \mbox{differensieerbaar}  \}
+        </me>
+        van differensieerbare fuksies op die oop interval <m>I</m> 'n deelruimte van
+        <m>\Fun (I)</m>.
+      </p>
+    </statement>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>
+        Bevestig dit.
+        Ook, is <m>\Diff( I)</m> 'n deelruimte van <m>\Cont(I)</m>?
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <title>Vektorruimtes van polinome</title>
+    <statement>
+      <p>
+        'n <em>Polinoom</em> is 'n funksie <m>\ve{p} : \mathbb{R}
+        \rightarrow \mathbb{R}</m> van die vorm
+        <men xml:id="formula_poly">
+          \ve{p}(x) = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0
+        </men>.
+        vir onveranderlike re&#xeb;le ko&#xeb;ffisi&#xeb;nte <m>a_0, \ldots, a_n</m>.
+        Twee polinome <m>\ve{p}</m> en <m>\ve{q}</m> is
+        <em>gelyk</em> as hulle <em>as
+        funksies</em> gelyk is,
+        m.a.w. as <m>\ve{p}(x) = \ve{q} (x)</m> vir alle <m>x \in
+        \mathbb{R}</m>.
+        Die <em>graad</em> van 'n polinoom is die hoogste mag van
+        <m>x</m> wat in die formule voorkom.
+      </p>
+
+      <p>
+        Byvoorbeeld,
+        <m>2x^3 - x + 7</m> is 'n polinoom van graad 3, terwyl
+        <m>x^5 -
+        2</m> 'n polinoom van graad 5 is.
+      </p>
+
+      <p>
+        Die versameling van <em>alle</em>
+        polinome word as <m>\Poly</m>
+        geskryf en die versameling van alle polinome van 'n graad kleiner of
+        gelyk aan <m>n</m> word as <m>\Poly_n</m> geskryf.
+      </p>
+    </statement>
+  </example>
+
+ 
+
+  <exercise>
+    <statement>
+      <p>
+        Gaan na dat <m>\Poly</m> en <m>\Poly_n</m> wel deelruimtes van <m>\Cont
+        (\mathbb{R})</m> is.
+      </p>
+    </statement>
+  </exercise>
+
+    <example>
+    <title>Polynomials in many variables</title>
+    <statement>
+    <p>
+      A <em>monomial</em> in two variables <m>x</m> and <m>y</m> is an expression of the form <m>x^m y^n</m> for some nonnegative integers <m>m,n</m>. The <em>total degree</em> of the monomial is <m>m+n</m>.For example,
+      <me>
+             x^3 y^2, xy^7, \quad \mbox{and } x^3
+    </me>
+    are monomials in the variables <m>x</m> and <m>y</m> of total degree
+    <me>
+    5, 8, \quad \mbox{and } 3
+  </me>
+  respectively. A <em>polynomial in two variables</em> is a linear combination of monomials. The <em>degree</em> of the polynomial is the highest total degree of the monomials occuring in the linear combination. For instance, 
+      <men xml:id="two_var_poly_ex">
+             p = 5x^3 y^2 - 3xy^7, \quad q = xy^2 -x^3 + 3y^2
+    </men>
+  are polynomials in two variables with total degree <m>8</m> and <m>3</m> respectively.</p>
+
+   <p>   We write <m>\Poly^2</m> for the set of <em>all</em> polynomials in two variables, and <m>\Poly^2_n</m> for the set of all two-variable polynomials of total degree less than or equal to <m>n</m>. For instance, consier the polynomial 
+   <me>
+   p = 5x^3 y^2 - 3xy^7
+   </me>
+   The total degree of <m>p</m> is 8. So:
+   <ul>
+    <li> <m>p \in \Poly^2</m>, </li>
+    <li> <m>p \in \Poly^2_8</m> </li>
+    <li> <m>p \in \Poly^2_{12}</m> </li>
+    <li> <m>p \ni \Poly^2_7</m> </li>
+  </ul>
+    </p>
+  <p> We can regard a polynomial <m>p</m> in two variables as a special kind of function
+    <me>
+   p : \mathbb{R}^2 \rightarrow \mathbb{R}.
+  </me>
+In this way, we can regard <m>\Poly_2</m> (and similarly <m>\Poly^2_n</m>) as a subset of the vector space <m>\Fun(\mathbb{R}^2)</m> of <em>all</em> functions on <m>\mathbb{R}^2</m>. Indeed, they are <em>subspaces</em>, as the reader will check. </p>
+
+<p>Two polynomials <m>p</m> and <m>q</m> in variables <m>x</m> and <m>y</m> are defined to be <em>equal</em> if and only if all their corresponding coefficients are equal. This is equivalent to the statement that <m>p(x,y)=q(x,y)</m> for all <m>(x,y) \in \mathbb{R}^2</m>. </p>
+
+<p>In the same way, we can talk about 3-variable polynomials, and so on, eg.
+ <me>
+   r = 5x^3y^2z + 3xy - 4xz^3
+</me>
+is a polynomial of total degree <m>6</m> in the variables <m>x,y,z</m>. We can regard a polynomial in <m>k</m> variables as a special kind of function
+ <me>
+   r : \mathbb{R}^k \rightarrow \mathbb{R}.
+</me>
+We write <m>\Poly^k</m> for the vector space of all <m>k</m>-variable polynomials. We can regard <m>\Poly^k</m> as a subspace of the vector space <m>\Fun(\mathbb{R}^k)</m> of <em>all</em> functions on <m>\mathbb{R}^k</m>. Similary, we write <m>\Poly^k_n</m> for the vector space of all <m>k</m>-variable polynomials of total degree less than or equal to <m>n</m>, and we regard it too as a subspace of <m>\Fun(\mathbb{R}^n)</m>. </p> 
+    </statement>
+  </example>
+
+  <assemblage>
+    <p>When we say simply '<m>p</m> is a polynomial' we will mean that <m>p</m> is a polynomial in a single variable, i.e. <m>p \in \Poly</m>. Note that <m>\Poly = \Poly^1</m> and that <m>\Poly_n = \Poly^1_n</m>.</p>
+  </assemblage>
+
+
+
+  <example xml:id="trig_poly_example">
+    <title>Trigonometriese polinome</title>
+    <statement>
+      <p>
+        'n
+        <em>Trigonometriese polinoom</em>
+        is 'n funksie <m>\ve{T} : \mathbb{R}
+        \rightarrow \mathbb{R}</m> van die vorm
+        <men xml:id="formula_for_trig_poly">
+          \ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx).
+        </men>
+      </p>
+
+      <p>
+        Die <em>graad</em> van 'n trigonometriese polinoom is die grootste
+        veelvoud van <m>x</m> wat binne een van die sinusse of kosinusse in die
+        formule voorkom.
+        Byvoorbeeld,
+        <me>
+          3 - \cos(x) + 6 \sin(3x)
+        </me>
+        is 'n trigonometriese polinoom van graad 3.
+        Ons skryf die versameling
+        van <em>alle</em> trigonometriese polinome as <m>\Trig</m> en die versameling
+        van alle trigonometriese polinome van graad kleiner of gelyk aan <m>n</m> as
+        <m>\Trig_n</m>.
+      </p>
+    </statement>
+  </example>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat <m>\Trig</m> en <m>\Trig_n</m> deelruimtes van <m>\Cont (\mathbb{R})</m>
+        is.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="trig_ex_early">
+    <statement>
+      <p>
+        Oorweeg die funksie <m>\ve{f} (x) = \sin^3(x)</m>.
+        Wys dat
+        <m>\ve{f} \in \Trig_3</m> deur dit in die vorm
+        <xref ref="formula_for_trig_poly" /> te skryf.
+        Wenk: gebruik die
+        identiteite
+        <md>
+          <mrow>\sin(A) \sin(B) \amp = \frac{1}{2}(\cos(A-B) - \cos(A+B))</mrow>
+          <mrow>\sin(A) \cos(B) \amp = \frac{1}{2}(\sin(A-B) + \sin(A+B))</mrow>
+          <mrow>\cos(A)\cos(B) \amp = \frac{1}{2}(\cos(A-B) + \cos(A+B))</mrow>
+        </md>
+        wat maklik volg uit die sommeringsformules
+        <md>
+          <mrow>\sin(A \pm B) \amp = \sin A \cos B \pm \cos A \sin B</mrow>
+          <mrow>\cos(A \pm B) \amp = \cos A \cos B \mp \sin A \sin B</mrow>
+        </md>.
+      </p>
+    </statement>
+  </exercise>
+
+</subsection>
+
+<!-- TO DO: Translate into Afrikaans, beginning here -->
+
+  <subsection xml:id="soln-diff-eqns-sec">
+  <title>Solutions to homogenous linear differential equations</title>
+
+    <p> A homogenous <m>n</m>th order linear ordinary differential equation on an interval <m>I</m> is a differential equation of the form
+    <men xml:id="general_lin_diff_eqn">
+        a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I
+    </men> 
+    where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn"/>.</p>
+
+
+    <example xml:id="first_example_2nd_order_ode">
+      <title>An example of a <m>2</m>nd order homogenous linear differential equation</title>
+      <statement> <p> For instance,
+      <men xml:id="first_example_2nd_order_ode_eqn">
+        x^2 y^{''} -3 x y' + 5 y = 0, \quad x \in (0, \infty)
+      </men>
+      is a homogenous 2nd order linear differential equation on the interval <m>(0, \infty)</m>, and
+      <men xml:id="a_soln_to_my_ode">
+        y_1(x) = x^2 \sin (\log x)
+      </men>
+      is a solution to <xref ref="first_example_2nd_order_ode_eqn"/>. Similarly, 
+      <men xml:id="a_2nd_soln_to_my_ode">
+        y_2(x) = x^2 \cos (\log x)
+      </men>
+      is also a solution to <xref ref="first_example_2nd_order_ode_eqn"/>.
+      </p>
+      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation. 
+      </p>
+      <sage>
+      
+      <input>
+        def solves_de(y):
+         return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
+
+        y1 = x^2*sin(log(x))
+
+        solves_de(y1)
+      </input>
+      </sage>
+
+      <assemblage>
+         <p>
+         Edit the code above to check whether <m>y_2</m> is a solution of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.</p>
+      </assemblage>
+
+      <p>We can also plot the graphs of <m>y_1</m> and <m>y_2</m>. Again, click on <c>Evaluate (Sage)</c>. </p>
+      <sage>
+      <input>
+        y1 = x^2*sin(log(x))
+        y2 = x^2*cos(log(x))
+
+        plot([y1, y2], (x, 0, 1), legend_label=['y1', 'y2'])
+      </input>
+      </sage>
+      <assemblage>
+        <p>Play with the code above, and plot some different functions.
+        </p>
+      </assemblage>
+
+      </statement>
+
+    </example>
+
+    <exercise>
+      <statement>
+        <p>
+          Check by hand that <xref ref="a_soln_to_my_ode"/> and <xref ref="a_2nd_soln_to_my_ode"/> are indeed  solutions of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.
+        </p>
+      </statement>
+    </exercise>
+
+    <p> Suppose we are given an <m>n</m>th order homogenous linear differential equation of the form <xref ref="general_lin_diff_eqn"/> on some interval <m>I \subseteq \mathbb{R}</m>. Write <m>V</m> for the set of <em>all</em> solutions to the differential equation. That is,
+    <men>
+     V := \{ y : a_n(x) y^{(n)}(x) + \cdots + a_1(x) y'(x) + a_0(x) y(x) = 0 \}
+    </men>
+    </p>
+    <p> We can regard <m>V</m> as a subset of the set of <em>all</em> functions on the interval <m>I</m>:
+    <me>
+      V \subseteq \Fun(I)
+    </me>
+    </p>
+
+    <exercise>
+    <statement>
+      <p>
+     Show that <m>V</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun(I)</m>.
+      </p>
+     </statement> 
+    </exercise>
+
+    <p>So, by <xref ref="subspace_lem"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
+
+    <example xml:id="first_example_2nd_order_ode_cont">
+      <title>Continuation of <xref ref="first_example_2nd_order_ode"/></title>
+      <statement>
+        <p> Consider the differential equation from <xref ref="first_example_2nd_order_ode"/>. We saw that
+        <me>
+        y_1 = x^2 \sin (\log x), \quad y_2 = x^2 \cos (\log x)
+        </me>
+      are solutions. So, any linear combination of <m>y_1</m> and <m>y_2</m> is <em>also</em> a solution. For instance,
+      <me>
+       y = 2y_1 + 5 y_2
+     </me>
+     is also a solution. Let us check this in SageMath. </p>
+
+    <sage>
+      <input>
+        def solves_de(y):
+          return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
+
+        y1 = x^2*sin(log(x))
+        y2 = x^2*sin(cos(x))
+
+        solves_de(2*y1 + 5*y2)
+      </input>
+    </sage>
+              
+      </statement>
+    </example>
+
+        <example xml:id="non_example_nonlinear_ode">
+        <title>A non-example: Solutions to a nonlinear ODE</title>
+        <statement>
+          <p>
+            We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
+            <men xml:id="explicit_nonlinear_ode">
+            y^\prime = y^2.
+            </men>
+            The general solution is given by
+            <me>
+            y_c = \frac{1}{c - x}
+            </me> where <m>c</m> is a constant. For instance,
+            <me>
+              y_1 = \frac{1}{1-x}, \quad y_2 =\frac{1}{2-x}
+            </me>
+            are solutions.
+          </p>
+          <p>
+            Use the SageMath script below to check whether the linear combination <m>y_1 + y_2</m> is also a solution. 
+            </p>
+          <sage>
+          <input>
+            y = function('y')(x)
+
+            def solves_de(f):
+             return bool(diff(f,x) - f^2 == 0)
+
+            y1 = 1/(1-x)
+            y2 = 1/(2-x)
+
+            solves_de(y1+y2)
+        </input>
+        </sage>
+        <p>
+        The answer is <c>False!</c> So linear combinations of solutions to the nonlinear differential equation <xref ref="explicit_nonlinear_ode"/> are no longer solutions, in general.
+          </p>
+        </statement>
+    </example>
+
+
+    <example> <title>Finding the general solution to a differential equation in SageMath</title>
+      <statement>
+      <p>
+      Let us use SageMath to find the general solution of the following ordinary differential equation
+      <men xml:id="explicit_diff_eq">
+    y^{\prime \prime} + 2y^\prime + y = 0.
+      </men>
+      We can do this as follows. Note that we need to be a bit more careful now, first defining our variable <m>x</m> and then declaring that <m>y</m> is a function of <m>x</m>.</p>
+      <sage>
+        <input>
+        var('x')
+        y = function('y')(x)
+
+        diff_eqn = diff(y,x,2) +2*diff(y,x,1) + 5*y == 0
+          desolve(diff_eqn,y)
+
+        desolve(diff_eqn, y)
+        </input>
+      </sage>
+    <p>SageMath reports that the general solution is given in terms of two unspecified constants <c>_K1</c> and <c>_K2</c> as <c>(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</c>.
+    </p>
+    <p>
+    If we set <c>_K1</c> equal to 1 and <c>_K2</c> equal to 0 in the general solution, we will get a particular solution <m>y_1</m> of the differential equation. 
+  </p>
+    <sage>
+        <input>
+        var('x, _K1, _K2')
+        y = function('y')(x)
+
+        diff_eqn = diff(y,x,2) +2*diff(y,x,1) + 5*y == 0
+
+        my_soln = desolve(diff_eqn,y)
+
+        y1 = my_soln.substitute(_K1==1, _K2==0)
+
+        y1
+        </input>
+      </sage>
+    <p>SageMath is telling us that <m>y_1 = e^{-x} \sin(2x)</m> is a particular solution. </p>
+    <assemblage>
+      <p>
+    Edit the code to set <c>_K2</c> equal to 0 and <c>_K1</c> equal to 1 in the general solution to get a different particular solution <m>y_2</m>. What is <m>y_2</m>? </p>
+  </assemblage>
+
+    </statement>
+    </example>
+
+
+</subsection>
+
+<!-- Translation job ends here. -->
+
+ <exercises>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat die versameling
+        <me>
+          V := \{ (a, -a, b, -b) : a, b \in \mathbb{R} \}
+        </me>
+      </p>
+
+      <p>
+        'n deelruimte van <m>\mathbb{R}^4</m> is.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat die versameling
+        <me>
+          V := \{ \mbox{polinome van die vorm }  \ve{p}(x) = ax^3 + bx^2 - cx
+          + a, \, a,b,c \in \mathbb{R}\}
+        </me>
+      </p>
+
+      <p>
+        'n deelruimte van <m>\Poly_3</m> is.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>b \in \mathbb{R}</m>.
+        Bewys dat
+        <me>
+          V := \{ (x_1, \, x_2, \, x_3) \in \mathbb{R}^3 : 2x_1 - 3x_2 + 5x_3
+          = b \}
+        </me>
+      </p>
+
+      <p>
+        'n deelruimte van <m>\mathbb{R}^3</m> is as en slegs as <m>b=0</m>.
+        (Onthou dat
+        as en slegs as beteken dat die vorentoe-
+        <em>en</em> die terug-implikasie
+        bewys moet word.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Beskou die versameling
+        <me>
+          V := \{ \mathbf{f} \in \Diff((-1, 1)) : f'(0) = 2 \}
+        </me>.
+      </p>
+
+      <p>
+        Is <m>V</m> 'n deelruimte van <m>\Diff((-1,1))</m>?
+        As jy dink dat dit is,
+        <em>bewys</em> dat dit so is.
+        As jy dink dit is nie, <em>bewys</em> dat dit
+        nie is nie!
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Beskou die versameling
+        <me>
+          V := \{ (x_1, \, x_2, \, x_3, \, \ldots) \in \mathbb{R}^\infty :
+          \lim_{n \rightarrow \infty} x_n = 0 \}
+        </me>.
+      </p>
+
+      <p>
+        Is <m>V</m> 'n deelruimte van <m>\mathbb{R}^\infty</m>?
+        As jy dink dit is wel,
+        <em>bewys</em> dat dit so is.
+        As jy dink dit is nie, <em>bewys</em> dat dit
+        nie is nie!
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Is <m>\mathbb{R}^+ := \{ \ve{x} \in \mathbb{R} : \ve{x} \geq
+        0 \}</m> 'n deelruimte van <m>\mathbb{R}</m>?
+        As jy dink dit is wel,
+        <em>bewys</em> dat dit so is.
+        As jy dink dit is nie, <em>bewys</em> dat dit
+        nie is nie!
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Gee 'n voorbeeld van 'n nie-le&#xeb;
+        deelversameling <m>U</m>
+        van <m>\mathbb{R}^2</m> wat geslote is onder sommering en die vind van
+        sommeringsinverses (i.e. as <m>\ve{u}</m> in <m>U</m> is,
+        dan is <m>-\ve{u}</m> in
+        <m>V</m>), maar ni&#xe9; 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Gee 'n voorbeeld van 'n nie-le&#xeb;
+        deelversameling <m>V</m>
+        van <m>\mathbb{R}^2</m> wat geslote onder skalaarvermenigvuldiging is, maar
+        ni&#xe9; 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
+      </p>
+    </statement>
+  </exercise>
+
+
+<!-- TO DO: Translate into Afrikaans, beginning here -->
+
+<exercisegroup>
+  <introduction>
+<p>The next 4 exercises will help acquaint the reader with the concept of the <emp>sum of two subspaces</emp>. First, we'll need a definition.</p>
+
+<definition xml:id="def_sum_subspace">
+  <statement>
+    <p>
+Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
+<me>
+U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
+</me>
+</p>
+</statement>
+</definition>
+<p>
+  In the exercises below, <m>V,U,W</m> will be as above.
+</p>
+</introduction>
+<exercise xml:id="sum_of_subspaces_is_subspace">
+    <statement>
+      <p>
+      Show that <m>U + V</m> is a subspace of <m>V</m>.
+    </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+      Show that  <m>U + V</m> is, in fact, the smallest subspace of <m>V</m> containing both <m>U</m> and <m>V</m>.
+    </p>
+    </statement>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+      If <m>W \subset U</m> what is <m>U + W</m>?
+    </p>
+    </statement>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+      Can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <m>\mathbb{R}^2</m>? Similarly, can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <emp>not</emp> all of <m>\mathbb{R}^2</m>?
+    </p>
+    </statement>
+  </exercise>
+</exercisegroup>
+
+<!-- Translation job ends here -->
+
+</exercises>
+
+<solutions divisional="solution answer" />
+
+
+</section>
+

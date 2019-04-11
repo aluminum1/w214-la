@@ -1,0 +1,1123 @@
+
+
+<section xml:id="ACh3Sec1DefinitionsExamples">
+  <title>Definisie en Voorbeelde</title>
+  <p>
+    Herinner jouself daaraan dat 'n <em>funksie</em>
+    (of 'n <em>afbeelding</em>)
+    <m>f
+    : X \rightarrow Y</m> van 'n versameling <m>X</m> na 'n versameling <m>Y</m> maar net
+    'n re&#xeb;l is wat aan elke element van <m>X</m> 'n element <m>f(x)</m> van <m>Y</m>
+    toeken.
+    Ons skryf <m>x \mapsto f(x)</m> om aan te dui dat 'n element <m>x \in X</m>
+    op <m>f(x) \in Y</m> afbeeld deur die funksie <m>f</m>.
+    Sien <xref ref="explanation_of_mapsto">Figuur</xref>.
+    Twee funksies <m>f, g : X \rightarrow Y</m> is
+    <em>gelyk</em> as <m>f(x) = g(x)</m> vir alle <m>x</m> in <m>X</m>.
+  </p>
+
+  <figure xml:id="explanation_of_mapsto">
+    <caption>'n Funksie <m>f : X \rightarrow
+    Y</m>.</caption>
+ <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw (-2, 0) circle (1);
+    \draw (2,0) circle (1);
+    \node at (-2, -1.3) {\(X\)};
+    \node at (2, -1.3) {\(Y\)};
+    \draw[->] (-0.8, 0.3) to[out=30, in=150] node[above] {\(f\)} (0.8, 0.3); 
+    \node (a) at (-2, -0.5) {\(x\)};
+    \node (b) at (2, -0.5) {\(f(x)\)};
+    \draw[|->] (a) to[out=-20, in=200] (b);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+
+  </figure>
+
+  <definition>
+    <statement>
+      <p>
+        Laat <m>V</m> en <m>W</m> vektorruimtes wees. 'n <term>line&#xea;re
+        afbeelding</term> van <m>V</m> na <m>W</m> is 'n funksie <m>T : V \rightarrow W</m> wat die
+        volgende bevredig:
+
+        <ul>
+          <li>
+            <p>
+              <m>T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}')</m> vir alle
+              vektore <m>\ve{v}, \ve{v}' \in V</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>T(k \ve{v}) = k T (\ve{v})</m> vir alle vektore <m>\ve{v} \in V</m>
+              en skalare <m>k \in \mathbb{R}</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <assemblage>
+    <p>
+      'n Ander naam vir 'n line&#xea;re afbeelding is 'n
+      <em>line&#xea;re transformasie</em>.
+    </p>
+  </assemblage>
+
+  <example>
+    <title>Matrikse dien as line&#xea;re afbeeldings</title>
+    <statement>
+      <p>
+        Elke <m>n \times m</m>-matriks <m>\mat{A}</m> induseer 'n <em>line&#xea;re
+        afbeelding</em>
+        <md>
+          <mrow>T_{\mat{A}} : \Col_m \amp  \rightarrow \Col_n</mrow>
+          <mrow>\col{v} \amp  \mapsto \mat{A} \col{v} \, </mrow>
+        </md>.
+      </p>
+
+      <p>
+        Dit is, <m>T_{\mat{A}} (\col{v}) := \mat{A} \col{v}</m> is die matriksproduk
+        van <m>\mat{A}</m> met die kolomvektor <m>\col{v}</m>.
+        Die feit dat <m>T_\mat{A}</m>
+        wel 'n line&#xea;re afbeelding is volg vanuit die lineariteit van
+        matriksvermenigvuldiging
+        (<xref ref="props_of_matrix_ops">Proposisien</xref> deel 2
+        en3).
+      </p>
+
+      <assemblage>
+        <p>
+          Let daarop dat 'n <m>n \times m</m>-matriks 'n
+          line&#xea;re afbeelding vanaf <m>\Col_m</m> na <m>\Col_n</m> is!
+        </p>
+      </assemblage>
+
+      Byvoorbeeld, beskou
+      <me>
+      A = \begin{bmatrix} 1 \amp 2 \\ 1 \amp -2 \end{bmatrix}
+    </me>
+    Dit lewer 'n lineêre afbeelding:
+    <md>
+     <mrow> T : \Col_2 \amp \rightarrow \Col_2 </mrow>
+     <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} 1 \amp 2 \\ 1 \amp -2 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} </mrow>
+    </md>
+    Die volgende interaktiewe GeoGebra app demonstreer dit. Sleep die rooi vektor<m>\col{v}</m> en sien die effek op <m>\mat{A} \col{v}</m>. Jy kan ook die koëffisiënte van die matriks <m>\mat{A}</m> verander deur die sliders te sleep.
+    <figure>
+    <interactive geogebra="vexfrzez" />
+    <caption> Interaktiewe Geogebra app wat die lineêre afbeelding <m>\col{v} \mapsto \mat{A}\col{v}</m> vertoon. </caption>
+  </figure>
+
+
+    </statement>
+  </example>
+
+
+  <example>
+    <title>Identiteitsafbeelding</title>
+    <statement>
+      <p>
+        Laat <m>V</m> 'n vektorruimte wees.
+        Die
+        funksie
+        <md>
+          <mrow>\id_V : V \amp \rightarrow V</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{v}</mrow>
+        </md>
+        word die <em>identiteitsafbeelding</em> op <m>V</m> genoem.
+        Die is duidelik 'n
+        line&#xea;re afbeelding, omdat
+        <md>
+          <mrow>\id_V (\ve{v} + \ve{w}) \amp = \ve{v} + \ve{w}</mrow>
+          <mrow>\amp = \id_V (\ve{v}) + \id_V (\ve{w})</mrow>
+        </md>
+        en
+        <md>
+          <mrow>\id_V (k \ve{v}) \amp = k \ve{v}</mrow>
+          <mrow>\amp = k \id_V (\ve{v})</mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="projection_map_example">
+    <title>Projeksie</title>
+    <statement>
+      <p>
+        Die funksie
+        <md>
+          <mrow>T : \mathbb{R}^2 \amp \rightarrow \mathbb{R}</mrow>
+          <mrow>(x, y) \amp \mapsto x</mrow>
+        </md>
+        wat vektore op die <m>x</m>-as projekteer is 'n line&#xea;re afbeelding.
+      </p>
+
+      <p>
+        Kom ons bevestig sommering algebra&#xef;es:
+        <me>
+          T \left ( (x_1, y_1 \right)) + \left((x_2, y_2) \right)
+          \stackrel{\mbox{?} }{=} T\left((x_1, y_1) \right) + T\left((x_2,
+          y_2)\right)
+        </me>
+        <md>
+          <mrow>\mbox{LHS}  \amp = T \left( (x_1 + x_2, y_1 + y_2) \right) \amp  \mbox{RHS} 
+          \amp = x_1 + x_2</mrow>
+          <mrow>\amp = x_1 + x_2</mrow>
+        </md>
+      </p>
+
+      <p>
+        Hier is 'n grafiese weergawe van hierdie bewys:
+      </p>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[xscale=1.5]
+  \draw[<->] (-1, 0) -- (3, 0);
+  \draw[<->] (0, -1) -- (0, 3);
+  \draw[very thick, red, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
+  \draw[very thick, red, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
+  \draw[dotted] (0.5, 1) -- (0.5, 0);
+  \draw[dotted] (1.5, 1.5) -- (1.5, 0);
+  \draw[very thick, red, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
+  \draw[very thick, red, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
+  \node[red] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
+  \node[red] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+    </statement>
+  </example>
+
+
+  <exercise>
+    <statement>
+      <p>
+        Bewys algebra&#xef;es dat <m>T(k \ve{v}) = k T(\ve{v})</m>,
+        sodat <m>T</m> 'n line&#xea;re afbeelding is.
+      </p>
+    </statement>
+    <solution>
+        <p>
+         <me> T(k \ve v) = T(k(x,y)) = T(kx,ky) = kx = kT((x,y)) = kT(\ve v)  </me>
+        </p>
+      </solution>
+  </exercise>
+
+  <example xml:id="rotation_as_linear_map">
+    <title>Rotasie</title>
+    <statement>
+      <p>
+        Neem 'n vaste hoek
+        <m>\theta</m>.
+        Die funksie
+        <md>
+          <mrow>R : \mathbb{R}^2 \amp  \rightarrow \mathbb{R}^2</mrow>
+          <mrow>\ve{v} \amp  \mapsto \mbox{rotasie van \(\ve{v}\) anti-kloksgewys met 'n
+          hoek \(\theta\)}</mrow>
+        </md>
+        is 'n line&#xea;re afbeelding,
+        met 'n soortgelyke grafiese argument as
+        in <xref ref="projection_map_example">Voorbeeld</xref>.
+      </p>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+  \draw[<->] (0, -1) -- (0, 2);
+  \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right]
+  {\(\ve{v}\)} ;
+  \draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {\(R
+    (\ve{v})\)};
+  \draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt,
+  right] {\(\theta\)} ;\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+    </statement>
+  </example>
+
+  <example xml:id="cross_prod_as_linear_map">
+    <statement>
+      <p>
+        (Kruisproduk met 'n vaste vektor) Neem 'n vaste vektor <m>\ve{w} \in
+        \mathbb{R}^3</m>.
+        Die funksie
+        <md>
+          <mrow>C : \mathbb{R}^3 \amp \rightarrow \mathbb{R}^3</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{w} \times \ve{v}</mrow>
+        </md>
+        is 'n line&#xea;re afbeelding as gevolg van die eienskappe van die
+        kruisproduk,
+        <md>
+          <mrow>\ve{w} \times (\ve{v}_1 + \ve{v}_2) \amp = \ve{w} \times \ve{v}_1 +
+          \ve{w} \times \ve{v}_2</mrow>
+          <mrow>\ve{w} \times (k \ve{v}) \amp = k \ve{w} \times \ve{v}</mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        (Dotproduk met 'n vaste vektor) Neem 'n vaste vektor
+        <m>\ve{u} \in \mathbb{R}^3</m>.
+        Die funksie
+        <md>
+          <mrow>D : \mathbb{R}^3 \amp \rightarrow \mathbb{R}</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{u} \cdot \ve{v}</mrow>
+        </md>
+      </p>
+
+      <p>
+        (hier is <m>\cdot</m> die dotproduk van vektore, nie
+        skalaarvermenigvuldiging nie!) is 'n line&#xea;re afbeelding,
+        vanwe&#xeb;
+        die eienskappe
+        <md>
+          <mrow>\ve{u} \cdot (\ve{v}_1 + \ve{v}_2) \amp = \ve{u} \cdot \ve{v}_1 +
+          \ve{u} \times \ve{v}_2</mrow>
+          <mrow>\ve{u} \cdot (k \ve{v}) \amp = k \ve{u} \cdot \ve{v}</mrow>
+        </md>.
+      </p>
+
+      <assemblage>
+        <p>
+          Ons sal binnekort sien dat <em>alle</em> line&#xea;re afbeeldings
+          <m>\mathbb{R}^3 \rightarrow \mathbb{R}</m>
+          (inderwaarheid alle
+          line&#xea;re afbeeldings <m>\mathbb{R}^n \rightarrow \mathbb{R}</m>)
+          van
+          hierdie vorm is.
+        </p>
+      </assemblage>
+
+    </statement>
+  </example>
+
+  <example xml:id="diff_of_poly">
+    <statement>
+      <p>
+        (Differensiasie) Die bewerking <sq>neem die
+        afgeleide</sq> kan as 'n line&#xea;re afbeelding
+        <md>
+          <mrow>D : \Poly_n \amp  \rightarrow \Poly_{n-1}</mrow>
+          <mrow>\ve{p} \amp  \mapsto \ve{p}' </mrow>
+        </md>,
+        interpreteer word.
+        Byvoorbeeld, <m>D(2x^3 - 6x + 2) = 6x^2 - 6</m>.
+      </p>
+    </statement>
+  </example>
+
+ 
+
+  <exercise>
+    <statement>
+      <p>
+        (a) Hoekom is <m>D</m> 'n afbeelding van <m>\Poly_n</m> na <m>\Poly_{n-1}</m>? (b)
+        Bevestig dat <m>D</m> line&#xea;r is.
+      </p>
+    </statement>
+    <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                As you know from calculus, taking the derivative of a polynomial decreases every power of <m> x </m> by 1. So if <m> \ve p </m> is in <m>\Poly_n </m>, then <m> \ve p </m> has degree at most <m> n </m> . Therefore, its image under <m> D </m> has degree at most <m> n - 1</m>. Thus <m> \ve p' </m> is in <m>\Poly_{n-1} </m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Let <m> \ve p, \ve q </m> be in <m> \Poly_n </m>. For concreteness, we write
+                <me>
+                \ve p = \sum_{j=0}^{n} a_j x^j \\ 
+                \ve q = \sum_{j=0}^{n} b_j x^j
+              </me>.
+              We check additivity of <m>D</m>:
+              <me>
+               D(\ve p + \ve q) = D\left(\sum_{j=0}^{n} (a_j + b_j) x^j\right) = \sum_{j=1}^n (a_j + b_j)j x^{j-1} \\
+              = \sum_{j=1}^{n} ja_j x^{j-1} + \sum_{j=0}^{n} jb_j x^{j-1} = D(\ve p) + D(\ve q).
+            </me>
+            Next we check how <m>D</m> interacts with scalar multiplication:
+            <me>
+            D(k \ve p) = D\left( \sum_{j=0}^{n} k a_j x^j\right) = \sum_{j=1}^n k a_j x^{j-1} \\
+            =k\left( \sum_{j=1}^n a_j x^{j-1} \right) = k D(\ve p).
+          </me>
+          And so we conclude that <m> D </m>is linear.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+  </exercise>
+
+  <example>
+    <statement>
+      <p>
+        (Anti-afgeleide) Die operasie <sq>find die unieke
+        anti-afgeleide met nul as konstante term</sq> kan as 'n line&#xea;re
+        afbeelding
+        <md>
+          <mrow>A : \Poly_n \amp  \rightarrow \Poly_{n+1}</mrow>
+          <mrow>\ve{p} \amp  \mapsto \int_0^x \ve{p}(t) \, dt</mrow>
+        </md>
+        interpreteer word.
+        Byvoorbeeld, <m>A(2x^3 - 6x + 2) = 4 x^4 - 3x^2 + 2x</m>.
+      </p>
+    </statement>
+  </example>
+
+
+  <exercise>
+    <statement>
+      <p>
+        (a) Bevestig die korrektheid van die laaste sin. (b)
+        Hoekom is <m>A</m> 'n afbeelding vanaf <m>\Poly_n</m> na <m>\Poly_{n+1}</m>? (c)
+        Bevestig dat <m>A</m> line&#xea;r is.
+      </p>
+    </statement>
+    <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+              ?<!-- WHICH SENTENCE, the FOR EXAMPLE one or the sentence before that-->
+              </p>
+            </li>
+
+            <li>
+              <p>
+              You know from calculus that the antiderivative of a polynomial <m> \ve p </m> must always have degree one greater than <m> \ve p </m>. Hence <m> A </m> maps <m>\Poly_n</m> to <m> \Poly_{n+1}</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+              Let <m> \ve p , \ve q </m> be in <m> \Poly_n </m>. Using the usual properties of the integral, we compute 
+              <me>
+              A(\ve p + \ve q) = \int_0^x \ve p(t) + \ve q(t) \, dt = \int_0^x \ve p(t) \, dt + \int_0^x \ve q(t) \, dt \\ = A(\ve p) + A(\ve q).
+            </me>
+            Similarly,
+          <me>
+A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
+        </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+  </exercise>
+
+  
+<example xml:id="shift_example">
+    <title>Skuifafbeelding</title>
+    <statement>
+      <p>
+        Definieer die <sq>skuif aan met 1</sq>-afbeelding
+        <md>
+          <mrow>S : \Poly_n \amp  \rightarrow \Poly_n</mrow>
+          <mrow>\ve{p} \amp  \mapsto S( \ve{p})</mrow>
+        </md>
+        as <m>S(\ve{p})(x) = \ve{p}(x-1)</m>.
+      </p>
+    </statement>
+  </example>
+  <exercise>
+    <statement>
+      <p>
+        Gaan na dat <m>S</m> 'n line&#xea;re afbeelding is.
+      </p>
+    </statement>
+    <solution>
+        <p>
+          Let 
+          <me>
+          \ve p = \sum_{j=0}^n a_j x^j \\
+          \ve q = \sum_{j=0}^n b_j x^j
+        </me>
+        <me>
+          S(k \ve p ) = S\left( \sum_{j=0}^n ka_j x^j\right) = \sum_{j=0}^n ka_j (x-1)^j =  k \sum_{j=0}^n a_j (x-1)^j = kS(\ve p).
+        </me>
+        <me>
+          S(\ve p + \ve q) = S\left(\sum_{j=0}^n (a_j + b_j) x^j\right) = \sum_{j=0}^n (a_j + b_j) (x-1)^j \\
+          = \sum_{j=0}^n a_j (x-1)^j + \sum_{j=0}^n  b_j (x-1)^j = S(\ve p) + S(\ve q).
+        </me>
+        </p>
+      </solution>
+  </exercise>
+
+  <p>
+    Oorweeg die geval <m>n=3</m>.
+    In terme van die standaard basis
+    <me>
+      \ve{p}_0 (x) = 1, \, \ve{p}_1 (x) = x, \, \ve{p}_2 (x) = x^2, \,
+      \ve{p}_3 (x) = x^3
+    </me>
+    van <m>\Poly_3</m>, het ons:
+    <md>
+      <mrow>S(\ve{p}_0) \amp = \ve{p}_0</mrow>
+      <mrow>S(\ve{p}_1) \amp = \ve{p}_1 - \ve{p}_0</mrow>
+      <mrow>S(\ve{p}_2) \amp = \ve{p}_2 - 2 \ve{p}_1 + \ve{p}_0</mrow>
+      <mrow>S(\ve{p}_3) \amp = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0</mrow>
+    </md>
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Bevestig dit.
+      </p>
+    </statement>
+
+     <solution>
+        <p>
+          <m> S(\ve p_0) = \ve p_0 </m> is trivial.
+          <me>
+            S(\ve p_1) = x-1 = \ve p_1 - \ve p_0 \\
+            S(\ve p_2) = (x-1)^2 = x^2 - 2x + 1 = \ve p_2 - 2\ve p_1 + \ve p_0 \\
+            S(\ve p_3) = (x-1)^3 = x^3 - 3x^2 + 3x - 1 = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0.
+          </me>
+        </p>
+      </solution>
+  </exercise>
+
+
+  <lemma xml:id="lin_map_zero_to_zero">
+    <statement>
+      <p>
+        Veronderstel <m>T : V \rightarrow W</m> is 'n line&#xea;re
+        afbeelding.
+        Dan volg dit dat
+
+        <ol>
+          <li>
+            <p>
+              <m>T(\ve{0}_V) = \ve{0}_W</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>T(-\ve{v}) = - T(\ve{v})</m> vir alle vektore <m>\ve{v} \in V</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      Ons werk soos volg:
+
+      <ol>
+        <li>
+          <p>
+            <md>
+              <mrow>T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp (\text{R8
+              toegepas op }\ve{v} = \ve{0}_V \in V )</mrow>
+              <mrow>\amp = 0T(\ve{0}_V) \amp \text{(T is line{\^e}r)}</mrow>
+              <mrow>\amp = \ve{0}_W \amp (\text{R8
+              toegepas op }\ve{v} = T(\ve{0}_V)
+              \in W </mrow>
+            </md>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <md>
+              <mrow>T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp \amp (\text{defn
+              van }-\ve{v} \in V) </mrow>
+              <mrow>\amp = (-1) T(\ve{v}) \amp \amp  \text{(T is line{\^e}r)}</mrow>
+              <mrow>\amp = - T(\ve{v}) \amp  \amp(\text{defn
+              van }-T(\ve{v}) \in W)</mrow>
+            </md>
+          </p>
+        </li>
+      </ol>
+</p>
+</proof>
+
+  <p>
+    Die volgende resultaat is baie belangrik.
+    Dit wys dat as ons weet hoe 'n
+    line&#xea;re afbeelding op 'n basis tewerk gaan,
+    dan weet ons hoe dit optree
+    op die hele vektorruimte
+    (dit is waar <sq>uniekheid</sq> inkom).
+    Verder kan ons
+    willekeurig 'n formule opmaak vir wat <m>T</m> met die basisvektore doen en ons
+    is gewaarborg dat dit sal uitbrei tot 'n line&#xea;re afbeelding wat op die
+    hele vektorruimte gedefinieer is
+    (dit is waarna die <sq>bestaan</sq> deel verwys).
+  </p>
+
+
+  <proposition xml:id="defining_linear_map_on_basis">
+    <title>Voldoende om 'n line&#xea;re afbeelding op 'n basis te
+    definieer</title>
+    <statement>
+      <p>
+        Veronderstel <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m>
+        is 'n basis vir <m>V</m> en
+        <m>\ve{w}_1, \ldots, \ve{w}_m</m> is vektore in <m>W</m>.
+        Dan bestaan daar 'n unieke line&#xea;re afbeelding <m>T : V \rightarrow W</m>
+        sodat
+        <me>
+          T(\ve{e}_i) = \ve{w}_i,  i = 1 \ldots m
+        </me>.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      <em>Bestaansbewys</em>.
+      Om 'n line&#xea;re afbeelding <m>T</m>
+      tedefinieer,
+      moet ons <m>T(\ve{v})</m> vir elke vektor <m>\ve{v}</m> definieer.
+      Ons kan <m>\ve{v}</m> in terme van sy ko&#xf6;rdinaatvektor
+      <m>[\ve{v}]_\basis{B}</m> met betrekking tot die basis <m>\basis{B}</m> as
+      <men xml:id="expansion_of_v_in_coords">
+        \ve{v} = [\ve{v}]_{\basis{B}, 1} \ve{e}_1 + \cdots +
+        [\ve{v}]_{\basis{B}, m} \ve{e}_m
+      </men>
+      skryf, waar <m>[\ve{v}]_{\basis{B}, i}</m> die inskrywing in ry <m>i</m> van die
+      ko&#xf6;rdinaatvektor <m>[\ve{v}]_\basis{B}</m> is.
+      Ons definieer
+      <men xml:id="formula_for_T">
+        T(\ve{v}) := [\ve{v}]_{\basis{B}, 1} \ve{w}_1 +
+        [\ve{v}]_{\basis{B}, 2}
+        \ve{w}_2 + \cdots [\ve{v}]_{\basis{B}, m} \ve{w}_m
+      </men>.
+    </p>
+
+    <p>
+      Duidelik het ons <m>T(\ve{e}_i) = \ve{w}_i</m>.
+      Om die bestaansbewys te
+      voltooi, moet ons wys dat <m>T</m> line&#xea;r is:
+      <md>
+        <mrow>T(\ve{v} + \ve{v}') \amp = [\ve{v} + \ve{v}']_{\basis{B},1} \ve{w}_1 +
+        \cdots + [\ve{v} + \ve{v}']_{\basis{B}, m} \ve{w}_m</mrow>
+        <mrow>\amp = \big([\ve{v}]_{\basis{B}, 1} + [\ve{v}']_{\basis{B}, 1} \big)
+        \ve{w}_1 + \cdots + \big([\ve{v}]_{\basis{B}, m} +
+        [\ve{v}']_{\basis{B}, m}\big) \ve{w}_m \amp \amp  \mbox{(\([\ve{v} +
+        \ve{v}']_\basis{B} = [\ve{v}]_\basis{B} + [\ve{v}']_\basis{B}\))}</mrow>
+        <mrow>\amp =  [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots +
+        [\ve{v}]_{\basis{B}, m} \ve{w}_m   +</mrow>
+        <mrow>\amp  \qquad \qquad
+        [\ve{v}']_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}']_{\basis{B},
+        m} \ve{w}_m</mrow>
+        <mrow>\amp = T(\ve{v}) + T(\ve{w})</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Net so kan ons bevestig dat <m>T(k \ve{v}) = k T(\ve{v})</m>, wat die
+      bestaansbewys voltooi.
+    </p>
+
+    <p>
+      <em>Uniekheidsbewys</em>.
+      Veronderstel dat <m>S, T  : V
+      \rightarrow W</m> line&#xea;re afbeeldings is met
+      <men xml:id="thing_to_satisfy">
+        S(\ve{e}_i) = \ve{w}_i,  \text{ en }   T(\ve{e}_i) =
+        \ve{w}_i,
+        i = 1 \ldots m
+      </men>.
+    </p>
+
+    <p>
+      Dan,
+      <md>
+        <mrow>S (\ve{v}) \amp = S\big([\ve{v}]_{\basis{B}, 1} \ve{e}_1 + \cdots +
+        [\ve{v}]_{\basis{B}, m} \ve{e}_m\big)</mrow>
+        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} S(\ve{e}_1) + \cdots +
+        [\ve{v}]_{\basis{B}, m} S(\ve{e}_m) \amp  \mbox{(\(S\) is line{\^e}r)}</mrow>
+        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}]_{\basis{B},
+        m} \ve{w}_m \amp  \mbox{(want \(S(\ve{e}_i) = \ve{w}_i\))}</mrow>
+        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} T(\ve{e}_1) + \cdots +
+        [\ve{v}]_{\basis{B}, m} T(\ve{e}_m) \amp  \mbox{(want \(T(\ve{e}_i) =
+        \ve{w}_i\))}</mrow>
+        <mrow>\amp = T([\ve{v}]_{\basis{B}, 1} \ve{e}_1 +  \cdots +
+        [\ve{v}]_{\basis{B}, m} \ve{e}_m) \amp  \mbox{(\(T\) is line{\^e}r)}</mrow>
+        <mrow>\amp = T(\ve{v})</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Gevolglik <m>S = T</m>, met ander woorde,
+      die line&#xea;re afbeelding wat
+      <xref ref="thing_to_satisfy" /> bevredig is uniek.
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+      <p>
+        As 'n voorbeeld van <xref ref="defining_linear_map_on_basis">Proposisie</xref>,
+        definieer ons die 'n line&#xea;re
+        afbeelding
+        <md>
+          <mrow>T \amp  \Col_2 \amp  \rightarrow \Fun(\mathbb{R})</mrow>
+          <intertext>bloot deur die werking op die standaard basis van
+          <m>\Col_2</m> te definieer. Byvoorbeeld, ons bepaal</intertext>
+          <mrow>\mat{e}_1 \amp  \rightarrow f_1</mrow>
+          <mrow>\mat{e}_2 \amp  \rightarrow f_2</mrow>
+        </md>
+      </p>
+
+      <p>
+        Die punt is dat ons vry is om
+        <m>\mat{e}_1</m> en <m>\mat{e}_2</m> na <em>enige
+        funksies</em> <m>f_1</m> en <m>f_2</m> wat ons wil te stuur,
+        en ons is gewaarborg dat
+        dit 'n goed-gedefinieerde line&#xea;re afbeelding <m>T : \Col_2
+        \rightarrow \Fun(\mathbb{R})</m> sal gee.
+        Byvoorbeeld, ons stel <m>f_1 (x) =
+        \sin x</m> en <m>f_2 (x) = |x|</m>.
+        Dan is die algemene formule vir <m>T</m>
+      <me>
+          \left(T \begin{bmatrix} a \\ b \end{bmatrix}\right)(x) = a \sin x + b |x|
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="rotation-map-example-complete">
+    <title>Rotasie-afbeelding op die standaard
+    basis</title>
+    <statement>
+      <p>
+        Kom ons bereken
+        die aksie van die <sq>anti-kloksgewyse rotasie met <m>\theta</m></sq>-afbeelding
+        <m>R</m> van <xref ref="rotation_as_linear_map">Voorbeeld</xref> met betrekking tot die
+        standaard basis <m>\ve{e}_1, \ve{e}_2</m> van <m>\mathbb{R}^2</m>.
+        <md>
+          <mrow><image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
+\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
+\draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+          \qquad
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
+\draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
+\draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;\end{tikzpicture}]]>
+</latex-image>
+          </image>
+          </mrow>
+        </md>
+      </p>
+
+      <p>
+        Vanuit die figuur het ons:
+        <md>
+          <mrow>R(\ve{e}_1) \amp = (\cos \theta, \sin \theta) \amp  R(\ve{e}_2) \amp = (-\sin
+          \theta, \cos \theta)</mrow>
+        </md>
+        sodat
+        <md>
+          <mrow>R(\ve{e}_1) \amp =  \cos \theta \, \ve{e}_1 + \sin \theta\, \ve{e}_2,
+          R(\ve{e}_2) = -\sin \theta \, \ve{e}_1 +  \cos \theta\,
+          \ve{e}_2</mrow>
+        </md>.
+      </p>
+
+      <p>
+        Nou wat ons die aksie van <m>R</m> op die standaard basisvektore verstaan,
+        kan ons die aksie op 'n arbitr&#xea;re vektor <m>(x, y) \in \mathbb{R}^2</m>
+        bereken:
+        <md>
+          <mrow>R\left( (x,y)\right) \amp = R( x \ve{e}_1 + y \ve{e}_2 )</mrow>
+          <mrow>\amp = x R(\ve{e}_1) + y R(\ve{e}_2)</mrow>
+          <mrow>\amp = x (\cos \theta, \sin \theta) + y (-\sin \theta, \cos \theta)</mrow>
+          <mrow>\amp = (x \cos \theta - y \sin \theta, \, x \sin \theta + y \cos
+          \theta)</mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+
+
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>V</m> 'n vektorruimte wees en laat <m>\ve{a} \neq \ve{0}</m>
+        'n vaste vektor wees.
+        Definieer die afbeelding <m>T</m> soos volg:
+        <md>
+          <mrow>T : V \amp \rightarrow V</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{a} + \ve{v}</mrow>
+        </md>
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Is <m>T</m> 'n line&#xea;re afbeelding? (Ja of nee)
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Bewys jou antwoord vir (a).
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+        <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              No.
+            </p>
+          </li>
+          <li>
+            <p>
+              According to <xref ref = "lin_map_zero_to_zero"/>, <m> T(0) = 0 </m> is a necessary condition for <m>T</m> to be linear. However,
+              <me>
+              T(\ve 0) = \ve a + 0 = \ve a \neq \ve 0.
+            </me>
+            Hence <m> T </m> cannot be linear.
+            </p>
+          </li>
+    </ol>
+     </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Beskou die afbeelding <m>T : \mathbb{R}^3 \rightarrow
+        \mathbb{R}^3</m> wat deur <m>T\left( (x,y,z) \right) = (z,x,y)</m> gegee word.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Is <m>T</m> 'n line&#xea;re afbeelding? (Ja of nee)
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Bewys jou antwoord vir (a).
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Yes.
+            </p>
+          </li>
+          <li>
+            <p>
+             <me>
+             T\left((x,y,z) + (a,b,c)\right) = T\left( (x+a,y+b , z + c) \right) = (z+c,x+a,y+b) \\ 
+             = (z,x,y) + (c,a,b)= T\left((x,y,z)\right) +  T\left((a,b,c)\right)
+           </me>
+           <me>
+T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
+         </me>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Definieer die <sq>vermenigvuldig met <m>x^2</m></sq>-afbeelding
+        <md>
+          <mrow>M : \Poly_n \amp  \rightarrow \Poly_{n+2}</mrow>
+          <mrow>\ve{p} \amp  \mapsto M(\ve{p})</mrow>
+        </md>
+        waar <m>M(\ve{p})(x) = x^2 \ve{p}(x)</m>.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Hoekom beeld <m>M</m> <m>\Poly_n</m> op <m>\Poly_{n+2}</m> af?
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Bewys dat <m>M</m> line&#xea;r is.
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              Bereken die aksie van <m>M</m> op die standaard basis vir
+              <m>\Poly_3</m>,
+              soos in <xref ref="shift_example">Voorbeeld</xref>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              If <m> p(x) </m> has degree at most <m>n</m>, then <m> \ve q(x) := x^2 \ve p(x) </m> has degree at most <m>n+2</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The proof is simple and follows from the usual properties of polynomials. Using the fact that multiplication of polynomials distributes over addition we compute
+              <me>
+              M(\ve p + \ve q)(x) = x^2(\ve p(x) + \ve q(x)) = x^2\ve p(x) + x^2\ve q(x) = M(\ve p)(x) + M(\ve q)(x).
+            </me>
+            We may consider the scalar <m> k </m> as a constant polynomial. Thus, using the commutativity and associativity of polynomial multiplication we compute
+            <me>
+            M(k\ve p)(x) = x^2k\ve p (x) = k(x^2 \ve p(x)) = kM(\ve p)(x).
+          </me>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <me>
+              M(\ve p_0) = x^2 1 = x^2 = \ve p_2 \\
+              M(\ve p_1) = x^2 x = x^3 = \ve p_3 \\
+              M(\ve p_2) = x^2 x^2 = x^4 = \ve p_4 \\
+              M(\ve p_3) = x^2 x^3 = x^5 = \ve p_5.
+            </me>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Definieer die <sq>integreer oor die interval
+        <m>[-1,1]</m></sq>-afbeelding
+        <md>
+          <mrow>I : \Poly_n \amp  \rightarrow \mathbb{R}</mrow>
+          <mrow>\ve{p} \amp  \mapsto \int_{-1}^{1} \ve{p}(x) \, dx</mrow>
+        </md>
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Bewys dat <m>I</m> line&#xea;r is.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Bereken die aksie van <m>I</m> met betrekking tot die
+              standaard basis <m>\ve{p}_0, \ldots, \ve{p}_3</m> vir <m>\Poly_3</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              Bereken die aksie van <m>I</m> met betrekking tot die basis
+              <m>\ve{q}_0, \ldots, \ve{q}_3</m> vir <m>\Poly_3</m> uit <xref ref="new_basis_for_poly_3">Voorbeeld</xref>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+     <solution>
+      <p> 
+        <ol>
+
+          <li>
+            <p>
+            We use the properties of the integral.
+            <me>
+            I(\ve p + \ve q) = \int_{-1}^1 \left( \ve p(x) + \ve q(x)\right) \, dx \\ =  \int_{-1}^1 \ve p(x) \, dx + 
+            \int_{-1}^1 \ve q(x) \, dx = I(\ve p) + I(\ve q).
+            </me>   
+            <me>
+I(k\ve p )  = \int_{-1}^1 k\ve p(x) \, dx = k\int_{-1}^1 \ve p(x) \, dx = kI(\ve p) 
+            </me>     
+            </p>
+          </li>
+
+          <li>
+            <p>
+            <me>
+I(\ve p_0) = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2 \\
+I(\ve p_1) = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0\\
+I(\ve p_2) = \int_{-1}^1 x^2 dx = \frac{1}{3}x^3 \rvert^1_{-1} = \frac{2}{3} \\
+I(\ve p_3) = \int_{-1}^1 x^3 dx = \frac{1}{4}x^4 \rvert^1_{-1} = 0
+            </me>   
+            </p>
+          </li>
+
+          <li>
+            <p>
+              We use the results above:
+               <me>
+I(\ve q_0) = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2\\
+I(\ve q_1) = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0\\
+I(\ve q_2) = \int_{-1}^1 2x^2 - 1 dx = 2\int_{-1}^1 x^2 dx - \int_{-1}^1 1 =  \frac{4}{3} - 2 = -\frac{2}{3} \\
+I(\ve q_3) = \int_{-1}^1 4x^3 - 3x dx = 4\int_{-1}^1 x^3 dx - 3\int_{-1}^1 x dx = 4.0 - 3.0 = 0
+            </me>   
+            </p>
+          </li>
+
+        </ol>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Bereken die aksie van die differensiasie-afbeelding
+        <m>D :
+        \Poly_4 \rightarrow \Poly_3</m> uit <xref ref="diff_of_poly">Voorbeeld</xref> met
+        betrekking tot die standaard basisse van die twee vektorruimtes.
+      </p>
+    </statement>
+      <solution>
+      <p>
+<me>
+D(\ve p_0) = D(1) = 0  \\
+D(\ve p_1) = D(x)= 1 = \ve p_0 \\
+D(\ve p_2) = D(x^2) = 2x = 2\ve p_1 \\
+D(\ve p_3) = D(x^3) = 3x^2 = 3\ve p_2 \\
+D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
+</me>
+      </p>
+    </solution>
+
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Beskou die kruisproduk-line&#xea;re afbeelding
+        <m>C :
+        \mathbb{R}^3 \rightarrow \mathbb{R}^3</m> uit <xref ref="cross_prod_as_linear_map">Voorbeeld</xref>
+        in die geval <m>\ve{w} = (1, 2, 3)</m>.
+        Bereken die aksie van <m>C</m> met betrekking tot die standaard basis van
+        <m>\mathbb{R}^3</m>.
+      </p>
+    </statement>
+      <solution>
+      <p>
+        <me>
+        C((1,0,0)) = (1,2,3) \times (1,0,0) = (0,3,-2) \\
+        C((0,1,0)) = (1,2,3) \times (0,1,0) = (-3,0,1) \\
+        C((0,0,1)) = (1,2,3) \times (0,0,1) = (2,-1,0).
+      </me>
+      </p>
+    </solution>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+        Prove that if <m>V</m> is a finite dimensional vector space then the set of all linear maps from <m>V</m> to <m>\mathbb R</m>,<m>\mathcal L (V,\mathbb R)</m>, is itself a vector space. Since we already know that the set of all real valued functions from <m> V </m> to <m>\mathbb R</m> forms a vector space, you will only have to show that <m>\mathcal L (V,\mathbb R)</m> contains the function <m>\ve 0</m>, and is closed under both addition and scalar multiplication.
+      </p>
+
+    </statement>
+      <solution>
+        <p>
+          For all <m>\ve v,\ve w \in  V</m>, for all <m>S, T \in \mathcal L (V,\mathbb R)</m> and for all <m>a , b \in \mathbb R</m>:
+        <ol>
+          <li>
+            <p>
+              <me>
+              \ve 0(\ve v + \ve w) = 0 = \ve 0\ve v + \ve 0\ve w \\
+              0(a\ve v) = 0 = a \ve 0 \\
+            </me>
+            and hence <m> \ve 0 \in \mathcal L (V,\mathbb R)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <me>
+              (a S)(\ve v + \ve W) = a(S (\ve v + \ve w )) = a(S \ve v+ S\ve w) = (a S)\ve v + (a S) \ve w\\
+              (a S)(b \ve v) = (ab) S \ve v = b( a S \ve v) \\
+            </me>
+            and hence <m> a S \in \mathcal L (V,\mathbb R)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <me>
+              (S + T)(\ve v + \ve w) = S(\ve v+ \ve w) + T(\ve v + \ve w) \\
+              = S\ve v + S \ve w + T \ve v + T \ve w  = (S + T)\ve v + (S + T)\ve w \\
+              (S + T)(a \ve v) = S (a \ve v) + T(a \ve w ) = aS\ve v+  aT \ve w = a(S+T)\ve v
+            </me>
+            and hence <m> S + T  \in \mathcal L (V,\mathbb R)</m>.
+            </p>
+          </li>
+
+        </ol>
+      </p>
+
+      </solution>
+
+
+
+
+  </exercise>
+
+  <exercise>
+        <statement>
+          If <m>V </m> is a finite dimensional vector space, find a basis for <m> \mathcal L(V , \mathbb R) </m>.
+        </statement>
+      </exercise>
+
+</exercises>
+
+ <!-- <solutions divisional="solution answer" />  -->
+
+
+</section>

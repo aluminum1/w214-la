@@ -1,0 +1,516 @@
+
+
+<section xml:id="Ch3Sec4LinearMapsMatrices">
+  <title>Linear maps and matrices</title>
+  <definition xml:id="matrix_of_linear_map_defn">
+    <statement>
+      <p>
+        Let <m>T : V \rightarrow W</m> be a linear map from a vector space <m>V</m> to a vector space <m>W</m>.
+        Let <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m> be a basis for <m>V</m> and
+        <m>\basis{C} = \bopen \ve{c}_1, \ldots, \ve{c}_n \bclose</m> be a basis for <m>W</m>.
+        The <term>matrix of <m>T</m> with respect to the bases
+        <m>\basis{B}</m> and <m>\basis{C}</m></term>
+        is defined as the <m>n \times m</m> matrix whose columns are the coordinate vectors of
+        <m>T(\ve{b}_i)</m> with respect to the basis <m>\basis{C}</m>:
+        <me>
+          [T]_{\basis{C} \leftarrow \basis{B}} :=
+\begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
+  </me>
+      </p>
+    </statement>
+  </definition>
+
+  <assemblage>
+    <p>
+      Do you understand why <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> is an <m>n \times m</m> matrix?
+    </p>
+  </assemblage>
+
+  <example>
+    <statement>
+      <p>
+        Example from class!
+      </p>
+    </statement>
+  </example>
+
+  <theorem xml:id="lin-map-in-matrix-theorem">
+    <statement>
+      <p>
+        Let <m>T : V \rightarrow W</m> be a linear map from a vector space <m>V</m> to a vector space <m>W</m>.
+        Let <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m> be a basis for <m>V</m> and
+        <m>\basis{C}</m> be a basis for <m>W</m>.
+        Then for all vectors <m>\ve{v}</m> in <m>V</m>,
+        <men>
+          [T(\ve{v})]_\basis{C} = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B}
+        </men>
+        where the right hand side is the product of the matrix
+        <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> with the column vector <m>\ve{v}]_\basis{B}</m>.
+      </p>
+    </statement>
+
+    <proof>
+      <p>
+        Similar to the proof of the Change-Of-Basis Theorem
+        (<xref ref="change-of-basis-thm">Theorem</xref>).
+        Let <m>\ve{v} \in V</m>.
+        Expand it in the basis <m>\basis{B}</m>:
+        <me>
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_m \ve{b}_m,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix}
+        </me>.
+      </p>
+
+      <p>
+        Then,
+        <md>
+          <mrow>_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
+          <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  \mbox{(\(T\) is linear)}</mrow>
+          <mrow>\amp = a_1 [T(\ve{b}_1)]_\basis{C} + \cdots + a_n [T(\ve{b}_m)]_\basis{C}  \amp \amp  (<xref ref = "lin_of_coord_vectors" />)</mrow>
+         <mrow> \amp =  \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
+          <mrow>\amp =    [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
+        </md>.
+      </p>
+    </proof>
+  </theorem>
+
+  <assemblage>
+    <p>
+      If we could give this theorem a name,
+      it would be <q>The Relationship Between Linear Maps, Coordinate Vectors,
+      and Matrix Multiplication of Column Vectors Theorem</q>!
+    </p>
+  </assemblage>
+
+  <example>
+    <statement>
+      <p>
+        Continuation of example from class!
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We can interpret <xref ref="lin-map-in-matrix-theorem">Theorem</xref>
+    in a more abstract way as follows.
+    We have the following diagram of linear maps of vector spaces:
+  </p>
+
+  <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[yscale=0.8]
+  \draw (0, 0) circle (1);
+  \draw (6,0) circle (1);
+  \draw [<->] (-1, -6) -- (1, -6);
+  \draw [<->] (0, -5) -- (0, -7);
+  \draw [<->] (5, -6) -- (7, -6);
+  \draw [<->] (6, -5) -- (6, -7);
+  \draw[->] (2, 0) -- node[above]{\(T\)} (4, 0);
+  \draw[->] (6, -2) -- node[right] {\([ \smul]_\basis{C}\)} (6, -4);
+  \draw[->, dotted] (2, -6) -- node[below] {\([\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}}\)} (4, -6);
+  \draw[->] (-0.1, -2) -- node[left] {\([ \smul]_\basis{B}\)} (-0.1, -4);
+  \draw[<-] (0.1, -2) -- node[right] {\(\ve{vec}_{V, \basis{B}}\)} (0.1, -4);
+  \node at (1, 1) {\(V\)};
+  \node at (7, 1) {\(W\)};
+  \node at (1, -5) {\(\Col_m\)};
+  \node at (7, -5) {\(\Col_n\)};\end{tikzpicture}]]>
+</latex-image>
+  </image>
+
+  <p>
+    The map at the top is the linear map <m>T : V \rightarrow W</m>.
+    The map on the left from <m>V</m> to <m>\Col_m</m> is the coordinate vector map
+    <m>[ \smul]_\basis{B}</m> associated to the basis <m>\basis{B}</m>.
+    Its inverse map <m>\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V</m> is also drawn.
+    The map on the right is the coordinate vector map
+    <m>[ \cdot]_\basis{C}</m> from <m>W</m> to <m>\Col_n</m> associated to the basis <m>C</m>.
+    The dotted arrow on the bottom is the composite map,
+    and can be computed explicitly as follows.
+  </p>
+
+  <lemma>
+    <statement>
+      <p>
+        The composite map
+        <me>
+          [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} : \Col_m \rightarrow \Col_n
+        </me>
+        is multiplication by the matrix <m>[T]_{\basis{C} \leftarrow \basis{B}}</m>.
+        That is, for all column vectors <m>\mat{u}</m> in <m>\Col_m</m>,
+        <me>
+          \left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} \right) (\mat{u}) = [T]_{\basis{C} \leftarrow \basis{B}} \, \mat{u}
+        </me>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      Let <m>\mat{u}</m> be a column vector in <m>\Col_m</m>.
+      Define <m>\ve{v} := \ve{vec}_{V, \basis{B}} (\mat{u})</m>.
+      Then <m>\ve{v}</m> is the vector in <m>V</m> whose coordinate vector with respect to the basis <m>\basis{B}</m> is <m>\mat{u}</m>.
+      That is, <m>\mat{u} = [\ve{v}]_\basis{B}</m>.
+      So,
+      <md>
+        <mrow>\left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} \right) (\mat{u})  \amp = [ \smul]_\basis{C} \left( T \left(\ve{vec}_{V, \basis{B}}(\mat{u})\right)\right) \amp \amp  \mbox{(Defn of composite map)}</mrow>
+        <mrow>\amp = [\cdot]_\basis{C} (T(\ve{v})) \amp \amp  \mbox{(Defn of \(\ve{v}\))}</mrow>
+        <mrow>\amp = [T(\ve{v})]_\basis{C} \amp \amp  \mbox{(Defn of \([\cdot]_\basis{C}\))}</mrow>
+        <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \amp \amp(<xref ref = "lin-map-in-matrix-theorem" />)  </mrow>
+      </md>.
+    </p>
+  </proof>
+
+  <p>
+    Before we move on, we need to recall another thing about matrices.
+    Suppose <m>\mat{A}</m> is a matrix with <m>n</m> rows.
+    Let
+    <me>
+      \mat{e}_1 = \begin{bmatrix}1 \\ 0 \\ \vdots \\ 0\end{bmatrix}, \, \mat{e}_2 = \begin{bmatrix}0 \\ 1 \\ \vdots \\ 0\end{bmatrix}, \, \ldots, \, \mat{e}_n = \begin{bmatrix}0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}
+    </me>
+    be the standard basis for <m>\Col_n</m>.
+    Then the <m>i</m>th column of <m>A</m> can be obtained by multiplying <m>A</m> with <m>\mat{e}_i</m>:
+    <men xml:id="fact-about-columns">
+      i^\text{th} \text{ column of } \mat A  = A \mat{e}_i
+    </men>.
+  </p>
+
+  <exercise xml:id="fact_about_columns_of_matrix">
+    <statement>
+      <p>
+        Check this!
+      </p>
+    </statement>
+  </exercise>
+
+  <p>
+    Now we can prove the following important Theorem.
+  </p>
+
+  <theorem xml:id="functoriality_of_matrix">
+    <title>Functoriality of the Matrix of a Linear Map</title>
+    <statement>
+      <p>
+        Let <m>S : U \rightarrow V</m> and
+        <m>T : V \rightarrow W</m> be linear maps between finite-dimensional vector spaces.
+        Let <m>\basis{B}</m>, <m>\basis{C}</m> and
+        <m>\basis{D}</m> be bases for <m>U</m>,
+        <m>V</m> and <m>W</m> respectively.
+        Then
+        <me>
+          [T \circ S]_{\basis{D} \leftarrow \basis{B}} = [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
+        </me>
+        where the right hand side is the product of the matrices
+        <m>[T]_{\basis{D} \leftarrow \basis{C}}</m> and <m>[S]_{\basis{C} \leftarrow \basis{B}}</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We have:
+      <md>
+        <mrow>\mbox{\(i\)th colu} \amp \mbox{mn of \([T \circ S]_{\basis{D} \leftarrow \basis{B}}\)}</mrow>
+        <mrow>\amp = \left[(T \circ S)(\ve{b}_i)\right]_\basis{D} \amp \amp  \mbox{(Defn of \([T \circ S]_{\basis{D} \leftarrow \basis{B}}\))}</mrow>
+        <mrow>\amp = \left[T(S(\ve{b}_i))\right]_\basis{D} \amp \amp  \mbox{(Defn of \(T \circ S\))}</mrow>
+        <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S(\ve{b}_i]_\basis{C} \amp \amp  (<xref ref = "lin-map-in-matrix-theorem"/>)</mrow>
+        <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, [\ve{b}_i]_\basis{B} \amp \amp  (<xref ref = "lin-map-in-matrix-theorem"/>)</mrow>
+        <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, \mat{e}_i \amp \amp  \left(\mbox{
+        since \([\ve{b}_i]_\basis{B} = \mat{e}_i\)
+        }  \right)</mrow>
+        <mrow>\amp = \mbox{\(i\)th column of \([T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}\)}  \amp \amp  <xref ref = "fact-about-columns"/> </mrow>
+      </md>.
+    </p>
+  </proof>
+
+  <corollary xml:id="map-iso-matrix-iso">
+    <statement>
+      <p>
+        Let <m>T : V \rightarrow W</m> be a linear map,
+        and suppose <m>\basis{B}</m> is a basis for <m>V</m>,
+        and <m>\basis{C}</m> is a basis for <m>W</m>.
+        Then
+        <me>
+          \mbox{\(T\) is an isomorphism}  \Longleftrightarrow \mbox{\([T]_{\basis{C} \leftarrow \basis{B}}\) is invertible.}
+        </me>
+      </p>
+    </statement>
+  </corollary>
+
+  <proof>
+    <p>
+      <m>\Rightarrow</m>.
+      Suppose the linear map <m>T</m> is an isomorphism.
+      This means there exists a linear map <m>S : W \rightarrow V</m> such that
+      <me>
+        S \circ T = \id_V  \text{ and }   T \circ S = \id_W
+      </me>
+    </p>
+
+    <p>
+      Therefore,
+      <me>
+        [S \circ T]_{\basis{B} \leftarrow \basis{B}} = [\id_V]_{\basis{B} \leftarrow \basis{B}}  \text{ and }   [T \circ S]_{\basis{C} \leftarrow \basis{C}} = [\id_W]_{\basis{C} \leftarrow \basis{C}}
+      </me>.
+    </p>
+
+    <p>
+      Therefore, by the Functoriality of the Matrix of a Linear Map (<xref ref="functoriality_of_matrix">Theorem</xref>),
+      <me>
+        [S]_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} = I  \text{ and }   [T]_{\basis{C} \leftarrow \basis{B}} [S]_{\basis{B} \leftarrow \basis{C}} = I
+      </me>
+    </p>
+
+    <p>
+      Therefore the matrix <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> is invertible,
+      with inverse given by
+      <me>
+        [T]^{-1}_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{C}}
+      </me>.
+    </p>
+
+    <p>
+      <m>\Leftarrow</m>.
+      Suppose the matrix <m>[T] \equiv [T]_{\basis{C} \leftarrow \basis{B}}</m> is invertible.
+      Define the linear map
+      <me>
+        S : W \rightarrow V
+      </me>
+      by firstly defining it on the basis vectors in <m>\basis{C}</m> by
+      <me>
+        S(\ve{c}_i) := \sum_{p=1}^{\dim V} [T]^{-1}_{pi} \ve{b}_p
+      </me>
+      and then extending to all of <m>W</m> by linearity.
+      Then we have
+      <md>
+        <mrow>(T \circ S)(\ve{c}_i) \amp = T(S(\ve{c}_i))</mrow>
+        <mrow>\amp = T\left( \sum_{p=1}^{\dim V} [T]_{pi}^{-1} \ve{b}_p \right)</mrow>
+        <mrow>\amp = \sum_{p=1}^{\dim V} \sum_{q=1}^{\dim W} [T]^{-1}_{pi} [T]_{qp} \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{q=1}^{\dim W} \left( \sum_{p=1}^{\dim V} [T]_{qp} [T]^{-1}_{pi} \right) \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{q=1}^{\dim W} \left( [T] [T]^{-1} \right)_{qi} \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{q=1}^{\dim W} I_{qi} \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{q=1}^{\dim W} \delta_{qi} \ve{c}_q</mrow>
+        <mrow>\amp = \ve{c_i}</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Therefore, <m>T \circ S = \id_W</m>.
+      In a similar way, we can prove that <m>S \circ T = \id_V</m>.
+      Therefore the linear map <m>T</m> is an isomorphism,
+      with inverse map <m>T^{-1} = S</m>.
+    </p>
+  </proof>
+
+  <p>
+    We can refine this a bit further.
+    Explicitly, <sq>the inverse of the matrix of a linear map equals the matrix of the inverse of the linear map</sq>.
+  </p>
+
+  <corollary xml:id="inverse-of-map-via-matrices">
+    <statement>
+      <p>
+        Suppose <m>\basis{B}</m> and
+        <m>\basis{C}</m> are bases for vector spaces <m>V</m> and <m>W</m> respectively.
+        Suppose a linear map <m>T : V \rightarrow W</m> has inverse <m>T^{-1} : W \rightarrow V</m>.
+        Then
+        <me>
+          [T]_{\basis{C} \leftarrow \basis{B}}^{-1} = [T^{-1}]_{\basis{B} \leftarrow \basis{C}}
+        </me>.
+      </p>
+    </statement>
+  </corollary>
+
+  <proof>
+    <p>
+      We have
+      <md>
+        <mrow>_{\basis{C} \leftarrow \basis{B}} [T^{-1}]_{\basis{B} \leftarrow \basis{C}} \amp = [T \circ T^{-1}]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+        <mrow>\amp = [\id_W]_{\basis{C} \leftarrow \basis{C}} \amp \amp  \mbox{(\(T \circ T^{-1} = \id_W\))}</mrow>
+        <mrow>\amp = I</mrow>
+      </md>
+      and
+      <md>
+        <mrow>_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} \amp = [T^{-1} \circ T]_{\basis{B} \leftarrow \basis{B}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+        <mrow>\amp = [\id_V]_{\basis{B} \leftarrow \basis{B}} \amp \amp  \mbox{(\(T^{-1} \circ T = \id_V\))}</mrow>
+        <mrow>\amp = I</mrow>
+      </md>.
+    </p>
+  </proof>
+
+  <p>
+    The next Lemma says that the <sq>change-of-basis matrix</sq> from <xref ref="Ch2Sec5ChangeOfBasis">Section</xref>
+    is just the matrix of the identity linear map with respect to the relevant bases.
+  </p>
+
+  <lemma xml:id="change-of-basis-as-matrix">
+    <statement>
+      <p>
+        Let <m>\basis{B}</m> and <m>\basis{C}</m> be bases for an <m>m</m>-dimensional vector space <m>V</m>.
+        Then
+        <me>
+          \mat{P}_{\basis{C} \leftarrow \basis{B}} = [\id]_{\basis{C} \leftarrow \basis{B}}
+        </me>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <md>
+      <mrow>\mat{P}_{\basis{C} \leftarrow \basis{B}} \amp = \left[ [\ve{b}_1]_{\basis{C}} \cdots [\ve{b}_m]_{\basis{C}} \right] \amp \amp  \mbox{(Defn of \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
+      <mrow>\amp = \left[ [\id(\ve{b}_1)]_{\basis{C}} \cdots [\id(\ve{b}_m)]_{\basis{C}} \right]</mrow>
+      <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}}. \amp \amp  \mbox{(Defn of \([\id]_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
+    </md>
+  </proof>
+
+  <p>
+    The next Theorem tells us how the matrix of a linear operator changes when we change the bases used in computing it.
+  </p>
+
+  <theorem xml:id="matrix-in-different-basis">
+    <statement>
+      <p>
+        Let <m>\basis{B}</m> and <m>\basis{C}</m> be bases for a vector space <m>V</m>,
+        and let <m>T : V \rightarrow V</m> be a linear operator on <m>V</m>.
+        Then
+        <me>
+          [T]_{\basis{C} \leftarrow \basis{C}} = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P
+        </me>
+        where <m>P \equiv P_{\basis{B} \leftarrow \basis{C}}</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <md>
+      <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
+      <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="change-of-basis-as-matrix"/>)</mrow>
+      <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="inverse-of-map-via-matrices"/>)</mrow>
+      <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+      <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{C}}</mrow>
+      <mrow>\amp = \mbox{LHS} </mrow>
+    </md>.
+  </proof>
+
+  <exercises>
+      <exercise xml:id="trig_ex_1">
+    <statement>
+      <p>
+        Let
+        <me>
+          T : \Trig_1 \rightarrow \Trig_2
+        </me>
+        be the <sq>multiply with <m>\sin x</m></sq> linear map,
+        <m>T(f)(x) = \sin x f(x)</m>.
+        Compute <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> with respect to the standard basis
+        <m>\basis{B}</m> of <m>\Trig_1</m> and <m>\basis{C}</m> of <m>\Trig_2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Recall the standard double angle formulae:
+        <md>
+          <mrow>\sin(2x) \amp = 2 \sin x \cos x</mrow>
+          <mrow> \cos(2x) \amp = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1-2\sin^2 x</mrow>.
+          </md>
+           With these in mind, we compute:
+          <md>
+            <mrow>T(T_0) \amp= \sin x = T_2 </mrow>
+            <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
+            <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>.
+      </md>
+      Thus
+      <me>
+[T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
+    </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="trig_ex_2">
+    <statement>
+      <p>
+        Let
+        <me>
+          S : \Trig_2 \rightarrow \Trig_2
+        </me>
+        be the <sq>shift by <m>\frac{\pi}{6}</m></sq> map,
+        <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
+        Compute <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> with respect to the standard basis <m>\basis{C}</m> of <m>\Trig_2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        In this exercise, we shall use the standard angle addition formulae for trigonometric functions:
+        <md>
+          <mrow>\cos(x - y) \amp = \cos x \cos y + \sin x \sin y </mrow>
+          <mrow>\sin(x-y) \amp = \sin x \cos y - \cos x \sin y </mrow>.
+        </md>
+        We compute
+        <md>
+<mrow> S(T_0) \amp = 1 = T_0 </mrow>
+
+<mrow> S(T_1) \amp = \cos ( x - \frac{\pi}{6}) =  \frac{\sqrt{3}}{2} \cos x + \frac{1}{2}\sin x = \frac{\sqrt 3}{2} T_1 + \frac{1}{2} T_2</mrow>
+
+<mrow> S(T_2) \amp = \sin( x - \frac{\pi}{6}) =  -\frac{1}{2} \cos x +  \frac{\sqrt 3}{2}\sin x =  -\frac{1}{2}T_1 + \frac{\sqrt 3}{2} T_2 </mrow>
+
+<mrow> S(T_3) \amp = \cos(2x - \frac{\pi}{6})=  -\frac{1}{2}\sin^2 x  + \frac{\sqrt 3}{2}\cos^2 x + \sin x \cos x</mrow>
+
+<mrow> \amp  = -\frac{\sqrt 3}{2}(\frac{1}{2} - \frac{1}{2}\cos x) + \frac{\sqrt 3}{2}(\frac{1}{2} + \frac{1}{2}\cos 2x) + \frac{1}{2}\sin 2x </mrow>
+
+<mrow> \amp = \frac{\sqrt 3}{2}\cos 2x + \frac{1}{2} \sin 2x = \frac{\sqrt 3}{2} T_3 + \frac{1}{2} \sin 2x .</mrow>
+        </md>
+        Similarly,
+        <md>
+          <mrow> S(T_4) = \sin (2x - \frac{\pi}{6}) =  -\frac{1}{2} \cos 2x + \frac{\sqrt 3}{2} \sin 2x = -\frac{1}{2} T_3 + \frac{\sqrt 3}{2}T_4.</mrow>
+        </md>
+        Hence
+        <me>
+        [S]_{\basis{C} \leftarrow \basis{C}} = \begin{bmatrix}
+1  \mamp 0 \mamp 0 \mamp 0 \mamp 0 \\
+
+0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \mamp 0 \mamp 0 \\
+
+0 \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2} \mamp 0 \mamp 0 \\
+
+0 \mamp 0 \mamp 0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \\
+
+0 \mamp 0 \mamp 0  \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2}
+\end{bmatrix}.
+      </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Verify <xref ref="lin-map-in-matrix-theorem">Theorem</xref>
+        for the linear map <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> given by <m>S(\mat{M}) = \mat{M}^T</m>,
+        for the vector <m>\mat{A} \in \Mat_{2,2}</m> given by
+        <md>
+         <mrow> \mat{A} = \begin{bmatrix} 0 \mamp  1 \\ 0 \mamp  0 \end{bmatrix}</mrow>
+        </md>
+        and using the following bases of <m>\Mat_{2,2}</m>:
+        <me>
+          \basis{B} = \basis{C} = \bopen \mat{M}_1 = \begin{bmatrix}1 \mamp  1 \\ 2 \mamp  3\end{bmatrix}, \, \mat{M}_2 = \begin{bmatrix}1 \amp  0 \\ 1 \amp  1 \end{bmatrix}, \, \mat{M}_3 = \begin{bmatrix}1 \amp  1 \\ 1 \amp  1\end{bmatrix}, \, \mat{M}_4 =\begin{bmatrix}0 \amp  1 \\ 1 \amp  1 \end{bmatrix} \bclose.
+        </me>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Check that the linear maps <m>T</m> and <m>S</m> from <xref ref="trig_ex_1">Exercises</xref>
+        and <xref ref="trig_ex_2"></xref>
+        satisfy <m>[S \circ T]_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{B}} [T]_{\basis{C} \leftarrow \basis{B}}</m>.
+      </p>
+    </statement>
+  </exercise>
+</exercises>
+
+<!-- <solutions divisional="solution answer" />  -->
+
+
+</section>
+
