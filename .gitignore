@@ -264,12 +264,15 @@ TSWLatexianTemp*
 # html
 #*.html
 
-# ignore the html directory but include the svg files
+# ignore the html directory but include the svg files and the code files
 /ptx/html/*
 !/ptx/html/images/
+!/ptx/html/code/
+
 
 /ptxaf/html/*
 !/ptxaf/html/images/
+!/ptxaf/html/code/
 
 # latex directory
 /ptx/latex/*
