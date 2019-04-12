@@ -56,6 +56,7 @@
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Nullity}{Nullity}
 \DeclareMathOperator{\Rank}{Rank}
+\DeclareMathOperator{\Vect}{Vect}
 
 </macros>
 

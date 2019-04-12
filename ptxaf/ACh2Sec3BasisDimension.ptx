@@ -269,10 +269,64 @@
       </statement>
     </example>
 
+    <example xml:id="dim_poly_many_variables">
+      <title>Dimensie van <m>\Poly_n[x,y]</m></title>
+      <statement>
+      <p>
+        Onthou uit <xref ref="poly_many_variables_example"/> die vektorruimte <m>\Poly_n[x,y]</m> van polinome in veranderlikes <m>x</m> en <m>y</m> van graad minder of gelyk aan <m>n</m>.</p>
+
+        <p> 'n Basis vir <m>\Poly_0[x,y]</m> word gegee deur die konstante polinoom
+        <me>
+         1
+       </me>
+       so <m>\Dim \Poly_0 [x,y] = 1</m>. Soortgelyk, 'n basis vir <m>\Poly_1[x,y]</m> word gegee deur die polinome
+        <me>
+                1, x, y
+      </me>
+      so  <m>\Dim \Poly_1[x,y] = 3</m>. Soortgelyk, 'n basis vir <m>\Poly_2[x,y]</m> word gegee deur die polinome
+      <me>
+        1, x, y, x^2, xy, y^2
+      </me>
+      so <m>\Dim \Poly_2[x,y] = 6</m>. Deur sò te redeneer, sien ons dat
+      <md>
+            <mrow> \Dim \Poly_n [x,y] \amp = 1 + 2 + 3 + \cdots n+1 </mrow>
+            <mrow> \amp =  \frac{n(n+1)}{2}. </mrow>
+      </md>
+      </p>
+    </statement>
+    </example>
+
+    <example xml:id="dim_poly_vec_fields">
+      <title>Dimensie van <m>\Vect_n (\mathbb{R}^2)</m> </title>
+      <statement>
+      <p>Onthou uit <xref ref="poly_vector_fields_example"/> die vektorruimte <m>\Vect_n (\mathbb{R}^2)</m> van polinomiaal vektorvelde op <m>\mathbb{R}^2</m> wie se komponentfunksies almal graad minder of gelyk aan <m>n</m> het.</p>
+
+      <p>'n Basis vir <m>\Vect_0 (\mathbb{R}^2)</m> word gegee deur die konstant polinomiaalvektorvelde
+      <me>
+        (1, 0), (0, 1)
+    </me>
+    so <m>\Dim \Vect_0(\mathbb{R}^2) = 1 + 1 = 2</m>. Soortgelyk, 'n basis vir <m>\Vect_1(\mathbb{R}^2)</m> word gegee deur die polinomiaalvektorvelde
+        <me>
+                (1, 0), (x, 0), (y, 0), (0, 1), (0, x), (0, y)
+      </me>
+      so <m>\Dim \Vect_1(\mathbb{R}^2) = 3+3 = 6</m>. Soortgelyk 'n basis vir <m>\Vect_2(\mathbb{R}^2)</m> word gegee deur die polinomiaalvektorvelde
+      <md>
+          <mrow>      (1, 0), (x, 0), (y, 0), (x^2, 0), (xy, 0), (y^2, 0),  </mrow>
+          <mrow>      (0, 1), (0, x), (0, y), (0, x^2), (0, xy), (0, y^2)      </mrow>
+      </md>
+      so <m>\Dim \Vect_2(\mathbb{R}^2) = 6 + 6 = 12</m>. Deur sò te redeneer, sien ons dat
+      <md>
+        <mrow> \Dim \Vect_n(\mathbb{R}^2) \amp = \Dim \Poly_n[x,y] + \Dim \Poly_n[x,y] </mrow>
+        <mrow> \amp = (n+1)(n+2). </mrow>
+      </md>
+      </p>
+    </statement>
+    </example>
+
     <example>
       <statement>
         <p>
-          Veronderstel <m>X</m> is 'n eindige versameling.
+          Veronderstel <m>X</m> 'n eindige versameling is.
           Dan is
           <m>\Fun(X)</m> eindig-dimensioneel,
           met dimensie <m>|X|</m>, waar die basis gegee

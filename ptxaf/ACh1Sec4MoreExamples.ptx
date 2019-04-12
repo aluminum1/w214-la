@@ -313,7 +313,7 @@
     </solution>
   </exercise>
 
-  <example>
+  <example xml:id="functions_on_set_vec_space">
     <title>Funksies op 'n versameling</title>
     <statement>
       <p>

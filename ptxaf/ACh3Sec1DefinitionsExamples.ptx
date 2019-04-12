@@ -2,6 +2,10 @@
 
 <section xml:id="ACh3Sec1DefinitionsExamples">
   <title>Definisie en Voorbeelde</title>
+
+<subsection>
+  <title>Definisie van 'n lineêre afbeelding</title>
+
   <p>
     Herinner jouself daaraan dat 'n <em>funksie</em>
     (of 'n <em>afbeelding</em>)
@@ -68,6 +72,11 @@
     </p>
   </assemblage>
 
+</subsection>
+
+<subsection>
+  <title>Voorbeelde van lineêre afbleedings</title>
+
   <example>
     <title>Matrikse dien as line&#xea;re afbeeldings</title>
     <statement>
@@ -106,15 +115,48 @@
      <mrow> T : \Col_2 \amp \rightarrow \Col_2 </mrow>
      <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} 1 \amp 2 \\ 1 \amp -2 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} </mrow>
     </md>
-    Die volgende interaktiewe GeoGebra app demonstreer dit. Sleep die rooi vektor<m>\col{v}</m> en sien die effek op <m>\mat{A} \col{v}</m>. Jy kan ook die koëffisiënte van die matriks <m>\mat{A}</m> verander deur die sliders te sleep.
-    <figure>
-    <interactive geogebra="vexfrzez" />
-    <caption> Interaktiewe Geogebra app wat die lineêre afbeelding <m>\col{v} \mapsto \mat{A}\col{v}</m> vertoon. </caption>
-  </figure>
-
-
+    Die volgende interaktiewe GeoGebra app demonstreer dit. 
+       <figure>
+            <title>App: Matriks as 'n lineêre afbeelding</title>
+            <caption> Interactive GeoGebra applet wat die lineêre afbeelding <m>\col{v} \mapsto \mat{A}\col{v}</m> aantoon.</caption>
+            <interactive platform="geogebra" width="100%" aspect="18:22">
+                <slate surface="geogebra" material="vexfrzez" aspect="18:22">
+                    setCoordSystem(-9, 9, -8, 14);
+                    showFullScreenButton(true);
+                    setPerspective("G");
+                </slate>
+                <instructions>Sleep die rooi vektor<m>\col{v}</m> en sien die effek op <m>\mat{A} \col{v}</m>. Jy kan ook die koëffisiënte van die matriks <m>\mat{A}</m> verander deur die sliders te sleep.</instructions>
+            </interactive>
+        </figure>
     </statement>
   </example>
+
+<example>
+<title>'n Nie-lineêre afbeelding</title>
+  <statement>
+    Die volgende app illustreet die 'poolkoördinaate' afbeelding
+    <md>
+      <mrow> T : \mathbb{R}^2 \amp \rightarrow \mathbb{R}^2 </mrow>
+      <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} v_1 \cos(\pi v_2) \\ v_1 \sin(\pi v_2)  \end{bmatrix} </mrow>
+    </md>
+    Let op dat <m>T</m> 'n nie-lineêre afbeelding is, want, vir die meeste punte <m>\ve{v}, \ve{v}' \in \mathbb{R}^2</m>, is <m>T(\ve{v} + \ve{v}') \neq T(\ve{v}) + T(\ve{v}')</m>.
+    <figure>
+      <caption>App: Poolkoördinate as 'n nie-lineêre afbeelding</caption>
+        <interactive xml:id="interactive-polar-map" height="100%" platform="jsxgraph" source="code/jsxgraph/PolarCoordMap.js" aspect="10:4">
+            <sidebyside widths="40% 5% 40%" valign="middle">
+              <slate xml:id="jsxgraph-polar-1" surface="jsxboard"/>
+              <p><m> \xrightarrow{ \large T } </m></p>
+              <slate xml:id="jsxgraph-polar-2" surface="jsxboard"/>
+            </sidebyside>
+            <instructions>
+                <p>Sleep die punt <m>\ve{v}</m> en sien die effek op <m>T(\ve{v})</m>.</p>
+            </instructions>
+        </interactive>
+    </figure>
+    Nog 'n manier om te sien dat <m>T</m> nie-lineêr is, is te waarneem dat <m>T</m> nie reguit lyne na reguit lyne stuur nie.
+  </statement>
+</example>
+
 
 
   <example>
@@ -491,6 +533,57 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
   </exercise>
 
 
+ <example>
+    <title>Gradient as a linear map</title>
+    <statement>
+      <p>
+    Recall the vector space <m>\Poly_n</m> of polynomials in <m>x</m> and <m>y</m> (<xref ref="poly_many_variables_example"/>, dimension computed in <xref ref="dim_poly_many_variables"/>) and the vector space <m>\Vect_n (\mathbb{R}^2)</m> of polynomial vector fields on <m>\mathbb{R}^2</m> (<xref ref="poly_vector_fields_example"/>, dimension computed in <xref ref="dim_poly_vec_fields"/>). </p>
+
+    <p>The operation 'take the gradient' can be thought of as a linear map
+    <md>
+      <mrow> \nabla : \Poly_n[x,y] \amp \rightarrow \Vect_{n-1} (\mathbb{R}^2) </mrow>
+      <mrow> f \amp \mapsto \nabla f </mrow>
+    </md>
+ This is a linear map because <m>\nabla(f + g) = \nabla f + \nabla g </m> and <m>\nabla (kf) = k \nabla f</m>. </p>
+
+ <p> For example,
+    <me>
+ \nabla(x + xy) = (1 + y, x).
+  </me>
+ </p>
+  </statement>
+  </example>
+
+  <example>
+ <title>Double integral as a linear map</title>
+   <statement>
+    <p>Let <m>D \subseteq \mathbb{R}^2</m> be a region in the plane. Integrating polynomial functions over <m>D</m> can be thought of as a linear map
+    <md>
+      <mrow> I : \Poly_n [x,y] \amp \mapsto \mathbb{R} </mrow>
+      <mrow> f \amp \mapsto \iint_{D} f dA </mrow>
+    </md>
+    This is a linear map because
+    <md>
+  <mrow> \iint_D (f+g) dA \amp = \iint_D f dA + \iint_D g dA </mrow>
+  <mrow> \iint_D kf \, dA \amp = k \iint_D f \, dA </mrow>
+    </md>
+  </p>
+
+  <p>For example, let <m>D = \{ (x,y) : x^2 + y^2 \leq 1 \} </m>, and let <m>f = x^2</m>. Then
+  <me>
+   I(f) = \iint_D x^2 \, dA = \frac{\pi}{4}
+</me>
+as the reader will verify.
+</p>
+   </statement>
+  </example>
+
+</subsection>
+
+<subsection>
+  <title>'n Paar resultate oor lineêre afbeeldings</title>
+
+
   <lemma xml:id="lin_map_zero_to_zero">
     <statement>
       <p>
@@ -761,6 +854,7 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
     </statement>
   </example>
 
+</subsection>
 
 <exercises>
   <exercise>

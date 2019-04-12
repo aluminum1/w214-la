@@ -244,10 +244,15 @@
     <statement>
     <p>Die volgende interaktiewe GeoGebra app vertoon 'n vektor <m>\ve{v} \in \mathbb{R}^2</m> (in swart), 'n basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> (in rooi), en 'n agtergrond van integrale lineêre kombinasies van die basisvektore.</p>
     <figure>
-    <interactive geogebra="tpdmz8kj" />
-    <caption> Interaktiewe GeoGebra app wat die koördinaatvektor van <m>\ve{v}</m> relatief tot die basis <m>\basis{B}</m> aantoon. </caption>
+      <title>App: Koördinaatvektore</title>
+      <caption> Interaktiewe Geogebra app wat die koördinaatvektor van <m>\ve{v}</m> relatief tot die basis <m>\basis{B}</m> aantoon. </caption>
+      <interactive platform="geogebra" width="100%" aspect="1:1">
+        <slate surface="geogebra" material="tpdmz8kj" aspect="1:1">
+          setCoordSystem(-9, 9, -9, 9);
+        </slate>
+        <instructions>  Sleep die eindpunt van <m>\ve{v}</m> en sien hoe sy koördinaatvektor <m>[\ve{v}]_{\basis{B}}</m> relatief tot die basis <m>\basis{B}</m> verander. Jy kan ook die basis <m>\basis{B}</m> verander deur die eindpunte van die basisvektore <m>\ve{b}_1, \ve{b}_2</m> te sleep. Let op die effek op die koördinaatvektor <m>[\ve{v}]_{\basis{B}}</m>.</instructions>
+      </interactive>
     </figure>
-  <p>Sleep die pylpunt van <m>\ve{v}</m> en sien hoe sy koördinaatvektor<m>[\ve{v}]_{\basis{B}}</m> relatief tot die basis <m>\basis{B}</m> verander. Jy kan ook die basis <m>\basis{B}</m> verander deur die pylpunte van die basisvektore <m>\ve{b}_1, \ve{b}_2</m> te sleep. Let op die effek op die koördinaatvektor <m>[\ve{v}]_{\basis{B}}</m>.</p>
 </statement>
   </example>
 

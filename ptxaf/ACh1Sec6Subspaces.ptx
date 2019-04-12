@@ -438,59 +438,75 @@
     </statement>
   </exercise>
 
-    <example>
-    <title>Polynomials in many variables</title>
+ <example xml:id="poly_many_variables_example">
+    <title>Polinome in meer as een veranderlike</title>
     <statement>
     <p>
-      A <em>monomial</em> in two variables <m>x</m> and <m>y</m> is an expression of the form <m>x^m y^n</m> for some nonnegative integers <m>m,n</m>. The <em>total degree</em> of the monomial is <m>m+n</m>.For example,
-      <me>
-             x^3 y^2, xy^7, \quad \mbox{and } x^3
+       'n <em>monoom</em> in twee veranderlikes <m>x</m> en <m>y</m> is 'n uitdrukking van die vorm <m>x^m y^n</m> vir sekere nie-negatiewe heelgetalle <m>m,n</m>.  Die <em>graad</em> van die monoom is <m>m+n</m>. Byvoorbeeld,
+    <me>
+             \underbrace{x^3 y^2}_{\text{graad 5}}, \quad \underbrace{y^7}_{\text{graad 7}}.
     </me>
-    are monomials in the variables <m>x</m> and <m>y</m> of total degree
-    <me>
-    5, 8, \quad \mbox{and } 3
-  </me>
-  respectively. A <em>polynomial in two variables</em> is a linear combination of monomials. The <em>degree</em> of the polynomial is the highest total degree of the monomials occuring in the linear combination. For instance, 
+'n <em>Polinoom in twee veranderlikes <m>x</m> en <m>y</m></em> is lineêre kombinasie van monome. Die <em>graad</em> van die polinoom is die hoogste mag van die monome wat in die lineêre kombinasie verskyn. Byvoorbeeld,
       <men xml:id="two_var_poly_ex">
-             p = 5x^3 y^2 - 3xy^7, \quad q = xy^2 -x^3 + 3y^2
+             p = 5x^3 y^2 - 3xy^7
     </men>
-  are polynomials in two variables with total degree <m>8</m> and <m>3</m> respectively.</p>
+  is 'n polinoom in <m>x</m> en <m>y</m> van graad <m>8</m>. </p>
 
-   <p>   We write <m>\Poly^2</m> for the set of <em>all</em> polynomials in two variables, and <m>\Poly^2_n</m> for the set of all two-variable polynomials of total degree less than or equal to <m>n</m>. For instance, consier the polynomial 
-   <me>
-   p = 5x^3 y^2 - 3xy^7
-   </me>
-   The total degree of <m>p</m> is 8. So:
-   <ul>
-    <li> <m>p \in \Poly^2</m>, </li>
-    <li> <m>p \in \Poly^2_8</m> </li>
-    <li> <m>p \in \Poly^2_{12}</m> </li>
-    <li> <m>p \ni \Poly^2_7</m> </li>
-  </ul>
-    </p>
-  <p> We can regard a polynomial <m>p</m> in two variables as a special kind of function
-    <me>
-   p : \mathbb{R}^2 \rightarrow \mathbb{R}.
-  </me>
-In this way, we can regard <m>\Poly_2</m> (and similarly <m>\Poly^2_n</m>) as a subset of the vector space <m>\Fun(\mathbb{R}^2)</m> of <em>all</em> functions on <m>\mathbb{R}^2</m>. Indeed, they are <em>subspaces</em>, as the reader will check. </p>
+   <p>   Ons skryf <m>\Poly[x,y]</m> vir die versamleing van <em>alle</em> polinome in twee veranderlikes <m>x</m> en <m>y</m>, en <m>\Poly_n [x,y] </m> vir die versameling van alle polinome in <m>x</m> en <m>y</m> met graad minder of gelyk aan <m>n</m>. </p>
 
-<p>Two polynomials <m>p</m> and <m>q</m> in variables <m>x</m> and <m>y</m> are defined to be <em>equal</em> if and only if all their corresponding coefficients are equal. This is equivalent to the statement that <m>p(x,y)=q(x,y)</m> for all <m>(x,y) \in \mathbb{R}^2</m>. </p>
 
-<p>In the same way, we can talk about 3-variable polynomials, and so on, eg.
+  <p> Ons kan 'n polinoom <m>p</m> in twee veranderlikes beskou as 'n funksie
+    <md>
+   <mrow> p : \mathbb{R}^2 \amp \rightarrow \mathbb{R} </mrow>
+   <mrow> (x,y) \amp \mapsto p(x,y) </mrow>
+  </md>
+In hierdie manier kan ons <m>\Poly_n[x,y]</m> beskou as'n deelversameling van die vektorruimte <m>\Fun(\mathbb{R}^2)</m> van <em>alle</em> reëelwaardige funksies op <m>\mathbb{R}^2</m> (sien <xref ref="functions_on_set_vec_space"/> om ouself te herinner van die vektorruimte van reëelwaardige funksies op 'n versameling <m>X</m>). Inderdaad, <m>\Poly_n[x,y]</m> is 'n <em>deelruimte</em> van <m>\Fun(\mathbb{R}^2)</m>, en dus is dit 'n vektorruimte. </p>
+
+  <p>Twee polinome <m>p</m> en <m>q</m> in veranderlikes <m>x</m> en <m>y</m> is gedefineer as <em>gelyk</em>as en slegs as al hulle ooreenstemmende koëffisiente gelyk aan mekaar is. Dit is ekwivalent aan die bewering dat <m>p(x,y)=q(x,y)</m> vir alle <m>(x,y) \in \mathbb{R}^2</m>. </p>
+
+<p>In dieselfde manier, kan ons praat van polinome in <m>x,y,z</m> ensovoorts, byvoorbeeld
  <me>
-   r = 5x^3y^2z + 3xy - 4xz^3
-</me>
-is a polynomial of total degree <m>6</m> in the variables <m>x,y,z</m>. We can regard a polynomial in <m>k</m> variables as a special kind of function
- <me>
-   r : \mathbb{R}^k \rightarrow \mathbb{R}.
-</me>
-We write <m>\Poly^k</m> for the vector space of all <m>k</m>-variable polynomials. We can regard <m>\Poly^k</m> as a subspace of the vector space <m>\Fun(\mathbb{R}^k)</m> of <em>all</em> functions on <m>\mathbb{R}^k</m>. Similary, we write <m>\Poly^k_n</m> for the vector space of all <m>k</m>-variable polynomials of total degree less than or equal to <m>n</m>, and we regard it too as a subspace of <m>\Fun(\mathbb{R}^n)</m>. </p> 
+   r = 5x^3y^2z + 3xy - 4xz^3 \in \Poly_6[x,y,z].
+</me></p>
     </statement>
-  </example>
 
   <assemblage>
-    <p>When we say simply '<m>p</m> is a polynomial' we will mean that <m>p</m> is a polynomial in a single variable, i.e. <m>p \in \Poly</m>. Note that <m>\Poly = \Poly^1</m> and that <m>\Poly_n = \Poly^1_n</m>.</p>
+    <p>As ons net '<m>p</m> is 'n polinoom' sê, bedoel ons dat <m>p</m> 'n polinoom in 'n enkele veranderlike <m>x</m> is, met ander woorde <m>p \in \Poly</m>. Let up dat <m>\Poly = \Poly[x]</m>. </p>
   </assemblage>
+
+  </example>
+
+<example xml:id="poly_vector_fields_example">
+  <title>Polinomiaal vektorvelde</title>
+  <statement>
+    <p>
+    Onthou dat 'n <em>vektorveld</em> op <m>\mathbb{R}^2</m> 'n vektor is wie se komponente funksies is van <m>x</m> en <m>y</m>. Byvoorbeeld,
+    <me>
+ \ve{V} = (x^2 y, x \cos(y)).
+  </me>
+    Ons skryf <m> \Vect_n (\mathbb{R}^2) </m> vir die versameling van alle vektorvelde 
+    <me>
+    \ve{V} = (P(x,y), Q(x,y))
+    </me>
+    op <m>\mathbb{R}^2</m> wie se komponentfunksies <m>P</m> en <m>Q</m> polinome in<m>x,y</m> met graad minder of gelyk aan <m>n</m> is. Byvoorbeeld,
+    <me>
+ \ve{V} = (xy, x^2y^3 - x) \in \Vect_5(\mathbb{R}^2).
+  </me>
+  Ons defineer addisie en skalaarvermenigvuldiging vir vektorvelde in dieselfde manier as vir gewone vektore. Dit wil sê, as <m>\ve{V} = (V_1, V_2) </m> en <m>\ve{W} = (W_1, W_2)</m> vektorvelde op <m>\mathbb{R}^2</m> is, dan defineer ons
+  <me>
+ \ve{V} + \ve{W} := (V_1 + W_1, V_2 + W_2).
+</me>
+Soortgelyk, as <m>k \in \mathbb{R}</m>, defineer ons 
+<me>
+ k \ve{V} = (k V_1, k V_2).
+</me>
+Die nulvektorveld is gedefineer as die vektorveld wie se komponente die nulfunksie is:
+ <me>
+ Z = (0, 0).
+ </me>
+Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel die reëls van 'n vektorruimte bevredig.</p>
+  </statement>
+</example>
 
 
 
