@@ -577,7 +577,24 @@
     waar <m>x_0 \in I</m> en <m>c_0, \ldots, c_{n-1}</m> willekeurige konstantes is. Dan bestaan daar 'n unieke funksie <m>y(x)</m> op <m>I</m> wat die differensiaalvergelyingsaisfying <xref ref="diff_eqn_in_thm"/> bevredig asook die beginwaardes  <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
     </statement>
   </theorem>
- Ons gaan nie <xref ref="diff_eqn_exist_unique"/> bewys nie --- jy kan die bewys in 'n kursus oor Differensiaalvergelykings vind. Ons is eerder geinteresseerd in die volgende Lineêre Algebra <em>gevolgtrekking</em> van <xref ref="diff_eqn_exist_unique"/>.
+ Ons gaan nie <xref ref="diff_eqn_exist_unique"/> bewys nie --- jy kan die bewys in 'n kursus oor Differensiaalvergelykings vind. Ons is eerder geinteresseerd in die Lineêre Algebra <em>gevolgtrekkings</em> van <xref ref="diff_eqn_exist_unique"/>.
+ Maar eerstens, 'n voorbeeld om die Stelling te illustreer,.
+<example>
+  <title>Visualisering van <xref ref="diff_eqn_exist_unique"/></title>
+  <statement>
+    Die volgende app illustreer <xref ref="diff_eqn_exist_unique"/>. Sleep die rooi slepers om die koëffisiente van die differensiaal vergelyking te verander (in hierdie voordbeeld, die koëffisiënte is net getalle, maar in algemeen hulle is funksies van <m>x</m>). Sleep die rooi punte om die beginwaardes te verander.
+    <figure>
+        <interactive geogebra="https://www.geogebra.org/material/iframe/id/tyja5bpa/width/600/height/762/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:762" width="90%"/>
+      <caption>GeoGebra App: 2de orde GDV met konstante koëffisiënte.</caption>
+    </figure>
+  </statement>
+
+</example>
+
+
+
+
+
 <corollary> 
   <title>Dimensie van vektorruimte van oplossings van 'n homogene lineêre GDV van orde <m>n</m></title>
   <statement> Laat <m>V</m> die vektorruimte van alle oplossings van 'n <m>n</m>-ste orde homogene lineêre gewone differensiaalvergelyking op 'n interval <m>I</m> wees,

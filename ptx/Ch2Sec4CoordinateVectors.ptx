@@ -233,16 +233,11 @@
   <example xml:id="coord_vector_R2_geogebra">
     <title>Geogebra App: Coordinate vectors in <m>\mathbb{R}^2</m></title>
     <statement>
-    <p>The following GeoGebra interactive applet displays a vector <m>\ve{v} \in \mathbb{R}^2</m> (in black), a basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> (in red), and a background of integral linear combinations of the basis vectors.</p>
+    <p>The following GeoGebra interactive applet displays a vector <m>\ve{v} \in \mathbb{R}^2</m> (in black), a basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> (in red), and a background of integral linear combinations of the basis vectors. Drag the tip of <m>\ve{v}</m> and see how the coordinate vector <m>[\ve{v}]_{\basis{B}}</m> of <m>\ve{v}</m> with respect to <m>\basis{B}</m> changes. You can also change the basis <m>\basis{B}</m> by dragging the tips of the basis vectors <m>\ve{b}_1, \ve{b}_2</m>. Notice the effect on the coordinate vector <m>[\ve{v}]_{\basis{B}}</m>.</p>
     <figure>
       <title>App: Coordinate vectors</title>
       <caption> Interactive GeoGebra applet displaying the coordinate vector of <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m>. </caption>
-      <interactive platform="geogebra" width="100%" aspect="1:1">
-        <slate surface="geogebra" material="tpdmz8kj" width="95%" aspect="1:1">
-          setCoordSystem(-9, 9, -9, 9);
-        </slate>
-        <instructions>  Drag the tip of <m>\ve{v}</m> and see how the coordinate vector <m>[\ve{v}]_{\basis{B}}</m> of <m>\ve{v}</m> with respect to <m>\basis{B}</m> changes. You can also change the basis <m>\basis{B}</m> by dragging the tips of the basis vectors <m>\ve{b}_1, \ve{b}_2</m>. Notice the effect on the coordinate vector <m>[\ve{v}]_{\basis{B}}</m>.</instructions>
-      </interactive>
+      <interactive geogebra="https://www.geogebra.org/material/iframe/id/tpdmz8kj/width/600/height/703/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:703" width="90%"/>  
     </figure>
 
 </statement>

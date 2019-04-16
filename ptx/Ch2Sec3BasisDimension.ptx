@@ -509,7 +509,7 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
     </subsection>
 
     <subsection>
-	<title>Dimension of space of solutions to a homogenous linear differentialfjdskl fdsjkl equation</title>
+	<title>Dimension of space of solutions to a homogenous linear differential equation</title>
 	<introduction>
 		<p>We will now compute the dimension of the vector space of solutions to a homogenous linear ordinary differential equation. We will need the following theorem from the theory of differential equations, which we won't prove.
 			</p>
@@ -530,7 +530,20 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
 		where <m>x_0 \in I</m> and <m>c_0, \ldots, c_{n-1}</m> are arbitrary constants. Then there exists a unique function <m>y(x)</m> on <m>I</m> saisfying the differential equation <xref ref="diff_eqn_in_thm"/> and the initial conditions <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
 		</statement>
 	</theorem>
-  We will not cover the proof of <xref ref="diff_eqn_exist_unique"/>, which you can find in a course on Differential Equations. Instead, we are interested in the following Linear Algebra <em>consequence</em> of <xref ref="diff_eqn_exist_unique"/>.
+  We will not cover the proof of <xref ref="diff_eqn_exist_unique"/>, which you can find in a course on Differential Equations. We are more interested in its <em>consequences</em> for Linear Algebra. But first, an example to illustrate the Theorem. 
+<example>
+  <title>Visualizing <xref ref="diff_eqn_exist_unique"/></title>
+  <statement>
+    The following app gives a visual demonstration of <xref ref="diff_eqn_exist_unique"/>. Drag the red sliders to change the coefficients of the differential equation (in this example, the coefficients are just numbers, but in general they are functions of <m>x</m>). Drag the blue points to change the initial conditions.
+    <figure>
+        <interactive geogebra="https://www.geogebra.org/material/iframe/id/tyja5bpa/width/600/height/762/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:762" width="90%"/>
+      <caption>GeoGebra App: 2nd order ODE with constant coefficients.</caption>
+    </figure>
+  </statement>
+
+</example>
+
+  Instead, we are interested in the following Linear Algebra <em>consequence</em> of <xref ref="diff_eqn_exist_unique"/>.
 <corollary> 
   <title>Dimension of space of solutions to a homogenous linear ODE of order <m>n</m></title>
   <statement>Let <m>V</m> be the vector space of all solutions to an <m>n</m>th order homogenous linear ordinary differential equation on an interval <m>I</m>,
@@ -618,7 +631,8 @@ Clearly <m>f \in V</m>, in other words it is a solution of the differential equa
 </p>
    </paragraphs>
 </proof>
- Now let us do example computations illustrating these ideas. 
+
+ Let us do another example. 
 
 	<example>
 		<title>Application of existence and uniqueness theorem of solutions to ODE</title>
