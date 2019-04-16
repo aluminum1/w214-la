@@ -1,0 +1,41 @@
+var Px, Py, Cx, Cy, dPC, epsilon, dPCfor, dPCcurr, dPCback;
+var canincdobetter=true;
+
+epsilon=0.1;
+
+Cx=ggbApplet.getXcoord("C");
+Cy=ggbApplet.getYcoord("C");
+Px=ggbApplet.getXcoord("P");
+Py=ggbApplet.getYcoord("P");
+
+dPCcurr = Math.sqrt((Cx-Px)*(Cx-Px)+(Cx-Px)*(Cx-Px));
+
+
+while ( (dPCcurr > epsilon) && (canincdobetter)){
+   Px=ggbApplet.getXcoord("Pfor");
+   Py=ggbApplet.getYcoord("Pfor");
+   dPCfor = Math.sqrt((Cx-Px)*(Cx-Px)+(Cx-Px)*(Cx-Px));
+
+   Px=ggbApplet.getXcoord("Pback");
+   Py=ggbApplet.getYcoord("Pback");
+   dPCback = Math.sqrt((Cx-Px)*(Cx-Px)+(Cx-Px)*(Cx-Px));
+
+   if (dPCfor < dPCcurr)
+   {
+      ggbApplet.evalCommand("B=Bfor");
+      ggbApplet.evalCommand("Bfor=Point(f, tB+0.01)");
+      dPCcurr = dPCfor;
+   }
+   else if (dPCback < dPCcurr)
+   {
+      ggbApplet.evalCommand("B=Bback");
+      ggbApplet.evalCommand("Bback=Point(f, tB-0.01)");
+      dPCcurr = dPCback;
+   }
+   else
+   {
+      canincdobetter=false;
+   } 
+  
+ }
+

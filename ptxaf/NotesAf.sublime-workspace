@@ -1,0 +1,555 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"key",
+				"keyCode"
+			],
+			[
+				"diff",
+				"diffeqnboard"
+			],
+			[
+				"ch-b",
+				"ch-basis-exercise3"
+			],
+			[
+				"w",
+				"w_in_c_basis_exc"
+			],
+			[
+				"w_in",
+				"w_in_b_basis_exc"
+			],
+			[
+				"ic",
+				"ic2_diff_eqn_ex"
+			],
+			[
+				"second",
+				"second_eqn_ks"
+			],
+			[
+				"first",
+				"first_eqn_ks"
+			],
+			[
+				"diff_eqn",
+				"diff_eqn_example_thm"
+			],
+			[
+				"dimension",
+				"dimension_of_hyperplane_exercise"
+			],
+			[
+				"dim",
+				"dimension_of_hyperplane"
+			],
+			[
+				"me",
+				"me"
+			],
+			[
+				"lin",
+				"lin_dependence_prop"
+			],
+			[
+				"root",
+				"root_of_poly"
+			],
+			[
+				"exer",
+				"exercise-span-omission-3"
+			],
+			[
+				"exr",
+				"exercise-span-omission"
+			],
+			[
+				"side",
+				"sidebyside"
+			],
+			[
+				"sim_lin",
+				"sim_lin_eqns_3ex2"
+			],
+			[
+				"last_eqn",
+				"last_eqn_in_lin_comb_ex"
+			],
+			[
+				"sim_l",
+				"sim_lin_eqns_first_span_1ex"
+			],
+			[
+				"sim",
+				"sim_lin_eqns_first_span_4ex"
+			],
+			[
+				"expl",
+				"explicit_nonlinear_ode"
+			],
+			[
+				"a_s",
+				"a_2nd_soln_to_my_ode"
+			],
+			[
+				"first_exa",
+				"first_example_2nd_order_ode_eqn"
+			],
+			[
+				"sub",
+				"subspace_lem"
+			],
+			[
+				"firs",
+				"first_example_2nd_order_ode"
+			],
+			[
+				"remark",
+				"remark_about_lin_dependence"
+			],
+			[
+				"lin_comb",
+				"lin_comb_other_vec"
+			],
+			[
+				"lin_com",
+				"lin_comb_prec_vec"
+			],
+			[
+				"is",
+				"is_k_equal_to_zero"
+			],
+			[
+				"sm",
+				"smul_functions"
+			],
+			[
+				"zer",
+				"zero_vec_functions"
+			],
+			[
+				"add",
+				"add_op_functions"
+			],
+			[
+				"sec",
+				"section-with-maths"
+			],
+			[
+				"sect",
+				"section"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\n\n<section xml:id=\"ACh3Sec2CompositionOfLinearMaps\">\n  <title>Komposisie van line&#xea;re afbeeldings</title>\n  <definition>\n    <statement>\n      <p>\n        As <m>S : U \\rightarrow V</m> en <m>T : V \\rightarrow W</m> line&#xea;re\n        afbeeldings is,\n        dan is die <term>komposisie van <m>T</m> met <m>S</m></term> die\n        afbeelding <m>T \\circ S : U \\rightarrow W</m> gedefinieer as\n        <me>\n          (T \\circ S) (\\ve{u}) := T(S(\\ve{u}))\n        </me>\n        waar <m>\\ve{u}</m> in <m>U</m> is.\n      </p>\n    </statement>\n  </definition>\n\n  <p>\n    Sien <xref ref=\"composition_of_linear_maps_fig\">Figuur</xref>.\n  </p>\n\n  <figure xml:id=\"composition_of_linear_maps_fig\">\n    <caption>Komposisie van line&#xea;re\n    afbeeldings.</caption>\n    <image>\n\n<latex-image>\n          <![CDATA[\\begin{tikzpicture}[xscale=1.2]\n  \\draw (0, 0) circle (1);\n  \\draw (-4,0) circle (1);\n  \\draw (-8,0) circle (1);\n  \\node at (0, -1.3) {\\(U\\)};\n  \\node at (-4, -1.3) {\\(V\\)};\n  \\node at (-8, -1.3) {\\(W\\)};\n  \\draw[->] (-1.2, 0.3) to[out=150, in=30] node[above] {\\(S\\)} (-2.8, 0.3);\n  \\draw[->] (-5.2, 0.3) to[out=150, in=30] node[above] {\\(T\\)} (-6.8, 0.3);\n  \\draw[->] (-1.2, 0.6) to[out=140, in=40] node[above] {\\(T\\circ S\\)} (-7, 0.6);\n  \\node (u) at (0, -0.5) {\\(\\ve{u}\\)};\n  \\node (v) at (-4, -0.5) {\\(S(\\ve{u})\\)};\n  \\node (w) at (-8, -0.5) {\\(T(S(\\ve{u}))\\)};\n  \\draw[|->] (u) to[out=170, in=10] (v);\n  \\draw[|->] (v) to[out=170, in=10] (w);\\end{tikzpicture}]]>\n</latex-image>\n    </image>\n\n  </figure>\n\n  <assemblage>\n    <p>\n      Volgens wiskundige konvensie skryf ons die evaluering\n      van funksies van regs na links, bv.\n      <m>f(x)</m>.\n      Dit wil s&#xea;, jy begin\n      met die regterkantste simbool, <m>x</m>,\n      dan pas jy <m>f</m> daarop toe.\n      Daarom\n      is die mees natuurlike manier om hierdie prentjies te teken van regs na\n      links!\n    </p>\n  </assemblage>\n\n  <example>\n    <statement>\n      <p>\n        Laat <m>S : \\mathbb{R}^3 \\rightarrow \\Poly_2</m> en\n        <m>T :\n        \\Poly_2 \\rightarrow \\Poly_4</m> line&#xea;re afbeeldings wees wat soos\n        volg gedefinieer word:\n        <me>\n          S( (a,b,c) ) := ax^2 + (a-b)x + c,  T(p(x)) = x^2 p(x)\n        </me>.\n      </p>\n\n      <p>\n        Dan kan <m>T\\circ S</m> soos volg bereken word:\n        <md>\n          <mrow>(T \\circ S)((a,b,c)) \\amp = T(S((a,b,c)))</mrow>\n          <mrow>\\amp = T(ax^2 + (a-b)x + c)</mrow>\n          <mrow>\\amp = x^2 (ax^2 + (a-b)x + c)</mrow>\n          <mrow>\\amp = ax^4 + (a-b)x^3 + cx^2</mrow>\n        </md>.\n      </p>\n    </statement>\n  </example>\n\n  <proposition>\n    <statement>\n      <p>\n        As <m>S : U \\rightarrow V</m> en <m>T : V \\rightarrow W</m>\n        line&#xea;re afbeeldings is, dan is <m>T \\circ S : U \\rightarrow W</m> ook 'n\n        line&#xea;re afbeelding.\n      </p>\n    </statement>\n  </proposition>\n\n  <proof>\n    <p>\n      Laat <m>\\ve{u_1}, \\ve{u}_2 \\in U</m>.\n      Dan:\n      <md>\n        <mrow>(T \\circ S) (\\ve{u}_1 + \\ve{u}_2)   \\amp = T(S(\\ve{u}_1 + \\ve{u}_2)) \\amp \n        \\mbox{(defn van \\(T \\circ S\\))}</mrow>\n        <mrow>\\amp = T(S(\\ve{u}_1) + S(\\ve{u}_2)) \\amp  (S \\text{ is line&#xea;r })</mrow>\n        <mrow>\\amp = T(S(\\ve{u}_1)) + T(S(\\ve{u}_2)) \\amp (T \\text{ is line&#xea;r }) </mrow>\n        <mrow>\\amp = (T \\circ S) (\\ve{u}_1) + (T \\circ S)(\\ve{u}_2) \\amp  \\mbox{(defn van\n        \\(T \\circ S\\))}</mrow>\n      </md>\n    </p>\n\n    <p>\n      Op soortgelyke wyse het ons\n      <md>\n        <mrow>(T \\circ S) (k \\ve{u}) \\amp = T(S(k \\ve{u})) \\amp  \\mbox{(defn van \\(T \\circ\n        S\\))}</mrow>\n        <mrow>\\amp = T(kS(\\ve{u})) \\amp  (S \\text{ is line&#xea;r })</mrow>\n        <mrow>\\amp = k T(S(\\ve{u})) \\amp  (T \\text{ is line&#xea;r })</mrow>\n        <mrow>\\amp = k (T \\circ S) (\\ve{u}) \\amp  \\mbox{(defn van \\(T \\circ S\\))}</mrow>\n      </md>\n    </p>\n  </proof>\n\n  <example>\n    <statement>\n      <p>\n        Oorweeg as line&#xea;re afbeeldings die anti-afgeleide (<m>A</m>)\n        en die afgeleide (<m>D</m>)\n        <md>\n          <mrow>A : \\Poly_n \\amp  \\rightarrow \\Poly_{n+1}</mrow>\n          <mrow>D : \\Poly_{n+1} \\amp  \\rightarrow \\Poly_n</mrow>\n        </md>.\n      </p>\n\n      <p>\n        Is <m>D \\circ A = \\id_{\\Poly_n}</m>?\n      </p>\n    </statement>\n    <solution>\n      <p>\n        Ons bereken die aksie van <m>D \\circ A</m> op die basis <m>x^k</m>, <m>k=0\n        \\ldots n</m> van <m>\\Poly_n</m>:\n        <me>\n          x^k \\stackrel{A}{\\mapsto} \\frac{x^{k+1}}{k+1}\n          \\stackrel{D}{\\mapsto} \\frac{k+1}{k+1} x^k = x^k\n        </me>\n      </p>\n\n      <p>\n        Daarom, vir <m>k=0 \\ldots n</m>,\n        <md>\n          <mrow>(D \\circ A) (x^k) \\amp = x^k</mrow>\n          <mrow>\\amp = \\id_{\\Poly_n} (x^k)</mrow>\n        </md>.\n      </p>\n\n      <p>\n        Omdat <m>D \\circ A</m> en <m>\\id_{\\Poly_n}</m> op 'n basis van <m>\\Poly_n</m>\n        ooreenstem, stem hulle ooreen met alle vektore <m>\\ve{p} \\in \\Poly_n</m>\n        volgens <xref ref=\"defining_linear_map_on_basis\">Proposisie</xref>.\n        Daarom is <m>D\n        \\circ A = \\id_{\\Poly_n}</m>.\n      </p>\n\n      <assemblage>\n        <p>\n          Om die waarheid te s&#xea;, die stelling dat\n          <m>D \\circ A = \\id_{\\Poly_n}</m> is presies Deel I van die\n          Fundamentele Stelling van Calculus, toegepas op die spesiale\n          geval van polinome!\n        </p>\n      </assemblage>\n\n    </solution>\n  </example>\n\n\n  <exercise>\n    <statement>\n      <p>\n        Is <m>A \\circ D = \\id_{\\Poly_{n+1}}</m>?\n        As dit is, bewys\n        dit.\n        Indien nie, gee 'n eksplisiete teenvoorbeeld.\n      </p>\n    </statement>\n     <solution>\n        <p>\nThe statement is not true! For example, let <m> \\ve p(x) = x + 1 </m>.\nThen\n<me>\n(A \\circ D)(x + 1)  = A(1) = x \\neq x + 1.\n</me>\n</p>\n      </solution>\n\n  </exercise>\n  <exercises>\n\n\n  <exercise>\n    <statement>\n      <p>\n        Laat <m>R_\\theta : \\mathbb{R}^2 \\rightarrow \\mathbb{R}^2</m> die <sq>rotasie\n        met <m>\\theta</m></sq>-afbeelding van <xref ref=\"rotation-map-example-complete\">Voorbeeld</xref> wees,\n        <me>\n          R( (x,y)) = (x \\cos \\theta - y \\sin \\theta, \\, x sin \\theta + y\n          \\cos \\theta)\n        </me>.\n      </p>\n\n      <p>\n        Gaan algebra&#xef;es na dat <m>R_\\phi \\circ R_\\theta = R_{\\phi + \\theta}</m>\n        deur die aksie van die line&#xea;re afbeeldings op beide kante van die\n        vergelyking op 'n arbitr&#xea;re vektor <m>(x,y) \\in \\mathbb{R}^2</m> te\n        bereken.\n      </p>\n    </statement>\n    <solution>\n      <p>\n        <md>\n        <mrow>R_\\phi R_\\theta (x,y) \\amp = R_\\phi (x\\cos\\theta - y\\sin\\theta, x\\sin\\theta + y\\cos\\theta)</mrow>\n        <mrow>\\amp =  \\left((x\\cos\\theta-y\\sin\\theta)\\cos\\phi - (x\\sin\\theta + y \\cos\\theta)\\sin\\phi ,\\, (x\\cos\\theta - y\\sin\\theta)\\sin\\phi + (x\\sin\\theta + y\\cos\\theta)\\cos \\phi\\right) </mrow>\n        <mrow> \\amp = \\left(x(\\cos\\theta\\cos\\phi - \\sin\\theta\\sin\\phi) - y(\\sin\\theta\\cos\\phi + \\cos\\theta\\sin\\phi),\\, x(\\cos\\theta\\sin\\phi + \\sin\\theta\\cos\\phi) + y(\\cos\\theta\\cos\\phi - \\sin\\theta\\sin\\phi)\\right) </mrow>\n        <mrow> \\amp = \\left(x\\cos(\\theta + \\phi) - y\\sin(\\theta + \\phi), \\,x\\sin(\\theta+\\phi) + y\\cos(\\theta + \\phi_)\\right) </mrow>\n        <mrow> \\amp = R_{\\phi + \\theta}(x,y) </mrow>\n      </md>\n</p>\n    </solution>\n  </exercise>\n\n  <exercise>\n    <statement>\n      <p>\n        Laat <m>M : \\Poly_3 \\rightarrow \\Poly_4</m> die <sq>vermenigvuldig\n        met <m>x</m></sq>-afbeelding wees, <m>M(p)(x) = x p(x)</m>.\n        Laat <m>S : \\Poly_4\n        \\rightarrow \\Poly_4</m> die afbeelding <m>S(p(x)) = p(x-1)</m> wees.\n        Net so,\n        laat <m>T : \\Poly_3 \\rightarrow \\Poly_3</m> die afbeelding <m>T(p(x)) =\n        p(x-1)</m> wees.\n        Bereken <m>S \\circ M</m> en <m>M \\circ T</m>.\n        Is hulle gelyk?\n      </p>\n    </statement>\n     <solution>\n      <p>\n        <me>\n        (S \\circ M)(p(x)) = S(M(p(x))) = S(x p(x)) = (x-1)p(x-1)\n      </me>\n      whereas\n      <me>\n      (M \\circ S)(p(x)) = M(p(x-1)) = xp(x-1).\n    </me>\nThus <m> S \\circ M \\neq M \\circ S </m>.\n      </p>\n    </solution>\n  </exercise>\n</exercises>\n\n <!-- <solutions divisional=\"solution answer\" />  -->\n\n</section>\n\n",
+			"file": "ACh3Sec2CompositionOfLinearMaps.ptx",
+			"file_size": 8166,
+			"file_write_time": 131985817003450261,
+			"settings":
+			{
+				"buffer_size": 8166,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build asymptote images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build sageplot images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Fetch Youtube thumbnails (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract MyOpenMath problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract WeBWorK problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				]
+			],
+			[
+				"Packages/PreTeXtual/PreTeXt.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"lsp:",
+				"LSP: Show Diagnostics"
+			],
+			[
+				"LSP: En",
+				"LSP: Setup Language Server"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pretex",
+				"PreTeXtual: Set PreTeXt file extensions"
+			],
+			[
+				"prete",
+				"Set Syntax: PreTeXt"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf"
+	],
+	"file_history":
+	[
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/test.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/jsxgraph-diff-eqn.js",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/geog.js",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/test.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/code/jsxgraph/involute",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/interactive-1-if.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/interactive-polar-map-if.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/interactive-polar-map.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/code.js",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh1Sec4MoreExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh2Sec5ChangeOfBasis.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh1Sec6Subspaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh2Sec3BasisDimension.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh2Sec4CoordinateVectors.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/Tut3Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/Tut4Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/html/makehtml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/W214-Lin-Alg-Af.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec1DefinitionsExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/html/ACh2Sec5ChangeOfBasis.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/AChTutorials.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/mathbook/xsl/localizations/af-ZA.xsl",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/latex/makelatex",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/html/makesvg",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/xsl/localizations/af-ZA.xsl",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/xsl/localizations/pt-PT.xsl",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec2CompositionOfLinearMaps.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec3Isomorphisms.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec5KernelRange.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec6InjectiveSurjective.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec4LinearMapsMatrices.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec3BasisDimension.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/deploy",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/sample-article/sample-article.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/W214-Lin-Alg.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec6InjectiveSurjective.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec1LinearCombinationSpan.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec5ChangeOfBasis.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/latex/makelatex",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/makehtml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/makesvg",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/w214-lin-alg.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec4CoordinateVectors.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec2LinearIndependence.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec6Subspaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec5ResultsVectorSpace.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec4MoreExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec5KernelRange.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec4LinearMapsMatrices.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec3Isomorphisms.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec2CompositionOfLinearMaps.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec1DefinitionsExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/bookinfo.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/section-B.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/SageExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/index.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec3ExampleVectorSpace.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec2DefVectorSpace.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec1Intro.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/macros.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/fcla.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/gfdl-mathbook.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/.git/MERGE_MSG",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1AbstractVectorSpaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/.gitignore",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/ChTutorials.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut3.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut1.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut2.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/Tut2Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/xsl/mathbook-html.xsl",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/.gitconfig",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut1Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut2Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2FinDimVectorSpaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/AppAReminderAboutMatrices.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-9x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/is_k_equal_to_zero_exercise.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/sample-book/sample-book.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/latex/makepdf",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox2/quickstart.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec3ExampleVectorSpace.html",
+		"/Users/brucebartlett/.bash_profile",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/makehtml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/index.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/knowl/real_vec_space.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/index.tex",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/bibliography.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-1x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-2x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch4Sec3DiagonalizingMatricies.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch4Sec2Eigenvectors.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch4Sec1Eigenvalues.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch4EigenvaluesEigenvectors.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3LinearMaps.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch0NoteForStudent.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/AppBHypersurfaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section5-15x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-14x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-13x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-12x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-11x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-10x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-8x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-7x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-6x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-5x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-4x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-3x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-4.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-3.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/chapter1.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/sample-article/code/austin/figures.js",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/README.md",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/README",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/makenotes",
+		"/Users/brucebartlett/bin/hello-world",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox/section-multiple-paragraph.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox/quick.tex",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox/quick.html",
+		"/Users/brucebartlett/Library/Application Support/Sublime Text 3/Packages/User/PreTeXtual.sublime-settings",
+		"/Users/brucebartlett/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/PreTeXtual.sublime-settings",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/chapter2.ptx",
+		"/Users/brucebartlett/.bashrc"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "ACh3Sec2CompositionOfLinearMaps.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1906,
+								1906
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1024.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.diagnostics":
+	{
+		"height": 277.0
+	},
+	"output.exec":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "Packages/User/bruce-pretext.sublime-build",
+	"project": "NotesAf.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

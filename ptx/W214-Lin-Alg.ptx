@@ -40,7 +40,6 @@
 \newcommand{\bopen}{\{\llap{-}}
 \newcommand{\bclose}{\rlap{-}\}}
 \newcommand{\mamp}{&amp;}
-\newcommand{\mapsfrom}{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
 
 
 
@@ -101,6 +100,7 @@
   -->
 
     <backmatter>
+      <xi:include href="./Videos.ptx" />
       <xi:include href="./AppAReminderAboutMatrices.ptx" />
       <!--<xi:include href="./SageExamples.ptx" />-->
       <xi:include href="./bibliography.ptx" />

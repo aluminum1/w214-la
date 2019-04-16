@@ -101,56 +101,51 @@
   <definition>
     <statement>
       <p>
-        Ons s&#xea; dat 'n line&#xea;re afbeelding
-        <m>S : V
-        \rightarrow W</m> 'n <term>isomorfisme</term>
-        is as daar 'n line&#xea;re
-        afbeelding <m>T : W \rightarrow V</m> bestaan, sodat
+        Ons sê dat 'n lineêre afbeelding
+        <m>T : V  \rightarrow W</m> 'n <term>isomorfisme</term>
+        is as daar 'n lineêre
+        afbeelding <m>T^{-1} : W \rightarrow V</m> bestaan, sodat
         <men xml:id="inverse_map_in_iso">
-          T \circ S = \id_V  \mbox{en}   S \circ T = \id_W
+          T^{-1} \circ T = \id_V  \mbox{en}   T \circ T^{-1} = \id_W
         </men>.
       </p>
     </statement>
   </definition>
 
   <lemma>
-    <title>Inverses is Uniek</title>
+    <title>Inverse is Uniek</title>
     <statement>
       <p>
-        As <m>S : V \rightarrow W</m> 'n isomorfisme is
-        en <m>T, T' : W \rightarrow V</m> bevredig albei
+        As <m>T : V \rightarrow W</m> lineêre afbeeldings is, en <m>S, S' : W \rightarrow V</m> bevredig
         <md>
-          <mrow>T \circ S \amp = \id_V, \ \amp  S \circ T \amp = \id_W</mrow>
-          <mrow>T' \circ S \amp = \id_V, \ \amp  S \circ T' \amp = \id_W</mrow>
+          <mrow>S \circ T \amp = \id_V,  \amp  T \circ S \amp = \id_W</mrow>
+          <mrow>T' \circ S \amp = \id_V, \amp  T \circ S' \amp = \id_W</mrow>
         </md>
-        dan is <m>T = T'</m>.
+        dan is <m>S = S'</m>.
       </p>
     </statement>
   </lemma>
 
   <assemblage>
     <p>
-      Hierdie lemma laat ons toe om <m>T</m> <em>die</em> inverse
-      van <m>S</m> te noem
-      (teenoor <em>'n</em> inverse van <m>S</m>),
-      en ons kan <m>T =
-      S^{-1}</m> skryf.
+      Hierdie lemma beteken dat dit maak sin om te praat van  "die inverse" (in plaas van "'n inverse") van 'n lineêre afbeelding. So dit maak sin vir oms om die notasie<m>T^{-1}</m> te gebruik, wat gelees word as 
+      "die" inverse van <m>T</m>.
     </p>
   </assemblage>
 
   <proof>
     <p>
-      Om te wys dat <m>T = T'</m>, moet ons wys dat vir alle
+      Om te wys dat <m>S = S'</m>, moet ons wys dat vir alle
       <m>\ve{w} \in
-      W</m>, <m>T(\ve{w}) = T'(\ve{w})</m>.
+      W</m>, <m>S(\ve{w}) = S'(\ve{w})</m>.
       Inderdaad:
       <md>
-        <mrow>T(\ve{w}) \amp = T(\id_W (\ve{w})) \amp \amp  \mbox{(Defn van \(\id_W\))}</mrow>
-        <mrow>\amp = T( (S \circ T')(\ve{w})) \amp \amp  \mbox {($S \circ T' = \id_W$)}</mrow>
-        <mrow>\amp = T(S(T'(\ve{w}))) \amp \amp  \mbox {(Defn van $S \circ T'$)}</mrow>
-        <mrow>\amp = (T \circ S)(T'(\ve{w})) \amp \amp  \mbox {(Defn van $T \circ S$)}</mrow>
-        <mrow>\amp = \id_V (T'(\ve{w})) \amp \amp  \mbox{(\(T \circ S = \id_V\))}</mrow>
-        <mrow>\amp = T'(\ve{w}) \amp \amp  \mbox {(Defn van $\id_V$)}</mrow>
+        <mrow>S(\ve{w}) \amp = S(\id_W (\ve{w})) \amp \amp  \mbox{(Defn of \(\id_W\))}</mrow>
+        <mrow>\amp = S( (T \circ S')(\ve{w})) \amp \amp  \mbox {($T \circ S' = \id_W$)}</mrow>
+        <mrow>\amp = S(T(S'(\ve{w}))) \amp \amp  \mbox {(Defn of $T \circ S'$)}</mrow>
+        <mrow>\amp = (S \circ T)(S'(\ve{w})) \amp \amp  \mbox {(Defn of $S \circ T$)}</mrow>
+        <mrow>\amp = \id_V (S'(\ve{w})) \amp \amp  \mbox{(\(S \circ T = \id_V\))}</mrow>
+        <mrow>\amp = S'(\ve{w}) \amp \amp  \mbox {(Defn of $\id_V$)}</mrow>
       </md>.
     </p>
   </proof>
@@ -169,25 +164,21 @@
       <p>
         Wys dat <m>\mathbb{R}^n</m> isomorfies aan <m>\Poly_{n-1}</m> is.
       </p>
-      <p>
       <solution>
         <p>
-          Ons definieer 'n paar line&#xea;re afbeeldings
+          Ons definieer die volgende lineêre afbeeldings:
           <md>
-            <mrow>S : \mathbb{R}^n \amp  \rightleftarrows \Poly_{n-1} : T</mrow>
-            <intertext>soos volg:</intertext>
-            <mrow>(a_1, a_2, \ldots, a_n) \amp  \stackrel{S}{\mapsto} a_1 + a_2 x +
-            \cdots + a_n x^{n-1}</mrow>
-            <mrow>(a_1, a_2, \ldots, a_n) \amp  \stackrel{T}{\mapsfrom} a_1 + a_2 x +
-            \cdots + a_n x^{n-1}</mrow>
+          <mrow>T : \mathbb{R}^n \amp  \rightarrow \Poly_{n-1}</mrow>
+          <mrow>(a_1, a_2, \ldots, a_n) \amp \mapsto a_1 + a_2 x + \cdots + a_n x^{n-1}</mrow>
+          <mrow>T^{-1} : \Poly_{n-1} \amp \rightarrow \mathbb{R}^n </mrow>
+          <mrow> a_1 + a_2 x + \cdots + a_n x^{n-1} \amp \mapsto (a_1, a_2, \ldots, a_n)</mrow>
           </md>
         </p>
-      </solution>
-    </p>
       <p>
-        Ons het duidelik dat <m>T \circ S = \id_{\mathbb{R}^n}</m> en <m>S \circ T =
+        Ons het duidelik dat <m>T^{-1} \circ T = \id_{\mathbb{R}^n}</m> en <m>T \circ T^{-1} =
         \id_{\Poly_{n-1}}</m>.
       </p>
+      </solution>
     </statement>
   </example>
 
@@ -283,7 +274,7 @@
         Afbeelding te Definieer op 'n Basis), om die aksie van <m>S</m> en <m>T</m>
         op die basisvektore te definieer. Ons pen neer:</intertext>
         <mrow>\ve{e}_i \amp  \stackrel{S}{\mapsto} \ve{f}_i</mrow>
-        <mrow>\ve{e}_i \amp  \stackrel{T}{\mapsfrom} \ve{f}_i</mrow>
+        <mrow>\ve{f}_i \amp  \stackrel{T}{\mapsto} \ve{e}_i</mrow>
       </md>
     </p>
 
@@ -315,7 +306,7 @@
     \ldots, \ve{b}_m \bclose</m>.
     Oorweeg die afbeelding
     <md>
-      <mrow>_\basis{B} : V \amp  \rightarrow \Col_m</mrow>
+      <mrow>[\cdot]_\basis{B} : V \amp  \rightarrow \Col_m</mrow>
       <mrow>\ve{v} \amp  \mapsto [\ve{v}]_\basis{B}</mrow>
     </md>
   </p>
@@ -447,14 +438,16 @@
       <p>
         Laat <m>V</m> 'n vektorruimte met basis <m>\basis{B} = \bopen
         \ve{e}_1, \ldots, \ve{e}_m\bclose</m> wees.
-        Die afbeeldings
+        Die afbeelding
         <md>
-          <mrow>_\basis{B} : V \amp  \rightleftarrows  \Col_m : \ve{vec}_{V,
-          \basis{B}}</mrow>
+          <mrow>[\cdot]_\basis{B} : V \amp  \rightleftarrows  \Col_m </mrow>
           <mrow>\ve{v} \amp  \mapsto [\ve{v}]_{\basis{B}}</mrow>
-          <mrow>\ve{vec}_{V, \basis{B}}(\mat{c}) \amp  \mapsfrom \mat{c}</mrow>
         </md>
-        is 'n isomorfisme van vektorruimtes.
+        is 'n isomorfisme, met inverse
+        <md>
+          <mrow>\ve{vec}_{V, \basis{B}} : \Col_m \amp \rightarrow V </mrow>
+          <mrow>\mat{c} \amp \mapsto \ve{vec}_{V, \basis{B}}(\mat{c}).</mrow>
+        </md>
       </p>
     </statement>
   </theorem>

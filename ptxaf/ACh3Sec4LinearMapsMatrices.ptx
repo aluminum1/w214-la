@@ -41,6 +41,7 @@
   </example>
 
   <theorem xml:id="lin-map-in-matrix-theorem">
+    <title>Lineêre Afbeeldings en Matriks Vermenigvulding van Koördinaatvektore</title>
     <statement>
       <p>
         Laat <m>T : V \rightarrow
@@ -83,14 +84,6 @@
       </p>
     </proof>
   </theorem>
-
-  <assemblage>
-    <p>
-      As ons hierdie stelling 'n naam moes gee, sou dit
-      "Die verhouding tussen Line&#xea;re Afbeeldings, Ko&#xf6;rdinaatvektore
-      en Matriksvermenigvuldiging van Kolomvektore-Stelling" wees!
-    </p>
-  </assemblage>
 
   <example>
     <statement>

@@ -142,7 +142,7 @@
     <figure>
         <caption>Polar coordinates as a nonlinear map.</caption>
 
-        <interactive xml:id="interactive-polar-map" height="100%" platform="jsxgraph" source="code/jsxgraph/PolarCoordMap.js" aspect="10:4">
+        <interactive xml:id="interactive-polar-map" platform="jsxgraph" source="code/jsxgraph/PolarCoordMap.js" aspect="10:4">
             <sidebyside widths="40% 5% 40%" valign="middle">
               <slate xml:id="jsxgraph-polar-1" surface="jsxboard"/>
               <p><m> \xrightarrow{ \large T } </m></p>

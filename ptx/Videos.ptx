@@ -1,0 +1,18 @@
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Videos">
+  <title>Videos of Lectures</title>
+
+      <figure>
+        <caption>Lecture 17</caption>
+        <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lecture17.mp4" preview="../latex/images/preview-doc-cam.jpg" width="70%" />
+    </figure>
+
+      <figure>
+        <caption>Lecture 18</caption>
+        <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lecture18.mp4" preview="../latex/images/preview-doc-cam.jpg" width="70%" />
+    </figure>
+
+
+
+
+</appendix>
+

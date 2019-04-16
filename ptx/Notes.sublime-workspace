@@ -1,0 +1,553 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"key",
+				"keyCode"
+			],
+			[
+				"diff",
+				"diffeqnboard"
+			],
+			[
+				"ch-b",
+				"ch-basis-exercise3"
+			],
+			[
+				"w",
+				"w_in_c_basis_exc"
+			],
+			[
+				"w_in",
+				"w_in_b_basis_exc"
+			],
+			[
+				"ic",
+				"ic2_diff_eqn_ex"
+			],
+			[
+				"second",
+				"second_eqn_ks"
+			],
+			[
+				"first",
+				"first_eqn_ks"
+			],
+			[
+				"diff_eqn",
+				"diff_eqn_example_thm"
+			],
+			[
+				"dimension",
+				"dimension_of_hyperplane_exercise"
+			],
+			[
+				"dim",
+				"dimension_of_hyperplane"
+			],
+			[
+				"me",
+				"me"
+			],
+			[
+				"lin",
+				"lin_dependence_prop"
+			],
+			[
+				"root",
+				"root_of_poly"
+			],
+			[
+				"exer",
+				"exercise-span-omission-3"
+			],
+			[
+				"exr",
+				"exercise-span-omission"
+			],
+			[
+				"side",
+				"sidebyside"
+			],
+			[
+				"sim_lin",
+				"sim_lin_eqns_3ex2"
+			],
+			[
+				"last_eqn",
+				"last_eqn_in_lin_comb_ex"
+			],
+			[
+				"sim_l",
+				"sim_lin_eqns_first_span_1ex"
+			],
+			[
+				"sim",
+				"sim_lin_eqns_first_span_4ex"
+			],
+			[
+				"expl",
+				"explicit_nonlinear_ode"
+			],
+			[
+				"a_s",
+				"a_2nd_soln_to_my_ode"
+			],
+			[
+				"first_exa",
+				"first_example_2nd_order_ode_eqn"
+			],
+			[
+				"sub",
+				"subspace_lem"
+			],
+			[
+				"firs",
+				"first_example_2nd_order_ode"
+			],
+			[
+				"remark",
+				"remark_about_lin_dependence"
+			],
+			[
+				"lin_comb",
+				"lin_comb_other_vec"
+			],
+			[
+				"lin_com",
+				"lin_comb_prec_vec"
+			],
+			[
+				"is",
+				"is_k_equal_to_zero"
+			],
+			[
+				"sm",
+				"smul_functions"
+			],
+			[
+				"zer",
+				"zero_vec_functions"
+			],
+			[
+				"add",
+				"add_op_functions"
+			],
+			[
+				"sec",
+				"section-with-maths"
+			],
+			[
+				"sect",
+				"section"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Ch3Sec2CompositionOfLinearMaps.ptx",
+			"settings":
+			{
+				"buffer_size": 7721,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/PreTeXtual/PreTeXt.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build asymptote images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build sageplot images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Fetch Youtube thumbnails (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract MyOpenMath problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract WeBWorK problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				]
+			],
+			[
+				"Packages/PreTeXtual/PreTeXt.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"lsp:",
+				"LSP: Show Diagnostics"
+			],
+			[
+				"LSP: En",
+				"LSP: Setup Language Server"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pretex",
+				"PreTeXtual: Set PreTeXt file extensions"
+			],
+			[
+				"prete",
+				"Set Syntax: PreTeXt"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx"
+	],
+	"file_history":
+	[
+		"/Users/brucebartlett/Library/Application Support/Sublime Text 3/Packages/User/bruce-pretext.sublime-build",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/test.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/jsxgraph-diff-eqn.js",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/geog.js",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/test.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/code/jsxgraph/involute",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/interactive-1-if.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/interactive-polar-map-if.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/interactive-polar-map.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/code.js",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh1Sec4MoreExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh2Sec5ChangeOfBasis.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh1Sec6Subspaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh2Sec3BasisDimension.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh2Sec4CoordinateVectors.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/Tut3Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/Tut4Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/html/makehtml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/W214-Lin-Alg-Af.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec1DefinitionsExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/html/ACh2Sec5ChangeOfBasis.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/AChTutorials.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/mathbook/xsl/localizations/af-ZA.xsl",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/latex/makelatex",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/html/makesvg",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/xsl/localizations/af-ZA.xsl",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/xsl/localizations/pt-PT.xsl",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec2CompositionOfLinearMaps.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec3Isomorphisms.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec5KernelRange.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec6InjectiveSurjective.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec4LinearMapsMatrices.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec3BasisDimension.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/deploy",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/sample-article/sample-article.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/W214-Lin-Alg.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec6InjectiveSurjective.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec1LinearCombinationSpan.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec5ChangeOfBasis.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/latex/makelatex",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/makehtml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/makesvg",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/w214-lin-alg.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec4CoordinateVectors.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec2LinearIndependence.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec6Subspaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec5ResultsVectorSpace.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec4MoreExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec5KernelRange.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec4LinearMapsMatrices.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec3Isomorphisms.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec2CompositionOfLinearMaps.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec1DefinitionsExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/bookinfo.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/section-B.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/SageExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/index.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec3ExampleVectorSpace.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec2DefVectorSpace.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec1Intro.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/macros.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/fcla.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/gfdl-mathbook.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/.git/MERGE_MSG",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1AbstractVectorSpaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/.gitignore",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/ChTutorials.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut3.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut1.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut2.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/Tut2Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/xsl/mathbook-html.xsl",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/.gitconfig",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut1Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut2Afr.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2FinDimVectorSpaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/AppAReminderAboutMatrices.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-9x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/is_k_equal_to_zero_exercise.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/sample-book/sample-book.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/latex/makepdf",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox2/quickstart.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec3ExampleVectorSpace.html",
+		"/Users/brucebartlett/.bash_profile",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/makehtml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/index.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/knowl/real_vec_space.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/index.tex",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/bibliography.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-1x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-2x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch4Sec3DiagonalizingMatricies.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch4Sec2Eigenvectors.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch4Sec1Eigenvalues.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch4EigenvaluesEigenvectors.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3LinearMaps.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch0NoteForStudent.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/AppBHypersurfaces.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section5-15x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-14x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-13x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-12x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-11x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-10x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-8x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-7x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-6x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-5x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-4x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-3x.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-4.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-3.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/chapter1.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/sample-article/code/austin/figures.js",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/README.md",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/dev/examples/README",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/makenotes",
+		"/Users/brucebartlett/bin/hello-world",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox/section-multiple-paragraph.html",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox/quick.tex",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox/quick.html",
+		"/Users/brucebartlett/Library/Application Support/Sublime Text 3/Packages/User/PreTeXtual.sublime-settings",
+		"/Users/brucebartlett/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/PreTeXtual.sublime-settings",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/chapter2.ptx",
+		"/Users/brucebartlett/.bashrc"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Ch3Sec2CompositionOfLinearMaps.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								122,
+								122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.diagnostics":
+	{
+		"height": 277.0
+	},
+	"output.exec":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "Packages/User/bruce-pretext.sublime-build",
+	"project": "Notes.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

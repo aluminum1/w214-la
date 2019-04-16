@@ -90,10 +90,10 @@
   <definition>
     <statement>
       <p>
-        We say that a linear map <m>S : V \rightarrow W</m> is an <term>isomorphism</term>
-        if there exists a linear map <m>T : W \rightarrow V</m> such that
+        We say that a linear map <m>T : V \rightarrow W</m> is an <term>isomorphism</term>
+        if there exists a linear map <m>T^{-1} : W \rightarrow V</m> such that
         <men xml:id="inverse_map_in_iso">
-          T \circ S = \id_V  \mbox{and}   S \circ T = \id_W
+          T^{-1} \circ T = \id_V  \mbox{and}   T \circ T^{-1} = \id_W
         </men>.
       </p>
     </statement>
@@ -103,38 +103,36 @@
     <title>Uniqueness of Inverses</title>
     <statement>
       <p>
-        If <m>S : V \rightarrow W</m> is an isomorphism and <m>T, T' : W \rightarrow V</m> both satisfy
+        If <m>T : V \rightarrow W</m> is a linear map, and <m>S, S' : W \rightarrow V</m> satisfy
         <md>
-          <mrow>T \circ S \amp = \id_V, \ \amp  S \circ T \amp = \id_W</mrow>
-          <mrow>T' \circ S \amp = \id_V, \ \amp  S \circ T' \amp = \id_W</mrow>
+          <mrow>S \circ T \amp = \id_V,  \amp  T \circ S \amp = \id_W</mrow>
+          <mrow>T' \circ S \amp = \id_V, \amp  T \circ S' \amp = \id_W</mrow>
         </md>
-        then <m>T = T'</m>.
+        then <m>S = S'</m>.
       </p>
     </statement>
   </lemma>
 
   <assemblage>
     <p>
-      This lemma justifies us calling <m>T</m>
-      <em>the</em> inverse of <m>S</m>
-      (as opposed to <em>an</em> inverse of <m>S</m>),
-      and also justifies us writing <m>T = S^{-1}</m>.
+      This lemma justifies us talking about "the inverse" (instead of "an inverse") of a linear map. So it makes sense for us to use the notation <m>T^{-1}</m>, which reads as 
+      "the" inverse of <m>T</m>.
     </p>
   </assemblage>
 
   <proof>
     <p>
-      To show that <m>T = T'</m>,
+      To show that <m>S = S'</m>,
       we must show that for all <m>\ve{w} \in W</m>,
-      <m>T(\ve{w}) = T'(\ve{w})</m>.
+      <m>S(\ve{w}) = S'(\ve{w})</m>.
       Indeed:
       <md>
-        <mrow>T(\ve{w}) \amp = T(\id_W (\ve{w})) \amp \amp  \mbox{(Defn of \(\id_W\))}</mrow>
-        <mrow>\amp = T( (S \circ T')(\ve{w})) \amp \amp  \mbox {($S \circ T' = \id_W$)}</mrow>
-        <mrow>\amp = T(S(T'(\ve{w}))) \amp \amp  \mbox {(Defn of $S \circ T'$)}</mrow>
-        <mrow>\amp = (T \circ S)(T'(\ve{w})) \amp \amp  \mbox {(Defn of $T \circ S$)}</mrow>
-        <mrow>\amp = \id_V (T'(\ve{w})) \amp \amp  \mbox{(\(T \circ S = \id_V\))}</mrow>
-        <mrow>\amp = T'(\ve{w}) \amp \amp  \mbox {(Defn of $\id_V$)}</mrow>
+        <mrow>S(\ve{w}) \amp = S(\id_W (\ve{w})) \amp \amp  \mbox{(Defn of \(\id_W\))}</mrow>
+        <mrow>\amp = S( (T \circ S')(\ve{w})) \amp \amp  \mbox {($T \circ S' = \id_W$)}</mrow>
+        <mrow>\amp = S(T(S'(\ve{w}))) \amp \amp  \mbox {(Defn of $T \circ S'$)}</mrow>
+        <mrow>\amp = (S \circ T)(S'(\ve{w})) \amp \amp  \mbox {(Defn of $S \circ T$)}</mrow>
+        <mrow>\amp = \id_V (S'(\ve{w})) \amp \amp  \mbox{(\(S \circ T = \id_V\))}</mrow>
+        <mrow>\amp = S'(\ve{w}) \amp \amp  \mbox {(Defn of $\id_V$)}</mrow>
       </md>.
     </p>
   </proof>
@@ -153,23 +151,20 @@
     <p>
       Show that <m>\mathbb{R}^n</m> is isomorphic to <m>\Poly_{n-1}</m>
     </p>
-    <p>
     <solution>
       <p>
-        We define a pair of linear maps
+        We define the following linear maps:
         <md>
-          <mrow>S : \mathbb{R}^n \amp  \rightleftarrows \Poly_{n-1} : T</mrow>
-          <intertext>as follows:</intertext>
-          <mrow>(a_1, a_2, \ldots, a_n) \amp  \stackrel{S}{\mapsto} a_1 + a_2 x + \cdots + a_n x^{n-1}</mrow>
-          <mrow>(a_1, a_2, \ldots, a_n) \amp  \stackrel{T}{\mapsfrom} a_1 + a_2 x + \cdots + a_n x^{n-1}</mrow>
+          <mrow>T : \mathbb{R}^n \amp  \rightarrow \Poly_{n-1}</mrow>
+          <mrow>(a_1, a_2, \ldots, a_n) \amp \mapsto a_1 + a_2 x + \cdots + a_n x^{n-1}</mrow>
+          <mrow>T^{-1} : \Poly_{n-1} \amp \rightarrow \mathbb{R}^n </mrow>
+          <mrow> a_1 + a_2 x + \cdots + a_n x^{n-1} \amp \mapsto (a_1, a_2, \ldots, a_n)</mrow>
         </md>
       </p>
-    </solution>
-</p>
-   
-    <p>
-      We clearly have <m>T \circ S = \id_{\mathbb{R}^n}</m> and <m>S \circ T = \id_{\Poly_{n-1}}</m>.
+      <p>
+      We clearly have <m>T^{-1} \circ T = \id_{\mathbb{R}^n}</m> and <m>T \circ T^{-1} = \id_{\Poly_{n-1}}</m>.
     </p>
+    </solution>
     </statement>
   </example>
 
@@ -247,7 +242,7 @@
         <mrow>S : V \amp \rightleftarrows W : T</mrow>
         <intertext>it is sufficient, by <xref ref="defining_linear_map_on_basis">Proposition</xref> (Sufficient to Define a Linear Map on a Basis), to define the action of <m>S</m> and <m>T</m> on the basis vectors. We set:</intertext>
         <mrow>\ve{e}_i \amp  \stackrel{S}{\mapsto} \ve{f}_i</mrow>
-        <mrow>\ve{e}_i \amp  \stackrel{T}{\mapsfrom} \ve{f}_i</mrow>
+        <mrow>\ve{f}_i \amp  \stackrel{T}{\mapsto} \ve{e}_i</mrow>
       </md>
     </p>
 
@@ -277,7 +272,7 @@
     Let <m>V</m> be a vector space with basis <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m>.
     Consider the map
     <md>
-      <mrow>_\basis{B} : V \amp  \rightarrow \Col_m</mrow>
+      <mrow>[\cdot]_\basis{B} : V \amp  \rightarrow \Col_m</mrow>
       <mrow>\ve{v} \amp  \mapsto [\ve{v}]_\basis{B}</mrow>
     </md>
     which sends a vector <m>\ve{v} \in V</m> to its corresponding coordinate vector <m>[\ve{v}]_\basis{B} \in \Col_m</m>.
@@ -392,13 +387,16 @@
     <statement>
       <p>
         Let <m>V</m> be a vector space with basis <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m\bclose</m>.
-        The maps
+        The map
         <md>
-          <mrow>_\basis{B} : V \amp  \rightleftarrows  \Col_m : \ve{vec}_{V, \basis{B}}</mrow>
+          <mrow>[ \cdot ]_\basis{B} : V \amp  \rightarrow \Col_m </mrow>
           <mrow>\ve{v} \amp  \mapsto [\ve{v}]_{\basis{B}}</mrow>
-          <mrow>\ve{vec}_{V, \basis{B}}(\mat{c}) \amp  \mapsfrom \mat{c}</mrow>
         </md>
-        are an isomorphism of vector spaces.
+        is an isomorphism of vector spaces, with inverse
+        <md>
+          <mrow>\Col_m \amp \rightarrow V </mrow>
+          <mrow>\mat{c} \amp \mapsto \ve{vec}_{V, \basis{B}}(\mat{c}).</mrow>
+        </md>
       </p>
     </statement>
   </theorem>

@@ -120,7 +120,7 @@
             <title>App: Matriks as 'n lineêre afbeelding</title>
             <caption> Interactive GeoGebra applet wat die lineêre afbeelding <m>\col{v} \mapsto \mat{A}\col{v}</m> aantoon.</caption>
             <interactive platform="geogebra" width="100%" aspect="18:22">
-                <slate surface="geogebra" material="vexfrzez" aspect="18:22">
+                <slate surface="geogebra" width="95%" material="vexfrzez" aspect="18:22">
                     setCoordSystem(-9, 9, -8, 14);
                     showFullScreenButton(true);
                     setPerspective("G");
@@ -134,7 +134,7 @@
 <example>
 <title>'n Nie-lineêre afbeelding</title>
   <statement>
-    Die volgende app illustreet die 'poolkoördinaate' afbeelding
+    Die volgende app illustreer die 'poolkoördinaate' afbeelding
     <md>
       <mrow> T : \mathbb{R}^2 \amp \rightarrow \mathbb{R}^2 </mrow>
       <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} v_1 \cos(\pi v_2) \\ v_1 \sin(\pi v_2)  \end{bmatrix} </mrow>
