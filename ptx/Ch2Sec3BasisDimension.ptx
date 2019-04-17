@@ -531,12 +531,12 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
 		</statement>
 	</theorem>
   We will not cover the proof of <xref ref="diff_eqn_exist_unique"/>, which you can find in a course on Differential Equations. We are more interested in its <em>consequences</em> for Linear Algebra. But first, an example to illustrate the Theorem. 
-<example>
+<example xml:id="geogebra_diff_eqn_1">
   <title>Visualizing <xref ref="diff_eqn_exist_unique"/></title>
   <statement>
-    The following app gives a visual demonstration of <xref ref="diff_eqn_exist_unique"/>. Drag the red sliders to change the coefficients of the differential equation (in this example, the coefficients are just numbers, but in general they are functions of <m>x</m>). Drag the blue points to change the initial conditions.
+    The following app gives a visual demonstration of <xref ref="diff_eqn_exist_unique"/>. Drag the red and green sliders to change the coefficients of the differential equation (in this example, the coefficients are just numbers, but in general they are functions of <m>x</m>). Drag the blue points to change the initial conditions.
     <figure>
-        <interactive geogebra="https://www.geogebra.org/material/iframe/id/tyja5bpa/width/600/height/762/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:762" width="90%"/>
+        <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%"/>
       <caption>GeoGebra App: 2nd order ODE with constant coefficients.</caption>
     </figure>
   </statement>

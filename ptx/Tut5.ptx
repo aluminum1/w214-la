@@ -1,0 +1,40 @@
+<section xml:id="Tut5">
+<title>W214 2019, Linear Algebra Tutorial 5</title>
+<shorttitle>Tutorial 5</shorttitle>
+
+<p>Note: You are welcome to use the <url href="https://sagecell.sagemath.org/">SageMath cell server</url> to help you solve some of the problems below, or at least to check your calculations. </p>
+
+<exercises>
+
+
+<assemblage><title>3.1 Linear Maps - Definition and Examples</title>
+</assemblage>
+
+  <exercise>(Poole 6.4 14). Let <m>T : \Col_2 \rightarrow \Col_3</m> be a linear map satisfying
+  <me>
+    T\left( \begin{bmatrix} 1 \\ 0 \end{bmatrix} \right) = \begin{bmatrix}1 \\ 2 \\ -1 \end{bmatrix}, \, \, \text{and} \, \, T(\left(\begin{bmatrix}0 \\ 1 \end{bmatrix}\right) = \begin{bmatrix}3 \\ 0 \\ 4 \end{bmatrix}
+  </me>
+Find
+<me>
+  T\left(\begin{bmatrix}5 \\ 2\end{bmatrix}\right) \, \, \text{and}\,\, T\left( \begin{bmatrix} a \\ b \end{bmatrix} \right)
+</me>
+</exercise>
+
+<exercise>(Poole 6.4 18)Let <m>T : \Mat_{2,2} \rightarrow \mathbb{R}</m> be a linear map satisfying
+<md>
+  <mrow>
+  T\left( \begin{bmatrix}1 \amp 0 \\ 0 \amp 0 \end{bmatrix} \right) = 1, \amp \amp T\left( \begin{bmatrix}1 \amp 1 \\ 0 \amp 0 \end{bmatrix} \right) = 2 </mrow>
+  <mrow>
+  T\left( \begin{bmatrix}1 \amp 1 \\ 1 \amp 0 \end{bmatrix} \right) = 3, \amp \amp T\left( \begin{bmatrix}1 \amp 1 \\ 1 \amp 1 \end{bmatrix} \right) = 4 </mrow>
+</md>
+Find 
+<me>
+  T\left( \begin{bmatrix}1 \amp 3 \\ 4 \amp 2 \end{bmatrix} \right) \,\, \text{and} \, \, T\left( \begin{bmatrix}a \amp b \\ c \amp d \end{bmatrix} \right).
+</me>
+
+</exercise>
+</exercises>
+
+</section>
+
+

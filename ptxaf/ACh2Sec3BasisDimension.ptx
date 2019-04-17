@@ -582,9 +582,9 @@
 <example>
   <title>Visualisering van <xref ref="diff_eqn_exist_unique"/></title>
   <statement>
-    Die volgende app illustreer <xref ref="diff_eqn_exist_unique"/>. Sleep die rooi slepers om die koëffisiente van die differensiaal vergelyking te verander (in hierdie voordbeeld, die koëffisiënte is net getalle, maar in algemeen hulle is funksies van <m>x</m>). Sleep die rooi punte om die beginwaardes te verander.
+    Die volgende app illustreer <xref ref="diff_eqn_exist_unique"/>. Sleep die rooi en groen slepers om die koëffisiente van die differensiaal vergelyking te verander (in hierdie voordbeeld, die koëffisiënte is net getalle, maar in algemeen hulle is funksies van <m>x</m>). Sleep die rooi punte om die beginwaardes te verander.
     <figure>
-        <interactive geogebra="https://www.geogebra.org/material/iframe/id/tyja5bpa/width/600/height/762/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:762" width="90%"/>
+        <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%"/>
       <caption>GeoGebra App: 2de orde GDV met konstante koëffisiënte.</caption>
     </figure>
   </statement>
