@@ -33,6 +33,82 @@ Find
 </me>
 
 </exercise>
+<exercise>
+<statement>
+<p>
+Let <m>a , b \in \R</m>. Define <m>T: \R^3 \to \R^2</m> by
+<me>
+T(x,y,z) = (2x - 4y + 3z + a, 6x + 6xyz).
+</me>
+Show that <m>T</m> is linear if and only if <m>a=b=0</m>. 
+</p>
+  </statement>
+  </exercise>
+
+  <exercise>
+<statement>
+<p>
+Let <m>\pi_i: \R^n \to \R^{n-1}</m> be defined by
+<me>
+\pi_i : (x_1,\ldots,x_i,\ldots,x_n) \mapsto (x_1,\ldots,\hat{x_i},\ldots,x_n)
+</me>
+where <m>\hat{x_i}</m> means that <m>x_i</m> is omitted. Show that <m>\pi_i</m> is linear.
+</p>
+  </statement>
+</exercise>
+
+
+<exercise>
+<statement>
+<p>
+ Let <m>V</m> be a vector space with basis <m> \mathcal{B} = \bopen b_1,\ldots,b_n \bclose</m>. Let <m>\pi_i: V \to \R</m> be defined by
+  <me>
+\pi_i(v) = \text{The } i^{\text{th} } \text{component of } v \text{ wrt the basis } \mathcal{B}
+</me>
+</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+<p>
+  Let <m>\frac{d}{dx}: \Poly_n \to \Poly_n</m> be the derivative map. 
+  <ol>
+
+    <li>
+      <p>
+        Find the matrix of <m>\frac{d}{dx}</m> with respect to the standard basis of <m>\Poly_n</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Do the same for <m>\frac{d^2}{dx^2}: \Poly_n \to \Poly_n</m>
+      </p>
+    </li>
+
+        <li>
+      <p>
+        Find a formula for the matrix of <m>\frac{d^m}{dx^m}</m>. Prove it by induction on <m>m</m>.
+      </p>
+    </li>
+
+
+  </ol>
+</p>
+</statement>
+</exercise>
+
+<exercise>
+<statement>
+<p>
+Let <m>T: V \to W</m> be a linear map that is a bijection. Prove that <m>T^{-1}: W \to V</m> is also linear.
+</p>
+</statement>
+</exercise>
+
+
+
 </exercises>
 
 </section>
