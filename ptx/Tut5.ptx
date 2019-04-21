@@ -107,7 +107,43 @@ Let <m>T: V \to W</m> be a linear map that is a bijection. Prove that <m>T^{-1}:
 </statement>
 </exercise>
 
+<exercise>
+  <statement>
+    <p>
+      Let <m>L:\Poly_1 \to \Poly_2</m> be defined by
+      <me>
+      L(\ve p)(x) = x\ve p(x) + \ve p(0).
+    </me>
+    Let 
+    <me>
+\basis B = \bopen x ,1 \bclose  \quad \text{and} \quad \basis B' = \bopen x+1, x-1 \bclose
+  </me>
+  be bases for <m>\Poly_1</m>. Let
+  <me>
+  \basis C = \bopen x^2, x ,1 \bclose \quad \text{and} \quad \basis C' = \bopen x^2+1, x-1 ,x+1 \bclose 
+</me>
+be bases for <m>\Poly_2</m>. Find the matrix of <m> L </m> with respect to the bases
+<ol>
+  <li>
+    <m>\basis B</m> and <m>\basis C</m>.
+  </li>
 
+  <li>
+    <m>\basis B'</m> and <m>\basis C'</m>.
+  </li>
+
+</ol>
+    </p>
+  </statement>
+  </exercise>
+
+  <exercise>
+  <statement>
+    <p>
+      Let <m>T: V \to V</m> be defined by <m>T(\ve u) = \lambda \ve u</m> for some scalar <m>\lambda</m>. Let <m>\basis B = {\ve b_1,\ldots,\ve b_n}</m> be a basis for <m>V</m>. Find the matrix of <m>T</m> with respect to <m>\basis B</m>.
+    </p>
+  </statement>
+  </exercise>
 
 </exercises>
 
