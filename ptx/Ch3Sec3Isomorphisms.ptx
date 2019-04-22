@@ -543,7 +543,45 @@ is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the 
 </me>
     </p>
   </solution>
+
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Are the following vector spaces
+        <me>
+          V = \{ \ve{v} \in \mathbb{R}^4 : (1, -1, 2, 1) \cdot \ve{v} = 0 \}
+        </me>
+        and
+        <me>
+          \Poly_1[x,y]
+        </me>
+        isomorphic?
+      </p>
+
+      <p>
+        If they are, construct an explicit isomorphism between them.
+        If not, prove that they are not isomorphic.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Are the following vector spaces isomorphic?
+        <me>
+          V = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \} \\
+          D = \{ (x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \}
+        </me>
+        <me>
+          \Vect_2 (\mathbb{R}^2)
+        </me>
+      </p>
+    </statement>
+  </exercise>
+
   
 </exercises>
 

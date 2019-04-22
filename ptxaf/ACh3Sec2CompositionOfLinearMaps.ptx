@@ -201,18 +201,17 @@ Then
   <exercise>
     <statement>
       <p>
-        Laat <m>R_\theta : \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> die <sq>rotasie
-        met <m>\theta</m></sq>-afbeelding van <xref ref="rotation-map-example-complete">Voorbeeld</xref> wees,
-        <me>
-          R( (x,y)) = (x \cos \theta - y \sin \theta, \, x sin \theta + y
-          \cos \theta)
-        </me>.
+        Laat <m>R_\theta</m>  die <sq>rotasie deur <m>\theta</m></sq> afbeelding uit <xref ref="rotation-map-example-complete">Example</xref> wees:
+        <md>
+          <mrow> R_\theta : \Col_2 \amp \rightarrow Col_2 </mrow>
+          <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} \cos \theta \amp \sin \theta \\ -\sin\theta \amp \cos \theta \end{bmatrix}</mrow>
+        </md>
       </p>
 
       <p>
         Gaan algebra&#xef;es na dat <m>R_\phi \circ R_\theta = R_{\phi + \theta}</m>
         deur die aksie van die line&#xea;re afbeeldings op beide kante van die
-        vergelyking op 'n arbitr&#xea;re vektor <m>(x,y) \in \mathbb{R}^2</m> te
+        vergelyking op 'n arbitr&#xea;re vektor <m>\mat{v} \in \Col_2</m> te
         bereken.
       </p>
     </statement>
@@ -235,9 +234,9 @@ Then
         Laat <m>M : \Poly_3 \rightarrow \Poly_4</m> die <sq>vermenigvuldig
         met <m>x</m></sq>-afbeelding wees, <m>M(p)(x) = x p(x)</m>.
         Laat <m>S : \Poly_4
-        \rightarrow \Poly_4</m> die afbeelding <m>S(p(x)) = p(x-1)</m> wees.
+        \rightarrow \Poly_4</m> die afbeelding <m>S(p)(x) = p(x-1)</m> wees.
         Net so,
-        laat <m>T : \Poly_3 \rightarrow \Poly_3</m> die afbeelding <m>T(p(x)) =
+        laat <m>T : \Poly_3 \rightarrow \Poly_3</m> die afbeelding <m>T(p)(x) =
         p(x-1)</m> wees.
         Bereken <m>S \circ M</m> en <m>M \circ T</m>.
         Is hulle gelyk?

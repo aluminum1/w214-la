@@ -42,7 +42,7 @@
         Let <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m> be a basis for <m>V</m> and
         <m>\basis{C}</m> be a basis for <m>W</m>.
         Then for all vectors <m>\ve{v}</m> in <m>V</m>,
-        <men>
+        <men xml:id="lin-maps-and-matrices-eqn">
           [T(\ve{v})]_\basis{C} = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B}
         </men>
         where the right hand side is the product of the matrix
@@ -420,7 +420,8 @@
     </solution>
   </exercise>
 
-  <exercise xml:id="trig_ex_2">
+
+<exercise xml:id="trig_ex_2">
     <statement>
       <p>
         Let
@@ -429,7 +430,16 @@
         </me>
         be the <sq>shift by <m>\frac{\pi}{6}</m></sq> map,
         <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
-        Compute <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> with respect to the standard basis <m>\basis{C}</m> of <m>\Trig_2</m>.
+        <ol>
+          <li>
+           Compute <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> with respect to the standard basis <m>\basis{C}</m> of <m>\Trig_2</m>. 
+          </li>
+          <li>Compute <m>[S]_{\basis{B} \leftarrow \basis{C}}</m>, where <m>\basis{B}</m> is the following basis for <m>\Trig_2</m>:
+          <me>
+            \basis{B} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin^2 x \bclose
+          </me> 
+ </li>
+        </ol>
       </p>
     </statement>
     <solution>
@@ -474,6 +484,8 @@
       </p>
     </solution>
   </exercise>
+  
+
 
   <exercise>
     <statement>

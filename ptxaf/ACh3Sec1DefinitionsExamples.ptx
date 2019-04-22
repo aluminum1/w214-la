@@ -525,7 +525,7 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
   </exercise>
 
 
- <example>
+ <example xml:id="grad_as_linear_map">
     <title>Gradient as a linear map</title>
     <statement>
       <p>
@@ -570,7 +570,7 @@ as the reader will verify.
    </statement>
   </example>
 
-<example>
+<example xml:id="initial_conditions_as_linear_map">
 <title>Beginwaardes vir differensiale vergelykings as 'n lineêre afbeelding</title>
 <statement>
 <p>Laat <m>V</m> die vektorruimte van oplossings van 'n tweede orde homogene lineêre gewone differensiaalvergylyking op 'n interval <m>I</m> wees:
@@ -1048,6 +1048,95 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
       </p>
     </solution>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Define the map
+        <md>
+        <mrow>  C : \Poly_n \amp \rightarrow \Trig_n </mrow>
+        </md>
+        by the formula
+        <me>
+          C(p)(x) := p(\cos x).
+        </me>
+        <ol>
+          <li>
+          Compute <m>C(p)</m>, where <m>p(x)=3x^2-x+1</m>. Express your answer in terms of the standard basis for <m>Trig_2</m>,
+          <me>
+            T_0(x) = 1, T_1(x) = \cos x, T_2 (x) = \sin x, T_3 (x) = \cos (2x), T_4 (x) = \sin (2x).
+          </me>
+        </li>
+        <li>
+          Is <m>C</m> a linear map?
+        </li>
+        <li>
+          Justify that for every polynomial <m>p \in \Poly_n</m>, the function <m>C(p) \in \Trig_n</m>? (This is implicitly assumed above.)
+        </li>
+        <li>
+          Compute <m>C(p_0), C(p_1), C(p_2), C(p_3)</m> where 
+          <me>
+          p_0(x) = 1, p_1(x) = x, p_2(x) = x^2, p_3(x)=x^3
+        </me>
+        </li>
+        are the standard basis vectors for <m>\Poly_3</m>. Express your answers in terms of the standard basis of <m>\Trig_n</m>.
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+ <exercise>
+    <p>Determine the action of the gradient linear map
+    <me>
+      \nabla : \Poly_2[x,y] \rightarrow \Vect_1(\mathbb{R}^2)
+    </me>
+    from <xref ref="grad_as_linear_map"/> in terms of the standard bases
+    <md>
+      <mrow> \bopen q_1, q_2, q_3, q_4, q_5 \bclose  </mrow>
+      <mrow> q_1 = 1, q_2 = x, q_3 = y, q_4 = x^2, q_5 = xy, q_6 = y^2</mrow>
+    </md>
+   of <m>\Poly_2</m> and
+   <md>
+   <mrow>  \bopen V_1, V_2, V_3, V_4, V_5, V_6 \bclose </mrow>
+    <mrow>  V_1 = (1, 0), V_2 = (x, 0), V_3 = (y, 0) </mrow>
+    <mrow> V_4 = (0, 1), V_5 = (0, x), V_6 = (0, y)</mrow>
+   </md>
+   of <m>\Vect_1(\mathbb{R}^2)</m>respectively.
+ </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Consider the following function:
+      <md>
+        <mrow> T : \Poly_2 \amp \rightarrow \mathbb{R}^2        </mrow>
+        <mrow> p \amp \mapsto \begin{bmatrix} p(0) \\ p(1) \end{bmatrix} </mrow>
+      </md>
+      <ol>
+        <li>
+          Is <m>T</m> a linear map? (Yes / No).
+        </li>
+        <li> Prove your assertion from (a). 
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Let <m>V</m> be the vector space of solutions to the differential equation
+      <me>
+        y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y' + a_0(x) = 0.
+      </me>
+      Consider the 'evaluate at <m>x=1</m>' map
+      <md>
+        <mrow>T : V \amp \rightarrow \mathbb{R} </mrow>
+        <mrow>y \amp \mapsto y(1)</mrow>
+      </md>
+      Is <m>T</m> a linear map? Prove your assertion. 
+    </p>
+  </exercise>
+
 
   <exercise>
     <statement>

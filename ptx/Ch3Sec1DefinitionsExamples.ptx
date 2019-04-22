@@ -569,7 +569,7 @@ as the reader will verify.
    </statement>
   </example>
 
-<example>
+<example xml:id="initial_conditions_as_linear_map">
 <title>Initial conditions for differential equations as a linear map</title>
 <statement>
 <p>Let <m>V</m> be the vector space of solutions to a 2nd order linear homogenous ordinary differential equation on an interval <m>I</m>:
@@ -1005,7 +1005,7 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
   </exercise>
 
   <exercise>
-    <p>Determine the action fo the gradient linear map
+    <p>Determine the action of the gradient linear map
     <me>
       \nabla : \Poly_2[x,y] \rightarrow \Vect_1(\mathbb{R}^2)
     </me>
@@ -1217,6 +1217,7 @@ D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
       </p>
 
       </solution>
+    </exercise>
 
       <exercise>
         <statement>
@@ -1225,8 +1226,6 @@ D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
       </exercise>
 
 
-
-  </exercise>
   </exercises>
 
  <!-- <solutions divisional="solution answer" />  -->

@@ -2,7 +2,13 @@
 <title>W214 2019, Linear Algebra Tutorial 5</title>
 <shorttitle>Tutorial 5</shorttitle>
 
-<p>Note: You are welcome to use the <url href="https://sagecell.sagemath.org/">SageMath cell server</url> to help you solve some of the problems below, or at least to check your calculations. </p>
+
+<p>It is a long tutorial, to give you plenty of practice for the test. The solutions will be made available on Tuesday 23 April.</p>
+
+<p>I have included some exercises from the textbook <em>Poole, Linear Algebra - A Modern Introduction</em>. This textbook is not required for the course, but this at least shows you where to look if you want to find even more exercises.
+</p>
+
+<p>As always, you are welcome to use the <url href="https://sagecell.sagemath.org/">SageMath cell server</url> to help you solve some of the problems below, or at least to check your calculations. </p>
 
 <exercises>
 
@@ -10,7 +16,7 @@
 <assemblage><title>3.1 Linear Maps - Definition and Examples</title>
 </assemblage>
 
-  <exercise>(Poole 6.4 14). Let <m>T : \Col_2 \rightarrow \Col_3</m> be a linear map satisfying
+  <exercise>(Poole Exercise 6.4 14). Let <m>T : \Col_2 \rightarrow \Col_3</m> be a linear map satisfying
   <me>
     T\left( \begin{bmatrix} 1 \\ 0 \end{bmatrix} \right) = \begin{bmatrix}1 \\ 2 \\ -1 \end{bmatrix}, \, \, \text{and} \, \, T(\left(\begin{bmatrix}0 \\ 1 \end{bmatrix}\right) = \begin{bmatrix}3 \\ 0 \\ 4 \end{bmatrix}
   </me>
@@ -20,7 +26,7 @@ Find
 </me>
 </exercise>
 
-<exercise>(Poole 6.4 18)Let <m>T : \Mat_{2,2} \rightarrow \mathbb{R}</m> be a linear map satisfying
+<exercise>(Poole Exercise 6.4 18) Let <m>T : \Mat_{2,2} \rightarrow \mathbb{R}</m> be a linear map satisfying
 <md>
   <mrow>
   T\left( \begin{bmatrix}1 \amp 0 \\ 0 \amp 0 \end{bmatrix} \right) = 1, \amp \amp T\left( \begin{bmatrix}1 \amp 1 \\ 0 \amp 0 \end{bmatrix} \right) = 2 </mrow>
@@ -31,8 +37,231 @@ Find
 <me>
   T\left( \begin{bmatrix}1 \amp 3 \\ 4 \amp 2 \end{bmatrix} \right) \,\, \text{and} \, \, T\left( \begin{bmatrix}a \amp b \\ c \amp d \end{bmatrix} \right).
 </me>
-
 </exercise>
+
+ <exercise>
+    <statement>
+      <p>
+        Let <m>V</m> be a vector space,
+        and let <m>\ve{a} \neq \ve{0}</m> be a fixed vector.
+        Define the map <m>T</m> as follows:
+        <md>
+          <mrow>T : V \amp \rightarrow V</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{a} + \ve{v}</mrow>
+        </md>
+        <ol>
+          <li>
+            <p>
+              Is <m>T</m> a linear map? (Yes or no)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Prove your assertion from (a).
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+</exercise>
+
+<exercise>
+  <p>
+    (Poole Exercise 6.4 20) Show that there is no linear map <m>T : \mathbb{R}^3 \rightarrow \Poly_2</m> such that
+    <me>
+      T\left( \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}\right) = 1 + x, \quad T\left(\begin{bmatrix}3 \\ 0 \\2 \end{bmatrix} \right) = 2 - x + x^2 \\
+      T\left(\begin{bmatrix}0 \\ 6 \\ -8 \end{bmatrix} \right) = -2 + 2x^2
+    </me>
+  </p>
+</exercise>
+
+  <exercise>
+    <p>Determine the action of the gradient linear map
+    <me>
+      \nabla : \Poly_2[x,y] \rightarrow \Vect_1(\mathbb{R}^2)
+    </me>
+    from <xref ref="grad_as_linear_map"/> on the standard basis vectors 
+    <md>
+      <mrow> \bopen q_1, q_2, q_3, q_4, q_5 \bclose  </mrow>
+      <mrow> q_1 = 1, q_2 = x, q_3 = y, q_4 = x^2, q_5 = xy, q_6 = y^2</mrow>
+    </md>
+   of <m>\Poly_2</m>. Express your answers as linear combinations of the standard basis vectors
+   <md>
+   <mrow>  \bopen V_1, V_2, V_3, V_4, V_5, V_6 \bclose </mrow>
+    <mrow>  V_1 = (1, 0), V_2 = (x, 0), V_3 = (y, 0) </mrow>
+    <mrow> V_4 = (0, 1), V_5 = (0, x), V_6 = (0, y)</mrow>
+   </md>
+   of <m>\Vect_1(\mathbb{R}^2)</m>.
+ </p>
+  </exercise>
+
+  <exercise xml:id="ode_problem_tut5">
+    <p>
+      Let <m>V</m> be the vector space of solutions to the differential equation
+      <me>
+        y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y' + a_0(x) = 0.
+      </me>
+      Consider the 'evaluate at <m>x=1</m>' map
+      <md>
+        <mrow>T : V \amp \rightarrow \mathbb{R} </mrow>
+        <mrow>y \amp \mapsto y(1)</mrow>
+      </md>
+      Is <m>T</m> a linear map? Prove your assertion. 
+    </p>
+  </exercise>
+
+<assemblage>
+ <title> 3.2 Composition of linear maps </title>
+</assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>R_\theta</m>  be the <sq>rotation by <m>\theta</m></sq> map from <xref ref="rotation-map-example-complete"/>,
+        <md>
+          <mrow> R_\theta : \Col_2 \amp \rightarrow Col_2 </mrow>
+          <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} \cos \theta \amp \sin \theta \\ -\sin\theta \amp \cos \theta \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} </mrow>
+        </md>
+      </p>
+
+      <p>
+        <ol>
+          <li>
+        Check algebraically that <m>R_\phi \circ R_\theta = R_{\phi + \theta}</m> by computing the action of the linear maps on both sides of this equation on an arbitrary vector <m>\mat{v} \in \Col_2</m>.
+      </li>
+      <li>Explain what this result says, in words.</li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>M : \Poly_3 \rightarrow \Poly_4</m> be the <sq>multiplication by <m>x</m></sq> map,
+        <m>M(p)(x) = x p(x)</m>.
+        Let <m>S : \Poly_4 \rightarrow \Poly_4</m> be the map <m>S(p)(x) = p(x-1)</m>.
+        Similarly let <m>T : \Poly_3 \rightarrow \Poly_3</m> be the map <m>T(p)(x) = p(x-1)</m>.
+        Compute <m>S \circ M</m> and <m>M \circ T</m>.
+        Are they equal?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <p>
+      Consider the vector space <m>V</m> of solutions to the differential equation
+      <me>
+        y^{''} + y = 0.
+      </me>
+      In <xref ref="initial_conditions_as_linear_map" /> we defined a linear map (here we have chosen <m>x_0 = 0</m>)
+      <md>
+        <mrow> S : \Col_2 \amp \rightarrow V </mrow>  
+        <mrow> \begin{bmatrix} a \\ b \end{bmatrix} \amp \mapsto \text{unique } y \in V \text{ such that } y(0) = a, y'(0)=b </mrow>
+      </md> 
+      Similarly, as in <xref ref="ode_problem_tut5"/>, there is an `evaluation at <m>x=\frac{\pi}{6}</m>' linear map
+      <md>
+        <mrow>T : V \amp \rightarrow \mathbb{R} </mrow>
+        <mrow>y \amp \mapsto y(\frac{\pi}{6})</mrow>
+      </md>
+      Compute <m>T \circ S</m>.
+    </p>
+  </exercise>
+
+<assemblage>
+  <title>3.3 Isomorphisms of vector spaces</title>
+</assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+        Are the following vector spaces
+        <me>
+          V = \{ \ve{v} \in \mathbb{R}^4 : (1, -1, 2, 1) \cdot \ve{v} = 0 \}
+        </me>
+        and
+        <me>
+          \Poly_1[x,y]
+        </me>
+        isomorphic?
+      </p>
+
+      <p>
+        If they are, construct an explicit isomorphism between them.
+        If not, prove that they are not isomorphic.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <p>
+      (Poole Exercise 6.5 22). Determine whether <m>V</m> and <m>W</m> are isomorphic. If they are, give an explicit isomorphism <m>T : V \rightarrow W</m>.
+      <md>
+        <mrow>
+          \text{Sym}_3 = \left\{ \mat{A} \in \Mat_{3,3} : A^T = A \right\}   
+        </mrow>
+        <mrow>
+         U_3 = \left\{ \mat{B} \in \Mat_{3,3} : \mat{B} \text{ is upper triangular} \right\} 
+        </mrow>
+      </md>
+    </p>
+  </exercise>
+
+
+<assemblage>
+  <title>
+  3.3 Linear Maps and Matrices (up to Theorem 3.4.3)
+</title>
+</assemblage>
+
+<exercise>
+  (Poole Exercise 6.6 2) 
+  <ol>
+    <li>
+      Find the matrix <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> of the linear map  <m>T : \Poly_1 \rightarrow \Poly_1</m> defined by <m>T(a + bx) = b - ax</m> with respect to the bases <m>\basis{B} = \bopen 1+x, 1-x \bclose</m> and <m>\basis{C} = \bopen 1, x \bclose</m> for <m>\Poly_1</m>.
+    </li>
+    <li>
+      Verify <xref ref="lin-map-in-matrix-theorem"/> for the vector <m>\ve{v}=4+2x</m> by computing <m>[T(\ve{v})]_\basis{C}</m> and <m>[T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B}</m> independently, and checking that they are equal.
+    </li>
+  </ol>
+</exercise>
+
+<exercise>
+      <p>
+        Let
+        <me>
+          S : \Trig_2 \rightarrow \Trig_2
+        </me>
+        be the <sq>shift by <m>\frac{\pi}{6}</m></sq> map,
+        <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
+       Compute <m>[S]_{\basis{B} \leftarrow \basis{C}}</m>, where <m>\basis{B}</m> and <m>\basis{C}</m> are the following two bases for  <m>\Trig_2</m>:
+       <md>
+         <mrow>\basis{B} = \bopen 1, \cos x, \sin x, \cos 2x, \sin 2x \bclose </mrow>
+         <mrow> \basis{C} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin^2 x  \bclose  </mrow>
+       </md>
+      </p>
+</exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Verify <xref ref="lin-map-in-matrix-theorem">Theorem</xref>
+        for the linear map <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> given by <m>S(\mat{M}) = \mat{M}^T</m>,
+        for the vector <m>\mat{A} \in \Mat_{2,2}</m> given by
+        <md>
+         <mrow> \mat{A} = \begin{bmatrix} 0 \mamp  1 \\ 0 \mamp  0 \end{bmatrix}</mrow>
+        </md>
+        and using the following bases of <m>\Mat_{2,2}</m>:
+        <me>
+          \basis{B} = \basis{C} = \bopen \mat{M}_1 = \begin{bmatrix}1 \mamp  1 \\ 2 \mamp  3\end{bmatrix}, \, \mat{M}_2 = \begin{bmatrix}1 \amp  0 \\ 1 \amp  1 \end{bmatrix}, \, \mat{M}_3 = \begin{bmatrix}1 \amp  1 \\ 1 \amp  1\end{bmatrix}, \, \mat{M}_4 =\begin{bmatrix}0 \amp  1 \\ 1 \amp  1 \end{bmatrix} \bclose.
+        </me>
+      </p>
+    </statement>
+  </exercise>
+
+
+
 </exercises>
 
 </section>

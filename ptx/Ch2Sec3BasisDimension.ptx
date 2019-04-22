@@ -58,7 +58,7 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
 
     <assemblage>
       <p>
-        Note that the concept of <sq>dimension of a vector space</sq> is only well-defined because of <xref ref="inv_dim">Theorem</xref>.
+        Note that the concept of <sq>dimension of a vector space</sq> is only well-defined because onlyf <xref ref="inv_dim">Theorem</xref>.
       </p>
     </assemblage>
 
@@ -274,7 +274,7 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
       so that <m>\Dim \Poly_2[x,y] = 6</m>. Reasoning in this way, we see that
       <md>
             <mrow> \Dim \Poly_n [x,y] \amp = 1 + 2 + 3 + \cdots n+1 </mrow>
-            <mrow> \amp =  \frac{n(n+1)}{2}. </mrow>
+            <mrow> \amp =  \frac{(n+1)(n+2)}{2}. </mrow>
       </md>
       </p>
     </statement>

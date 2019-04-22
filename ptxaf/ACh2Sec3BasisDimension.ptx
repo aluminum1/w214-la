@@ -290,7 +290,7 @@
       so <m>\Dim \Poly_2[x,y] = 6</m>. Deur sò te redeneer, sien ons dat
       <md>
             <mrow> \Dim \Poly_n [x,y] \amp = 1 + 2 + 3 + \cdots n+1 </mrow>
-            <mrow> \amp =  \frac{n(n+1)}{2}. </mrow>
+            <mrow> \amp =  \frac{(n+1)(n+2)}{2}. </mrow>
       </md>
       </p>
     </statement>
@@ -579,13 +579,13 @@
   </theorem>
  Ons gaan nie <xref ref="diff_eqn_exist_unique"/> bewys nie --- jy kan die bewys in 'n kursus oor Differensiaalvergelykings vind. Ons is eerder geinteresseerd in die Lineêre Algebra <em>gevolgtrekkings</em> van <xref ref="diff_eqn_exist_unique"/>.
  Maar eerstens, 'n voorbeeld om die Stelling te illustreer,.
-<example>
+<example xml:id="geogebra_diff_eqn_1">
   <title>Visualisering van <xref ref="diff_eqn_exist_unique"/></title>
   <statement>
     Die volgende app illustreer <xref ref="diff_eqn_exist_unique"/>. Sleep die rooi en groen slepers om die koëffisiente van die differensiaal vergelyking te verander (in hierdie voordbeeld, die koëffisiënte is net getalle, maar in algemeen hulle is funksies van <m>x</m>). Sleep die rooi punte om die beginwaardes te verander.
     <figure>
         <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%"/>
-      <caption>GeoGebra App: 2de orde GDV met konstante koëffisiënte.</caption>
+        <caption>GeoGebra App: 2de orde GDV met konstante koëffisiënte.</caption>
     </figure>
   </statement>
 

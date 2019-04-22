@@ -185,14 +185,15 @@ Then
   <exercise>
     <statement>
       <p>
-        Let <m>R_\theta : \mathbb{R}^2 \rightarrow \mathbb{R}^2</m> be the <sq>rotation by <m>\theta</m></sq> map from <xref ref="rotation-map-example-complete">Example</xref>,
-        <me>
-          R( (x,y)) = (x \cos \theta - y \sin \theta, \, x \sin \theta + y \cos \theta)
-        </me>.
+        Let <m>R_\theta</m>  be the <sq>rotation by <m>\theta</m></sq> map from <xref ref="rotation-map-example-complete">Example</xref>,
+        <md>
+          <mrow> R_\theta : \Col_2 \amp \rightarrow Col_2 </mrow>
+          <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} \cos \theta \amp \sin \theta \\ -\sin\theta \amp \cos \theta \end{bmatrix}</mrow>
+        </md>
       </p>
 
       <p>
-        Check algebraically that <m>R_\phi \circ R_\theta = R_{\phi + \theta}</m> by computing the action of the linear maps on both sides of this equation on an arbitrary vector <m>(x,y) \in \mathbb{R}^2</m>.
+        Check algebraically that <m>R_\phi \circ R_\theta = R_{\phi + \theta}</m> by computing the action of the linear maps on both sides of this equation on an arbitrary vector <m>\mat{v} \in \Col_2</m>.
       </p>
     </statement>
     <solution>
@@ -213,8 +214,8 @@ Then
       <p>
         Let <m>M : \Poly_3 \rightarrow \Poly_4</m> be the <sq>multiplication by <m>x</m></sq> map,
         <m>M(p)(x) = x p(x)</m>.
-        Let <m>S : \Poly_4 \rightarrow \Poly_4</m> be the map <m>S(p(x)) = p(x-1)</m>.
-        Similarly let <m>T : \Poly_3 \rightarrow \Poly_3</m> be the map <m>T(p(x)) = p(x-1)</m>.
+        Let <m>S : \Poly_4 \rightarrow \Poly_4</m> be the map <m>S(p)(x) = p(x-1)</m>.
+        Similarly let <m>T : \Poly_3 \rightarrow \Poly_3</m> be the map <m>T(p)(x) = p(x-1)</m>.
         Compute <m>S \circ M</m> and <m>M \circ T</m>.
         Are they equal?
       </p>

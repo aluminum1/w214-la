@@ -1,0 +1,276 @@
+<section xml:id="Tut5">
+<title>W214 2019, Lineêre Algebra Tutoriaal 5</title>
+<shorttitle>Tutoriaal 5</shorttitle>
+
+
+<p>Dit is 'n lang tutoriaal, om jou 'n hele klomp oefening probleme vir die toets te gee. Die oplossings sal beskikbaar gemaak word op Dinsdag 23 April.</p>
+
+<p>Ek het 'n paar oefeninge uit die handbook <em>Poole, Linear Algebra - A Modern Introduction</em> ingesluit. Hierdie handboek is nie eintlik nodig vir die kursus nie, maar in dìe manier kan jy sien waar om te soek om nog meer oefeninge te vind.
+</p>
+
+<p>Soos altyd, jy is welkom om die <url href="https://sagecell.sagemath.org/">SageMath cell server</url> te gebruik om jou te help met van die probleme hierdonder, of om jou antwoord te kontrolleer. </p>
+
+<exercises>
+
+
+<assemblage><title>3.1 Lineêre Afbeeldings - Definisies en Voorbeelde</title>
+</assemblage>
+
+  <exercise>(Poole Oefening 6.4 14). Laat <m>T : \Col_2 \rightarrow \Col_3</m> 'n lineêre afbeelding wees wat bevredig
+  <me>
+    T\left( \begin{bmatrix} 1 \\ 0 \end{bmatrix} \right) = \begin{bmatrix}1 \\ 2 \\ -1 \end{bmatrix}, \, \, \text{and} \, \, T(\left(\begin{bmatrix}0 \\ 1 \end{bmatrix}\right) = \begin{bmatrix}3 \\ 0 \\ 4 \end{bmatrix}
+  </me>
+Vind
+<me>
+  T\left(\begin{bmatrix}5 \\ 2\end{bmatrix}\right) \, \, \text{and}\,\, T\left( \begin{bmatrix} a \\ b \end{bmatrix} \right)
+</me>
+</exercise>
+
+<exercise>(Poole Oefening 6.4 18) Laat <m>T : \Mat_{2,2} \rightarrow \mathbb{R}</m> 'n lineêre afbeelding wees wat bevredig
+<md>
+  <mrow>
+  T\left( \begin{bmatrix}1 \amp 0 \\ 0 \amp 0 \end{bmatrix} \right) = 1, \amp \amp T\left( \begin{bmatrix}1 \amp 1 \\ 0 \amp 0 \end{bmatrix} \right) = 2 </mrow>
+  <mrow>
+  T\left( \begin{bmatrix}1 \amp 1 \\ 1 \amp 0 \end{bmatrix} \right) = 3, \amp \amp T\left( \begin{bmatrix}1 \amp 1 \\ 1 \amp 1 \end{bmatrix} \right) = 4 </mrow>
+</md>
+Vind
+<me>
+  T\left( \begin{bmatrix}1 \amp 3 \\ 4 \amp 2 \end{bmatrix} \right) \,\, \text{and} \, \, T\left( \begin{bmatrix}a \amp b \\ c \amp d \end{bmatrix} \right).
+</me>
+</exercise>
+
+ <exercise>
+    <statement>
+      <p>
+        Laat <m>V</m> 'n vektorruimte wees,,
+        en laat <m>\ve{a} \neq \ve{0}</m> 'n vaste vektor wees.
+        Defineer 'n afbeelding <m>T</m> as volg:
+        <md>
+          <mrow>T : V \amp \rightarrow V</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{a} + \ve{v}</mrow>
+        </md>
+        <ol>
+          <li>
+            <p>
+              Is <m>T</m> 'n lineêre afbeelding? (Ja of nee)
+            </p>
+          </li>
+
+          <li>
+            <p>
+             Bewys jou bewering uit (a).
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+</exercise>
+
+<exercise>
+  <p>
+    (Poole Exercise 6.4 20) Toon aan dat daar geen lineêre afbeelding<m>T : \mathbb{R}^3 \rightarrow \Poly_2</m> bestaan met die eienskap dat
+    <me>
+      T\left( \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}\right) = 1 + x, \quad T\left(\begin{bmatrix}3 \\ 0 \\2 \end{bmatrix} \right) = 2 - x + x^2 \\
+      T\left(\begin{bmatrix}0 \\ 6 \\ -8 \end{bmatrix} \right) = -2 + 2x^2
+    </me>
+  </p>
+</exercise>
+
+  <exercise>
+    <p>Bepaal die aksie van die gradiënt lineêre afbeelding
+    <me>
+      \nabla : \Poly_2[x,y] \rightarrow \Vect_1(\mathbb{R}^2)
+    </me>
+    uit <xref ref="grad_as_linear_map"/> op die standaardbasis vektore
+    <md>
+      <mrow> \bopen q_1, q_2, q_3, q_4, q_5 \bclose  </mrow>
+      <mrow> q_1 = 1, q_2 = x, q_3 = y, q_4 = x^2, q_5 = xy, q_6 = y^2</mrow>
+    </md>
+   van <m>\Poly_2</m>. Druk jou antwoorde uit as lineêre kombinasies van die standaard basis vektore 
+   <md>
+   <mrow>  \bopen V_1, V_2, V_3, V_4, V_5, V_6 \bclose </mrow>
+    <mrow>  V_1 = (1, 0), V_2 = (x, 0), V_3 = (y, 0) </mrow>
+    <mrow> V_4 = (0, 1), V_5 = (0, x), V_6 = (0, y)</mrow>
+   </md>
+   van <m>\Vect_1(\mathbb{R}^2)</m>.
+ </p>
+  </exercise>
+
+  <exercise xml:id="ode_problem_tut5">
+    <p>
+      Laat <m>V</m> die vektorruimte van alle oplossings van die differensiaalvergelyking
+      <me>
+        y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y' + a_0(x) = 0.
+      </me>
+      wees. Beskou die 'evalueer by <m>x=1</m>' afbeelding
+      <md>
+        <mrow>T : V \amp \rightarrow \mathbb{R} </mrow>
+        <mrow>y \amp \mapsto y(1)</mrow>
+      </md>
+      Is <m>T</m> 'n lineêre afbeelding? Bewys jou bewering. 
+    </p>
+  </exercise>
+
+<assemblage>
+ <title> 3.2 Komposisie van lineêre afbeeldings </title>
+</assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>R_\theta</m> die <sq>rotasie deur <m>\theta</m></sq> afbeelding uit <xref ref="rotation-map-example-complete"/>,
+        <md>
+          <mrow> R_\theta : \Col_2 \amp \rightarrow Col_2 </mrow>
+          <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} \cos \theta \amp \sin \theta \\ -\sin\theta \amp \cos \theta \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} </mrow>
+        </md>
+      </p>
+
+      <p>
+        <ol>
+          <li>
+      Gaan algebra&#xef;es na dat <m>R_\phi \circ R_\theta = R_{\phi + \theta}</m>
+        deur die aksie van die line&#xea;re afbeeldings op beide kante van die
+        vergelyking op 'n arbitr&#xea;re vektor <m>\mat{v} \in \Col_2</m> te
+        bereken.
+        </li>
+      <li>Verduidelik wat hierdie resultaat sê, in jou eie woorde..</li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>M : \Poly_3 \rightarrow \Poly_4</m> die <sq>vermenigvuldig
+        met <m>x</m></sq>-afbeelding wees, <m>M(p)(x) = x p(x)</m>.
+        Laat <m>S : \Poly_4
+        \rightarrow \Poly_4</m> die afbeelding <m>S(p)(x) = p(x-1)</m> wees.
+        Net so,
+        laat <m>T : \Poly_3 \rightarrow \Poly_3</m> die afbeelding <m>T(p)(x) =
+        p(x-1)</m> wees.
+        Bereken <m>S \circ M</m> en <m>M \circ T</m>.
+        Is hulle gelyk?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <p>
+      Beskou die vektorruimte <m>V</m> van oplossings van die differensiaalvergelykin
+      <me>
+        y^{''} + y = 0.
+      </me>
+      In <xref ref="initial_conditions_as_linear_map" /> het ons 'n lineêre afbeelding as volg gedefineer (hier het ons <m>x_0 = 0</m> gekies)
+      <md>
+        <mrow> S : \Col_2 \amp \rightarrow V </mrow>  
+        <mrow> \begin{bmatrix} a \\ b \end{bmatrix} \amp \mapsto \text{unieke } y \in V \text{ sodat } y(0) = a, y'(0)=b </mrow>
+      </md> 
+      Net soos in <xref ref="ode_problem_tut5"/>, is daar ook 'n `evaluasie by <m>x = \frac{\pi}{6}</m> lineêre afbeelding
+      <md>
+        <mrow>T : V \amp \rightarrow \mathbb{R} </mrow>
+        <mrow>y \amp \mapsto y(\frac{\pi}{6})</mrow>
+      </md>
+      Bereken <m>T \circ S</m>.
+    </p>
+  </exercise>
+
+<assemblage>
+  <title>3.3 Isomorfismes van vektorruimtes</title>
+</assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+        Is die volgende vektorruimtes
+        <me>
+          V = \{ \ve{v} \in \mathbb{R}^4 : (1, -1, 2, 1) \cdot \ve{v} = 0 \}
+        </me>
+        en
+        <me>
+          \Poly_1[x,y]
+        </me>
+        isomorfies?
+      </p>
+
+      <p>
+        As hulle is, gee 'n eksplisiete isomorfisme tussen hulle.
+        Indien nie,
+        bewys dat hulle nie isofmorfies is nie.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <p>
+      (Poole Exercise 6.5 22). Bepaal of  <m>V</m> and <m>W</m> isomorfies is. Indien hulle is, verskaf 'n eksplisiete isomorfisme <m>T : V \rightarrow W</m>.
+      <md>
+        <mrow>
+          \text{Sym}_3 = \left\{ \mat{A} \in \Mat_{3,3} : A^T = A \right\}   
+        </mrow>
+        <mrow>
+         U_3 = \left\{ \mat{B} \in \Mat_{3,3} : \mat{B} \text{ is bo-driehoekig} \right\} 
+        </mrow>
+      </md>
+    </p>
+  </exercise>
+
+
+<assemblage>
+  <title>
+  3.3 Lineêre Afbeeldings en Matrikse (tot en met Stelling 3.4.3)
+</title>
+</assemblage>
+
+<exercise>
+  (Poole Oefening 6.6 2) 
+  <ol>
+    <li>
+      Vind die matriks <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> van die lineêre afbeelding  <m>T : \Poly_1 \rightarrow \Poly_1</m> gedefineer deur <m>T(a + bx) = b - ax</m> relatief tot die basisse <m>\basis{B} = \bopen 1+x, 1-x \bclose</m> en <m>\basis{C} = \bopen 1, x \bclose</m> vir <m>\Poly_1</m>.
+    </li>
+    <li>
+      Verifieer <xref ref="lin-map-in-matrix-theorem"/> vir die vektor <m>\ve{v}=4+2x</m> deur <m>[T(\ve{v})]_\basis{C}</m> en <m>[T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B}</m> onafhanklik te bereken, en te kontrolleer dat hulle wel gelyk is..
+    </li>
+  </ol>
+</exercise>
+
+<exercise>
+      <p>
+        Laat
+        <me>
+          S : \Trig_2 \rightarrow \Trig_2
+        </me>
+        die <sq>verplaas met <m>\frac{\pi}{6}</m></sq> afbeelding,
+        <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
+       Bereken <m>[S]_{\basis{B} \leftarrow \basis{C}}</m>, waar <m>\basis{B}</m> en <m>\basis{C}</m> die volgende basisse vir <m>\Trig_2</m> is:
+       <md>
+         <mrow>\basis{B} = \bopen 1, \cos x, \sin x, \cos 2x, \sin 2x \bclose </mrow>
+         <mrow> \basis{C} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin^2 x  \bclose  </mrow>
+       </md>
+      </p>
+</exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Bevestig <xref ref="lin-map-in-matrix-theorem">Stelling</xref> vir die
+        line&#xea;re afbeelding <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> gegee
+        deur <m>S(\mat{M}) = \mat{M}^T</m>,
+        met behulp van die volgende basisse van
+        <m>\Mat_{2,2}</m>:
+        <me>
+          \basis{B} = \basis{C} = \bopen \mat{M}_1 = \begin{bmatrix} 1 \amp  1 \\ 2 \amp 
+          3 \end{bmatrix}, \, \mat{M}_2 = \begin{bmatrix} 1 \amp  0 \\ 1 \amp  1 \end{bmatrix}, \, \mat{M}_3 =
+          \begin{bmatrix} 1 \amp  1 \\ 1 \amp  1 \end{bmatrix}, \, \mat{M}_4 = \begin{bmatrix} 0 \amp  1 \\ 1 \amp  1 \end{bmatrix}
+          \bclose.
+        </me>
+      </p>
+    </statement>
+</exercise>
+
+
+</exercises>
+
+</section>
+
+

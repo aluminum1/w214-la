@@ -1,5 +1,3 @@
-
-
 <section xml:id="ACh3Sec4LinearMapsMatrices">
   <title>Line&#xea;re afbeeldings en matrikse</title>
   <definition xml:id="matrix_of_linear_map_defn">
@@ -52,7 +50,7 @@
         <m>\basis{C}</m> 'n basis vir <m>W</m>
         wees.
         Dan vir alle vektore <m>\ve{v}</m> in <m>V</m>,
-        <men>
+        <men xml:id="lin-maps-and-matrices-eqn">
           [T(\ve{v})]_\basis{C} = [T]_{\basis{C} \leftarrow \basis{B}}
           [\ve{v}]_\basis{B}
         </men>
@@ -437,8 +435,8 @@
         waar <m>P \equiv P_{\basis{B} \leftarrow \basis{C}}</m>.
       </p>
     </statement>
-  </theorem>
 
+  </theorem>
   <proof>
    <md>
       <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
@@ -450,22 +448,18 @@
     </md>.
   </proof>
 
-
   <exercises>
-  <exercise xml:id="trig_ex_1">
+      <exercise xml:id="trig_ex_1">
     <statement>
       <p>
-        Laat
+        Let
         <me>
           T : \Trig_1 \rightarrow \Trig_2
         </me>
-        die <sq>vermenigvuldig met <m>\sin x</m></sq>-line&#xea;re afbeelding wees,
-        <m>T(f)(x)
-        = \sin x f(x)</m>.
-        Bereken <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> met
-        betrekking tot die standaard basis
-        <m>\basis{B}</m> van <m>\Trig_1</m> en
-        <m>\basis{C}</m> van <m>\Trig_2</m>.
+        be the <sq>multiply with <m>\sin x</m></sq> linear map,
+        <m>T(f)(x) = \sin x f(x)</m>.
+        Compute <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> with respect to the standard basis
+        <m>\basis{B}</m> of <m>\Trig_1</m> and <m>\basis{C}</m> of <m>\Trig_2</m>.
       </p>
     </statement>
     <solution>
@@ -488,6 +482,7 @@
       </p>
     </solution>
   </exercise>
+
 
   <exercise xml:id="trig_ex_2">
     <statement>
