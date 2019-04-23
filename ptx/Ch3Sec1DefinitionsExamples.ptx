@@ -338,7 +338,7 @@
       The operation <sq>take the derivative</sq> can be interpreted as a linear map
       <md>
         <mrow>D : \Poly_n \amp  \rightarrow \Poly_{n-1}</mrow>
-        <mrow>\ve{p} \amp  \mapsto \ve{p}' \, </mrow>
+        <mrow>p \amp  \mapsto p' \, </mrow>
       </md>.
     </p>
 
@@ -363,28 +363,28 @@
           <ol>
             <li>
               <p>
-                As you know from calculus, taking the derivative of a polynomial decreases every power of <m> x </m> by 1. So if <m> \ve p </m> is in <m>\Poly_n </m>, then <m> \ve p </m> has degree at most <m> n </m> . Therefore, its image under <m> D </m> has degree at most <m> n - 1</m>. Thus <m> \ve p' </m> is in <m>\Poly_{n-1} </m>.
+                As you know from calculus, taking the derivative of a polynomial decreases every power of <m> x </m> by 1. So if <m> p </m> is in <m>\Poly_n </m>, then <m> p </m> has degree at most <m> n </m> . Therefore, its image under <m> D </m> has degree at most <m> n - 1</m>. Thus <m> p' </m> is in <m>\Poly_{n-1} </m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m> \ve p, \ve q </m> be in <m> \Poly_n </m>. For concreteness, we write
-                <me>
-                \ve p = \sum_{j=0}^{n} a_j x^j \\ 
-                \ve q = \sum_{j=0}^{n} b_j x^j
-              </me>.
-              We check additivity of <m>D</m>:
-              <me>
-               D(\ve p + \ve q) = D\left(\sum_{j=0}^{n} (a_j + b_j) x^j\right) = \sum_{j=1}^n (a_j + b_j)j x^{j-1} \\
-              = \sum_{j=1}^{n} ja_j x^{j-1} + \sum_{j=0}^{n} jb_j x^{j-1} = D(\ve p) + D(\ve q).
-            </me>
-            Next we check how <m>D</m> interacts with scalar multiplication:
-            <me>
-            D(k \ve p) = D\left( \sum_{j=0}^{n} k a_j x^j\right) = \sum_{j=1}^n k a_j x^{j-1} \\
-            =k\left( \sum_{j=1}^n a_j x^{j-1} \right) = k D(\ve p).
-          </me>
-          And so we conclude that <m> D </m>is linear.
+                Let <m> p, q </m> be in <m> \Poly_n </m>. Then:
+                <md>
+                  <mrow>
+                    D(p + q) \amp = (p+q)' 
+                  </mrow>
+                  <mrow> \amp = p' + q' \amp (\text{rule of differentiation})</mrow>
+                  <mrow> \amp = D(p) + D(q) </mrow>
+                </md>
+              </p>
+              <p>
+                Similarly, 
+                <md>
+                  <mrow> D(kp) \amp = (kp)' </mrow>
+                  <mrow> \amp = kp' \amp (\text{rule of differentiation})</mrow>
+                  <mrow> \amp = k D(p)</mrow>
+                </md>
               </p>
             </li>
           </ol>

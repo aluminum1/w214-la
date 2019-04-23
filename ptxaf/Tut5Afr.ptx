@@ -68,7 +68,7 @@ Vind
 
 <exercise>
   <p>
-    (Poole Exercise 6.4 20) Toon aan dat daar geen lineêre afbeelding<m>T : \mathbb{R}^3 \rightarrow \Poly_2</m> bestaan met die eienskap dat
+    (Poole Exercise 6.4 20) Toon aan dat daar geen lineêre afbeelding<m>T : \Col_3 \rightarrow \Poly_2</m> bestaan met die eienskap dat
     <me>
       T\left( \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}\right) = 1 + x, \quad T\left(\begin{bmatrix}3 \\ 0 \\2 \end{bmatrix} \right) = 2 - x + x^2 \\
       T\left(\begin{bmatrix}0 \\ 6 \\ -8 \end{bmatrix} \right) = -2 + 2x^2

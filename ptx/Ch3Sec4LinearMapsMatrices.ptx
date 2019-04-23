@@ -64,7 +64,7 @@
       <p>
         Then,
         <md>
-          <mrow>_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
+          <mrow>[\ve{v}]_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
           <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  \mbox{(\(T\) is linear)}</mrow>
           <mrow>\amp = a_1 [T(\ve{b}_1)]_\basis{C} + \cdots + a_n [T(\ve{b}_m)]_\basis{C}  \amp \amp  (<xref ref = "lin_of_coord_vectors" />)</mrow>
          <mrow> \amp =  \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>

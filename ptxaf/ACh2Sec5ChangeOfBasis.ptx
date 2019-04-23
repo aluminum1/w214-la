@@ -343,7 +343,7 @@
       <p>
         Dan,
 <md>
-          <mrow>_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}</mrow>
+          <mrow>[\ve{v}]_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}</mrow>
           <mrow>\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  (<xref ref="lin_of_coord_vectors">Lemma</xref>)</mrow>)
           <mrow>\amp =   \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right] \amp \amp <xref ref = "column_vector_multiplication"/></mrow>
           <mrow>\amp =    \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>

@@ -741,16 +741,27 @@
     <ol>
       <li>
         <p>
-          Yes. This follows from the usual rules for addition in <m>\mathbb{R}</m>.
+          No. Counterexample:
           <me>
-          (a_1, a_2) \oplus (b_1, b_2) := (a_1 + b_2, a_2 + b_1) = (b_1 + a_1 , b_2 + a_2) = (b_1,b_2) \oplus (a_1, a_2).
-        </me>
+           (1, 2) \oplus (2, 1) = (1 + 1, 2 + 2) = (2,4)
+          </me>
+          but
+          <me>
+            (2,1) \oplus (1,2) = (2 + 2, 1 + 1) = (4,2). 
+          </me>
         </p>
       </li>
 
       <li>
         <p>
-          Similar to a, except using the associativity of addition in <m>\mathbb R</m>.
+          No. Counterexample:
+          <me>
+           ((1, 2) \oplus (2, 1)) \oplus (1,3) = (2, 4) \oplus (1,3) = (5, 5)
+          </me>
+          but
+          <me>
+            (1,2) \oplus ((2,1) \oplus (1,3)) = (1,2) \oplus (5, 2) = (3, 7).
+          </me>
         </p>
       </li>
 

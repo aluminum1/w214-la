@@ -289,22 +289,30 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
     <solution>
       <p>
         <md>
-         <mrow>2 \ve x + 6 \ve w  \amp = \ve 0</mrow>
+         <mrow>2 \smul \ve x + 6 \smul \ve w  \amp = \ve 0</mrow>
 
-          <mrow>\implies  2 \ve x + 6 \ve w + (-6 \ve w )\amp  \ve 0 + (-6\ve w) 
-           \amp (\text{Existence of Inverses})</mrow>
+          <mrow>\implies  (2 \smul \ve x + 6 \smul \ve w) + (-(6 \smul \ve w))  \amp =  \ve 0 + (-(6 \smul \ve w)) 
+           \amp (\text{add } -(6\smul\ve{w}) \text{ to both sides})</mrow>
 
-          <mrow> \implies  2 \ve x + 0  \amp = -6\ve w  \amp (<xref ref = "R3a"> R3a </xref>)</mrow>
+          <mrow> \implies 2 \smul \ve{x} + (6 \smul \ve{w} + (-(6 \smul \ve{w}))) \amp = -(6 \smul \ve{w}) \amp (<xref ref="R2">R2</xref> \text{ on LHS}, <xref ref="R3a">R3a</xref> \text{on RHS})            
+          </mrow>
 
-           <mrow> \implies  2\ve x   \amp = -6\ve w  \amp (<xref ref = "R3b"> R3b </xref>)</mrow>
+          <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)  \amp (<xref ref = "add_inv"/>) </mrow>
 
-           <mrow> \implies  (\frac{1}{2})(2 \ve x) \amp = ((\frac{1}{2}))(-6\ve w)  </mrow>
+           <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)  \amp (<xref ref = "R3b">R3b</xref>)</mrow>
 
-            <mrow> \implies  (\frac{1}{2}2)\ve x  \amp = (-\frac{1}{2}6)\ve w) \amp (<xref ref = "R6"> R6 </xref>)</mrow>
+           <mrow> \implies  (\frac{1}{2})\smul (2 \smul \ve x) \amp = \frac{1}{2} \smul (-(6 \smul \ve{w}))  </mrow>
 
-               <mrow>\implies   1 \ve x  \amp  = -3 \ve w  </mrow>
+            <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6">R6</xref> \text{ on LHS, defn of inverse on RHS}) </mrow>
 
-                <mrow>\implies  \ve x   \amp = -3 \ve w  \amp (<xref ref = "R7"> R7 </xref>) </mrow>
+
+            <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
+
+               <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7">R7</xref> \text{ on LHS})  </mrow>
+
+                <mrow>\implies  \ve x   \amp = ((\frac{1}{2})(-6))\smul \ve w  \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
+
+                <mrow> \implies \ve{x} \amp =  (-3)\smul \ve{w} </mrow>
                 </md>
 </p>
 </solution>
