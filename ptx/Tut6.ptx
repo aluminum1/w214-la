@@ -1,0 +1,160 @@
+<section xml:id="Tut6">
+<title>W214 2019, Linear Algebra Tutorial 6</title>
+<shorttitle>Tutorial 6</shorttitle>
+
+<p>As always, you are welcome to use the <url href="https://sagecell.sagemath.org/">SageMath cell server</url> to help you solve some of the problems below, or at least to check your calculations. </p>
+
+<exercises>
+
+<assemblage><title>Notation quiz</title></assemblage>
+<exercise>
+  <statement>
+  <p>Write out the English terminology for each of the following symbolic expressions. The first two have been done for you.</p>
+  <ol>
+  <li> <m>[T]_{\basis{C} \leftarrow \basis{B}}</m>. Answer: The matrix of <m>T</m> with respect to the bases <m>\basis{B}</m> and <m>\basis{C}</m>. </li>
+ <li> <m>T : V \rightarrow W</m>. Answer: A linear map <m>T</m> from a vector space <m>V</m> to a vector space <m>W</m>. </li>
+  <li> <m>[\ve{v}]_\basis{B}</m>. </li>
+  <li> <m>[T(\ve{v}]_\basis{C}</m>. </li>
+  <li> <m>[\cdot]_\basis{B}</m>.</li>
+  <li> <m>S \circ T</m>. </li>
+  <li> <m>\ve{vec}_{V, \basis{B}} (\mat{c})</m>. </li>
+  </ol>
+</statement>
+</exercise>
+
+<exercise>
+  <statement>
+ <p>Write out the symbolic expressions for each of the following English phrases. The first one has been done for you.
+  <ol> 
+  <li>The coordinate vector of <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m>. Answer: <m>[\ve{v}]_\basis{B}</m>. </li>
+  <li> The change-of-basis matrix from the basis <m>\basis{B}</m> to the basis <m>\basis{C}</m>. </li>
+  <li> The composite of the linear map <m>T</m> after the linear map <m>S</m>. </li>
+  <li> The vector in <m>V</m> whose coordinate vector with respect to the basis <m>\basis{B}</m> is <m>\mat{c}</m>. </li>
+  <li> The map from <m>V</m> to the space of <m>n</m>-dimensional column vectors which computes coordinate vectors with respect to a basis <m>\basis{B}</m>. </li> 
+    </ol>
+  </p>
+  </statement>
+</exercise>
+
+
+<assemblage><title>3.4 Linear Maps and Matrices - From Lemma 3.4.5 onwards</title>
+</assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+        Verify <xref ref="functoriality_of_matrix"/> in the case of the linear maps
+        <md>
+          <mrow> S : \Mat_{2,3} \amp \rightarrow \Col_3</mrow>
+          <mrow> \begin{bmatrix} A_{11} \amp A_{12} \amp A_{13} \\ A_{21} \amp A_{22} \amp A_{23} \end{bmatrix} \amp \mapsto \begin{bmatrix} A_{11} + A_{21} \\ A_{12} + A_{22} \\ A_{13} + A_{23} \end{bmatrix} </mrow>
+        </md>
+        <md>
+          <mrow> T : \Col_3 \amp \rightarrow \Poly_2[x,y]</mrow>
+          <mrow>\begin{bmatrix} a \\ b \\ c \end{bmatrix} \amp \mapsto a + b(x-y-1)^2 + c(x+y+1)^2</mrow>
+        </md>
+        Use the standard basis <m>\basis{B}</m> for <m>\Mat_{2,3}</m> (see <xref ref="dimension_of_matrix_space_example"/>), the basis
+        <me>
+          \basis{C} = \bopen \begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix} \bclose
+        </me> 
+        for <m>\Col_3</m>, and the standard basis 
+        <me>
+          \basis{C} = \bopen 1, x, y, x^2, xy, y^2 \bclose
+        </me>
+        for <m>\Poly_2[x,y]</m>. That is, compute
+        <me>
+          [T \circ S]_{\basis{D} \leftarrow \basis{B}}
+        </me>
+        and
+        <me>
+          [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
+        </me>
+        and check that they are equal. 
+      </p>
+    </statement>
+  </exercise>
+
+<assemblage><title>3.5 Kernel and Image of a Linear Map</title>
+</assemblage>
+
+
+    <exercise>
+    <statement>
+      <p>
+        Determine the kernel, image, nullity (the dimension of the kernel) and rank (the dimension of the image) of the following linear maps. 
+        <ol>
+          <li>
+            <p>
+              The identity map <m>\id_V : V \rightarrow V</m> on a finite-dimensional vector space <m>V</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The zero map
+              <md>
+                <mrow>Z : V \amp  \rightarrow V</mrow>
+                <mrow>\ve{v} \amp  \mapsto \ve{0}</mrow>
+              </md>
+              on a finite-dimensional vector space <m>V</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The map
+              <md>
+                <mrow>T : \Poly_3 \amp  \rightarrow \Col_3</mrow>
+                <mrow>p \amp  \mapsto \begin{bmatrix} p(1) \\ p(2) \\ p(3)\end{bmatrix}</mrow>
+              </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The map
+              <md>
+                <mrow>S : \Trig_2 \amp  \rightarrow \Col_2</mrow>
+                <mrow>f \amp  \mapsto \begin{bmatrix} \displaystyle \int_0^\pi f(x) \cos x dx \\
+                \displaystyle \int_0^\pi f(x) \sin x dx \end{bmatrix} </mrow>
+              </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The `curl' map
+              <md>
+                <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
+                <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
+              </md>
+              Bonus question: What kind of vector fields are elements of <m>\Ker(C)</m>?
+            </p>
+          </li>
+
+
+          <li>
+      <p>(Poole 6.5.12) The map
+        <md>
+          <mrow>T : \Mat_{2,2} \amp \rightarrow \Mat_{2,2} </mrow>
+          <mrow> \mat{A} \amp \mapsto \mat{A} \mat{B} - \mat{B} \mat{A}</mrow>
+        </md>
+        where
+        <me>
+          \mat{B} = \begin{bmatrix} 1 \amp -1 \\ -1 \amp 1 \end{bmatrix}
+        </me>
+      </p>
+      </li>
+      </ol>
+      </p>
+    </statement>
+  </exercise>
+
+
+
+
+
+</exercises>
+
+</section>
+
+

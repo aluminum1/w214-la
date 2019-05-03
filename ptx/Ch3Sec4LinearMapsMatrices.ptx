@@ -665,7 +665,7 @@
         </md>
         <md>
           <mrow> T : \Col_3 \amp \rightarrow \Poly_2[x,y]</mrow>
-          <mrow>\begin{bmatrix} a \\ b \\ c \end{bmatrix} \amp \mapsto a + b(x-y)^2 + c(x+y)^2</mrow>
+          <mrow>\begin{bmatrix} a \\ b \\ c \end{bmatrix} \amp \mapsto a + b(x-y-1)^2 + c(x+y+1)^2</mrow>
         </md>
         Use the standard basis <m>\basis{B}</m> for <m>\Mat_{2,3}</m> (see <xref ref="dimension_of_matrix_space_example"/>), the basis
         <me>

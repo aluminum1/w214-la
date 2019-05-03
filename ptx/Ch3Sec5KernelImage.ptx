@@ -1,7 +1,7 @@
 
 
 <section xml:id="Ch3Sec5KernelRange">
-  <title>Kernel and range of a linear map</title>
+  <title>Kernel and Image of a Linear Map</title>
   <definition>
     <statement>
       <p>
@@ -689,7 +689,32 @@
               </md>
             </p>
           </li>
-        </ol>
+
+          <li>
+            <p>
+              The `curl' map
+              <md>
+                <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
+                <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
+              </md>
+              Bonus question: What kind of vector fields live in the kernel of<m>C</m>?
+            </p>
+          </li>
+
+          <li>
+
+      <p>(Poole 6.5.12) The map
+        <md>
+          <mrow>T : \Mat_{2,2} \amp \rightarrow \Mat_{2,2} </mrow>
+          <mrow> \mat{A} \amp \mapsto \mat{A} \mat{B} - \mat{B} \mat{A}</mrow>
+        </md>
+        where
+        <me>
+          \mat{B} = \begin{bmatrix} 1 \amp -1 \\ -1 \amp 1 \end{bmatrix}
+        </me>
+      </p>
+      </li>
+      </ol>
       </p>
     </statement>
     <solution> 
@@ -825,7 +850,7 @@ Hence <me>
   <exercise>
     <statement>
       <p>
-        Given an example of a linear map
+        Give an example of a linear map
         <m>T : \Col_4 \rightarrow \Col_4</m> such that <m>\Rank(T) = \Nullity(T)</m>.
       </p>
     </statement>
@@ -1060,6 +1085,18 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
     </p>
   </solution>
   </exercise>
+
+  <exercise>
+    Determine the kernel and image of the linear map
+    <me>
+      T : \Poly_2[x,y,z] \rightarrow \Poly_2
+    </me>
+    defined by
+    <me>
+      T(p)(x) := p(x,x,x).
+    </me>
+  </exercise>
+
  
 </exercises>
 
