@@ -31,11 +31,77 @@
   </assemblage>
 
   <example>
+    <title>
+      Matriks van 'n Lineêre Afbeelding
+    </title>
     <statement>
       <p>
-        Example from class!
+        Laat
+        <me>
+          T : \Poly_2 \rightarrow \Poly_3
+        </me>
+        gedefineer word deur
+        <me>
+          T(p)(x) := x p(x)
+        </me>
+        Laat
+        <me>
+          \basis{B} = \bopen b_1 = 1+x, b_2 = 1-x, b_3 = 1+x+x^2 \bclose
+        </me>
+        en
+        <me>
+          \basis{C} = \bopen c_1 = 1, c_2 = 1+x, c_3 = 1+x+x^2, c_4 = x^3 \bclose
+        </me>
+        basisse vir $\Poly_2$ en $\Poly_3$ wees, onderskeidelik. Bepaal $[T]_{\basis{C} \leftarrow \basis{B}}$.
       </p>
     </statement>
+    <solution>
+      Ons bereken:
+      <md>
+        <mrow>
+          T(b_1) \amp = x(1+x) 
+        </mrow>
+        <mrow>
+          \amp = x + x^2
+        </mrow>
+        <mrow>
+          \amp = -c_1 + c_3
+        </mrow>
+        <mrow>
+          \therefore [T(b_1)]_{\basis{C}} \amp = \begin{bmatrix} -1 \\ 0 \\ 1 \\ 0 \end{bmatrix}
+        </mrow>
+        <mrow>
+          T(b_2) \amp = x (1-x)
+          </mrow>
+          <mrow> 
+          \amp = x - x^2
+          </mrow>
+          <mrow> 
+          \amp = -c_1 + 2c_2 - c_3 
+          </mrow>
+          <mrow>
+          \therefore [T(b_2)]_{\basis{C}} \amp = 
+          \begin{bmatrix} -1 \\ 2 \\ -1 \\ 0 \end{bmatrix}
+        </mrow>
+        <mrow>
+          T(b_3) \amp = x(1+x+x^2)
+        </mrow>
+        <mrow> \amp = x + x^2 + x^3 </mrow>
+        <mrow> \amp = -c_1 + c_3 +c_4 </mrow>
+        <mrow> \therefore [T(b_3)]_{\basis{C}} \amp = 
+        \begin{bmatrix} -1 \\ 0 \\ 1 \\ 1 \end{bmatrix}</mrow>
+      </md>
+      Deur al hierdie koördinaatvektore te versamel kry ons
+      <me>
+        [T]_{\basis{C} \leftarrow \basis{B}} = 
+        \begin{bmatrix}
+        -1 \amp -1 \amp -1 \\
+        0 \amp 2 \amp 0 \\
+        1 \amp -1 \amp 1 \\
+        0 \amp 0 \amp 1
+        \end{bmatrix}
+      </me>
+    </solution>
   </example>
 
   <theorem xml:id="lin-map-in-matrix-theorem">

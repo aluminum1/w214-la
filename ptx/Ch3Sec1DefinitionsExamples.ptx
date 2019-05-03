@@ -8,7 +8,6 @@
         <caption>Video recording for the intro to and definition of a linear map.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec16LinearMapIntroAndDefn.mp4" width="50%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
     </figure>
-
   <p>
     Recall that a <em>function</em>
     (or a <em>map</em>)

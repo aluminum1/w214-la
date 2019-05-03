@@ -26,12 +26,78 @@
     </p>
   </assemblage>
 
-  <example>
+  <example xml:id="first_example_matrix_lin_map">
+    <title>
+      Matrix of a Linear Map
+    </title>
     <statement>
       <p>
-        Example from class!
+        Let
+        <me>
+          T : \Poly_2 \rightarrow \Poly_3
+        </me>
+        be defined by
+        <me>
+          T(p)(x) := x p(x)
+        </me>
+        Let
+        <me>
+          \basis{B} = \bopen b_1 = 1+x, b_2 = 1-x, b_3 = 1+x+x^2 \bclose
+        </me>
+        and
+        <me>
+          \basis{C} = \bopen c_1 = 1, c_2 = 1+x, c_3 = 1+x+x^2, c_4 = x^3 \bclose
+        </me>
+        be bases for <m>\Poly_2</m> and <m>\Poly_3</m> respectively. Determine <m>[T]_{\basis{C} \leftarrow \basis{B}}</m>.
       </p>
     </statement>
+    <solution>
+      We compute:
+      <md>
+        <mrow>
+          T(b_1) \amp = x(1+x) 
+        </mrow>
+        <mrow>
+          \amp = x + x^2
+        </mrow>
+        <mrow>
+          \amp = -c_1 + c_3
+        </mrow>
+        <mrow>
+          \therefore [T(b_1)]_{\basis{C}} \amp = \begin{bmatrix} -1 \\ 0 \\ 1 \\ 0 \end{bmatrix}
+        </mrow>
+        <mrow>
+          T(b_2) \amp = x (1-x)
+          </mrow>
+          <mrow> 
+          \amp = x - x^2
+          </mrow>
+          <mrow> 
+          \amp = -c_1 + 2c_2 - c_3 
+          </mrow>
+          <mrow>
+          \therefore [T(b_2)]_{\basis{C}} \amp = 
+          \begin{bmatrix} -1 \\ 2 \\ -1 \\ 0 \end{bmatrix}
+        </mrow>
+        <mrow>
+          T(b_3) \amp = x(1+x+x^2)
+        </mrow>
+        <mrow> \amp = x + x^2 + x^3 </mrow>
+        <mrow> \amp = -c_1 + c_3 +c_4 </mrow>
+        <mrow> \therefore [T(b_3)]_{\basis{C}} \amp = 
+        \begin{bmatrix} -1 \\ 0 \\ 1 \\ 1 \end{bmatrix}</mrow>
+      </md>
+      Assembling all these coordinate vectors together gives
+      <me>
+        [T]_{\basis{C} \leftarrow \basis{B}} = 
+        \begin{bmatrix}
+        -1 \amp -1 \amp -1 \\
+        0 \amp 2 \amp 0 \\
+        1 \amp -1 \amp 1 \\
+        0 \amp 0 \amp 1
+        \end{bmatrix}
+      </me>
+    </solution>
   </example>
 
   <theorem xml:id="lin-map-in-matrix-theorem">
@@ -76,10 +142,34 @@
 
 
   <example>
+    <title>Verifying <xref ref="lin-map-in-matrix-theorem"/> in an example</title>
     <statement>
       <p>
-        Continuation of example from class!
+        Let us verify that <xref ref="lin-map-in-matrix-theorem"/> really works, in the context of <xref ref="first_example_matrix_lin_map"/>. Let us take the vector <m>\ve{v} \in \Poly_2</m> to be, for instance, <m>x</m>. 
       </p>
+      <p>
+        Exapnding <m>x</m> relative to the basis <m>\basis{B}</m>, we get
+        <me>
+          x = \frac{1}{2} (p_1 - p_2).
+        </me> 
+        So,
+        <me>
+          [x]_{\basis{B}} = \begin{bmatrix} \frac{1}{2} \\ - \frac{1}{2} \\ 0 \end{bmatrix}
+        </me>
+      Also, <m>T(x) = x^2 = -q_2 + q_3</m>, so
+      <me>
+        [T(x)]_{\basis{C}} = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}
+      </me>
+      We can now compute the left and right hand sides of Equation <xref ref="lin-maps-and-matrices-eqn"/> and see that they are indeed the same.
+      <md>
+        <mrow>\text{LHS of } <xref ref="lin-maps-and-matrices-eqn"/> \amp = [T(x)]_{\basis{C}} </mrow>
+        <mrow> \amp =  \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}. </mrow>
+        <mrow>\text{RHS of }<xref ref="lin-maps-and-matrices-eqn"/> \amp = [T]_{\basis{C} \leftarrow \basis{B}} [x]_{\basis{B}}   </mrow>
+        <mrow> \amp= \begin{bmatrix}  -1 \amp -1 \amp -1 \\ 0 \amp 2 \amp 0 \\ 1 \amp -1 \amp 1 \\ 0 \amp 0 \amp 1 \end{bmatrix} \begin{bmatrix} \frac{1}{2} \\ -\frac{1}{2} \\ 0 \end{bmatrix} </mrow>
+        <mrow> \amp = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}</mrow>
+      </md>
+      So the Theorem indeed works, at least in this case!
+    </p>
     </statement>
   </example>
 
@@ -318,13 +408,13 @@
     <p>
       We have
       <md>
-        <mrow>_{\basis{C} \leftarrow \basis{B}} [T^{-1}]_{\basis{B} \leftarrow \basis{C}} \amp = [T \circ T^{-1}]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+        <mrow>[T]_{\basis{C} \leftarrow \basis{B}} [T^{-1}]_{\basis{B} \leftarrow \basis{C}} \amp = [T \circ T^{-1}]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
         <mrow>\amp = [\id_W]_{\basis{C} \leftarrow \basis{C}} \amp \amp  \mbox{(\(T \circ T^{-1} = \id_W\))}</mrow>
         <mrow>\amp = I</mrow>
       </md>
       and
       <md>
-        <mrow>_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} \amp = [T^{-1} \circ T]_{\basis{B} \leftarrow \basis{B}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+        <mrow>[T]_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} \amp = [T^{-1} \circ T]_{\basis{B} \leftarrow \basis{B}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
         <mrow>\amp = [\id_V]_{\basis{B} \leftarrow \basis{B}} \amp \amp  \mbox{(\(T^{-1} \circ T = \id_V\))}</mrow>
         <mrow>\amp = I</mrow>
       </md>.
@@ -507,12 +597,97 @@
   <exercise>
     <statement>
       <p>
+        Verify <xref ref="lin-map-in-matrix-theorem"/> for the linear map
+        <me>
+          T : \Poly_3 \rightarrow \Trig_3
+        </me>
+        defined by
+        <me>
+          T(p)(x) := p(\cos x).
+        </me>
+        Use the standard bases <m>\basis{B}</m> for <m>\Poly_3</m> and <m>\basis{C}</m> for <m>\Trig_3</m>. 
+      </p>
+    </statement>
+
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
         Check that the linear maps <m>T</m> and <m>S</m> from <xref ref="trig_ex_1">Exercises</xref>
         and <xref ref="trig_ex_2"></xref>
         satisfy <m>[S \circ T]_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{B}} [T]_{\basis{C} \leftarrow \basis{B}}</m>.
       </p>
     </statement>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Verify <xref ref="functoriality_of_matrix"/> for the `gradient' and `divergence' linear maps
+        <md>
+         <mrow> G : \Poly_3[x,y] \amp \rightarrow \Vect_2(\mathbb{R}^2) </mrow>
+         <mrow> G(p) := \nabla p</mrow>
+         <mrow>\Div : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
+         <mrow> \Div( (P, Q) ) \amp := \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y}</mrow>
+        </md>
+        Use the standard bases 
+        <me>
+          \basis{B} = \bopen 1, x, y, x^2, xy, y^2, x^3, x^2y, xy^2, y^3 \bclose
+        </me>
+        <me>
+          \basis{C} = \bopen (1, 0), (x, 0), (y, 0), (x^2, 0), (xy, 0), (y^2, 0), \\
+           (0, 1), (0, x), (0, y), (0, x^2), (0, xy), (0, y^2) \bclose
+        </me>
+        <me>
+          \basis{D} = \bopen 1, x, y \bclose
+        </me>
+        for <m>\Poly_3[x,y]</m>, <m>\Vect_2(\mathbb{R}^2)</m>, <m>\Poly_1[x,y]</m> respectively. That is, compute
+        <me>
+          [\Div]_{\basis{D} \leftarrow \basis{C}} [G]_{\basis{C} \leftarrow \basis{B}}
+        </me>
+        and
+        <me>
+          [\Div \circ G]_{\basis{D} \leftarrow \basis{C}}
+        </me>
+        and check that they are equal.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Verify <xref ref="functoriality_of_matrix"/> in the case of the linear maps
+        <md>
+          <mrow> S : \Mat_{2,3} \amp \rightarrow \Col_3</mrow>
+          <mrow> \begin{bmatrix} A_{11} \amp A_{12} \amp A_{13} \\ A_{21} \amp A_{22} \amp A_{23} \end{bmatrix} \amp \mapsto \begin{bmatrix} A_{11} + A_{21} \\ A_{12} + A_{22} \\ A_{13} + A_{23} \end{bmatrix} </mrow>
+        </md>
+        <md>
+          <mrow> T : \Col_3 \amp \rightarrow \Poly_2[x,y]</mrow>
+          <mrow>\begin{bmatrix} a \\ b \\ c \end{bmatrix} \amp \mapsto a + b(x-y)^2 + c(x+y)^2</mrow>
+        </md>
+        Use the standard basis <m>\basis{B}</m> for <m>\Mat_{2,3}</m> (see <xref ref="dimension_of_matrix_space_example"/>), the basis
+        <me>
+          \basis{C} = \bopen \begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix} \bclose
+        </me> 
+        for <m>\Col_3</m>, and the standard basis 
+        <me>
+          \basis{C} = \bopen 1, x, y, x^2, xy, y^2 \bclose
+        </me>
+        for <m>\Poly_2[x,y]</m>. That is, compute
+        <me>
+          [T \circ S]_{\basis{D} \leftarrow \basis{B}}
+        </me>
+        and
+        <me>
+          [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
+        </me>
+        and check that they are equal. 
+      </p>
+    </statement>
+  </exercise>
+
 </exercises>
 
 <!-- <solutions divisional="solution answer" />  -->

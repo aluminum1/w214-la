@@ -208,6 +208,14 @@
 		"selected_items":
 		[
 			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packages",
+				"Preferences: Browse Packages"
+			],
+			[
 				"theme",
 				"UI: Select Theme"
 			],
@@ -257,10 +265,17 @@
 	],
 	"file_history":
 	[
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec1DefinitionsExamples.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/Tut5Afr.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh2Sec3BasisDimension.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh1Sec4MoreExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh1Sec5ResultsVectorSpace.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec1DefinitionsExamples.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec4LinearMapsMatrices.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/model-project-entry.xml",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Notes.sublime-workspace",
+		"/Users/brucebartlett/Sync/Programming/sandbox/sandbox1.html",
+		"/Users/brucebartlett/Sync/Programming/sandbox/sandbox1.txt",
+		"/Users/brucebartlett/Library/Application Support/Sublime Text 3/Packages/User/bruce-pretext.sublime-build",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh2Sec3BasisDimension.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh2Sec5ChangeOfBasis.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec3Isomorphisms.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/AChTutorials.ptx",
@@ -275,7 +290,6 @@
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/interactive-polar-map-if.html",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/interactive-polar-map.html",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox3/code.js",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh1Sec4MoreExamples.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh1Sec6Subspaces.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/Tut3Afr.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/Tut4Afr.ptx",
@@ -378,14 +392,11 @@
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox/section-multiple-paragraph.html",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox/quick.tex",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/sandbox/quick.html",
-		"/Users/brucebartlett/Library/Application Support/Sublime Text 3/Packages/User/PreTeXtual.sublime-settings",
-		"/Users/brucebartlett/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/PreTeXtual.sublime-settings",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/chapter2.ptx",
-		"/Users/brucebartlett/.bashrc"
+		"/Users/brucebartlett/Library/Application Support/Sublime Text 3/Packages/User/PreTeXtual.sublime-settings"
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -400,6 +411,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"bruce-pretex",
 			"\\lambda",
 			"trig_ex_1",
 			"trig_ex_2",
@@ -432,7 +444,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -477,7 +489,7 @@
 	"project": "NotesAf.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":

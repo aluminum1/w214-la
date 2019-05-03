@@ -212,6 +212,10 @@
 		"selected_items":
 		[
 			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
 				"packa",
 				"Package Control: Install Package"
 			],
@@ -230,10 +234,6 @@
 			[
 				"LSP: En",
 				"LSP: Setup Language Server"
-			],
-			[
-				"pack",
-				"Package Control: Install Package"
 			],
 			[
 				"pretex",
@@ -269,11 +269,13 @@
 	],
 	"file_history":
 	[
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec1DefinitionsExamples.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec3Isomorphisms.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut5.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/jordan-tut-problems.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec5ResultsVectorSpace.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec1DefinitionsExamples.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec4LinearMapsMatrices.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec4MoreExamples.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec3Isomorphisms.ptx",
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/jordan-tut-problems.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec5ChangeOfBasis.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Tests and Exams/class-test.tex",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec3BasisDimension.ptx",
@@ -332,8 +334,6 @@
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/w214-lin-alg.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec2LinearIndependence.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec6Subspaces.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec5ResultsVectorSpace.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec4MoreExamples.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec5KernelRange.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/bookinfo.xml",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/PreTeXt/fcla-master/src2/section-B.xml",
@@ -400,7 +400,7 @@
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -468,7 +468,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -513,7 +513,7 @@
 	"project": "Notes.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -536,12 +536,16 @@
 	},
 	"select_symbol":
 	{
-		"height": 375.0,
-		"last_filter": "",
+		"height": 152.0,
+		"last_filter": "defn_of_",
 		"selected_items":
 		[
+			[
+				"defn_of_",
+				"defn_of_basis_of_functions"
+			]
 		],
-		"width": 558.0
+		"width": 559.0
 	},
 	"selected_group": 0,
 	"settings":
