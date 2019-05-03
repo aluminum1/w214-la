@@ -1060,6 +1060,34 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
     </p>
   </solution>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>V</m> be a vector space. Let <m>U</m> be a subspace of <m>V</m>. Show that there exists a linear map <m>T: V \to V</m> such that <m>\Ker T = U</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+       </p> 
+    </solution>
+  </exercise>
+
+    <exercise>
+    <statement>
+      <p>
+        Consider the function <m>F:\R^3 \to \R^2</m> defined by 
+        <me>
+        F(x,y,z)=(x^2 + y^2 + z, xyz).
+      </me>
+      Consider now the <m>DF_p</m>, the Jacobian matrix of <m>F</m> at the point <m>p = (1,2,1)</m>. Find <m>\Ker (DF_p)</m> and <m>\Im (DF_p)</m> and subsequently find <m>\Nullity(DF_p)</m> and <m>\Rank(DF_p)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+       </p> 
+    </solution>
+  </exercise>
  
 </exercises>
 
