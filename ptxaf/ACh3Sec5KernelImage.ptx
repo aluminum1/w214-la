@@ -1,7 +1,7 @@
 
 
 <section xml:id="ACh3Sec5KernelRange">
-  <title>Kern en waardeversameling van 'n line&#xea;re afbeelding</title>
+  <title>Kern en Beeld 'n Lineêre Afbeelding</title>
   <definition>
     <statement>
       <p>
@@ -1184,6 +1184,19 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
     </p>
   </solution>
 </exercise>
+
+  <exercise>
+    Determine the kernel and image of the linear map
+    <me>
+      T : \Poly_2[x,y,z] \rightarrow \Poly_2
+    </me>
+    defined by
+    <me>
+      T(p)(x) := p(x,x,x).
+    </me>
+  </exercise>
+
+
 </exercises>
 
 <!-- <solutions divisional="solution answer" />  -->

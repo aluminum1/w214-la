@@ -334,32 +334,33 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
     </statement>
   </exercise>
 
-  <theorem xml:id ="spanning_check_thm">
+<p>
+  Die volgende Lemma gee 'n gerieflike metode om te kontrolleer of 'n gegewe lys vektore <m>\basis{C}</m> 'n vektorruimte <m>V</m> span, as jy alreeds weet dat 'n sekere ander lys <m>\basis{B}</m> vir <m>V</m> span.
+</p>
+
+<lemma xml:id ="spanning_check_thm">
   <statement>
     <p>
-    Let <m>V</m> be a vector space. Suppose <m> U = \{\ve u_1,\ldots,\ve u_m\} </m> spans <m>V</m>. Furthermore, suppose that <m> W = \{\ve w_1,\ldots,\ve w_n\}</m> has the property that for any <m> \ve u_i \in U</m>, <m>\ve u_i </m> is a linear combination of elements in <m> W</m>. That is, there exist scalars <m>a_{i,1},\ldots,a_{i,m}</m> such that
-    <me>
-\ve u_i = \sum_{k=1}^m  a_{i,1} \ve w_k.
-</me>
-Then <m>W</m> also spans <m>V</m>.
+    Veronderstel dat <m>\basis{B}= \{\ve b_1,\ldots,\ve b_m\} </m> 'n vektorruimte <m>V</m> span. Verder, veronderstel dat elke vektor in <m>\basis{B}</m> is 'n lineêre kombinasie van die vektore uit 'n ander lys <m>\basis{C} = \{\ve c_1,\ldots,\ve c_n\}</m>. Dan span <m>\basis{C}</m> ook vir <m>V</m>.
 </p>
 </statement>
-</theorem>
+</lemma>
 <proof>
   <p>
-Let <m> \ve v \in V </m> be arbitrary. Since <m> U </m> spans <m>V</m>, there exist constants <m>c_i</m> such that
-<me>
-\ve v= \sum_{i=1}^n c_i \ve u_i.
-</me>
-By assumption,
+    Let <m>\ve{v}</m> be an arbitrary vector in <m>V</m>. Since <m>\basis{B}</m> spans <m>V</m>, we can write <m>\ve{v}</m> as a linear combination of the <m>\basis{B}</m> vectors:
+    <men xml:id="sub_into_span_span">
+      \ve{v} = \sum_{i=1}^m a_i \ve{b}_i
+    </men>
+    But each <m>\basis{B}</m> vector can be written as a linear combination of the <m>\basis{C}</m> vectors:
     <me>
-\ve u_i = \sum_{k=1}^m  a_{i,1} \ve w_k.
-</me>
-Substituting the second equation into the first, we obtain
-<me>
-\ve v =  \sum_{i=1}^n c_i \sum_{k=1}^m  a_{i,1} \ve w_k.
-</me>
-Using the usual rules for addition and multiplication in a vector space, we find that <m> v </m> is a linear combination of the <m>w_i</m>'s. Since <m>v \in V </m> was arbitrary, we conclude that <m>W</m> must also span <m>V</m>.
+      \ve{b}_i = \sum_{j=1}^n \lambda_{i, j} \ve{c}_j
+    </me>
+    Subsituting into Equation <xref ref="sub_into_span_span"/> gives
+    <md>
+      <mrow> \ve{v} \amp = \sum_{i=1}^m a_i \left( \sum_{j=1}^n \lambda_{i,j} \ve{c}_j \right) </mrow>
+      <mrow> \amp = \sum_{j=1}^n \left(\sum_{i=1}^m a_i \lambda_{i,j} \right) \ve{c}_j </mrow>
+    </md>
+    So we have expressed <m>\ve{v}</m> as a linear combination of the <m>\basis{C}</m> vectors. Hence <m>\basis{C}</m> spans <m>V</m>.
 </p>
   </proof>
 

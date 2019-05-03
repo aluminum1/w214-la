@@ -57,6 +57,7 @@
 \DeclareMathOperator{\Nullity}{Nullity}
 \DeclareMathOperator{\Rank}{Rank}
 \DeclareMathOperator{\Vect}{Vect}
+\DeclareMathOperator{\Div}{Div}
 
 </macros>
 

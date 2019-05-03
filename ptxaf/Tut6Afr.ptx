@@ -1,0 +1,160 @@
+<section xml:id="Tut6">
+<title>W214 2019, Lineêre Algebra Tutoriaal 6</title>
+<shorttitle>Tutoriaal 6</shorttitle>
+
+<p>Soos altyd is jy welkom om die <url href="https://sagecell.sagemath.org/">SageMath cell server</url> te gebruik om jou te help met van die probleme hieronder op te los. Of ten minste om jou berekeninge te kontrolleer.</p>
+
+<exercises>
+
+<assemblage><title>Notasie quiz!</title></assemblage>
+<exercise>
+  <statement>
+  <p>Skryf die Afrikaanse terminologie vir elkeen van die volgende simboliese uitdrukkings neer. Die eerste twee is alreeds vir jou gedoen.</p>
+  <ol>
+  <li> <m>[T]_{\basis{C} \leftarrow \basis{B}}</m>. Antwoord: Die matriks van <m>T</m> relatief tot die basisse <m>\basis{B}</m> en <m>\basis{C}</m>. </li>
+ <li> <m>T : V \rightarrow W</m>. Antwoord: 'n Lineêre afbeelding <m>T</m> van 'n vektorruimte <m>V</m> na 'n vektorruimte <m>W</m>. </li>
+  <li> <m>[\ve{v}]_\basis{B}</m>. </li>
+  <li> <m>[T(\ve{v}]_\basis{C}</m>. </li>
+  <li> <m>[\cdot]_\basis{B}</m>.</li>
+  <li> <m>S \circ T</m>. </li>
+  <li> <m>\ve{vec}_{V, \basis{B}} (\mat{c})</m>. </li>
+  </ol>
+</statement>
+</exercise>
+
+<exercise>
+  <statement>
+ <p>Skryf die simboliese uitdrukkings vir elkeen van die volgende Afrikaanse frase neer. Die eerste is alreeds vir jou gedoen.
+  <ol> 
+  <li>Die koördinaatvektor van <m>\ve{v}</m> relatief tot die basis <m>\basis{B}</m>. Antwoord: <m>[\ve{v}]_\basis{B}</m>. </li>
+  <li> Die verandering-van-basis matriks van die basis <m>\basis{B}</m> na die basis <m>\basis{C}</m>. </li>
+  <li> Die komposisie van die afbeelding <m>T</m> na die afbeelding <m>S</m>. </li>
+  <li> Die vektor in <m>V</m> waarvan sy koördinaatvektor relatief tot die basis <m>\basis{B}</m> is gelyk aan <m>\mat{c}</m>. </li>
+  <li> Die afbeelding van <m>V</m> na die ruimte van alle <m>n</m>-dimensionele kolomvektore wat koördinaatvektore relatief tot 'n basis <m>\basis{B}</m> bereken. </li> 
+    </ol>
+  </p>
+  </statement>
+</exercise>
+
+
+<assemblage><title>3.4 Lineêre Afbeeldings en Matrikse - Van Lemma 3.4.5</title>
+</assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+        Verifieer <xref ref="functoriality_of_matrix"/> in die geval van die lineêre afbeeldings
+        <md>
+          <mrow> S : \Mat_{2,3} \amp \rightarrow \Col_3</mrow>
+          <mrow> \begin{bmatrix} A_{11} \amp A_{12} \amp A_{13} \\ A_{21} \amp A_{22} \amp A_{23} \end{bmatrix} \amp \mapsto \begin{bmatrix} A_{11} + A_{21} \\ A_{12} + A_{22} \\ A_{13} + A_{23} \end{bmatrix} </mrow>
+        </md>
+        <md>
+          <mrow> T : \Col_3 \amp \rightarrow \Poly_2[x,y]</mrow>
+          <mrow>\begin{bmatrix} a \\ b \\ c \end{bmatrix} \amp \mapsto a + b(x-y-1)^2 + c(x+y+1)^2</mrow>
+        </md>
+        Gebruik die standaardbasis <m>\basis{B}</m> vir <m>\Mat_{2,3}</m> (sien <xref ref="dimension_of_matrix_space_example"/>), die basis
+        <me>
+          \basis{C} = \bopen \begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix} \bclose
+        </me> 
+        vir <m>\Col_3</m>, en die standaardbasis
+        <me>
+          \basis{C} = \bopen 1, x, y, x^2, xy, y^2 \bclose
+        </me>
+        vir <m>\Poly_2[x,y]</m>. Dit wil sê, bereken
+        <me>
+          [T \circ S]_{\basis{D} \leftarrow \basis{B}}
+        </me>
+        en
+        <me>
+          [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
+        </me>
+        and verifieer dat hulle gelyk aan mekaar is. 
+      </p>
+    </statement>
+  </exercise>
+
+<assemblage><title>3.5 Kern en Beeld van 'n Lineêre Afbeelding</title>
+</assemblage>
+
+
+    <exercise>
+    <statement>
+      <p>
+        Bepaal die kern, beeld, nulheidsgraad (die dimensie van die kern) en rang (die dimensie van die beeld) van die volgende lineêre afbeeldings. 
+        <ol>
+          <li>
+            <p>
+              Die identiteitsafbeelding <m>\id_V : V \rightarrow V</m> op 'n eindig-dimensionele vektorruimte <m>V</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Die nulafbeelding
+              <md>
+                <mrow>Z : V \amp  \rightarrow V</mrow>
+                <mrow>\ve{v} \amp  \mapsto \ve{0}</mrow>
+              </md>
+              op 'n eindig-dimensionele vektorruimte <m>V</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Die afbeelding
+              <md>
+                <mrow>T : \Poly_3 \amp  \rightarrow \Col_3</mrow>
+                <mrow>p \amp  \mapsto \begin{bmatrix} p(1) \\ p(2) \\ p(3)\end{bmatrix}</mrow>
+              </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Die afbeelding
+              <md>
+                <mrow>S : \Trig_2 \amp  \rightarrow \Col_2</mrow>
+                <mrow>f \amp  \mapsto \begin{bmatrix} \displaystyle \int_0^\pi f(x) \cos x dx \\
+                \displaystyle \int_0^\pi f(x) \sin x dx \end{bmatrix} </mrow>
+              </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Die `rotasie' afbeelding
+              <md>
+                <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
+                <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
+              </md>
+              Bonus vraag: Watter tiepe vektorvelde is elemente van <m>\Ker(C)</m>?
+            </p>
+          </li>
+
+
+          <li>
+      <p>(Poole 6.5.12) Die afbeelding
+        <md>
+          <mrow>T : \Mat_{2,2} \amp \rightarrow \Mat_{2,2} </mrow>
+          <mrow> \mat{A} \amp \mapsto \mat{A} \mat{B} - \mat{B} \mat{A}</mrow>
+        </md>
+        where
+        <me>
+          \mat{B} = \begin{bmatrix} 1 \amp -1 \\ -1 \amp 1 \end{bmatrix}
+        </me>
+      </p>
+      </li>
+      </ol>
+      </p>
+    </statement>
+  </exercise>
+
+
+
+
+
+</exercises>
+
+</section>
+
+

@@ -30,7 +30,7 @@
     </p>
   </assemblage>
 
-  <example>
+  <example xml:id="first_example_matrix_lin_map">
     <title>
       Matriks van 'n Lineêre Afbeelding
     </title>
@@ -150,10 +150,34 @@
   </theorem>
 
   <example>
+    <title>Bevestiging van <xref ref="lin-map-in-matrix-theorem"/> in 'n voorbeeld</title>
     <statement>
       <p>
-        Voortsetting van klasvoorbeeld.
+        Kom ons bevestig dat <xref ref="lin-map-in-matrix-theorem"/> inderdaad werk, in die konteks van <xref ref="first_example_matrix_lin_map"/>. Vat die vektor <m>\ve{v} \in \Poly_2</m> as, byvoorbeeld, <m>x</m>. 
       </p>
+      <p>
+        Brei <m>x</m> uit relatief tot die basis <m>\basis{B}</m>. Ons kry:
+        <me>
+          x = \frac{1}{2} (p_1 - p_2).
+        </me> 
+        So,
+        <me>
+          [x]_{\basis{B}} = \begin{bmatrix} \frac{1}{2} \\ - \frac{1}{2} \\ 0 \end{bmatrix}
+        </me>
+      Verder, <m>T(x) = x^2 = -q_2 + q_3</m>, so
+      <me>
+        [T(x)]_{\basis{C}} = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}
+      </me>
+      Ons kan nou die linker- en regterkante van Vergelyking <xref ref="lin-maps-and-matrices-eqn"/> uitwerk en sien of hulle wel gelyk aan mekaar is.
+      <md>
+        <mrow>\text{LK van } <xref ref="lin-maps-and-matrices-eqn"/> \amp = [T(x)]_{\basis{C}} </mrow>
+        <mrow> \amp =  \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}. </mrow>
+        <mrow>\text{RK van }<xref ref="lin-maps-and-matrices-eqn"/> \amp = [T]_{\basis{C} \leftarrow \basis{B}} [x]_{\basis{B}}   </mrow>
+        <mrow> \amp= \begin{bmatrix}  -1 \amp -1 \amp -1 \\ 0 \amp 2 \amp 0 \\ 1 \amp -1 \amp 1 \\ 0 \amp 0 \amp 1 \end{bmatrix} \begin{bmatrix} \frac{1}{2} \\ -\frac{1}{2} \\ 0 \end{bmatrix} </mrow>
+        <mrow> \amp = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}</mrow>
+      </md>
+      So inderdaa, die Stelling werk! Of ten minste in hierdie geval.
+    </p>
     </statement>
   </example>
 
@@ -433,13 +457,13 @@
     <p>
       Ons het
 <md>
-        <mrow>_{\basis{C} \leftarrow \basis{B}} [T^{-1}]_{\basis{B} \leftarrow \basis{C}} \amp = [T \circ T^{-1}]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+        <mrow>[T]_{\basis{C} \leftarrow \basis{B}} [T^{-1}]_{\basis{B} \leftarrow \basis{C}} \amp = [T \circ T^{-1}]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
         <mrow>\amp = [\id_W]_{\basis{C} \leftarrow \basis{C}} \amp \amp  \mbox{(\(T \circ T^{-1} = \id_W\))}</mrow>
         <mrow>\amp = I</mrow>
       </md>
       en
       <md>
-        <mrow>_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} \amp = [T^{-1} \circ T]_{\basis{B} \leftarrow \basis{B}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+        <mrow>[T]_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} \amp = [T^{-1} \circ T]_{\basis{B} \leftarrow \basis{B}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
         <mrow>\amp = [\id_V]_{\basis{B} \leftarrow \basis{B}} \amp \amp  \mbox{(\(T^{-1} \circ T = \id_V\))}</mrow>
         <mrow>\amp = I</mrow>
       </md>.
@@ -628,6 +652,24 @@
   <exercise>
     <statement>
       <p>
+        Verify <xref ref="lin-map-in-matrix-theorem"/> for the linear map
+        <me>
+          T : \Poly_3 \rightarrow \Trig_3
+        </me>
+        defined by
+        <me>
+          T(p)(x) := p(\cos x).
+        </me>
+        Use the standard bases <m>\basis{B}</m> for <m>\Poly_3</m> and <m>\basis{C}</m> for <m>\Trig_3</m>. 
+      </p>
+    </statement>
+
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
         Maak seker dat die line&#xea;re afbeeldings <m>T</m> en <m>S</m> van
         <xref ref="trig_ex_1">Oefeninge</xref>
         <xref ref="trig_ex_2">en</xref> <m>[S \circ T]_{\basis{C}
@@ -636,6 +678,76 @@
       </p>
     </statement>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Verifieer <xref ref="functoriality_of_matrix"/> vir die `gradieënt' and `divergensie' lineêre afbeeldings
+        <md>
+         <mrow> G : \Poly_3[x,y] \amp \rightarrow \Vect_2(\mathbb{R}^2) </mrow>
+         <mrow> G(p) := \nabla p</mrow>
+         <mrow>\Div : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
+         <mrow> \Div( (P, Q) ) \amp := \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y}</mrow>
+        </md>
+        Gebruik die standaardbasisse
+        <me>
+          \basis{B} = \bopen 1, x, y, x^2, xy, y^2, x^3, x^2y, xy^2, y^3 \bclose
+        </me>
+        <me>
+          \basis{C} = \bopen (1, 0), (x, 0), (y, 0), (x^2, 0), (xy, 0), (y^2, 0), \\
+           (0, 1), (0, x), (0, y), (0, x^2), (0, xy), (0, y^2) \bclose
+        </me>
+        <me>
+          \basis{D} = \bopen 1, x, y \bclose
+        </me>
+        vir <m>\Poly_3[x,y]</m>, <m>\Vect_2(\mathbb{R}^2)</m>, <m>\Poly_1[x,y]</m> onderskeidelik. Dit wil sê, bereken
+        <me>
+          [\Div]_{\basis{D} \leftarrow \basis{C}} [G]_{\basis{C} \leftarrow \basis{B}}
+        </me>
+        en
+        <me>
+          [\Div \circ G]_{\basis{D} \leftarrow \basis{C}}
+        </me>
+        en bevestig dat hulle is gelyk aan mekaar.
+      </p>
+    </statement>
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        Verifieer <xref ref="functoriality_of_matrix"/> in die geval van die lineêre afbeeldings
+        <md>
+          <mrow> S : \Mat_{2,3} \amp \rightarrow \Col_3</mrow>
+          <mrow> \begin{bmatrix} A_{11} \amp A_{12} \amp A_{13} \\ A_{21} \amp A_{22} \amp A_{23} \end{bmatrix} \amp \mapsto \begin{bmatrix} A_{11} + A_{21} \\ A_{12} + A_{22} \\ A_{13} + A_{23} \end{bmatrix} </mrow>
+        </md>
+        <md>
+          <mrow> T : \Col_3 \amp \rightarrow \Poly_2[x,y]</mrow>
+          <mrow>\begin{bmatrix} a \\ b \\ c \end{bmatrix} \amp \mapsto a + b(x-y-1)^2 + c(x+y+1)^2</mrow>
+        </md>
+        Gebruik die standaardbasis <m>\basis{B}</m> vir <m>\Mat_{2,3}</m> (sien <xref ref="dimension_of_matrix_space_example"/>), die basis
+        <me>
+          \basis{C} = \bopen \begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix} \bclose
+        </me> 
+        vir <m>\Col_3</m>, en die standaardbasis
+        <me>
+          \basis{C} = \bopen 1, x, y, x^2, xy, y^2 \bclose
+        </me>
+        vir <m>\Poly_2[x,y]</m>. Dit wil sê, bereken
+        <me>
+          [T \circ S]_{\basis{D} \leftarrow \basis{B}}
+        </me>
+        en
+        <me>
+          [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
+        </me>
+        and verifieer dat hulle gelyk aan mekaar is. 
+      </p>
+    </statement>
+  </exercise>
+
+
 </exercises>
 
 <!-- <solutions divisional="solution answer" />  -->

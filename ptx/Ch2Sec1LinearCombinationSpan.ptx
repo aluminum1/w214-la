@@ -326,7 +326,7 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
     </exercise>
 
 <p>
-  The next Lemma provides a very convenient method for checking whether a given set <m>W</m> spans <m>V</m> if one already knows that <m>U</m> spans <m>V</m>.
+  The next Lemma provides a very convenient method for checking whether a given list of vectors <m>\basis{C}</m> spans a vector space <m>V</m> if one already knows that some other list <m>\basis{B}</m> spans <m>V</m>.
 </p>
 
 <lemma xml:id ="spanning_check_thm">
