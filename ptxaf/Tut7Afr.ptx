@@ -1,0 +1,91 @@
+<section xml:id="Tut6">
+<title>W214 2019, Lineêre Algebra Tutoriaal 7</title>
+<shorttitle>Tutoriaal 7</shorttitle>
+
+<p>Hierdie is die laaste week van die semester. So W214 Tutoriaal 7 is 'n kombinasie van Lineêre Algebra probleme (hieronder) en Gevorderde Calculus probleme, wat jy op SunLearn kan vind.</p>
+
+<exercises>
+
+<assemblage><title>3.5 Kern en Beeld van 'n Lineêre Afbeelding</title></assemblage>
+
+
+  <exercise><p>Vind alle waardes van <m>t</m> sodat die afbeelding
+ <md>
+  <mrow> T : \Poly_2 \amp \rightarrow \Poly_1</mrow>
+  <mrow> (a + bx + cx^2) \amp \rightarrow (2a + 3b + 4c) + (-a + tb) x</mrow>
+ </md>
+ 'n rang van 1 het.</p>
+</exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Vir elk van die volgende bewerings, sê of dit
+        <em>waar</em> of <em>onwaar</em> is.
+        As dit waar is, bewys dit.
+        Indien nie, bewys dit.
+
+        <ol>
+          <li>
+            <p>
+              Daar bestaan 'n line&#xea;re afbeelding <m>T : \mathbb{R}^5
+              \rightarrow \mathbb{R}^2</m> sodat
+              <me>
+                \Ker(T) = \{ (x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5 :
+                x_1 = 3x_2 \text{ en }  x_3 = x_4 = x_5\}
+              </me>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Daar bestaan 'n line&#xea;re afbeelding
+              <m>F : \Trig_3
+              \rightarrow \Trig_3</m> sodat <m>\Rank(T) = \Nullity(T)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+<assemblage><title>3.6 Injektiewe en Surjektiewe Afbeeldings</title></assemblage>
+
+<exercise>
+    <statement>
+      <p>
+        Vir elk van die volgende bewerings, sê of dit
+        <em>waar</em> of <em>onwaar</em> is.
+        As dit waar is, bewys dit.
+        Indien nie, bewys dit.
+        <ol>
+          <li> (Poole Ch 6 Hersiening Vrae 1.h) As <m>T : \Mat_{3,3} \rightarrow \Poly_4</m> 'n lineêre afbeelding is en <m>\Nhg(T) = 4</m>, dan is <m>T</m> surjektief.
+      </li>
+        <li> Elke surjektiewe lineêre afbeelding <m>T : \Poly_2[x,y,z] \rightarrow \Mat_{3,3}</m> is ook injektief.          
+        </li>
+
+        <li>As <m>T : V \rightarrow W</m> en <m>S : W \rightarrow V</m> lineêre afbeeldings tussen vektorruimtes is, en <m>S \circ T = \id_V</m>, dan is <m>T</m> injektief. 
+      </li>
+        <li>As <m>T : V \rightarrow W</m> en <m>S : W \rightarrow V</m> lineêre afbeeldings tussen vektorruimtes is, en <m>S \circ T = \id_V</m>, dan is <m>T</m> surjektief. 
+      </li>
+        <li>As <m>T : V \rightarrow W</m> en <m>S : W \rightarrow V</m> lineêre afbeeldings tussen vektorruimtes is, en <m>S \circ T = \id_V</m>, dan is <m>T</m> injektief. 
+      </li>
+        <li>As <m>T : V \rightarrow W</m> en <m>S : W \rightarrow V</m> lineêre afbeeldings tussen vektorruimtes is, en <m>S \circ T = \id_V</m>, dan is <m>T</m> surjektief. 
+      </li>
+
+        <li>
+          (2018 Exam 1). Let <m>S : V \rightarrow V</m> and <m>T : V \rightarrow V</m> be linear maps from a finite-dimensional vector space <m>V</m> to itself. Then <m>\Nullity(T \circ S) \geq \Nullity(S)</m>.
+        </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+
+
+
+</exercises>
+
+</section>
+
+

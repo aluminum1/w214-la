@@ -58,6 +58,10 @@
 \DeclareMathOperator{\Rank}{Rank}
 \DeclareMathOperator{\Vect}{Vect}
 \DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Nhg}{Nhg}
+\DeclareMathOperator{\Rang}{Rang}
+
+
 
 </macros>
 

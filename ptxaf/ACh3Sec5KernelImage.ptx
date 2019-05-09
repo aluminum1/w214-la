@@ -1197,6 +1197,35 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
   </exercise>
 
 
+ <exercise>
+    <statement>
+      <p>
+        Laat <m>V</m> 'n eindig-dimensionele vektorruimte wees. Laat <m>U</m> 'n deelruimte van <m>V</m> wees. Toon aan dat daar  'n lineêre afbeelding <m>T: V \to V</m> bestaan met <m>\Ker T = U</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+       </p> 
+    </solution>
+  </exercise>
+
+    <exercise>
+    <statement>
+      <p>
+        Beskou die funksie <m>F:\mathbb{R}^3 \to \mathbb{R}^2</m> gedefineer deur
+        <me>
+        F(x,y,z)=(x^2 + y^2, xy).
+      </me>
+      Beskou nou <m>DF_p</m>, die Jakobiaan matriks van <m>F</m> by die punt <m>p = (1,2)</m>. Bepaal <m>\Ker (DF_p)</m> en <m>\Im (DF_p)</m> en dus bepaal ook <m>\Nhg(DF_p)</m> and <m>\Rang(DF_p)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+       </p> 
+    </solution>
+  </exercise>
+
+
 </exercises>
 
 <!-- <solutions divisional="solution answer" />  -->

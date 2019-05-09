@@ -2,7 +2,7 @@
 <title>W214 2019, Lineêre Algebra Tutoriaal 6</title>
 <shorttitle>Tutoriaal 6</shorttitle>
 
-<p>Soos altyd is jy welkom om die <url href="https://sagecell.sagemath.org/">SageMath cell server</url> te gebruik om jou te help met van die probleme hieronder op te los. Of ten minste om jou berekeninge te kontrolleer.</p>
+<p>Soos altyd is jy welkom om die <url href="https://sagecell.sagemath.org/">SageMath cell server</url> te gebruik om jou te help om van die probleme hieronder op te los. Of ten minste om jou berekeninge te kontrolleer.</p>
 
 <exercises>
 
@@ -58,7 +58,7 @@
         </me> 
         vir <m>\Col_3</m>, en die standaardbasis
         <me>
-          \basis{C} = \bopen 1, x, y, x^2, xy, y^2 \bclose
+          \basis{D} = \bopen 1, x, y, x^2, xy, y^2 \bclose
         </me>
         vir <m>\Poly_2[x,y]</m>. Dit wil sê, bereken
         <me>
@@ -125,7 +125,7 @@
               Die `rotasie' afbeelding
               <md>
                 <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
-                <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
+                <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}</mrow>
               </md>
               Bonus vraag: Watter tiepe vektorvelde is elemente van <m>\Ker(C)</m>?
             </p>

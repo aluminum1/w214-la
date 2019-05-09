@@ -58,7 +58,7 @@
         </me> 
         for <m>\Col_3</m>, and the standard basis 
         <me>
-          \basis{C} = \bopen 1, x, y, x^2, xy, y^2 \bclose
+          \basis{D} = \bopen 1, x, y, x^2, xy, y^2 \bclose
         </me>
         for <m>\Poly_2[x,y]</m>. That is, compute
         <me>
@@ -125,7 +125,7 @@
               The `curl' map
               <md>
                 <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
-                <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
+                <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}</mrow>
               </md>
               Bonus question: What kind of vector fields are elements of <m>\Ker(C)</m>?
             </p>

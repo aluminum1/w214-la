@@ -1,0 +1,85 @@
+<section xml:id="Tut7">
+<title>W214 2019, Linear Algebra Tutorial 7</title>
+<shorttitle>Tutorial 7</shorttitle>
+
+<p>Since this is the last week of the semester, W214 Tutorial 7 will be a combination of Linear Algebra problems (this worksheet) and Advanced Calculus problems, which you can find under the Advanced Calculus section on SunLearn.</p>
+
+
+<exercises>
+
+<assemblage><title>3.5 Kernel and Image of a Linear Map</title></assemblage>
+
+  <exercise><p>Find all values of <m>t</m> such that the map
+ <md>
+  <mrow> T : \Poly_2 \amp \rightarrow \Poly_1</mrow>
+  <mrow> (a + bx + cx^2) \amp \rightarrow (2a + 3b + 4c) + (-a + tb) x</mrow>
+ </md>
+ has rank 1.</p>
+</exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        For each of the following assertions,
+        state whether it is <em>true</em> or <em>false</em>.
+        If it is true, prove it.
+        If it is false, prove that it is false.
+
+        <ol>
+          <li>
+            <p>
+              There exists a linear map <m>T : \mathbb{R}^5 \rightarrow \mathbb{R}^2</m> such that
+              <me>
+                \Ker(T) = \{ (x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5 : x_1 = 3x_2 \text{ and }  x_3 = x_4 = x_5\}
+              </me>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              There exists a linear map <m>F : \Trig_3 \rightarrow \Trig_3</m> such that <m>\Rank(T) = \Nullity(T)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+    </statement>
+  </exercise>
+
+<assemblage><title>3.6 Injective and Surjective Maps</title></assemblage>
+
+<exercise>
+    <statement>
+      <p>
+        For each of the following assertions,
+        state whether it is <em>true</em> or <em>false</em>.
+        If it is true, prove it.
+        If it is false, prove that it is false.
+        <ol>
+          <li> (Poole Ch 6 Review Questions 1.h) If <m>T : \Mat_{3,3} \rightarrow \Poly_4</m> is a linear map and <m>\Nullity(T) = 4</m>, then <m>T</m> is surjective.
+        </li>
+        <li> Every surjective linear map <m>T : \Poly_2[x,y,z] \rightarrow \Mat_{3,3}</m> is also injective.          
+        </li>
+        <li>If <m>T : V \rightarrow W</m> and <m>S : W \rightarrow V</m> are linear maps between vector spaces and <m>S \circ T = \id_V</m>, then <m>T</m> is injective. 
+      </li>
+        <li>If <m>T : V \rightarrow W</m> and <m>S : W \rightarrow V</m> are linear maps between vector spaces and <m>S \circ T = \id_V</m>, then <m>T</m> is surjective. 
+      </li>
+        <li>If <m>T : V \rightarrow W</m> and <m>S : W \rightarrow V</m> are linear maps between vector spaces and <m>S \circ T = \id_V</m>, then <m>S</m> is injective. 
+      </li>
+        <li>If <m>T : V \rightarrow W</m> and <m>S : W \rightarrow V</m> are linear maps between vector spaces and <m>S \circ T = \id_V</m>, then <m>S</m> is surjective. 
+      </li>
+
+        <li>
+          (2018 Exam 1). Let <m>S : V \rightarrow V</m> and <m>T : V \rightarrow V</m> be linear maps from a finite-dimensional vector space <m>V</m> to itself. Then <m>\Nullity(T \circ S) \geq \Nullity(S)</m>.
+        </li>
+
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+</exercises>
+
+</section>
+
+
