@@ -60,8 +60,7 @@
 \DeclareMathOperator{\Div}{Div}
 \DeclareMathOperator{\Nhg}{Nhg}
 \DeclareMathOperator{\Rang}{Rang}
-
-
+\DeclareMathOperator{\Be}{Be}
 
 </macros>
 
