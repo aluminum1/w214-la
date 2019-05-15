@@ -34,8 +34,7 @@
         tussen vektorruimtes.
         Dan:
         <me>
-          \mbox{\(T\) is injektief}  \Longleftrightarrow \mbox{\(\Ker(T) =
-          \{\ve{0}_V\}\)} 
+          T \text{ is injektief}  \Longleftrightarrow \Ker(T) = \{\ve{0}_V\} 
         </me>.
       </p>
     </statement>
@@ -102,9 +101,9 @@
       Veronderstel <m>T</m> is injektief.
  <md>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp (<xref ref="injective-kernel-lemma"/>) </mrow>
-        <mrow>\amp \therefore \Nullity(T) = 0</mrow>
-        <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  \text{(deur Rang-Nulheidsgraad-stelling)}</mrow>
-        <mrow>\amp \therefore \Im(T) = V \amp \amp   (<xref ref="lin-ind-implies-basis"/>)</mrow>
+        <mrow>\amp \therefore \Nhg(T) = 0</mrow>
+        <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  (<xref ref="rank-nullity-theorem"/>)</mrow>
+        <mrow>\amp \therefore \Be(T) = V \amp \amp   (<xref ref="lin-ind-implies-basis"/>)</mrow>
       </md>
     </p>
 
@@ -116,9 +115,9 @@
       <m>\Leftarrow</m>.
       Veronderstel <m>T</m> is surjektief.
     <md>
-        <mrow>\amp \therefore \Im(T) = V</mrow>
+        <mrow>\amp \therefore \Be(T) = V</mrow>
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
-        <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  \text{(deur Rang-Nulheidsgraad-stelling)}</mrow>
+        <mrow>\amp \therefore \Nhg(T) = 0 \amp \amp  (<xref ref="rank-nullity-theorem"/>) </mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
         <mrow>\amp \therefore \mbox{\(T\) is injective. }   \amp \amp  (<xref ref="lin-ind-implies-basis"/>)</mrow>
       </md>

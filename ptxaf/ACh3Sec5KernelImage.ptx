@@ -19,12 +19,12 @@
 
       <p>
         Die <term>beeld</term> van <m>T</m>,
-        geskryf <m>\Im(T)</m>, is die versameling van alle
+        geskryf <m>\Be(T)</m>, is die versameling van alle
         vektore <m>\ve{w} \in W</m> sodat <m>\ve{w} = T(\ve{v})</m> vir een of ander
         <m>\ve{v} \in V</m>.
         Dit is,
         <me>
-          \Im(T) := \{ \ve{w} \in W : \ve{w} = T(\ve{v}) \mbox{ vir 'n 
+          \Be(T) := \{ \ve{w} \in W : \ve{w} = T(\ve{v}) \mbox{ vir 'n 
           \(\ve{v} \in V\)}  \}
         </me>
       </p>
@@ -88,11 +88,11 @@
  \node at (3, -1.2) {\(W\)};
  \draw (0.15, 0.987) -- (3.03,0.3);
  \draw (0.15, -0.987) -- (3.03,-0.3);
- \node at (3, -0.5) {\(\Im(T)\)};\end{tikzpicture}]]>
+ \node at (3, -0.5) {\(\Be(T)\)};\end{tikzpicture}]]>
 </latex-image>
     </image>
 
-   <caption > <m>\Im(T)</m></caption>
+   <caption > <m>\Be(T)</m></caption>
   </figure>
 
   <lemma xml:id="ker-im-subspace">
@@ -113,7 +113,7 @@
           <li>
           
             <p>
-              <m>\Im(T)</m> is 'n deelruimte van <m>W</m>
+              <m>\Be(T)</m> is 'n deelruimte van <m>W</m>
             </p>
           </li>
         </ol>
@@ -188,13 +188,13 @@
         <li>
         
           <p>
-            <m>\Im(T)</m> is geslote onder sommering.
+            <m>\Be(T)</m> is geslote onder sommering.
 
             <p>
-              Veronderstel <m>\ve{w}</m> en <m>\ve{w}'</m> is in <m>\Im(T)</m>. Met
+              Veronderstel <m>\ve{w}</m> en <m>\ve{w}'</m> is in <m>\Be(T)</m>. Met
               ander woorde, daar bestaan vektore <m>\ve{v}</m> en <m>\ve{v}'</m> in
               <m>V</m> sodat <m>T(\ve{v}) = \ve{w}</m> en <m>T(\ve{v}') = \ve{w}'</m>.
-              Ons moet wys dat <m>\ve{w} + \ve{w}'</m> ook in <m>\Im(T)</m> is, met
+              Ons moet wys dat <m>\ve{w} + \ve{w}'</m> ook in <m>\Be(T)</m> is, met
               ander woorde, dat daar 'n vekor <m>\ve{u}</m> in <m>V</m> bestaan,
               sodat <m>T(\ve{u}) = \ve{w} + \ve{w}'</m>. Inderdaad, stel
               <m>\ve{u} := \ve{v} + \ve{v}'</m>. Dan,
@@ -210,10 +210,10 @@
         <li>
         
           <p>
-            <m>\ve{0}_W \in \Im(T)</m>.
+            <m>\ve{0}_W \in \Be(T)</m>.
 
             <p>
-              Om te wys dat <m>\ve{0}_W \in \Im(T)</m>, moet ons wys dat daar
+              Om te wys dat <m>\ve{0}_W \in \Be(T)</m>, moet ons wys dat daar
               'n <m>\ve{v} \in V</m> bestaan, sodat <m>T(\ve{v}) = \ve{0}_W</m>.
               Inderdaad, kies <m>\ve{v} = \ve{0}_V</m>. Dan is <m>T(\ve{v}) =
               T(\ve{0}_V) = \ve{0}_W</m> volgens <xref ref="lin_map_zero_to_zero">Lemma</xref>.
@@ -225,12 +225,12 @@
         <li>
         
           <p>
-            <m>\Im(T)</m> is geslote onder skalaarvermenigvuldiging.
+            <m>\Be(T)</m> is geslote onder skalaarvermenigvuldiging.
 
             <p>
-              Veronderstel <m>\ve{w} \in \Im(T)</m> en <m>k</m> is 'n
-              skalaar. Ons moet wys dat <m>k \ve{w} \in \Im(T)</m>. Die feit
-              dat <m>\ve{w}</m> in <m>\Im(T)</m> is, beteken dat daar 'n <m>\ve{v}</m>
+              Veronderstel <m>\ve{w} \in \Be(T)</m> en <m>k</m> is 'n
+              skalaar. Ons moet wys dat <m>k \ve{w} \in \Be(T)</m>. Die feit
+              dat <m>\ve{w}</m> in <m>\Be(T)</m> is, beteken dat daar 'n <m>\ve{v}</m>
               in <m>V</m> bestaan, sodat <m>T(\ve{v}) = \ve{w}</m>. Ons moet wys
               dat daar 'n <m>\ve{u} \in V</m> bestaan, sodat <m>T(\ve{u}) = k
               \ve{w}</m>. Inderdaad, stel <m>\ve{u} := k \ve{v}</m>. Dan
@@ -258,10 +258,10 @@
         vanaf 'n eindig-dimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m>
         wees.
         Die <term>nulheidsgraad</term> van <m>T</m> is die dimensie van <m>\Ker(T)</m>,
-        en die <term>rang</term> van <m>T</m> is die dimensie van <m>\Im(T)</m>:
+        en die <term>rang</term> van <m>T</m> is die dimensie van <m>\Be(T)</m>:
         <md>
-          <mrow>\Nullity(T) \amp := \Dim (\Ker(T))</mrow>
-          <mrow>\Rank(T) \amp = \Dim (\Im(T))</mrow>
+          <mrow>\Nhg(T) \amp := \Dim (\Ker(T))</mrow>
+          <mrow>\Rang(T) \amp = \Dim (\Be(T))</mrow>
         </md>
       </p>
     </statement>
@@ -273,7 +273,7 @@
       is 'n deelruimte van 'n eindig-dimensionele vektorruimte <m>V</m>,
       en daarom
       is dit eindig-dimensioneel volgens <xref ref="dim-of-subspace-prop">Proposisie</xref>.
-      Ons weet nog nie dat <m>\Im(T)</m>
+      Ons weet nog nie dat <m>\Be(T)</m>
       eindig-dimensioneel is nie, maar dit sal volg uit die
       Rang-Nulheidgraad-stelling
       (<xref ref="rank-nullity-theorem">Stelling</xref>).
@@ -330,7 +330,7 @@
         van <m>C</m> die deelruimte van
         <em>alle</em> vektore loodreg op <m>\ve{a}</m> is, i.e.
         <men xml:id="image-of-C">
-          \Im(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0
+          \Be(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0
           \}
         </men>.
       </p>
@@ -345,7 +345,7 @@
           <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
     \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
     \draw (1.5, -0.1) -- (1.5, -2);
-    \node at (3.3, 1) {\(\Im(C)\)};  
+    \node at (3.3, 1) {\(\Be(C)\)};  
     \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
 </latex-image>
       </image>
@@ -458,7 +458,7 @@
       </p>
 
       <p>
-        Daarom is <m>\Nullity(I) = \Dim (\Ker(I)) = 4</m>.
+        Daarom is <m>\Nhg(I) = \Dim (\Ker(I)) = 4</m>.
       </p>
 
       <p>
@@ -469,7 +469,7 @@
         p</m>.
         Ek beweer dat
         <me>
-          \Im(I) = \mathbb{R}
+          \Be(I) = \mathbb{R}
         </me>.
       </p>
 
@@ -482,7 +482,7 @@
       </p>
 
       <p>
-        Daarom is <m>\Im(I) = \mathbb{R}</m>, en <m>\Rank(I) = 1</m>.
+        Daarom is <m>\Be(I) = \mathbb{R}</m>, en <m>\Rang(I) = 1</m>.
       </p>
 
       <p>
@@ -567,7 +567,7 @@
       </p>
 
       <p>
-        Daarom is <m>\Nullity(T) = 1</m>.
+        Daarom is <m>\Nhg(T) = 1</m>.
       </p>
 
       <p>
@@ -613,13 +613,13 @@
         Let daarop dat <m>T(p) = (v,w)</m>.
         Daarom,
         <me>
-          \Im(T) = \{\mbox{all }  (v,w) \in \mathbb{R}^2 \} =
+          \Be(T) = \{\mbox{all }  (v,w) \in \mathbb{R}^2 \} =
           \mathbb{R}^2
         </me>.
       </p>
 
       <p>
-        Daarom is <m>\Rank (T) = \Dim (\Im(T)) = 2</m>.
+        Daarom is <m>\Rang (T) = \Dim (\Be(T)) = 2</m>.
       </p>
 
       <p>
@@ -636,6 +636,117 @@
     </solution>
   </example>
 
+  <example xml:id="modification_r_n_ex">
+    <statement>
+      <p>
+        Hierdie voorbeeld is 'n wysiging van <xref ref="old_example_ker_range_poly"/>. Bereken die kern, beeld, nulheidsgraad en rang van die volgende afbeleding:
+        <md>
+          <mrow> T : \Poly_2 \amp \rightarrow \Col_3</mrow>
+          <mrow> p : \amp \mapsto \begin{bmatrix} p(1) \\ p'(1) \\ p(2) - \frac{1}{2}p''(3) \end{bmatrix}</mrow>
+        </md>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Ons begin deur <m>\Ker(T)</m> te bereken. Ons het
+        <men xml:id="p_in_kernel_1">
+          p \in \Ker(T) \quad \Leftrightarrow \quad T(p) = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
+        </men>
+        Skryf
+        <me>
+          p = a + bx + cx^2
+        </me>
+        Dan word vergelying <xref ref="p_in_kernel_1"/>:
+        <me>
+          \begin{bmatrix} a + b + c \\ b + 2c \\ a + 2b + 3c  \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
+        </me>
+        Hierdie vergelyking tussen kolomvektore is bevredig as en slegs as die volgende stelsel van gelyktydige line\^{e}re vergelykings is bevredig:
+        <md>
+          <mrow> a + b + c \amp = 0 </mrow>
+          <mrow> b + 2c \amp = 0</mrow>
+          <mrow> a + 2b + 3c \amp = 0</mrow>
+        </md>
+        Ons waarneem dat die derde vergelyking is gelyk aan die som van die eerste en tweede vergelykings. So wanneer ons hierdie vergelykings bewerk tot ry-echelon vorm toe, kry ons:
+        <md>
+         <mrow> a + b + c \amp = 0 </mrow>
+         <mrow> b + 2c \amp = 0 </mrow>
+        </md>
+        Die algemene oplossing is:
+        <me>
+          c = t, \, b = -2t, \, a = t, \quad t \in \mathbb{R}
+        </me>
+        Dus,
+        <me>
+          \Ker(T) = \{ t - 2t x + tx^2 : t \in \mathbb{R}\}
+        </me>
+        'n Basis vir <m>\Ker(T)</m> is gekry deur die waarde van die parameter <m>t</m> te kies as </m><m>t = 1</m>:
+        <me>
+          \text{Basis for } \Ker(T) = \bopen 1 - 2x + x^2 \bclose
+        </me>
+        So
+        <me>
+          \Nhg(T) = \Dim(\Ker(T)) = 1.
+        </me>
+        Nou kom ons bereken <m>\Be(T)</m>. Ons het
+        <md>
+          <mrow> \mat{w} \equiv \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} \in \Be(T)  </mrow>
+          <mrow> \Leftrightarrow \text{there exists } p \in \Poly_2 \text{ such that } T(p) = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} </mrow>
+        </md>
+        Skryf
+        <m>
+          p = a + bx + cx^2.
+        </m>
+        Dan is
+        <md>
+          <mrow> T(p) = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} </mrow>
+          <mrow> \Leftrightarrow \begin{bmatrix} a + b + c \\ b + 2c \\ a + 2b + 3c \end{bmatrix} = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix}</mrow>
+        </md>
+        Met ander woorde, <m>\mat{w} \in \Be(T)</m> as en slegs as daar bestaan 'n <em>sekere</em> oplossing van die volgende vergelykings vir <m>a,b,c</m>:
+        <md>
+          <mrow>a + b + c \amp = w_1</mrow>
+          <mrow> b + 2c \amp= w_2</mrow>
+          <mrow>a + 2b + 3c \amp = w_3</mrow>
+        </md>
+        Kom ons los hierdie vergelykings op deur ry reduksie te gebruik:
+        <md>
+          <mrow>\left[ \begin{array}{ccc|c} 
+          1 \amp 1 \amp 1 \amp w_1 \\ 
+          0 \amp 1 \amp 2 \amp w_2 \\
+          1 \amp 2 \amp 3 \amp w_3
+          \end{array}\right]</mrow>
+          <mrow>
+          \xrightarrow{R_3 - R_1}
+          \left[ \begin{array}{ccc|c} 
+          1 \amp 1 \amp 1 \amp w_1 \\ 
+          0 \amp 1 \amp 2 \amp w_2 \\
+          0 \amp 1 \amp 2 \amp w_3 - w_1
+          \end{array}\right]
+        </mrow>
+          <mrow>
+          \xrightarrow{R_3 - R_2}
+          \left[ \begin{array}{ccc|c} 
+          1 \amp 1 \amp 1 \amp w_1 \\ 
+          0 \amp 1 \amp 2 \amp w_2 \\
+          0 \amp 0 \amp 0 \amp w_3 - w_1 - w_2
+          \end{array}\right]
+        </mrow>
+        </md>
+        So: daar bestaan <em>geen</em> oplossing vir <m>a,b,c</m> tensy <m>w_3 - w_1 - w_2 = 0</m>, want andersins sal ons 'n vergelyking van die vorm 'nul is gelyk aan 'n nie nul waarde' h\^{e}. Bovendien, <em>as</em> <m>w_3 - w_1 - w_2</m>, dan <em>kan</em> di\'{e} vergelykings opgelos word vir <m>a,b,c</m>, want hulle is in toegevoegde ry-trap vorm met geen ongeldige rye. Dus,
+        <me>
+          \Be(T) = \left\{ \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} : -w_1 -w_2 + w_3 = 0 \right\}.
+        </me>
+        So, 'n basis vir <m>\Be(T)</m> is gegee deur:
+        <me>
+          \bopen \begin{bmatrix}  1 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \bclose
+        </me>
+        and hence 
+        <me>
+          \Rang(T) = 2.
+        </me>
+      </p>
+    </solution>
+  </example>
+
   <theorem xml:id="rank-nullity-theorem">
     <title>Rang-Nulheidsgraadstelling</title>
     <statement>
@@ -644,7 +755,7 @@
         eindigdimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
         Dan
         <me>
-          \Nullity(T) + \Rank(T) = \Dim(V)
+          \Nhg(T) + \Rang(T) = \Dim(V)
         </me>.
       </p>
     </statement>
@@ -666,17 +777,17 @@
     </p>
 
     <p>
-      'n basis vir <m>\Im(T)</m> is.
+      'n basis vir <m>\Be(T)</m> is.
       As ek dit kan bewys, sal ons klaar wees, want
       dan het ons
       <md>
-        <mrow>\Nullity(T) + \Rank(T) \amp = k + p</mrow>
+        <mrow>\Nhg(T) + \Rang(T) \amp = k + p</mrow>
         <mrow>\amp = \Dim(V)</mrow>
       </md>.
     </p>
 
     <p>
-      Kom ons bewys dat <m>\basis{D}</m> 'n basis vir <m>\Im(T)</m> is.
+      Kom ons bewys dat <m>\basis{D}</m> 'n basis vir <m>\Be(T)</m> is.
     </p>
 
     <p>
@@ -721,7 +832,7 @@
     <p>
       <em><m>\basis{D}</m> span <m>W</m></em>.
       Veronderstel <m>\ve{w} \in
-      \Im(T)</m>.
+      \Be(T)</m>.
       Ons moet wys dat <m>\ve{w}</m> 'n line&#xea;re kombinasie van
       vektore in <m>\basis{D}</m> is.
       Aangesien <m>\ve{w}</m> in die beeld van <m>T</m> is,
@@ -748,6 +859,91 @@
     </p>
   </proof>
 
+<example>
+    <title>Die identiteitsafbeelding op 'n vektorruimte</title>
+    <statement>
+      <p>
+        Beskou die identiteitsafbeelding op 'n eindig-dimensionele vektorruimte <m>V</m>:
+        <me>
+          \id_V : V \rightarrow V
+        </me>
+        Ons het
+        <me>
+          \Ker(\id_V) = \{\ve{0}\}
+        </me>
+        want die enige vektor wat na die nulvektore toe gestuur is deur die identiteitsafbeelding is die nulvektor self. Dus,
+        <me>
+          \Nhg(\id_V) = 0.
+        </me>
+        Soortgelyk,
+        <me>
+          \Be(\id_V) = V
+        </me>
+        want <em>elke</em> vektor <m>\ve{v} \in V</m> is in die beeld van <m>\id_V</m>. Inderdaad, ons het <m>\id_V (\ve{v}) = \ve{v}</m>, wat bewys dat <m>\ve{v} \in \Be(\id_V)</m>. Dus, 
+        <me>
+          \Rang(\id_V) = \Dim(V).
+        </me>
+        So inderdaad die Rang-Nulheidsgraad Stelling (<xref ref="rank-nullity-theorem"/>) is waar in hierdie geval, want
+        <me>
+          \underbrace{\Rang(\id_V)}_{=\Dim(V)} + \underbrace{\Nhg(\id_V)}_{=0} = \Dim(V). 
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Die nulafbeelding</title>
+    <statement>
+      <p>
+        Beskou die nulafbeelding <m>Z</m> op 'n eindig-dimensionele vektorruimte <m>V</m>:
+        <md>
+          <mrow> Z : V \amp \rightarrow V</mrow>
+          <mrow> \ve{v} \amp \mapsto \ve{0} </mrow>
+        </md>
+        Ons het
+        <me>
+          \Ker(Z) = V
+        </me>
+        want  <em>elke</em> vektor <m>\ve{v} \in V</m> is na die nulvektor toe gestuur deur <m>Z</m>. So,
+        <me>
+          \Nhg(Z) = \Dim(V).
+        </me>
+        Soortgelyk, het ons
+        <me>
+          \Be(Z) = \{\ve{0}\}
+        </me>
+        want die <em>enigste</em> vektor in die beeld van <m>Z</m> is die nulvektor <m>\ve{0}</m>. Want, vir alle vektore <m>\ve{v} \in V</m>, <m>Z(\ve{v}) = \ve{0}</m>. So,
+        <me>
+          \Rang(Z) = 0.
+        </me>
+        Dus is die Rang-Nulheidsgraad Stelling (<xref ref="rank-nullity-theorem"/>) waar in hierdie geval, want
+        <me>
+          \underbrace{\Rang(Z)}_{=0} + \underbrace{\Ker(Z)}_{=\Dim(V)} = \Dim(V). 
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <example> 
+    <title>
+      Verifieering dat <xref ref="modification_r_n_ex"/> die Rang-Nulheidsgraad Stelling bevredig
+    </title>
+    <statement>
+      <p>
+      Kom ons verifieer dat die line\^{e}re afbeelding <m>T</m> uit <xref ref="modification_r_n_ex"/> die <xref ref="rank-nullity-theorem"/> bevredig. In <xref ref="modification_r_n_ex"/>, het ons bereken dat
+      <me>
+        \Nhg(T) = 1, \quad \Rang(T) = 2. 
+      </me>
+      Dus,
+      <me>
+        \underbrace{\Rang(T)}_{=2} + \underbrace{\Nhg(T)}_{=1} = \underbrace{\Dim(\Poly_2)}_{=3}
+      </me>
+      so dit bevredig wel <xref ref="rank-nullity-theorem"/>. 
+    </p>
+    </statement>
+  </example>
+
+
 <exercises>
   <exercise>
     <statement>
@@ -755,8 +951,8 @@
         Verifieer die Rang-Nulheidgraad-stelling vir die volgende
         line&#xea;re afbeeldings.
         D.w.s., vir elke afbeelding <m>T</m>, (a) bepaal
-        <m>\Ker(T)</m> en <m>\Im(T)</m> eksplisiet, (b) bepaal die dimensie van <m>\Ker(T)</m>
-        en <m>\Im(T)</m>, (c) maak seker dat die getalle die
+        <m>\Ker(T)</m> en <m>\Be(T)</m> eksplisiet, (b) bepaal die dimensie van <m>\Ker(T)</m>
+        en <m>\Be(T)</m>, (c) maak seker dat die getalle die
         Rang-Nulheidsgraad-stelling bevredig.
 
         <ol>
@@ -809,7 +1005,7 @@
         <ol>
 <li>
 <p>
-<m>\id_V</m> sends only a single vector to <m>0</m>, namely the vector <m>\ve 0_v</m>. Thus <m>\Ker(\id_v) = \{\ve 0_v\}</m> and hence <m>\Nullity(\id_v) = 0</m>. <m>\Im(\id_V) = V</m>  and so <m>\Rank(\id_V) = \Dim(V) </m>. The equation
+<m>\id_V</m> sends only a single vector to <m>0</m>, namely the vector <m>\ve 0_v</m>. Thus <m>\Ker(\id_v) = \{\ve 0_v\}</m> and hence <m>\Nhg(\id_v) = 0</m>. <m>\Be(\id_V) = V</m>  and so <m>\Rang(\id_V) = \Dim(V) </m>. The equation
 <me>
 \Dim V + 0 = \Dim V .
 </me>
@@ -820,7 +1016,7 @@ verifies the Rank-Nullity Theorem for this example.
 
 <li>
 <p>
-The zero map spends every element in <m>V </m> to <m> \ve 0 </m>. Hence <m>\Ker(Z) = V </m> and so <m> \Nullity(Z) = \Dim V </m>. For the same reason <m>\Im(Z) = \{0\}</m> and thus <m>\Rank(Z) = 0 </m>. The equation
+The zero map spends every element in <m>V </m> to <m> \ve 0 </m>. Hence <m>\Ker(Z) = V </m> and so <m> \Nhg(Z) = \Dim V </m>. For the same reason <m>\Be(Z) = \{0\}</m> and thus <m>\Rang(Z) = 0 </m>. The equation
 <me>
 \Dim V + 0 = \Dim V .
 </me>
@@ -843,11 +1039,11 @@ where <m> a \in \mathbb R </m>. Conversely, any element of this form is in <m> \
 <me>
 \Ker(T) = \{a(x-1)(x-2)(x-3) \in \Poly_3 \, : \, a \in \mathbb R\} 
 </me>
-and thus <m> \Nullity(T)  = 1 </m>.
+and thus <m> \Nhg(T)  = 1 </m>.
 </p>
 
 <p>
-I claim that <m>\Im(T) = \Col_3</m>. That is, for any 
+I claim that <m>\Be(T) = \Col_3</m>. That is, for any 
 <me>
 \begin{bmatrix} s \\ t \\u \end{bmatrix} \in \Col_3,
 </me>
@@ -859,9 +1055,9 @@ we can find a polynomial  <m>\ve p</m>, of degree 3 or less, such that <m> p(1) 
 <me>
 \ve p(x) = u\left[ \frac{(x-2)(x-3)}{(1-2)(1-3)}\right] + s\left[ \frac{(x-1)(x-3)}{(2-1)(2-3)}\right] + t\left[ \frac{(x-1)(x-2)}{(3-1)(3-2)}\right].
 </me>
-It is easy to check that <m> p(1) = s, p(2) = t, p(3) = u</m>. Hence <m>\Im(T) = \Col_3</m> and so <m>\Rank(T) = 3</m>.
+It is easy to check that <m> p(1) = s, p(2) = t, p(3) = u</m>. Hence <m>\Be(T) = \Col_3</m> and so <m>\Rang(T) = 3</m>.
 <me>
-\Rank(T) + \Nullity(T) = 1 + 3 = 4 = \Dim(\Poly_3).
+\Rang(T) + \Nhg(T) = 1 + 3 = 4 = \Dim(\Poly_3).
 </me>
 </p>
 </li>
@@ -898,12 +1094,12 @@ Conversely, any <m> f </m> satisfying the linear equations above is certainly in
 \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: \\ b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \}
 </me>We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by (1) above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by (2).
 Hence <me>
-\Nullity(S) = 3.
+\Nhg(S) = 3.
 </me>
   </p>
 
   <p>
-We claim that <m> \Im(S) = \Col_2</m>. To see this, suppose 
+We claim that <m> \Be(S) = \Col_2</m>. To see this, suppose 
 <me>
 \begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2.
 </me>
@@ -916,7 +1112,7 @@ Using the table of integrals above, we see that
 S(T) = \begin{bmatrix} s \\ t \end{bmatrix} .
 </me>
 Hence <me>
-\Rank(T) = 2.
+\Rang(T) = 2.
 </me>
   </p>
 
@@ -937,7 +1133,7 @@ Hence <me>
       <p>
         Gee 'n voorbeeld van 'n line&#xea;re afbeelding
         <m>T : \Col_4
-        \rightarrow \Col_4</m> sodat <m>\Rank(T) = \Nullity(T)</m>.
+        \rightarrow \Col_4</m> sodat <m>\Rang(T) = \Nhg(T)</m>.
       </p>
     </statement>
        <solution>
@@ -951,10 +1147,10 @@ T: \begin{bmatrix} x\\y\\z\\w\end{bmatrix} \mapsto \begin{bmatrix} x\\y\\0\\0\en
 </me>
 and 
 <me>
-\Im(T) = \left\{\begin{bmatrix} x\\y\\0\\0\end{bmatrix} \in \Col_4 \right\}.
+\Be(T) = \left\{\begin{bmatrix} x\\y\\0\\0\end{bmatrix} \in \Col_4 \right\}.
 </me>
-Both <m>\Ker(T)</m> and <m>\Im(T)</m> are isomorphic to <m>\Col_2</m> and hence <me>
-\Rank(T) = \Nullity(2) = 2.
+Both <m>\Ker(T)</m> and <m>\Be(T)</m> are isomorphic to <m>\Col_2</m> and hence <me>
+\Rang(T) = \Nhg(2) = 2.
 </me>
 </p>
     </solution>
@@ -985,7 +1181,7 @@ Both <m>\Ker(T)</m> and <m>\Im(T)</m> are isomorphic to <m>\Col_2</m> and hence 
             <p>
               Daar bestaan 'n line&#xea;re afbeelding
               <m>F : \Trig_3
-              \rightarrow \Trig_3</m> sodat <m>\Rank(T) = \Nullity(T)</m>.
+              \rightarrow \Trig_3</m> sodat <m>\Rang(T) = \Nhg(T)</m>.
             </p>
           </li>
         </ol>
@@ -998,7 +1194,7 @@ Both <m>\Ker(T)</m> and <m>\Im(T)</m> are isomorphic to <m>\Col_2</m> and hence 
         <ol>
           <li>
             <p>
-             The statement is false. To see this, notice that if such a map were to exist then its kernel would be 2-dimensional since any choice of <m> x_1</m> and <m>x_3 </m> uniquely determines an element in <m>\Ker(T)</m>. But then by the Rank-Nullity theorem, <m> \Rank(T) = 3 </m> since <m> \mathbb R^5 </m> is 5 dimensional. But <m>\Im(T)</m> is a subspace of <m>\mathbb R^2</m> - which is absurd, since <m> \mathbb R^2 </m> itself is 2-dimensional.
+             The statement is false. To see this, notice that if such a map were to exist then its kernel would be 2-dimensional since any choice of <m> x_1</m> and <m>x_3 </m> uniquely determines an element in <m>\Ker(T)</m>. But then by the Rank-Nullity theorem, <m> \Rang(T) = 3 </m> since <m> \mathbb R^5 </m> is 5 dimensional. But <m>\Be(T)</m> is a subspace of <m>\mathbb R^2</m> - which is absurd, since <m> \mathbb R^2 </m> itself is 2-dimensional.
             </p>
           </li>
 
@@ -1006,7 +1202,7 @@ Both <m>\Ker(T)</m> and <m>\Im(T)</m> are isomorphic to <m>\Col_2</m> and hence 
             <p>
               The statemnt is false. Suppose such a map were to exist. Recall that <m> \Dim(\Trig_3) = 7</m>. Then by the Rank-Nullity theorem,
               <me>
-              7 = \Rank(T) + \Nullity(T) = 2\Rank(T).
+              7 = \Rang(T) + \Nhg(T) = 2\Rang(T).
             </me>
             But 7 is odd, so we have a contradiction! Thus no such map can exist.
             </p>
@@ -1134,7 +1330,7 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
         of <m>C</m> is the subspace of <em>all</em>
         vectors perpendicular to <m>\ve{a}</m>, i.e.
         <men>
-          \Im(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+          \Be(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
         </men>.
       </p>
 
@@ -1148,7 +1344,7 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
           <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
   \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
   \draw (1.5, -0.1) -- (1.5, -2);
-  \node at (3.3, 1) {\(\Im(C)\)};  
+  \node at (3.3, 1) {\(\Be(C)\)};  
   \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
 </latex-image>
       </image>
@@ -1163,19 +1359,19 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
       <p>
         And thus we know that 
         <me>
-\Im(C) \subset \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+\Be(C) \subset \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
       </me>We shall use the Rank-Nullity theorem to show the converse in a fantastically succint way. By the Rank-Nullity theorem
         <md>
-        <mrow> \amp \Dim(\mathbb R^3)  = \Nullity(C) + \Rank(C)</mrow>
-        <mrow>\implies \amp 3 = 1 + \Rank(C).</mrow>
+        <mrow> \amp \Dim(\mathbb R^3)  = \Nhg(C) + \Rang(C)</mrow>
+        <mrow>\implies \amp 3 = 1 + \Rang(C).</mrow>
       </md>
-      And so we also know the <m> \Im(C) </m> is a 2-dimensional subspace of <m>\mathbb R^3 </m>. Of course, 
+      And so we also know the <m> \Be(C) </m> is a 2-dimensional subspace of <m>\mathbb R^3 </m>. Of course, 
       <me>
        \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
     </me>
     is also 2-dimensional. But now, if one 2-dimensional subspace is contained in another 2-dimensional subspace then the two subspaces must necessarily be <emp>the same</emp>! Hence 
     <me>
-\Im(C) = \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+\Be(C) = \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
   </me>
       </p>
       <p>
@@ -1216,7 +1412,7 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
         <me>
         F(x,y,z)=(x^2 + y^2, xy).
       </me>
-      Beskou nou <m>DF_p</m>, die Jakobiaan matriks van <m>F</m> by die punt <m>p = (1,2)</m>. Bepaal <m>\Ker (DF_p)</m> en <m>\Im (DF_p)</m> en dus bepaal ook <m>\Nhg(DF_p)</m> and <m>\Rang(DF_p)</m>.
+      Beskou nou <m>DF_p</m>, die Jakobiaan matriks van <m>F</m> by die punt <m>p = (1,2)</m>. Bepaal <m>\Ker (DF_p)</m> en <m>\Be (DF_p)</m> en dus bepaal ook <m>\Nhg(DF_p)</m> and <m>\Rang(DF_p)</m>.
       </p>
     </statement>
     <solution>

@@ -29,7 +29,7 @@
         Let <m>T : V \rightarrow W</m> be a linear map between vector spaces.
         Then:
         <me>
-          \mbox{(}T\mbox{ is injective}  \Longleftrightarrow \mbox{(} \Ker(T) = \{\ve{0}_V\} \mbox{)} 
+          T \mbox{ is injective}  \Longleftrightarrow \Ker(T) = \{\ve{0}_V\} 
         </me>.
       </p>
     </statement>
@@ -88,7 +88,7 @@
       <md>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp (<xref ref="injective-kernel-lemma"/>) </mrow>
         <mrow>\amp \therefore \Nullity(T) = 0</mrow>
-        <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  \text{(by Rank-Nullity Theorem)}</mrow>
+        <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  (<xref ref="rank-nullity-theorem"/>)</mrow>
         <mrow>\amp \therefore \Im(T) = V \amp \amp   (<xref ref="lin-ind-implies-basis"/>)</mrow>
       </md>
     </p>
@@ -103,7 +103,7 @@
       <md>
         <mrow>\amp \therefore \Im(T) = V</mrow>
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
-        <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  \text{(by Rank-Nullity Theorem)}</mrow>
+        <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  ( <xref ref="rank-nullity-theorem"/> )</mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
         <mrow>\amp \therefore T \mbox{ is injective. }   \amp \amp  (<xref ref="lin-ind-implies-basis"/>)</mrow>
       </md>

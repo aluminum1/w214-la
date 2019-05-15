@@ -430,7 +430,7 @@
     </solution>
   </example>
 
-  <example>
+  <example xml:id="old_example_ker_range_poly">
     <statement>
       <p>
         Consider the function
@@ -551,6 +551,117 @@
     </solution>
   </example>
 
+  <example xml:id="modification_r_n_ex">
+    <statement>
+      <p>
+        This example is a modification of <xref ref="old_example_ker_range_poly"/>. Determine the kernel, image, rank and nullity of the following linear map:
+        <md>
+          <mrow> T : \Poly_2 \amp \rightarrow \Col_3</mrow>
+          <mrow> p : \amp \mapsto \begin{bmatrix} p(1) \\ p'(1) \\ p(2) - \frac{1}{2}p''(3) \end{bmatrix}</mrow>
+        </md>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We start by computing <m>\Ker(T)</m>. We have
+        <men xml:id="p_in_kernel_1">
+          p \in \Ker(T) \quad \Leftrightarrow \quad T(p) = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
+        </men>
+        Write
+        <me>
+          p = a + bx + cx^2
+        </me>
+        Then equation <xref ref="p_in_kernel_1"/> becomes:
+        <me>
+          \begin{bmatrix} a + b + c \\ b + 2c \\ a + 2b + 3c  \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
+        </me>
+        This equation between column vectors is satisfied if and only if the following linear equations are simultaneously satisfied:
+        <md>
+          <mrow> a + b + c \amp = 0 </mrow>
+          <mrow> b + 2c \amp = 0</mrow>
+          <mrow> a + 2b + 3c \amp = 0</mrow>
+        </md>
+        We observe that the third equation is equal to the sum of the first equation and the second equation. So when we transform these equations into row-echelon form, we get:
+        <md>
+         <mrow> a + b + c \amp = 0 </mrow>
+         <mrow> b + 2c \amp = 0 </mrow>
+        </md>
+        The general solution is:
+        <me>
+          c = t, \, b = -2t, \, a = t, \quad t \in \mathbb{R}
+        </me>
+        Therefore,
+        <me>
+          \Ker(T) = \{ t - 2t x + tx^2 : t \in \mathbb{R}\}
+        </me>
+        A basis for <m>\Ker(T)</m> is obtained by setting the parameter <m>t = 1</m>:
+        <me>
+          \text{Basis for } \Ker(T) = \bopen 1 - 2x + x^2 \bclose
+        </me>
+        So
+        <me>
+          \Nullity(T) = \Dim(\Ker(T)) = 1.
+        </me>
+        Now let us compute <m>\Im(T)</m>. We have
+        <md>
+          <mrow> \mat{w} \equiv \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} \in \Im(T)  </mrow>
+          <mrow> \Leftrightarrow \text{there exists } p \in \Poly_2 \text{ such that } T(p) = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} </mrow>
+        </md>
+        Write 
+        <m>
+          p = a + bx + cx^2.
+        </m>
+        Then
+        <md>
+          <mrow> T(p) = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} </mrow>
+          <mrow> \Leftrightarrow \begin{bmatrix} a + b + c \\ b + 2c \\ a + 2b + 3c \end{bmatrix} = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix}</mrow>
+        </md>
+        In other words,<m>\mat{w} \in \Im(T)</m> if and only if there exists <em>some</em> solution to the following equations for <m>a,b,c</m>:
+        <md>
+          <mrow>a + b + c \amp = w_1</mrow>
+          <mrow> b + 2c \amp= w_2</mrow>
+          <mrow>a + 2b + 3c \amp = w_3</mrow>
+        </md>
+        Let us solve these equations using row reduction:
+        <md>
+          <mrow>\left[ \begin{array}{ccc|c} 
+          1 \amp 1 \amp 1 \amp w_1 \\ 
+          0 \amp 1 \amp 2 \amp w_2 \\
+          1 \amp 2 \amp 3 \amp w_3
+          \end{array}\right]</mrow>
+          <mrow>
+          \xrightarrow{R_3 - R_1}
+          \left[ \begin{array}{ccc|c} 
+          1 \amp 1 \amp 1 \amp w_1 \\ 
+          0 \amp 1 \amp 2 \amp w_2 \\
+          0 \amp 1 \amp 2 \amp w_3 - w_1
+          \end{array}\right]
+        </mrow>
+          <mrow>
+          \xrightarrow{R_3 - R_2}
+          \left[ \begin{array}{ccc|c} 
+          1 \amp 1 \amp 1 \amp w_1 \\ 
+          0 \amp 1 \amp 2 \amp w_2 \\
+          0 \amp 0 \amp 0 \amp w_3 - w_1 - w_2
+          \end{array}\right]
+        </mrow>
+        </md>
+        So: there is <em>no</em> solution for <m>a,b,c</m> unless <m>w_3 - w_1 - w_2 = 0</m>, because otherwise we will have an equation of the form 'zero equals nonzero value'. Moreover, <em>if</em> <m>w_3 - w_1 - w_2</m>, then the above equations <em>can</em> be solved for <m>a,b,c</m>, because then they are in augmented row echelon form with no invalid rows. Therefore,
+        <me>
+          \Im(T) = \left\{ \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} : -w_1 -w_2 + w_3 = 0 \right\}.
+        </me>
+        So, a basis for <m>\Im(T)</m> is given by:
+        <me>
+          \bopen \begin{bmatrix}  1 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \bclose
+        </me>
+        and hence 
+        <me>
+          \Rank(T) = 2.
+        </me>
+      </p>
+    </solution>
+  </example>
+
   <theorem xml:id="rank-nullity-theorem">
     <title>Rank-nullity theorem</title>
     <statement>
@@ -643,6 +754,90 @@
       so that <m>\ve{w}</m> is indeed a linear combination of the vectors from <m>\basis{D}</m>.
     </p>
   </proof>
+
+  <example>
+    <title>The identity map on a vector space</title>
+    <statement>
+      <p>
+        Consider the identity map on a finite-dimensional vector space <m>V</m>:
+        <me>
+          \id_V : V \rightarrow V
+        </me>
+        We have
+        <me>
+          \Ker(\id_V) = \{\ve{0}\}
+        </me>
+        because the only vector sent to zero by the identity map is the zero vector itself. Therefore,
+        <me>
+          \Nullity(\id_V) = 0.
+        </me>
+        Similarly,
+        <me>
+          \Im(\id_V) = V
+        </me>
+        because <em>every</em> vector <m>\ve{v} \in V</m> is in the image of <m>\id_V</m>. Indeed, we have <m>\id_V (\ve{v}) = \ve{v}</m>, proving that <m>\ve{v} \in \Im(\id_V)</m>. Hence, 
+        <me>
+          \Rank(\id_V) = \Dim(V).
+        </me>
+        So indeed the Rank Nullity theorem (<xref ref="rank-nullity-theorem"/>) is true in this case, as
+        <me>
+          \underbrace{\Rank(\id_V)}_{=\Dim(V)} + \underbrace{\Ker(\id_V)}_{=0} = \Dim(V). 
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>The zero map</title>
+    <statement>
+      <p>
+        Consider the zero map <m>Z</m>on a finite-dimensional vector space <m>V</m>:
+        <md>
+          <mrow> Z : V \amp \rightarrow V</mrow>
+          <mrow> \ve{v} \amp \mapsto \ve{0} </mrow>
+        </md>
+        We have
+        <me>
+          \Ker(Z) = V
+        </me>
+        because <em>every</em> vector <m>\ve{v} \in V</m> is sent to the zero vector by <m>Z</m>. So,
+        <me>
+          \Nullity(Z) = \Dim(V).
+        </me>
+        Similarly, we have
+        <me>
+          \Im(Z) = \{\ve{0}\}
+        </me>
+        because the <em>only</em> vector in the image of <m>Z</m> is the zero vector <m>\ve{0}</m>. That is because, for all vectors <m>\ve{v} \in V</m>, <m>Z(\ve{v}) = \ve{0}</m>. So,
+        <me>
+          \Rank(Z) = 0.
+        </me>
+        Hence the Rank-Nullity theorem (<xref ref="rank-nullity-theorem"/>) is true in this case, as
+        <me>
+          \underbrace{\Rank(Z)}_{=0} + \underbrace{\Ker(Z)}_{=\Dim(V)} = \Dim(V). 
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <example> 
+    <title>
+      Verifying that <xref ref="modification_r_n_ex"/> satisfies the Rank-Nullity Theorem
+    </title>
+    <statement>
+      <p>
+      Let us verify that the linear map <m>T</m> from <xref ref="modification_r_n_ex"/> satisfies <xref ref="rank-nullity-theorem"/>. In <xref ref="modification_r_n_ex"/>, we computed that
+      <me>
+        \Nullity(T) = 1, \quad \Rank(T) = 2. 
+      </me>
+      Hence,
+      <me>
+        \underbrace{\Rank(T)}_{=2} + \underbrace{\Nullity(T)}_{=1} = \underbrace{\Dim(\Poly_2)}_{=3}
+      </me>
+      so it indeed satisfies <xref ref="rank-nullity-theorem"/>. 
+    </p>
+    </statement>
+  </example>
 
   <exercises>
     <exercise>

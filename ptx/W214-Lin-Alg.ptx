@@ -59,6 +59,9 @@
 \DeclareMathOperator{\Rank}{Rank}
 \DeclareMathOperator{\Vect}{Vect}
 \DeclareMathOperator{\Div}{Div}
+%% Override standard "calligraphic" imaginary macro in TeX
+\let \Im \relax
+\DeclareMathOperator{\Im}{Im}
 
 
 </macros>
