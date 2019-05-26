@@ -652,6 +652,8 @@
         <men xml:id="p_in_kernel_1">
           p \in \Ker(T) \quad \Leftrightarrow \quad T(p) = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
         </men>
+      </p>
+      <p>
         Skryf
         <me>
           p = a + bx + cx^2
@@ -666,6 +668,8 @@
           <mrow> b + 2c \amp = 0</mrow>
           <mrow> a + 2b + 3c \amp = 0</mrow>
         </md>
+      </p>
+      <p>
         Ons waarneem dat die derde vergelyking is gelyk aan die som van die eerste en tweede vergelykings. So wanneer ons hierdie vergelykings bewerk tot ry-echelon vorm toe, kry ons:
         <md>
          <mrow> a + b + c \amp = 0 </mrow>
@@ -675,11 +679,13 @@
         <me>
           c = t, \, b = -2t, \, a = t, \quad t \in \mathbb{R}
         </me>
+      </p>
+      <p>
         Dus,
         <me>
           \Ker(T) = \{ t - 2t x + tx^2 : t \in \mathbb{R}\}
         </me>
-        'n Basis vir <m>\Ker(T)</m> is gekry deur die waarde van die parameter <m>t</m> te kies as </m><m>t = 1</m>:
+        'n Basis vir <m>\Ker(T)</m> is gekry deur die waarde van die parameter <m>t</m> te kies as <m>t = 1</m>:
         <me>
           \text{Basis for } \Ker(T) = \bopen 1 - 2x + x^2 \bclose
         </me>
@@ -687,11 +693,15 @@
         <me>
           \Nhg(T) = \Dim(\Ker(T)) = 1.
         </me>
+      </p>
+      <p>
         Nou kom ons bereken <m>\Be(T)</m>. Ons het
         <md>
           <mrow> \mat{w} \equiv \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} \in \Be(T)  </mrow>
           <mrow> \Leftrightarrow \text{there exists } p \in \Poly_2 \text{ such that } T(p) = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} </mrow>
         </md>
+      </p>
+      <p>
         Skryf
         <m>
           p = a + bx + cx^2.
@@ -707,6 +717,8 @@
           <mrow> b + 2c \amp= w_2</mrow>
           <mrow>a + 2b + 3c \amp = w_3</mrow>
         </md>
+      </p>
+      <p>
         Kom ons los hierdie vergelykings op deur ry reduksie te gebruik:
         <md>
           <mrow>\left[ \begin{array}{ccc|c} 
@@ -731,6 +743,8 @@
           \end{array}\right]
         </mrow>
         </md>
+      </p>
+      <p>
         So: daar bestaan <em>geen</em> oplossing vir <m>a,b,c</m> tensy <m>w_3 - w_1 - w_2 = 0</m>, want andersins sal ons 'n vergelyking van die vorm 'nul is gelyk aan 'n nie nul waarde' h\^{e}. Bovendien, <em>as</em> <m>w_3 - w_1 - w_2</m>, dan <em>kan</em> di\'{e} vergelykings opgelos word vir <m>a,b,c</m>, want hulle is in toegevoegde ry-trap vorm met geen ongeldige rye. Dus,
         <me>
           \Be(T) = \left\{ \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} : -w_1 -w_2 + w_3 = 0 \right\}.

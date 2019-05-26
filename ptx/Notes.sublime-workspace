@@ -163,77 +163,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Ch3Sec4LinearMapsMatrices.ptx",
-			"settings":
-			{
-				"buffer_size": 28005,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "W214-Lin-Alg.ptx",
-			"settings":
-			{
-				"buffer_size": 2724,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Ch3Sec5KernelImage.ptx",
-			"settings":
-			{
-				"buffer_size": 45760,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Ch3Sec6InjectiveSurjective.ptx",
-			"settings":
-			{
-				"buffer_size": 7984,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec5KernelImage.ptx",
-			"settings":
-			{
-				"buffer_size": 46718,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec6InjectiveSurjective.ptx",
-			"settings":
-			{
-				"buffer_size": 8416,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "html/makehtml",
-			"settings":
-			{
-				"buffer_size": 221,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/bbartlett/AppData/Roaming/Sublime Text 3/Packages/User/bruce-pretext.sublime-build",
-			"settings":
-			{
-				"buffer_size": 244,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/PreTeXtual/PreTeXt.sublime-build",
 	"build_system_choices":
@@ -356,10 +285,20 @@
 	],
 	"file_history":
 	[
+		"/C/Users/bbartlett/AppData/Roaming/Sublime Text 3/Packages/User/bruce-pretext.sublime-build",
+		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/html/makehtml",
+		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec6InjectiveSurjective.ptx",
+		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec5KernelImage.ptx",
+		"/C/Users/bbartlett/Documents/Sync/webpage/brucebartlett/source/Gemfile.lock",
+		"/C/Users/bbartlett/Documents/Sync/webpage/brucebartlett/source/runlocal.sh",
+		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec4LinearMapsMatrices.ptx",
+		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/W214-Lin-Alg.ptx",
+		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec5KernelImage.ptx",
+		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec6InjectiveSurjective.ptx",
+		"/C/Users/bbartlett/Documents/Sync/webpage/brucebartlett/source/Gemfile",
 		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch2Sec1LinearCombinationSpan.ptx",
 		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec1DefinitionsExamples.ptx",
 		"/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch1Sec4MoreExamples.ptx",
-		"/C/Users/bbartlett/AppData/Roaming/Sublime Text 3/Packages/User/bruce-pretext.sublime-build",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec1DefinitionsExamples.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Ch3Sec3Isomorphisms.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/Tut5.ptx",
@@ -473,17 +412,7 @@
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section5-15x.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-14x.ptx",
 		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-13x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-12x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-11x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-10x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-8x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-7x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-6x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section3-5x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-4x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-3x.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-4.ptx",
-		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section2-3.ptx"
+		"/Users/brucebartlett/Sync/Work/Teaching/Maths 214 2019/Notes/ptx/section4-12x.ptx"
 	],
 	"find":
 	{
@@ -556,245 +485,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Ch3Sec4LinearMapsMatrices.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 28005,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								80,
-								80
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "W214-Lin-Alg.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2724,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1834,
-								1834
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 792.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Ch3Sec5KernelImage.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 45760,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								28881,
-								28881
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 18592.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Ch3Sec6InjectiveSurjective.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7984,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7521,
-								7521
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4620.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec5KernelImage.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 46718,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								30808,
-								30808
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 20399.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/Users/bbartlett/Documents/Sync/Work/Teaching/Maths 214 2019/Notes/ptxaf/ACh3Sec6InjectiveSurjective.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8416,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1183,
-								1183
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 264.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "html/makehtml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 221,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								221,
-								221
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/C/Users/bbartlett/AppData/Roaming/Sublime Text 3/Packages/User/bruce-pretext.sublime-build",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 244,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								241,
-								241
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 949.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				}
 			]
 		}
 	],
