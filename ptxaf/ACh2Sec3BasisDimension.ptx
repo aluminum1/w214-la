@@ -778,12 +778,14 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
           Laat <m>W</m> 'n deelruimte van 'n eindig-dimensionele
           vektorruimte <m>V</m> wees.
           Dan is <m>W</m> eindig-dimensioneel, en <m>\Dim(W) \leq
-          \Dim(V)</m>.
+          \Dim(V)</m>. Verder, as <m>\Dim(W) = \Dim(V)</m> dan is <m>W = V</m>.
         </p>
       </statement>
     </proposition>
 <!-- TO DO: Translate this -->
  <proof>
+    <paragraphs>
+      <title>Proving that <m>\Dim(W) \leq \Dim(V)</m></title>
       <p> Let 
         <me>
           \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose 
@@ -809,6 +811,18 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
         Now consider the list <m>\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}</m>. Again, <m>\basis{B}_3</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. If it does not span <m>W</m>, then there exists a vector <m>\ve{w}_4 \in W</m> which is not a linear combination of <m>\ve{w}_1, \ve{w}_2, \ve{w}_3</m>. So consider the list <m>\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose </m>. </p>
 
        <p>This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="bumping_off_lemma"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.</p>
+    </paragraphs>
+      <paragraphs>
+        <title>Proving that <m>\Dim(V) = \Dim(W) \Rightarrow W = V</m></title>  
+        <p>
+          Suppose that <m>\Dim(W) = \Dim(V)</m> but that <m>W \neq V</m>. Since <m>W \neq V</m>, there exists a vector <m>\ve{v}</m> which is an element of <m>V</m> but not an element of <m>W</m>. Let <m>\basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_n \bclose</m> be a basis for <m>W</m>. We can add <m>\ve{v}</m> to <m>\basis{B}</m> to get the following list of vectors in <m>V</m>:
+          <me>
+            \basis{B}' = \bopen \ve{w}_1, \ldots, \ve{w}_n, \ve{v} \bclose.
+          </me>
+          Since <m>\ve{v}</m> cannot be written as a linear combination of <m>\ve{w}_1, \ldots, \ve{w}_n</m>, we conclude that <m>\basis{B}'</m> linearly lindependent, by <xref ref="lin_comb_prec_vec"/>. But then <m>\basis{B}'</m> is a list of <m>n+1</m> linearly independent vectors in an <m>n</m>-dimensional vector space <m>V</m>. This is impossible, by <xref ref="bumping_off_lemma"/>. Therefore our assumption was false, and we must have <m>W = V</m>. 
+        </p>
+      </paragraphs>
+
     </proof>
  <!-- End of translation needed -->
   </subsection>

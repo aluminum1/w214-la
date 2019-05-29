@@ -89,7 +89,7 @@
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp (<xref ref="injective-kernel-lemma"/>) </mrow>
         <mrow>\amp \therefore \Nullity(T) = 0</mrow>
         <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  (<xref ref="rank-nullity-theorem"/>)</mrow>
-        <mrow>\amp \therefore \Im(T) = V \amp \amp   (<xref ref="lin-ind-implies-basis"/>)</mrow>
+        <mrow>\amp \therefore \Im(T) = V \amp \amp   (<xref ref="dim-of-subspace-prop"/>)</mrow>
       </md>
     </p>
 
@@ -105,7 +105,7 @@
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
         <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  ( <xref ref="rank-nullity-theorem"/> )</mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
-        <mrow>\amp \therefore T \mbox{ is injective. }   \amp \amp  (<xref ref="lin-ind-implies-basis"/>)</mrow>
+        <mrow>\amp \therefore T \mbox{ is injective. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
       </md>
     </p>
   </proof>

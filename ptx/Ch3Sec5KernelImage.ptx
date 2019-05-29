@@ -567,6 +567,8 @@
         <men xml:id="p_in_kernel_1">
           p \in \Ker(T) \quad \Leftrightarrow \quad T(p) = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
         </men>
+      </p>
+      <p>
         Write
         <me>
           p = a + bx + cx^2
@@ -575,6 +577,8 @@
         <me>
           \begin{bmatrix} a + b + c \\ b + 2c \\ a + 2b + 3c  \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
         </me>
+      </p>
+      <p>
         This equation between column vectors is satisfied if and only if the following linear equations are simultaneously satisfied:
         <md>
           <mrow> a + b + c \amp = 0 </mrow>
@@ -586,6 +590,8 @@
          <mrow> a + b + c \amp = 0 </mrow>
          <mrow> b + 2c \amp = 0 </mrow>
         </md>
+      </p>
+      <p>
         The general solution is:
         <me>
           c = t, \, b = -2t, \, a = t, \quad t \in \mathbb{R}
@@ -594,6 +600,8 @@
         <me>
           \Ker(T) = \{ t - 2t x + tx^2 : t \in \mathbb{R}\}
         </me>
+      </p>
+      <p>
         A basis for <m>\Ker(T)</m> is obtained by setting the parameter <m>t = 1</m>:
         <me>
           \text{Basis for } \Ker(T) = \bopen 1 - 2x + x^2 \bclose
@@ -607,6 +615,8 @@
           <mrow> \mat{w} \equiv \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} \in \Im(T)  </mrow>
           <mrow> \Leftrightarrow \text{there exists } p \in \Poly_2 \text{ such that } T(p) = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} </mrow>
         </md>
+      </p>
+      <p>
         Write 
         <m>
           p = a + bx + cx^2.
@@ -616,12 +626,16 @@
           <mrow> T(p) = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} </mrow>
           <mrow> \Leftrightarrow \begin{bmatrix} a + b + c \\ b + 2c \\ a + 2b + 3c \end{bmatrix} = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix}</mrow>
         </md>
+      </p>
+      <p>
         In other words,<m>\mat{w} \in \Im(T)</m> if and only if there exists <em>some</em> solution to the following equations for <m>a,b,c</m>:
         <md>
           <mrow>a + b + c \amp = w_1</mrow>
           <mrow> b + 2c \amp= w_2</mrow>
           <mrow>a + 2b + 3c \amp = w_3</mrow>
         </md>
+      </p>
+      <p>
         Let us solve these equations using row reduction:
         <md>
           <mrow>\left[ \begin{array}{ccc|c} 
@@ -646,10 +660,14 @@
           \end{array}\right]
         </mrow>
         </md>
+      </p>
+      <p>
         So: there is <em>no</em> solution for <m>a,b,c</m> unless <m>w_3 - w_1 - w_2 = 0</m>, because otherwise we will have an equation of the form 'zero equals nonzero value'. Moreover, <em>if</em> <m>w_3 - w_1 - w_2</m>, then the above equations <em>can</em> be solved for <m>a,b,c</m>, because then they are in augmented row echelon form with no invalid rows. Therefore,
         <me>
           \Im(T) = \left\{ \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} : -w_1 -w_2 + w_3 = 0 \right\}.
         </me>
+      </p>
+      <p>
         So, a basis for <m>\Im(T)</m> is given by:
         <me>
           \bopen \begin{bmatrix}  1 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \bclose
