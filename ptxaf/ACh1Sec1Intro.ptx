@@ -6,15 +6,15 @@
     <title>Drie verskillende versamelings</title>
     <p>
       Ons begin met 'n speletjie.
-      In wiskunde is 'n <em>versameling</em> <m>X</m> maar
-      net 'n kolleksie van onderskeibare objekte.
-      Hierdie objekte word
+      In wiskunde is 'n <em>versameling</em> <m>X</m> 
+      'n kolleksie van onderskeibare voorwerpe.
+      Hierdie voorwerpe word
       <em>elemente</em> van <m>X</m> genoem.
     </p>
 
     <p>
-      Ek gaan drie verskillende versamelings aan jou toon en jy moet s&#xea;
-      watter eienskappe hulle in gemeen het.
+      Ek gaan vir jou drie verskillende versamelings wys 
+       en dan moet jy s&#xea;  watter eienskappe hulle in gemeen het.
     </p>
 
     <p>
@@ -26,8 +26,8 @@
 
     <assemblage>
       <p>
-        Kom ons stop hier vir 'n oomblik en vertaal die definisie van Afrikaans
-        na wiskundige simbole.
+        Kom ons stop hier vir 'n oomblik en vertaal die 
+        definisie van Afrikaans na wiskundige simbole.
         Die vertaling is:
         <men>
           A := \{ (a_1,\, a_2) : a_1,a_2 \in \mathbb{R}  \} 
@@ -37,31 +37,30 @@
       <p>
         Die <m>:=</m> staan vir <sq>is gedefinieer as</sq>.
         Die <m>\{</m> en <m>\}</m> simbole staan
-        vir <sq>die versalmeling van alle</sq>.
+        vir <sq>die versameling van alle</sq>.
         Die enkele dubbelpunt <m>:</m> staan vir
         <sq>waar</sq> of <sq>sodat</sq>.
         Die komma tussen <m>a</m> en <m>b</m> staan vir <sq>en</sq>.
-        Die
-        <m>\in</m> staan vir `'n element van'. En <m>\mathbb{R}</m> staan vir die
-        versameling van alle re&#xeb;le getalle.
-        Veels geluk!
-        <mdash /> jy gebruik die
-        taal van wiskunde!
+        Die <m>\in</m> staan vir `'n element van'. 
+        En <m>\mathbb{R}</m> staan vir die versameling van alle re&#xeb;le getalle.
+      </p>
+
+      <p>
+        Veels geluk! <mdash /> jy is besig om die taal van wiskunde te leer!
       </p>
     </assemblage>
 
     <p>
-      'n Element van <m>A</m> is 'n arbitr&#xea;re paar van re&#xeb;le getalle
+      'n Element van <m>A</m> is 'n willekeurige paar re&#xeb;le getalle
       <m>\ve{a} = (a_1, \, a_2)</m>.
       Byvoorbeeld, <m>(1, \, 2) \in A</m> en
-      <m>(3.891, \,
-      e^\pi)</m> is elemente van <m>A</m>.
+      <m>(3.891, \, e^\pi)</m> is elemente van <m>A</m>.
       Let ook op dat ek 'n vetdruk <m>\ve{a}</m> gebruik
       om na 'n element van <m>A</m> te verwys.
       Dit is sodat ons <m>\ve{a}</m> kan onderskei
-      van sy <em>komponente</em> <m>a_1</m> en <m>a_2</m>, wat net gewone getalle is
-      (nie
-      elemente van <m>A</m> nie).
+      van sy <em>komponente</em> <m>a_1</m> en <m>a_2</m>, 
+      wat net gewone getalle is
+      (nie elemente van <m>A</m> nie).
     </p>
 
     <p>
@@ -133,15 +132,15 @@
       Die derde versameling, <m>C</m>,
       is die versameling van alle vierdegraadse
       polinome.
-      Omgesit in wiskundige simbole, ,
+      Omgesit in wiskundige simbole,
       <men>
         C := \{ \mbox{polinome met graad \(\leq 4\)} \}
       </men>.
     </p>
 
     <p>
-      Onthou dat die <em>graad</em> van 'n polinoom is die grootse mag van <m>x</m> wat
-      daarin verskyn.
+      Onthou dat die <em>graad</em> van 'n polinoom  die 
+      grootse mag van <m>x</m> is wat daarin verskyn.
       Byvoorbeeld, <m>\ve{c} = x^4 - 3 x^3 + 2x^2</m> is
       'n vierdegraadse polinoom; so ook is <m>\ve{p} = 2x^3 + \pi x</m>.
       So <m>\ve{c}</m>

@@ -7,7 +7,8 @@
     <p>
       We start by playing a game.
       Recall that in mathematics,
-      a <em>set</em> <m>X</m> is just a collection of distinct objects.
+      a <em>set</em> <m>X</m> is just a collection 
+      of distinct objects.
       We call these objects the <em>elements</em> of <m>X</m>.
     </p>
 
@@ -18,12 +19,15 @@
 
     <p>
       The first set, <m>A</m>,
-      is defined to be the set of all ordered pairs <m>(x,y)</m> where <m>x</m> and <m>y</m> are real numbers.
+      is defined to be the set of all 
+      ordered pairs <m>(x,y)</m> where 
+      <m>x</m> and <m>y</m> are real numbers.
     </p>
 
     <assemblage>
       <p>
-        Let us pause for a second and translate this definition from English into mathematical symbols.
+        Let us pause for a second and translate this 
+        definition from English into mathematical symbols.
         The translation is:
         <men>
           A := \{ (a_1,\, a_2) : a_1,a_2 \in \mathbb{R}  \} 
@@ -32,8 +36,10 @@
 
       <p>
         The <m>:=</m> stands for <sq>is defined to be</sq>.
-        The <m>\{</m> and <m>\}</m> symbols stand for <sq>the set of all</sq>.
-        The lone colon <m>:</m> stands for <sq>where</sq> or <sq>such that</sq>.
+        The <m>\{</m> and <m>\}</m> symbols stand 
+        for <sq>the set of all</sq>.
+        The lone colon <m>:</m> stands for 
+        <sq>where</sq> or <sq>such that</sq>.
         The comma in between <m>a</m> and <m>b</m> stands for <sq>and</sq>.
         The <m>\in</m> stands for <sq>an element of</sq>.
         And <m>\mathbb{R}</m> stands for the set of all real numbers.
@@ -45,18 +51,22 @@
     </assemblage>
 
     <p>
-      An element of <m>A</m> is an arbitrary pair of real numbers <m>\ve{a} = (a_1, \, a_2)</m>.
+      An element of <m>A</m> is an arbitrary pair of real numbers 
+      <m>\ve{a} = (a_1, \, a_2)</m>.
       For instance, <m>(1, \, 2) \in A</m> and
       <m>(3.891, \, e^\pi)</m> are elements of <m>A</m>.
-      Note also that I am using a boldface <m>\ve{a}</m> to refer to an element of <m>A</m>.
-      This is so that we can distinguish <m>\ve{a}</m> from its <em>components</em>
-      <m>a_1</m> and <m>a_2</m>,
+      Note also that I am using a boldface <m>\ve{a}</m> 
+      to refer to an element of <m>A</m>.
+      This is so that we can distinguish <m>\ve{a}</m> 
+      from its <em>components</em> <m>a_1</m> and <m>a_2</m>,
       which are just ordinary numbers
       (not elements of <m>A</m>).
     </p>
 
     <p>
-      We can visualize an element <m>\ve{a}</m> of <m>A</m> as a point in the Cartesian plane whose <m>x</m>-coordinate is <m>a_1</m> and whose <m>y</m>-coordinate is <m>a_2</m>:
+      We can visualize an element <m>\ve{a}</m> of <m>A</m> as a point in the 
+      Cartesian plane whose <m>x</m>-coordinate is <m>a_1</m> and whose 
+      <m>y</m>-coordinate is <m>a_2</m>:
       <sidebyside valign="middle" margins="20% 40%">
         <p> <m> \ve{a} \xmapsto{\text{visualize as}} </m> </p>
         <image>
