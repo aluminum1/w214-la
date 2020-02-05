@@ -1,16 +1,14 @@
-
-
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AAppAReminderAboutMatrices">
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AAppAReminderAboutMatrices">
   <title>Matrikshersiening</title>
   <p>
-    Kom ons onthou 'n paar goed oor matrikse en stel vas watter notasie ons
-    gaan gebruik.
+    Kom ons hersien 'n paar goed oor matrikse 
+    en stel vas watter notasie ons gaan gebruik.
   </p>
 
   <p>
     'n <em><m>n \times m</m>-matriks</em>
-    <m>\mat{A}</m> is maar net 'n reghoekige skikking
-    van getalle, met <m>n</m> rye en <m>m</m> kolomme:
+    <m>\mat{A}</m> is 'n reghoekige skikking van getalle, 
+    met <m>n</m> rye en <m>m</m> kolomme:
     <me>
       \mat{A} = \left[
       \begin{array}{cccc} 
@@ -21,6 +19,7 @@
       \end{array} 
       \right]
     </me>
+    Elke <m> A_{ij} </m> dui hier 'n re&#xeb;le getal aan.
   </p>
 
   <assemblage>
@@ -30,14 +29,14 @@
       Dit is moeilik om in handgeskrewe teks <sq>van lettertipe te
       verander,</sq> maar ek moedig jou aan om ten minste die letters <m>\mat{A}</m>,
       <m>\mat{B}</m>, <m>\mat{C}</m>,
-      ens vir matrikse te reserveer, en om <m>S</m>, <m>T</m>,
-      etc. vir line&#xea;re afbeeldings te gebruik!
+      ens. vir matrikse te reserveer, en <m>S</m>, <m>T</m>,
+      ens. vir line&#xea;re afbeeldings!
     </p>
   </assemblage>
 
   <p>
     Twee <m>n \times m</m> matrikse <m>\mat{A}</m> en <m>\mat{B}</m> kan bymekaargetel word,
-    om n' nuwe <m>n \times m</m> matriks <m>\mat{A} + \mat{B}</m> te verkry:
+    om 'n nuwe <m>n \times m</m> matriks <m>\mat{A} + \mat{B}</m> te verkry:
     <me>
       (\mat{A} + \mat{B})_{ij} := \mat{A}_{ij} + \mat{B}_{ij}
     </me>
@@ -58,9 +57,8 @@
   </p>
 
   <p>
-    Jy kan ook 'n <m>n \times m</m>-matriks <m>\mat{A}</m> met 'n skalaar <m>k</m>
-    vermenigvuldig, om 'n nuwe
-    <m>n \times m</m> matriks <m>k \mat{A}</m> te verkry:
+    Jy kan ook 'n <m>n \times m</m>-matriks <m>\mat{A}</m> met 'n skalaar <m>k</m> vermenigvuldig,
+    om 'n nuwe <m>n \times m</m> matriks <m>k \mat{A}</m> te verkry:
     <me>
       (k\mat{A})_{ij} := k \mat{A}_{ij}
     </me>
@@ -71,18 +69,21 @@
       <ol>
         <li>
           <p>
-            Saam met hierdie bewerkings is die versameling <m>\Mat_{n, m}</m>
+            Saam met hierdie bewerkings 
+            is die versameling <m>\Mat_{n, m}</m>
             van alle <m>n \times m</m> matrikse 'n vektorruimte.
           </p>
         </li>
 
         <li>
           <p>
-            Die dimensie van <m>\Mat_{nm}</m> is <m>nm</m>, met die matrikse
+            Die dimensie van <m>\Mat_{nm}</m> is <m>nm</m>, 
+            met die matrikse
             <me>
               \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
             </me>
-            as basis, elk met 'n <m>1</m> in die <m>i</m>de ry en <m>j</m>de kolom en
+            as basis, elk met 'n <m>1</m> in die inskrywing 
+            in ry <m>i</m> en kolom <m>j</m> en
             nulle orals anders.
           </p>
         </li>
@@ -96,32 +97,19 @@
     </p>
   </proof>
 
-  <example>
+    <example>
     <statement>
       <p>
-        <m>\Mat_{2,2}</m> het die basis
+        <m>\Mat_{2,2}</m> het basis
         <me>
-          \mat{E}_{11} = \left[ 
-          \begin{array}{cc}  
-          1 \amp  0 \\ 
-          0 \amp  0
-          \end{array} 
-          \right], \, \mat{E}_{12} = \left[ 
-          \begin{array}{cc} 
-          0 \amp  1 \\ 
-          0 \amp  0
-          \end{array}  
-          \right], \mat{E}_{21} = \left[
-          \begin{array}{cc} 
-          0 \amp  0 \\ 
-          1 \amp  0
-          \end{array}  
-          \right], \mat{E}_{22} = \left[ 
-          \begin{array}{cc}
-          0 \amp  0 \\
-          0 \amp  1
-          \end{array}  
-          \right]
+          \mat{E}_{11} = \left[ \begin{array}{cc} 1 \amp  0 \\ 0 \amp  0
+          \end{array}  \right], \, 
+          \mat{E}_{12} = \left[ \begin{array}{cc} 0 \amp  1 \\ 0 \amp  0
+          \end{array}  \right], 
+          \mat{E}_{21} = \left[ \begin{array}{cc} 0 \amp  0 \\ 1 \amp  0
+          \end{array}  \right], 
+          \mat{E}_{22} = \left[ \begin{array}{cc} 0 \amp  0 \\ 0 \amp  1
+          \end{array}  \right]
         </me>.
       </p>
     </statement>
@@ -131,15 +119,13 @@
     <p>
       Gewoonlik is <m>\mat{A}</m> 'n matriks, en is
       <m>\mat{A}_{ij}</m> die element van die matriks by posisie <m>(i,j)</m>.
-      Maar nou
-      is <m>\mat{E}_{ij}</m> 'n matriks in eie reg!
+      Maar hier is <m>\mat{E}_{ij}</m> 'n matriks in eie reg!
       Sy element by posisie <m>(k,l)</m>
       sal geskryf word as <m>(\mat{E}_{ij})_{kl}</m>.
-      Ek hoop dit is nie te
-      verwarrend nie.
+      Ek hoop dit is nie te verwarrend nie.
       Ons kan 'n elegante formule vir die elemente van
       <m>\mat{E}_{ij}</m> skryf met die Kronecker-delta-simbool:
-      <men xml:id="kronecker_for_matrix_basis">
+      <men xml:id="kronecker_for_matrix_basis-2">
         (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
       </men>
     </p>
@@ -147,7 +133,7 @@
     <exercise>
       <statement>
         <p>
-          Bevestig dat <xref ref="kronecker_for_matrix_basis" /> wel
+          Bevestig dat <xref ref="kronecker_for_matrix_basis-2" /> wel
           die korrekte formule vir die matrikselemente van <m>\mat{E}_{ij}</m> is.
         </p>
       </statement>
@@ -158,47 +144,27 @@
     <statement>
       <p>
         Ons skryf <m>\Col_n</m> vir die vektorruimte <m>\Mat_{n,1}</m> van
-        <m>n</m>-dimensional <em>kolomvektore</em>, en ons sal die standaard
-        basisvektore as <m>{\mathbf \mat{E}}_{i1}</m> van <m>\Col_n</m> skryf, of nog
-        eenvoudiger as <m>\col{e}_i</m>:
+        <m>n</m>-dimensional <em>kolomvektore</em>, 
+        en ons sal die standaard basisvektore
+        <m>{\mathbf \mat{E}}_{i1}</m> van <m>\Col_n</m> 
+        op eenvoudiger wyse as <m>\col{e}_i</m> skryf:
         <me>
-          \col{e}_1 := \left[ 
-          \begin{array}{c}
-          1 \\
-          0 \\ 
-          \vdots \\
-          0
-          \end{array}  
-          \right], \, \col{e}_2 := \left[ 
-          \begin{array}{c} 
-          0 \\
-          1 \\
-          \vdots \\
-          0
-          \end{array}  
-          \right], \, \ldots, \, \col{e}_n := \left[ 
-          \begin{array}{c} 
-          0 \\ 
-          0 \\ 
-          \vdots \\ 
-          1
-          \end{array}  
-          \right] 
+          \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
+          \end{array}  \right], \, 
+          \col{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
+          \end{array}  \right], \, 
+          \ldots, \,
+          \col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
+          \end{array}  \right] 
         </me>.
       </p>
 
       <p>
-        Vektore in <m>\Col_n</m> sal in
-        <em><em>vetdruk, sans-serif</em></em>
-        geskryf word, bv.
+        Vektore in <m>\Col_n</m> sal in vetdruk, sans-serif geskryf word, bv.
         <m>\col{v} \in \Col_n</m>.
       </p>
     </statement>
   </example>
-
-  <p>
-    \subsection{Matriksvermenigvuldiging}
-  </p>
 
   <p>
     Toegerus met hierdie bewerkings,
@@ -206,75 +172,60 @@
     alle <m>n \times m</m> matrikse 'n vektorruimte
     (sien <xref ref="matrices_example_vec_space">Voorbeeld</xref>),
     met dimensie<m>nm</m>
-    UNCOMMENT!<!--(sien <xref ref="dimension_of_matrix_space_example">Voorbeeld</xref>). -->
+    <!--(sien <xref ref="dimension_of_matrix_space_example">Voorbeeld</xref>). -->
     Ons skryf <m>\Col_n</m> vir die
-    vektorruimte <m>\Mat_{n,1}</m> van <m>n</m>-dimensionele <em>kolomvektore</em>.
+    vektorruimte <m>\Mat_{n,1}</m> van <m>n</m>-dimensionele 
+    <em>kolomvektore</em>.
   </p>
 
   <p>
     Die belangrikste bewerking is <em>matriksvermenigvuldiging</em>. 'n
-    <m>n \times
-    k</m>-matriks <m>\mat{A}</m> kan van regs met 'n
-    <m>k \times m</m>-matriks <m>\mat{B}</m>
-    vermenigvuldig word om 'n <m>n \times m</m>-matriks <m>\mat{AB}</m> te kry,
+    <m>n \times k</m>-matriks <m>\mat{A}</m> kan van regs met 'n
+    <m>k \times m</m>-matriks <m>\mat{B}</m> vermenigvuldig word 
+    om 'n <m>n \times m</m>-matriks <m>\mat{AB}</m> te kry,
     <md>
-      \left[ 
-      \begin{array}{cccc} 
-      \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1k} \\
+      \left[ \begin{array}{cccc} \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1k} \\
       \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2k} \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nk}
-      \end{array} 
-      \right] \left[ 
-      \begin{array}{cccc} 
-      \mat{B}_{11} \amp  \mat{B}_{12} \amp  \cdots \amp  \mat{B}_{1m} \\
+      \end{array}  \right] \left[ \begin{array}{cccc} \mat{B}_{11} \amp  \mat{B}_{12} \amp  \cdots \amp  \mat{B}_{1m} \\
       \mat{B}_{21} \amp  \mat{B}_{22} \amp  \cdots \amp  \mat{B}_{2m} \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       \mat{B}_{k1} \amp  \mat{B}_{k2} \amp  \cdots \amp  \mat{B}_{km}
-      \end{array}  
-      \right] \, = \\ \left[ 
-      \begin{array}{cccc} 
-      (\mat{AB})_{11} \amp  (\mat{AB})_{12} \amp  \cdots \amp  (\mat{AB}_{1m} \\
+      \end{array}  \right] \, = \\ 
+      \left[ \begin{array}{cccc} (\mat{AB})_{11} \amp  (\mat{AB})_{12} \amp  \cdots \amp  (\mat{AB}_{1m} \\
       (\mat{AB})_{21} \amp  (\mat{AB})_{22} \amp  \cdots \amp  (\mat{AB})_{2m} \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       (\mat{AB})_{k1} \amp  (\mat{AB})_{k2} \amp  \cdots \amp  (\mat{AB})_{nm}
-      \end{array}  
-      \right]
+      \end{array}  \right]
     </md>
     deur die inskrywings van <m>\mat{AB}</m> as
     <me>
-      (\mat{AB})_{ij} := \mat{A}_{i1} \mat{B}_{1j} + \mat{A}_{i2}
-      \mat{B}_{2j} + \cdots + \mat{A}_{ik} \mat{B}_{kj}
-    </me>
-    te definieer.
+      (\mat{AB})_{ij} := \mat{A}_{i1} \mat{B}_{1j} + \mat{A}_{i2} \mat{B}_{2j} + \cdots + \mat{A}_{ik} \mat{B}_{kj}
+    </me> te definieer.
   </p>
 
   <proposition xml:id="props_of_matrix_ops">
     <statement>
       <p>
-        Die bostaande bewerkings op
-        matrikse bevredig die volgende re&#xeb;ls presies wanneer die somme en
-        produkte goed-gedefinieer is:
-
+        Die bostaande bewerkings op matrikse bevredig die volgende 
+        re&#xeb;ls wanneer ook al die somme en produkte gedefinieer is:
         <ol>
           <li>
             <p>
-              <m>(\mat{A} + \mat{B}) \mat{C} = \mat{A} \mat{C} + \mat{B}
-              \mat{C}</m>
+              <m>(\mat{A} + \mat{B}) \mat{C} = \mat{A} \mat{C} + \mat{B} \mat{C}</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>\mat{A} (\mat{B} + \mat{C}) = \mat{A} \mat{B} + \mat{A}
-              \mat{C}</m>
+              <m>\mat{A} (\mat{B} + \mat{C}) = \mat{A} \mat{B} + \mat{A} \mat{C}</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>(k \mat{A}) \mat{B} = \mat{A} (k \mat{B}) = k (\mat{A}
-              \mat{B})</m>
+              <m>(k \mat{A}) \mat{B} = \mat{A} (k \mat{B}) = k (\mat{A} \mat{B})</m>
             </p>
           </li>
 
@@ -290,23 +241,18 @@
 
   <proof>
     <p>
-      Die bewyse van (1) - (3) is roetinewerk wat jy hopelik
-      voorheen al gedoen het.
-      Kom ons bewys (4), om te oefen om
-      <m>\Sigma</m>-notasie te gebruik!
+      Die bewyse van (1) - (3) is roetinewerk wat jy hopelik al voorheen gedoen het.
+      Kom ons bewys (4), om te oefen om <m>\Sigma</m>-notasie te gebruik!
       Veronderstel <m>\mat{A}</m>, <m>\mat{B}</m> en
       <m>\mat{C}</m> het groottes <m>n \times k</m>,
       <m>k \times r</m> en <m>r \times m</m>
       onderskeidelik, sodat die matriksprodukte sinmaak.
       Dan:
       <md>
-        <mrow>((\mat{A}\mat{B})\mat{C})_{ij} \amp = \sum_{p=1}^r (\mat{A}
-        \mat{B})_{ip} \mat{C}_{pj}</mrow>
-        <mrow>\amp = \sum_{p=1}^r \left(\sum_{q=1}^k \mat{A}_{iq} \mat{B}_{qp}
-        \right) \mat{C}_{pj}</mrow>
+        <mrow>((\mat{A}\mat{B})\mat{C})_{ij} \amp = \sum_{p=1}^r (\mat{A}\mat{B})_{ip} \mat{C}_{pj}</mrow>
+        <mrow>\amp = \sum_{p=1}^r \left(\sum_{q=1}^k \mat{A}_{iq} \mat{B}_{qp}\right) \mat{C}_{pj}</mrow>
         <mrow>\amp = \sum_{p,q} \mat{A}_{iq} \mat{B}_{qp} \mat{C}_{pj}</mrow>
-        <mrow>\amp = \sum_{q=1}^k \mat{A}_{iq} \left( \sum_{p=1}^r \mat{B}_{qp}
-        \mat{C}_{pj}\right)</mrow>
+        <mrow>\amp = \sum_{q=1}^k \mat{A}_{iq} \left( \sum_{p=1}^r \mat{B}_{qp}\mat{C}_{pj}\right)</mrow>
         <mrow>\amp = \sum_{q=1}^k \mat{A}_{iq} (\mat{B} \mat{C} )_{qj}</mrow>
         <mrow>\amp = (\mat{A} (\mat{B} \mat{C}))_{ij}</mrow>
       </md>.
@@ -315,8 +261,7 @@
 
   <assemblage>
     <p>
-      Ek hoop nie die <m>\Sigma</m>-notasie in die bostaande
-      bewys is te verwarrend nie!
+      Ek hoop nie die <m>\Sigma</m>-notasie in die bostaande bewys is te verwarrend nie!
       Kom ek skryf presies dieselfde bewys uit
       <em>sonder</em> <m>\Sigma</m>-notasie,
       in die eenvoudige geval waar <m>\mat{A}</m>,
@@ -324,19 +269,11 @@
       <m>2 \times 2</m>-matrikse is en ons wil die
       inskrywing by posisie <m>11</m> uitwerk.
       <md>
-        <mrow>((\mat{A}\mat{B})\mat{C})_{11} \amp = (\mat{A}\mat{B})_{11}
-        \mat{C}_{11} + (\mat{A} \mat{B})_{12} \mat{C}_{21}</mrow>
-        <mrow>\amp = (\mat{A}_{11} \mat{B}_{11} + \mat{A}_{12} \mat{B}_{21})
-        \mat{C}_{11} + (\mat{A}_{11} \mat{B}_{12} + \mat{A}_{12}
-        \mat{B}_{22}) \mat{C}_{21}</mrow>
-        <mrow>\amp = \mat{A}_{11} \mat{B}_{11} \mat{C}_{11} + \mat{A}_{12}
-        \mat{B}_{21} \mat{C}_{11} + \mat{A}_{11} \mat{B}_{12} \mat{C}_{21}
-        + \mat{A}_{12} \mat{B}_{22} \mat{C}_{21}</mrow>
-        <mrow>\amp = \mat{A}_{11} (\mat{B}_{11} \mat{C}_{11} + \mat{B}_{12}
-        \mat{C}_{21}) + \mat{A}_{12} ( \mat{B}_{21} \mat{C}_{11} +
-        \mat{B}_{22} \mat{C}_{21})</mrow>
-        <mrow>\amp = \mat{A}_{11} (\mat{B} \mat{C})_{11} + \mat{A}_{12} (\mat{B}
-        \mat{C})_{21}</mrow>
+        <mrow>((\mat{A}\mat{B})\mat{C})_{11} \amp = (\mat{A}\mat{B})_{11}\mat{C}_{11} + (\mat{A} \mat{B})_{12} \mat{C}_{21}</mrow>
+        <mrow>\amp = (\mat{A}_{11} \mat{B}_{11} + \mat{A}_{12} \mat{B}_{21})\mat{C}_{11} + (\mat{A}_{11} \mat{B}_{12} + \mat{A}_{12}\mat{B}_{22}) \mat{C}_{21}</mrow>
+        <mrow>\amp = \mat{A}_{11} \mat{B}_{11} \mat{C}_{11} + \mat{A}_{12}\mat{B}_{21} \mat{C}_{11} + \mat{A}_{11} \mat{B}_{12} \mat{C}_{21}+ \mat{A}_{12} \mat{B}_{22} \mat{C}_{21}</mrow>
+        <mrow>\amp = \mat{A}_{11} (\mat{B}_{11} \mat{C}_{11} + \mat{B}_{12}\mat{C}_{21}) + \mat{A}_{12} ( \mat{B}_{21} \mat{C}_{11} +\mat{B}_{22} \mat{C}_{21})</mrow>
+        <mrow>\amp = \mat{A}_{11} (\mat{B} \mat{C})_{11} + \mat{A}_{12} (\mat{B}\mat{C})_{21}</mrow>
         <mrow>\amp = (\mat{A} (\mat{B} \mat{C}))_{11}</mrow>
       </md>.
     </p>
@@ -344,21 +281,34 @@
     <p>
       Verstaan jy nou die <m>\Sigma</m>-notasie-bewys?
       Die kritieke stap
-      (om van
-      die tweede tot die vierde lyn te vorder)
-      word <em>omruil van die
-      sommeringsvolgorde</em> genoem.
+      (om van die tweede tot die vierde lyn te gaan)
+      word <em>omruil van die sommeringsvolgorde</em> genoem.
     </p>
   </assemblage>
 
   <p>
-    Die <em>transponering</em> van 'n
+    Die <em>transponent</em> van 'n
     <m>n \times m</m>-matriks <m>\mat{A}</m> is die
-    <m>m
-    \times n</m>-matriks <m>\mat{A}^T</m> waarvan die inskrywings gegee word deur
+    <m>m \times n</m>-matriks <m>\mat{A}^T</m> waarvan die inskrywings gegee word deur
     <me>
       (\mat{A}^T)_{ij} := \mat{A}_{ji}
     </me>.
   </p>
-</chapter>
+
+  <exercise>
+    <statement>
+      Bewys dat indien <m>A \in \Mat_{2,2}</m> 
+      <me>
+        AB = BA
+      </me>
+      vir alle <m>B \in \Mat_{2,2}</m> bevredig, dan is <m>A</m> van die vorm
+      <me>
+        \mat{A} = \begin{bmatrix} a \mamp 0 \\
+        0 \mamp a
+        \end{bmatrix}  .
+      </me>
+      </statement>
+  </exercise>
+
+</appendix>
 
