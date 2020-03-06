@@ -1,3 +1,5 @@
+/c/xsltproc/xsltproc --xinclude /c/pretext/mathbook/xsl/mathbook-latex.xsl /c/pretext/w214-la/ptx/W214-Lin-Alg.ptx > /c/pretext/w214-la/ptx/latex/W214-Lin-Alg.tex
+
 cd /c/pretext/w214-la/ptx/latex
-/c/xsltproc/xsltproc --xinclude /c/pretext/mathbook/xsl/mathbook-latex.xsl /c/pretext/w214-la/ptx/W214-Lin-Alg.ptx
+
 pdflatex W214-Lin-Alg.tex
