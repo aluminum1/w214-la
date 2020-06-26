@@ -6,17 +6,20 @@
     Mathematics is about identifying patterns.
     We have found three different sets,
     <m>A</m>, <m>B</m> and <m>C</m>,
-    which look very different on the surface but have much in common.
+    which look very different on the surface
+    but have much in common.
     In each set, there is an addition operation,
     a zero vector, and a scalar multiplication operation.
     Moreover, in each set, these operations satisfy the same rules.
-    Let us now record this pattern by giving it a name and writing down the rules explicitly.
+    Let us now record this pattern by giving it a name
+    and writing down the rules explicitly.
   </p>
 
   <definition xml:id="real_vec_space">
     <statement>
       <p>
-        A <term>vector space</term> is a set <m>V</m> equipped with the following data:
+        A <term>vector space</term> is a set <m>V</m>
+        equipped with the following data:
 
         <dl>
           <li xml:id="D1">
@@ -32,15 +35,18 @@
             <title>D2.</title>
             <p>
               A <em>zero vector</em>.
-              (That is, a special vector <m>\ve{0} \in V</m> is marked out.)
+              (That is, a special vector 
+              <m>\ve{0} \in V</m>
+               is marked out.)
             </p>
           </li>
 
           <li xml:id="D3">
             <title>D3.</title>
             <p>
-              A <em>scalar multiplication operation</em>. (That is,
-              for each real number <m>k</m> and each element <m>\ve{v} \in V</m>,
+              A <em>scalar multiplication operation</em>.
+              (That is, for each real number <m>k</m>
+              and each element <m>\ve{v} \in V</m>,
               a new element <m>k \smul\ve{v} \in V</m> is defined).
             </p>
           </li>
@@ -49,8 +55,10 @@
 <!-- TO DO: Make all references to the rules in this section into xrefs -->
 
       <p>
-        This data should satisfy the following rules for all
-        <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m> and for all real numbers <m>k</m> and <m>l</m>:
+        This data should satisfy
+        the following rules for all
+         <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>
+        and for all real numbers <m>k</m> and <m>l</m>:
       </p>
 
         <dl>
@@ -120,26 +128,31 @@
   </definition>
 
   <p>
-    We will call the elements of a vector space <em>vectors</em>,
+    We will call the elements of a vector space <term>vectors</term>,
     and we will write them in boldface eg.
     <m>\ve{v} \in V</m>.
     We do this to distinguish vectors from real numbers,
     which we will call <em>scalars</em>,
     and which don't have a boldface.
     It is difficult to use boldface in handwriting,
-    so you should write them with an arrow on top, like so:
-    <m>\vec{v}</m>.
+    so you can write them with an arrow on top, like
+    <m>\vec{v}</m>,
+    or underline them, like <m>\underline{v}</m>.
+    It is not essential to do this,
+    because it is usually clear from the context.
+    But it may help you to think more clearly about their difference.
   </p>
 
   <p>
-    Also, in this chapter we will write scalar multiplication with a <m>\cdot</m>,
-    for instance <m>k \smul\ve{v}</m>,
+    In this chapter we will write scalar multiplication with
+    a <m>\cdot</m>, for instance <m>k \cdot\ve{v}</m>,
     but in later chapters we will simply write it as
     <m>k \ve{v}</m> for brevity, so be careful!
   </p>
 
   <p>
-    To prove that a certain set can be given the structure of a vector space,
+    To prove that a certain set can be
+    given the structure of a vector space,
     one therefore needs to do the following:
   </p>
 
@@ -154,14 +167,17 @@
 
       <li>
         <p>
-          Define the data of an addition operation (D1), a zero vector (D2),
-          and a scalar multiplication operation (D3) on <m>V</m>.
+          Define the data of
+          an addition operation (D1),
+          a zero vector (D2), and a
+          scalar multiplication operation (D3)
+          on <m>V</m>.
         </p>
       </li>
 
       <li>
         <p>
-          Check that this data satisfies the rules (R1) - (R8).
+          Check that this data satisfies the rules (R1) &ndash; (R8).
         </p>
       </li>
     </ol>
