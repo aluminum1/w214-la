@@ -8,7 +8,7 @@
       <p>
         Define the set <m>V</m> by
         <men>
-          V := \{ \mathbf{a}, \mathbf{b} \} 
+          V := \{ \ve{a}, \ve{b} \} 
         </men>
       </p>
 
@@ -22,22 +22,26 @@
 
       <p>
         For this to be a well-defined addition operation,
-        we need to check that whenever you add two elements of <m>V</m> together,
-        you get out a well-defined element of <m>V</m>.
+        we need to check that whenever you add two elements
+        of <m>V</m> together, you get out a well-defined
+        element of <m>V</m>.
         But <m>\ve{b} + \ve{b} = \ve{c}</m>,
-        so adding <m>\ve{b} \in V</m> to itself outputs something,
-        namely <m>\ve{c}</m>, which is not an element of <m>V</m>.
-        So <m>V</m> does not form a vector space since it does not even have a well-defined addition operation.
+        so adding <m>\ve{b} \in V</m> to itself
+        outputs something (namely <m>\ve{c}</m>),
+        which is not an element of <m>V</m>.
+        So <m>V</m> does not form a vector space since it
+        does not have a well-defined addition operation.
       </p>
     </statement>
   </example>
 
   <example>
     <title>Another non-example</title>
+    <statement>
     <p>
       Define the set <m>V</m> by
       <men>
-        V := \{ \mathbf{a}, \mathbf{b} \} 
+        V := \{ \ve{a}, \ve{b} \} 
       </men>.
     </p>
 
@@ -79,138 +83,133 @@
       since it allows us to multiply any element
       <m>\ve{v} \in V</m> by a scalar <m>k</m> and it outputs a well-defined element <m>k \smul\ve{v} \in V</m>.
     </p>
-
+  </statement>
   </example>
 
-    <exercise>
-      <statement>
-        <p>
-          Show that these operations satisfy rules R1, R2, R3, R4, R6 and R7, but not R5 and R8.
-        </p>
-      </statement>
-      <solution>
-<p>
-R1: We must check whether <m>\ve{v} + \ve{w} = \ve{w} + \ve{v} \text{ for all } \ve{v}, \ve{w} \in \{\ve{a},\ve{b}\}</m>.
-Clearly <m> \ve{a} + \ve{a} = \ve{a} + \ve{a}</m> and likewise for <m>\ve{b}</m>. And finally <m>\ve{b} = \ve{a} +\ve{b} = \ve{b} + \ve{a}</m>.
-</p>
+  <exercise>
+    <statement>
+      <p>
+        Show that these operations satisfy rules R1, R2, R3, R4, R6 and R7, but not R5 and R8.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        R1: We must check whether <m>\ve{v} + \ve{w} = \ve{w} + \ve{v} \text{ for all } \ve{v}, \ve{w} \in \{\ve{a},\ve{b}\}</m>.
+        Clearly <m> \ve{a} + \ve{a} = \ve{a} + \ve{a}</m> and likewise for <m>\ve{b}</m>. And finally <m>\ve{b} = \ve{a} +\ve{b} = \ve{b} + \ve{a}</m>.
+      </p>
 
-<p>
-R2: We must check whether <m> (\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})  \text{ for all } \ve{u} , \ve{v},\ve{w} \in \{\ve{a},\ve{b}\}</m>. This requires we check 8 equations in total. For brevity, we shall only present the solution for one of them, the rest are virtually identical. We check whether
-<md>
-<mrow>(\ve{a} + \ve{b}) + \ve{b} = \ve{a} +(\ve{b} + \ve{b}</mrow>
-</md>
-To that end, consider:
-<md>
-<mrow>\text{LHS} \amp = (\ve{a} + \ve{b}) + \ve{b}</mrow>
-<mrow> \amp = \ve{b} + \ve{b}</mrow>
-<mrow> \amp = \ve{a}</mrow>
-</md>.
-By a similar method:
-<md>
-<mrow>\text{RHS} \amp = \ve{a} +(\ve{b} + \ve{b})</mrow>
-<mrow> \amp = \ve{a} + \ve{a}</mrow>
-<mrow> \amp = \ve{a}</mrow>
-</md>.
-  </p>
-<p>
-R3, R4, R6, and R7 all follow from routine checks.
-</p>
-<p>
-We shall demonstrate why R5 is not satisfied. For that, we need to find a counterexample. Take <m>k=2=l, \ve v = \ve b</m>. Then
-<md>
-<mrow>\text{LHS} \amp = (2+2).\ve{b}</mrow>
-<mrow> \amp = 4.\ve{b}</mrow>
-<mrow>\amp = \ve{b}</mrow>
-</md>
-whereas
-<md>
-<mrow>\text{RHS} \amp = 2.\ve{b} + 2.\ve{b}</mrow>
-<mrow> \amp = \ve{b} + \ve{b}</mrow>
-<mrow>\amp =\ve{a}</mrow>.
-</md>
-Since <m>\text{LHS} \neq \text{RHS}</m>, R5 cannot be true.
-  </p>
+      <p>
+        R2: We must check whether <m> (\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})  \text{ for all } \ve{u} , \ve{v},\ve{w} \in \{\ve{a},\ve{b}\}</m>. This requires we check 8 equations in total. For brevity, we shall only present the solution for one of them, the rest are virtually identical. We check whether
+        <md>
+          <mrow>(\ve{a} + \ve{b}) + \ve{b} = \ve{a} +(\ve{b} + \ve{b}</mrow>
+        </md>
+        To that end, consider:
+        <md>
+          <mrow>\text{LHS} \amp = (\ve{a} + \ve{b}) + \ve{b}</mrow>
+          <mrow> \amp = \ve{b} + \ve{b}</mrow>
+          <mrow> \amp = \ve{a}</mrow>
+        </md>.
+        By a similar method:
+        <md>
+          <mrow>\text{RHS} \amp = \ve{a} +(\ve{b} + \ve{b})</mrow>
+          <mrow> \amp = \ve{a} + \ve{a}</mrow>
+          <mrow> \amp = \ve{a}</mrow>
+          <mrow> \therefore LK \amp = RK </mrow>
+        </md>.
+      </p>
+      <p>
+        R3, R4, R6, and R7 all follow from routine checks.
+      </p>
+      <p>
+        We shall demonstrate why R5 is not satisfied. For that, we need to find a counterexample. Take <m>k=2=l, \ve v = \ve b</m>. Then
+        <md>
+          <mrow>\text{LHS} \amp = (2+2).\ve{b}</mrow>
+          <mrow> \amp = 4.\ve{b}</mrow>
+          <mrow>\amp = \ve{b}</mrow>
+        </md>
+        whereas
+        <md>
+          <mrow>\text{RHS} \amp = 2.\ve{b} + 2.\ve{b}</mrow>
+          <mrow> \amp = \ve{b} + \ve{b}</mrow>
+          <mrow>\amp =\ve{a}</mrow>.
+        </md>
+        Since <m>\text{LHS} \neq \text{RHS}</m>, R5 cannot be true.
+      </p>
     </solution>
-    </exercise>
-
-
+  </exercise>
 
   <example>
     <title>The zero vector space</title>
     <statement>
-    <p>
-      Define the set <m>Z</m> by
-      <men>
-        Z := \{ \ve{z} \}
-      </men>.
-    </p>
+      <p>
+        Define the set <m>Z</m> by
+        <men>
+          Z := \{ \ve{z} \}
+        </men>.
+      </p>
 
-    <p>
-      Note that it contains just a single element, <m>\ve{z}</m>.
-      Define the addition operation as
-      <men>
-        \ve{z} + \ve{z} := \ve{z}
-      </men>
-    </p>
+      <p>
+        Note that it contains just a single element, <m>\ve{z}</m>.
+        Define the addition operation as
+        <men>
+          \ve{z} + \ve{z} := \ve{z}
+        </men>
+      </p>
 
-    <p>
-      Define the zero element as
-      <men>
-        \ve{0} := \ve{z}
-      </men>.
-    </p>
+      <p>
+        Define the zero element as
+        <men>
+          \ve{0} := \ve{z}
+        </men>.
+      </p>
 
-    <p>
-      Finally define scalar multiplication by a scalar <m>k \in \mathbb{R}</m> as:
-      <men>
-        k \smul\ve{z} := \ve{z}
-      </men>.
-    </p>
-
+      <p>
+        Finally define scalar multiplication by a scalar <m>k \in \mathbb{R}</m> as:
+        <men>
+          k \smul\ve{z} := \ve{z}
+        </men>.
+      </p>
     </statement>
   </example>
 
-<exercise>
-      <statement>
-        <p>
-          Show that this data satisfies the rules R1 to R8.
-        </p>
-      </statement>
-    </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Show that this data satisfies the rules R1 to R8.
+      </p>
+    </statement>
+  </exercise>
 
   <example>
     <title><m>\mathbb{R}^n</m></title>
     <statement>
-    <p>
-      Define the set <m>\mathbb{R}^n</m> by
-      <men>
-        \mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in \mathbb{R} \mbox{ for all }  i = 1 \ldots n\}
-      </men>.
-    </p>
+      <p>
+        Define the set <m>\mathbb{R}^n</m> by
+        <men>
+          \mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in \mathbb{R} \mbox{ for all }  i = 1 \ldots n\}
+        </men>.
+      </p>
 
-    <p>
-      Define the addition operation as
-      <men>
-        (x_1, \, x_2, \, \ldots, \, x_n) + (y_1, \, y_2, \, \ldots, \, y_n) := (x_1 + y_1, \, x_2 + y_2, \, \ldots, \, x_n + y_n)
-      </men>.
-    </p>
+      <p>
+        Define the addition operation as
+        <men>
+          (x_1, \, x_2, \, \ldots, \, x_n) + (y_1, \, y_2, \, \ldots, \, y_n) := (x_1 + y_1, \, x_2 + y_2, \, \ldots, \, x_n + y_n)
+        </men>.
+      </p>
 
-    <p>
-      Define the zero element as
-      <men>
-        \ve{0} := (0, \, 0, \, \ldots, \, 0)
-      </men>.
-    </p>
+      <p>
+        Define the zero element as
+        <men>
+          \ve{0} := (0, \, 0, \, \ldots, \, 0)
+        </men>.
+      </p>
 
-    <p>
-      Define scalar multiplication by
-      <men>
-        k \smul(x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \, \ldots, \, k x_n)
-      </men>.
-    </p>
-
-    
-
+      <p>
+        Define scalar multiplication by
+        <men>
+          k \smul(x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \, \ldots, \, k x_n)
+        </men>.
+      </p>
     </statement>
   </example>
 
@@ -252,8 +251,6 @@ Since <m>\text{LHS} \neq \text{RHS}</m>, R5 cannot be true.
       </men>
     </p>
 
-    
-
     <assemblage>
       <p>
         Thinking about infinity is an important part of mathematics.
@@ -273,30 +270,27 @@ Since <m>\text{LHS} \neq \text{RHS}</m>, R5 cannot be true.
       </statement>
       <solution>
         <p>
-        We shall only check R4 below, the rest are similar.
-      </p>
-<p>R4 :Let 
-<md>
-  <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
-  <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>.
-</md>
-We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
-<md>
-<mrow>\text{LHS} \amp = k.(\ve{v} + \ve{w})</mrow>
-<mrow>\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>
-<mrow> \amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
-<mrow> \amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)</mrow>
-<mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
-<mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
-<mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
-<mrow> \amp = k.\ve{v} + k.\ve={w} </mrow>
-<mrow> \amp = \text{LHS} </mrow>
-</md>
-</p>
+          We shall only check R4 below, the rest are similar.
+        </p>
+        <p>R4: Let
+          <md>
+            <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
+            <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>.
+          </md>
+          We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
+          <md>
+            <mrow>\text{LHS} \amp = k.(\ve{v} + \ve{w})</mrow>
+            <mrow>\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>
+            <mrow> \amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
+            <mrow> \amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)</mrow>
+            <mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
+            <mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
+            <mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
+            <mrow> \amp = k.\ve{v} + k.\ve={w} </mrow>
+            <mrow> \amp = \text{LHS} </mrow>
+          </md>
+        </p>
       </solution>
-
-
-
     </exercise>
 
   <example xml:id="functions_on_set_vec_space">
@@ -317,8 +311,9 @@ We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
       Such a requirement would not make sense,
       since <m>X</m> could be an arbitrary set.
       For instance <m>X</m> could be the set
-      <m>\{a, b, c\}</m> <mdash />without any further informaiton,
-      it does not make sense to say that a function <m>f : X \rightarrow \mathbb{R}</m> is continuous.
+      <m>\{a, b, c\}</m> <mdash />without any further information,
+      it does not make sense to say that a function
+      <m>f : X \rightarrow \mathbb{R}</m> is continuous.
     </p>
 
     <p>
@@ -334,17 +329,23 @@ We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
       <m>f</m> and <m>g</m>,
       and we are defining their sum <m>f + g</m>.
       This is supposed to be another function on <m>X</m>.
-      To define a function on <m>X</m>, I am supposed to write down what value it assigns to each <m>x \in X</m>.
+      To define a function on <m>X</m>,
+      we need to write down what value
+      it assigns to each <m>x \in X</m>.
       And that is what the formula says:
       the value that the function
-      <m>\mathbf{f} + \mathbf{g}</m> assigns to an element <m>x \in X</m> is defined to be the number
+      <m>\mathbf{f} + \mathbf{g}</m> assigns to
+      an element <m>x \in X</m>
+      is defined to be the number
       <m>f(x)</m> plus the number <m>g(x)</m>.
       Remember: <m>f</m> is a function,
       while <m>f(x)</m> is a number!
     </p>
 
     <p>
-      Define the zero vector, which we will call <m>z</m> in this example, to be the function which outputs the number <m>0</m> for every input value of <m>x \in X</m>:
+      Define the zero vector (which we will call <m>z</m> in this example),
+      to be the function which outputs the number <m>0</m>
+      for every input value of <m>x \in X</m>:
       <men xml:id="zero_vec_functions">
         z (x) := 0  \text{ for all \(x \in X\).}
       </men>
@@ -363,7 +364,8 @@ We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
       <statement>
         <p>
           Notation quiz!
-          Say whether the following combination of symbols represents a real number or a function.
+          Say whether the following combination of symbols
+          represents a real number or a function.
 
           <ol>
             <li>
@@ -410,9 +412,6 @@ We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
         </ol>
       </p>
       </solution>
-     
-
-
     </exercise>
 
     <exercise xml:id="quiz_different_functions">
@@ -430,7 +429,8 @@ We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
             <li>
               <p>
                 For each of the functions you wrote down in  <xref ref="three_functions"/>,
-                calculate (i) <m>f + g</m> and (ii) <m>3 \smul h</m>.
+                calculate (i) <m>f + g</m>
+                and (ii) <m>3 \smul h</m>.
               </p>
             </li>
           </ol>
@@ -439,11 +439,11 @@ We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
        <solution>
         <p>
         <ol>
-          <li> 
+          <li>
             <md>
             <mrow> f(a)= 4 </mrow>
             <mrow> f(b) = 0 </mrow>
-            <mrow> f(c) = 2 </mrow>     
+            <mrow> f(c) = 2 </mrow>
             <mrow></mrow>
             <mrow> g(a)= 1 </mrow>
             <mrow> g(b) = 1 </mrow>
@@ -473,7 +473,7 @@ We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
     <exercise>
       <statement>
         <p>
-          Show that the data <xref ref="add_op_functions"/>, <xref ref="zero_vec_functions"/>, <xref ref="smul_functions"/> satisfies the rules R1 to R8, so that <m>\Fun(X)</m> is a vector space.
+          Show that the data in <xref ref="add_op_functions"/>, <xref ref="zero_vec_functions"/>, <xref ref="smul_functions"/> satisfy the rules R1 to R8, so that <m>\Fun(X)</m> is a vector space.
         </p>
       </statement>
     </exercise>
@@ -515,14 +515,14 @@ We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
 
       <p>
         So, <m>\Col_n</m> <sq>is</sq> just <m>\mathbb{R}^n</m>,
-        but we make explicit the fact that the components of the vectors are arranged in a column.
+        but we make explicit the fact that the
+        components of the vectors are arranged in a column.
       </p>
     </statement>
   </example>
 
-
-
 <exercises>
+
   <exercise xml:id="non_ass_ex">
     <statement>
       <p>
