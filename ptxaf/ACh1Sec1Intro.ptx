@@ -8,13 +8,13 @@
       Ons begin met 'n speletjie.
       In wiskunde is 'n <em>versameling</em> <m>X</m> 
       'n kolleksie van onderskeibare voorwerpe.
-      Hierdie voorwerpe word
-      <em>elemente</em> van <m>X</m> genoem.
+      Hierdie voorwerpe word die <em>elemente</em> van <m>X</m> genoem.
     </p>
 
     <p>
-      Ek gaan vir jou drie verskillende versamelings wys 
-       en dan moet jy s&#xea;  watter eienskappe hulle in gemeen het.
+      Ek gaan vir jou drie verskillende versamelings wys
+       en dan moet jy s&#xea;  watter eienskappe
+       hulle in gemeen het.
     </p>
 
     <p>
@@ -91,21 +91,18 @@
       Die tweede versameling, <m>B</m>,
       word gedefinieer as die versameling van alle
       geordende re&#xeb;le drietalle
-      <m>(u_1, \, u_2, \, u_3)</m>, wat <m>u_1 - u_2 + u_3
-      = 0</m> bevredig.
+      <m>(u_1, \, u_2, \, u_3)</m>, wat <m>u_1 - u_2 + u_3 = 0</m> bevredig.
       In wiskundige simbole is dit soos volg:
       <men>
-        B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \mbox{ en } 
-        b_1 - b_2 + b_3 = 0\} 
+        B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \mbox{ en } b_1 - b_2 + b_3 = 0\} 
       </men>.
     </p>
 
     <p>
-      Byvoorbeeld, <m>(2,3, 1) \in B</m>,
-      maar <m>(1,1,1) \notin B</m>.
-      Ons kan 'n element
-      <m>\ve{b}</m> van <m>B</m> visualiseer as 'n punt in die vlak in 3-dimensionele
-      ruimte wat deur die vergelyking <m>x-y+z = 0</m> daargestel word:
+      Byvoorbeeld, <m>(2,3, 1) \in B</m>, maar <m>(1,1,1) \notin B</m>.
+      Ons kan 'n element <m>\ve{b}</m> in <m>B</m> visualiseer
+      as 'n punt in die vlak in 3-dimensionele
+      ruimte wat deur die vergelyking <m>x-y+z = 0</m> gedefinieer word:
         <sidebyside valign="middle" margins="20% 40%">
         <p> <m> \ve{b} \xmapsto{\text{visualiseer as}} </m> </p>
         <image width="30%">
@@ -130,8 +127,7 @@
 
     <p>
       Die derde versameling, <m>C</m>,
-      is die versameling van alle vierdegraadse
-      polinome.
+      is die versameling van alle polinome van graad 4 of minder.
       Omgesit in wiskundige simbole,
       <men>
         C := \{ \mbox{polinome met graad \(\leq 4\)} \}
@@ -139,21 +135,18 @@
     </p>
 
     <p>
-      Onthou dat die <em>graad</em> van 'n polinoom  die 
-      grootse mag van <m>x</m> is wat daarin verskyn.
-      Byvoorbeeld, <m>\ve{c} = x^4 - 3 x^3 + 2x^2</m> is
-      'n vierdegraadse polinoom; so ook is <m>\ve{p} = 2x^3 + \pi x</m>.
-      So <m>\ve{c}</m>
-      en <m>\ve{p}</m> is elemente van <m>C</m>.
-      Maar <m>\ve{r} = 8x^5 - 7</m> en
-      <m>\ve{s} =
-      \sin(x)</m> is nie elemente van <m>C</m> nie.
-      Ons kan 'n element <m>\ve{c} \in C</m>
-      (i.e. 'n vierdegraadse polinoom) met sy
-      <em>grafiek</em> visualiseer.
+      Onthou dat die <em>graad</em> van 'n polinoom
+      die grootse mag van <m>x</m> is wat (met 'n nie-nul ko&#xeb;ffisi&#xeb;nt) daarin verskyn.
       Byvoorbeeld,
-      die polinoom <m>\ve{c} = x^4 - 3x^3 + 2x^2 \in C</m> word soos volg
-      visualiseer:
+      <m>\ve{c} = x^4 - 3 x^3 + 2x^2</m> is 'n vierdegraadse polinoom en
+      die polinoom <m>\ve{p} = 2x^3 + \pi x</m> het 'n graad van 3.
+      So <m>\ve{c}</m> en <m>\ve{p}</m> is elemente van <m>C</m>.
+      Maar <m>\ve{r} = 8x^5 - 7</m> en
+      <m>\ve{s} = \sin(x)</m> is nie elemente van <m>C</m> nie.
+      Ons kan 'n element <m>\ve{c} \in C</m>
+      (i.e. 'n vierdegraadse polinoom) met sy <em>grafiek</em> visualiseer.
+      Byvoorbeeld, die polinoom
+      <m>\ve{c} = x^4 - 3x^3 + 2x^2 \in C</m> word soos volg gevisualiseer:
       <sidebyside valign="middle" margins="20% 40%">
         <p> <m> \ve{c} \xmapsto{\text{visualiseer as}} </m> </p>
         <image>
@@ -175,13 +168,11 @@
       Daar het jy dit.
       Ek het drie versamelings definieer:
       <m>A</m>, <m>B</m> en <m>C</m>, en ek
-      het verduidelik hoe elkeen visualiseer kan word.
-      Die drie versamelings lyk
-      aanvanklik redelik verskillend.
-      Elemente van <m>A</m> is arbitr&#xea;re punte in
-      <m>\mathbb{R}^2</m>.
-      Elemente van <m>B</m> is punte in <m>\mathbb{R}^3</m> wat 'n sekere
-      vergelyking bevredig.
+      het verduidelik hoe elkeen gevisualiseer kan word.
+      Die drie versamelings lyk aanvanklik redelik verskillend.
+      Elemente van <m>A</m> is willekeurige punte in <m>\mathbb{R}^2</m>.
+      Elemente van <m>B</m> is punte in <m>\mathbb{R}^3</m> 
+      wat 'n sekere vergelyking bevredig.
       Elemente van <m>C</m> is almal polinome.
     </p>
 
@@ -195,18 +186,16 @@
     <introduction>
       <p>
         Ek wil fokus op twee kenmerke wat versamelings in <m>A</m>,
-        <m>B</m> en <m>C</m> in gemeen
-        het.
+        <m>B</m> en <m>C</m> in gemeen het.
       </p>
     </introduction>
 
     <subsubsection>
-      <title>Sommering</title>
+      <title>Optelling</title>
       <p>
-        Eerstens het aldrie hierdie versamelings 'n natuurlike
-        <em>sommeringsbewerking</em>.
+        Eerstens het al drie hierdie versamelings 'n natuurlike <em>optellingsbewerking</em>.
         Ons kan twee elemente in 'n versameling
-        bymekaar tel om 'n derde element in dieselfde versameling te kry.
+        bymekaar tel om 'n derde element te kry.
       </p>
 
       <p>
@@ -221,8 +210,7 @@
 
       <p>
         Byvoorbeeld, <m>(1, \,3) + (2, \,-1.6) = (3, \,1.4)</m>.
-        Ons kan die
-        sommeringsbewerking soos volg visualiseer:
+        Ons kan die optellingsbewerking as volg visualiseer:
         <sidebyside valign="middle" widths="20% 5% 20% 5% 20%">
         <image>
         <latex-image>
@@ -273,53 +261,46 @@
 
       <p>
         Ons kan 'n soortgelyke benadering in versameling <m>B</m> volg.
-        Versonderstel
-        ons het twee elemente van <m>B</m>,
-        <m>\ve{b} = (b_1, \,b_2, \,b_3)</m> en <m>\ve{b}'
-        = (b_1', \, b_2', \, b_3')</m>.
+        Versonderstel dat ons het twee elemente
+        <m>\ve{b} = (b_1, \,b_2, \,b_3)</m> en
+        <m>\ve{b}' = (b_1', \, b_2', \, b_3')</m> van <m>B</m> het.
         Let daarop dat, omdat <m>\ve{b}\in B</m>, bevredig
-        <m>\ve{b}</m> se komponente die vergelyking <m>b_1 - b_2 + b_3 = 0</m>.
-        So bevredig
-        <m>b'</m> ook <m>b'_1 - b'_2 + b'_3 = 0</m>.
-        Ons kan <m>\ve{b}</m> en <m>\ve{b}'</m> saamtel om
-        'n nuwe element <m>\ve{b} + \ve{b}'</m> van <m>B</m> te kry,
-        deur hulle komponente
-        saam te tel soos tevore:
+        <m>\ve{b}</m> se komponente die vergelyking
+        <m>b_1 - b_2 + b_3 = 0</m>.
+        So bevredig die komponente van <m>b'</m> ook
+        <m>b'_1 - b'_2 + b'_3 = 0</m>.
+        Ons kan <m>\ve{b}</m> en <m>\ve{b}'</m> by mekaar tel
+        om 'n nuwe element <m>\ve{b} + \ve{b}'</m> van <m>B</m> te kry,
+        deur hulle komponente soos voorheen by mekaar  tel:
         <men xml:id="new_add_in_B">
-          \underbrace{(b_1, \, b_2, \, b_3)}_{\ve{b}} + \underbrace{(b'_1, \,b'_2, \,
-          b'_3)}_{\ve{b}'} := \underbrace{(b_1 + b_1', \, b_2 + b_2', \, b_3 +
-          b'_3)}_{\ve{b} + \ve{b}'}
+          \underbrace{(b_1, \, b_2, \, b_3)}_{\ve{b}} + \underbrace{(b'_1, \,b'_2, \, b'_3)}_{\ve{b}'} := \underbrace{(b_1 + b_1', \, b_2 + b_2', \, b_3 + b'_3)}_{\ve{b} + \ve{b}'}
         </men>
       </p>
 
       <p>
-        Nou moet ons versigtig wees.
+        Ons moet hier versigtig wees.
         Hoe weet ons dat die uitdrukking aan die
         regterkant regtig 'n element van <m>B</m> is?
-        Ons moet seker maak dat dit die
-        vergelyking <sq>die eerste komponent minus die tweede komponent plus die derde
-        komponent is gelyk aan nul</sq> bevredig.
+        Ons moet seker maak dat dit die vergelyking
+        <sq>die eerste komponent minus die tweede komponent plus die derde komponent is gelyk aan nul</sq> bevredig.
         Kom ons doen dit formeel:
         <md>
-          <mrow>(\ve{b} + \ve{b}')_1 - (\ve{b}+\ve{b}')_2 + (\ve{b}+\ve{b}')_3 \amp = (b_1
-          + b'_1) - (b_2 + b'_2) + (b_3 + b'_3)</mrow>
-          <mrow>.
-          \amp = (b_1 - b_2 + b_3) + (b'_1 - b'_2 + b'_3)</mrow>
+          <mrow>(\ve{b} + \ve{b}')_1 - (\ve{b}+\ve{b}')_2 + (\ve{b}+\ve{b}')_3 \amp = (b_1 + b'_1) - (b_2 + b'_2) + (b_3 + b'_3)</mrow>
+          <mrow> \amp = (b_1 - b_2 + b_3) + (b'_1 - b'_2 + b'_3)</mrow>
           <mrow>\amp = 0 + 0</mrow>
           <mrow>\amp = 0</mrow>
         </md>.
       </p>
 
       <p>
-        <m>B</m> kan op die selfde manier as <m>A</m> visualiseer word.
+        Ons kanhierdie optellingsbewerking in <m>B</m>
+        op dieselfde manier as <m>A</m> visualiseer.
       </p>
 
       <p>
-        Daar is ook 'n sommeringsbewerking in die versameling <m>C</m>.
-        Ons kan twee
-        polinome algebra&#xef;es bymekaartel deur hulle ooreenstemmende
-        ko&#xeb;ffisi&#xeb;nte
-        bymekaar te tel:
+        Daar is ook 'n optellingsbewerking in die versameling <m>C</m>.
+        Ons kan twee polinome algebra&#xef;es bymekaartel
+        deur hulle ooreenkomstige ko&#xeb;ffisi&#xeb;nte bymekaar te tel:
         <mdn>
          <mrow number="no">[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
           <mrow xml:id="add_in_C">:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
@@ -335,28 +316,28 @@
       </p>
 
       <p>
-        Daar is nog 'n manier om aan die sommering van polinome te dink.
-        Elke
-        polinoom <m>\ve{c}</m> kan gesien word as 'n
+        Daar is nog 'n manier om aan die optelling van polinome te dink.
+        Elke polinoom <m>\ve{c}</m> kan gesien word as 'n
         <em>funksie</em>, in die sin dat ons
-        'n arbitr&#xea;re waarde <m>x</m> in die polinoom <m>\ve{c}</m> in kan vervang, en dit
-        sal 'n waarde <m>\ve{c}(x)</m> voortbring.
-        Byvoorbeeld, as <m>\ve{c}(x) = 3x^2 -
-        1</m>, dan is <m>\ve{c}(2) = 11</m>.
-        As ons polinome as funksies beskou, dan kan
-        aan die som <m>\ve{c} + \ve{d}</m> van twee polinome gedink word as 'n nuwe
-        funksie wat,
+        <m>x</m> met enige waarde in die polinoom <m>\ve{c}</m> kan vervang
+        (ons s&#xea; dat ons die polinomm by hierdie waarde uitwerk of <em>evalueer</em>)
+        en dit sal 'n waarde <m>\ve{c}(x)</m> voortbring.
+        Byvoorbeeld, as <m>\ve{c}(x) = 3x^2 - 1</m>,
+        dan is <m>\ve{c}(2) = 11</m>.
+        As ons polinome as funksies beskou, dan kan ons
+        aan die som <m>\ve{c} + \ve{d}</m> van twee polinome dink 
+        as 'n nuwe funksie wat,
         wanneer 'n getal <m>x</m> invervang word, dit die waarde
         <m>\ve{c}(x) + \ve{d}(x)</m> teruggee.
-        Wiskundig geskryf,
+        Wiskundig geskryf, is
        <men xml:id="add_in_C2">
           (\ve{c} + \ve{d})(x) := \ve{c}(x) + \ve{d}(x)
         </men>
       </p>
 
       <p>
-        Deur so te dink,
-        kan ons die grafiek van <m>\ve{c} + \ve{d}</m> as die som van
+        Deur so hieraan te dink, kan ons die grafiek van 
+        <m>\ve{c} + \ve{d}</m> as die som van
         die grafieke van <m>\ve{c}</m> en <m>\ve{d}</m> voorstel:
         <sidebyside>
               <image>
@@ -400,11 +381,11 @@
     <subsubsection>
       <title>Nul-element</title>
       <p>
-        In aldrie versamelings <m>A</m>,
-        <m>B</m> en <m>C</m>, bestaan daar 'n spesifieke element
+        In al drie versamelings <m>A</m>, <m>B</m> en <m>C</m>,
+        is daar 'n spesifieke element
         (die <em>nul-element</em>) <m>\ve{0}</m> wat,
         as dit by 'n ander element getel
-        word, lewer dit weer dieselfde element onveranderd terug.
+        word, dit daardie element onveranderd laat.
       </p>
 
       <p>
@@ -415,24 +396,24 @@
       </p>
 
       <p>
-        Wanneer jy hierdie punt by 'n ander punt <m>(a_1, \, a_2) \in A</m> tel, gebeur
-        niks nie!
+        Wanneer jy hierdie punt by 'n ander punt <m>(a_1, \, a_2) \in A</m> tel, 
+        gebeur niks nie!
         <me>
           (0, \,0) + (a_1, \, a_2) = (a_1, \, a_2)
         </me>.
       </p>
 
       <p>
-        Moenie die nul-element <m>\ve{0} \in A</m> met die re&#xeb;le getal nul (<m>0 \in
-        \mathbb{R}</m>) verwar nie.
-        Dit is nog 'n rede hoekom ek vetdruk gebruik! (Jy
-        moet elemente van <m>A</m> onderstreep om die onderskeid te tref.)
+        Moenie die nul-element <m>\ve{0} \in A</m>
+        met die re&#xeb;le getal nul (<m>0 \in\mathbb{R}</m>) verwar nie.
+        Dit is nog 'n rede hoekom ek vetdruk gebruik!
+        (Jy kan elemente van <m>A</m> onderstreep om die onderskeid te tref.)
       </p>
 
       <p>
-        <m>(0,0,0) \in B</m> is die nul-element <m>\ve{0}</m> in <m>B</m>.
-        As jy dit by 'n ander
-        punt <m>(u_1, u_2, u_3) \in B</m> tel, gebeur niks nie!
+        Die element <m>(0,0,0) \in B</m> is die nul-element <m>\ve{0}</m> in <m>B</m>.
+        As jy dit by 'n ander punt <m>(u_1, u_2, u_3) \in B</m> tel,
+        gebeur niks nie!
         <me>
           (0, \, 0, \, 0) + (u_1, \, u_2, \, u_3) = (u_1, \, u_2, \, u_3)
         </me>.
@@ -441,22 +422,21 @@
       <p>
         In <m>C</m> is die <em>nul-polinoom</em>
         die nul-element <m>\ve{0}</m>.
-        Algebra&#xef;es
-        is dit die vierdegraadse polinoom waarvan die ko&#xeb;ffisi&#xeb;nte almal
-        nul is:
+        Algebra&#xef;es is dit die vierdegraadse polinoom 
+        waarvan die ko&#xeb;ffisi&#xeb;nte almal nul is:
         <men xml:id="zero_in_C">
           \ve{0} = 0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0
         </men>
       </p>
 
       <p>
-        As ons aan die polinoom as 'n funksie dink, dan is die nul-polinoom
-        <m>\ve{0}</m> die funksie wat vir alle waardes van <m>x</m> nul is, i.e.
-        <m>\ve{0} (x)
-        = 0</m> vir alle <m>x</m>.
+        As ons aan die polinoom as 'n funksie dink, 
+        dan is die nul-polinoom <m>\ve{0}</m> die funksie 
+        wat vir alle waardes van <m>x</m> nul is, i.e.
+        <m>\ve{0} (x) = 0</m> vir alle <m>x</m>.
         Hoe ons ookal daaraan dink, as ons die nul-polinoom by
         'n ander polinoom tel, gebeur niks nie!
-<md>
+        <md>
           <mrow> [0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0] + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
           <mrow>= [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
         </md>
@@ -466,34 +446,30 @@
     <subsubsection>
       <title>Skalaarvermenigvuldiging</title>
       <p>
-        Die laaste kenmerk wat <m>A</m>,
-        <m>B</m> en <m>C</m> in gemeen het is dat met elke
-        versameling, hul elemente met re&#xeb;le getalle
-        <em>vermenigvuldig</em> kan
+        Die laaste kenmerk wat die versamelings <m>A</m>,
+        <m>B</m> en <m>C</m> in gemeen het, is dat die elemente van
+        elkeen met 'n re&#xeb;le getal <em>vermenigvuldig</em> kan
         word en steeds in die versameling sal wees.
       </p>
 
       <p>
         Byvoorbeeld,
         as <m>\ve{a} = (a_1, a_2)</m> 'n elment van <m>A</m> is,
-        dan kan ons dit
-        met 'n arbitr&#xea;re re&#xeb;le getal, s&#xea;
+        dan kan ons dit met 'n willekeurige re&#xeb;le getal, s&#xea;
         maar <m>9</m>, vermenigvuldig, om
         'n nuwe element <m>9\cdot a</m> van <m>A</m> te kry.
-        Hierdie vermenigvuldiging word
-        komponentgewys gedoen:
+        Hierdie vermenigvuldiging word komponentsgewys gedoen:
         <men xml:id="sm_in_A">
           9 \cdot (a_1, \,a_2) := (9 a_1, \, 9a_2)
         </men>.
       </p>
 
       <p>
-        In die algemeen,
-        as <m>k \in \mathbb{R}</m> 'n arbitr&#xea;re re&#xeb;le getal is,
-        dan kan ons 'n arbitr&#xea;re element
+        In die algemeen, as <m>k \in \mathbb{R}</m> enige re&#xeb;le getal is,
+        dan kan ons enige element
         <m>\ve{a} \in A</m> met <m>k</m> vermenigvuldig
-        om 'n nuwe element <m>k \cdot \ve{a} \in A</m> te kry deur elke komponent van
-        <m>\ve{a}</m> met <m>k</m> te vermenigvuldig:
+        om 'n nuwe element <m>k \cdot \ve{a} \in A</m> te kry deur
+        elke komponent van <m>\ve{a}</m> met <m>k</m> te vermenigvuldig:
         <me>
           \underbrace{k.(a_1, \, a_2)}_{\text{ Skalaarvermenigvuldiging} } := (\underbrace{k a_1}_{\text{Vermenigvuldig twee getalle} }, \, \underbrace{k a_2})
         </me>
@@ -501,21 +477,18 @@
 
       <p>
         Wees versigtig om te onderskei tussen skalaarvermenigvuldiging
-        <m>k \cdot
-        \ve{a}</m> (aangedui met <m>\cdot</m>) en gewone vermenigvuldiging van re&#xeb;le
-        getalle <m>k a_1</m>
-        (aangedui sonder enige simbool,
-        die twee simbole word bloot
-        langs mekaar geplaas).
-        Later gaan ons 'n kortpad neem en ophou om die
-        <m>\cdot</m> eksplisiet uit te skryf <mdash /> wees gewaarsku!
+        <m>k \smul \ve{a}</m> (aangedui met <m>\smul</m>) en
+        gewone vermenigvuldiging van re&#xeb;le getalle <m>k a_1</m>
+        (aangedui sonder enige simbool; die twee simbole word bloot langs mekaar geplaas).
+        Later gaan ons die wiskundige konvensie volg
+        en ophou om die <m>\cdot</m> eksplisiet uit te skryf
+        <mdash /> wees gewaarsku!
       </p>
 
       <p>
-        Visueel <em>skaleer</em> die vermenigvuldigingsbewerking <m>\ve{a}</m> met 'n
-        faktor van <m>k</m>.
-        Dit is hoekom ons dit <em>skalaarvermenigvuldiging</em>
-        noem.
+        Visueel <em>skaleer</em> die vermenigvuldigingsbewerking
+        <m>\ve{a}</m> met 'n faktor van <m>k</m>.
+        Dit is hoekom ons dit <em>skalaarvermenigvuldiging</em> noem.
       </p>
 
       <p>
@@ -605,7 +578,7 @@
     <p>
       Ons het gevind dat elk van ons drie versamelings <m>A</m>,
       <m>B</m> en <m>C</m> 'n
-      <em>sommeringsbewerking</em> <m>+</m>, 'n
+      <em>optellingsbewerking</em> <m>+</m>, 'n
       <em>nul-element</em> <m>\ve{0}</m> en 'n
       <em>skalaarvermenigvuldigingsbewerking</em> <m>\cdot</m> het.
       Kan ons enige
@@ -616,7 +589,7 @@
 
     <p>
       Byvoorbeeld,
-      ons kan aan die sommeringsbewerking in <m>A</m> dink as 'n funksie
+      ons kan aan die optellingsbewerking in <m>A</m> dink as 'n funksie
       wat aan elke elementpaar <m>\ve{a}</m> en <m>\ve{a}'</m> in <m>A</m> 'n nuwe element
       <m>\ve{a} + \ve{a}'</m> in <m>A</m> toeken.
       Voldoen hierdie bewerking aan enige

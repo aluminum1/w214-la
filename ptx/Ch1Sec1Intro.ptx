@@ -6,21 +6,21 @@
     <title>Three different sets</title>
     <p>
       We start by playing a game.
-      Recall that in mathematics,
-      a <em>set</em> <m>X</m> is just a collection 
-      of distinct objects.
+      Recall that in mathematics, a <em>set</em> <m>X</m> is a
+      collection of distinct objects.
       We call these objects the <em>elements</em> of <m>X</m>.
     </p>
 
     <p>
       I am going to show you three different sets,
-      and you need to tell me the properties that they all have in common.
+      and you need to tell me the properties
+      that they all have in common.
     </p>
 
     <p>
       The first set, <m>A</m>,
-      is defined to be the set of all 
-      ordered pairs <m>(x,y)</m> where 
+      is defined to be the set of all
+      ordered pairs <m>(x,y)</m> where
       <m>x</m> and <m>y</m> are real numbers.
     </p>
 
@@ -89,7 +89,8 @@
 
     <p>
       The second set, <m>B</m>,
-      is defined to be the set of all ordered real triples
+      is defined to be the set of all 
+      ordered real triples
       <m>(b_1, \, b_2, \, b_3)</m> satisfying <m>b_1 - b_2 + b_3 = 0</m>.
       Translated into mathematical symbols,
       <men>
@@ -99,7 +100,9 @@
 
     <p>
       For instance, <m>(2,3, 1) \in B</m> but <m>(1,1,1) \notin B</m>.
-      We can visualize an element <m>\ve{b}</m> of <m>B</m> as a point in the plane in 3-dimensional space carved out by the equation <m>x-y+z = 0</m>:
+      We can visualize an element <m>\ve{b}</m> of <m>B</m> 
+      as a point in the plane in 3-dimensional 
+      space carved out by the equation <m>x-y+z = 0</m>:
       <sidebyside valign="middle" margins="20% 40%">
         <p> <m> \ve{b} \xmapsto{\text{visualize as}} </m> </p>
         <image width="30%">
@@ -120,12 +123,11 @@
         </latex-image>
         </image>
       </sidebyside>
-
     </p>
 
     <p>
-      The third set,
-      <m>C</m>, is the set of all polynomials of degree 4.
+      The third set, <m>C</m>, 
+      is the set of all polynomials of degree less than or equal to 4.
       Translated into mathematical symbols,
       <men>
         C := \{ \mbox{polynomials of degree \(\leq 4\)} \}
@@ -133,10 +135,11 @@
     </p>
 
     <p>
-      Recall that the <em>degree</em>
-      of a polynomial is the highest power of <m>x</m> which occurs.
+      Recall that the <em>degree</em> of a polynomial
+      is the highest power of <m>x</m> which occurs (with a non-zero coefficient).
       For instance,
-      <m>\ve{c} = x^4 - 3 x^3 + 2x^2</m> is a polynomial of degree 4, and so is <m>\ve{p} = 2x^3 + \pi x</m>.
+      <m>\ve{c} = x^4 - 3 x^3 + 2x^2</m> is a polynomial of degree 4 and
+      the polynomial <m>\ve{p} = 2x^3 + \pi x</m> has degree 3.
       So <m>\ve{c}</m> and <m>\ve{p}</m> are elements of <m>C</m>.
       But <m>\ve{r} = 8x^5 - 7</m> and
       <m>\ve{s} = \sin(x)</m> are not elements of <m>C</m>.
@@ -160,6 +163,7 @@
         </image>
       </sidebyside>
     </p>
+
     <p>
       There you have it.
       I have defined three different sets:
@@ -195,12 +199,12 @@
       </p>
 
       <p>
-        In set <m>A</m>,
-        we can add two elements <m>\ve{a} = (a_1, \, a_2)</m> and
+        In set <m>A</m>, we can add two elements <m>\ve{a} = (a_1, \, a_2)</m> and
         <m>\ve{a}' = (a_1', \, a_2')</m> together by adding their components together,
         to form a new element <m>\ve{a} + \ve{a}' \in A</m>:
         <men xml:id="add_in_A">
-          \underbrace{(a_1, \, a_2)}_{\ve{a}} + \underbrace{(a'_1, \,a'_2)}_{\ve{a}'} := \underbrace{(a_1 + a_1', \, a_2 + a_2')}_{\ve{a} + \ve{a}'}
+          \underbrace{(a_1, \, a_2)}_{\ve{a}} + \underbrace{(a'_1, \,a'_2)}_{\ve{a}'} := 
+          \underbrace{(a_1 + a_1', \, a_2 + a_2')}_{\ve{a} + \ve{a}'}
         </men>
       </p>
 
@@ -258,11 +262,15 @@
       <p>
         We can do a similar thing in set <m>B</m>.
         Suppose we have two elements of <m>B</m>,
-        <m>\ve{b} = (b_1, \,b_2, \,b_3)</m> and <m>\ve{b}' = (b_1', \, b_2', \, b_3')</m>.
+        <m>\ve{b} = (b_1, \,b_2, \,b_3)</m> and
+        <m>\ve{b}' = (b_1', \, b_2', \, b_3')</m>.
         Note that, since <m>\ve{b}\in B</m>,
-        its components satisfy <m>b_1 - b_2 + b_3 = 0</m>.
-        Similarly the components of <m>b'</m> satisfy and <m>b_1 - b_2 + b_3 = 0</m>.
-        We can add <m>\ve{b}</m> and <m>\ve{b}'</m> together to get a new element <m>\ve{b} + \ve{b}'</m> of <m>B</m>,
+        its components satisfy the equation
+        <m>b_1 - b_2 + b_3 = 0</m>.
+        Similarly the components of <m>b'</m> satisfy 
+        <m>b'_1 - b'_2 + b'_3 = 0</m>.
+        We can add <m>\ve{b}</m> and <m>\ve{b}'</m> together
+        to get a new element <m>\ve{b} + \ve{b}'</m> of <m>B</m>,
         by adding their components together as before:
         <men xml:id="new_add_in_B">
           \underbrace{(b_1, \, b_2, \, b_3)}_{\ve{b}} + \underbrace{(b'_1, \,b'_2, \, b'_3)}_{\ve{b}'} := \underbrace{(b_1 + b_1', \, b_2 + b_2', \, b_3 + b'_3)}_{\ve{b} + \ve{b}'}
@@ -271,8 +279,10 @@
 
       <p>
         We should be careful here.
-        How do we know that the expression on the right hand side is really an element of <m>B</m>?
-        We need to check that it satisfies the equation <sq>the first component minus the second component plus the third component equals zero</sq>.
+        How do we know that the expression on the right hand side
+        really is an element of <m>B</m>?
+        We need to check that it satisfies the equation 
+        <sq>the first component minus the second component plus the third component equals zero</sq>.
         Let us check that formally:
         <md>
           <mrow>(\ve{b} + \ve{b}')_1 - (\ve{b}+\ve{b}')_2 + (\ve{b}+\ve{b}')_3 \amp = (b_1 + b'_1) - (b_2 + b'_2) + (b_3 + b'_3)</mrow>
@@ -283,12 +293,14 @@
       </p>
 
       <p>
-        We can visualize this addition operation in <m>B</m> in the same way as we did for <m>A</m>.
+        We can visualize this addition operation in <m>B</m>
+        in the same way as we did for <m>A</m>.
       </p>
 
       <p>
         There is also an addition operation in set <m>C</m>.
-        We can add two polynomials together algebraically by adding their corresponding coefficients:
+        We can add two polynomials together algebraically by
+        adding their corresponding coefficients:
         <mdn>
          <mrow number="no">[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
           <mrow xml:id="add_in_C">:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
@@ -306,12 +318,15 @@
       <p>
         There is another way to think about the addition of polynomials.
         Each polynomial <m>\ve{c}</m> can be thought of as a <em>function</em>,
-        in the sense that we can substitute an arbitrary value of <m>x</m> into the polynomial <m>\ve{c}</m>,
+        in the sense that we can substitute <m>x</m> with 
+        an arbitrary real value in the polynomial <m>\ve{c}</m>
+        (called <em>evaluating the polynomial</em> at this value) ,
         and it will output a number <m>\ve{c}(x)</m>.
         For instance, if <m>\ve{c}(x) = 3x^2 - 1</m>,
         then <m>\ve{c}(2) = 11</m>.
         If we think of polynomials as functions in this way,
-        then the addition <m>\ve{c} + \ve{d}</m> of two polynomials can be thought of as the new function which,
+        then the sum <m>\ve{c} + \ve{d}</m> of two polynomials can be thought of 
+        as the new function which,
         when you substitute some number <m>x</m> into it,
         outputs <m>\ve{c}(x) + \ve{d}(x)</m>.
         Written mathematically,
@@ -322,7 +337,8 @@
 
       <p>
         Thinking in this way, we can visualize the graph of
-        <m>\ve{c} + \ve{d}</m> as the graph of <m>\ve{c}</m> added to the graph of <m>\ve{d}</m>:
+        <m>\ve{c} + \ve{d}</m> as the sum of the graphs of
+        <m>\ve{c}</m> and <m>\ve{d}</m>:
         <sidebyside>
               <image>
               <latex-image>
@@ -388,14 +404,14 @@
       </p>
 
       <p>
-        Do not confuse the zero element
-        <m>\ve{0} \in A</m> with the real number zero, <m>0 \in \mathbb{R}</m>.
-        This is another reason why I am using boldface! (You should use underline to distinguish them.)
+        Do not confuse the zero element <m>\ve{0} \in A</m> 
+        with the real number zero, <m>0 \in \mathbb{R}</m>.
+        This is another reason why I am using boldface! 
+        (You could distinguish them by underlining the vector.)
       </p>
 
       <p>
-        In <m>B</m>,
-        the zero element <m>\ve{0}</m> is the point <m>(0,0,0) \in B</m>.
+        In <m>B</m>, the zero element <m>\ve{0}</m> is the point <m>(0,0,0) \in B</m>.
         When you add this point to another point <m>(u_1, u_2, u_3) \in B</m>,
         nothing happens!
         <me>
@@ -406,8 +422,8 @@
       <p>
         In <m>C</m>, the zero element <m>\ve{0}</m> is the
         <em>zero polynomial</em>.
-        If we think algebraically,
-        this is the degree polynomial whose coefficients are all zero:
+        If we think algebraically, this is the degree polynomial
+        whose coefficients are all zero:
         <men xml:id="zero_in_C">
           \ve{0} = 0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0
         </men>
@@ -415,11 +431,11 @@
 
       <p>
         If we think of the polynomial as a function,
-        then the zero polynomial <m>\ve{0}</m> is the function which returns zero for all values of <m>x</m>,
+        then the zero polynomial <m>\ve{0}</m> is the function
+        which returns zero for all values of <m>x</m>,
         that is <m>\ve{0} (x) = 0</m> for all <m>x</m>.
-        Whichever way we think of it,
-        when we add the zero polynomial to another polynomial,
-        nothing happens!
+        Whichever way we think of it, when we add the zero 
+        polynomial to another polynomial, nothing happens!
         <md>
           <mrow> [0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0] + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
           <mrow>= [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
@@ -432,14 +448,16 @@
       <p>
         The last feature all the sets <m>A</m>,
         <m>B</m> and <m>C</m> have in common is that in each set,
-        you can <em>multiply</em> elements of the set by real numbers.
+        you can <em>multiply</em> elements of the set by any real number
+        and the result will also be an element in the set.
       </p>
 
       <p>
         For instance,
         if <m>\ve{a} = (a_1, a_2)</m> is an element of <m>A</m>,
         then we can multiply it by some arbitrary real number,
-        say <m>9</m>, to get a new element <m>9\smul \ve{a}</m> of <m>A</m>.
+        say <m>9</m>, to get a 
+        new element <m>9\smul \ve{a}</m> of <m>A</m>.
         We do this multiplication component-wise:
         <men xml:id="sm_in_A">
           9 \smul(a_1, \,a_2) := (9 a_1, \, 9a_2)
@@ -448,32 +466,27 @@
 
       <p>
         In general, if <m>k \in \mathbb{R}</m> is an arbitrary real number,
-        then we can multiply elements
+        then we can multiply any element
         <m>\ve{a} \in A</m> by <m>k</m> to get a new element
-        <m>k \smul\ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
-      </p>
-
-      <p>
-        In general, if <m>k \in \mathbb{R}</m> is an arbitrary real number,
-        then we can multiply elements
-        <m>\ve{a} \in A</m> by <m>k</m> to get a new element
-        <m>k \smul\ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
+        <m>k \smul\ve{a} \in A</m> by multiplying
+        each component of <m>\ve{a}</m> by <m>k</m>:
         <me>
           \underbrace{k \smul(a_1, \, a_2)}_{\text{ Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\text{Multiplying two numbers together} }, \, \underbrace{k a_2})
         </me>
       </p>
 
       <p>
-        Just be careful to distinguish scalar multiplication <m>k \smul\ve{a}</m>
-        (written with a <m>\smul</m>)
-        from ordinary multiplication of real numbers <m>k a_1</m>
+        Just be careful to distinguish scalar multiplication
+        <m>k \smul\ve{a}</m> (written with a <m>\smul</m>) from
+        ordinary multiplication of real numbers <m>k a_1</m>
         (written with no symbol, just using juxtaposition).
-        Later on, because we are lazy,
-        we will stop writing the <m>\cdot</m> explicitly <mdash /> you have been warned!
+        Later on, we follow the accepted convention of mathematicians and
+        we will stop writing the <m>\cdot</m> explicitly 
+        <mdash /> you have been warned!
       </p>
 
       <p>
-        Visually, this multiplcation operation <em>scales</em>
+         Visually, this multiplcation operation <em>scales</em>
         <m>\ve{a}</m> by a factor of <m>k</m>.
         That is why we call it <em>scalar multiplication</em>.
       </p>
