@@ -1,17 +1,19 @@
-<section xml:id="ACh1Sec3ExampleVectorSpace">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ACh1Sec3ExampleVectorSpace">
   <title>Eerste voorbeeld van 'n vektorruimte</title>
   <introduction>
     <p>
       Ons is na die definisie
       (<xref ref="real_vec_space">Definisie</xref>)
-      van 'n abstrakte
-      vektorruimte gelei deur die eienskappe van versamelings <m>A</m>,
-      <m>B</m> en <m>C</m> in
+      van 'n abstrakte vektorruimte gelei
+      deur die eienskappe van versamelings
+      <m>A</m>, <m>B</m> en <m>C</m> in
       <xref ref="ACh1Sec1Intro">Afdeling</xref> te bestudeer.
-      Kom ons gaan na dat <m>B</m> wel 'n
-      abstrakte vektorruimte is soos gedifineer in <xref ref="real_vec_space">Definisie</xref>.
-      Die
-      ander versamelings word as oefeninge aan jou oorgelaat.
+      Kom ons toets byvoorbeeld
+      dat <m>B</m> wel 'n abstrakte vektorruimte is
+      deur te toets dat dit die voorwaardes van
+      <xref ref="real_vec_space">Definisie</xref> bevredig.
+      Om te toets dat die ander twee versamelings
+      vektorruimtes is, sal as oefeninge aan jou oorgelaat word.
     </p>
   </introduction>
 
@@ -25,36 +27,42 @@
       </men>.
     </p>
 
-    <p> <alert>2. Definieer sommering, die nul-vektor en
+    <p> <alert>2. Definieer optelling, die nul-vektor en
     skalaarvermenigvuldiging.</alert></p>
     <dl>
      <li>
-      <title>D1. Sommering</title>
+      <title>D1. Optelling</title>
       <p>
-        Ons definieer sommering soos volg.
-        Veronderstel <m>\ve{u} = (u_1, \,
-        u_2, \, u_3)</m> en <m>\ve{v} = (v_1, , v_2, \, v_3)</m> is elemente van <m>B</m>.
-        Let op dat dit beteken <m>u_1 - u_2 + u_3 = 0</m> en <m>v_1 - v_2 + v_3 = 0</m>.
+        Ons definieer optelling soos volg:
+        Veronderstel
+        <m>\ve{u} = (u_1, \, u_2, \, u_3)</m> en
+        <m>\ve{v} = (v_1, , v_2, \, v_3)</m>
+        is elemente van <m>B</m>.
+        Dit beteken spesifiek dat
+        <m>u_1 - u_2 + u_3 = 0</m> en
+        <m>v_1 - v_2 + v_3 = 0</m>.
         Ons definieer <m>\ve{u} + \ve{v}</m> as:
         <men xml:id="def_add_in_B">
-          \ve{u} + \ve{v} := (u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3)
+          \ve{u} + \ve{v} := 
+          (u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3)
         </men>.
       </p>
 
       <p>
         Ons moet nagaan dat dit sin maak.
-        Ons behoort te vind dat <m>\ve{u} +
-        \ve{v}</m> ook 'n element van <m>B</m> is.
-        Ons kan nie bloot enige definisie
-        neerskryf nie!
-        Om na te gaan of <m>\ve{u} + \ve{v}</m> 'n element van<m>B</m> is,
-        moet ons nagaan of dit vergelyking <xref ref="def_of_b" /> bevredig.
-        Kom ons
-        kyk:
+        Die eerste ding wat ons moet toets is dat
+        <m>\ve{u} + \ve{v}</m> ook 'n element van
+        <m>B</m> is.
+        Ons kan nie net enige definisie neerskryf nie!
+        Om na te gaan of <m>\ve{u} + \ve{v}</m> 'n
+        element van <m>B</m> is,
+        moet ons nagaan of dit vergelyking
+        <xref ref="def_of_b" /> bevredig.
+        Kom ons kyk:
         <md>
           <mrow>\amp (u_1 + v_1) - (u_2 + v_2) + (u_3 + v_3)</mrow>
-          <mrow>\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3) \amp \amp  \mbox{(Hierdie
-          algebra{\"i}ese
+          <mrow>\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3) 
+          \amp \amp  \mbox{(Hierdie algebra{\"i}ese
           stap is waar vir gewone getalle)}</mrow>
           <mrow>\amp = 0 + 0 \amp \amp  \mbox{(want \(\ve{u}\) en \(\ve{v}\) is in \(B\))}</mrow>
           <mrow>\amp = 0</mrow>
@@ -62,10 +70,12 @@
       </p>
 
       <p>
-        Daarom het ons dat <m>\ve{u} + \ve{v}</m> inderdaad 'n element van <m>B</m> is,
-        so ons het ons eie goed-gedefinieerde? sommeringsbewerking op <m>B</m>
-        definieer, wat twee arbitr&#xea;re elemente van <m>B</m> neem en weer 'n
-        element van <m>B</m> teruggee.
+        Daarom het ons dat <m>\ve{u} + \ve{v}</m> inderdaad
+        'n element van <m>B</m> is,
+        so ons het 'n wel-gedefinieerde
+        optellingsbewerking op <m>B</m> gedefinieer,
+        wat twee willekeurige elemente van <m>B</m> neem
+        en weer 'n element van <m>B</m> teruggee.
       </p>
     </li>
 
@@ -80,41 +90,42 @@
 
       <p>
         Ons moet seker maak dat dit sin maak.
-        Is <m>(0,0,0)</m> regtig 'n element
-        van <m>B</m>,
-        oftewel, bevredig dit vergelyking <xref ref="def_of_b" />?
-        Ja, omdat
-        <m>0 - 0 + 0 = 0</m>.
-        So ons het 'n goed-gedefinieerde nul-vektor.
+        Is <m>(0,0,0)</m> regtig 'n element van <m>B</m>?
+        Met ander woorde, bevredig dit vergelyking 
+        <xref ref="def_of_b" />?
+        Ja, omdat <m>0 - 0 + 0 = 0</m>.
+        So ons het 'n wel-gedefinieerde nul-vektor.
       </p>
     </li>
 
     <li>
       <title>D3. Skalaarvermenigvuldiging</title>
       <p>
-        Ons definieer skalaarvermenigvuldiging soos op <m>B</m> soos
-        volg.
-        Laat <m>k</m> 'n re&#xeb;le getal en<m>\ve{u} = (u_1, \, u_2, \, u_3)</m>
+        Ons definieer skalaarvermenigvuldiging op <m>B</m>
+        soos volg: </br>
+        Laat <m>k</m> 'n re&#xeb;le getal
+        en <m>\ve{u} = (u_1, \, u_2, \, u_3)</m>
         'n element van <m>B</m> wees.
         Ons definieer
         <men xml:id="s_mu_in_B">
-          k \cdot \ve{u} := (ku_1, \, ku_2, \, ku_3)
+          k \smul \ve{u} := (ku_1, \, ku_2, \, ku_3)
         </men>.
       </p>
 
       <p>
-        Ons moet seker maak dat dit sinmaak.
+        Ons moet seker maak dat dit sin maak.
         As ek 'n vektor <m>\ve{v}</m> in <m>B</m>
         met 'n skalaar <m>k</m> vermenigvuldig,
-        dan moet die resultaat <m>k \cdot
-        \ve{u}</m> 'n element van <m>B</m> wees.
+        dan moet die resultaat <m>k \cdot \ve{u}</m>
+        'n element van <m>B</m> wees.
         Behoort <m>(ku_1, \, ku_2, \, ku_3)</m>
         werklik aan <m>B</m>?
         Kom ons kyk of dit die defini&#xeb;rende vergelyking
         <xref ref="def_of_b" /> bevredig:
         <md>
           <mrow>\amp  ku_1 - ku_2 + ku_3</mrow>
-          <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp  \mbox{(Hierdie algebra{\"i}ese stap is
+          <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp  
+          \mbox{(Hierdie algebra{\"i}ese stap is
           waar vir gewone getalle)}</mrow>
           <mrow>\amp = k 0 \amp \amp  \mbox{(want \(\ve{u}\) is in \(B\))}</mrow>
           <mrow>\amp = 0</mrow>
@@ -122,21 +133,23 @@
       </p>
 
       <p>
-        Daarom is <m>k \cdot \ve{u}</m> wel 'n element van <m>B</m>,
-        so ons het 'n
-        goed-gedefinieerde skalaarvermenigvuldigingsbewerking op <m>B</m> gevind.
+        Daarom is <m>k \cdot \ve{u}</m> wel
+        'n element van <m>B</m>,
+        so ons het 'n wel-gedefinieerde
+        skalaarvermenigvuldigingsbewerking op <m>B</m> gevind.
       </p>
     </li>
   </dl>
 
   <p><alert>3. Maak seker die data bevredig die reëls.</alert></p>
   <p>
-    Ons moet seker maak dat ons data D1, D2 en D3 reëls R1 <mdash /> R8
-    bevredig.
-    So, veronderstel <m>\ve{u} = (u_1, \, u_2, \,u_3)</m>,
-    <m>\ve{v} =
-    (v_1, \, v_2, \, v_3)</m> en <m>\ve{w} = (w_1, \, w_2, \, w_3)</m> is in <m>B</m> en
-    veronderstel dat <m>k</m> en <m>l</m> reëlle getalle is.
+    Ons moet seker maak dat ons data D1, D2 en D3
+    die reëls R1 <mdash /> R8 bevredig.
+    So, veronderstel dat
+    <m>\ve{u} = (u_1, \, u_2, \,u_3)</m>,
+    <m>\ve{v} = (v_1, \, v_2, \, v_3)</m> en
+    <m>\ve{w} = (w_1, \, w_2, \, w_3)</m> in <m>B</m> is
+    en dat <m>k</m> en <m>l</m> reële getalle is.
   </p>
 
   <dl>
@@ -145,13 +158,13 @@
       Ons gaan na:
       <md>
         <mrow>\amp  \ve{v} + \ve{w}\tag{R1.}</mrow>
-        <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(definisie van
-        sommering in \(B\))}</mrow>
+        <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) 
+        \amp \amp  \mbox{(definisie van optelling in \(B\))}</mrow>
         <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp 
         \mbox{(want  \(x + y = y + x\) is waar vir
-        re{\"e}le
-        getalle)}</mrow>
-        <mrow>\amp = \ve{w} + \ve{v}. \amp \amp  \mbox{(definisie van sommering in \(B\))}</mrow>
+        re{\"e}le getalle)}</mrow>
+        <mrow>\amp = \ve{w} + \ve{v}. \amp \amp  
+        \mbox{(definisie van optelling in \(B\))}</mrow>
       </md>
     </p>
     </li>
@@ -163,16 +176,15 @@
       <md>
         <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
         <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} \amp \amp 
-        \mbox{(definisie van sommering in \(B\))}</mrow>
+        \mbox{(definisie van optelling in \(B\))}</mrow>
         <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp 
-        \mbox{(definisie van sommering in \(B\))}</mrow>
+        \mbox{(definisie van optelling in \(B\))}</mrow>
         <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp 
         \mbox{(want \((x + y) + z = x + (y + z)\) is waar
         vir re{\"e}le getalle)}</mrow>
         <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp 
-        \mbox{(definisie van sommering in \(B\))}</mrow>
-        <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \mbox{(definisie van sommering in
-        \(B\))} </mrow>
+        \mbox{(definisie van optelling in \(B\))}</mrow>
+        <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \mbox{(definisie van optelling in \(B\))} </mrow>
       </md>.
     </p>
     </li>
@@ -183,12 +195,12 @@
       Ons gaan na:
       <md>
         <mrow>\amp \ve{0} + \ve{v}</mrow>
-        <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(definisie van die
-        nul-vektor in\(B\)}</mrow>
-        <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp  \mbox{(definisie van sommering
-        in \(B\))}</mrow>
-        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(want \(x + 0 = x\) is waar vir
-        re{\"e}le getalle)}</mrow>
+        <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp  
+        \mbox{(definisie van die nul-vektor in\(B\)}</mrow>
+        <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp
+        \mbox{(definisie van optelling in \(B\))}</mrow>
+        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  
+        \mbox{(want \(x + 0 = x\) is waar vir re{\"e}le getalle)}</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>.
     </p>
@@ -203,17 +215,12 @@
     <p>
       Ons gaan na:
       <md>
-        <mrow>\amp  k \cdot ( \ve{v + w} )</mrow>
-        <mrow>\amp = k \cdot (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(definisie
-        van sommering in \(B\))}</mrow>
-        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp 
-        \mbox{(definisie van skalaarvermenigvuldiging in\(B\))}</mrow>
-        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  \mbox{(want \(k(x+y)
-        = kx + ky\) vir re{\"e}le getalle \(x,y\))}</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp 
-        \mbox{(definisie van sommering in \(B\))}</mrow>
-        <mrow>\amp = k \cdot \ve{v} + k \cdot \ve{w} \amp \amp  \mbox{(definisie van
-        skalaarvermenigvuldiging in \(B\))}</mrow>
+        <mrow>\amp  k \smul ( \ve{v + w} )</mrow>
+        <mrow>\amp = k \smul (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(definisie van optelling in \(B\))}</mrow>
+        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp \mbox{(definisie van skalaarvermenigvuldiging in\(B\))}</mrow>
+        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  \mbox{(want \(k(x+y) = kx + ky\) vir re{\"e}le getalle \(x,y\))}</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp \mbox{(definisie van optelling in \(B\))}</mrow>
+        <mrow>\amp = k \cdot \ve{v} + k \cdot \ve{w} \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging in \(B\))}</mrow>
       </md>
     </p>
     </li>
@@ -223,15 +230,11 @@
     <p>
       Ons gaan na:
       <md>
-        <mrow>\amp  (k + l) \cdot \ve{v}</mrow>
-        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \mbox{(definisie van
-        skalaarvermenigvuldiging in \(B\))}</mrow>
-        <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  \mbox{(want \((k+l)x
-        = kx + lx\) vir re{\"e}le getalle)}</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp 
-        \mbox{(definisie van sommering in \(B\))}</mrow>
-        <mrow>\amp = k \cdot \ve{v} + l \cdot \ve{v} \amp \amp  \mbox{(definisie van
-        skalaarvermenigvuldiging in \(B\))}</mrow>
+        <mrow>\amp  (k + l) \smul \ve{v}</mrow>
+        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging in \(B\))}</mrow>
+        <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  \mbox{(want \((k+l)x = kx + lx\) vir re{\"e}le getalle)}</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp \mbox{(definisie van optelling in \(B\))}</mrow>
+        <mrow>\amp = k \cdot \ve{v} + l \cdot \ve{v} \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging in \(B\))}</mrow>
       </md>
     </p>
     </li>
@@ -242,14 +245,10 @@
       Ons gaan na:
       <md>
         <mrow>\amp  k \cdot (l \cdot \ve{v})</mrow>
-        <mrow>\amp = k \cdot (l v_1, \, l v_2, \, lv_3) \amp \amp  \mbox{(definisie van
-        skalaarvermenigvuldiging in \(B\))}</mrow>
-        <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \mbox{(definisie van
-        skalaarvermenigvuldiging in \(B\))}</mrow>
-        <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  \mbox{(want \(k(lx) = (kl)x\)
-        vir re{\"e}le getalle)}</mrow>
-        <mrow>\amp = (kl) \cdot \ve{v} \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging
-        in \(B\))} </mrow>
+        <mrow>\amp = k \cdot (l v_1, \, l v_2, \, lv_3) \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging in \(B\))}</mrow>
+        <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging in \(B\))}</mrow>
+        <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  \mbox{(want \(k(lx) = (kl)x\) vir re{\"e}le getalle)}</mrow>
+        <mrow>\amp = (kl) \cdot \ve{v} \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging in \(B\))} </mrow>
       </md>.
     </p>
     </li>
@@ -259,10 +258,8 @@
     <p>
       Ons gaan na:
       <md>
-        <mrow>1 \cdot \ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \mbox{(definisie van
-        skalaarvermenigvuldiging in \(B\))}</mrow>
-        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(want \(1 x = x\) vir re{\"e}le getalle
-        \(x\))}</mrow>
+        <mrow>1 \cdot \ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging in \(B\))}</mrow>
+        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(want \(1 x = x\) vir re{\"e}le getalle \(x\))}</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>.
     </p>
@@ -273,8 +270,7 @@
     <p>
       Ons gaan na:
       <md>
-        <mrow>0 \cdot \ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \mbox{(definisie van
-        skalaarvermenigvuldiging in in \(B\))}</mrow>
+        <mrow>0 \cdot \ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging in in \(B\))}</mrow>
         <mrow>\amp = (0, \, 0, \, 0) \amp \amp  \mbox{(want \(0 x = 0\) vir re{\"e}le getalle}</mrow>
         <mrow>\amp = \ve{0} \amp \amp  \mbox{(definisie van die nul-vektor in \(B\))} </mrow>
       </md>.
@@ -288,7 +284,7 @@
       <statement>
         <p>
           Bewys dat die versameling <m>A</m> ui <xref ref="ACh1Sec1Intro"/>
-          toegerus met die sommeringsbewerking <xref ref="add_in_A" />,
+          toegerus met die optellingsbewerking <xref ref="add_in_A" />,
           die nulvektor <xref ref="zero_in_A" /> en die skalaarvermenigsvuldigingsbewerking <xref ref="sm_in_A"/> 'n vektorruimte is.
         </p>
       </statement>
@@ -297,7 +293,8 @@
     <exercise xml:id="prove_C_is_vector_space">
       <statement>
         <p>
-          Bewys dat die versameling <m>C</m> uit <xref ref="ACh1Sec1Intro"/> toegerus met die sommeringsbewerking <xref ref="add_in_C"/>,
+          Bewys dat die versameling <m>C</m> uit <xref ref="ACh1Sec1Intro">Afdeling</xref>
+          toegerus met die optellingsbewerking <xref ref="add_in_C"/>,
           die nulvektor <xref ref="zero_in_C" /> en die skalaarvermenigsvuldingsbewerking <xref ref="sm_in_C" /> 'n vektorruimte is.
         </p>
       </statement>
@@ -306,7 +303,7 @@
     <exercise xml:id="prove_C_prime_is_not_vector_space">
       <statement>
         <p>
-          Defineer <m>C^\prime</m> as die versameling van alle polinome met graad <em>presies</em> gelyk aan <m>4</m>, asook die nulpolinoom. Toon aan dat as <m>C^\prime</m> die sommeringsbewerking <xref ref="add_in_C"/>, die nulvektor <xref ref="zero_in_C" /> en die skalaarvermenigvuldigingsbewerking <xref ref="sm_in_C" /> gegee word, dan is <m>C^\prime</m> <em> nie </em> 'n vektorruimte nie.
+          Defineer <m>C^\prime</m> as die versameling van alle polinome met graad <em>presies</em> gelyk aan <m>4</m>, asook die nulpolinoom. Toon aan dat as <m>C^\prime</m> die optellingsbewerking <xref ref="add_in_C"/>, die nulvektor <xref ref="zero_in_C" /> en die skalaarvermenigvuldigingsbewerking <xref ref="sm_in_C" /> gegee word, dan is <m>C^\prime</m> <em> nie </em> 'n vektorruimte nie.
         </p>
       </statement>
       <hint>
@@ -325,18 +322,19 @@
         <me>
 \ve p(x) + \ve q(X) = (1 - 1 )x^4 + x^3 = x^3
       </me>
-      wat graad 3 het. Dus <m>C^\prime</m> is nie geslote onder addisie nie en so dit kan nie 'n vektorruimte wees nie, want die sommeringsbewerking is nie goed-gedefineerd op <m>C'</m> nie.
+      wat graad 3 het. Dus <m>C^\prime</m> is nie geslote onder addisie nie en so dit kan nie 'n vektorruimte wees nie, want die optellingsbewerking is nie goed-gedefineerd op <m>C'</m> nie.
       </p>
     </solution>
     </exercise>
 
     <exercise xml:id="show_X_is_not_vector_space">
       <statement>
-      <p>Beskou die versameling
+      <p>
+        Beskou die versameling
         <me>
-        X := \{(a_1, a_2) \in \mathbb{R}^2 : a_1 \geq 0, a_2 \geq 0\}
-      </me>
-      toegerus met dieselfde sommeringsbewerking <xref ref="add_in_A" />,
+          X := \{(a_1, a_2) \in \mathbb{R}^2 : a_1 \geq 0, a_2 \geq 0\}
+        </me>
+          toegerus met dieselfde optellingsbewerking <xref ref="add_in_A" />,
           nulvektor <xref ref="zero_in_A" /> en skalaarvermenigvuldigingsbewerking <xref ref="sm_in_A"/> as in <m>A</m>. Is <m>X</m> 'n vektorruimte? Indien nie, hoekom nie?
         </p>
       </statement>
