@@ -310,21 +310,21 @@
         <p>
           Give a counterexample!
         </p>
-    </hint>
-    <solution>
-      <p>
-      Consider the following two polynomials in <m>C^\prime</m>:
-      <md>
-        <mrow>\ve p(x) = x^4 + x^3, </mrow>
-        <mrow> \ve q(x) = -x^4. </mrow>
-      </md>
-        However, their sum is not in <m>C^\prime</m> since
-        <me>
-\ve p(x) + \ve q(X) = (1 - 1 )x^4 + x^3 = x^3
-      </me>
-      which has degree 3. Hence <m>C^\prime</m> is not closed under addition and so cannot be a vector space, as the addition operation is not well-defined on <m>C'</m>.
-      </p>
-    </solution>
+      </hint>
+      <solution>
+        <p>
+        Consider the following two polynomials in <m>C^\prime</m>:
+        <md>
+          <mrow>\ve p(x) = x^4 + x^3, </mrow>
+          <mrow> \ve q(x) = -x^4. </mrow>
+        </md>
+          However, their sum is not in <m>C^\prime</m> since
+          <me>
+  \ve p(x) + \ve q(X) = (1 - 1 )x^4 + x^3 = x^3
+        </me>
+        which has degree 3. Hence <m>C^\prime</m> is not closed under addition and so cannot be a vector space, as the addition operation is not well-defined on <m>C'</m>.
+        </p>
+      </solution>
     </exercise>
 
     <exercise xml:id="show_X_is_not_vector_space">
