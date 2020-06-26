@@ -1,20 +1,19 @@
 
 
-<section xml:id="ACh1Sec4MoreExamples">
-  <title>Verdere voorbeelde en slaggate</title>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ACh1Sec4MoreExamples">
+  <title>Verdere voorbeelde en nie-voorbeelde</title>
   <example>
     <title>Nie 'n vektor-ruimte nie</title>
     <statement>
       <p>
-        Definieer die versameling <m>V</m>
-        deur
+        Definieer die versameling <m>V</m> deur
         <men>
-          V := \{ a, b \} 
+          V := \{ \ve{a}, \ve{b} \} 
         </men>.
       </p>
 
       <p>
-        Definieer die sommeringsbewerking deur
+        Definieer die optellingsbewerking deur
         <md>
           <mrow>\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{a}</mrow>
           <mrow>\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{c}</mrow>
@@ -22,33 +21,32 @@
       </p>
 
       <p>
-        Om na te gaan of dit 'n goed-gedefinieerde bewerking is, moet ons
-        nagaan dat die sommering van enige twee elemente van <m>V</m> 'n
-        goed-gedefinieerde element van <m>V</m> lewer.
-        Maar <m>\ve{v} + \ve{b} =
-        \ve{c}</m>, so die som van
-        <m>\ve{b} \in V</m> met homself lewer iets
-        (<m>\ve{c}</m>) wat nie 'n element van <m>V</m> is nie.
-        So <m>V</m> is nie 'n
-        vektorruimte nie want dit het nie 'n goed-gedefinieerde
-        sommeringsbewerking nie.
+        Om na te gaan of dit 'n wel-gedefinieerde bewerking is,
+        moet ons nagaan dat die som van enige twee elemente
+        van <m>V</m> 'n wel-gedefinieerde element van
+        <m>V</m> lewer.
+        Maar <m>\ve{v} + \ve{b} = \ve{c}</m>,
+        so die som van <m>\ve{b} \in V</m> met homself
+        lewer iets (naamlik <m>\ve{c}</m>)
+        wat nie 'n element van <m>V</m> is nie.
+        So <m>V</m> is nie 'n vektorruimte nie, want dit
+        het nie 'n wel-gedefinieerde optellingsbewerking nie.
       </p>
     </statement>
   </example>
 
   <example>
-    <title>Weereens nie 'n vektor-ruimte nie</title>
+    <title>Nog 'n nie-voorbeeld</title>
     <statement>
       <p>
-        Definieer die
-        versameling <m>V</m> deur
+        Definieer die versameling <m>V</m> deur
         <men>
-          V := \{ a, b \} 
+          V := \{ \ve{a}, \ve{b} \} 
         </men>.
       </p>
 
       <p>
-        Definieer die sommeringsbewerking as
+        Definieer die optellingsbewerking as
         <md>
           <mrow>\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{b}</mrow>
           <mrow>\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{a}</mrow>
@@ -56,9 +54,9 @@
       </p>
 
       <p>
-        Dit is 'n goed-gedefinieerde bewerking,
+        Dit is 'n wel-gedefinieerde bewerking,
         omdat enige twee elemente van
-        <m>V</m> se som n goedgedefinieerde element van <m>V</m> lewer.
+        <m>V</m> se som 'n wel-gedefinieerde element van <m>V</m> lewer.
       </p>
 
       <p>
@@ -69,22 +67,21 @@
       </p>
 
       <p>
-        Dit is goed-gedefinieerd, want <m>\ve{a}</m> is 'n element van <m>V</m>.
+        Dit is wel-gedefinieerd, want <m>\ve{a}</m> is 'n element van <m>V</m>.
       </p>
 
       <p>
         Definieer skalaarvermenigvuldiging met 'n re&#xeb;le getal <m>k \in
         \mathbb{R}</m> as
         <men xml:id="ne_14">
-          k \cdot \ve{a} := \ve{a}  \mbox{ en }   k \cdot \ve{b} :=
-          \ve{b}
+          k \cdot \ve{a} := \ve{a}  \mbox{ en }   k \cdot \ve{b} := \ve{b}
         </men>.
       </p>
 
       <p>
-        Dit is 'n goed-gedefinieerde skalaarvermenigvuldigingsbewerking, want
+        Dit is 'n wel-gedefinieerde skalaarvermenigvuldigingsbewerking, want
         dit laat skalaarvermenigvuldiging met enige skalaar <m>k</m> toe en gee 'n
-        goed-gedefinieerde element <m>k \cdot \ve{v} \in V</m> terug.
+        wel-gedefinieerde element <m>k \cdot \ve{v} \in V</m> terug.
       </p>
     </statement>
   </example>
@@ -92,55 +89,53 @@
   <exercise>
     <statement>
       <p>
-        Wys dat hierdie bewerkings R1, R2, R3, R4, R6 en R7 bevredig, maar
-        nie R5 en R8 nie.
+        Wys dat hierdie bewerkings R1, R2, R3, R4, R6 en R7 bevredig, maar nie R5 en R8 nie.
       </p>
     </statement>
     <solution>
-    <p>
-    R1: Ons moet kontrolleer of <m>\ve{v} + \ve{w} = \ve{w} + \ve{v} \text{ vir alle } \ve{v}, \ve{w} \in \{\ve{a},\ve{b}\}</m>.
-    Duidelik is <m> \ve{a} + \ve{a} = \ve{a} + \ve{a}</m> en soortgelyk vir <m>\ve{b}</m>. Finaalweg <m>\ve{b} = \ve{a} +\ve{b} = \ve{b} + \ve{a}</m>.
-    </p>
-
-    <p>
-    R2: Ons moet kontrolleer of <m> (\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})  \text{ vir alle } \ve{u} , \ve{v},\ve{w} \in \{\ve{a},\ve{b}\}</m>. Dit vereis dat ons 8 vergelykings in totaal kontrolleer. Ons sal net die oplossing vir een van hulle aandui, die res is soortgelyk. Ons kontrolleer of
-    <md>
-    <mrow>(\ve{a} + \ve{b}) + \ve{b} = \ve{a} +(\ve{b} + \ve{b}</mrow>
-    </md>
-    Beskou:
-    <md>
-    <mrow>\text{LK} \amp = (\ve{a} + \ve{b}) + \ve{b}</mrow>
-    <mrow> \amp = \ve{b} + \ve{b}</mrow>
-    <mrow> \amp = \ve{a}</mrow>
-    </md>.
-    Deur 'n soortgelyke metode,
-    <md>
-    <mrow>\text{RK} \amp = \ve{a} +(\ve{b} + \ve{b})</mrow>
-    <mrow> \amp = \ve{a} + \ve{a}</mrow>
-    <mrow> \amp = \ve{a}</mrow>
-    <mrow> \therefore LK \amp = RK </mrow>
-    </md>.
+      <p>
+        R1: Ons moet kontrolleer of <m>\ve{v} + \ve{w} = \ve{w} + \ve{v} \text{ vir alle } \ve{v}, \ve{w} \in \{\ve{a},\ve{b}\}</m>.
+        Duidelik is <m> \ve{a} + \ve{a} = \ve{a} + \ve{a}</m> en soortgelyk vir <m>\ve{b}</m>. Finaalweg <m>\ve{b} = \ve{a} +\ve{b} = \ve{b} + \ve{a}</m>.
       </p>
-    <p>
-    R3, R4, R6, en R7 volg almal in dieselfde manier.
-    </p>
-    <p>
-    Ons sal aantoon hoekom R5 nie bevredig is nie. Ons sal 'n teenvoorbeeld gee. Vat <m>k=2=l, \ve v = \ve b</m>. Dan is:
-    <md>
-    <mrow>\text{LK} \amp = (2+2).\ve{b}</mrow>
-    <mrow> \amp = 4.\ve{b}</mrow>
-    <mrow>\amp = \ve{b}</mrow>
-    </md>
-    maar
-    <md>
-    <mrow>\text{RK} \amp = 2.\ve{b} + 2.\ve{b}</mrow>
-    <mrow> \amp = \ve{b} + \ve{b}</mrow>
-    <mrow>\amp =\ve{a}</mrow>.
-    </md>
-    Omdat <m>\text{LK} \neq \text{RK}</m> in hierdie geval nie, kan R5 nie in algemeen waar wees nie.
-      </p>
-        </solution>
 
+      <p>
+        R2: Ons moet kontrolleer of <m> (\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})  \text{ vir alle } \ve{u} , \ve{v},\ve{w} \in \{\ve{a},\ve{b}\}</m>. Dit vereis dat ons 8 vergelykings in totaal kontrolleer. Ons sal net die oplossing vir een van hulle aandui, die res is soortgelyk. Ons kontrolleer of
+        <md>
+          <mrow>(\ve{a} + \ve{b}) + \ve{b} = \ve{a} +(\ve{b} + \ve{b}</mrow>
+        </md>
+        Beskou:
+        <md>
+          <mrow>\text{LK} \amp = (\ve{a} + \ve{b}) + \ve{b}</mrow>
+          <mrow> \amp = \ve{b} + \ve{b}</mrow>
+          <mrow> \amp = \ve{a}</mrow>
+        </md>.
+        Deur 'n soortgelyke metode,
+        <md>
+          <mrow>\text{RK} \amp = \ve{a} +(\ve{b} + \ve{b})</mrow>
+          <mrow> \amp = \ve{a} + \ve{a}</mrow>
+          <mrow> \amp = \ve{a}</mrow>
+          <mrow> \therefore LK \amp = RK </mrow>
+        </md>.
+      </p>
+      <p>
+        R3, R4, R6, en R7 volg almal in dieselfde manier.
+      </p>
+      <p>
+        Ons sal aantoon hoekom R5 nie bevredig is nie. Ons sal 'n teenvoorbeeld gee. Vat <m>k=2=l, \ve v = \ve b</m>. Dan is:
+        <md>
+          <mrow>\text{LK} \amp = (2+2).\ve{b}</mrow>
+          <mrow> \amp = 4.\ve{b}</mrow>
+          <mrow>\amp = \ve{b}</mrow>
+        </md>
+        maar
+        <md>
+          <mrow>\text{RK} \amp = 2.\ve{b} + 2.\ve{b}</mrow>
+          <mrow> \amp = \ve{b} + \ve{b}</mrow>
+          <mrow>\amp =\ve{a}</mrow>.
+        </md>
+        Omdat <m>\text{LK} \neq \text{RK}</m> in hierdie geval nie, kan R5 nie in algemeen waar wees nie.
+      </p>
+    </solution>
   </exercise>
 
   <example>
@@ -155,8 +150,7 @@
 
       <p>
         Let op dat dit net 'n enkele element bevat, <m>\ve{z}</m>.
-        Definieer
-        sommering as
+        Definieer optelling as
         <men>
           \ve{z} + \ve{z} := \ve{z}
         </men>
@@ -170,15 +164,13 @@
       </p>
 
       <p>
-        Laastens, definieer skalaarvermenigvuldiging met 'n skalaar <m>k \in
-        \mathbb{R}</m> as:
+        Laastens, definieer skalaarvermenigvuldiging met 'n skalaar <m>k \in \mathbb{R}</m> as:
         <men>
-          k \cdot \ve{z} := \ve{z}
+          k \smul \ve{z} := \ve{z}
         </men>.
       </p>
     </statement>
   </example>
-
 
   <exercise>
     <statement>
@@ -194,16 +186,14 @@
       <p>
         Definieer die versameling <m>\mathbb{R}^n</m> as
         <men>
-          \mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in
-          \mathbb{R} \mbox{ vir alle }  i = 1 \ldots n\}
+          \mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in \mathbb{R} \mbox{ vir alle }  i = 1 \ldots n\}
         </men>.
       </p>
 
       <p>
-        Definieer sommering as
+        Definieer optelling as
         <men>
-          (x_1, \, x_2, \, \ldots, \, x_n) + (y_1, \, y_2, \, \ldots, \, y_n) :=
-          (x_1 + y_1, \, x_2 + y_2, \, \ldots, \, x_n + y_n)
+          (x_1, \, x_2, \, \ldots, \, x_n) + (y_1, \, y_2, \, \ldots, \, y_n) := (x_1 + y_1, \, x_2 + y_2, \, \ldots, \, x_n + y_n)
         </men>.
       </p>
 
@@ -217,8 +207,7 @@
       <p>
         Definieer skalaarvermenigvuldiging as
         <men>
-          k \cdot (x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \,
-          \ldots, \, k x_n)
+          k \cdot (x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \, \ldots, \, k x_n)
         </men>.
       </p>
     </statement>
@@ -236,21 +225,17 @@
     <title><m>\mathbb{R}^\infty</m></title>
     <statement>
       <p>
-        Definieer die versameling
-        <m>\mathbb{R}^\infty</m> as
+        Definieer die versameling <m>\mathbb{R}^\infty</m> as
         <men>
-          \mathbb{R}^\infty := \{ (x_1, \, x_2, \, x_3, \, \ldots, ) : x_i \in
-          \mathbb{R} \mbox{ vir alle }  i = 1, 2, 3, \ldots\}
+          \mathbb{R}^\infty := \{ (x_1, \, x_2, \, x_3, \, \ldots, ) : x_i \in \mathbb{R} \mbox{ vir alle }  i = 1, 2, 3, \ldots\}
         </men>
       </p>
 
       <p>
-        So 'n element <m>\ve{x} \in \mathbb{R}^\infty</m> is 'n oneindige ry van
-        re&#xeb;le getalle.
-        Definieer die sommeringsbewerking komponentgewys:
+        So 'n element <m>\ve{x} \in \mathbb{R}^\infty</m> is 'n oneindige ry re&#xeb;le getalle.
+        Definieer die optellingsbewerking komponentgewys:
         <men>
-          (x_1, \, x_2, \, x_3, \, \ldots) + (y_1, \, y_2, \, y_3, \, \ldots) :=
-          (x_1 + y_1, \, x_2 + y_2, \, x_3 + y_3, \, \ldots)
+          (x_1, \, x_2, \, x_3, \, \ldots) + (y_1, \, y_2, \, y_3, \, \ldots) := (x_1 + y_1, \, x_2 + y_2, \, x_3 + y_3, \, \ldots)
         </men>.
       </p>
 
@@ -260,18 +245,15 @@
           \ve{0} := (0, \, 0, \, 0, \, \ldots )
         </men>,
         die oneindige reeks waarvan alle komponente nul is.
-        Laastens, definieer
-        skalaarvermenigvuldiging komponentgewys:
+        Laastens, definieer skalaarvermenigvuldiging komponentgewys:
         <men>
-          k \cdot (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \,
-          \ldots)
+          k \cdot (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)
         </men>
       </p>
 
       <assemblage>
         <p>
-          Die studie van oneindigheid is 'n belangrike
-          deel van wiskunde.
+          Die studie van oneindigheid is 'n belangrike deel van wiskunde.
           Het jy al die fliek <em>The man who knew
           infinity</em> wat oor my gaan, gesien?
         </p>
@@ -280,8 +262,6 @@
     </statement>
   </example>
 
-
-
   <exercise>
     <statement>
       <p>
@@ -289,27 +269,27 @@
       </p>
     </statement>
     <solution>
-    <p>
-      Ons sal net R4 kontrolleer, die res is soortgelyk.
-          </p>
-    <p>R4 :Laat 
-    <md>
-      <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
-      <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>.
-    </md>
-    Ons moet kontrolleer of <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
-    <md>
-    <mrow>\text{LK} \amp = k.(\ve{v} + \ve{w})</mrow>
-    <mrow>\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>
-    <mrow> \amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
-    <mrow> \amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)</mrow>
-    <mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
-    <mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
-    <mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
-    <mrow> \amp = k.\ve{v} + k.\ve={w} </mrow>
-    <mrow> \amp = \text{RK} </mrow>
-    </md>
-    </p>
+      <p>
+        Ons sal net R4 kontrolleer, die res is soortgelyk.
+      </p>
+      <p>R4: Laat
+        <md>
+          <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
+          <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>.
+        </md>
+        Ons moet kontrolleer of <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
+        <md>
+          <mrow>\text{LK} \amp = k.(\ve{v} + \ve{w})</mrow>
+          <mrow>\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>
+          <mrow> \amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
+          <mrow> \amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)</mrow>
+          <mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
+          <mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
+          <mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
+          <mrow> \amp = k.\ve{v} + k.\ve={w} </mrow>
+          <mrow> \amp = \text{RK} </mrow>
+        </md>
+      </p>
     </solution>
   </exercise>
 
@@ -317,10 +297,9 @@
     <title>Funksies op 'n versameling</title>
     <statement>
       <p>
-        Laat <m>X</m> enige versameling
-        wees.
-        Definieer die versameling <m>\Fun(X)</m> van <em>re&#xeb;le
-        getal-funksies op <m>X</m></em> as
+        Laat <m>X</m> enige versameling wees.
+        Definieer die versameling <m>\Fun(X)</m> van <em>
+        funksies vanaf <m>X</m> na die re&#xeb;le getalle</em> as
         <men>
           \Fun(X) := \{ \mathbf{f} : X \rightarrow \mathbb{R} \}
         </men>.
@@ -328,50 +307,47 @@
 
       <p>
         Let op dat die funksies arbitr&#xea;r kan wees;
-        daar is geen vereiste
-        dat hulle kontinu of differensieerbaar moet wees nie.
-        So 'n vereiste
-        maak nie sin nie,
+        daar is geen vereiste dat hulle kontinu of differensieerbaar moet wees nie.
+        So 'n vereiste maak nie sin nie,
         aangesien <m>X</m> 'n arbitr&#xea;re versameling kan wees.
         Byvoorbeeld, <m>X</m> kan die versameling
         <m>\{a, b, c\}</m> wees <mdash /> sonder
-        enige verdere inligting maak dit nie sin om te s&#xea;
-        dat die funksie
-        <m>\mathbf{f} : X \rightarrow \mathbb{R}</m> kontinu is nie.
+        enige verdere inligting maak dit nie sin om te s&#xea;dat die funksie
+        <m>\ve{f} : X \rightarrow \mathbb{R}</m> kontinu is nie.
       </p>
 
       <p>
-        Definieer die sommeringsbewerking as
+        Definieer die optellingsbewerking as
         <men>
-          (\mathbf{f} + \mathbf{g}) (x) := \mathbf{f}(x) + \mathbf{g}(x),  x
-          \in X
+          (f + g) (x) := f(x) + g(x),  x \in X
         </men>
       </p>
 
       <p>
-        Maak seker dat jy verstaan wat hierdie formule s&#xea;! Ons begin met
-        twee funksies<m>\mathbf{f}</m> en <m>\mathbf{g}</m>,
-        en ons definieer hulle som
-        <m>\mathbf{f} + \mathbf{g}</m>.
-        Dit is veronderstel om self 'n funksie van
-        <m>X</m> te wees.
-        Om 'n funksie op <m>X</m> te definieer, moet ek vir elke
-        <m>x \in
-        X</m> neerskryf watter waarde die funksie lewer.
-        En dit is wat die formule
-        s&#xea;: die waarde wat die funksie <m>\mathbf{f} + \mathbf{g}</m> aan die
+        Maak seker dat jy verstaan wat hierdie formule s&#xea;!
+        Ons begin met twee funksies
+        <m>\mathbf{f}</m> en <m>\mathbf{g}</m>,
+        en ons definieer hul som as <m>\mathbf{f} + \mathbf{g}</m>.
+        Dit is veronderstel om self 'n funksie op <m>X</m> te wees.
+        Om 'n funksie op <m>X</m> te definieer,
+        moet ons vir elke <m>x \in X</m>
+        neerskryf watter waarde die funksie lewer.
+        En dit is wat die formule s&#xea;:
+        die waarde wat die funksie
+        <m>\mathbf{f} + \mathbf{g}</m> aan die
         element <m>x \in X</m> toeken,
-        word defnieer as die waarde <m>\mathbf{f}(x)</m>
+        word gedefinieer as die getal <m>\mathbf{f}(x)</m>
         plus die getal <m>\mathbf{g}(x)</m>.
         Onthou: <m>\mathbf{f}</m> is 'n funksie,
         terwyl <m>\mathbf{f}(x)</m> 'n getal is!
       </p>
 
       <p>
-        Definieer die nul-vektor <m>\mathbf{0}</m> as die funksie wat die getal <m>0</m>
+        Definieer die nul-vektor (wat ons hier as <m>z</m> gaan aandui)
+        as die funksie wat die getal <m>0</m>
         lewer vir elke insetwaarde <m>x \in X</m>:
         <men>
-          \ve{0} (x) := 0  \mbox{ vir alle \(x \in X\).}
+          \ve{z} (x) := 0  \mbox{ vir alle \(x \in X\).}
         </men>
       </p>
 
@@ -388,9 +364,8 @@
     <statement>
       <p>
         Notasie-uitdaging!
-        Sê of die volgende kombinasie
-        van
-        simbole 'n reële waarde of 'n funksie voorstel.
+        Sê of elkeen van die volgende kombinasies simbole
+        'n reële getal of 'n funksie voorstel.
 
         <ol>
           <li>
@@ -439,27 +414,23 @@
       </solution>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="quiz_different_functions">
     <statement>
       <p>
         Laat <m>X = \{a, b, c\}</m>.
 
         <ol>
           <li xml:id="three_function_question">
-
             <p>
-              Skryf drie verskillende
-              funksies<m>\mathbf{f}, \mathbf{g},
-              \mathbf{h}</m> in <m>\Fun(X)</m> neer.
+              Skryf drie verskillende funksies <m>\mathbf{f}, \mathbf{g}, \mathbf{h}</m> in <m>\Fun(X)</m> neer.
             </p>
           </li>
 
           <li>
             <p>
               Vir die funksies wat jy in
-              <xref ref="three_function_question" /> geskryf het, bereken
-              <m>\mathbf{f} + \mathbf{g}</m>,
-              asook <m>3 \cdot \mathbf{h}</m>.
+              <xref ref="three_function_question" /> geskryf het, bereken <m>\mathbf{f} + \mathbf{g}</m>,
+              asook <m>3 \smul \mathbf{h}</m>.
             </p>
           </li>
         </ol>
@@ -468,11 +439,11 @@
       <solution>
         <p>
         <ol>
-          <li> 
+          <li>
             <md>
             <mrow> f(a)= 4 </mrow>
             <mrow> f(b) = 0 </mrow>
-            <mrow> f(c) = 2 </mrow>     
+            <mrow> f(c) = 2 </mrow>
             <mrow></mrow>
             <mrow> g(a)= 1 </mrow>
             <mrow> g(b) = 1 </mrow>
@@ -502,61 +473,30 @@
   <exercise>
     <statement>
       <p>
-        Wys dat die data hierbo reëls R1 tot R8 bevredig,
-        i.e. dat <m>\Fun(X)</m> 'n vektorruimte is.
+        Wys dat die data in <xref ref="add_op_functions"/>, <xref ref="zero_vec_functions"/>, <xref ref="smul_functions"/> reëls R1 tot R8 bevredig, sodat <m>\Fun(X)</m> 'n vektorruimte is.
       </p>
     </statement>
-      <solution>
-        <p>
-        <ol>
-          <li> 
-            <md>
-            <mrow> f(a)= 4 </mrow>
-            <mrow> f(b) = 0 </mrow>
-            <mrow> f(c) = 2 </mrow>     
-            <mrow></mrow>
-            <mrow> g(a)= 1 </mrow>
-            <mrow> g(b) = 1 </mrow>
-            <mrow> g(c) = 1 </mrow>
-            <mrow></mrow>
-            <mrow> h(a)= 0 </mrow>
-            <mrow> h(b) = 3</mrow>
-            <mrow> h(c) = 0 </mrow>
-          </md>
-          </li>
-          <li>
-          <md>
-          <mrow> (f+g)(a) =5</mrow>
-          <mrow> (f+g)(b) =1 </mrow>
-          <mrow> (f+g)(c) = 3</mrow>
-          <mrow></mrow>
-          <mrow>( 3 \smul h)(a) = 0 </mrow>
-          <mrow>( 3 \smul h)(b) = 9 </mrow>
-          <mrow>( 3 \smul h)(c) = 0 </mrow>
-          </md>
-          </li>
-        </ol>
-        </p>
-      </solution>
-
   </exercise>
 
   <example xml:id="matrices_example_vec_space">
     <title>Matrikse</title>
     <statement>
       <p>
-        Die versameling <m>\Mat_{n,m}</m> van alle <m>n \times m </m> matrikse is 'n vektorruimte. Sien <xref ref="AAppAReminderAboutMatrices">Appendix</xref> om matrikse te hersien. 
+        Die versameling <m>\Mat_{n,m}</m> van alle
+        <m>n \times m </m> matrikse is 'n vektorruimte.
+        Sien <xref ref="AAppAReminderAboutMatrices">Bylae</xref>
+        om matrikse te hersien.
       </p>
     </statement>
   </example>
 
-
   <exercise>
     <statement>
       <p>
-        Wys dat met hierdie bewerkings vorm die versameling
-        <m>\Mat_{n, m}</m> van alle <m>n \times m</m>-matrikse 'n
-        vektorruimte.
+        Wys dat met die bewerkings (optelling en skalaarvermenigvuldiging) en nul-matriks
+        soos in  <xref ref="AppAReminderAboutMatrices">Bylae</xref> gedefinieer
+        vorm die versameling <m>\Mat_{n, m}</m>
+        van alle <m>n \times m</m>-matrikse 'n vektorruimte.
       </p>
     </statement>
   </exercise>
@@ -564,19 +504,19 @@
   <example>
     <statement>
       <p>
-        Ons sal <m>\Col_n</m> skryf vir die vektorruimte<m>\Mat_{n,1}</m> van
-        <m>n</m>-dimensionele <em>kolomvektore</em>,
+        Ons sal <m>\Col_n</m> skryf vir die vektorruimte
+        <m>\Mat_{n,1}</m> van <m>n</m>-dimensionele
+        <em>kolomvektore</em>,
         <me>
-          \Col_n = \left\{ \left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\
-          x_n
+          \Col_n = \left\{ \left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n
           \end{array}  \right] : x_1, \ldots, x_n \in \mathbb{R} \right\}
         </me>.
       </p>
 
       <p>
         So, <m>\Col_n</m> <sq>is</sq> net <m>\mathbb{R}^n</m>,
-        maar ons beklemtoon dat die
-        komponente in kolomme gerangskik word.
+        maar ons beklemtoon die feit dat die
+        komponente van die vektore in kolomme gerangskik word.
       </p>
     </statement>
   </example>
@@ -586,7 +526,7 @@
   <exercise xml:id="non_ass_ex">
     <statement>
       <p>
-        Definieer 'n sommeringsbewerking op die
+        Definieer 'n optellingsbewerking op die
         versameling <m>X := \{ \ve{0}, \, \ve{a}, \, \ve{b} \}</m> met die volgende
         tabel:
         <me>
@@ -608,7 +548,7 @@
       </p>
 
       <p>
-        Bewys dat hierdie sommeringsbewerking R1 bevredig.
+        Bewys dat hierdie optellingsbewerking R1 bevredig.
       </p>
     </statement>
   </exercise>
@@ -616,7 +556,7 @@
   <exercise>
     <statement>
       <p>
-        Bewys dat die sommeringsoperasie van <xref ref="non_ass_ex">Oefening</xref> nie R2 bevredig nie.
+        Bewys dat die optellingsoperasie van <xref ref="non_ass_ex">Oefening</xref> nie R2 bevredig nie.
       </p>
     </statement>
   </exercise>
@@ -624,7 +564,7 @@
   <exercise>
     <statement>
       <p>
-        Definieer 'n snaakse sommeringsbewerking<m>\hat{+}</m> op
+        Definieer 'n snaakse optellingsbewerking<m>\hat{+}</m> op
         <m>\mathbb{R}</m> as
         <me>
           x \hat{+} y := x - y
@@ -667,7 +607,7 @@
       <p>
         Laat <m>\mathbb{R}^+</m> die versameling van positiewe reële
         getalle wees.
-        Definieer 'n sommeringsbewerking <m>\oplus</m>, 'n nul-vektor <m>z</m> en 'n
+        Definieer 'n optellingsbewerking <m>\oplus</m>, 'n nul-vektor <m>z</m> en 'n
         skalaarvermenigvuldigingsbewerking <m>\smul</m> op <m>\mathbb{R}^+</m> as volg:
         <md>
           <mrow>x + y \amp := \ve{x} \ve{y}</mrow>
@@ -680,7 +620,7 @@
         <ol>
           <li>
             <p>
-              Gaan na dat hierdie bewerkings goed-gedefinieerd is.
+              Gaan na dat hierdie bewerkings wel-gedefinieerd is.
               Byvoorbeeld,
               is <m>x + y \in \mathbb{R}^+</m>, soos dit
               hoort?
