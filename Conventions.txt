@@ -1,0 +1,14 @@
+This is a file where some conventions and shortcuts are kept for authors in these documents:
+
+vectors:				\ve{v}
+scalar product:			\smul
+
+
+
+
+
+
+Glossary for translation
+
+well-defined		wel-gedefinieerd
+summation			optelling
