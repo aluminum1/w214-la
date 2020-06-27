@@ -526,9 +526,9 @@
   <exercise xml:id="non_ass_ex">
     <statement>
       <p>
-        Definieer 'n optellingsbewerking op die
-        versameling <m>X := \{ \ve{0}, \, \ve{a}, \, \ve{b} \}</m> met die volgende
-        tabel:
+        Definieer 'n optellingsbewerking op die versameling
+        <m>X := \{ \ve{0}, \, \ve{a}, \, \ve{b} \}</m>
+        met behulp van die volgende tabel:
         <me>
           \begin{array}{c|ccc}
           + \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\
@@ -541,10 +541,12 @@
       </p>
 
       <p>
-        Die tabel werk soos volg.
-        Vir die berekening <m>\ve{b} + \ve{a}</m>, vind
-        die kruising van ry <m>\ve{b}</m> en kolom <m>\ve{a}</m>. ons sien dat <m>\ve{b} +
-        \ve{a} := \ve{a}</m>.
+        Die tabel werk soos volg:
+        Om byvoorbeeld <m>\ve{b} + \ve{a}</m> te bereken,
+        vind ons die kruising van
+        ry <m>\ve{b}</m>
+        en kolom <m>\ve{a}</m>.
+        Ons sien dus dat <m>\ve{b} + \ve{a} := \ve{a}</m>.
       </p>
 
       <p>
@@ -556,7 +558,8 @@
   <exercise>
     <statement>
       <p>
-        Bewys dat die optellingsoperasie van <xref ref="non_ass_ex">Oefening</xref> nie R2 bevredig nie.
+        Bewys dat die optellingsoperasie van
+        <xref ref="non_ass_ex">Oefening</xref> nie R2 bevredig nie.
       </p>
     </statement>
   </exercise>
@@ -564,8 +567,8 @@
   <exercise>
     <statement>
       <p>
-        Definieer 'n snaakse optellingsbewerking<m>\hat{+}</m> op
-        <m>\mathbb{R}</m> as
+        Definieer 'n snaakse optellingsbewerking
+        <m>\hat{+}</m> op <m>\mathbb{R}</m> as
         <me>
           x \hat{+} y := x - y
         </me>
@@ -574,15 +577,14 @@
       <p>
         Bevredig <m>\hat{+}</m> R2?
         Indien wel, bewys dit.
-        Indien nie, gee 'n
-        teenvoorbeeld.
+        Indien nie, gee 'n teenvoorbeeld.
       </p>
     </statement>
       <solution>
         <p>
-          No, for example:
+          Nee, byvoorbeeld:
           <me> (1 \hat{+} 2) \hat{+} 3 = (1-2)-3 = -4</me>.
-          But
+          Maar
           <me> 1 \hat{+} (2 \hat{+}3) = 1 - (2-3) = 2</me>.
         </p>
       </solution>
@@ -591,23 +593,32 @@
    <exercise xml:id="strange_addition_R_new">
     <statement>
       <p>
-        Construct an operation <m>\boxplus</m> on <m>\mathbb{R}</m> satisfying R1 but not R2.
+        Konstrueer 'n bewerking <m>\boxplus</m>
+        op <m>\mathbb{R}</m> wat R1 bevredig maar nie R2 nie.
       </p>
     </statement>
-     <solution>
+    <hint>
       <p>
-        Define <m> x\boxplus y = | x - y | </m>. R1 is satisfied since <m> x \boxplus y = | x - y | = | y -x | = y \boxplus x</m>. However, R2 is not satisfied since
+        Probeer om die formule van <xref ref="strange_addition_R"/> aan te pas.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        Defineer <m> x\boxplus y = | x - y | </m>.
+        Dan word R1 bevredig, omdat
+        <m> x \boxplus y = | x - y | = | y -x | = y \boxplus x</m>.
+        Re&euml;l R2 word egter nie bevredig nie, omdat
         <m> (1 \boxplus 2) \boxplus 3 = | |1-2| -3| = 2  </m> but <m> 1 \boxplus ( 2 \boxplus 3) = | 1 - |2-3| = 0 </m>
       </p>
-      </solution>
+    </solution>
   </exercise>
 
   <exercise>
     <statement>
       <p>
-        Laat <m>\mathbb{R}^+</m> die versameling van positiewe reële
-        getalle wees.
-        Definieer 'n optellingsbewerking <m>\oplus</m>, 'n nul-vektor <m>z</m> en 'n
+        Laat <m>\mathbb{R}^+</m> die versameling positiewe reële getalle wees.
+        Definieer 'n optellingsbewerking <m>\oplus</m>,
+        'n nul-vektor <m>z</m> en 'n
         skalaarvermenigvuldigingsbewerking <m>\smul</m> op <m>\mathbb{R}^+</m> as volg:
         <md>
           <mrow>x + y \amp := \ve{x} \ve{y}</mrow>
@@ -615,42 +626,45 @@
           <mrow>k \smul x \amp := x^k</mrow>
         </md>
         waar <m>x, y \in \mathbb{R}^+</m> en <m>k</m> 'n
-        skalaar is (i.e. 'n arbitrêre reële getal).
+        skalaar is (i.e. 'n willekeurige reële getal).
 
         <ol>
           <li>
             <p>
               Gaan na dat hierdie bewerkings wel-gedefinieerd is.
-              Byvoorbeeld,
-              is <m>x + y \in \mathbb{R}^+</m>, soos dit
-              hoort?
+              Byvoorbeeld, is <m>x + y \in \mathbb{R}^+</m>,
+              soos dit hoort?
             </p>
           </li>
 
           <li>
             <p>
-              Gaan na dat hulle R1 tot R8 bevredig,
-              sodat<m>\mathbb{R}^+</m> 'n
-              vektorruimte met hierdie bewerkings vorm.
+              Gaan na dat hierdie data die re&euml;ls
+              R1 tot R8 bevredig.
             </p>
           </li>
         </ol>
       </p>
     </statement>
-        <solution>
-<p>
+    <solution>
+    <p>
       <ol>
         <li>
           <p>
-            Let <m>x,y</m> be two positive reals. Then 
+            Laat <m>x,y</m> twee positiewe re&euml;le getalle wees. Dan is
             <md>
             <mrow>x \oplus y \amp := xy</mrow>
           </md>
-          is certainly also a positive real number. Similarly, for any <m>k \in R</m> and any <m> x \in \mathbb{R}^+</m>, 
+          beslis ook 'n positiewe re&euml;le getal.
+          Soortgelyk, vir enige <m>k \in R</m> en enige
+          <m> x \in \mathbb{R}^+</m>, is
           <md>
-<mrow>k \smul x \amp := x^k</mrow>
+            <mrow>k \smul x \amp := x^k</mrow>
           </md>
-          is also positive. To see this, for any fixed <m> k</m>, notice that the graph of the function <m>f(x) = x^k</m>restricted to <m>x \ge 0 </m> lies above the <m>x</m>-axis.
+          ook positief. Om dit te sien, let op vir enige
+          vaste <m>k</m>, dat die grafiek van die funksie
+          <m>f(x) = x^k</m> beperk tot <m>x \ge 0 </m>
+          bo die <m>x</m>-as l&ecirc;.
           </p>
         </li>
 
@@ -660,19 +674,19 @@
           </p>
         </li>
       </ol>
- </p>
+    </p>
     </solution>
   </exercise>
 
   <exercise>
     <statement>
-    <p> Consider the operation <m>\oplus</m> on <m>\mathbb{R}^2</m> defined by:
+    <p> Beskou die bewerking <m>\oplus</m> op <m>\mathbb{R}^2</m> gedefinieer deur:
     <me>
       (a_1, a_2) \oplus (b_1, b_2) := (a_1 + b_2, a_2 + b_1).
     </me>
     <ol>
-      <li> Does this operation satisfy <xref ref="R1">R1</xref>? </li>
-      <li> Does this operation satisfy <xref ref="R2">R2</xref>? </li>
+      <li> Bevredig hierdie bewerking <xref ref="R1">R1</xref>? </li>
+      <li> Bevredig hierdie bewerking <xref ref="R2">R2</xref>? </li>
     </ol>
     </p>
 </statement>
@@ -681,11 +695,11 @@
     <ol>
       <li>
         <p>
-          No. Counterexample:
+          Nee &mdash; hier is 'n teenvoorbeeld:
           <me>
            (1, 2) \oplus (2, 1) = (1 + 1, 2 + 2) = (2,4)
           </me>
-          but
+          maar
           <me>
             (2,1) \oplus (1,2) = (2 + 2, 1 + 1) = (4,2). 
           </me>
@@ -694,7 +708,7 @@
 
       <li>
         <p>
-          No. Counterexample:
+          Nee &mdash; hier is 'n teenvoorbeeld:
           <me>
            ((1, 2) \oplus (2, 1)) \oplus (1,3) = (2, 4) \oplus (1,3) = (5, 5)
           </me>
