@@ -29,8 +29,8 @@
 
   <proof>
     <md>
-      <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero"/> \text{ vir } \ve{v}=\ve{0} </mrow>
-      <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3b">R3b </xref>\text{)}</mrow>
+      <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero" text="title"/> \text{ vir } \ve{v}=\ve{0} </mrow>
+      <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3b" text="title">R3b </xref>\text{)}</mrow>
     </md>
   </proof>
 
@@ -90,7 +90,7 @@
   <proof>
     <md>
       <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \mbox{(R3b)}</mrow>
-      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv"/></mrow>
+      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv" text="title"/></mrow>
       <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \mbox{(R2)}</mrow>
       <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \mbox{(volgens aanname)}</mrow>
       <mrow>\amp = -\ve{v} \amp \amp  \mbox{(R3a)} </mrow>
@@ -143,7 +143,7 @@
       \cdot \ve{v} = 0 \cdot \ve{v} = \ve{0}</m> deur R8 van 'n vektor-ruimte.
       Aan die ander kant, veronderstel <m>\ve{v} = \ve{0}</m>.
       Dan <m>k \cdot \ve{v}
-      = k \cdot \ve{0} = \ve{0}</m> deur <xref ref="mult_by_zero_ex">Oefening</xref>.
+      = k \cdot \ve{0} = \ve{0}</m> deur <xref ref="mult_by_zero_ex" text="title">Oefening</xref>.
     </p>
 
     <p>
@@ -162,7 +162,7 @@
         \cdot \ve{0} \amp \amp  \mbox{(Vermenigvuldig beide kante met
         \(\frac{1}{k}\))}</mrow>
         <mrow>\therefore \left(\frac{1}{k} k\right) \cdot \ve{v} \amp = \ve{0} \amp \amp 
-         \mbox{(R6 aan LK. Gebruik } <xref ref="mult_by_zero_ex">Oefening</xref> \mbox{ aan die RK.)}</mrow>
+         \mbox{(R6 aan LK. Gebruik } <xref ref="mult_by_zero_ex" text="title">Oefening</xref> \mbox{ aan die RK.)}</mrow>
         <mrow>\therefore 1 \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{(gebruik \(\frac{1}{k}
         k = 1\))}</mrow>
         <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \mbox{(R7)}</mrow>
@@ -198,7 +198,7 @@
           <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} +
           \ve{w} \amp \amp  \mbox{(gebruik R2 aan LK)}</mrow>
           <mrow>\therefore  \ve{0} + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp 
-          \mbox{(gebruik <xref ref="add_inv">Lemma</xref> aan LK)}</mrow>
+          \mbox{(gebruik <xref ref="add_inv" text="title">Lemma</xref> aan LK)}</mrow>
           <mrow>\therefore  7 \cdot \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \mbox{(gebruik
           R3a aan LK)}</mrow>
           <mrow>\therefore  \frac{1}{7} \cdot (7 \cdot \ve{x}) \amp  = \frac{1}{7}
@@ -238,11 +238,11 @@
         <me>
         -(-\ve{v}) = (-1)\smul(- \ve v) = (-1)\smul(-1\smul(\ve v)).
       </me>
-      Using <xref ref="R6"/> we get
+      Using <xref ref="R6" text="title"/> we get
       <me>
 (-1)\smul(-1(\ve v)) = ((-1)(-1))\smul\ve v = 1.\ve v.
     </me>
-    Finally, a single application of <xref ref="R7"/> allows us to conclude that
+    Finally, a single application of <xref ref="R7" text="title"/> allows us to conclude that
     <me>
 1.\ve v = \ve v
   </me>
@@ -260,11 +260,11 @@
     </statement>
           <solution>
         <p>
-          We apply <xref ref = "R3b"/> to <m>k \smul \ve{0}</m>:
+          We apply <xref ref = "R3b" text="title"/> to <m>k \smul \ve{0}</m>:
           <me>
 k \smul \ve{0} = k \smul (\ve 0 + \ve 0).
         </me>
-        By <xref ref = "R4"/> we get
+        By <xref ref = "R4" text="title"/> we get
         <me>
         k \smul (\ve 0 + \ve 0) = k \smul \ve 0 + k \smul 0.
       </me>
@@ -316,7 +316,7 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
         <m>\ve{x}</m>,
         maar wys eksplisiet hoe jy die re&#xeb;ls van 'n vektorruimte
         gebruik het,
-        soos in <xref ref="explicit_solve_x">Voorbeeld</xref>.
+        soos in <xref ref="explicit_solve_x" text="title">Voorbeeld</xref>.
       </p>
     </statement>
     <solution>
@@ -327,23 +327,23 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
           <mrow>\implies  (2 \smul \ve x + 6 \smul \ve w) + (-(6 \smul \ve w))  \amp =  \ve 0 + (-(6 \smul \ve w)) 
            \amp (\text{add } -(6\smul\ve{w}) \text{ to both sides})</mrow>
 
-          <mrow> \implies 2 \smul \ve{x} + (6 \smul \ve{w} + (-(6 \smul \ve{w}))) \amp = -(6 \smul \ve{w}) \amp (<xref ref="R2">R2</xref> \text{ on LHS}, <xref ref="R3a">R3a</xref> \text{on RHS})            
+          <mrow> \implies 2 \smul \ve{x} + (6 \smul \ve{w} + (-(6 \smul \ve{w}))) \amp = -(6 \smul \ve{w}) \amp (<xref ref="R2" text="title">R2</xref> \text{ on LHS}, <xref ref="R3a" text="title">R3a</xref> \text{on RHS})            
           </mrow>
 
-          <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)  \amp (<xref ref = "add_inv"/>) </mrow>
+          <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)  \amp (<xref ref = "add_inv" text="title"/>) </mrow>
 
-           <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)  \amp (<xref ref = "R3b">R3b</xref>)</mrow>
+           <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)  \amp (<xref ref = "R3b" text="title">R3b</xref>)</mrow>
 
            <mrow> \implies  (\frac{1}{2})\smul (2 \smul \ve x) \amp = \frac{1}{2} \smul (-(6 \smul \ve{w}))  </mrow>
 
-            <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6">R6</xref> \text{ on LHS, defn of inverse on RHS}) </mrow>
+            <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6" text="title">R6</xref> \text{ on LHS, defn of inverse on RHS}) </mrow>
 
 
-            <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
+            <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6" text="title">R6</xref> \text{ on RHS}) </mrow>
 
-               <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7">R7</xref> \text{ on LHS})  </mrow>
+               <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7" text="title">R7</xref> \text{ on LHS})  </mrow>
 
-                <mrow>\implies  \ve x   \amp = ((\frac{1}{2})(-6))\smul \ve w  \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
+                <mrow>\implies  \ve x   \amp = ((\frac{1}{2})(-6))\smul \ve w  \amp (<xref ref="R6" text="title">R6</xref> \text{ on RHS}) </mrow>
 
                 <mrow> \implies \ve{x} \amp =  (-3)\smul \ve{w} </mrow>
                 </md>
@@ -363,7 +363,7 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
   </hint>
   <hint>
     <p>
-      Use the idea of the proof from <xref ref="fivevequals2v"/>.
+      Use the idea of the proof from <xref ref="fivevequals2v" text="title"/>.
     </p>
   </hint>
   </exercise>
@@ -395,7 +395,7 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
     <exercise xml:id="empty_vector_space">
       <statement>
       <p>
-        The empty set can be equipped with data <xref ref="D1">D1</xref>, <xref ref="D2">D2</xref>, <xref ref="D3">D3</xref> satisfying the rules of a vector space.
+        The empty set can be equipped with data <xref ref="D1" text="title">D1</xref>, <xref ref="D2" text="title">D2</xref>, <xref ref="D3" text="title">D3</xref> satisfying the rules of a vector space.
       </p>
     </statement>
      <solution>
@@ -408,18 +408,18 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
     <exercise>
       <statement>
       <p>
-      Rule <xref ref="R3b">R3b</xref> of a vector space follows automatically from the other rules.
+      Rule <xref ref="R3b" text="title">R3b</xref> of a vector space follows automatically from the other rules.
       </p>
     </statement>
     <solution>
-      True. Combining <xref ref = "R1">R1</xref> and <xref ref = "R3a">R3a</xref> gives <xref ref="R3b">R3b</xref>.
+      True. Combining <xref ref = "R1" text="title">R1</xref> and <xref ref = "R3a" text="title">R3a</xref> gives <xref ref="R3b" text="title">R3b</xref>.
     </solution>
     </exercise>
 
     <exercise xml:id="R7_follows">
       <statement>
       <p>
-      Rule <xref ref="R7">R7</xref> of a vector space follows automatically from the other rules.
+      Rule <xref ref="R7" text="title">R7</xref> of a vector space follows automatically from the other rules.
       </p>
     </statement>
       <solution>
