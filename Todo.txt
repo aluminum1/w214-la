@@ -1,3 +1,5 @@
 To do list:
 
 1. Populate the to do list :)
+
+* In 1.4 the English denotes functions f while Afrikaans does \mathbf{f}. Perhaps use a macro \fun{} that can be changed in one place?
