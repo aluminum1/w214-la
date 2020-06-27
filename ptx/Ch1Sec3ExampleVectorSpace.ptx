@@ -102,7 +102,7 @@
         <title>D3. Scalar multiplication</title>
         <p>
           We define scalar multiplication on <m>B</m>
-          as follows: </br>
+          as follows:
           Let <m>k</m> be a real number and
           <m>\ve{u} = (u_1, \, u_2, \, u_3)</m>
           be an element of <m>B</m>.
