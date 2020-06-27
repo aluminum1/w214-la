@@ -1,7 +1,7 @@
 To do list:
 
 - In 1.4 the English denotes functions f while Afrikaans does \mathbf{f}. Perhaps use a macro \fun{} that can be changed in one place?
-- Change \mbox 'es to \text to conform to specifications in Sample Article. Also amek sure there is no "maths inside a text box"
+- Change \mbox 'es to \text to conform to specifications in Sample Article. Also make sure there is no "maths inside a text box"
 - Can the first two lemmas in 1.5 be written using more words?
 
 
