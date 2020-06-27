@@ -1,8 +1,10 @@
 
+
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch1Sec5ResultsVectorSpace">
   <title>Some results about abstract vector spaces</title>
   <p>
-    It is time to use the rules of a vector space to prove some general results.
+    It is time to use the rules of a vector space to
+    prove some general results.
   </p>
 
   <assemblage>
@@ -28,7 +30,7 @@
   <proof>
     <md>
       <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp \text{using } <xref ref="uniqueness_zero"/> \text{ with } \ve{v}=\ve{0} </mrow>
-      <mrow>\amp = \ve{0}' \amp \amp \text{( } <xref ref="R3b">R3b </xref>\text{)}   </mrow>
+      <mrow>\amp = \ve{0}' \amp \amp \text{( } <xref ref="R3b"></xref>\text{)}   </mrow>
     </md>
   </proof>
 
@@ -49,7 +51,7 @@
     <statement>
       <p>
         If <m>V</m> is a vector space,
-        then for all <m>\ve{v} \in V</m>,
+        then for all <m>\ve{v} \in V</m> we have
         <men>
           -\ve{v} + \ve{v} = \ve{0} \mbox{ and }  \ve{v} + (-\ve{v}) = \ve{0}
         </men>.
@@ -59,9 +61,9 @@
 
   <proof>
     <md>
-      <mrow>-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \mbox{(using defn of \(- \ve{v}\))}</mrow>
-      <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \mbox{(R7)}</mrow>
-      <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \mbox{(R5)}</mrow>
+      <mrow>-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \text{(definition of \(- \ve{v}\))}</mrow>
+      <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \text{(R7)}</mrow>
+      <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \text{(R5)}</mrow>
       <mrow>\amp = 0 \smul\ve{v}</mrow>
       <mrow>\amp = \ve{0} \amp \amp  \mbox{(R8)}</mrow>
     </md>
@@ -77,7 +79,9 @@
   <lemma>
     <statement>
       <p>
-        Suppose that two vectors <m>\ve{w}</m> and <m>\ve{v}</m> in a vector space satisfy <m>\ve{w} + \ve{v} = \ve{0}</m>.
+        Suppose that two vectors <m>\ve{w}</m> and
+        <m>\ve{v}</m> in a vector space satisfy
+        <m>\ve{w} + \ve{v} = \ve{0}</m>.
         Then <m>\ve{w} = -\ve{v}</m>.
       </p>
     </statement>
@@ -85,25 +89,25 @@
 
   <proof>
     <md>
-      <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \mbox{(R3b)}</mrow>
-      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  \mbox{by } <xref ref="add_inv"/></mrow>
-      <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \mbox{(R2)}</mrow>
-      <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \mbox{(by assumption)}</mrow>
-      <mrow>\amp = -\ve{v} \amp \amp  \mbox{(R3a)} </mrow>
+      <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \text{(R3b)}</mrow>
+      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  \text{by } <xref ref="add_inv" text="global"/></mrow>
+      <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \text{(R2)}</mrow>
+      <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \text{(by assumption)}</mrow>
+      <mrow>\amp = -\ve{v} \amp \amp  \text{(R3a)} </mrow>
     </md>.
   </proof>
 
   <p>
-    Let us prove two more lemmas, for practice. 
+    Let us prove two more lemmas, for extra practice.
   </p>
 
   <lemma xml:id="scalar_times_zero_vec">
-    <statement> 
+    <statement>
       <p>
       Let <m>V</m> be a vector space and <m>k</m> any scalar. Then
       <me>
         k \smul\ve{0} = \ve{0}
-      </me>
+      </me>.
      </p>
     </statement>
   </lemma>
@@ -119,10 +123,11 @@
   <lemma xml:id="dichotomy_lem">
     <statement>
       <p>
-        Suppose that <m>\ve{v}</m> is a vector in a vector space <m>V</m> and that <m>k</m> is a scalar.
+        Suppose that <m>\ve{v}</m> is a vector in a
+        vector space <m>V</m> and that <m>k</m> is a scalar.
         Then
         <me>
-          k \smul\ve{v} = \ve{0}  \Leftrightarrow  k = 0 \mbox{ or }  \ve{v} = \ve{0}
+          k \smul\ve{v} = \ve{0}  \Leftrightarrow  k = 0 \text{ or }  \ve{v} = \ve{0}
         </me>.
       </p>
     </statement>
@@ -134,23 +139,23 @@
       Suppose <m>k=0</m>.
       Then <m>k \smul\ve{v} = 0 \smul\ve{v} = \ve{0}</m> by R8 of a vector space.
       On the other hand, suppose <m>\ve{v} = \ve{0}</m>.
-      Then <m>k \smul\ve{v} = k \smul\ve{0} = \ve{0}</m> by <xref ref="mult_by_zero_ex">Exercise</xref>.
+      Then <m>k \smul\ve{v} = k \smul\ve{0} = \ve{0}</m> by <xref ref="mult_by_zero_ex" text="type-global">Exercise</xref>.
     </p>
 
     <p>
-      (Proof of <m>\Rightarrow</m>).
-      Suppose <m>k \smul\ve{v} = \ve{0}</m>.
+      <alert>Proof of <m>\Rightarrow</m></alert>.
+      Suppose that <m>k \smul\ve{v} = \ve{0}</m>.
       There are two possibilities:
       either <m>k = 0</m>, or <m>k \neq 0</m>.
       If <m>k=0</m>, then we are done.
-      If <m>k \neq 0</m>,
-      then <m>\frac{1}{k}</m> exists and we can multiply both sides by it:
+      If <m>k \neq 0</m>, then <m>\frac{1}{k}</m> exists
+      and we can multiply both sides by it:
       <md>
         <mrow>k \smul\ve{v} \amp  = \ve{0}</mrow>
-        <mrow>\therefore  \frac{1}{k} \smul(k \smul\ve{v})  \amp  = \frac{1}{k} \smul\ve{0} \amp \amp  \mbox{(Multiplied both sides by \(\frac{1}{k}\))}</mrow>
-        <mrow>\therefore \left(\frac{1}{k} k\right) \smul\ve{v} \amp = \ve{0} \amp \amp  \mbox{(On the LHS, we used R6. On the RHS, we used } <xref ref="mult_by_zero_ex"/>)</mrow>
-        <mrow>\therefore 1 \smul\ve{v} \amp = \ve{0} \amp \amp  \mbox{(using \(\frac{1}{k} k = 1\))}</mrow>
-        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \mbox{(R7)}</mrow>
+        <mrow>\therefore  \frac{1}{k} \smul(k \smul\ve{v})  \amp  = \frac{1}{k} \smul\ve{0} \amp \amp  \text{(Multiplied both sides by \(\frac{1}{k}\))}</mrow>
+        <mrow>\therefore \left(\frac{1}{k} k\right) \smul\ve{v} \amp = \ve{0} \amp \amp  \text{(On the LHS, we used R6. On the RHS, we used } <xref ref="mult_by_zero_ex" text="global"/>)</mrow>
+        <mrow>\therefore 1 \smul\ve{v} \amp = \ve{0} \amp \amp  \text{(using \(\frac{1}{k} k = 1\))}</mrow>
+        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \text{(R7)}</mrow>
       </md>
     </p>
 
@@ -161,10 +166,12 @@
   </proof>
 
   <example xml:id="explicit_solve_x">
+    <statement>
       <p>
-        Let us practice using the rules of a vector space to perform everyday calculations.
-        For instance,
-        suppose that we are trying to solve for the vector <m>\ve{x}</m> appearing in the following equation:
+        Let us practice using the rules of a vector space
+        to perform everyday calculations.
+        For instance, suppose that we are trying to solve
+        for the vector <m>\ve{x}</m> in the following equation:
         <men>
           \ve{v} + 7 \smul\ve{x} = \ve{w}
         </men>
@@ -181,25 +188,24 @@
           <mrow>\therefore  \frac{1}{7} \smul(7 \smul\ve{x}) \amp  = \frac{1}{7} \smul(-\ve{v} + \ve{w}) \amp \amp  \mbox{(scalar multiplied both sides by \(\frac{1}{7}\))}</mrow>
           <mrow>\therefore  (\frac{1}{7} 7) \smul  \ve{x} \amp  = \frac{1}{7} \smul(-\ve{v} + \ve{w}) \amp \amp  \mbox{(used R6 on LHS)}</mrow>
           <mrow>\therefore  1 \smul\ve{x} \amp  =  \frac{1}{7} \smul(-\ve{v} + \ve{w})  \amp \amp  \mbox{(multiplied \(\frac{1}{7}\) with \(7\))}</mrow>
-          <mrow>\therefore  \ve{x} \amp  =  \frac{1}{7} \smul(-\ve{v} + \ve{w}) \amp \amp  \mbox{(R7)}</mrow>
+          <mrow>\therefore  \ve{x} \amp  =  \frac{1}{7} \smul(-\ve{v} + \ve{w}) \amp \amp  \text{(R7)}</mrow>
         </md>
       </p>
 
       <p>
         As the course goes on we will leave out all these steps.
-        But it is important for you to be able to reproduce them all,
-        if asked to do so!
+        But it is important for you to be able to reproduce
+        them all if asked to do so!
       </p>
-
+    </statement>
   </example>
-
 
 
 <exercises>
   <exercise xml:id="minus_minus_v_equals_v">
     <statement>
       <p>
-        Prove that for all vectors <m>\ve{v}</m> in a vector space,
+        Prove that for all vectors <m>\ve{v}</m> in a vector space, we have
         <m>-(-\ve{v}) = \ve{v}</m>.
       </p>
     </statement>
@@ -208,15 +214,15 @@
         We apply the definition of <m>-\ve v</m> twice:
         <me>
         -(-\ve{v}) = (-1)\smul(- \ve v) = (-1)\smul(-1\smul(\ve v)).
-      </me>
-      Using <xref ref="R6"/> we get
-      <me>
-(-1)\smul(-1(\ve v)) = ((-1)(-1))\smul\ve v = 1.\ve v.
-    </me>
-    Finally, a single application of <xref ref="R7"/> allows us to conclude that
-    <me>
-1.\ve v = \ve v
-  </me>
+        </me>
+        Using <xref ref="R6" text="global"/> we get
+        <me>
+          (-1)\smul(-1(\ve v)) = ((-1)(-1))\smul\ve v = 1.\ve v.
+        </me>
+        Finally, a single application of <xref ref="R7" text="global"/> allows us to conclude that
+        <me>
+          1\smul\ve v = \ve v
+        </me>
       </p>
     </solution>
   </exercise>
@@ -225,31 +231,31 @@
     <statement>
       <p>
         Let <m>V</m> be a vector space with zero vector <m>\ve{0}</m>.
-        Prove that for all scalars <m>k</m>,
+        Prove that for all scalars <m>k</m>, we have
         <m>k \smul \ve{0} = \ve{0}</m>.
       </p>
     </statement>
-      <solution>
-        <p>
-          We apply <xref ref = "R3b"/> to <m>k \smul \ve{0}</m>:
-          <me>
-k \smul \ve{0} = k \smul (\ve 0 + \ve 0).
+    <solution>
+      <p>
+        We apply <xref ref = "R3b" text="global"/> to <m>k \smul \ve{0}</m>:
+        <me>
+          k \smul \ve{0} = k \smul (\ve 0 + \ve 0).
         </me>
         By <xref ref = "R4"/> we get
         <me>
-        k \smul (\ve 0 + \ve 0) = k \smul \ve 0 + k \smul 0.
-      </me>
-      We now know
-      <me>
-k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
-    </me>
-    Adding the inverse of <m>k \smul 0</m> to both sides we get
-    <me>
-\ve 0 = k \smul \ve 0 + \ve 0 = k \smul 0.
-  </me>
-  And we are done.
-        </p>
-        </solution>
+          k \smul (\ve 0 + \ve 0) = k \smul \ve 0 + k \smul 0
+        </me>.
+        We now know
+        <me>
+          k \smul \ve{0} = k \smul \ve 0 + k \smul 0
+        </me>.
+        Adding the inverse of <m>k \smul 0</m> to both sides we get
+        <me>
+          \ve 0 = k \smul \ve 0 + \ve 0 = k \smul 0
+        </me>
+        and we are done.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="fivevequals2v">
@@ -262,28 +268,30 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
       Prove that <m>\ve{v}=\ve{0}</m>.
     </p>
   </statement>
-        <solution>
-        <p>
-          <md>
-            <mrow>\amp  5 \smul v = 2\smul v </mrow>
-          <mrow> \amp \implies 5.v + (-2).v = 2.v + (-2).v </mrow>
-          <mrow>\amp \implies (5 - 2).v = (2 - 2).v </mrow>
-          <mrow> \amp \implies 3.v = 0.v </mrow>
-          <mrow> \amp \implies (\frac{1}{3} 3).v = (\frac{1}{3} 0) v </mrow>
-          <mrow> \amp \implies 1v = 0v </mrow>
-          <mrow> \amp \implies v = 0</mrow>
+    <solution>
+      <p>
+        <md>
+          <mrow>\amp  5 \smul v = 2\smul v </mrow>
+          <mrow> \amp \implies 5\smul v + (-2)\smul v = 2\smul v + (-2)\smul v </mrow>
+          <mrow>\amp \implies (5 - 2)\smul v = (2 - 2)\smul v </mrow>
+          <mrow> \amp \implies 3\smul v = 0\smul v </mrow>
+          <mrow> \amp \implies (\frac{1}{3} 3)\smul v = (\frac{1}{3} 0) \smul v </mrow>
+          <mrow> \amp \implies 1\smul v = 0\smul v </mrow>
+          <mrow> \amp \implies v = \ve{0}</mrow>
         </md>
-        </p>
-      </solution>
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="solve_for_x_exercise">
     <statement>
       <p>
-        Suppose that two vectors <m>\ve{x}</m> and <m>\ve{w}</m> in a vector space satisfy <m>2 \ve{x} + 6 \ve{w} = \ve{0}</m>.
-        Solve for <m>\ve{x}</m>,
-        showing explicitly how you use the rules of a vector space,
-        as in <xref ref="explicit_solve_x"/>.
+        Suppose that two vectors <m>\ve{x}</m> and
+        <m>\ve{w}</m> in a vector space satisfy
+        <m>2 \ve{x} + 6 \ve{w} = \ve{0}</m>.
+        Solve for <m>\ve{x}</m>, showing explicitly
+        how you use the rules of a vector space,
+        as in <xref ref="explicit_solve_x" text="global"/>.
       </p>
     </statement>
     <solution>
@@ -291,37 +299,41 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
         <md>
          <mrow>2 \smul \ve x + 6 \smul \ve w  \amp = \ve 0</mrow>
 
-          <mrow>\implies  (2 \smul \ve x + 6 \smul \ve w) + (-(6 \smul \ve w))  \amp =  \ve 0 + (-(6 \smul \ve w)) 
-           \amp (\text{add } -(6\smul\ve{w}) \text{ to both sides})</mrow>
+        <mrow>\implies  (2 \smul \ve x + 6 \smul \ve w) + (-(6 \smul \ve w))  \amp =  \ve 0 + (-(6 \smul \ve w)) 
+         \amp (\text{add } -(6\smul\ve{w}) \text{ to both sides})</mrow>
 
-          <mrow> \implies 2 \smul \ve{x} + (6 \smul \ve{w} + (-(6 \smul \ve{w}))) \amp = -(6 \smul \ve{w}) \amp (<xref ref="R2">R2</xref> \text{ on LHS}, <xref ref="R3a">R3a</xref> \text{on RHS})            
-          </mrow>
+        <mrow> \implies 2 \smul \ve{x} + (6 \smul \ve{w} + (-(6 \smul \ve{w}))) \amp = -(6 \smul \ve{w})
+        \amp (<xref ref="R2" text="global">R2</xref> \text{ on LHS}, <xref ref="R3a" text="global">R3a</xref> \text{on RHS}) </mrow>
 
-          <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)  \amp (<xref ref = "add_inv"/>) </mrow>
+        <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)  
+        \amp (<xref ref = "add_inv" text="global"/>) </mrow>
 
-           <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)  \amp (<xref ref = "R3b">R3b</xref>)</mrow>
+        <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)  
+        \amp (<xref ref = "R3b" text="global">R3b</xref>)</mrow>
 
-           <mrow> \implies  (\frac{1}{2})\smul (2 \smul \ve x) \amp = \frac{1}{2} \smul (-(6 \smul \ve{w}))  </mrow>
+        <mrow> \implies  (\frac{1}{2})\smul (2 \smul \ve x) \amp = \frac{1}{2} \smul (-(6 \smul \ve{w}))  </mrow>
 
-            <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6">R6</xref> \text{ on LHS, defn of inverse on RHS}) </mrow>
+        <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6" text="global">R6</xref> \text{ on LHS, definition of inverse on RHS}) </mrow>
 
 
-            <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
+        <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
 
-               <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7">R7</xref> \text{ on LHS})  </mrow>
+        <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7" text="global">R7</xref> \text{ on LHS})  </mrow>
 
-                <mrow>\implies  \ve x   \amp = ((\frac{1}{2})(-6))\smul \ve w  \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
+        <mrow>\implies  \ve x   \amp = ((\frac{1}{2})(-6))\smul \ve w  \amp (<xref ref="R6" text="global">R6</xref> \text{ on RHS}) </mrow>
 
-                <mrow> \implies \ve{x} \amp =  (-3)\smul \ve{w} </mrow>
-                </md>
-</p>
-</solution>
+        <mrow> \implies \ve{x} \amp =  (-3)\smul \ve{w} </mrow>
+      </md>
+    </p>
+  </solution>
   </exercise>
 
   <exercise>
     <statement>
     <p>
-      Suppose <m>V</m> is a vector space which is not the zero vector space. Show that <m>V</m> contains infinitely many elements.
+      Suppose <m>V</m> is a vector space which is not the
+      zero vector space. Show that <m>V</m> contains
+      infinitely many elements.
     </p>
   </statement>
   <hint xml:id="inf-elements-hint1">
@@ -331,7 +343,7 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
   </hint>
   <hint>
     <p>
-      Use the idea of the proof from <xref ref="fivevequals2v"/>.
+      Use the idea of the proof from <xref ref="fivevequals2v" text="type-global"/>.
     </p>
   </hint>
   </exercise>
@@ -340,19 +352,19 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
     <title>True or False</title>
     <introduction>
       <p>
-      For each of the following statements, write down whether the statement is true or false, and prove your assertion. (In other words, if you say that it is true, prove that it is true, and if you say that it is false, prove that it is false, by giving an <em>explicit counterexample</em>.)
+        For each of the following statements, write down whether the statement is true or false, and prove your assertion. (In other words, if you say that it is true, prove that it is true, and if you say that it is false, prove that it is false, by giving an <em>explicit counterexample</em>.)
       </p>
     </introduction>
     <exercise xml:id="is_k_equal_to_zero">
       <statement>
       <p>
-        If <m>k \smul \ve{v} = \ve{0}</m> in a vector space, then it necessarily follows that <m>k=0</m>.
+        If <m>k \smul \ve{v} = \ve{0}</m> in a vector space, then <m>k=0</m>.
       </p>
     </statement>
     <solution>
       <p>
         False. Take <m>\mathbb{R}^2</m> as an example. If <m>v = (0,0)</m> then
-        <m>2.(0,0) = (0,0) </m> but, of course, <m> 2 \neq 0</m>.
+        <m>2\smul(0,0) = (0,0) </m> but, of course, <m> 2 \neq 0</m>.
       </p>
       </solution>
     </exercise>
@@ -367,7 +379,7 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
     <exercise xml:id="empty_vector_space">
       <statement>
       <p>
-        The empty set can be equipped with data <xref ref="D1">D1</xref>, <xref ref="D2">D2</xref>, <xref ref="D3">D3</xref> satisfying the rules of a vector space.
+        The empty set can be equipped with data <xref ref="D1">D1</xref>, <xref ref="D2" text="global"></xref>, <xref ref="D3" text="title"></xref> satisfying the rules of a vector space.
       </p>
     </statement>
      <solution>
@@ -376,44 +388,40 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
     </p>
     </solution>
     </exercise>
-    
+
     <exercise>
       <statement>
       <p>
-      Rule <xref ref="R3b">R3b</xref> of a vector space follows automatically from the other rules.
+        Rule <xref ref="R3b" text="title"></xref> of a vector space follows automatically from the other rules.
       </p>
     </statement>
      <solution>
-      True. Combining <xref ref = "R1">R1</xref> and <xref ref = "R3a">R3a</xref> gives <xref ref="R3b">R3b</xref>.
+      True. Combining <xref ref = "R1" text="title"></xref> and <xref ref = "R3a" text="title"></xref> gives <xref ref="R3b" text="title"></xref>.
     </solution>
     </exercise>
 
     <exercise xml:id="R7_follows">
       <statement>
       <p>
-      Rule <xref ref="R7">R7</xref> of a vector space follows automatically from the other rules.
+        Rule <xref ref="R7" text="title"></xref> of a vector space follows automatically from the other rules.
       </p>
     </statement>
       <solution>
       <p>
         False. Let <m>V</m> be a non-zero vector space (such as <m>\mathbb{R}^2</m>). Redefine scalar multiplication as follows
         <me> 
-            k.v := 0 \mbox{ for all scalars k and all vectors v}.
-        </me>
+            k\smul v := 0 \text{ for all scalars }k\text{ and all vectors} v
+        </me>.
         Then <m>V</m> will satisfy all the rules of a vector space except R7. Thus it is not the case that R7 follows from the other rules.
       </p>
       </solution>
     </exercise>
-
   </exercisegroup>
 
 
 </exercises>
 
 <solutions divisional="solution answer" />
-
-
-
 
 
 </section>
