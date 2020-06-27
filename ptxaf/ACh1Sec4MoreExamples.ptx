@@ -318,7 +318,7 @@
 
       <p>
         Definieer die optellingsbewerking as
-        <men>
+        <men xml:id="add_op_functions">
           (f + g) (x) := f(x) + g(x),  x \in X
         </men>
       </p>
@@ -346,14 +346,14 @@
         Definieer die nul-vektor (wat ons hier as <m>z</m> gaan aandui)
         as die funksie wat die getal <m>0</m>
         lewer vir elke insetwaarde <m>x \in X</m>:
-        <men>
+        <men xml:id="zero_vec_functions">
           \ve{z} (x) := 0  \mbox{ vir alle \(x \in X\).}
         </men>
       </p>
 
       <p>
         Definieer skalaarvermenigvuldiging as
-        <men>
+        <men xml:id="smul_functions">
           (k \smul \mathbf{f})(x) := k \mathbf{f}(x)
         </men>.
       </p>
@@ -564,7 +564,7 @@
     </statement>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="strange_addition_R">
     <statement>
       <p>
         Definieer 'n snaakse optellingsbewerking
@@ -685,8 +685,8 @@
       (a_1, a_2) \oplus (b_1, b_2) := (a_1 + b_2, a_2 + b_1).
     </me>
     <ol>
-      <li> Bevredig hierdie bewerking <xref ref="R1">R1</xref>? </li>
-      <li> Bevredig hierdie bewerking <xref ref="R2">R2</xref>? </li>
+      <li> Bevredig hierdie bewerking <xref ref="R1" text="title">R1</xref>? </li>
+      <li> Bevredig hierdie bewerking <xref ref="R2" text="title">R2</xref>? </li>
     </ol>
     </p>
 </statement>
