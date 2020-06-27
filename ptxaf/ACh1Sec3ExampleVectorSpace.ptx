@@ -1,4 +1,4 @@
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ACh1Sec3ExampleVectorSpace">
+<section  xml:id="ACh1Sec3ExampleVectorSpace">
   <title>Eerste voorbeeld van 'n vektorruimte</title>
   <introduction>
     <p>
@@ -102,7 +102,7 @@
       <title>D3. Skalaarvermenigvuldiging</title>
       <p>
         Ons definieer skalaarvermenigvuldiging op <m>B</m>
-        soos volg: </br>
+        soos volg:
         Laat <m>k</m> 'n re&#xeb;le getal
         en <m>\ve{u} = (u_1, \, u_2, \, u_3)</m>
         'n element van <m>B</m> wees.
