@@ -215,11 +215,11 @@
         <me>
         -(-\ve{v}) = (-1)\smul(- \ve v) = (-1)\smul(-1\smul(\ve v)).
         </me>
-        Using <xref ref="R6" text="global"/> we get
+        Using <xref ref="R6" text="title"/> we get
         <me>
           (-1)\smul(-1(\ve v)) = ((-1)(-1))\smul\ve v = 1.\ve v.
         </me>
-        Finally, a single application of <xref ref="R7" text="global"/> allows us to conclude that
+        Finally, a single application of <xref ref="R7" text="title"/> allows us to conclude that
         <me>
           1\smul\ve v = \ve v
         </me>
@@ -237,7 +237,7 @@
     </statement>
     <solution>
       <p>
-        We apply <xref ref = "R3b" text="global"/> to <m>k \smul \ve{0}</m>:
+        We apply <xref ref = "R3b" text="title"/> to <m>k \smul \ve{0}</m>:
         <me>
           k \smul \ve{0} = k \smul (\ve 0 + \ve 0).
         </me>
@@ -303,24 +303,24 @@
          \amp (\text{add } -(6\smul\ve{w}) \text{ to both sides})</mrow>
 
         <mrow> \implies 2 \smul \ve{x} + (6 \smul \ve{w} + (-(6 \smul \ve{w}))) \amp = -(6 \smul \ve{w})
-        \amp (<xref ref="R2" text="global">R2</xref> \text{ on LHS}, <xref ref="R3a" text="global">R3a</xref> \text{on RHS}) </mrow>
+        \amp (<xref ref="R2" text="title"></xref> \text{ on LHS}, <xref ref="R3a" text="title"></xref> \text{on RHS}) </mrow>
 
         <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)  
         \amp (<xref ref = "add_inv" text="global"/>) </mrow>
 
         <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)  
-        \amp (<xref ref = "R3b" text="global">R3b</xref>)</mrow>
+        \amp (<xref ref = "R3b" text="title"></xref>)</mrow>
 
         <mrow> \implies  (\frac{1}{2})\smul (2 \smul \ve x) \amp = \frac{1}{2} \smul (-(6 \smul \ve{w}))  </mrow>
 
-        <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6" text="global">R6</xref> \text{ on LHS, definition of inverse on RHS}) </mrow>
+        <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6" text="title"></xref> \text{ on LHS, definition of inverse on RHS}) </mrow>
 
 
         <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
 
-        <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7" text="global">R7</xref> \text{ on LHS})  </mrow>
+        <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7" text="title"></xref> \text{ on LHS})  </mrow>
 
-        <mrow>\implies  \ve x   \amp = ((\frac{1}{2})(-6))\smul \ve w  \amp (<xref ref="R6" text="global">R6</xref> \text{ on RHS}) </mrow>
+        <mrow>\implies  \ve x   \amp = ((\frac{1}{2})(-6))\smul \ve w  \amp (<xref ref="R6" text="title"></xref> \text{ on RHS}) </mrow>
 
         <mrow> \implies \ve{x} \amp =  (-3)\smul \ve{w} </mrow>
       </md>
@@ -379,7 +379,7 @@
     <exercise xml:id="empty_vector_space">
       <statement>
       <p>
-        The empty set can be equipped with data <xref ref="D1">D1</xref>, <xref ref="D2" text="global"></xref>, <xref ref="D3" text="title"></xref> satisfying the rules of a vector space.
+        The empty set can be equipped with data <xref ref="D1" text="title">D1</xref>, <xref ref="D2" text="title"></xref>, <xref ref="D3" text="title"></xref> satisfying the rules of a vector space.
       </p>
     </statement>
      <solution>
