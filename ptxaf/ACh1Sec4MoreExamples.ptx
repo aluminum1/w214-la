@@ -429,7 +429,7 @@
           <li>
             <p>
               Vir die funksies wat jy in
-              <xref ref="three_function_question" /> geskryf het, bereken <m>\mathbf{f} + \mathbf{g}</m>,
+              <xref ref="three_function_question" text="global"/> geskryf het, bereken <m>\mathbf{f} + \mathbf{g}</m>,
               asook <m>3 \smul \mathbf{h}</m>.
             </p>
           </li>
@@ -473,7 +473,7 @@
   <exercise>
     <statement>
       <p>
-        Wys dat die data in <xref ref="add_op_functions"/>, <xref ref="zero_vec_functions"/>, <xref ref="smul_functions"/> reëls R1 tot R8 bevredig, sodat <m>\Fun(X)</m> 'n vektorruimte is.
+        Wys dat die data in <xref ref="add_op_functions" text="global"></xref>, <xref ref="zero_vec_functions" text="global"></xref>, en <xref ref="smul_functions" text="global"></xref> reëls R1 tot R8 bevredig, sodat <m>\Fun(X)</m> 'n vektorruimte is.
       </p>
     </statement>
   </exercise>
@@ -484,7 +484,7 @@
       <p>
         Die versameling <m>\Mat_{n,m}</m> van alle
         <m>n \times m </m> matrikse is 'n vektorruimte.
-        Sien <xref ref="AAppAReminderAboutMatrices">Bylae</xref>
+        Sien <xref ref="AAppAReminderAboutMatrices" text="type-global"></xref>
         om matrikse te hersien.
       </p>
     </statement>
@@ -494,7 +494,7 @@
     <statement>
       <p>
         Wys dat met die bewerkings (optelling en skalaarvermenigvuldiging) en nul-matriks
-        soos in  <xref ref="AppAReminderAboutMatrices">Bylae</xref> gedefinieer
+        soos in  <xref ref="AAppAReminderAboutMatrices" text="type-global"></xref> gedefinieer
         vorm die versameling <m>\Mat_{n, m}</m>
         van alle <m>n \times m</m>-matrikse 'n vektorruimte.
       </p>
@@ -558,8 +558,8 @@
   <exercise>
     <statement>
       <p>
-        Bewys dat die optellingsoperasie van
-        <xref ref="non_ass_ex">Oefening</xref> nie R2 bevredig nie.
+        Bewys dat die optellingsbewering van
+        <xref ref="non_ass_ex" text="global">Oefening</xref> nie R2 bevredig nie.
       </p>
     </statement>
   </exercise>
@@ -599,7 +599,7 @@
     </statement>
     <hint>
       <p>
-        Probeer om die formule van <xref ref="strange_addition_R"/> aan te pas.
+        Probeer om die formule van <xref ref="strange_addition_R" text="global"/> aan te pas.
       </p>
     </hint>
     <solution>
@@ -685,8 +685,8 @@
       (a_1, a_2) \oplus (b_1, b_2) := (a_1 + b_2, a_2 + b_1).
     </me>
     <ol>
-      <li> Bevredig hierdie bewerking <xref ref="R1" text="title">R1</xref>? </li>
-      <li> Bevredig hierdie bewerking <xref ref="R2" text="title">R2</xref>? </li>
+      <li> Bevredig hierdie bewerking <xref ref="R1" text="title"></xref>? </li>
+      <li> Bevredig hierdie bewerking <xref ref="R2" text="title"></xref>? </li>
     </ol>
     </p>
 </statement>
