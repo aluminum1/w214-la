@@ -527,7 +527,8 @@
     <statement>
       <p>
         Define an addition operation on the set
-        <m>X := \{ \ve{0}, \, \ve{a}, \, \ve{b} \}</m> by the following table:
+        <m>X := \{ \ve{0}, \, \ve{a}, \, \ve{b} \}</m>
+        by using the following table:
         <me>
           \begin{array}{c|ccc}
           + \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\ 
@@ -540,9 +541,11 @@
       </p>
 
       <p>
-        This table works as follows.
+        This table works as follows:
         To calculate, for example, <m>\ve{b} + \ve{a}</m>,
-        find the intersection of the row labelled by <m>\ve{b}</m> with the column labelled by <m>\ve{a}</m>.
+        find the intersection of
+        the row labelled by <m>\ve{b}</m>
+        with the column labelled by <m>\ve{a}</m>.
         We see that <m>\ve{b} + \ve{a} := \ve{a}</m>.
       </p>
 
@@ -555,7 +558,8 @@
   <exercise>
     <statement>
       <p>
-        Prove that the addition operation from <xref ref="non_ass_ex">Exercise</xref> does not satisfy R2.
+        Prove that the addition operation from
+        <xref ref="non_ass_ex">Exercise</xref> does not satisfy R2.
       </p>
     </statement>
   </exercise>
@@ -563,7 +567,8 @@
   <exercise xml:id="strange_addition_R">
     <statement>
       <p>
-        Define a strange new addition operation <m>\hat{+}</m> on <m>\mathbb{R}</m> by
+        Define a strange new addition operation
+        <m>\hat{+}</m> on <m>\mathbb{R}</m> by
         <me>
           x \hat{+} y := x - y, \qquad x, y \in \mathbb{R}
         </me>.
@@ -588,17 +593,21 @@
     <exercise xml:id="strange_addition_R_new">
     <statement>
       <p>
-        Construct an operation <m>\boxplus</m> on <m>\mathbb{R}</m> satisfying R1 but not R2.
+        Construct an operation <m>\boxplus</m> on
+        <m>\mathbb{R}</m> satisfying R1 but not R2.
       </p>
     </statement>
-    <hint> 
+    <hint>
       <p>
         Try adjusting the formula from <xref ref="strange_addition_R"/>.
       </p>
     </hint>
      <solution>
       <p>
-        Define <m> x\boxplus y = | x - y | </m>. R1 is satisfied since <m> x \boxplus y = | x - y | = | y -x | = y \boxplus x</m>. However, R2 is not satisfied since
+        Define <m> x\boxplus y = | x - y | </m>.
+        Then R1 is satisfied since
+        <m> x \boxplus y = | x - y | = | y -x | = y \boxplus x</m>.
+        However, R2 is not satisfied since
         <m> (1 \boxplus 2) \boxplus 3 = | |1-2| -3| = 2  </m> but <m> 1 \boxplus ( 2 \boxplus 3) = | 1 - |2-3| = 0 </m>
       </p>
       </solution>
@@ -609,49 +618,53 @@
       <p>
         Let <m>\mathbb{R}^+</m> be the set of positive real numbers.
         Define an addition operation <m>\oplus</m>,
-        a zero vector <m>z</m> and a scalar multiplication <m>.</m>on <m>\mathbb{R}^+</m> by
+        a zero vector <m>z</m> and a
+        scalar multiplication <m>\smul</m>on <m>\mathbb{R}^+</m> by
         <md>
           <mrow>x \oplus y \amp := xy</mrow>
           <mrow>z \amp  := 1</mrow>
           <mrow>k \smul x \amp := x^k</mrow>
         </md>
-        where <m>x, y \in \mathbb{R}^+</m>, 
-        and <m>k</m> is a scalar (i.e. an arbitrary real number).
+        where <m>x, y \in \mathbb{R}^+</m>, and <m>k</m>
+        is a scalar (i.e. an arbitrary real number).
 
         <ol>
           <li>
             <p>
               Check that these operations are well-defined.
-              For instance,
-              is <m>x+ y \in \mathbb{R}^+</m>, as it should be?
+              For instance, is <m>x+ y \in \mathbb{R}^+</m>,
+              as it should be?
             </p>
           </li>
 
           <li>
             <p>
-              Check that these operations satisfy R1 to R8. 
+              Check that these data satisfy  the rules
+              R1 to R8.
             </p>
           </li>
         </ol>
       </p>
-      <p>
-        We conclude that <m>\mathbb{R}^+</m>, equipped with these operations, forms a vector space.
-      </p>
     </statement>
     <solution>
-<p>
+    <p>
       <ol>
         <li>
           <p>
-            Let <m>x,y</m> be two positive reals. Then 
+            Let <m>x,y</m> be two positive reals. Then
             <md>
             <mrow>x \oplus y \amp := xy</mrow>
           </md>
-          is certainly also a positive real number. Similarly, for any <m>k \in R</m> and any <m> x \in \mathbb{R}^+</m>, 
+          is certainly also a positive real number.
+          Similarly, for any <m>k \in R</m> and any
+          <m> x \in \mathbb{R}^+</m>,
           <md>
-<mrow>k \smul x \amp := x^k</mrow>
+            <mrow>k \smul x \amp := x^k</mrow>
           </md>
-          is also positive. To see this, for any fixed <m> k</m>, notice that the graph of the function <m>f(x) = x^k</m>restricted to <m>x \ge 0 </m> lies above the <m>x</m>-axis.
+          is also positive. To see this, for any fixed
+          <m> k</m>, notice that the graph of the
+          function <m>f(x) = x^k</m> restricted to
+          <m>x \ge 0 </m> lies above the <m>x</m>-axis.
           </p>
         </li>
 
@@ -661,9 +674,8 @@
           </p>
         </li>
       </ol>
- </p>
+    </p>
     </solution>
- 
   </exercise>
 
   <exercise>
@@ -683,7 +695,7 @@
     <ol>
       <li>
         <p>
-          No. Counterexample:
+          No &mdash; here is a counterexample:
           <me>
            (1, 2) \oplus (2, 1) = (1 + 1, 2 + 2) = (2,4)
           </me>
@@ -696,7 +708,7 @@
 
       <li>
         <p>
-          No. Counterexample:
+          No &mdash; here is a counterexample:
           <me>
            ((1, 2) \oplus (2, 1)) \oplus (1,3) = (2, 4) \oplus (1,3) = (5, 5)
           </me>
@@ -714,10 +726,6 @@
 </exercises>
 
 <solutions divisional="solution answer" />
-
-
-
-
 
 
 </section>
