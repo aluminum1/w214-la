@@ -1,15 +1,19 @@
-This is a file where some conventions and shortcuts are kept for authors in these documents:
+This is a file where some conventions and shortcuts are kept for authors in these documents as well as some things to keep in mind to make PreTeXt work:
 
+
+
+
+
+
+
+NOTATIONS
 vectors:				\ve{v}
 scalar product:			\smul
-e with umlaut			&#xeb;
-e with circumflex		&#xea;
 
 
 
 
-
-Glossary for translation
+GLOSSARY (for translation)
 
 well-defined		wel-gedefinieerd
 summation			optelling
