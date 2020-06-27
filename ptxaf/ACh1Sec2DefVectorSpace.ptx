@@ -1,6 +1,6 @@
 
 
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ACh1Sec2DefVectorSpace">
+<section xml:id="ACh1Sec2DefVectorSpace">
   <title>Definisie van 'n abstrakte vektorruimte</title>
   <p>
     Wiskunde behels die identifisering van patrone.
@@ -177,7 +177,7 @@
 
       <li>
         <p>
-          Gaan na dat hierdie data aan re&#xeb;ls (R1) &ndash; (R8) voldoen.
+          Gaan na dat hierdie data aan re&#xeb;ls (R1) <mdash /> (R8) voldoen.
         </p>
       </li>
     </ol>
