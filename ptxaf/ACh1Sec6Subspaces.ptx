@@ -1,9 +1,9 @@
 <section xml:id="ACh1Sec6Subspaces">
   <title>Deelruimtes</title>
   <introduction>
-    <p>In hierdie deel san ons die konsep van 'n <em>deelruimte</em> bekend stel. Dié konsep sal ons toelaat om vinnig nuwe voorbeelde van
-    vektorruimtes te vind.
-  </p>
+    <p>
+      In hierdie afdeling sal ons die konsep van 'n <em>deelruimte</em> bekend stel. Hierdie konsep sal ons toelaat om vinnig nuwe voorbeelde van vektorruimtes te vind.
+    </p>
   </introduction>
 
 <subsection>
@@ -12,8 +12,9 @@
   <definition xml:id="defn-subspace">
     <statement>
       <p>
-        'n deelversameling <m>U \subseteq V</m> van 'n vektor-ruimte
-        <m>V</m> is 'n <term>deelruimte van <m>V</m></term> as:
+        'n Deelversameling <m>U \subseteq V</m> van 'n
+        vektor-ruimte <m>V</m> word 'n <term>deelruimte</term>
+        van <m>V</m> genoem as:
 
         <ul>
           <li>
@@ -31,9 +32,9 @@
 
           <li>
             <p>
-              Vir alle skalare <m>k</m> en alle vektore <m>\ve{u} \in U</m>,
-              <m>k \cdot
-              \ve{u} \in U</m>
+              Vir alle skalare <m>k</m> en alle vektore
+              <m>\ve{u} \in U</m>,
+              <m>k \smul \ve{u} \in U</m>
             </p>
           </li>
         </ul>
@@ -41,37 +42,75 @@
     </statement>
   </definition>
 
+  <p>
+    Wanneer <m>U</m> 'n deelversameling van 'n vektorruimte
+    <m>V</m> is, dan kan ons elemente in <m>U</m> probeer
+    bymekaartel of een element in <m>U</m> met 'n skalaar
+    probeer vermenigvuldig asof dit elemente van <m>V</m>
+    is. Aangesien hierdie twee bewerkings bewerkings op
+    <m>V</m> is, sal dit altyd 'n element van <m>V</m>
+    gee. Maar selfs al is al jou insette elemente van
+    die deelversameling <m>U</m>, is die uitset van die
+    bewerking nie noodwendig in <m>U</m> nie (maar definitief
+    in <m>V</m>).
+  </p>
+  <p>
+    As <m>U</m> egter 'n deelruimte is, dan is hierdie uitsette
+    almal wel in <m>U</m> volgens
+    <xref ref="defn-subspace" text="type-global" />. In
+    hierdie geval sê ons dat die bewerkings op <m>V</m>
+    <term>beperk tot</term> bewerkings op <m>U</m>. In die
+    volgende hulpstelling sien ons dat as ons hierdie
+    beperkte bewerkings gebruik as die data vir <m>U</m>,
+    dan is <m>U</m> ook 'n vektorruimte.
+  </p>
+  <remark><p>
+    Party handboeke sal die eienskap in
+    <xref ref="subspace_lem" text="type-global" /> gebruik
+    as die definisie van 'n deelruimte en
+    <xref ref="defn-subspace" text="type-global" /> dan as
+    'n gevolg aflei.
+  </p></remark>
+  <remark><p>
+    Daar is baie min onderskeid tussen 'n bewerking op
+    <m>V</m> en sy beperking tot <m>U</m>. Party mense sal
+    hulle selfs dieselfde noem, want as jy die bewerking
+    op twee elemente uit <m>U</m> toepas, dan sal jy
+    diselfde antwoord in albei gevalle kry.
+  </p></remark>
+
   <lemma xml:id="subspace_lem">
     <statement>
       <p>
-        As <m>U</m> 'n deelruimte van 'n vektorruimte <m>V</m> is,
-        dan is <m>U</m>
-        ook 'n vektorruimte, toegerus met dieselfde sommeringsbewerking,
-        nul-vektor en skalaarvermenigvuldigingsbewerking as <m>V</m>.
+        Veronderstel dat <m>U</m> 'n deelruimte van 'n
+        vektorruimte <m>V</m> is. As ons <m>U</m> toerus
+        met die beperkte bewerkings van optelling en
+        skalaarvermenigvuldiging vanaf <m>V</m>, dan is
+        <m>U</m> 'n vektorruimte.
       </p>
     </statement>
   </lemma>
 
   <proof>
     <p>
+      <todo> Rephrase based on new lemma statement </todo>
       Aangesien <m>U</m> 'n deelruimte is,
       weet ons dat dit sin maak om
-      dit <q>toe te rus met dieselfde sommeringsbewerking, nul-vektor en
+      dit <q>toe te rus met dieselfde optellingsbewerking, nul-vektor en
       skalaarvermenigvuldigingsbewerking as <m>V</m></q>.
       (As <m>U</m> <em>nie</em> 'n
       deelruimte was nie, dan sou ons byvoorbeeld kon vind dat
-      <m>\ve{u},
-      \ve{u}' \in U</m> maar <m>\ve{u}+\ve{u}' \notin U</m>, So die
-      sommeringsbewerking sou nie sin maak nie.)
+      <m>\ve{u}, \ve{u}' \in U</m> maar <m>\ve{u}+\ve{u}' \notin U</m>,
+      so die optellingsbewerking sou nie sin maak nie.)
     </p>
 
     <p>
-      So ons moet net re&#xeb;ls R1 tot R8 nagaan.
-      Aangesien die re&#xeb;ls
-      geld vir alle vektore <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>, Sal hulle beslis
-      geld vir alle vektore <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m>.
-      So re&#xeb;ls R1
-      tot R8 word bevredig.
+      So ons moet net reëls R1 tot R8 nagaan.
+      Aangesien die reëls vir alle vektore
+      <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m> geld,
+      sal hulle beslis vir alle vektore
+      <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m> geld.
+      So reëls R1 tot R8 word bevredig.
     </p>
   </proof>
 </subsection>
@@ -91,14 +130,14 @@
       <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
       <image width="50%">
       <latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
-  \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-  \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+        <![CDATA[\begin{tikzpicture}
+        \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+        \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+        \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
       </latex-image>
       </image>
       </figure>
   </sidebyside>
-      
 
       <p>
         Onthou dat lyn <m>L</m> gespesifiseer kan word deur 'n homogene line&#xea;re
@@ -222,7 +261,7 @@
 
       <p>
         Nog 'n rede dat <m>L</m> nie 'n deelruimte is nie is dat dit nie geslote
-        onder sommering is nie: As ons twee nie-nul vektore <m>\ve{v}</m> en
+        onder optelling is nie: As ons twee nie-nul vektore <m>\ve{v}</m> en
         <m>\ve{v}'</m> op <m>L</m> bymekaar tel,
         kry ons 'n vektor <m>\ve{v} + \ve{v}'</m> wat
         nie op <m>L</m> l&#xea; nie:
@@ -563,7 +602,7 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
           <mrow>\sin(A) \cos(B) \amp = \frac{1}{2}(\sin(A-B) + \sin(A+B))</mrow>
           <mrow>\cos(A)\cos(B) \amp = \frac{1}{2}(\cos(A-B) + \cos(A+B))</mrow>
         </md>
-        wat maklik volg uit die sommeringsformules
+        wat maklik volg uit die optellingsformules
         <md>
           <mrow>\sin(A \pm B) \amp = \sin A \cos B \pm \cos A \sin B</mrow>
           <mrow>\cos(A \pm B) \amp = \cos A \cos B \mp \sin A \sin B</mrow>
@@ -899,8 +938,8 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
       <p>
         Gee 'n voorbeeld van 'n nie-le&#xeb;
         deelversameling <m>U</m>
-        van <m>\mathbb{R}^2</m> wat geslote is onder sommering en die vind van
-        sommeringsinverses (i.e. as <m>\ve{u}</m> in <m>U</m> is,
+        van <m>\mathbb{R}^2</m> wat geslote is onder optelling en die vind van
+        optellingsinverses (i.e. as <m>\ve{u}</m> in <m>U</m> is,
         dan is <m>-\ve{u}</m> in
         <m>V</m>), maar ni&#xe9; 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
       </p>
