@@ -2,8 +2,8 @@
   <title>Subspaces</title>
   <introduction>
     <p>
-    In this section we will introduce the notion of a <em>subspace</em> of a vector space. This notion will allow us to quickly establish many more examples of vector spaces.
-    </p> 
+      In this section we will introduce the notion of a <em>subspace</em> of a vector space. This notion will allow us to quickly establish many more examples of vector spaces.
+    </p>
   </introduction>
 
   <subsection>
@@ -12,8 +12,9 @@
   <definition xml:id="defn-subspace">
     <statement>
       <p>
-        A subset <m>U \subseteq V</m> of a vector space <m>V</m> is called a
-        <term>subspace</term> of <m>V</m> if:
+        A subset <m>U \subseteq V</m> of a vector space
+        <m>V</m> is called a <term>subspace</term> of
+        <m>V</m> if:
 
         <ul>
           <li>
@@ -31,7 +32,8 @@
 
           <li>
             <p>
-              For all scalars <m>k</m> and all vectors <m>\ve{u} \in U</m>,
+              For all scalars <m>k</m> and all vectors
+              <m>\ve{u} \in U</m>,
               <m>k \smul\ve{u} \in U</m>
             </p>
           </li>
@@ -40,18 +42,57 @@
     </statement>
   </definition>
 
+<p>
+    When <m>U</m> is a subset of a vector space
+    <m>V</m>, then we can try to add two elements in <m>U</m>
+    or try to multiply one element in <m>U</m> with a scalar
+    as though they all were elements of <m>V</m>.
+    Since these two operations are operations on
+    <m>V</m>, the output will always be an element in <m>V</m>.
+    But even if all the input elements are in the subset
+    <m>U</m>, the outputs of these operations might not
+    necessarily be in <m>U</m> (although they are definitely
+    in <m>V</m>).
+  </p>
+  <p>
+    However, if <m>U</m> is a subspace, then these output
+    values will be in <m>U</m> according to
+    <xref ref="defn-subspace" text="type-global" />. In
+    this case we say that the operations on <m>V</m>
+    <term>restrict to</term> operations on <m>U</m>. In the
+    following lemma we see that these restricted operations
+    can be used to form the data that turns <m>U</m>,
+    into a vector space.
+  </p>
+  <remark><p>
+    Some textbooks will use the property in
+    <xref ref="subspace_lem" text="type-global" />
+    as the definition of a subspace and will then derive
+    <xref ref="defn-subspace" text="type-global" />
+    as a consequence.
+  </p></remark>
+  <remark><p>
+    There is very little that distinguishes an operation
+    on <m>V</m> from its restriction to <m>U</m>. Some
+    people will even call these operations the same, because
+    if you performed the operation on two elements from
+    <m>U</m> you will get the same answer in both cases.
+  </p></remark>
+
   <lemma xml:id="subspace_lem">
     <statement>
       <p>
-        If <m>U</m> is a subspace of a vector space <m>V</m>,
-        then <m>U</m> is also a vector space,
-        when we equip it with the same addition operation,
-        zero vector and scalar multiplication as in <m>V</m>.
+        Suppose that <m>U</m> is a subspace of a vector
+        space <m>V</m>. If we equip <m>U</m> with the
+        restricted operations addition and scalar
+        multiplication from <m>V</m>, then <m>U</m>
+        is a vector space.
       </p>
     </statement>
   </lemma>
 
   <proof>
+    <todo> Rephrase based on new lemma statement </todo>
     <p>
       Since <m>U</m> is a subspace,
       we know that it actually makes sense to
@@ -65,8 +106,10 @@
 
     <p>
       So we simply need to check the rules R1 to R8.
-      Since these rules hold for all vectors <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>,
-      they certainly hold for all vectors <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m>.
+      Since these rules hold for all vectors
+      <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>,
+      they certainly hold for all vectors
+      <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m>.
       So R1 to R8 are satisfied.
     </p>
   </proof>
@@ -87,14 +130,15 @@
       <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
       <image width="50%">
       <latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
-  \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-  \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+        <![CDATA[\begin{tikzpicture}
+        \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+        \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+        \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
       </latex-image>
       </image>
       </figure>
   </sidebyside>
-    
+
     <p>
       Indeed, recall that <m>L</m> can be specified by a homogenous linear equation of the form:
       <men xml:id="eqn_of_L">
