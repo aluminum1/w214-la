@@ -5,15 +5,14 @@
   <introduction>
     <p>
       In hierdie kursus konsentreer ons op
-      <em>eindigdimensionele</em>
+      <em>eindig dimensionele</em>
       vektorruimtes, wat ons in hierdie hoofstuk sal definieer.
     </p>
 
     <assemblage>
       <p>
         <em>Waarskuwing</em>: Van hier af verder gaan ek verkorte notasie
-        vir skalaarvermenigvuldiging gebruik en <m>k \cdot \ve{v}</m> bloot as <m>k
-        \ve{v}</m> skryf!
+        vir skalaarvermenigvuldiging gebruik en <m>k \cdot \ve{v}</m> bloot as <m>k \ve{v}</m> skryf!
       </p>
     </assemblage>
   </introduction>
