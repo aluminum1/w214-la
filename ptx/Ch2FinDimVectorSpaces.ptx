@@ -17,12 +17,10 @@
     </assemblage>
   </introduction>
 
-
   <xi:include  href="Ch2Sec1LinearCombinationSpan.ptx" />
   <xi:include  href="Ch2Sec2LinearIndependence.ptx" />
   <xi:include  href="Ch2Sec3BasisDimension.ptx" />
   <xi:include  href="Ch2Sec4CoordinateVectors.ptx" />
   <xi:include  href="Ch2Sec5ChangeOfBasis.ptx" />
-
 </chapter>
 
