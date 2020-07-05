@@ -1,0 +1,65 @@
+
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch1Motivation">
+  <title>Motivation for introducting abstract vector spaces</title>
+  <p>
+    There are many ways to motivate the introduction of abstract vector spaces, three of which we list here. We first give an overview and then expand on each of them in more detail.
+  </p>
+
+  <p>
+    In many applications of linear algebra it is possible to simply set up a vector that contains the relevant information. But there are some applications where one really need infinite dimensional vector spaces. One such instance is in statistics where a probability distrbituion could be an infinite sequence of probabilities or even a continuous function. Another is in signal analysis where you want to transform a signal into its frequency components. In general this is a correspondence between two infinite dimensional vector spaces. It would be impractical to redo the theory of linear algebra for each new instance. Abstraction allows us to do it once and apply the theory to each of those situations.
+  </p>
+
+  <p>
+    The second motivation takes into account a topic that we will treat later in this course, namely linear maps (also called linear transformations). For a map to be linear one needs to be able to add elements and multiply them by scalars. So, such a map cannot make sense unless the domain and codomain of the linear map are vector spaces.
+  </p>
+
+  <p>
+    The third motivation lies in how we solve problems. When we cast a problem into the language of vectors, there are two approaches we can take. The first is to put the relevant data into a vector and use the operations we are used to. The second is to keep the data as it is originally given to you, but . The disadvantage of the first is that you have to choose up front how you want to represent the data, e.g. in what order do you enter the data, and keep track of it the whole time. The disadvantage of the second is that it takes effort and a bit of a paradigm shift to get used to thinking in a <q>basis-free</q> way. But the pay-off is ultimately that you reduce your cognitive load <mdash /> the amount of information that you need to keep track of while solving the problem. Abstraction is one of those things that you think you can do without at the start, but at the end you realise that you can think so much more efficiently by employing its ideas.
+  </p>
+
+  <subsection>
+    <title> Motivation 1: Applications of infinite-dimensional vector spaces</title>
+    <p>
+
+    </p>
+  </subsection>
+
+  <subsection>
+    <title> Motivation 2: Linear maps</title>
+      <p> <!-- Part of the second motivation - split off because it became to long at the top -->
+        Differentiation and integration are linear maps, meaning that they satisfy
+        <me> \frac{d}{dx}(f+g)(x) = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)</me>
+        and
+        <me> \frac{d}{dx}(cf)(x) = c\frac{d}{dx} f(x)</me>.
+        More generally a linear transformation is a function from a set <m>V</m> to a set <m>W</m> satisfying
+        <me> T(v_1+v_1) = T(v_1) + T(v_2) \text{ and }T(c\cdot v) = c\cdot T(v) </me>.
+        There are many other instances of linear maps. In geometry, rotations, projections and reflections are all linear maps; in image processing certain compression algorithms are linear maps; and in signal analysis the map that takes a signal to its frequency components is a linear map.
+      </p>
+
+      <p>
+        Such a linear map might not make sense for any sets <m>V</m> and <m>W</m>. You need to be able to add elements of <m>V</m>, otherwise the quantity <m>T(v_1+v_2)</m> would not make sense. Similarly, you also need to be able to multiply elements in <m>V</m> with scalars, otherwise <m>T(c\cdot v)</m> would not make sense. Furthermore, we need to be able to add elements in <m>W</m> and multiply them by scalars, otherwise the two quantities <m>T(v_1)+T(v_2)</m> and <m>c\cdot T(v)</m> wouldn't make sense. Remember that <m>v_1</m> is an element of <m>V</m>, but since <m>T</m> maps from <m>V</m> to <m>W</m>, the quantity <m>T(v_1)</m> is an element of <m>W</m>. Thus we need to be able to add and multiply by scalars on both the domain and codomain of <m>T</m>.
+      </p>
+
+      <p>
+        The rules that need to be satisfied simply means that addition and scalar multiplication work in the way we want it to work. Alternatively, we would like to study linear maps between many varieties of vector spaces, including our model vector space <m>\mathbb{R}^n</m>. For this to work, we need the operations in an arbitrary vector space to work in the same way as in <m>\mathbb{R}^n</m>. Otherwise we might run into trouble when we have a linear map <m>T:\mathbb{R}^n\to W</m>. Say, for example, we wanted some space <m>W</m> where the equation <m>w_1+w_2=w_2+w_1</m> does not always hold. The problem is that if we have vectors <m> v_1,v_2\in\mathbb{R}^n</m> that satisfy <m>T(v_1)=w_1</m> and <m>T(v_2)=w_2</m>, respectively, then we must have
+        <me>
+        	w_1+w_2 = T(v_1)+T(v_2) = T(v_1+v_2) = T(v_2+v_1) = T(v_2)+T(v_1) = w_2+w_1
+	    </me>.
+      </p>
+
+      <p>
+        We are forced to take only operations that behave similarly to those on <m>\mathbb{R}^n</m>, at least as far as relations that involve addition and scalar multiplication are concerned.
+      </p>
+
+      <p>
+        Apart from the rules about addition and scalar multiplication that are listed, there are many others that are satisfied in <m>\mathbb{R}^n</m>. But throughout many years mathematicians have found that they can all be deduced from the ones that are listed as rules. It turns out that just requiring the rules we listed in the definition gives a theory that is well behaved and really captures a wide range of situations we may be interested in.
+      </p>
+  </subsection>
+
+  <subsection>
+   <title>Motivation 3: It helps us think more efficiently </title>
+   <p>
+
+   </p>
+</section>
