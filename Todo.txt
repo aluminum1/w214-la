@@ -1,16 +1,21 @@
 To do list:
 
 - In 1.4 the English denotes functions f while Afrikaans does \mathbf{f}. Perhaps use a macro \fun{} that can be changed in one place?
-- Change \mbox 'es to \text to conform to specifications in Sample Article. Also make sure there is no "maths inside a text box"
+- Change \mbox to \text to conform to specifications in Sample Article. Also make sure there is no "maths inside a text box"
 - Can the first two lemmas in 1.5 be written using more words?
 
 
-
 Afrikaans:
-- Checkpoint 1.4.15 has broken link
-- In Oefening 1.4.1.2, the link to 1.4.1.1 doesn't display the knowl
-  
+- Proof of Lemma id="subspace-lem" in Ch1Sec6
+- Ch1Sec6 translate from line 293 and from line 606
+- Ch2Sec1 translate from line 38 and from 195 and from 345
+
+
 
 I would like to add
 - learning outcomes for each section
 - link exercises or groups of exercises to these learning outcomes.
+
+Use??
+- <objective>?
+- <reading-questions>?
