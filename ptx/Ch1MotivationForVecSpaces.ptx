@@ -21,13 +21,36 @@
   <subsection>
     <title> Motivation 1: Applications of infinite-dimensional vector spaces</title>
     <p>
+      We can use the dot product between two vectors to determine how much the one goes in the direction of the other one. For example, if <m>\ve{u}</m> is a unit vector, then <m>(\ve{u}\cdot \ve{v})\smul u</m> is the vector in the direction of <m>\ve{u}</m> that goes as far in that direction as <m>\ve{v}</m> does. Stated differently, the vector <m>\ve{v}-(\ve{u}\cdot \ve{v})\ve{u}</m> is orthogonal to <m>\ve{u}</m>.
+    </p>
 
+    <p>
+      In statistics, there is a notion of how well two random samples or random variables <q>go in the same direction</q> called the <term>covariance</term> between them. 
+      <!-- Here is something I wrote, but I am very unsure now of whether it makes sense:
+      When there are only finitely many outcomes (say <m>i=1,2,\ldots, n</m>) with probabilities <m>w_1,\ldots, w_n</m> and <m>(x_1,\ldots, x_n)</m> and <m>(y_1,\ldots, y_n)</m> are two vectors representating ... what? Experimental data? How do the probabilities fit in with this? I need to read up on this again. Then the covariance between <m>x</m> and <m>y</m> is defined as
+      <me> w_1x_1y_1+\cdots + w_nx_ny_n</me>
+      which looks a lot like a dot product, except for those weights <m>w_1,\ldots, w_n</m>. In fact, this is something called an inner product, which is an essential tool in studying general vector spaces.
+
+    -->
+    </p>
+
+    <p>
+      The covariance defined in the previous paragraph can be extended to cases where we have an infinite number of
+      <!-- 
+       ... again - what? Read up! 
+       If the ?? is an infinite number, corresponding to one for each positive integer, then we can define the covariance as an infinite sum
+       <me> w_1x_1y_1+w_2x_2y_2+\cdots <me>
+       in cases where this sum converges. But if the possible states (?) are continuous, say all real numbers between 0 and 1, then we need a continuous analogue of a sum <mdash/> an integral!
+       <me> \int_0^1 w_tx_ty_t dt</me>
+       In each of these cases we would like to study the objects <m>x</m> and <m>y</m> as though they were vectors and use the inner product to speak about sizes, directions, projections and ortogonality (which, by the way, corresponds roughly to events being independent). To do this we need a more general framework for what a vector can look like. One framework that works is the one we introduced <mdash/> the one of abstract vector spaces.
+
+      -->
     </p>
   </subsection>
 
   <subsection>
     <title> Motivation 2: Linear maps</title>
-      <p> <!-- Part of the second motivation - split off because it became to long at the top -->
+      <p>
         Differentiation and integration are linear maps, meaning that they satisfy
         <me> \frac{d}{dx}(f+g)(x) = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)</me>
         and
@@ -45,7 +68,7 @@
         The rules that need to be satisfied simply means that addition and scalar multiplication work in the way we want it to work. Alternatively, we would like to study linear maps between many varieties of vector spaces, including our model vector space <m>\mathbb{R}^n</m>. For this to work, we need the operations in an arbitrary vector space to work in the same way as in <m>\mathbb{R}^n</m>. Otherwise we might run into trouble when we have a linear map <m>T:\mathbb{R}^n\to W</m>. Say, for example, we wanted some space <m>W</m> where the equation <m>w_1+w_2=w_2+w_1</m> does not always hold. The problem is that if we have vectors <m> v_1,v_2\in\mathbb{R}^n</m> that satisfy <m>T(v_1)=w_1</m> and <m>T(v_2)=w_2</m>, respectively, then we must have
         <me>
         	w_1+w_2 = T(v_1)+T(v_2) = T(v_1+v_2) = T(v_2+v_1) = T(v_2)+T(v_1) = w_2+w_1
-	    </me>.
+	      </me>.
       </p>
 
       <p>
@@ -55,11 +78,59 @@
       <p>
         Apart from the rules about addition and scalar multiplication that are listed, there are many others that are satisfied in <m>\mathbb{R}^n</m>. But throughout many years mathematicians have found that they can all be deduced from the ones that are listed as rules. It turns out that just requiring the rules we listed in the definition gives a theory that is well behaved and really captures a wide range of situations we may be interested in.
       </p>
+
+      <p>
+        In summary: we study abstract vector spaces, because they form the natural framework that allows us to study linear maps. We need to be able to add elements and multiply them by scalars.
+      </p>
   </subsection>
 
   <subsection>
    <title>Motivation 3: It helps us think more efficiently </title>
    <p>
-
+     One application of linear algebra is in image processing.
+     An image is stored on a computer as a rectangular array,
+     where each entry in the array contains three integers
+     between 0 and 255 denoting the intensity at which the red,
+     blue and green (RGB) lights at that pixel should fire.
+     One kind of transormation that one sometimes wants to
+     perform is to <em>blur</em> the image. This is achieved
+     by replacing each entry with a weighted average of the
+     current values of itself and its neighbouring pixels.
    </p>
+
+   <p>
+     If you represent this image as a column vector
+     (i.e. if you only care about the vector spaces
+     <m>\mathbb{R}^n</m> and nothing else), then you
+     have to keep track of how you represent the data.
+     Do you go by rows first or columns first? Do you
+     start at the bottom of the screen (as is usual in the
+     <m>xy</m>-plane) or from the top (since computers
+     generally use the <m>y</m> value 0 at the top and
+     increase as you move down)? And if you need to explain
+     your thinking to someone else, will they use the same
+     conventions, or will they try to convince you that
+     their way of representing the data is better?
+   </p>
+
+   <p>
+     If you simply use the array to store the data, then it
+     is very easy to get the neighbouring pixels
+     (<m>x\pm 1</m> and <m> y\pm 1</m>).
+   </p>
+
+   <p>
+     Another example is if you want to do a piecewise cubic interpolation. Let's say you want a function that is a cubic polynomial on some interval <m> (0,t)</m> and a (possibly different) cubis polynomial on the interval <m> (t,s) </m>. You may be given some points through which this function passes or some of its turning points. You are also given that at <m>x=t</m> the function is twice differentiable. This means that the function is relatively smooth. This kind of thing can be used, for example, in the design of roller coasters, where the second derivative equals the force someone feels when aboard. This force should not change abruptly. Another places one sees this is in graphics design when creating vector graphics.
+   </p>
+
+   <p>
+     The <q>basis-free</q> approach would be to think simply of the function as an object. Maybe eventually you will write down the two pieces as <m> a_1+b_1x+c_1x^2+d_1x^3</m> and <m> a_2+b_2x+c_2x^2+d_3x^3</m>. If you want to store it as a column vector, you could store it as a column vector
+     <me> \begin{bmatrix} a\\b\\c\\d\\e\\f \end{bmatrix} </me>
+     where the function is defined as
+     <me> 
+       f(x) = \left\{\begin{array}{cl} a+bx+cx^2+dx^3 &amp; \text{if } x\lt t\\ (??) + (??)x+ (c+3dt-3et)x^2 + ex^3 &amp; \text{if }x\ge t \end{array}\right.
+     </me>.
+     This is acceptable, but much harder to work with than having generic polynomials for both pieces keeping in mind that they satisfy some equation.
+   </p>
+ </subsection>
 </section>
