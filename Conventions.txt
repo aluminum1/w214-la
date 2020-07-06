@@ -1,19 +1,61 @@
 This is a file where some conventions and shortcuts are kept for authors in these documents as well as some things to keep in mind to make PreTeXt work:
 
+** Rob Beezer's advice when writing
+Read this page (https://pretextbook.org/doc/guide/html/advice-math-textbook.html) every once in a while...
+
+** PreTeXt THINGS:
+*** XREFS
+- xrefs need to specify text="global" or "type-global" or "title" or "custom"
+  - If "custom", it uses the text <xref>HERE</xref>
+  - If "title", ot uses the title specified, e.g. Bumping-Off Proposition instead of Proposition 2.1.8
+  - If "type-global" is uses Proposition 2.1.8
+  - If "global", I think it uses just 2.1.8
+  - See Table 4.6.5 on https://pretextbook.org/doc/guide/html/topic-cross-referencing.html for more
+- Rob Beezer suggest that xrefs's are written in kebab case or snake case like this: isom_iff_inj_and_surj. I don't think all our xref's are like that, but I don't suggest we go and change them all unless we get into trouble when compiling.
+
+*** OTHER
+- Inside maths, use only \text{} to write text, not \mbox{}
+- Don't write any maths inside \text{}; rather use more \text{}s
+- <q> for "quotes" and <sq> for 'single quotes'
+- Don't use <, > and & except for their intended special purposes (< and > open tags, & is used to indicate a special character follows, like &#xea; for ê - but you can use ê instead!). Instead use &lt; &gt; and &amp; when in text mode and \amp, \lt, \gt in math mode.
+- Use also: <ellipsis/>, <ndash/>, <mdash/>, <fillin/>
+- <sage> Don't know - see what Bruce did
+- <idx> for index element??
+- <notation> <usage> Z(G) </usage> <description> Center of a group </de... (or maybe switch <usage> and <description>??)
+- <url href=""> for external refs
+- See https://pretextbook.org/doc/guide/html/overview-si-units.html if you want to use SI units
 
 
 
+- See https://pretextbook.org/doc/guide/html/topic-exercises-solutions.html for details on changing visibility of Solutions to exercises.
+
+- For images: <figure> <image width="**%" source="*""> <\image> <caption> </caption> </figure>
+
+- Tables: <table> <tabular> <tr> <td>
+
+- See https://pretextbook.org/doc/guide/html/processing-testing-html.html to use Python to create an http webserver that can be used to test your html output (just opening the file in a browser will not work perfectly, especially when it needs to render a knowl)
+
+- Project like environments:
+  - <project>
+  - <activity> 
+  - <exploration>
+  - <investigation>
+  - Include:
+    - <title>
+    - <introduction>
+    - <task>
+    - <conclusion>
 
 
-
-NOTATIONS
+** NOTATIONS:
 vectors:				\ve{v}
 scalar product:			\smul
 
 
 
 
-GLOSSARY (for translation)
+** GLOSSARY (for translation):
 
 well-defined		wel-gedefinieerd
-summation			optelling
+summation			optelling (rather than sommering)
+spanned (verb)		onderspan
