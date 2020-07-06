@@ -1,0 +1,1 @@
+java -classpath /c/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar /c/jing-trang/build/jing.jar /c/PreTeXT/mathbook/schema/pretext.rng /c/PreTeXt/w214-la/ptx/W214-Lin-Alg.ptx
