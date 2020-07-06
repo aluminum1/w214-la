@@ -21,7 +21,8 @@
     </statement>
   </definition>
 
-  <example> <title>First example of a linear combination</title>
+  <example>
+    <title>First example of a linear combination</title>
     <statement>
       <p>
         In <m>\mathbb{R}^3</m>, <m>(6, 2, -14)</m> is a linear combination of
@@ -32,6 +33,7 @@
       </p>
     </statement>
   </example>
+
 
     <example> <title>Checking if a vector is a linear combination of other vectors</title>
     <statement>
@@ -159,7 +161,7 @@
       <p>
         This example shows that <m>\ve{f}</m> is also a trigonometric polynomial,
         even though its original formula
-        <m>\ve{f}(x) = \cos(3x)</m> was not in the form <xref ref="formula_for_trig_poly" />.
+        <m>\ve{f}(x) = \cos(3x)</m> was not in the form <xref ref="formula_for_trig_poly" text="global"/>.
       </p>
     </statement>
   </example>
@@ -185,9 +187,11 @@
         <me>
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2
         </me>.
+
       </p>
     </statement>
   </example>
+
 
   <example xml:id="three_vectors_spanning_R2_example">
     <title>Checking if a list of vectors spans the vector space</title>
@@ -203,8 +207,8 @@
     <caption>A list of vectors which spans <m>\mathbb{R}^2</m>.</caption>
     <image width="70%">
     <latex-image>
-          <![CDATA[
-          \begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
+      <![CDATA[
+      \begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
       \draw[<->] (0, -2.5) -- (0, 2.5) node[right] {\(y\)};
       \draw[very thick, red, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
       \draw[very thick, red, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
@@ -313,13 +317,13 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
 <exercise>
       <statement>
         <p>
-          Check equation <xref ref="standard_basis_R_n" />.
+          Check equation <xref ref="standard_basis_R_n" text="global"/>.
         </p>
       </statement>
       <solution>
         <p>
           <me> 
-\ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = a_1(1, \ldots, 0) + \cdots a_n(0,\ldots,1) \\ = (a_1 , \ldots , 0 ) + \cdots + (0 ,\ldots, a_n) = (a_1, \ldots, a_n )
+            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = a_1(1, \ldots, 0) + \cdots a_n(0,\ldots,1) \\ = (a_1 , \ldots , 0 ) + \cdots + (0 ,\ldots, a_n) = (a_1, \ldots, a_n )
         </me>
         </p>
       </solution>
@@ -332,9 +336,9 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
 <lemma xml:id ="spanning_check_thm">
   <statement>
     <p>
-    Suppose that <m>\basis{B}= \{\ve b_1,\ldots,\ve b_m\} </m> spans a vector space <m>V</m>. Furthermore, suppose that each vector in <m>\basis{B}</m> is a linear combination of the vectors from some other list <m>\basis{C} = \{\ve c_1,\ldots,\ve c_n\}</m>. Then <m>\basis{C}</m> also spans <m>V</m>.
-</p>
-</statement>
+      Suppose that <m>\basis{B}= \{\ve b_1,\ldots,\ve b_m\} </m> spans a vector space <m>V</m>. Furthermore, suppose that each vector in <m>\basis{B}</m> is a linear combination of the vectors from some other list <m>\basis{C} = \{\ve c_1,\ldots,\ve c_n\}</m>. Then <m>\basis{C}</m> also spans <m>V</m>.
+    </p>
+  </statement>
 </lemma>
 <proof>
   <p>
@@ -352,9 +356,8 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
       <mrow> \amp = \sum_{j=1}^n \left(\sum_{i=1}^m a_i \lambda_{i,j} \right) \ve{c}_j </mrow>
     </md>
     So we have expressed <m>\ve{v}</m> as a linear combination of the <m>\basis{C}</m> vectors. Hence <m>\basis{C}</m> spans <m>V</m>.
-</p>
-  </proof>
-
+  </p>
+</proof>
 
 <exercises>
   <exercise>
@@ -364,36 +367,35 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
     </p>
   </statement>
     <solution>
-    	<p>The solution is relatively straightforward. Define the following two functions:
-<me>
-f_{\text{even}} (x)= \frac{1}{2}\left(f(x) + f(-x) \right), \quad f_{\text{odd}} (x)= \frac{1}{2}\left( f(x) - f(-x) \right)
-</me>
-It is easy to see that, as the names suggest, <m>f_{\text{even}} </m> is an even function and <m>f_{\text{odd}} (x) </m> is an odd function. We simply sum <m> f_{\text{even}} </m> and <m>f_{\text{odd}}  </m>:
-<me>
-f_{\text{even}} (x) +  f_{\text{odd}} (x) = \frac{1}{2}\left(f(x) + f(-x) \right) + \frac{1}{2}\left( f(x) - f(-x) \right) = f(x).
-</me>
-</p>
+      <p>The solution is relatively straightforward. Define the following two functions:
+        <me>
+          f_{\text{even}} (x)= \frac{1}{2}\left(f(x) + f(-x) \right), \quad f_{\text{odd}} (x)= \frac{1}{2}\left( f(x) - f(-x) \right)
+        </me>
+        It is easy to see that, as the names suggest, <m>f_{\text{even}} </m> is an even function and <m>f_{\text{odd}} (x) </m> is an odd function. We simply sum <m> f_{\text{even}} </m> and <m>f_{\text{odd}}  </m>:
+        <me>
+          f_{\text{even}} (x) +  f_{\text{odd}} (x) = \frac{1}{2}\left(f(x) + f(-x) \right) + \frac{1}{2}\left( f(x) - f(-x) \right) = f(x).
+        </me>
+      </p>
   </solution>
   </exercise>
-
 
 <exercise>
   <statement>
     <p>
       Suppose <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m>. Prove that <m> \ve v_1 - \ve v_2, \ve v_2 - \ve v_3, \ve v_3 - \ve v_4 , \ve v_4</m> also spans <m>V</m>.
-</p>
-</statement>
-<solution>
-<p>
-If we are given that <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m> then to show that any other collection of vectors in <m>V</m> spans <m>V</m> it suffices to show that each of <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> can be written has a linear combination of the new collection by <xref ref="spanning_check_thm"/>. <p>With this observation in hand, the exercise has an easy solution.</p>
-<md>
-<mrow> \ve v_1 \amp = (\ve v_1 - \ve v_2)  + (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
-<mrow> \ve v_2 \amp= (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
-<mrow> \ve v_3 \amp= (\ve v_3 - \ve v_4) + \ve v_4  </mrow>
-<mrow> \ve v_4 \amp= \ve v_4 </mrow>
-</md>
-</p>
-</solution>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      If we are given that <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m> then to show that any other collection of vectors in <m>V</m> spans <m>V</m> it suffices to show that each of <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> can be written has a linear combination of the new collection by <xref ref="spanning_check_thm"/>. <p>With this observation in hand, the exercise has an easy solution.</p>
+      <md>
+        <mrow> \ve v_1 \amp = (\ve v_1 - \ve v_2)  + (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
+        <mrow> \ve v_2 \amp= (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
+        <mrow> \ve v_3 \amp= (\ve v_3 - \ve v_4) + \ve v_4  </mrow>
+        <mrow> \ve v_4 \amp= \ve v_4 </mrow>
+      </md>
+    </p>
+  </solution>
 </exercise>
 
  <exercise>
@@ -422,41 +424,40 @@ If we are given that <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m> t
       </p>
     </statement>
     <solution>
-<p>
-<ol>
-<li>
-We must set up the appropriate system of linear equations:
-<md>
-<mrow> \amp a\ve r_1(x) + b \ve r_2(x) + c \ve r_3(x) + d \ve r_4(x) \amp = \amp\ve p(x)</mrow>
-<mrow> \implies \amp a(3x^2 - 2) + b(x^2 + x) + c(x+1) + d(x-1) \amp  = \amp x^2 + 1 </mrow>
-</md>
-After grouping like powers of <m>x</m> we obtain
-<me>
-x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
-</me>
-We equate coefficients on both sides of the equation to obtain the following system of linear equations:
-<md>
-<mrow> 3a +  b +  0c +  0d  = 1,</mrow>
-<mrow>0a +  1b +  1c +  1d  = 0, </mrow>
-<mrow>-2a + 0b + 1c +  -1d  = 1 .</mrow>
-</md>
-Using your preferred method for solving a system of linear equations (such as Gauss reduction), we obtain a solution set of the form:
-<md>
-<mrow>\amp d \text{ is free},</mrow>
-<mrow>\amp  a = 2 + 2d, </mrow>
-<mrow>\amp  b = -5 - 6d, </mrow>
-<mrow>\amp  c = 5 + 5d. </mrow>
-</md>
-And so <m>\ve p (x)</m> is indeed a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m>.
- </li>
- <li>
-Since <m>d</m> is free in the above solution set, we can write <m>\ve p (x)</m> as a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m> in an uncountably infinite number of ways (one for each real number!).
- </li>
-</ol>
-</p>
+      <p>
+        <ol>
+          <li>
+          We must set up the appropriate system of linear equations:
+          <md>
+            <mrow> \amp a\ve r_1(x) + b \ve r_2(x) + c \ve r_3(x) + d \ve r_4(x) \amp = \amp\ve p(x)</mrow>
+            <mrow> \implies \amp a(3x^2 - 2) + b(x^2 + x) + c(x+1) + d(x-1) \amp  = \amp x^2 + 1 </mrow>
+          </md>
+          After grouping like powers of <m>x</m> we obtain
+          <me>
+            x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
+          </me>
+          We equate coefficients on both sides of the equation to obtain the following system of linear equations:
+          <md>
+            <mrow> 3a +  b +  0c +  0d  = 1,</mrow>
+            <mrow>0a +  1b +  1c +  1d  = 0, </mrow>
+            <mrow>-2a + 0b + 1c +  -1d  = 1 .</mrow>
+          </md>
+          Using your preferred method for solving a system of linear equations (such as Gauss reduction), we obtain a solution set of the form:
+          <md>
+            <mrow>\amp d \text{ is free},</mrow>
+            <mrow>\amp  a = 2 + 2d, </mrow>
+            <mrow>\amp  b = -5 - 6d, </mrow>
+            <mrow>\amp  c = 5 + 5d. </mrow>
+          </md>
+          And so <m>\ve p (x)</m> is indeed a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m>.
+          </li>
+          <li>
+            Since <m>d</m> is free in the above solution set, we can write <m>\ve p (x)</m> as a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m> in an uncountably infinite number of ways (one for each real number!).
+          </li>
+        </ol>
+      </p>
     </solution>
   </exercise>
-
 
   <exercise>
     <statement>
@@ -470,9 +471,9 @@ Since <m>d</m> is free in the above solution set, we can write <m>\ve p (x)</m> 
       </p>
     </statement>
     <solution>
-    	<p>
-You could choose to show this directly or we could use a clever approach based on <m>\mathbf 2 </m> and <xref ref ="spanning_check_thm"/>. From <m>\mathbf 2  </m>, we know that <m> \ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4</m> must span <m> V </m>. But if these vectors span <m> V </m>, then non-zero multiples of the vectors also span <m>V</m>. Thus <m> \ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 </m> must span <m> V</m>.
-</p>
+      <p>
+        You could choose to show this directly or we could use a clever approach based on <m>\mathbf 2 </m> and <xref ref ="spanning_check_thm"/>. From <m>\mathbf 2  </m>, we know that <m> \ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4</m> must span <m> V </m>. But if these vectors span <m> V </m>, then non-zero multiples of the vectors also span <m>V</m>. Thus <m> \ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 </m> must span <m> V</m>.
+      </p>
     </solution>
   </exercise>
 
@@ -487,47 +488,54 @@ You could choose to show this directly or we could use a clever approach based o
       </p>
     </statement>
     <solution>
-    	<p>
-    	Once again we base our strategy on <xref ref="spanning_check_thm"/>. Pick a spanning set for <m>\Poly_3</m>. We'll use <m>1, x , x^2 , x^3</m>, since it's the simplest. <m> 1, x</m> are certainly spanned by <m>\ve q_0x), \ve q_1, \ve q_2, \ve q_3</m> since <m>1 = \ve q_0(x)</m> and <m>x = \ve q_1(x)</m>. It can easily be seen that <me>
-x^2 = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) \\
-x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
-    </me>
-    completing the proof.
-    	</p>
+      <p>
+        Once again we base our strategy on <xref ref="spanning_check_thm"/>. Pick a spanning set for <m>\Poly_3</m>. We'll use <m>1, x , x^2 , x^3</m>, since it's the simplest. <m> 1, x</m> are certainly spanned by <m>\ve q_0x), \ve q_1, \ve q_2, \ve q_3</m> since <m>1 = \ve q_0(x)</m> and <m>x = \ve q_1(x)</m>. It can easily be seen that
+        <me>
+          x^2 = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) \\
+          x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
+        </me>
+        completing the proof.
+      </p>
     </solution>
   </exercise>
 
   <exercise>
-    <statement> <p> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.</p>
+    <statement>
+      <p>
+        Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
+      </p>
     </statement>
   </exercise>
 
-
   <exercise xml:id="exercise-span-omission">
-    <statement> <p> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that one of the vectors in the list, say <m>\ve{v}_r</m>, can be expressed as a linear combination of the preceding vectors:
-    <men xml:id="exercise-span-omission-1">
-   \ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}
-  </men>
-  Suppose that we remove <m>\ve{v}_r</m> from <m>\basis{S}</m>, to arrive at a new list
-  <me>
-   \basis{T} = \bopen \ve{v}_1, \ldots, \hat{\ve{v}_r}, \ldots, \ve{s}_n \bclose 
-</me>
-Prove that <m>\basis{T}</m> also spans <m>V</m>. </p>
-</statement>
-<solution><p> We must show that every vector <m>\ve{v} \in V</m> can be written as a linear combination of the vectors from <m>\basis{T}</m>. So let <m>\ve{v} \in V</m>. Since <m>\basis{S}</m> spans <m>V</m>, we know we can write <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{S}</m>:
-<men xml:id="exercise-span-omission-2">
-  \ve{v} = b_1 \ve{v}_1 + \cdots + b_r \ve{v}_r + \cdots + b_{n} \ve{v}_n
-</men>
-Substituting <xref ref="exercise-span-omission-1"/> into <xref ref="exercise-span-omission-2"/> gives
-<mdn> 
-<mrow> \ve{v} \amp = b_1 \ve{v}_1 + \cdots + b_r (a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}) + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
-<mrow xml:id="exercise-span-omission-3"> \amp = (b_1 + b_r a_1) \ve{v}_1 + \cdots + (b_r + b_r a_{r-1}) \ve{v}_{r-1} + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
-</mdn>
-Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{T}</m>. Hence <m>\basis{T}</m> spans V. </p>
-</solution>
-
+    <statement>
+      <p>
+        Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that one of the vectors in the list, say <m>\ve{v}_r</m>, can be expressed as a linear combination of the preceding vectors:
+        <men xml:id="exercise-span-omission-1">
+          \ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}
+        </men>
+        Suppose that we remove <m>\ve{v}_r</m> from <m>\basis{S}</m>, to arrive at a new list
+        <me>
+          \basis{T} = \bopen \ve{v}_1, \ldots, \hat{\ve{v}_r}, \ldots, \ve{s}_n \bclose 
+        </me>
+        Prove that <m>\basis{T}</m> also spans <m>V</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We must show that every vector <m>\ve{v} \in V</m> can be written as a linear combination of the vectors from <m>\basis{T}</m>. So let <m>\ve{v} \in V</m>. Since <m>\basis{S}</m> spans <m>V</m>, we know we can write <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{S}</m>:
+        <men xml:id="exercise-span-omission-2">
+          \ve{v} = b_1 \ve{v}_1 + \cdots + b_r \ve{v}_r + \cdots + b_{n} \ve{v}_n
+        </men>
+        Substituting <xref ref="exercise-span-omission-1"/> into <xref ref="exercise-span-omission-2"/> gives
+        <mdn>
+          <mrow> \ve{v} \amp = b_1 \ve{v}_1 + \cdots + b_r (a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}) + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
+          <mrow xml:id="exercise-span-omission-3"> \amp = (b_1 + b_r a_1) \ve{v}_1 + \cdots + (b_r + b_r a_{r-1}) \ve{v}_{r-1} + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
+        </mdn>
+        Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{T}</m>. Hence <m>\basis{T}</m> spans V.
+      </p>
+    </solution>
   </exercise>
-
 
 
 
