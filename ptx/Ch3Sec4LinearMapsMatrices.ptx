@@ -14,8 +14,8 @@
         <m>T(\ve{b}_i)</m> with respect to the basis <m>\basis{C}</m>:
         <me>
           [T]_{\basis{C} \leftarrow \basis{B}} :=
-\begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
-  </me>
+          \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
+        </me>
       </p>
     </statement>
   </definition>
@@ -52,56 +52,58 @@
       </p>
     </statement>
     <solution>
-      We compute:
-      <md>
-        <mrow>
-          T(b_1) \amp = x(1+x) 
-        </mrow>
-        <mrow>
-          \amp = x + x^2
-        </mrow>
-        <mrow>
-          \amp = -c_1 + c_3
-        </mrow>
-        <mrow>
-          \therefore [T(b_1)]_{\basis{C}} \amp = \begin{bmatrix} -1 \\ 0 \\ 1 \\ 0 \end{bmatrix}
-        </mrow>
-        <mrow>
-          T(b_2) \amp = x (1-x)
-          </mrow>
-          <mrow> 
-          \amp = x - x^2
-          </mrow>
-          <mrow> 
-          \amp = -c_1 + 2c_2 - c_3 
+      <p>
+        We compute:
+        <md>
+          <mrow>
+            T(b_1) \amp = x(1+x)
           </mrow>
           <mrow>
-          \therefore [T(b_2)]_{\basis{C}} \amp = 
-          \begin{bmatrix} -1 \\ 2 \\ -1 \\ 0 \end{bmatrix}
-        </mrow>
-        <mrow>
-          T(b_3) \amp = x(1+x+x^2)
-        </mrow>
-        <mrow> \amp = x + x^2 + x^3 </mrow>
-        <mrow> \amp = -c_1 + c_3 +c_4 </mrow>
-        <mrow> \therefore [T(b_3)]_{\basis{C}} \amp = 
-        \begin{bmatrix} -1 \\ 0 \\ 1 \\ 1 \end{bmatrix}</mrow>
-      </md>
-      Assembling all these coordinate vectors together gives
-      <me>
-        [T]_{\basis{C} \leftarrow \basis{B}} = 
-        \begin{bmatrix}
-        -1 \amp -1 \amp -1 \\
-        0 \amp 2 \amp 0 \\
-        1 \amp -1 \amp 1 \\
-        0 \amp 0 \amp 1
-        \end{bmatrix}
-      </me>
+            \amp = x + x^2
+          </mrow>
+          <mrow>
+            \amp = -c_1 + c_3
+          </mrow>
+          <mrow>
+            \therefore [T(b_1)]_{\basis{C}} \amp = \begin{bmatrix} -1 \\ 0 \\ 1 \\ 0 \end{bmatrix}
+          </mrow>
+          <mrow>
+            T(b_2) \amp = x (1-x)
+          </mrow>
+          <mrow>
+            \amp = x - x^2
+          </mrow>
+          <mrow>
+            \amp = -c_1 + 2c_2 - c_3
+          </mrow>
+          <mrow>
+            \therefore [T(b_2)]_{\basis{C}} \amp =
+            \begin{bmatrix} -1 \\ 2 \\ -1 \\ 0 \end{bmatrix}
+          </mrow>
+          <mrow>
+            T(b_3) \amp = x(1+x+x^2)
+          </mrow>
+          <mrow> \amp = x + x^2 + x^3 </mrow>
+          <mrow> \amp = -c_1 + c_3 +c_4 </mrow>
+          <mrow> \therefore [T(b_3)]_{\basis{C}} \amp =
+            \begin{bmatrix} -1 \\ 0 \\ 1 \\ 1 \end{bmatrix}</mrow>
+        </md>
+        Assembling all these coordinate vectors together gives
+        <me>
+          [T]_{\basis{C} \leftarrow \basis{B}} =
+          \begin{bmatrix}
+            -1 \amp -1 \amp -1 \\
+            0 \amp 2 \amp 0 \\
+            1 \amp -1 \amp 1 \\
+            0 \amp 0 \amp 1
+          \end{bmatrix}
+        </me>
+      </p>
     </solution>
   </example>
 
   <theorem xml:id="lin-map-in-matrix-theorem">
-    <title>Linear Maps and Matrix Multiplication of Coordinate Vectors</title>
+    <title>Linear maps and matrix multiplication of coordinate vectors</title>
     <statement>
       <p>
         Let <m>T : V \rightarrow W</m> be a linear map from a vector space <m>V</m> to a vector space <m>W</m>.
@@ -140,36 +142,35 @@
     </proof>
   </theorem>
 
-
   <example>
     <title>Verifying <xref ref="lin-map-in-matrix-theorem"/> in an example</title>
     <statement>
       <p>
-        Let us verify that <xref ref="lin-map-in-matrix-theorem"/> really works, in the context of <xref ref="first_example_matrix_lin_map"/>. Let us take the vector <m>\ve{v} \in \Poly_2</m> to be, for instance, <m>x</m>. 
+        Let us verify that <xref ref="lin-map-in-matrix-theorem"/> really works, in the context of <xref ref="first_example_matrix_lin_map"/>. Let us take the vector <m>\ve{v} \in \Poly_2</m> to be, for instance, <m>x</m>.
       </p>
       <p>
         Exapnding <m>x</m> relative to the basis <m>\basis{B}</m>, we get
         <me>
           x = \frac{1}{2} (p_1 - p_2).
-        </me> 
+        </me>
         So,
         <me>
           [x]_{\basis{B}} = \begin{bmatrix} \frac{1}{2} \\ - \frac{1}{2} \\ 0 \end{bmatrix}
         </me>
-      Also, <m>T(x) = x^2 = -q_2 + q_3</m>, so
-      <me>
-        [T(x)]_{\basis{C}} = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}
-      </me>
-      We can now compute the left and right hand sides of Equation <xref ref="lin-maps-and-matrices-eqn"/> and see that they are indeed the same.
-      <md>
-        <mrow>\text{LHS of } <xref ref="lin-maps-and-matrices-eqn"/> \amp = [T(x)]_{\basis{C}} </mrow>
-        <mrow> \amp =  \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}. </mrow>
-        <mrow>\text{RHS of }<xref ref="lin-maps-and-matrices-eqn"/> \amp = [T]_{\basis{C} \leftarrow \basis{B}} [x]_{\basis{B}}   </mrow>
-        <mrow> \amp= \begin{bmatrix}  -1 \amp -1 \amp -1 \\ 0 \amp 2 \amp 0 \\ 1 \amp -1 \amp 1 \\ 0 \amp 0 \amp 1 \end{bmatrix} \begin{bmatrix} \frac{1}{2} \\ -\frac{1}{2} \\ 0 \end{bmatrix} </mrow>
-        <mrow> \amp = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}</mrow>
-      </md>
-      So the Theorem indeed works, at least in this case!
-    </p>
+        Also, <m>T(x) = x^2 = -q_2 + q_3</m>, so
+        <me>
+          [T(x)]_{\basis{C}} = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}
+        </me>
+        We can now compute the left and right hand sides of Equation <xref ref="lin-maps-and-matrices-eqn"/> and see that they are indeed the same.
+        <md>
+          <mrow>\text{LHS of } <xref ref="lin-maps-and-matrices-eqn"/> \amp = [T(x)]_{\basis{C}} </mrow>
+          <mrow> \amp =  \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}. </mrow>
+          <mrow>\text{RHS of }<xref ref="lin-maps-and-matrices-eqn"/> \amp = [T]_{\basis{C} \leftarrow \basis{B}} [x]_{\basis{B}}   </mrow>
+          <mrow> \amp= \begin{bmatrix}  -1 \amp -1 \amp -1 \\ 0 \amp 2 \amp 0 \\ 1 \amp -1 \amp 1 \\ 0 \amp 0 \amp 1 \end{bmatrix} \begin{bmatrix} \frac{1}{2} \\ -\frac{1}{2} \\ 0 \end{bmatrix} </mrow>
+          <mrow> \amp = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}</mrow>
+        </md>
+        So the Theorem indeed works, at least in this case!
+      </p>
     </statement>
   </example>
 
@@ -180,25 +181,24 @@
   </p>
 
   <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[yscale=0.8]
-  \draw (0, 0) circle (1);
-  \draw (6,0) circle (1);
-  \draw [<->] (-1, -6) -- (1, -6);
-  \draw [<->] (0, -5) -- (0, -7);
-  \draw [<->] (5, -6) -- (7, -6);
-  \draw [<->] (6, -5) -- (6, -7);
-  \draw[->] (2, 0) -- node[above]{\(T\)} (4, 0);
-  \draw[->] (6, -2) -- node[right] {\([ \smul]_\basis{C}\)} (6, -4);
-  \draw[->, dotted] (2, -6) -- node[below] {\([\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}}\)} (4, -6);
-  \draw[->] (-0.1, -2) -- node[left] {\([ \smul]_\basis{B}\)} (-0.1, -4);
-  \draw[<-] (0.1, -2) -- node[right] {\(\ve{vec}_{V, \basis{B}}\)} (0.1, -4);
-  \node at (1, 1) {\(V\)};
-  \node at (7, 1) {\(W\)};
-  \node at (1, -5) {\(\Col_m\)};
-  \node at (7, -5) {\(\Col_n\)};\end{tikzpicture}]]>
-</latex-image>
+    <latex-image>
+      <![CDATA[\begin{tikzpicture}[yscale=0.8]
+      \draw (0, 0) circle (1);
+      \draw (6,0) circle (1);
+      \draw [<->] (-1, -6) -- (1, -6);
+      \draw [<->] (0, -5) -- (0, -7);
+      \draw [<->] (5, -6) -- (7, -6);
+      \draw [<->] (6, -5) -- (6, -7);
+      \draw[->] (2, 0) -- node[above]{\(T\)} (4, 0);
+      \draw[->] (6, -2) -- node[right] {\([ \smul]_\basis{C}\)} (6, -4);
+      \draw[->, dotted] (2, -6) -- node[below] {\([\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}}\)} (4, -6);
+      \draw[->] (-0.1, -2) -- node[left] {\([ \smul]_\basis{B}\)} (-0.1, -4);
+      \draw[<-] (0.1, -2) -- node[right] {\(\ve{vec}_{V, \basis{B}}\)} (0.1, -4);
+      \node at (1, 1) {\(V\)};
+      \node at (7, 1) {\(W\)};
+      \node at (1, -5) {\(\Col_m\)};
+      \node at (7, -5) {\(\Col_n\)};\end{tikzpicture}]]>
+    </latex-image>
   </image>
 
   <p>
@@ -422,7 +422,7 @@
   </proof>
 
   <p>
-    The next Lemma says that the <sq>change-of-basis matrix</sq> from <xref ref="Ch2Sec5ChangeOfBasis">Section</xref>
+    The next Lemma says that the change-of-basis matrix from <xref ref="Ch2Sec5ChangeOfBasis">Section</xref>
     is just the matrix of the identity linear map with respect to the relevant bases.
   </p>
 
@@ -462,21 +462,20 @@
         where <m>P \equiv P_{\basis{B} \leftarrow \basis{C}}</m>.
       </p>
     </statement>
+    <proof>
+      <md>
+        <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
+        <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="change-of-basis-as-matrix"/>)</mrow>
+        <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="inverse-of-map-via-matrices"/>)</mrow>
+        <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+        <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{C}}</mrow>
+        <mrow>\amp = \mbox{LHS} </mrow>
+      </md>.
+    </proof>
   </theorem>
 
-  <proof>
-    <md>
-      <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
-      <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="change-of-basis-as-matrix"/>)</mrow>
-      <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="inverse-of-map-via-matrices"/>)</mrow>
-      <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
-      <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{C}}</mrow>
-      <mrow>\amp = \mbox{LHS} </mrow>
-    </md>.
-  </proof>
-
   <exercises>
-      <exercise xml:id="trig_ex_1">
+    <exercise xml:id="trig_ex_1">
     <statement>
       <p>
         Let
@@ -495,21 +494,20 @@
         <md>
           <mrow>\sin(2x) \amp = 2 \sin x \cos x</mrow>
           <mrow> \cos(2x) \amp = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1-2\sin^2 x</mrow>.
-          </md>
-           With these in mind, we compute:
-          <md>
-            <mrow>T(T_0) \amp= \sin x = T_2 </mrow>
-            <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
-            <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>.
-      </md>
-      Thus
-      <me>
-[T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
-    </me>
+        </md>
+        With these in mind, we compute:
+        <md>
+          <mrow>T(T_0) \amp= \sin x = T_2 </mrow>
+          <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
+          <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>.
+        </md>
+        Thus
+        <me>
+          [T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
+        </me>
       </p>
     </solution>
   </exercise>
-
 
 <exercise xml:id="trig_ex_2">
     <statement>
@@ -522,13 +520,14 @@
         <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
         <ol>
           <li>
-           Compute <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> with respect to the standard basis <m>\basis{C}</m> of <m>\Trig_2</m>. 
+            Compute <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> with respect to the standard basis <m>\basis{C}</m> of <m>\Trig_2</m>.
           </li>
-          <li>Compute <m>[S]_{\basis{B} \leftarrow \basis{C}}</m>, where <m>\basis{B}</m> is the following basis for <m>\Trig_2</m>:
-          <me>
-            \basis{B} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin^2 x \bclose
-          </me> 
- </li>
+          <li>
+            Compute <m>[S]_{\basis{B} \leftarrow \basis{C}}</m>, where <m>\basis{B}</m> is the following basis for <m>\Trig_2</m>:
+            <me>
+              \basis{B} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin^2 x \bclose
+            </me>
+          </li>
         </ol>
       </p>
     </statement>
@@ -541,17 +540,17 @@
         </md>
         We compute
         <md>
-<mrow> S(T_0) \amp = 1 = T_0 </mrow>
+          <mrow> S(T_0) \amp = 1 = T_0 </mrow>
 
-<mrow> S(T_1) \amp = \cos ( x - \frac{\pi}{6}) =  \frac{\sqrt{3}}{2} \cos x + \frac{1}{2}\sin x = \frac{\sqrt 3}{2} T_1 + \frac{1}{2} T_2</mrow>
+          <mrow> S(T_1) \amp = \cos ( x - \frac{\pi}{6}) =  \frac{\sqrt{3}}{2} \cos x + \frac{1}{2}\sin x = \frac{\sqrt 3}{2} T_1 + \frac{1}{2} T_2</mrow>
 
-<mrow> S(T_2) \amp = \sin( x - \frac{\pi}{6}) =  -\frac{1}{2} \cos x +  \frac{\sqrt 3}{2}\sin x =  -\frac{1}{2}T_1 + \frac{\sqrt 3}{2} T_2 </mrow>
+          <mrow> S(T_2) \amp = \sin( x - \frac{\pi}{6}) =  -\frac{1}{2} \cos x +  \frac{\sqrt 3}{2}\sin x =  -\frac{1}{2}T_1 + \frac{\sqrt 3}{2} T_2 </mrow>
 
-<mrow> S(T_3) \amp = \cos(2x - \frac{\pi}{6})=  -\frac{1}{2}\sin^2 x  + \frac{\sqrt 3}{2}\cos^2 x + \sin x \cos x</mrow>
+          <mrow> S(T_3) \amp = \cos(2x - \frac{\pi}{6})=  -\frac{1}{2}\sin^2 x  + \frac{\sqrt 3}{2}\cos^2 x + \sin x \cos x</mrow>
 
-<mrow> \amp  = -\frac{\sqrt 3}{2}(\frac{1}{2} - \frac{1}{2}\cos x) + \frac{\sqrt 3}{2}(\frac{1}{2} + \frac{1}{2}\cos 2x) + \frac{1}{2}\sin 2x </mrow>
+          <mrow> \amp  = -\frac{\sqrt 3}{2}(\frac{1}{2} - \frac{1}{2}\cos x) + \frac{\sqrt 3}{2}(\frac{1}{2} + \frac{1}{2}\cos 2x) + \frac{1}{2}\sin 2x </mrow>
 
-<mrow> \amp = \frac{\sqrt 3}{2}\cos 2x + \frac{1}{2} \sin 2x = \frac{\sqrt 3}{2} T_3 + \frac{1}{2} \sin 2x .</mrow>
+          <mrow> \amp = \frac{\sqrt 3}{2}\cos 2x + \frac{1}{2} \sin 2x = \frac{\sqrt 3}{2} T_3 + \frac{1}{2} \sin 2x .</mrow>
         </md>
         Similarly,
         <md>
@@ -559,23 +558,21 @@
         </md>
         Hence
         <me>
-        [S]_{\basis{C} \leftarrow \basis{C}} = \begin{bmatrix}
-1  \mamp 0 \mamp 0 \mamp 0 \mamp 0 \\
+          [S]_{\basis{C} \leftarrow \basis{C}} = \begin{bmatrix}
+          1  \mamp 0 \mamp 0 \mamp 0 \mamp 0 \\
 
-0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \mamp 0 \mamp 0 \\
+          0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \mamp 0 \mamp 0 \\
 
-0 \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2} \mamp 0 \mamp 0 \\
+          0 \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2} \mamp 0 \mamp 0 \\
 
-0 \mamp 0 \mamp 0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \\
+          0 \mamp 0 \mamp 0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \\
 
-0 \mamp 0 \mamp 0  \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2}
-\end{bmatrix}.
-      </me>
+          0 \mamp 0 \mamp 0  \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2}
+          \end{bmatrix}.
+        </me>
       </p>
     </solution>
   </exercise>
-  
-
 
   <exercise>
     <statement>
@@ -584,7 +581,7 @@
         for the linear map <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> given by <m>S(\mat{M}) = \mat{M}^T</m>,
         for the vector <m>\mat{A} \in \Mat_{2,2}</m> given by
         <md>
-         <mrow> \mat{A} = \begin{bmatrix} 0 \mamp  1 \\ 0 \mamp  0 \end{bmatrix}</mrow>
+          <mrow> \mat{A} = \begin{bmatrix} 0 \mamp  1 \\ 0 \mamp  0 \end{bmatrix}</mrow>
         </md>
         and using the following bases of <m>\Mat_{2,2}</m>:
         <me>
@@ -605,10 +602,9 @@
         <me>
           T(p)(x) := p(\cos x).
         </me>
-        Use the standard bases <m>\basis{B}</m> for <m>\Poly_3</m> and <m>\basis{C}</m> for <m>\Trig_3</m>. 
+        Use the standard bases <m>\basis{B}</m> for <m>\Poly_3</m> and <m>\basis{C}</m> for <m>\Trig_3</m>.
       </p>
     </statement>
-
   </exercise>
 
   <exercise>
@@ -624,14 +620,14 @@
   <exercise>
     <statement>
       <p>
-        Verify <xref ref="functoriality_of_matrix"/> for the `gradient' and `divergence' linear maps
+        Verify <xref ref="functoriality_of_matrix"/> for the <sq>gradient</sq> and <sq>divergence</sq> linear maps
         <md>
          <mrow> G : \Poly_3[x,y] \amp \rightarrow \Vect_2(\mathbb{R}^2) </mrow>
          <mrow> G(p) := \nabla p</mrow>
          <mrow>\Div : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
          <mrow> \Div( (P, Q) ) \amp := \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y}</mrow>
         </md>
-        Use the standard bases 
+        Use the standard bases
         <me>
           \basis{B} = \bopen 1, x, y, x^2, xy, y^2, x^3, x^2y, xy^2, y^3 \bclose
         </me>
@@ -670,8 +666,8 @@
         Use the standard basis <m>\basis{B}</m> for <m>\Mat_{2,3}</m> (see <xref ref="dimension_of_matrix_space_example"/>), the basis
         <me>
           \basis{C} = \bopen \begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix} \bclose
-        </me> 
-        for <m>\Col_3</m>, and the standard basis 
+        </me>
+        for <m>\Col_3</m>, and the standard basis
         <me>
           \basis{C} = \bopen 1, x, y, x^2, xy, y^2 \bclose
         </me>
@@ -683,7 +679,7 @@
         <me>
           [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
         </me>
-        and check that they are equal. 
+        and check that they are equal.
       </p>
     </statement>
   </exercise>
