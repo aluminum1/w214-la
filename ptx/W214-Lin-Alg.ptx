@@ -81,39 +81,35 @@
 
       </titlepage>
 
- <xi:include href="./Ch0NoteForStudent.ptx" />
-
+      <xi:include href="./Ch0NoteForStudent.ptx" />
 
     </frontmatter>
 
 
+    <xi:include href="./Ch1AbstractVectorSpaces.ptx" />
 
-  <xi:include href="./Ch1AbstractVectorSpaces.ptx" /> 
-  <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
+    <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
 
-
-
-   
-
-  
     <xi:include href="./Ch3LinearMaps.ptx" />
-      <xi:include href="./ChTutorials.ptx"/>
-<!--
+
     <xi:include href="./Ch4EigenvaluesEigenvectors.ptx" />
 
 
-  -->
+
+    <xi:include href="./ChTutorials.ptx"/>
+
 
     <backmatter>
       <xi:include href="./Videos.ptx" />
+
       <xi:include href="./AppAReminderAboutMatrices.ptx" />
+
+      <xi:include href="./AppBHypersurfaces.ptx" />
+
       <!--<xi:include href="./SageExamples.ptx" />-->
+
       <xi:include href="./bibliography.ptx" />
     </backmatter>
-
-
-
   </book>
-
 </pretext>
 
