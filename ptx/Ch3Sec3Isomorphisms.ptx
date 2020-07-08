@@ -5,9 +5,10 @@
   <p>
     Suppose you have two sets,
     <me>
-      A = \{ \mbox{bird} , \mbox{eye} , \mbox{person}  \}  \mbox{and}    B = \left\{ \begin{aligned}<image width="100%" source="images/bird.png" /> 
-      \end{aligned}  , \begin{aligned}<image width="100%" source="images/eye.png" /> 
-      \end{aligned} , \begin{aligned}<image width="100%" source="images/person.png" /> 
+      A = \{ \mbox{bird} , \mbox{eye} , \mbox{person}  \}  \mbox{and}
+      B = \left\{ \begin{aligned}<image width="100%" source="images/bird.png" />
+      \end{aligned}  , \begin{aligned}<image width="100%" source="images/eye.png" />
+      \end{aligned} , \begin{aligned}<image width="100%" source="images/person.png" />
       \end{aligned}  \right\}
     </me>.
   </p>
@@ -23,19 +24,19 @@
     We could define two maps, say
     <md>
       <mrow>S: A \amp \rightarrow B</mrow>
-      <mrow>\mbox{bird}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" /> 
+      <mrow>\mbox{bird}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" />
       \end{aligned}</mrow>
-      <mrow>\mbox{eye}  \amp \mapsto \begin{aligned}<image width="100%" source="images/eye.png" /> 
+      <mrow>\mbox{eye}  \amp \mapsto \begin{aligned}<image width="100%" source="images/eye.png" />
       \end{aligned}</mrow>
-      <mrow>\mbox{cross}  \amp \mapsto \begin{aligned}<image width="100%" source="images/person.png" /> 
+      <mrow>\mbox{cross}  \amp \mapsto \begin{aligned}<image width="100%" source="images/person.png" />
       \end{aligned}</mrow>
       <intertext>and</intertext>
       <mrow>T : B \amp \rightarrow A</mrow>
-      <mrow>\begin{aligned}<image width="100%" source="images/bird.png" /> 
+      <mrow>\begin{aligned}<image width="100%" source="images/bird.png" />
       \end{aligned}  \amp  \mapsto \mbox{bird}</mrow>
-      <mrow>\begin{aligned}<image width="100%" source="images/eye.png" /> 
+      <mrow>\begin{aligned}<image width="100%" source="images/eye.png" />
       \end{aligned}  \amp  \mapsto \mbox{eye}</mrow>
-      <mrow>\begin{aligned}<image width="100%" source="images/person.png" /> 
+      <mrow>\begin{aligned}<image width="100%" source="images/person.png" />
       \end{aligned}  \amp  \mapsto \mbox{cross}  </mrow>
     </md>.
   </p>
@@ -43,7 +44,7 @@
   <p>
     Then we observe that
     <men xml:id="bijection_eqn">
-      T \circ S = \id_A  \mbox{and}   S \circ T = \id_B 
+      T \circ S = \id_A  \mbox{and}   S \circ T = \id_B
     </men>.
   </p>
 
@@ -76,10 +77,10 @@
     In bookshops,
     cross-language dictionaries like this most often come bundled as a pair,
     in a single volume.
-    After all, if one needs to look up the English word for <m>\begin{aligned}<image width="100%" source="images/bird.png" /> 
+    After all, if one needs to look up the English word for <m>\begin{aligned}<image width="100%" source="images/bird.png" />
     \end{aligned}</m>,
     it is a nuisance to have to traverse through the entire English-to-Chinese dictionary,
-    trying to find the English word which translates to <m>\begin{aligned}<image width="100%" source="images/bird.png" /> 
+    trying to find the English word which translates to <m>\begin{aligned}<image width="100%" source="images/bird.png" />
     \end{aligned}</m>!
   </p>
 
@@ -115,8 +116,8 @@
 
   <assemblage>
     <p>
-      This lemma justifies us talking about "the inverse" (instead of "an inverse") of a linear map. So it makes sense for us to use the notation <m>T^{-1}</m>, which reads as 
-      "the" inverse of <m>T</m>.
+      This lemma justifies us talking about <q>the inverse</q> (instead of <q>an inverse</q>) of a linear map. So it makes sense for us to use the notation <m>T^{-1}</m>, which reads as
+      <q>the</q> inverse of <m>T</m>.
     </p>
   </assemblage>
 
@@ -176,7 +177,6 @@
       </statement>
     </exercise>
 
-
   <p>
     We will now show that up to isomorphism,
     there is only one vector space of each dimension!
@@ -224,8 +224,8 @@
       </md>
       so that <m>\basis{C}</m> spans <m>W</m>.
       Hence <m>\basis{C}</m> is a basis for <m>V</m>,
-      so <m>\Dim V = \mbox{number of vectors in <m>\basis{B}</m>}</m> = <m>m</m>,
-      while <m>\Dim W = \mbox{number of vectors in <m>\basis{C}</m>}  = m</m>.
+      so <m>\Dim V = \text{number of vectors in }\basis{B}}</m> = <m>m</m>,
+      while <m>\Dim W = \text{number of vectors in }\basis{C}  = m</m>.
     </p>
 
     <p>
@@ -275,7 +275,8 @@
       <mrow>[\cdot]_\basis{B} : V \amp  \rightarrow \Col_m</mrow>
       <mrow>\ve{v} \amp  \mapsto [\ve{v}]_\basis{B}</mrow>
     </md>
-    which sends a vector <m>\ve{v} \in V</m> to its corresponding coordinate vector <m>[\ve{v}]_\basis{B} \in \Col_m</m>.
+    which sends a vector <m>\ve{v} \in V</m> to its corresponding
+    coordinate vector <m>[\ve{v}]_\basis{B} \in \Col_m</m>.
     <xref ref="lin_of_coord_vectors">Lemma</xref>
     says precisely that <m>[ \smul]_\basis{B}</m> is a linear map.
     We will now describe its inverse.
@@ -284,7 +285,8 @@
   <definition>
     <statement>
       <p>
-        Let <m>V</m> be an <m>m</m>-dimensional vector space with basis <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m\bclose</m>.
+        Let <m>V</m> be an <m>m</m>-dimensional vector space with basis
+        <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m\bclose</m>.
         Let <m>\mat{c} \in \Col_m</m> be an <m>m</m>-dimensional column vector.
         Then the <term>vector in <m>V</m> corresponding to <m>\mat{c}</m> with respect to the basis <m>\basis{B}</m></term> is
         <me>
@@ -301,7 +303,7 @@
         <me>
           \ve{p}_1 := 1 + x,  \ve{p}_2 := 1 + x + x^2, \ve{p}_3 := 1-x^2
         </me>
-        are a basis of <m>\Poly_2</m>
+        form a basis of <m>\Poly_2</m>
         (check this).
         Then, for instance,
         <md>
@@ -319,14 +321,14 @@
 
         <ol>
           <li>
-            
+            <title>(a)</title>
             <p>
               <m>\ve{vec}_{V, \basis{B}} (\mat{c} + \mat{c}') = \ve{vec}_{V, \basis{B}} (\mat{c}) + \ve{vec}_{V, \basis{B}} (\mat{c}')</m>
             </p>
           </li>
 
           <li>
-           
+            <title>(b)</title>
             <p>
               <m>\ve{vec}_{V, \basis{B}} (k\mat{c}) = k \, \ve{vec}_{V, \basis{B}} (\mat{c})</m>.
             </p>
@@ -340,19 +342,19 @@
     </statement>
     <solution>
       <p>
- <ol>
+        <ol>
           <li>
              <p>
               <md>
-              <mrow>\ve{vec}_{V, \basis B}(\mat c + \mat c') \amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} +  \begin{bmatrix}  c^\prime_1\\ \vdots \\ c^\prime_n\end{bmatrix}\right) </mrow>
+                <mrow>\ve{vec}_{V, \basis B}(\mat c + \mat c') \amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} +  \begin{bmatrix}  c^\prime_1\\ \vdots \\ c^\prime_n\end{bmatrix}\right) </mrow>
 
-              <mrow>\amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1+ c^\prime_1 \\ \vdots \\c_n + c^\prime_n \end{bmatrix}\right) </mrow>
+                <mrow>\amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1+ c^\prime_1 \\ \vdots \\c_n + c^\prime_n \end{bmatrix}\right) </mrow>
 
-              <mrow>\amp =  (c_1+ c^\prime_1)\ve e_1 +\cdots +  (c_n+ c^\prime_n)\ve e_n  </mrow>
+                <mrow>\amp =  (c_1+ c^\prime_1)\ve e_1 +\cdots +  (c_n+ c^\prime_n)\ve e_n  </mrow>
 
-              <mrow> \amp = (c_1\ve e_1 + \cdots + c_n\ve e_n )  + (c_1^\prime\ve e_1 + \cdots + c^\prime_n\ve e_n ) </mrow>
+                <mrow> \amp = (c_1\ve e_1 + \cdots + c_n\ve e_n )  + (c_1^\prime\ve e_1 + \cdots + c^\prime_n\ve e_n ) </mrow>
 
-              <mrow> \amp = \ve{vec}_{V, \basis B}(\mat c) + \ve{vec}_{V, \basis B}(\mat c')</mrow>
+                <mrow> \amp = \ve{vec}_{V, \basis B}(\mat c) + \ve{vec}_{V, \basis B}(\mat c')</mrow>
 
             </md>
 
@@ -363,7 +365,7 @@
             <p>
              <md>
 
-              <mrow>\ve{vec}_{V, \basis B}(k\mat c) \amp = \ve{vec}_{V, \basis B}\left(k \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} \right)  </mrow> 
+              <mrow>\ve{vec}_{V, \basis B}(k\mat c) \amp = \ve{vec}_{V, \basis B}\left(k \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} \right)  </mrow>
 
               <mrow> \amp =  \ve{vec}_{V, \basis B}\left(\begin{bmatrix}  kc_1 \\ \vdots \\kc_n\end{bmatrix} \right)</mrow>
 
@@ -378,10 +380,9 @@
           </li>
         </ol>
 
-
-</p>
-</solution>
-        </exercise>
+      </p>
+    </solution>
+  </exercise>
 
   <theorem>
     <statement>
@@ -405,7 +406,7 @@
     <p>
       Given <m>\ve{v} \in V</m>, expand it in the basis <m>\basis{B}</m>:
       <me>
-        \ve{v} = a_1 \ve{e}_1 + \ldots + a_m \ve{e}_m 
+        \ve{v} = a_1 \ve{e}_1 + \ldots + a_m \ve{e}_m
       </me>.
     </p>
 
@@ -424,7 +425,7 @@
       </me>,
       we have
       <md>
-        <mrow>\big( [ \smul]_\basis{B} \circ \ve{vec}_{V, \basis{B}} \big)  \big( \mat{c} \big) \amp = 
+        <mrow>\big( [ \smul]_\basis{B} \circ \ve{vec}_{V, \basis{B}} \big)  \big( \mat{c} \big) \amp =
         \big[\ve{vec}_{V, \basis{B}} (\mat{c}) \big]_\basis{B}</mrow>
         <mrow>\amp = \big[ \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m \big]</mrow>
         <mrow>\amp = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}</mrow>
@@ -444,17 +445,20 @@
       we can treat the elements of <m>V</m> as if they were column vectors!
     </p>
   </assemblage>
+
 <exercises>
    <exercise>
     <statement>
       <p>
         Are the following vector spaces isomorphic?
-       <md>
-         <mrow> V \amp = \left\{ \mat{v} \in \Col_4 : \begin{bmatrix} 1 \mamp  2 \mamp  0 \mamp  -1 \\ -1 \mamp  1 \mamp  1 \mamp  0 \end{bmatrix}  \mat{v}  = \mat{0}  \right\} </mrow>
-      
-        
-          <mrow>W \amp = \left\{ p \in \Poly_2 : \int_0^2 p(x) dx = 0 \right\} </mrow>
-             </md>.
+        <md>
+          <mrow>
+            V \amp = \left\{ \mat{v} \in \Col_4 : \begin{bmatrix} 1 \mamp  2 \mamp  0 \mamp  -1 \\ -1 \mamp  1 \mamp  1 \mamp  0 \end{bmatrix}  \mat{v}  = \mat{0}  \right\}
+          </mrow>
+          <mrow>
+            W \amp = \left\{ p \in \Poly_2 : \int_0^2 p(x) dx = 0 \right\}
+          </mrow>
+        </md>.
       </p>
 
       <p>
@@ -475,17 +479,18 @@
 
         We are free to choose <m>x</m> and <m> y </m> arbitrarily, but then (1) above fixes <m> w </m> and (2) fixes <m> z </m>. Hence <m> V </m> is a 2 dimensional subspace.
       </p>
-<p>
-Onto <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
 
-      
-        <me> 
-\int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
-      </me>
-     Thus, for any choice of <m> a </m> and <m> b </m>, <m> c </m> is uniquely determined. Hence <m>W</m> is a 2 dimensional subspace.
-      </p>
       <p>
-Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are isomorphic by <xref ref = "iso_same_dim" />. To exhibit an explicit isomorphism between the <m> V</m> and <m> W </m> we shall need find bases for both spaces.
+        Onto <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
+
+        <me>
+          \int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
+        </me>
+        Thus, for any choice of <m> a </m> and <m> b </m>, <m> c </m> is uniquely determined. Hence <m>W</m> is a 2 dimensional subspace.
+      </p>
+
+      <p>
+        Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are isomorphic by <xref ref = "iso_same_dim" />. To exhibit an explicit isomorphism between the <m> V</m> and <m> W </m> we shall need find bases for both spaces.
       </p>
 
       <p>
@@ -516,34 +521,34 @@ Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are i
         If not, prove that they are not isomorphic.
       </p>
     </statement>
-    <solution>
+  <solution>
     <p>
       We use some geometry to find the dimension of <m> V</m>. <m> \ve v \in V  </m> if and only if
       <me>
-|\ve v||(1,2,3)|\sin \theta =0 
-    </me>
-    where <m> \theta</m> is the angle between <m> \ve v </m> and <m> (1,2,3)</m>. Thus <m> V </m> consists of <m> \ve 0 </m> as well as all those vectors parallel to <m> (1,2,3)</m>. But this set is precisely all vectors of the form <m>k(1,2,3)</m> with <m> k \in \mathbb R </m>. Hence <m> V </m> is 1 dimensional with basis <m> \bopen (1,2,3) \bclose </m>.
+        |\ve v||(1,2,3)|\sin \theta =0
+      </me>
+      where <m> \theta</m> is the angle between <m> \ve v </m> and <m> (1,2,3)</m>. Thus <m> V </m> consists of <m> \ve 0 </m> as well as all those vectors parallel to <m> (1,2,3)</m>. But this set is precisely all vectors of the form <m>k(1,2,3)</m> with <m> k \in \mathbb R </m>. Hence <m> V </m> is 1 dimensional with basis <m> \bopen (1,2,3) \bclose </m>.
     </p>
+
     <p>
-<m> W </m> consists of all matrices <m>(a_{ij})</m> satisfying
-<me>
-\begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}.
-</me>
-Thus <m> a_{11}  = a_{22} = 0 </m> and <m> b = -c</m>. So <m>W</m> consists of all those matrices  of the form
-<me>
-\begin{bmatrix} 0 \mamp k \\ -k \mamp 0\end{bmatrix}
-</me>.
-This also shows that 
-<me>
-\bopen \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix} \bclose
-</me>
-is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the isomorphism given by the unique linear map <m> V \to W</m> satisfying
-<me>
-(1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix}
-</me>
+      <m> W </m> consists of all matrices <m>(a_{ij})</m> satisfying
+      <me>
+        \begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}.
+      </me>
+      Thus <m> a_{11}  = a_{22} = 0 </m> and <m> b = -c</m>. So <m>W</m> consists of all those matrices  of the form
+      <me>
+        \begin{bmatrix} 0 \mamp k \\ -k \mamp 0\end{bmatrix}
+      </me>.
+      This also shows that
+      <me>
+        \bopen \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix} \bclose
+      </me>
+      is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the isomorphism given by the unique linear map <m> V \to W</m> satisfying
+      <me>
+        (1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix}
+      </me>
     </p>
   </solution>
-
   </exercise>
 
   <exercise>
@@ -582,7 +587,7 @@ is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the 
     </statement>
   </exercise>
 
-  
+
 </exercises>
 
 <!-- <solutions divisional="solution answer" />  -->
