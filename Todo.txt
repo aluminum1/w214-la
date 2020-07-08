@@ -10,6 +10,7 @@ To do list:
 - First person to first person plural? (I to we)
 - Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the assemblage in Ch2Sec4 line 165 needs reconsidering too.
 - Rob Beezer says that CDATA should never be necessary - is it easier in a tikz picture, though? I guess you have to be careful of things like arrow heads -->
+- Create index?
 
 
 Afrikaans:
@@ -21,11 +22,18 @@ Afrikaans:
 - Ch2Sec4 I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
 - Ch2Sec4 Proposition on line 12 still has different versions for Eng and Afr.
 - Ch2Sec4 line 265, 440, 499, 561, (624 & 692 commented out), 750
+- Ch2Sec5 line 436
+- Ch3Sec1 line 354, 419, 512, 676 (rework to use linear combination instead of coordinate vectors), 875, 973, 1217
+- Check that all of the following are consistent:
+  - addition -> optelling (not sommering)
+  - well-defined -> wel-gedefinieerd (not goedgedefinieerd)
+  - span (verb) -> onderspan (not span - verbs only)
 
 
 I would like to add
 - learning outcomes for each section
 - link exercises or groups of exercises to these learning outcomes.
+- longer paragraph, especially in introductions
 
 Use??
 - <objective>?
