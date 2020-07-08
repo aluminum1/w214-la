@@ -2,16 +2,20 @@
 
 <section xml:id="Ch3Sec1DefinitionsExamples">
   <title>Definitions and Examples</title>
+
 <subsection>
   <title>Definition of a linear map</title>
+<!--
     <figure>
         <caption>Video recording for the intro to and definition of a linear map.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec16LinearMapIntroAndDefn.mp4" width="50%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
     </figure>
+-->
   <p>
     Recall that a <em>function</em>
     (or a <em>map</em>)
-    <m>f : X \rightarrow Y</m> from a set <m>X</m> to a set <m>Y</m> is simply a rule which assigns to each element of <m>X</m> an element <m>f(x)</m> of <m>Y</m>.
+    <m>f : X \rightarrow Y</m> from a set <m>X</m> to a set <m>Y</m> is
+    a rule which assigns to each element <m>x\in X</m> an element <m>f(x)</m> of <m>Y</m>.
     We write <m>x \mapsto f(x)</m> to indicate that an element <m>x \in X</m> maps to
     <m>f(x) \in Y</m> under the function <m>f</m>.
     See <xref ref="explanation_of_mapsto">Figure</xref>.
@@ -22,19 +26,17 @@
   <figure xml:id="explanation_of_mapsto">
     <caption>A function <m>f : X \rightarrow Y</m>.</caption>
     <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw (-2, 0) circle (1);
-    \draw (2,0) circle (1);
-    \node at (-2, -1.3) {\(X\)};
-    \node at (2, -1.3) {\(Y\)};
-    \draw[->] (-0.8, 0.3) to[out=30, in=150] node[above] {\(f\)} (0.8, 0.3); 
-    \node (a) at (-2, -0.5) {\(x\)};
-    \node (b) at (2, -0.5) {\(f(x)\)};
-    \draw[|->] (a) to[out=-20, in=200] (b);\end{tikzpicture}]]>
-</latex-image>
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}\draw (-2, 0) circle (1);
+        \draw (2,0) circle (1);
+        \node at (-2, -1.3) {\(X\)};
+        \node at (2, -1.3) {\(Y\)};
+        \draw[->] (-0.8, 0.3) to[out=30, in=150] node[above] {\(f\)} (0.8, 0.3);
+        \node (a) at (-2, -0.5) {\(x\)};
+        \node (b) at (2, -0.5) {\(f(x)\)};
+        \draw[|->] (a) to[out=-20, in=200] (b);\end{tikzpicture}]]>
+      </latex-image>
     </image>
-
   </figure>
 
   <definition>
@@ -53,7 +55,7 @@
           <li>
             <p>
               <m>T(k \ve{v}) = k T (\ve{v})</m> for all vectors
-              <m>\ve{v} \in V</m> and scalars <m>k \in \mathbb{R}</m>.
+              <m>\ve{v} \in V</m> and all scalars <m>k \in \mathbb{R}</m>.
             </p>
           </li>
         </ul>
@@ -73,21 +75,22 @@
 <subsection>
   <title>Examples of linear maps</title>
 
-
   <example xml:id="matrices-give-rise-to-linear-maps-example">
     <title>Matrices give rise to linear maps</title>
     <statement>
-    <figure>
+<!--
+      <figure>
         <caption>Video recording for <xref ref="matrices-give-rise-to-linear-maps-example"/>.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec16LinearMapDemo.mp4" width="70%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
-    </figure>      
+      </figure>
+-->
       <p>
         Every <m>n \times m</m> matrix <m>\mat{A}</m> induces a <em>linear map</em>
         <md>
           <mrow>T_{\mat{A}} : \Col_m \amp  \rightarrow \Col_n</mrow>
           <mrow>\col{v} \amp  \mapsto \mat{A} \col{v} \, </mrow>
         </md>.
-      </p> 
+      </p>
 
       <p>
         That is, <m>T_{\mat{A}} (\col{v}) := \mat{A} \col{v}</m> is the matrix product of <m>\mat{A}</m> with the column vector <m>\col{v}</m>.
@@ -97,54 +100,56 @@
 
       <assemblage>
         <p>
-          Note that an <m>n \times m</m> matrix gives a linear map from <m>\Col_m</m> to <m>\Col_n</m>!
+          Note that an <m>n \times m</m> matrix gives rise to a linear map from <m>\Col_m</m> to <m>\Col_n</m>!
         </p>
       </assemblage>
       <p>
-      For instance, consider
-      <me>
-      A = \begin{bmatrix} 1 \amp 2 \\ 1 \amp -2 \end{bmatrix}
-    </me>
-    This gives rise to a linear map
-    <md>
-     <mrow> T : \Col_2 \amp \rightarrow \Col_2 </mrow>
-     <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} 1 \amp 2 \\ 1 \amp -2 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} </mrow>
-    </md>
-    The following interactive Geogebra app demonstrates this. Drag the red vector <m>\col{v}</m> around to see the effect on <m>\mat{A} \col{v}</m>. You can also change the coefficients of the matrix <m>\mat{A}</m> by dragging the sliders.</p>
-        <figure>
-            <title>Geogebra app</title>
-            <caption>  Interactive GeoGebra applet displaying the linear map <m>\col{v} \mapsto \mat{A}\col{v}</m>.</caption>
-            <interactive geogebra="https://www.geogebra.org/material/iframe/id/vexfrzez/width/600/height/701/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:701" width="90%"/>
-        </figure>
-</statement>
+        For instance, consider
+        <me>
+          A = \begin{bmatrix} 1 \amp 2 \\ 1 \amp -2 \end{bmatrix}
+        </me>
+        This gives rise to a linear map
+        <md>
+         <mrow> T : \Col_2 \amp \rightarrow \Col_2 </mrow>
+         <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} 1 \amp 2 \\ 1 \amp -2 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} </mrow>
+        </md>
+        The following interactive Geogebra app demonstrates this. Drag the red vector <m>\col{v}</m> around to see the effect on <m>\mat{A} \col{v}</m>. You can also change the coefficients of the matrix <m>\mat{A}</m> by dragging the sliders.
+      </p>
+      <figure>
+        <title>Geogebra app</title>
+        <caption>  Interactive GeoGebra applet displaying the linear map <m>\col{v} \mapsto \mat{A}\col{v}</m>.</caption>
+        <interactive geogebra="https://www.geogebra.org/material/iframe/id/vexfrzez/width/600/height/701/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:701" width="90%"/>
+      </figure>
+    </statement>
   </example>
-
-
 
 <example>
 <title>A non-linear map</title>
   <statement>
-    The following interactive JSXGraph applet illustrates the 'polar coordinates' map
-    <md>
-      <mrow> T : \mathbb{R}^2 \amp \rightarrow \mathbb{R}^2 </mrow>
-      <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} v_1 \cos(\pi v_2) \\ v_1 \sin(\pi v_2)  \end{bmatrix} </mrow>
-    </md>
-    Note that <m>T</m> is a nonlinear map, since, for most points <m>\ve{v}, \ve{v}' \in \mathbb{R}^2</m>, we have <m>T(\ve{v} + \ve{v}') \neq T(\ve{v}) + T(\ve{v}')</m>.
+    <p>
+      The following interactive JSXGraph applet illustrates the <sq>polar coordinates</sq> map
+      <md>
+        <mrow> T : \mathbb{R}^2 \amp \rightarrow \mathbb{R}^2 </mrow>
+        <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} v_1 \cos(\pi v_2) \\ v_1 \sin(\pi v_2)  \end{bmatrix} </mrow>
+      </md>
+      Note that <m>T</m> is a nonlinear map, since, for most points <m>\ve{v}, \ve{v}' \in \mathbb{R}^2</m>, we have <m>T(\ve{v} + \ve{v}') \neq T(\ve{v}) + T(\ve{v}')</m>.
+    </p>
     <figure>
-        <caption>Polar coordinates as a nonlinear map.</caption>
-
-        <interactive xml:id="interactive-polar-map" platform="jsxgraph" source="code/jsxgraph/PolarCoordMap.js" aspect="10:4">
-            <sidebyside widths="40% 5% 40%" valign="middle">
-              <slate xml:id="jsxgraph-polar-1" surface="jsxboard"/>
-              <p><m> \xrightarrow{ \large T } </m></p>
-              <slate xml:id="jsxgraph-polar-2" surface="jsxboard"/>
-            </sidebyside>
-            <instructions>
-                <p>Drag the point <m>\ve{v}</m> to see the effect on <m>T(\ve{v})</m>.</p>
-            </instructions>
-        </interactive>
+      <caption>Polar coordinates as a nonlinear map.</caption>
+      <interactive xml:id="interactive-polar-map" platform="jsxgraph" source="code/jsxgraph/PolarCoordMap.js" aspect="10:4">
+        <sidebyside widths="40% 5% 40%" valign="middle">
+          <slate xml:id="jsxgraph-polar-1" surface="jsxboard"/>
+          <p><m> \xrightarrow{ \large T } </m></p>
+          <slate xml:id="jsxgraph-polar-2" surface="jsxboard"/>
+        </sidebyside>
+        <instructions>
+            <p>Drag the point <m>\ve{v}</m> to see the effect on <m>T(\ve{v})</m>.</p>
+        </instructions>
+      </interactive>
     </figure>
-    Another way to see that <m>T</m> is nonlinear is that <m>T</m> does not send straight lines to straight lines.
+    <p>
+      Another way to see that <m>T</m> is non-linear is that <m>T</m> does not send straight lines to straight lines.
+    </p>
   </statement>
 </example>
 
@@ -201,45 +206,36 @@
     </p>
 
     <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[xscale=1.5]
-  \draw[<->] (-1, 0) -- (3, 0);
-  \draw[<->] (0, -1) -- (0, 3);
-  \draw[very thick, red, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
-  \draw[very thick, red, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
-  \draw[dotted] (0.5, 1) -- (0.5, 0);
-  \draw[dotted] (1.5, 1.5) -- (1.5, 0);
-  \draw[very thick, red, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
-  \draw[very thick, red, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
-  \node[red] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
-  \node[red] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
-</latex-image>
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}[xscale=1.5]
+        \draw[<->] (-1, 0) -- (3, 0);
+        \draw[<->] (0, -1) -- (0, 3);
+        \draw[very thick, red, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
+        \draw[very thick, red, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
+        \draw[dotted] (0.5, 1) -- (0.5, 0);
+        \draw[dotted] (1.5, 1.5) -- (1.5, 0);
+        \draw[very thick, red, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
+        \draw[very thick, red, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
+        \node[red] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
+        \node[red] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
+      </latex-image>
     </image>
-
-    
-
     </statement>
   </example>
 
-<exercise>
-      <statement>
-        <p>
-          Prove algebraically that we also have <m>T(k \ve{v}) = k T(\ve{v})</m>,
-          so that <m>T</m> is a linear map.
-        </p>
-      </statement>
-      <solution>
-        <p>
-         <md> 
-          <mrow> T(k \ve v) \amp = T(k(x,y)) </mrow>
-          <mrow> \amp = T((kx,ky))  </mrow>
-          <mrow> \amp = kx = kT((x,y)) </mrow>
-          <mrow> \amp  = kT(\ve v) </mrow>  
-        </md>
-        </p>
-      </solution>
-    </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Prove algebraically that we also have <m>T(k \ve{v}) = k T(\ve{v})</m>,
+        so that <m>T</m> is a linear map.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <me> T(k \ve v) = T(k(x,y)) = T(kx,ky) = kx = kT((x,y)) = kT(\ve v)  </me>
+      </p>
+    </solution>
+  </exercise>
 
   <example xml:id="rotation_as_linear_map">
     <title>Rotation as a linear map</title>
@@ -248,23 +244,22 @@
         Fix an angle <m>\theta</m>.
         The function
         <md>
-          <mrow>R : \mathbb{R}^2 \amp  \rightarrow \mathbb{R}^2</mrow>
+          <mrow>R_\theta : \mathbb{R}^2 \amp  \rightarrow \mathbb{R}^2</mrow>
           <mrow>\ve{v} \amp  \mapsto \mbox{rotation of \(\ve{v}\) counterclockwise through angle \(\theta\)}</mrow>
         </md>
         is a linear map,
         by a similar graphical argument as in <xref ref="projection_map_example">Example</xref>.
       </p>
 
-      <image width="60%">
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
-  \draw[<->] (0, -1) -- (0, 2);
-  \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(\ve{v}\)} ;
-  \draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {\(R (\ve{v})\)};
-  \draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {\(\theta\)} ;\end{tikzpicture}]]>
-</latex-image>
-      </image>
+    <image width="60%">
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+        \draw[<->] (0, -1) -- (0, 2);
+        \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(\ve{v}\)} ;
+        \draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {\(R (\ve{v})\)};
+        \draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {\(\theta\)} ;\end{tikzpicture}]]>
+      </latex-image>
+    </image>
 
     </statement>
   </example>
@@ -272,12 +267,14 @@
   <example xml:id="cross_prod_as_linear_map">
     <title>Cross product with a fixed vector as a linear map</title>
     <statement>
+<!--
     <figure>
         <caption>Video recording for <xref ref="cross_prod_as_linear_map"/>.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec16CrossProduct.mp4" width="70%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
     </figure>
+-->
       <p>
-         Fix a vector <m>\ve{w} \in \mathbb{R}^3</m>.
+        Fix a vector <m>\ve{w} \in \mathbb{R}^3</m>.
         The function
         <md>
           <mrow>C : \mathbb{R}^3 \amp \rightarrow \mathbb{R}^3</mrow>
@@ -296,15 +293,12 @@
     <title>Dot product with a fixed vector as a linear map</title>
     <statement>
       <p>
-      Fix a vector <m>\ve{u} \in \mathbb{R}^3</m>.
+        Fix a vector <m>\ve{u} \in \mathbb{R}^3</m>.
         The function
         <md>
           <mrow>D : \mathbb{R}^3 \amp \rightarrow \mathbb{R}</mrow>
           <mrow>\ve{v} \amp  \mapsto \ve{u} \dotp \ve{v}</mrow>
         </md>
-      </p>
-
-      <p>
         (here <m>\cdot</m> is the dot product of vectors,
         not scalar multiplication!) is a linear map, because of the properties
         <md>
@@ -328,106 +322,98 @@
   <example xml:id="diff_of_poly">
     <title>Differentiation as a linear map</title>
     <statement>
+<!--
     <figure>
         <caption>Video recording for <xref ref="diff_of_poly"/>.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec16Differentiation.mp4" width="70%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
     </figure>
-
+-->
     <p>
       The operation <sq>take the derivative</sq> can be interpreted as a linear map
       <md>
         <mrow>D : \Poly_n \amp  \rightarrow \Poly_{n-1}</mrow>
         <mrow>p \amp  \mapsto p' \, </mrow>
       </md>.
-    </p>
-
-    <p>
       For example, <m>D(2x^3 - 6x + 2) = 6x^2 - 6</m>.
     </p>
-
-   
-
     </statement>
   </example>
 
- <exercise>
-      <statement>
-        <p>
-          (a) Why is <m>D</m> a map from <m>\Poly_n</m> to
-          <m>\Poly_{n-1}</m>? (b) Check that <m>D</m> is linear.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          <ol>
-            <li>
-              <p>
-                As you know from calculus, taking the derivative of a polynomial decreases every power of <m> x </m> by 1. So if <m> p </m> is in <m>\Poly_n </m>, then <m> p </m> has degree at most <m> n </m> . Therefore, its image under <m> D </m> has degree at most <m> n - 1</m>. Thus <m> p' </m> is in <m>\Poly_{n-1} </m>.
-              </p>
-            </li>
+  <exercise>
+    <statement>
+      <ol type="a">
+        <li><p> Why is <m>D</m> a map from <m>\Poly_n</m> to <m>\Poly_{n-1}</m>?</p></li>
+        <li><p> Check that <m>D</m> is linear.</p></li>
+      </ol>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              As you know from calculus, taking the derivative of a polynomial decreases every power of <m> x </m> by 1. So if <m> p </m> is in <m>\Poly_n </m>, then <m> p </m> has degree at most <m> n </m> . Therefore, its image under <m> D </m> has degree at most <m> n - 1</m>. Thus <m> p' </m> is in <m>\Poly_{n-1} </m>.
+            </p>
+          </li>
 
-            <li>
-              <p>
-                Let <m> p, q </m> be in <m> \Poly_n </m>. Then:
-                <md>
-                  <mrow>
-                    D(p + q) \amp = (p+q)' 
-                  </mrow>
-                  <mrow> \amp = p' + q' \amp (\text{rule of differentiation})</mrow>
-                  <mrow> \amp = D(p) + D(q) </mrow>
-                </md>
-              </p>
-              <p>
-                Similarly, 
-                <md>
-                  <mrow> D(kp) \amp = (kp)' </mrow>
-                  <mrow> \amp = kp' \amp (\text{rule of differentiation})</mrow>
-                  <mrow> \amp = k D(p)</mrow>
-                </md>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </solution>
-    </exercise>
+          <li>
+            <p>
+              Let <m> p, q </m> be in <m> \Poly_n </m>. Then:
+              <md>
+                <mrow>
+                  D(p + q) \amp = (p+q)'
+                </mrow>
+                <mrow> \amp = p' + q' \amp (\text{rule of differentiation})</mrow>
+                <mrow> \amp = D(p) + D(q) </mrow>
+              </md>
+            </p>
+            <p>
+              Similarly,
+              <md>
+                <mrow> D(kp) \amp = (kp)' </mrow>
+                <mrow> \amp = kp' \amp (\text{rule of differentiation})</mrow>
+                <mrow> \amp = k D(p)</mrow>
+              </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </exercise>
 
   <example xml:id="antiderivative-as-linear-map-example">
     <title>Antiderivative as a linear map</title>
     <statement>
-    <figure>
+<!--
+      <figure>
         <caption>Video recording for <xref ref="antiderivative-as-linear-map-example"/>.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec16Antiderivative.mp4" width="70%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
-    </figure>
+      </figure>
+-->
     <p>
-      The operation <sq>find the unique antiderivative with zero constant term</sq> can be interpreted as a linear map
+      The operation <sq>find the unique anti-derivative with zero constant term</sq> can be interpreted as a linear map
       <md>
         <mrow>A : \Poly_n \amp  \rightarrow \Poly_{n+1}</mrow>
         <mrow>\ve{p} \amp  \mapsto \int_0^x \ve{p}(t) \, dt</mrow>
       </md>
-    </p>
-
-    <p>
       For example, <m>A(2x^3 - 6x + 2) = 4 x^4 - 3x^2 + 2x</m>.
     </p>
-     </statement>
-      </example>
-
+  </statement>
+  </example>
 
   <exercise>
       <statement>
-        <p>
-          (a) Check that <m>A</m> is indeed a linear map. (b) Why is <m>A</m> a map from <m>\Poly_n</m> to
-          <m>\Poly_{n+1}</m>? (c) Check that <m>A</m> is linear.
-        </p>
+        <ol>
+          <li><p>
+            Why is <m>A</m> a map from <m>\Poly_n</m> to <m>\Poly_{n+1}</m>?
+          </p></li>
+          <li><p>
+            Check that <m>A</m> is indeed a linear map.
+          </p></li>
+        </ol>
       </statement>
       <solution>
         <p>
           <ol>
-            <li>
-              <p>
-              </p>
-            </li>
-
             <li>
               <p>
               You know from calculus that the antiderivative of a polynomial <m> \ve p </m> must always have degree one greater than <m> \ve p </m>. Hence <m> A </m> maps <m>\Poly_n</m> to <m> \Poly_{n+1}</m>.
@@ -436,15 +422,15 @@
 
             <li>
               <p>
-              Let <m> \ve p , \ve q </m> be in <m> \Poly_n </m>. Using the usual properties of the integral, we compute 
-              <me>
-              A(\ve p + \ve q) = \int_0^x \ve p(t) + \ve q(t) \, dt = \int_0^x \ve p(t) \, dt + \int_0^x \ve q(t) \, dt \\ = A(\ve p) + A(\ve q).
-            </me>
-            Similarly,
-          <me>
-A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
-        </me>
-              </p>
+                Let <m> \ve p , \ve q </m> be in <m> \Poly_n </m>. Using the usual properties of the integral, we compute
+                <me>
+                  A(\ve p + \ve q) = \int_0^x \ve p(t) + \ve q(t) \, dt = \int_0^x \ve p(t) \, dt + \int_0^x \ve q(t) \, dt \\ = A(\ve p) + A(\ve q).
+                </me>
+                Similarly,
+                <me>
+                  A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
+                </me>
+                </p>
             </li>
           </ol>
         </p>
@@ -477,7 +463,6 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
         <mrow>S(\ve{p}_3) \amp = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0</mrow>
       </md>
     </p>
-
     </statement>
   </example>
 
@@ -489,18 +474,18 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
       </statement>
       <solution>
         <p>
-          Let 
+          Let
           <me>
-          \ve p = \sum_{j=0}^n a_j x^j \\
-          \ve q = \sum_{j=0}^n b_j x^j
-        </me>
-        <me>
-          S(k \ve p ) = S\left( \sum_{j=0}^n ka_j x^j\right) = \sum_{j=0}^n ka_j (x-1)^j =  k \sum_{j=0}^n a_j (x-1)^j = kS(\ve p).
-        </me>
-        <me>
-          S(\ve p + \ve q) = S\left(\sum_{j=0}^n (a_j + b_j) x^j\right) = \sum_{j=0}^n (a_j + b_j) (x-1)^j \\
-          = \sum_{j=0}^n a_j (x-1)^j + \sum_{j=0}^n  b_j (x-1)^j = S(\ve p) + S(\ve q).
-        </me>
+            \ve p = \sum_{j=0}^n a_j x^j \\
+            \ve q = \sum_{j=0}^n b_j x^j
+          </me>
+          <me>
+            S(k \ve p ) = S\left( \sum_{j=0}^n ka_j x^j\right) = \sum_{j=0}^n ka_j (x-1)^j =  k \sum_{j=0}^n a_j (x-1)^j = kS(\ve p).
+          </me>
+          <me>
+            S(\ve p + \ve q) = S\left(\sum_{j=0}^n (a_j + b_j) x^j\right) = \sum_{j=0}^n (a_j + b_j) (x-1)^j \\
+            = \sum_{j=0}^n a_j (x-1)^j + \sum_{j=0}^n  b_j (x-1)^j = S(\ve p) + S(\ve q).
+          </me>
         </p>
       </solution>
     </exercise>
@@ -508,7 +493,7 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
     <exercise>
       <statement>
         <p>
-          Check this.
+          Check the formulas for <m>S(\ve{p}_0), S(\ve{p}_1), S(\ve{p}_2), S(\ve{p}_3),</m>.
         </p>
       </statement>
       <solution>
@@ -527,72 +512,81 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
     <title>Gradient as a linear map</title>
     <statement>
       <p>
-    Recall the vector space <m>\Poly_n</m> of polynomials in <m>x</m> and <m>y</m> (<xref ref="poly_many_variables_example"/>, dimension computed in <xref ref="dim_poly_many_variables"/>) and the vector space <m>\Vect_n (\mathbb{R}^2)</m> of polynomial vector fields on <m>\mathbb{R}^2</m> (<xref ref="poly_vector_fields_example"/>, dimension computed in <xref ref="dim_poly_vec_fields"/>). </p>
+        Recall the vector space <m>\Poly_n</m> of polynomials in <m>x</m> and <m>y</m> (<xref ref="poly_many_variables_example"/>, dimension computed in <xref ref="dim_poly_many_variables"/>) and the vector space <m>\Vect_n (\mathbb{R}^2)</m> of polynomial vector fields on <m>\mathbb{R}^2</m> (<xref ref="poly_vector_fields_example"/>, dimension computed in <xref ref="dim_poly_vec_fields"/>).
+      </p>
 
-    <p>The operation 'take the gradient' can be thought of as a linear map
-    <md>
-      <mrow> \nabla : \Poly_n[x,y] \amp \rightarrow \Vect_{n-1} (\mathbb{R}^2) </mrow>
-      <mrow> f \amp \mapsto \nabla f </mrow>
-    </md>
- This is a linear map because <m>\nabla(f + g) = \nabla f + \nabla g </m> and <m>\nabla (kf) = k \nabla f</m>. </p>
+      <p>
+        The operation <sq>take the gradient</sq> can be thought of as a linear map
+        <md>
+          <mrow> \nabla : \Poly_n[x,y] \amp \rightarrow \Vect_{n-1} (\mathbb{R}^2) </mrow>
+          <mrow> f \amp \mapsto \nabla f </mrow>
+        </md>
+        This is a linear map because <m>\nabla(f + g) = \nabla f + \nabla g </m> and <m>\nabla (kf) = k \nabla f</m>.
+      </p>
 
- <p> For example,
-    <me>
- \nabla(x + xy) = (1 + y, x).
-  </me>
- </p>
-  </statement>
+      <p>
+        For example,
+        <me>
+          \nabla(x + xy) = (1 + y, x).
+        </me>
+      </p>
+    </statement>
   </example>
 
   <example>
- <title>Double integral as a linear map</title>
-   <statement>
-    <p>Let <m>D \subseteq \mathbb{R}^2</m> be a region in the plane. Integrating polynomial functions over <m>D</m> can be thought of as a linear map
-    <md>
-      <mrow> I : \Poly_n [x,y] \amp \mapsto \mathbb{R} </mrow>
-      <mrow> f \amp \mapsto \iint_{D} f dA </mrow>
-    </md>
-    This is a linear map because
-    <md>
-  <mrow> \iint_D (f+g) dA \amp = \iint_D f dA + \iint_D g dA </mrow>
-  <mrow> \iint_D kf \, dA \amp = k \iint_D f \, dA </mrow>
-    </md>
-  </p>
+  <title>Double integral as a linear map</title>
+    <statement>
+    <p>
+      Let <m>D \subseteq \mathbb{R}^2</m> be a region in the plane. Integrating polynomial functions over <m>D</m> can be thought of as a linear map
+      <md>
+        <mrow> I : \Poly_n [x,y] \amp \mapsto \mathbb{R} </mrow>
+        <mrow> f \amp \mapsto \iint_{D} f dA </mrow>
+      </md>
+      This is a linear map because
+      <md>
+        <mrow> \iint_D (f+g) dA \amp = \iint_D f dA + \iint_D g dA </mrow>
+        <mrow> \iint_D kf \, dA \amp = k \iint_D f \, dA </mrow>
+      </md>
+    </p>
 
-  <p>For example, let <m>D = \{ (x,y) : x^2 + y^2 \leq 1 \} </m>, and let <m>f = x^2</m>. Then
-  <me>
-   I(f) = \iint_D x^2 \, dA = \frac{\pi}{4}
-</me>
-as the reader will verify.
-</p>
+    <p>
+      For example, let <m>D = \{ (x,y) : x^2 + y^2 \leq 1 \} </m>, and let <m>f = x^2</m>. Then
+      <me>
+        I(f) = \iint_D x^2 \, dA = \frac{\pi}{4}
+      </me>
+      as the reader will verify.
+    </p>
    </statement>
   </example>
 
 <example xml:id="initial_conditions_as_linear_map">
-<title>Initial conditions for differential equations as a linear map</title>
-<statement>
-<p>Let <m>V</m> be the vector space of solutions to a 2nd order linear homogenous ordinary differential equation on an interval <m>I</m>:
-<me>
-  y^{''} + a_1(x) y'+ a_0(x) y = 0, \quad x \in I.
-</me>
-Fix a point <m>x_0 \in I</m>. Then we get a linear map
-<md>
-  <mrow> T_{x_0} : \Col_2 \amp \rightarrow V </mrow> 
-  <mrow> \begin{bmatrix} a \\ b \end{bmatrix} \amp \mapsto \text{unique } y \in V \text{ such that } y(x_0) = a, y'(x_0)=b </mrow>
-</md>
-<assemblage>
-<p>Now is a good time to review <xref ref="diff_eqn_exist_unique"/> and <xref ref="geogebra_diff_eqn_1"/>. </p>
-</assemblage>
-This is illustrated in <xref ref="ode_lin_map"/> for the case of the differential equation
-<me>
-   y^{''}  + xy = 0.
-</me>
- Drag the blue vector <m>\ve{v}</m> to see the effect on its image <m>T_{x_0}(\ve{v}) = y</m> in <m>V</m>. You can also change the value of <m>x_0</m>.
+  <title>Initial conditions for differential equations as a linear map</title>
+  <statement>
+  <p>
+    Let <m>V</m> be the vector space of solutions to a 2nd order linear homogenous ordinary differential equation on an interval <m>I</m>:
+    <me>
+      y^{''} + a_1(x) y'+ a_0(x) y = 0, \quad x \in I.
+    </me>
+    Fix a point <m>x_0 \in I</m>. Then we get a linear map
+    <md>
+      <mrow> T_{x_0} : \Col_2 \amp \rightarrow V </mrow>
+      <mrow> \begin{bmatrix} a \\ b \end{bmatrix} \amp \mapsto \text{unique } y \in V \text{ such that } y(x_0) = a, y'(x_0)=b </mrow>
+    </md>
+  </p>
+  <assemblage>
+    <p>Now is a good time to review <xref ref="diff_eqn_exist_unique"/> and <xref ref="geogebra_diff_eqn_1"/>. </p>
+  </assemblage>
+  <p>
+    This is illustrated in <xref ref="ode_lin_map"/> for the case of the differential equation
+    <me>
+       y^{''}  + xy = 0.
+    </me>
+    Drag the blue vector <m>\ve{v}</m> to see the effect on its image <m>T_{x_0}(\ve{v}) = y</m> in <m>V</m>. You can also change the value of <m>x_0</m>.
     <figure xml:id="ode_lin_map">
-        <interactive geogebra="https://www.geogebra.org/material/iframe/id/kxcmtv5t/width/800/height/909/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="800:909" width="90%"/>
+      <interactive geogebra="https://www.geogebra.org/material/iframe/id/kxcmtv5t/width/800/height/909/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="800:909" width="90%"/>
       <caption>GeoGebra App: Understanding the linear map <m>T</m>.</caption>
     </figure>
-</p>
+  </p>
 </statement>
 </example>
 
@@ -625,16 +619,31 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
   </lemma>
 
   <proof>
-    <md>
-      <mrow>\mbox{(i)}  \amp   T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp  \mbox{(R8 applied to \(\ve{v} = \ve{0}_V \in V\))}</mrow>
-      <mrow>\amp = 0T(\ve{0}_V) \amp  \mbox{(T is linear)}</mrow>
-      <mrow>\amp = \ve{0}_W \amp  \mbox{(R8 applied to \(\ve{v} = T(\ve{0}_V) \in W\))}</mrow>
-    </md>
-    <md>
-      <mrow>\mbox{(ii)}  \amp  T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp  \mbox{(defn of \(-\ve{v}\) in \(V\))}</mrow>
-      <mrow>\amp = (-1) T(\ve{v}) \amp  \mbox{(T is linear)}</mrow>
-      <mrow>\amp = - T(\ve{v}) \amp  \mbox{(defn of \(-T(\ve{v})\) in \(W\))}</mrow>
-    </md>
+    <p>
+      We go to work as follows:
+    </p>
+
+    <ol>
+        <li>
+          <p>
+            <md>
+              <mrow>   T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp  \mbox{(R8 applied to \(\ve{v} = \ve{0}_V \in V\))}</mrow>
+              <mrow>\amp = 0T(\ve{0}_V) \amp  \mbox{(T is linear)}</mrow>
+              <mrow>\amp = \ve{0}_W \amp  \mbox{(R8 applied to \(\ve{v} = T(\ve{0}_V) \in W\))}</mrow>
+            </md>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <md>
+              <mrow> T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp  \mbox{(defn of \(-\ve{v}\) in \(V\))}</mrow>
+              <mrow>\amp = (-1) T(\ve{v}) \amp  \mbox{(T is linear)}</mrow>
+              <mrow>\amp = - T(\ve{v}) \amp  \mbox{(defn of \(-T(\ve{v})\) in \(W\))}</mrow>
+            </md>
+          </p>
+        </li>
+      </ol>
   </proof>
 
   <p>
@@ -648,7 +657,7 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
   </p>
 
   <proposition xml:id="defining_linear_map_on_basis">
-    <title>Sufficient to Define a Linear Map on a Basis</title>
+    <title>Sufficient to define a linear map on a basis</title>
     <statement>
       <p>
         Suppose <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m> is a basis for <m>V</m> and
@@ -722,6 +731,27 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
     </p>
   </proof>
 
+<!-- Extra space, because proof will be refactored
+and then Eng and Afr will need to be matched again -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <example>
     <statement>
       <p>
@@ -745,7 +775,7 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
         Then the general formula for <m>T</m> is
         <me>
           \left(T \begin{bmatrix} a \\ b \end{bmatrix}\right)(x) = a \sin x + b |x|
-        </me>
+        </me>.
       </p>
     </statement>
   </example>
@@ -755,17 +785,16 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
     <statement>
       <p>
         Let us compute the action of the <sq>counterclockwise rotation by <m>\theta</m></sq> map <m>R</m> from <xref ref="rotation_as_linear_map">Example</xref>
-        with respect to the standard basis
-        <m>\ve{e}_1, \ve{e}_2</m> of <m>\mathbb{R}^2</m>.
-        </p>
-        <sidebyside>
+        with respect to the standard basis <m>\ve{e}_1, \ve{e}_2</m> of <m>\mathbb{R}^2</m>.
+      </p>
+      <sidebyside>
         <image width="40%">
           <latex-image>
-                    <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
-          \draw[<->] (0, -1) -- (0, 2);
-          \draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
-          \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
-          \draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};\end{tikzpicture}]]>
+            <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+            \draw[<->] (0, -1) -- (0, 2);
+            \draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
+            \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
+            \draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};\end{tikzpicture}]]>
           </latex-image>
         </image>
         <image width="40%">
@@ -777,7 +806,7 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
           \draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;\end{tikzpicture}]]>
           </latex-image>
         </image>
-        </sidebyside>
+      </sidebyside>
 
       <p>
         From the figure, we have:
@@ -802,10 +831,10 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
       </p>
     </statement>
   </example>
+
 </subsection>
 
-
-  <exercises>
+<exercises>
  <exercise>
     <statement>
       <p>
@@ -818,12 +847,14 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
         </md>
         <ol>
           <li>
+            <title>(a)</title>
             <p>
               Is <m>T</m> a linear map? (Yes or no)
             </p>
           </li>
 
           <li>
+            <title>(b)</title>
             <p>
               Prove your assertion from (a).
             </p>
@@ -848,9 +879,8 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
             Hence <m> T </m> cannot be linear.
             </p>
           </li>
-     
-    </ol>
-     </p>
+        </ol>
+      </p>
     </solution>
   </exercise>
 
@@ -861,12 +891,14 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
 
         <ol>
           <li>
+            <title>(a)</title>
             <p>
               Is <m>T</m> a linear map? (Yes or no)
             </p>
           </li>
 
           <li>
+            <title>(b)</title>
             <p>
               Prove your assertion from (a).
             </p>
@@ -884,13 +916,13 @@ This is illustrated in <xref ref="ode_lin_map"/> for the case of the differentia
           </li>
           <li>
             <p>
-             <me>
-             T\left((x,y,z) + (a,b,c)\right) = T\left( (x+a,y+b , z + c) \right) = (z+c,x+a,y+b) \\ 
-             = (z,x,y) + (c,a,b)= T\left((x,y,z)\right) +  T\left((a,b,c)\right)
-           </me>
-           <me>
-T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
-         </me>
+              <me>
+                T\left((x,y,z) + (a,b,c)\right) = T\left( (x+a,y+b , z + c) \right) = (z+c,x+a,y+b) \\
+                = (z,x,y) + (c,a,b)= T\left((x,y,z)\right) +  T\left((a,b,c)\right)
+              </me>
+              <me>
+                T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
+              </me>
             </p>
           </li>
         </ol>
@@ -910,18 +942,21 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
 
         <ol>
           <li>
+            <title>(a)</title>
             <p>
               Why does <m>M</m> map from <m>\Poly_n</m> to <m>\Poly_{n+2}</m>?
             </p>
           </li>
 
           <li>
+            <title>(b)</title>
             <p>
               Prove that <m>M</m> is linear.
             </p>
           </li>
 
           <li>
+            <title>(c)</title>
             <p>
               Compute the action of <m>M</m> in the standard basis for <m>\Poly_3</m>,
               as in <xref ref="shift_example">Example</xref>.
@@ -943,23 +978,23 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
             <p>
               The proof is simple and follows from the usual properties of polynomials. Using the fact that multiplication of polynomials distributes over addition we compute
               <me>
-              M(\ve p + \ve q)(x) = x^2(\ve p(x) + \ve q(x)) = x^2\ve p(x) + x^2\ve q(x) = M(\ve p)(x) + M(\ve q)(x).
-            </me>
-            We may consider the scalar <m> k </m> as a constant polynomial. Thus, using the commutativity and associativity of polynomial multiplication we compute
-            <me>
-            M(k\ve p)(x) = x^2k\ve p (x) = k(x^2 \ve p(x)) = kM(\ve p)(x).
-          </me>
+                M(\ve p + \ve q)(x) = x^2(\ve p(x) + \ve q(x)) = x^2\ve p(x) + x^2\ve q(x) = M(\ve p)(x) + M(\ve q)(x).
+              </me>
+              We may consider the scalar <m> k </m> as a constant polynomial. Thus, using the commutativity and associativity of polynomial multiplication we compute
+              <me>
+                M(k\ve p)(x) = x^2k\ve p (x) = k(x^2 \ve p(x)) = kM(\ve p)(x).
+              </me>
             </p>
           </li>
 
           <li>
             <p>
               <me>
-              M(\ve p_0) = x^2 1 = x^2 = \ve p_2 \\
-              M(\ve p_1) = x^2 x = x^3 = \ve p_3 \\
-              M(\ve p_2) = x^2 x^2 = x^4 = \ve p_4 \\
-              M(\ve p_3) = x^2 x^3 = x^5 = \ve p_5.
-            </me>
+                M(\ve p_0) = x^2 1 = x^2 = \ve p_2 \\
+                M(\ve p_1) = x^2 x = x^3 = \ve p_3 \\
+                M(\ve p_2) = x^2 x^2 = x^4 = \ve p_4 \\
+                M(\ve p_3) = x^2 x^3 = x^5 = \ve p_5.
+              </me>
             </p>
           </li>
         </ol>
@@ -992,7 +1027,7 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
           Justify that for every polynomial <m>p \in \Poly_n</m>, the function <m>C(p) \in \Trig_n</m>? (This is implicitly assumed above.)
         </li>
         <li>
-          Compute <m>C(p_0), C(p_1), C(p_2), C(p_3)</m> where 
+          Compute <m>C(p_0), C(p_1), C(p_2), C(p_3)</m> where
           <me>
           p_0(x) = 1, p_1(x) = x, p_2(x) = x^2, p_3(x)=x^3
         </me>
@@ -1004,23 +1039,24 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
   </exercise>
 
   <exercise>
-    <p>Determine the action of the gradient linear map
-    <me>
-      \nabla : \Poly_2[x,y] \rightarrow \Vect_1(\mathbb{R}^2)
-    </me>
-    from <xref ref="grad_as_linear_map"/> in terms of the standard bases
-    <md>
-      <mrow> \bopen q_1, q_2, q_3, q_4, q_5 \bclose  </mrow>
-      <mrow> q_1 = 1, q_2 = x, q_3 = y, q_4 = x^2, q_5 = xy, q_6 = y^2</mrow>
-    </md>
-   of <m>\Poly_2</m> and
-   <md>
-   <mrow>  \bopen V_1, V_2, V_3, V_4, V_5, V_6 \bclose </mrow>
-    <mrow>  V_1 = (1, 0), V_2 = (x, 0), V_3 = (y, 0) </mrow>
-    <mrow> V_4 = (0, 1), V_5 = (0, x), V_6 = (0, y)</mrow>
-   </md>
-   of <m>\Vect_1(\mathbb{R}^2)</m>respectively.
- </p>
+    <p>
+      Determine the action of the gradient linear map
+      <me>
+        \nabla : \Poly_2[x,y] \rightarrow \Vect_1(\mathbb{R}^2)
+      </me>
+      from <xref ref="grad_as_linear_map"/> in terms of the standard bases
+      <md>
+        <mrow> \bopen q_1, q_2, q_3, q_4, q_5 \bclose  </mrow>
+        <mrow> q_1 = 1, q_2 = x, q_3 = y, q_4 = x^2, q_5 = xy, q_6 = y^2</mrow>
+      </md>
+      of <m>\Poly_2</m> and
+      <md>
+        <mrow>  \bopen V_1, V_2, V_3, V_4, V_5, V_6 \bclose </mrow>
+        <mrow>  V_1 = (1, 0), V_2 = (x, 0), V_3 = (y, 0) </mrow>
+        <mrow> V_4 = (0, 1), V_5 = (0, x), V_6 = (0, y)</mrow>
+      </md>
+      of <m>\Vect_1(\mathbb{R}^2)</m>respectively.
+    </p>
   </exercise>
 
   <exercise>
@@ -1030,14 +1066,14 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
         <mrow> T : \Poly_2 \amp \rightarrow \mathbb{R}^2        </mrow>
         <mrow> p \amp \mapsto \begin{bmatrix} p(0) \\ p(1) \end{bmatrix} </mrow>
       </md>
-      <ol>
-        <li>
-          Is <m>T</m> a linear map? (Yes / No).
-        </li>
-        <li> Prove your assertion from (a). 
-        </li>
-      </ol>
     </p>
+    <ol>
+      <li><p>
+        Is <m>T</m> a linear map? (Yes / No).
+      </p></li>
+      <li><p> Prove your assertion from (a).
+      </p></li>
+    </ol>
   </exercise>
 
   <exercise>
@@ -1051,32 +1087,36 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
         <mrow>T : V \amp \rightarrow \mathbb{R} </mrow>
         <mrow>y \amp \mapsto y(1)</mrow>
       </md>
-      Is <m>T</m> a linear map? Prove your assertion. 
+      Is <m>T</m> a linear map? Prove your assertion.
     </p>
   </exercise>
 
   <exercise>
     <statement>
       <p>
-        Define the <sq>integrate over the interval <m>[-1,1]</m></sq> map
+        Define the <sq>integrate over the interval
+        <m>[-1,1]</m></sq> map
         <md>
           <mrow>I : \Poly_n \amp  \rightarrow \mathbb{R}</mrow>
           <mrow>\ve{p} \amp  \mapsto \int_{-1}^{1} \ve{p}(x) \, dx</mrow>
         </md>
         <ol>
           <li>
+            <title>(a)</title>
             <p>
               Prove that <m>I</m> is linear.
             </p>
           </li>
 
           <li>
+            <title>(b)</title>
             <p>
               Compute the action of <m>I</m> with respect to the standard basis <m>\ve{p}_0, \ldots, \ve{p}_3</m> for <m>\Poly_3</m>.
             </p>
           </li>
 
           <li>
+            <title>(c)</title>
             <p>
               Compute the action of <m>I</m> with respect to the basis
               <m>\ve{q}_0, \ldots, \ve{q}_3</m> for <m>\Poly_3</m> from <xref ref="new_basis_for_poly_3">Example</xref>.
@@ -1086,42 +1126,42 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
       </p>
     </statement>
     <solution>
-      <p> 
+      <p>
         <ol>
 
           <li>
             <p>
             We use the properties of the integral.
             <me>
-            I(\ve p + \ve q) = \int_{-1}^1 \left( \ve p(x) + \ve q(x)\right) \, dx \\ =  \int_{-1}^1 \ve p(x) \, dx + 
-            \int_{-1}^1 \ve q(x) \, dx = I(\ve p) + I(\ve q).
-            </me>   
+              I(\ve p + \ve q) = \int_{-1}^1 \left( \ve p(x) + \ve q(x)\right) \, dx \\ =  \int_{-1}^1 \ve p(x) \, dx +
+              \int_{-1}^1 \ve q(x) \, dx = I(\ve p) + I(\ve q).
+            </me>
             <me>
-I(k\ve p )  = \int_{-1}^1 k\ve p(x) \, dx = k\int_{-1}^1 \ve p(x) \, dx = kI(\ve p) 
-            </me>     
+              I(k\ve p )  = \int_{-1}^1 k\ve p(x) \, dx = k\int_{-1}^1 \ve p(x) \, dx = kI(\ve p)
+            </me>
             </p>
           </li>
 
           <li>
             <p>
             <me>
-I(\ve p_0) = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2 \\
-I(\ve p_1) = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0\\
-I(\ve p_2) = \int_{-1}^1 x^2 dx = \frac{1}{3}x^3 \rvert^1_{-1} = \frac{2}{3} \\
-I(\ve p_3) = \int_{-1}^1 x^3 dx = \frac{1}{4}x^4 \rvert^1_{-1} = 0
-            </me>   
+              I(\ve p_0) = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2 \\
+              I(\ve p_1) = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0\\
+              I(\ve p_2) = \int_{-1}^1 x^2 dx = \frac{1}{3}x^3 \rvert^1_{-1} = \frac{2}{3} \\
+              I(\ve p_3) = \int_{-1}^1 x^3 dx = \frac{1}{4}x^4 \rvert^1_{-1} = 0
+            </me>
             </p>
           </li>
 
           <li>
             <p>
               We use the results above:
-               <me>
-I(\ve q_0) = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2\\
-I(\ve q_1) = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0\\
-I(\ve q_2) = \int_{-1}^1 2x^2 - 1 dx = 2\int_{-1}^1 x^2 dx - \int_{-1}^1 1 =  \frac{4}{3} - 2 = -\frac{2}{3} \\
-I(\ve q_3) = \int_{-1}^1 4x^3 - 3x dx = 4\int_{-1}^1 x^3 dx - 3\int_{-1}^1 x dx = 4.0 - 3.0 = 0
-            </me>   
+              <me>
+                I(\ve q_0) = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2\\
+                I(\ve q_1) = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0\\
+                I(\ve q_2) = \int_{-1}^1 2x^2 - 1 dx = 2\int_{-1}^1 x^2 dx - \int_{-1}^1 1 =  \frac{4}{3} - 2 = -\frac{2}{3} \\
+                I(\ve q_3) = \int_{-1}^1 4x^3 - 3x dx = 4\int_{-1}^1 x^3 dx - 3\int_{-1}^1 x dx = 4.0 - 3.0 = 0
+              </me>
             </p>
           </li>
 
@@ -1140,13 +1180,13 @@ I(\ve q_3) = \int_{-1}^1 4x^3 - 3x dx = 4\int_{-1}^1 x^3 dx - 3\int_{-1}^1 x dx 
     </statement>
     <solution>
       <p>
-<me>
-D(\ve p_0) = D(1) = 0  \\
-D(\ve p_1) = D(x)= 1 = \ve p_0 \\
-D(\ve p_2) = D(x^2) = 2x = 2\ve p_1 \\
-D(\ve p_3) = D(x^3) = 3x^2 = 3\ve p_2 \\
-D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
-</me>
+        <me>
+          D(\ve p_0) = D(1) = 0  \\
+          D(\ve p_1) = D(x)= 1 = \ve p_0 \\
+          D(\ve p_2) = D(x^2) = 2x = 2\ve p_1 \\
+          D(\ve p_3) = D(x^3) = 3x^2 = 3\ve p_2 \\
+          D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
+        </me>
       </p>
     </solution>
   </exercise>
@@ -1162,11 +1202,11 @@ D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
     </statement>
     <solution>
       <p>
-        <me>
-        C((1,0,0)) = (1,2,3) \times (1,0,0) = (0,3,-2) \\
-        C((0,1,0)) = (1,2,3) \times (0,1,0) = (-3,0,1) \\
-        C((0,0,1)) = (1,2,3) \times (0,0,1) = (2,-1,0).
-      </me>
+        <md>
+          <mrow>C((1,0,0)) = (1,2,3) \times (1,0,0) = (0,3,-2)</mrow>
+          <mrow>C((0,1,0)) = (1,2,3) \times (0,1,0) = (-3,0,1)</mrow>
+          <mrow>C((0,0,1)) = (1,2,3) \times (0,0,1) = (2,-1,0)</mrow>
+        </md>.
       </p>
     </solution>
   </exercise>
@@ -1174,61 +1214,59 @@ D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
   <exercise>
     <statement>
       <p>
-        Prove that if <m>V</m> is a finite dimensional vector space then the set of all linear maps from <m>V</m> to <m>\mathbb R</m>,<m>\mathcal L (V,\mathbb R)</m>, is itself a vector space. Since we already know that the set of all real valued functions from <m> V </m> to <m>\mathbb R</m> forms a vector space, you will only have to show that <m>\mathcal L (V,\mathbb R)</m> contains the function <m>\ve 0</m>, and is closed under both addition and scalar multiplication. 
+        Prove that if <m>V</m> is a finite dimensional vector space then the set of all linear maps from <m>V</m> to <m>\mathbb R</m>,<m>\mathcal L (V,\mathbb R)</m>, is itself a vector space. Since we already know that the set of all real valued functions from <m> V </m> to <m>\mathbb R</m> forms a vector space, you will only have to show that <m>\mathcal L (V,\mathbb R)</m> contains the function <m>\ve 0</m>, and is closed under both addition and scalar multiplication.
       </p>
-          </statement>
-      <solution>
-        <p>
-          For all <m>\ve v,\ve w \in  V</m>, for all <m>S, T \in \mathcal L (V,\mathbb R)</m> and for all <m>a , b \in \mathbb R</m>:
-        <ol>
-          <li>
-            <p>
-              <me>
-              \ve 0(\ve v + \ve w) = 0 = \ve 0\ve v + \ve 0\ve w \\
-              0(a\ve v) = 0 = a \ve 0 \\
-            </me>
-            and hence <m> \ve 0 \in \mathcal L (V,\mathbb R)</m>.
-            </p>
-          </li>
+    </statement>
+    <solution>
+      <p>
+        For all <m>\ve v,\ve w \in  V</m>, for all <m>S, T \in \mathcal L (V,\mathbb R)</m> and for all <m>a , b \in \mathbb R</m>:
+      <ol>
+        <li>
+          <p>
+            <me>
+            \ve 0(\ve v + \ve w) = 0 = \ve 0\ve v + \ve 0\ve w \\
+            0(a\ve v) = 0 = a \ve 0 \\
+          </me>
+          and hence <m> \ve 0 \in \mathcal L (V,\mathbb R)</m>.
+          </p>
+        </li>
 
-          <li>
-            <p>
-              <me>
-              (a S)(\ve v + \ve W) = a(S (\ve v + \ve w )) = a(S \ve v+ S\ve w) = (a S)\ve v + (a S) \ve w\\
-              (a S)(b \ve v) = (ab) S \ve v = b( a S \ve v) \\
-            </me>
-            and hence <m> a S \in \mathcal L (V,\mathbb R)</m>.
-            </p>
-          </li>
+        <li>
+          <p>
+            <me>
+            (a S)(\ve v + \ve W) = a(S (\ve v + \ve w )) = a(S \ve v+ S\ve w) = (a S)\ve v + (a S) \ve w\\
+            (a S)(b \ve v) = (ab) S \ve v = b( a S \ve v) \\
+          </me>
+          and hence <m> a S \in \mathcal L (V,\mathbb R)</m>.
+          </p>
+        </li>
 
-          <li>
-            <p>
-              <me>
-              (S + T)(\ve v + \ve w) = S(\ve v+ \ve w) + T(\ve v + \ve w) \\
-              = S\ve v + S \ve w + T \ve v + T \ve w  = (S + T)\ve v + (S + T)\ve w \\
-              (S + T)(a \ve v) = S (a \ve v) + T(a \ve w ) = aS\ve v+  aT \ve w = a(S+T)\ve v
-            </me>
-            and hence <m> S + T  \in \mathcal L (V,\mathbb R)</m>.
-            </p>
-          </li>
+        <li>
+          <p>
+            <me>
+            (S + T)(\ve v + \ve w) = S(\ve v+ \ve w) + T(\ve v + \ve w) \\
+            = S\ve v + S \ve w + T \ve v + T \ve w  = (S + T)\ve v + (S + T)\ve w \\
+            (S + T)(a \ve v) = S (a \ve v) + T(a \ve w ) = aS\ve v+  aT \ve w = a(S+T)\ve v
+          </me>
+          and hence <m> S + T  \in \mathcal L (V,\mathbb R)</m>.
+          </p>
+        </li>
 
-        </ol>
-      </p>
+      </ol>
+    </p>
+    </solution>
+  </exercise>
 
-      </solution>
-    </exercise>
-
-      <exercise>
-        <statement>
-          If <m>V </m> is a finite dimensional vector space, find a basis for <m> \mathcal L(V , \mathbb R) </m>.
-        </statement>
-      </exercise>
+  <exercise>
+    <statement>
+      If <m>V </m> is a finite dimensional vector space, find a basis for <m> \mathcal L(V , \mathbb R) </m>.
+    </statement>
+  </exercise>
 
 
   </exercises>
 
  <!-- <solutions divisional="solution answer" />  -->
-
 
 
 </section>
