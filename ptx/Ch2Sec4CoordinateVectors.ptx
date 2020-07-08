@@ -1,24 +1,21 @@
 <section xml:id="Ch2Sec4CoordinateVectors">
   <title>Coordinate vectors</title>
-  
     <p>
       There is a more direct way to think about a basis of a vector space.
     </p>
-
+<!--
     <figure>
-        <caption>Video recording for <xref ref="prop_bases_give_coordinates"/> and proof.</caption>
-        <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec14ThmBasesGiveCoordinates.mp4" width="70%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
+      <caption>Video recording for <xref ref="prop_bases_give_coordinates"/> and proof.</caption>
+      <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec14ThmBasesGiveCoordinates.mp4" width="70%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
     </figure>
-
+-->
     <proposition xml:id="prop_bases_give_coordinates">
       <title>Bases give coordinates</title>
       <statement>
         <p>
-          Let <m>\basis{B} = \left\{ \ve{e}_1,
-          \ve{e}_2,\ldots,
-         \ve{e}_n\right\}</m> be a list of vectors in a vector space <m>V</m>. Then the following statements are equivalent:
-       </p>
-       <ol>
+          Let <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2,\ldots,\ve{e}_n\right\}</m> be a list of vectors in a vector space <m>V</m>. Then the following statements are equivalent:
+        </p>
+        <ol>
           <li> <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
           </li>
           <li> <p> Every vector
@@ -32,7 +29,7 @@
           <m>a_2</m>, <m>\ldots</m>,
           <m>a_n</m> satisfying <xref ref="trying_to_formulate_basis" />,
           and that moreover these scalars are
-          <em></em><em>unique</em>). </p>
+          <em>unique</em>). </p>
         </li>
       </ol>
       </statement>
@@ -40,7 +37,7 @@
 
     <assemblage>
       <p>
-        It is important to understand the mathematical phrase <sq>There exists a unique <m>X</m> satisfying <m>Y</m></sq>.
+        It is important to understand the mathematical phrase <q>There exists a unique <m>X</m> satisfying <m>Y</m></q>.
         It means two things.
         Firstly, that <em>there does exist an</em>
         <m>X</m> which satisfies <m>Y</m>.
@@ -134,24 +131,33 @@
 
 
 
+<!--   Adding some whitespace to ensure that the line numbers match up.
+To be corrected after the Afrikaans version of the previous Proposition
+has been updated.  -->
+
+
+
+
   <definition>
     <statement>
       <p>
-        Let <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \right\}</m> be a basis for a vector space <m>V</m>,
-        and let <m>\ve{v} \in V</m>.
+        Let <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \right\}</m>
+        be a basis for a vector space <m>V</m>, and let <m>\ve{v} \in V</m>.
         Write
         <me>
-          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + \ve{a}_n \ve{b}_n \, 
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + \ve{a}_n \ve{b}_n \,
         </me>.
       </p>
 
       <p>
-        The scalars <m>a_i</m> appearing in the above expansion are called the <term>coordinates of the vector <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m></term>. The column vector
+        The scalars <m>a_i</m> appearing in the above expansion are called the <term>coordinates of the vector <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m></term>.
+        The column vector
         <me>
           [\ve{v}]_\basis{B} := \left[ \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n
           \end{array}  \right] \in \Col_n
         </me>
-        is called the <term>coordinate vector of <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m></term>.
+        is called the <term>coordinate vector of <m>\ve{v}</m> with respect to
+        the basis <m>\basis{B}</m></term>.
       </p>
     </statement>
   </definition>
@@ -159,15 +165,13 @@
   <assemblage>
     <p>
       I indicate that a collection of things is a <em>list</em>
-      (where the order matters)
-      and not merely a <em>set</em>
+      (where the order matters) and not merely a <em>set</em>
       (where the order does not matter)
-      using my own home-made symbols <m>\{ \}</m>.
+      using my own home-made symbols <m>\bopen \bclose</m>.
       A basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \right\}</m> is a list of vectors.
       The order of the vectors matters because it affects the coordinate vector <m>[\ve{v}]_\basis{B}</m>.
     </p>
   </assemblage>
-
 
   <example xml:id="coord_vectors_finding_example">
     <title>Coordinate vectors in <m>\mathbb{R}^2</m></title>
@@ -176,12 +180,12 @@
         Find the coordinate vectors of <m>\ve{v}</m> and <m>\ve{w}</m> in <xref ref="v_and_w_in_basis_B">Figure</xref>
         with respect to the basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m>.
       </p>
-      <figure xml:id="v_and_w_in_basis_B">
-        <caption>The basis <m>\basis{B}</m> for <m>\mathbb{R}^2</m>.</caption>
-        <image>
+    <figure xml:id="v_and_w_in_basis_B">
+      <caption>The basis <m>\basis{B}</m> for <m>\mathbb{R}^2</m>.</caption>
+      <image>
 
-          <latex-image>
-                    <![CDATA[\begin{tikzpicture}[scale=0.5]
+        <latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
             \draw[red, dotted] (-9, -9) -- (3, -3);
             \draw[red, dotted] (-8, -7) -- (4, -1);
             \draw[red, dotted] (-7, -5) -- (5, 1);
@@ -198,15 +202,14 @@
             \draw[red, dotted] (1, -4) -- (7, 8);
             \draw[red, dotted] (3, -3) -- (9, 9);
 
-            \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
+            \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1);
             \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);
             \draw[thick, ->] (0,0) -- (3,0) node[below right] {\(\ve{v}\)};
             \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
-          </latex-image>
-        </image>
+        </latex-image>
+      </image>
+    </figure>
 
-      </figure>
-  
    </statement>
     <solution>
       <p>
@@ -229,78 +232,80 @@
     </solution>
   </example>
 
-
   <example xml:id="coord_vector_R2_geogebra">
     <title>Geogebra App: Coordinate vectors in <m>\mathbb{R}^2</m></title>
     <statement>
-    <p>The following GeoGebra interactive applet displays a vector <m>\ve{v} \in \mathbb{R}^2</m> (in black), a basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> (in red), and a background of integral linear combinations of the basis vectors. Drag the tip of <m>\ve{v}</m> and see how the coordinate vector <m>[\ve{v}]_{\basis{B}}</m> of <m>\ve{v}</m> with respect to <m>\basis{B}</m> changes. You can also change the basis <m>\basis{B}</m> by dragging the tips of the basis vectors <m>\ve{b}_1, \ve{b}_2</m>. Notice the effect on the coordinate vector <m>[\ve{v}]_{\basis{B}}</m>.</p>
-    <figure>
-      <title>App: Coordinate vectors</title>
-      <caption> Interactive GeoGebra applet displaying the coordinate vector of <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m>. </caption>
-      <interactive geogebra="https://www.geogebra.org/material/iframe/id/tpdmz8kj/width/600/height/703/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:703" width="90%"/>  
-    </figure>
-
-</statement>
+      <p>
+        The following GeoGebra interactive applet displays a vector <m>\ve{v} \in \mathbb{R}^2</m> (in black), a basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> (in red), and a background of integral linear combinations of the basis vectors. Drag the tip of <m>\ve{v}</m> and see how the coordinate vector <m>[\ve{v}]_{\basis{B}}</m> of <m>\ve{v}</m> with respect to <m>\basis{B}</m> changes. You can also change the basis <m>\basis{B}</m> by dragging the tips of the basis vectors <m>\ve{b}_1, \ve{b}_2</m>. Notice the effect on the coordinate vector <m>[\ve{v}]_{\basis{B}}</m>.
+      </p>
+      <figure>
+        <title>App: Coordinate vectors</title>
+        <caption> Interactive GeoGebra applet displaying the coordinate vector of <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m>. </caption>
+        <interactive geogebra="https://www.geogebra.org/material/iframe/id/tpdmz8kj/width/600/height/703/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:703" width="90%"/>
+      </figure>
+    </statement>
   </example>
 
   <example xml:id="coord_vector_poly_example">
-
     <statement>
-    <figure>
+<!--
+      <figure>
         <caption>Video recording for <xref ref="coord_vector_poly_example"/>.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec14ExamplePoly.mp4" preview="../latex/images/preview-doc-cam.jpg" width="70%" />
-    </figure>
-
+      </figure>
+-->
       <p>
         Find the coordinate vector of
-        <m>\ve{p} = 2x^2 - 2x + 3</m> with respect to the basis <m>\basis{B} = \left\{ 1+x, x^2 + x -1, x^2 + x + 1\right\}</m> of <m>\Poly_3</m>. 
+        <m>\ve{p} = 2x^2 - 2x + 3</m> with respect to the basis
+        <m>\basis{B} = \left\{ 1+x, x^2 + x -1, x^2 + x + 1\right\}</m> of <m>\Poly_3</m>.
       </p>
     </statement>
     <solution>
       <p>
         We need to write <m>\ve{p}</m> as a linear combination of polynomials from the basis <m>\basis{B}</m>:
         <me>
-        2x^2 - 2x + 3 = a_1(1+x) +a_2 (x^2 + x -1) + a_3 (x^2 + x +1)
-      </me>
-      Collecting powers of <m>x^2</m>, <m>x</m> and <m>1</m> on the right hand side gives:
-      <me>
-      2x^2 - 2x + 3 = (a_2 + a_3) x^2 + (a_1 + a_2 + a_3)x + (a_1 - a_2 + a_3)1
-    </me>
-    This translates into the equations:
-    <md>
-      <mrow> a_2 + a_3 \amp = 2 </mrow>
-      <mrow> a_1 + a_2 + a_3 \amp = -2 </mrow>
-      <mrow> a_1 - a_2 + a_3  \amp = 3 </mrow>
-    </md>
-    We can solve these equations by hand, or we can use SageMath:
-    <sage>
-      <input>
-      var('a1 a2 a3')
+          2x^2 - 2x + 3 = a_1(1+x) +a_2 (x^2 + x -1) + a_3 (x^2 + x +1)
+        </me>
+        Collecting powers of <m>x^2</m>, <m>x</m> and <m>1</m> on the right hand side gives:
+        <me>
+          2x^2 - 2x + 3 = (a_2 + a_3) x^2 + (a_1 + a_2 + a_3)x + (a_1 - a_2 + a_3)1
+        </me>
+        This translates into the equations:
+        <md>
+          <mrow> a_2 + a_3 \amp = 2 </mrow>
+          <mrow> a_1 + a_2 + a_3 \amp = -2 </mrow>
+          <mrow> a_1 - a_2 + a_3  \amp = 3 </mrow>
+        </md>
+        We can solve these equations by hand, or we can use SageMath:
+        <sage>
+          <input>
+          var('a1 a2 a3')
 
-      show(solve((a2 + a3 == 2,
-            a1 + a2 + a3 == -2,
-            a1 - a2 + a3 == 3), (a1, a2, a3)))
-      </input>
-    </sage>
-    We compute the coordinates of <m>p</m> as <m>a_1 = -4</m>, <m>a_2 = -\frac{5}{2}</m>, <m>a_3 = \frac{9}{2}</m>. In other words, 
+          show(solve((a2 + a3 == 2,
+                a1 + a2 + a3 == -2,
+                a1 - a2 + a3 == 3), (a1, a2, a3)))
+          </input>
+        </sage>
+        We compute the coordinates of <m>p</m> as <m>a_1 = -4</m>, <m>a_2 = -\frac{5}{2}</m>, <m>a_3 = \frac{9}{2}</m>. In other words,
         <me>
           2x^2 - 2x + 3 = -4(1+x) - \frac{5}{2} (x^2 + x -1) + \frac{9}{2}(x^2 + x +1)
         </me>
-      Therefore,
-      <me>
-        [\ve{p}]_\basis{B} := \left[ \begin{array}{c} -4 \\ -\frac{5}{2}\\  \frac{9}{2} \end{array}  \right]
-      </me> 
-    </p>
+        Therefore,
+        <me>
+          [\ve{p}]_\basis{B} := \left[ \begin{array}{c} -4 \\ -\frac{5}{2}\\  \frac{9}{2} \end{array}  \right]
+        </me>
+      </p>
     </solution>
   </example>
 
-  <example xml:id="coord_vector_trig_poly_example">   
+  <example xml:id="coord_vector_trig_poly_example">
     <statement>
+<!--
      <figure>
         <caption>Video recording for <xref ref="coord_vector_trig_poly_example"/>.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec14ExampleTrigPoly.mp4" preview="../latex/images/preview-doc-cam.jpg" width="70%" />
     </figure>
-
+-->
       <p>
         Find the coordinate vector of the function <m>\ve{f}</m> given by
         <me>
@@ -351,31 +356,27 @@
         </statement>
         <solution>
           <p>
-          <me>
-          \cos 2x = 1 - 2\sin^2x \implies \sin^2x = \frac{1}{2} - \frac{1}{2}\cos 2x
-          </me>
-          <me>
-          \cos^3 x = \cos x \cos^2 x = \cos x (1 - \sin^2 x) = \cos x(\frac{1}{2} + \frac{1}{2}\cos 2x) \\
-           = \frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x
-          </me>
-          <me>
-          \cos x \cos 2x = \cos 3x + \sin x \sin 2x = \cos 3x + 2 \sin^2 x \cos x \\
-          = \cos 3x + (1 - \cos 2x) \cos x = \cos 3x + \cos x - \cos 2x \cos x \\
-          \implies \cos x \cos 2x = \frac{1}{2}\cos 3x + \frac{1}{2}\cos x
-          </me>
-          Thus
-          <me>
-            \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{1}{2}\cos 2x - (\frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x) \\
-            = \frac{1}{2} - \frac{1}{2}\cos 2x - \frac{1}{2}\cos x -  \frac{1}{2}(\frac{1}{2}\cos 3x + \frac{1}{2}\cos x) \\
-            = \frac{1}{2} -\frac{3}{4}\cos x - \frac{1}{2}\cos 2x - \frac{1}{4}\cos 3x.
-          </me>
-
-
+            <me>
+              \cos 2x = 1 - 2\sin^2x \implies \sin^2x = \frac{1}{2} - \frac{1}{2}\cos 2x
+            </me>
+            <me>
+              \cos^3 x = \cos x \cos^2 x = \cos x (1 - \sin^2 x) = \cos x(\frac{1}{2} + \frac{1}{2}\cos 2x) \\
+              = \frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x
+            </me>
+            <me>
+              \cos x \cos 2x = \cos 3x + \sin x \sin 2x = \cos 3x + 2 \sin^2 x \cos x \\
+              = \cos 3x + (1 - \cos 2x) \cos x = \cos 3x + \cos x - \cos 2x \cos x \\
+              \implies \cos x \cos 2x = \frac{1}{2}\cos 3x + \frac{1}{2}\cos x
+            </me>
+            Thus
+            <me>
+              \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{1}{2}\cos 2x - (\frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x) \\
+              = \frac{1}{2} - \frac{1}{2}\cos 2x - \frac{1}{2}\cos x -  \frac{1}{2}(\frac{1}{2}\cos 3x + \frac{1}{2}\cos x) \\
+              = \frac{1}{2} -\frac{3}{4}\cos x - \frac{1}{2}\cos 2x - \frac{1}{4}\cos 3x.
+            </me>
           </p>
-
         </solution>
       </exercise>
-
 
   <lemma xml:id="lin_of_coord_vectors">
     <statement>
@@ -425,7 +426,7 @@
     </p>
   </proof>
 
-  <exercises>
+<exercises>
   <exercise>
     <statement>
       <p>
@@ -436,26 +437,26 @@
     </statement>
     <solution>
       <p>
-     As before, suppose that 
-      <md>
-        <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 </mrow>.
-      </md>
-      Which gives 
-      <me> 
-      [\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
-    </me>
-    Then 
-      <md>
-<mrow> k\ve v \amp = k(a_1 \ve e_1 + a_2 \ve e_2) </mrow>
-<mrow> \amp = k(a_1 \ve e_1) + k(a_2 \ve e_2) \amp (<xref ref="R4">R4</xref>)</mrow>
-<mrow> \amp = (ka_1)\ve e_1 + (ka_2) \ve e_2 \amp  (<xref ref="R6">R6</xref>)</mrow>
-      </md>
-      Reading off the coefficients, we obtain
-      <me>
-k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c} ka_1  \\  ka_2 \end{array}\right],
-    </me>
-    as desired.
-    </p>
+        As before, suppose that
+        <md>
+          <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 </mrow>.
+        </md>
+        Which gives
+        <me>
+        [\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
+        </me>
+        Then
+        <md>
+          <mrow> k\ve v \amp = k(a_1 \ve e_1 + a_2 \ve e_2) </mrow>
+          <mrow> \amp = k(a_1 \ve e_1) + k(a_2 \ve e_2) \amp (<xref ref="R4">R4</xref>)</mrow>
+          <mrow> \amp = (ka_1)\ve e_1 + (ka_2) \ve e_2 \amp  (<xref ref="R6">R6</xref>)</mrow>
+        </md>
+        Reading off the coefficients, we obtain
+        <me>
+          k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c} ka_1  \\  ka_2 \end{array}\right],
+        </me>
+        as desired.
+      </p>
     </solution>
   </exercise>
 
@@ -464,58 +465,59 @@ k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c}
       <p>
         Let <m>\basis{B} = \bopen \mat{B}_1, \mat{B}_2, \mat{B}_3, \mat{B}_4 \bclose </m> be the basis of <m>\Mat_{2,2}</m> given by
         <me>
- \mat{B}_1 = \begin{bmatrix}
-1 &amp; 0 \\
-0 &amp; 1
-\end{bmatrix}, \mat{B}_2 =
- \begin{bmatrix}
-1 &amp; 0\\
-0&amp; -1
-\end{bmatrix},
- \mat{B}_3 = \begin{bmatrix}
-1 &amp; 1\\
-1 &amp; 1
-\end{bmatrix},
- \mat{B}_4 = \begin{bmatrix}
-0 &amp; 1\\
--1 &amp; 0
-\end{bmatrix}
- </me>.
+          \mat{B}_1 = \begin{bmatrix}
+            1 &amp; 0 \\
+            0 &amp; 1
+          \end{bmatrix}, \mat{B}_2 =
+          \begin{bmatrix}
+            1 &amp; 0\\
+            0&amp; -1
+          \end{bmatrix},
+          \mat{B}_3 = \begin{bmatrix}
+            1 &amp; 1\\
+            1 &amp; 1
+          \end{bmatrix},
+          \mat{B}_4 = \begin{bmatrix}
+            0 &amp; 1\\
+            -1 &amp; 0
+          \end{bmatrix}
+        </me>.
       </p>
 
       <p>
         Determine <m>[\mat{A}]_\basis{B}</m>, where
         <me>
           \mat{A} =  \begin{bmatrix}
-1 &amp; 2\\
-3 &amp; 4
-\end{bmatrix}.
+            1 &amp; 2\\
+            3 &amp; 4
+          \end{bmatrix}.
         </me>
       </p>
     </statement>
     <solution>
       <p>
-To determine  <m>[\mat{A}]_\basis{B}</m>, we must find the scalars <m>a_1 , a_2 , a_3, a_4 </m> satisfying
-<me>
-a_1 \mat{B_1} + a_2\mat{B_2} + a_3\mat{B_3} + a_4\mat{B_4} = \mat A.
-</me>
-This results in a system of 4 linear equations in 4 variables, one equation for each entry in <m>\mat A </m>:
-<md>
-<mrow>a_1 + a_2 + a_3 = 1 </mrow>
-<mrow> a_3 + a_4 = 2 </mrow>
-<mrow> a_3 - a_4 = 3 </mrow>
-<mrow> a_1 - a_2 + a_3 = 4</mrow>
-</md>
-Solving this equation, we get
-<me>
-a_1  = 0, \quad
-a_2  = -\frac{3}{2}, \quad
-a_3  = \frac{5}{2}, \quad
-a_4  = -\frac{1}{2}.
-</me>
-Hence <me>
-[\mat{A}]_\basis{B} = \begin{bmatrix} 0 \\ -\frac{3}{2} \\ \frac{5}{2} \\ -\frac{1}{2} \end{bmatrix}
-</me>
+        To determine  <m>[\mat{A}]_\basis{B}</m>, we must find the scalars <m>a_1 , a_2 , a_3, a_4 </m> satisfying
+        <me>
+          a_1 \mat{B_1} + a_2\mat{B_2} + a_3\mat{B_3} + a_4\mat{B_4} = \mat A.
+        </me>
+        This results in a system of 4 linear equations in 4 variables, one equation for each entry in <m>\mat A </m>:
+        <md>
+          <mrow>a_1 + a_2 + a_3 = 1 </mrow>
+          <mrow> a_3 + a_4 = 2 </mrow>
+          <mrow> a_3 - a_4 = 3 </mrow>
+          <mrow> a_1 - a_2 + a_3 = 4</mrow>
+        </md>
+        Solving this equation, we get
+        <me>
+          a_1  = 0, \quad
+          a_2  = -\frac{3}{2}, \quad
+          a_3  = \frac{5}{2}, \quad
+          a_4  = -\frac{1}{2}.
+        </me>
+        Hence
+        <me>
+          [\mat{A}]_\basis{B} = \begin{bmatrix} 0 \\ -\frac{3}{2} \\ \frac{5}{2} \\ -\frac{1}{2} \end{bmatrix}
+        </me>
       </p>
     </solution>
   </exercise>
@@ -526,10 +528,10 @@ Hence <me>
           <li>
             <title>(a)</title>
             <p>Find a basis <m>\basis{B}</m> for the vector space
-        <me>
-          V := \{ p \in \Poly_2 : p(2) = 0 \}
-        </me>.
-      </p>
+              <me>
+                V := \{ p \in \Poly_2 : p(2) = 0 \}
+              </me>.
+            </p>
           </li>
           <li>
             <title>(b)</title>
@@ -548,30 +550,29 @@ Hence <me>
         </ol>
     </statement>
    <solution>
-<p>
-<ol>
+      <ol>
+        <li>
+          <p>
+            <me>
+              p(x) = x^2 + x -6 = (x+3)(x - 2)
+            </me>
+            and so <m> p(2) = </m> and hence <m> p \in V </m>.
+          </p>
+        </li>
 
-<li>
-<p>
-<me>
-p(x) = x^2 + x -6 = (x+3)(x - 2)
-</me>
-and so <m> p(2) = </m> and hence <m> p \in V </m>.
-</p>
-</li>
-
-<li>
-Recall that <m> \basis B = \bopen x-2 , x(x-2) \bclose </m>.
-<me>
-p(x) = x^2 + x -6 = (x+3)(x - 2) =  3(x-2) + x(x-2) 
-</me>
-and so 
-<me>
-[p]_\basis{B} = \begin{bmatrix} 3  \\ 1 \end{bmatrix}.
-</me>
-</li>
-</ol>
-</p>
+        <li>
+          <p>
+            Recall that <m> \basis B = \bopen x-2 , x(x-2) \bclose </m>.
+            <me>
+              p(x) = x^2 + x -6 = (x+3)(x - 2) =  3(x-2) + x(x-2)
+            </me>
+            and so
+            <me>
+              [p]_\basis{B} = \begin{bmatrix} 3  \\ 1 \end{bmatrix}.
+            </me>
+          </p>
+        </li>
+      </ol>
    </solution>
   </exercise>
 
@@ -583,41 +584,43 @@ and so
     </statement>
     <solution>
       <p>
-        We shall use the basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose</m>. Since <m> \ve p(x) </m> has no degree 2 term, we know immediately that 
+        We shall use the basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose</m>. Since <m> \ve p(x) </m> has no degree 2 term, we know immediately that
         <me>
-        \ve p(x) = ax^3 + 0(x^3 + x^2) + cx + d.
-      </me>
-      Reading off the rest of the coefficients, we see that <m> a =3, c = -7, d = 1 </m>.
-      Hence
-      <me>
-[p]_\basis{B} = \begin{bmatrix} 3 \\ 0 \\-7 \\1\end{bmatrix}.
-    </me>
+          \ve p(x) = ax^3 + 0(x^3 + x^2) + cx + d.
+        </me>
+        Reading off the rest of the coefficients, we see that <m> a =3, c = -7, d = 1 </m>.
+        Hence
+        <me>
+          [p]_\basis{B} = \begin{bmatrix} 3 \\ 0 \\-7 \\1\end{bmatrix}.
+        </me>
       </p>
     </solution>
   </exercise>
 
 <exercise>
-  <statement> <p>Consider the vector space <m>W</m> from <xref ref="dimension_of_hyperplane"/>,
-  <me>
-  W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \},
-</me>
-and the following bases for <m>W</m>:
-<me>
- \basis{B} = \bopen \ve{a}, \ve{b} \bclose, \quad  \basis{C} = \bopen \ve{u}, \ve{v} \bclose
-</me>
-where
-<md>
- <mrow> \ve{a} \amp = (1, 0, -\frac{1}{3}), \amp \ve{b} \amp = (0, 1, - \frac{2}{3}) </mrow>
- <mrow> \ve{u} \amp = (1, 2, -\frac{5}{3}), \amp \ve{v} \amp = (-4, 2, 0) </mrow>
-</md>
-Consider the vector <m>\ve{w} = (-2, 4, -2) \in \mathbb{R}^3</m>. 
- <ol>
-  <li>Show that <m>\ve{w} \in W</m>. </li>
-  <li>Determine <m>[\ve{w}]_{\basis{B}}</m>.</li>
-  <li>Determine <m>[\ve{w}]_{\basis{C}}</m>. </li>
- </ol>
-</p>
-</statement>
+  <statement>
+    <p>
+      Consider the vector space <m>W</m> from <xref ref="dimension_of_hyperplane"/>,
+      <me>
+        W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \},
+      </me>
+      and the following bases for <m>W</m>:
+      <me>
+        \basis{B} = \bopen \ve{a}, \ve{b} \bclose, \quad  \basis{C} = \bopen \ve{u}, \ve{v} \bclose
+      </me>
+      where
+      <md>
+        <mrow> \ve{a} \amp = (1, 0, -\frac{1}{3}), \amp \ve{b} \amp = (0, 1, - \frac{2}{3}) </mrow>
+        <mrow> \ve{u} \amp = (1, 2, -\frac{5}{3}), \amp \ve{v} \amp = (-4, 2, 0) </mrow>
+      </md>
+      Consider the vector <m>\ve{w} = (-2, 4, -2) \in \mathbb{R}^3</m>.
+      <ol>
+        <li>Show that <m>\ve{w} \in W</m>. </li>
+        <li>Determine <m>[\ve{w}]_{\basis{B}}</m>.</li>
+        <li>Determine <m>[\ve{w}]_{\basis{C}}</m>. </li>
+      </ol>
+    </p>
+  </statement>
 <!--
 <solution>
 <p>
@@ -632,10 +635,10 @@ for some <m>s \in \mathbb R</m>. By considering only the first coordinate of <m>
 [\ve{w}]_{\basis{B}} = \begin{bmatrix} 2\\ 4 \end{bmatrix}.
 </me>
 </li>
-  <li>We use a similar approach to the previous question. Since only the thirds coordinate of <m>\ve u</m> is non-zero, the coefficeint of the <m> \ve u </m> term must be <m>\frac{6}{5}</m>. That is 
+  <li>We use a similar approach to the previous question. Since only the thirds coordinate of <m>\ve u</m> is non-zero, the coefficeint of the <m> \ve u </m> term must be <m>\frac{6}{5}</m>. That is
   <me>
 (2,4,2) = \frac{6}{5}\ve u + t\ve v
-</me> for some <m>t \in \mathbb R</m>. By looking at the second coordinate, we must have that 
+</me> for some <m>t \in \mathbb R</m>. By looking at the second coordinate, we must have that
 <me>
 2s + \frac{12}{5} = 4.
 </me> Solving for <m> s</m> we find that <m>s \frac{4}{5}.</m>. Hence
@@ -649,30 +652,40 @@ for some <m>s \in \mathbb R</m>. By considering only the first coordinate of <m>
 -->
 </exercise>
 
-
     <exercise>
     <statement>
-      <p>Let <m>V</m> be the vector space of solutions to the differential equation
-      <men xml:id="diff_eqn_exerc_1">
-        y^{''} + y = 0.
-      </men>
+      <p>
+        Let <m>V</m> be the vector space of solutions to the differential equation
+        <men xml:id="diff_eqn_exerc_1">
+          y^{''} + y = 0.
+        </men>
       </p>
-      <ol>
-        <li> <p> Show that <m>\basis{B} = \bopen \cos x, \, \sin x \bclose </m> is a basis for <m>V</m>. </p> </li>
-        <li> <p> Let <m>y \in V</m> be defined as the unique solution to the differential equation in <xref ref="diff_eqn_exerc_1"/> satisfying
-        <me>
-        y(\frac{\pi}{6}) = 1, \quad y'(\frac{\pi}{6}) = 0.
-      </me>
-      (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>. </p>
-    </li>
-    <li> <p>Let <m>z(x) = \cos\left(x - \frac{\pi}{3} \right)</m>.</p>
-      <ol>
-        <li>Show that <m>z \in V</m> by checking that it solves the differential equation <xref ref="diff_eqn_exerc_1"/>.</li>
-        <li>Determine <m>[z]_{\basis{B}}</m>. </li>
 
-      </ol>
+      <ol>
+        <li>
+          <p>
+            Show that <m>\basis{B} = \bopen \cos x, \, \sin x \bclose </m> is a basis for <m>V</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>y \in V</m> be defined as the unique solution to the differential equation in <xref ref="diff_eqn_exerc_1"/> satisfying
+            <me>
+              y(\frac{\pi}{6}) = 1, \quad y'(\frac{\pi}{6}) = 0.
+            </me>
+            (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>.
+          </p>
+        </li>
 
-    </li>
+        <li>
+          <p>
+            Let <m>z(x) = \cos\left(x - \frac{\pi}{3} \right)</m>.
+          </p>
+          <ol>
+            <li>Show that <m>z \in V</m> by checking that it solves the differential equation <xref ref="diff_eqn_exerc_1"/>.</li>
+            <li>Determine <m>[z]_{\basis{B}}</m>. </li>
+          </ol>
+        </li>
       </ol>
     </statement>
 <!--
@@ -682,8 +695,8 @@ for some <m>s \in \mathbb R</m>. By considering only the first coordinate of <m>
 <li>We must first show that <m>\cos x</m> and <m> \sin x</m> are indeed solutions to the ODE. This follows simply from the fact that <m>(\sin x)'' = -\sin x</m> and  <m>(\cos x)'' = -\cos x</m>. <xref ref="diff_eqn_exist_unique"/> tells us that any solution to the ODE is fully determined by 2 constants, namely <m>y(x_0)</m> and <m>y^{(1)}(x_0)</m>. Thus the space of solutions to the ODE is 2 dimensional. It follows that if we show that the functions <m>\sin x</m> and <m> \cos x</m> are linearly independent, then they necessarily constitute a basis. To that end, suppose for some constants <m> a,b \in \mathbb R</m>
 <me>
 a\cos x + c\sin x = 0.
-</me>  
-Evaluating the above equation at <m> x = 0</m>, we find 
+</me>
+Evaluating the above equation at <m> x = 0</m>, we find
 <me>
 a = 0.
 </me>
@@ -704,9 +717,9 @@ y = a\cos x + b\sin x.
 y(\frac{\pi}{6}) = 1, \quad y'(\frac{\pi}{6}) = 0
 </me> yield the linear equations
 <md>
- <mrow> 1 \amp = a\frac{\sqrt 3 }{2} + b\frac{1}{2}</mrow> 
+ <mrow> 1 \amp = a\frac{\sqrt 3 }{2} + b\frac{1}{2}</mrow>
  <mrow> 0 \amp -a\frac{1}{2} + b\frac{\sqrt 3}{2} </mrow>
-</md>. Solving this equation yields 
+</md>. Solving this equation yields
 <me>
 a = \frac{\sqrt 3}{2} \\
 b = \frac{1}{2}
@@ -714,7 +727,7 @@ b = \frac{1}{2}
 [y]_\basis{B} = \begin{bmatrix} \frac{\sqrt 3}{2} \\ \frac{1}{2}\end{bmatrix}.
 </me></li>
 
-<li> 
+<li>
 
 
   <ol>
@@ -733,32 +746,90 @@ b = \frac{1}{2}
 
     <exercise>
     <statement>
-      <p>Let <m>V</m> be the vector space of solutions to the differential equation
-      <men xml:id="diff_eqn_exerc_2">
-        (1-x^2)y^{''} - xy' + 4y = 0, \quad x \in (-1, 1).
-      </men>
+      <p>
+        Let <m>V</m> be the vector space of solutions to the differential equation
+        <men xml:id="diff_eqn_exerc_2">
+          (1-x^2)y^{''} - xy' + 4y = 0, \quad x \in (-1, 1).
+        </men>
       </p>
       <ol>
-        <li> <p> Show that <m>y_1</m> and <m>y_2</m> are elements of <m>V</m>, where
-        <me>
-        y_1(x) = 2x^2 - 1, \quad y_2(x) = x\sqrt{1-x^2}.
-      </me>
-      </p>
-      </li>
-      <li> Show that <m>\basis{B} = \bopen \ve{y}_1, \ve{y}_2 \bclose </m> is a basis for <m>V</m>.
-      </li>
-        <li> <p> Let <m>y \in V</m> be defined as the unique solution to the differential equation in <xref ref="diff_eqn_exerc_2"/> satisfying
-        <me>
-        y(\frac{1}{2}) = 1, \quad y'(\frac{1}{2}) = 0.
-      </me>
-      (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>. </p>
-    </li>
+        <li>
+          <p>
+            Show that <m>y_1</m> and <m>y_2</m> are elements of <m>V</m>, where
+            <me>
+              y_1(x) = 2x^2 - 1, \quad y_2(x) = x\sqrt{1-x^2}.
+            </me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Show that <m>\basis{B} = \bopen \ve{y}_1, \ve{y}_2 \bclose </m> is a basis for <m>V</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>y \in V</m> be defined as the unique solution to the differential equation in <xref ref="diff_eqn_exerc_2"/> satisfying
+            <me>
+              y(\frac{1}{2}) = 1, \quad y'(\frac{1}{2}) = 0.
+            </me>
+            (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>.
+          </p>
+        </li>
       </ol>
     </statement>
-   
     </exercise>
 
+    <exercise>
+      <statement>
+        <p>
+          Let <m>V</m> be the vector space of solutions to the differential equation
+          <men xml:id="diff_eqn_exerc_3">
+            x^3 y''' + x^2 y'' - 2xy' + 2y =0
+          </men>
+        </p>
+        <p>
+          <ol>
+            <li>
+              Without performing any explicit calculations, determine the dimension of <m>V</m>.
+            </li>
 
+            <li>
+              Using Sage, find a basis for <m>V</m>, if you're unsure of the syntax, look at the examples in <xref ref = "ACh2Sec3BasisDimension"/>. Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.
+              <sage>
+                <input>
+                </input>
+              </sage>
+            </li>
+
+            <li>
+              Find that unique function <m>y_1</m> that is a solution to <xref ref = "diff_eqn_exerc_3"/> subject to the initial conditions
+              <me>
+                y_1(1) = 1 \quad y_1'(1) = 0 \quad y_1''(1) = 0.
+              </me>
+            </li>
+
+             <li>
+              Find that unique function <m>y_2</m> that is a solution to <xref ref = "diff_eqn_exerc_3"/> subject to the initial conditions
+              <me>
+                y_2(1) = 0 \quad y_2'(1) = 1 \quad y_2''(1) = 0.
+              </me>
+            </li>
+
+            <li>
+              Does the function <m> y_3 = y_1 + y_2 </m> also solve <xref ref = "diff_eqn_exerc_3"/>? By <xref ref = "diff_eqn_exist_unique"/>, <m>y_3</m> is the unique solution to an initial value problem involving <xref ref = "diff_eqn_exerc_3"/> - what are those initial conditions?
+            </li>
+
+            <li>
+              Read through <link xml:link="plot_sage" href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </link>. Plot <m>y_1, y_2, y_3</m> (you don't need to plot them on the same set of axes) on the interval <m>x = [0,10]</m> with a step size of <m> \Delta x = 0.5</m>. Sketch the results.
+              <sage>
+                <input>
+                </input>
+              </sage>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
 
   </exercises>
 
