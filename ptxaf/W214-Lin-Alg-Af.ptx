@@ -94,12 +94,11 @@
     <xi:include href="./AChTutorials.ptx"/>
 
 
-
-    <xi:include href="./AAppAReminderAboutMatrices.ptx" />
-
-    <xi:include href="./AAppBHypersurfaces.ptx" />
-
     <backmatter>
+      <xi:include href="./AAppAReminderAboutMatrices.ptx" />
+
+      <xi:include href="./AAppBHypersurfaces.ptx" />
+
       <xi:include href="./bibliography.ptx" />
     </backmatter>
   </book>
