@@ -25,11 +25,14 @@ Afrikaans:
 - Ch2Sec5 line 436
 - Ch3Sec1 line 354, 419, 512, 676 (rework to use linear combination instead of coordinate vectors), 875, 973, 1217
 - Ch3Sec3 line 471, 526,
+- Ch3Sec4 line 296, 481
 - Check that all of the following are consistent:
   - addition -> optelling (not sommering)
   - well-defined -> wel-gedefinieerd (not goedgedefinieerd)
   - span (verb) -> onderspan (not span - verbs only)
   - isomorphic -> isomorf (not isomorfies)
+  - composition -> samestelling (not komposisie)
+  - verify
 
 
 I would like to add
