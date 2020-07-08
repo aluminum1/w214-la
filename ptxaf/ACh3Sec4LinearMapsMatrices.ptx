@@ -1,32 +1,28 @@
+
+
 <section xml:id="ACh3Sec4LinearMapsMatrices">
   <title>Line&#xea;re afbeeldings en matrikse</title>
   <definition xml:id="matrix_of_linear_map_defn">
     <statement>
       <p>
-        Laat <m>T : V
-        \rightarrow W</m> 'n line&#xea;re afbeelding
-        vanaf 'n vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
-        Laat <m>\basis{B}
-        = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m> 'n basis vir <m>V</m> en
-        <m>\basis{C} = \bopen \ve{c}_1, \ldots, \ve{c}_n \bclose</m> 'n basis vir
-        <m>W</m> wees.
+        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding vanaf 'n vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
+        Laat <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m> 'n basis vir <m>V</m> en
+        <m>\basis{C} = \bopen \ve{c}_1, \ldots, \ve{c}_n \bclose</m> 'n basis vir <m>W</m> wees.
         Die <term>matriks van <m>T</m> relatief tot die basisse
         <m>\basis{B}</m> en <m>\basis{C}</m></term>
-        is definieer as die <m>n \times m</m>-matriks
-        waarvan die kolomme die ko&#xf6;rdinaatvektore van <m>T(\ve{b}_i)</m>
+        word gedefinieer as die <m>n \times m</m>-matriks  waarvan die kolomme die ko&#xf6;rdinaatvektore van <m>T(\ve{b}_i)</m>
         relatief tot die basis <m>\basis{C}</m> is:
         <me>
           [T]_{\basis{C} \leftarrow \basis{B}} :=
-\begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
-  </me>
+          \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
+        </me>
       </p>
     </statement>
   </definition>
 
   <assemblage>
     <p>
-      Verstaan jy hoekom <m>[T]_{\basis{C} \leftarrow
-      \basis{B}}</m> 'n <m>n \times m</m>-matriks is?
+      Verstaan jy hoekom <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> 'n <m>n \times m</m>-matriks is?
     </p>
   </assemblage>
 
@@ -52,84 +48,81 @@
         <me>
           \basis{C} = \bopen c_1 = 1, c_2 = 1+x, c_3 = 1+x+x^2, c_4 = x^3 \bclose
         </me>
-        basisse vir $\Poly_2$ en $\Poly_3$ wees, onderskeidelik. Bepaal $[T]_{\basis{C} \leftarrow \basis{B}}$.
+        basisse vir <m>\Poly_2</m> en <m>\Poly_3</m> onderskeidelik wees. Bepaal <m>[T]_{\basis{C} \leftarrow \basis{B}}</m>.
       </p>
     </statement>
     <solution>
-      Ons bereken:
-      <md>
-        <mrow>
-          T(b_1) \amp = x(1+x) 
-        </mrow>
-        <mrow>
-          \amp = x + x^2
-        </mrow>
-        <mrow>
-          \amp = -c_1 + c_3
-        </mrow>
-        <mrow>
-          \therefore [T(b_1)]_{\basis{C}} \amp = \begin{bmatrix} -1 \\ 0 \\ 1 \\ 0 \end{bmatrix}
-        </mrow>
-        <mrow>
-          T(b_2) \amp = x (1-x)
-          </mrow>
-          <mrow> 
-          \amp = x - x^2
-          </mrow>
-          <mrow> 
-          \amp = -c_1 + 2c_2 - c_3 
+      <p>
+        Ons bereken:
+        <md>
+          <mrow>
+            T(b_1) \amp = x(1+x)
           </mrow>
           <mrow>
-          \therefore [T(b_2)]_{\basis{C}} \amp = 
-          \begin{bmatrix} -1 \\ 2 \\ -1 \\ 0 \end{bmatrix}
-        </mrow>
-        <mrow>
-          T(b_3) \amp = x(1+x+x^2)
-        </mrow>
-        <mrow> \amp = x + x^2 + x^3 </mrow>
-        <mrow> \amp = -c_1 + c_3 +c_4 </mrow>
-        <mrow> \therefore [T(b_3)]_{\basis{C}} \amp = 
-        \begin{bmatrix} -1 \\ 0 \\ 1 \\ 1 \end{bmatrix}</mrow>
-      </md>
-      Deur al hierdie koördinaatvektore te versamel kry ons
-      <me>
-        [T]_{\basis{C} \leftarrow \basis{B}} = 
-        \begin{bmatrix}
-        -1 \amp -1 \amp -1 \\
-        0 \amp 2 \amp 0 \\
-        1 \amp -1 \amp 1 \\
-        0 \amp 0 \amp 1
-        \end{bmatrix}
-      </me>
+            \amp = x + x^2
+          </mrow>
+          <mrow>
+            \amp = -c_1 + c_3
+          </mrow>
+          <mrow>
+            \therefore [T(b_1)]_{\basis{C}} \amp = \begin{bmatrix} -1 \\ 0 \\ 1 \\ 0 \end{bmatrix}
+          </mrow>
+          <mrow>
+            T(b_2) \amp = x (1-x)
+          </mrow>
+          <mrow>
+            \amp = x - x^2
+          </mrow>
+          <mrow>
+            \amp = -c_1 + 2c_2 - c_3
+          </mrow>
+          <mrow>
+            \therefore [T(b_2)]_{\basis{C}} \amp =
+            \begin{bmatrix} -1 \\ 2 \\ -1 \\ 0 \end{bmatrix}
+          </mrow>
+          <mrow>
+            T(b_3) \amp = x(1+x+x^2)
+          </mrow>
+          <mrow> \amp = x + x^2 + x^3 </mrow>
+          <mrow> \amp = -c_1 + c_3 +c_4 </mrow>
+          <mrow> \therefore [T(b_3)]_{\basis{C}} \amp =
+            \begin{bmatrix} -1 \\ 0 \\ 1 \\ 1 \end{bmatrix}</mrow>
+        </md>
+        Deur al hierdie koördinaatvektore te versamel kry ons
+        <me>
+          [T]_{\basis{C} \leftarrow \basis{B}} =
+          \begin{bmatrix}
+            -1 \amp -1 \amp -1 \\
+            0 \amp 2 \amp 0 \\
+            1 \amp -1 \amp 1 \\
+            0 \amp 0 \amp 1
+          \end{bmatrix}
+        </me>
+      </p>
     </solution>
   </example>
 
   <theorem xml:id="lin-map-in-matrix-theorem">
-    <title>Lineêre Afbeeldings en Matriks Vermenigvulding van Koördinaatvektore</title>
+    <title>Lineêre afbeeldings en matriksvermenigvulding van koördinaatvektore</title>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow
-        W</m> 'n line&#xea;re afbeelding vanaf 'n vektorruimte <m>V</m> na 'n
-        vektorruimte <m>W</m> wees.
-        Laat <m>\basis{B} = \bopen \ve{b}_1, \ldots,
-        \ve{b}_m \bclose</m> 'n basis vir <m>V</m> en
-        <m>\basis{C}</m> 'n basis vir <m>W</m>
-        wees.
-        Dan vir alle vektore <m>\ve{v}</m> in <m>V</m>,
+        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding vanaf 'n vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
+        Laat <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m> 'n basis vir <m>V</m> en
+        <m>\basis{C}</m> 'n basis vir <m>W</m> wees.
+        Dan vir alle vektore <m>\ve{v}</m> in <m>V</m> geld dat
         <men xml:id="lin-maps-and-matrices-eqn">
-          [T(\ve{v})]_\basis{C} = [T]_{\basis{C} \leftarrow \basis{B}}
-          [\ve{v}]_\basis{B}
-        </men>
+          [T(\ve{v})]_\basis{C} = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B}
+        </men>,
+        waar die regterkant die produk van die matriks
+        <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> met die koörindaatvektor  <m>\ve{v}]_\basis{B}</m> is.
       </p>
     </statement>
 
     <proof>
       <p>
-        Die bewys is soortgelyk aan di&#xe9; van die
-        Basisveranderingstelling
+        Die bewys is soortgelyk aan die bewys van die Basisveranderingstelling
         (<xref ref="change-of-basis-thm">Stelling</xref>).
-        Laat
-        <m>\ve{v} \in V</m>.
+        Laat <m>\ve{v} \in V</m>.
         Brei dit uit in die basis <m>\basis{B}</m>:
         <me>
           \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_m \ve{b}_m,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix}
@@ -153,93 +146,83 @@
     <title>Bevestiging van <xref ref="lin-map-in-matrix-theorem"/> in 'n voorbeeld</title>
     <statement>
       <p>
-        Kom ons bevestig dat <xref ref="lin-map-in-matrix-theorem"/> inderdaad werk, in die konteks van <xref ref="first_example_matrix_lin_map"/>. Vat die vektor <m>\ve{v} \in \Poly_2</m> as, byvoorbeeld, <m>x</m>. 
+        Kom ons bevestig dat <xref ref="lin-map-in-matrix-theorem"/> inderdaad werk, in die konteks van <xref ref="first_example_matrix_lin_map"/>. Neem die vektor <m>\ve{v} \in \Poly_2</m> as, byvoorbeeld, <m>x</m>.
       </p>
       <p>
         Brei <m>x</m> uit relatief tot die basis <m>\basis{B}</m>. Ons kry:
         <me>
           x = \frac{1}{2} (p_1 - p_2).
-        </me> 
+        </me>
         So,
         <me>
           [x]_{\basis{B}} = \begin{bmatrix} \frac{1}{2} \\ - \frac{1}{2} \\ 0 \end{bmatrix}
         </me>
-      Verder, <m>T(x) = x^2 = -q_2 + q_3</m>, so
-      <me>
-        [T(x)]_{\basis{C}} = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}
-      </me>
-      Ons kan nou die linker- en regterkante van Vergelyking <xref ref="lin-maps-and-matrices-eqn"/> uitwerk en sien of hulle wel gelyk aan mekaar is.
-      <md>
-        <mrow>\text{LK van } <xref ref="lin-maps-and-matrices-eqn"/> \amp = [T(x)]_{\basis{C}} </mrow>
-        <mrow> \amp =  \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}. </mrow>
-        <mrow>\text{RK van }<xref ref="lin-maps-and-matrices-eqn"/> \amp = [T]_{\basis{C} \leftarrow \basis{B}} [x]_{\basis{B}}   </mrow>
-        <mrow> \amp= \begin{bmatrix}  -1 \amp -1 \amp -1 \\ 0 \amp 2 \amp 0 \\ 1 \amp -1 \amp 1 \\ 0 \amp 0 \amp 1 \end{bmatrix} \begin{bmatrix} \frac{1}{2} \\ -\frac{1}{2} \\ 0 \end{bmatrix} </mrow>
-        <mrow> \amp = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}</mrow>
-      </md>
-      So inderdaa, die Stelling werk! Of ten minste in hierdie geval.
-    </p>
+        Verder, <m>T(x) = x^2 = -q_2 + q_3</m>, so
+        <me>
+          [T(x)]_{\basis{C}} = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}
+        </me>
+        Ons kan nou die linker- en regterkante van Vergelyking <xref ref="lin-maps-and-matrices-eqn"/> uitwerk en sien of hulle wel gelyk aan mekaar is.
+        <md>
+          <mrow>\text{LK van } <xref ref="lin-maps-and-matrices-eqn"/> \amp = [T(x)]_{\basis{C}} </mrow>
+          <mrow> \amp =  \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}. </mrow>
+          <mrow>\text{RK van }<xref ref="lin-maps-and-matrices-eqn"/> \amp = [T]_{\basis{C} \leftarrow \basis{B}} [x]_{\basis{B}}   </mrow>
+          <mrow> \amp= \begin{bmatrix}  -1 \amp -1 \amp -1 \\ 0 \amp 2 \amp 0 \\ 1 \amp -1 \amp 1 \\ 0 \amp 0 \amp 1 \end{bmatrix} \begin{bmatrix} \frac{1}{2} \\ -\frac{1}{2} \\ 0 \end{bmatrix} </mrow>
+          <mrow> \amp = \begin{bmatrix} 0 \\ -1 \\ 1 \\ 0 \end{bmatrix}</mrow>
+        </md>
+        So die Stelling werk inderdaad <mdash /> ten minste in hierdie geval!
+      </p>
     </statement>
   </example>
 
   <p>
-    Ons kan <xref ref="lin-map-in-matrix-theorem">Stelling</xref> in 'n meer abstrakte
-    manier interpreteer soos
-    volg.
-    Ons het die volgende diagram van line&#xea;re afbeeldings van
-    vektorruimtes:
-    </p>
+    Ons kan <xref ref="lin-map-in-matrix-theorem">Stelling</xref> as volg in 'n meer abstrakte manier interpreteer.
+    Ons het die volgende diagram van
+    line&#xea;re afbeeldings van vektorruimtes:
+  </p>
 
-<image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[yscale=0.8]
-  \draw (0, 0) circle (1);
-  \draw (6,0) circle (1);
-  \draw [<->] (-1, -6) -- (1, -6);
-  \draw [<->] (0, -5) -- (0, -7);
-  \draw [<->] (5, -6) -- (7, -6);
-  \draw [<->] (6, -5) -- (6, -7);
-  \draw[->] (2, 0) -- node[above]{\(T\)} (4, 0);
-  \draw[->] (6, -2) -- node[right] {\([ \smul]_\basis{C}\)} (6, -4);
-  \draw[->, dotted] (2, -6) -- node[below] {\([\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}}\)} (4, -6);
-  \draw[->] (-0.1, -2) -- node[left] {\([ \smul]_\basis{B}\)} (-0.1, -4);
-  \draw[<-] (0.1, -2) -- node[right] {\(\ve{vec}_{V, \basis{B}}\)} (0.1, -4);
-  \node at (1, 1) {\(V\)};
-  \node at (7, 1) {\(W\)};
-  \node at (1, -5) {\(\Col_m\)};
-  \node at (7, -5) {\(\Col_n\)};\end{tikzpicture}]]>
-</latex-image>
+  <image>
+    <latex-image>
+      <![CDATA[\begin{tikzpicture}[yscale=0.8]
+      \draw (0, 0) circle (1);
+      \draw (6,0) circle (1);
+      \draw [<->] (-1, -6) -- (1, -6);
+      \draw [<->] (0, -5) -- (0, -7);
+      \draw [<->] (5, -6) -- (7, -6);
+      \draw [<->] (6, -5) -- (6, -7);
+      \draw[->] (2, 0) -- node[above]{\(T\)} (4, 0);
+      \draw[->] (6, -2) -- node[right] {\([ \smul]_\basis{C}\)} (6, -4);
+      \draw[->, dotted] (2, -6) -- node[below] {\([\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}}\)} (4, -6);
+      \draw[->] (-0.1, -2) -- node[left] {\([ \smul]_\basis{B}\)} (-0.1, -4);
+      \draw[<-] (0.1, -2) -- node[right] {\(\ve{vec}_{V, \basis{B}}\)} (0.1, -4);
+      \node at (1, 1) {\(V\)};
+      \node at (7, 1) {\(W\)};
+      \node at (1, -5) {\(\Col_m\)};
+      \node at (7, -5) {\(\Col_n\)};\end{tikzpicture}]]>
+    </latex-image>
   </image>
- 
 
   <p>
     Die boonste afbeelding is die line&#xea;re afbeelding <m>T : V \rightarrow W</m>.
     Die afbeelding links van <m>V</m> na <m>\Col_m</m> is die
-    ko&#xf6;rdinaatvektorafbeelding <m>[ \cdot ]_\basis{B}</m> wat met die basis
-    <m>\basis{B}</m> assosieer word.
-    Sy inverse afbeelding <m>\ve{vec}_{V, \basis{B}}
-    : \Col_m \rightarrow V</m> word ook geteken.
-    Die afbeelding aan die regterkant
-    is die ko&#xf6;rdinaatvektorafbeedling <m>[ \cdot]_\basis{C}</m> vanaf <m>W</m> na
+    ko&#xf6;rdinaatvektorafbeelding <m>[ \cdot ]_\basis{B}</m> geassosieer met die basis <m>\basis{B}</m>.
+    Sy inverse afbeelding <m>\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V</m> word ook geteken.
+    Die afbeelding aan die regterkant is die ko&#xf6;rdinaatvektorafbeedling <m>[ \cdot]_\basis{C}</m> vanaf <m>W</m> na
     <m>\Col_n</m> wat met basis <m>C</m> assosieer word.
     Die stippelpyl heel onder is die
-    komposisieafbeelding, en kan soos volg eksplisiet bereken word.
+    saamgestelse afbeelding, en kan soos volg eksplisiet bereken word.
   </p>
 
   <lemma>
     <statement>
       <p>
-        Die komposisieafbeelding
+        Die saamgestelde afbeelding
         <me>
-          [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} : \Col_m
-          \rightarrow \Col_n
+          [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} : \Col_m \rightarrow \Col_n
         </me>
         is matriksvermenigvuldiging met <m>[T]_{\basis{C} \leftarrow \basis{B}}</m>.
         Dit is, vir alle kolomvektore <m>\mat{u}</m> in <m>\Col_m</m>,
         <me>
-          \left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}}
-          \right) (\mat{u}) = [T]_{\basis{C} \leftarrow \basis{B}} \,
-          \mat{u}
+          \left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} \right) (\mat{u}) = [T]_{\basis{C} \leftarrow \basis{B}} \, \mat{u}
         </me>.
       </p>
     </statement>
@@ -247,37 +230,29 @@
 
   <proof>
     <p>
+      Laat <m>\mat{u}</m> 'n kolomvektor in <m>\Col_m</m> wees.
       Definieer <m>\ve{v} := \ve{vec}_{V, \basis{B}} (\mat{u})</m>.
-      Dan
-      is <m>\ve{v}</m> die vektor in <m>V</m> waarvan die ko&#xf6;rdinaatvektor met
-      betrekking tot basis <m>\basis{B}</m> <m>\mat{u}</m> is.
-      Dit is, <m>\mat{u} =
-      [\ve{v}]_\basis{B}</m>.
+      Dan is <m>\ve{v}</m> die vektor in <m>V</m> waarvan die ko&#xf6;rdinaatvektor met betrekking tot basis <m>\basis{B}</m> gelyk aan <m>\mat{u}</m> is.
+      Dit is, <m>\mat{u} = [\ve{v}]_\basis{B}</m>.
       So,
       <md>
-        <mrow>\left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}}
-        \right) (\mat{c})  \amp = [ \cdot ]_\basis{C} \left( T
-        \left(\ve{vec}_{V, \basis{B}}(\mat{u})\right)\right) \amp \amp  \mbox{(Defn
-        van komposisieafbeelding)}</mrow>
+        <mrow>\left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} \right) (\mat{c})  \amp = [ \cdot ]_\basis{C} \left( T \left(\ve{vec}_{V, \basis{B}}(\mat{u})\right)\right) \amp \amp  \mbox{(Defn van komposisieafbeelding)}</mrow>
         <mrow>\amp = [\cdot]_\basis{C} (T(\ve{v})) \amp \amp  \mbox{(Defn van \(\ve{v}\))}</mrow>
         <mrow>\amp = [T(\ve{v})]_\basis{C} \amp \amp  \mbox{(Defn van \([\cdot]_\basis{C}\))}</mrow>
-        <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \amp \amp 
-      (<xref ref="lin-map-in-matrix-theorem">Stelling</xref>) </mrow>
+        <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \amp \amp (<xref ref="lin-map-in-matrix-theorem">Stelling</xref>) </mrow>
       </md>.
     </p>
   </proof>
 
   <p>
     Voor ons aanbeweeg, moet ons nog iets van matrikse hersien.
-    Veronderstel
-    <m>\mat{A}</m> is 'n matriks met <m>n</m> rye.
+    Veronderstel <m>\mat{A}</m> is 'n matriks met <m>n</m> rye.
     Laat
-<me>
+    <me>
       \mat{e}_1 = \begin{bmatrix}1 \\ 0 \\ \vdots \\ 0\end{bmatrix}, \, \mat{e}_2 = \begin{bmatrix}0 \\ 1 \\ \vdots \\ 0\end{bmatrix}, \, \ldots, \, \mat{e}_n = \begin{bmatrix}0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}
     </me>
     die standaard basis vir <m>\Col_n</m> wees.
-    Dan kan die <m>i</m>de kolom van <m>A</m>
-    verkry word deur <m>A</m> met <m>\mat{e}_i</m> te vermenigvuldig:
+    Dan kan die <m>i</m>de kolom van <m>A</m> verkry word deur <m>A</m> met <m>\mat{e}_i</m> te vermenigvuldig:
     <men xml:id="fact-about-columns">
       i\text{de} \text{ column of } \mat A  = A \mat{e}_i
     </men>.
@@ -300,19 +275,16 @@
     <statement>
       <p>
         Laat <m>S : U \rightarrow V</m> en
-        <m>T : V
-        \rightarrow W</m> line&#xea;re afbeeldings tussen eindigdimensionele
-        vektorruimtes wees.
+        <m>T : V \rightarrow W</m> line&#xea;re afbeeldings tussen eindig-dimensionele vektorruimtes wees.
         Laat <m>\basis{B}</m>, <m>\basis{C}</m> en <m>\basis{D}</m>
-        basisse vir <m>U</m>, <m>V</m> en <m>W</m> onderskeidelik wees.
+        basisse vir <m>U</m>, <m>V</m> en <m>W</m>
+        onderskeidelik wees.
         Dan,
         <me>
-          [T \circ S]_{\basis{D} \leftarrow \basis{B}} = [T]_{\basis{D}
-          \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
+          [T \circ S]_{\basis{D} \leftarrow \basis{B}} = [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
         </me>
         waar die regterkant die matriksproduk van
-        <m>[T]_{\basis{D} \leftarrow
-        \basis{C}}</m> en <m>[S]_{\basis{C} \leftarrow \basis{B}}</m> is.
+        <m>[T]_{\basis{D} \leftarrow \basis{C}}</m> en <m>[S]_{\basis{C} \leftarrow \basis{B}}</m> is.
       </p>
     </statement>
   </theorem>
@@ -337,14 +309,12 @@
   <corollary xml:id="map-iso-matrix-iso">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n
-        line&#xea;re afbeelding wees,
+        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding wees,
         en veronderstel <m>\basis{B}</m> is 'n basis
         vir <m>V</m>, en <m>\basis{C}</m> is 'n basis vir <m>W</m>.
         Dan
         <me>
-          \mbox{\(T\) is 'n isomorfisme}  \Longleftrightarrow
-          \mbox{\([T]_{\basis{C} \leftarrow \basis{B}}\) is inverteerbaar.}
+          \mbox{\(T\) is 'n isomorfisme}  \Longleftrightarrow \mbox{\([T]_{\basis{C} \leftarrow \basis{B}}\) is inverteerbaar.}
         </me>
       </p>
     </statement>
@@ -353,31 +323,24 @@
   <proof>
     <p>
       <m>\Rightarrow</m>.
-      Veronderstel die line&#xea;re afbeelding <m>T</m> is
-      'n isomorfisme.
-      Dit beteken daar bestaan 'n line&#xea;re afbeelding <m>S :
-      W \rightarrow V</m> sodat
+      Veronderstel die line&#xea;re afbeelding <m>T</m> is 'n isomorfisme.
+      Dit beteken dat bestaan 'n line&#xea;re afbeelding <m>S :  W \rightarrow V</m> bestaan sodat
       <me>
-        S \circ T = \id_V  \text{ and }   T \circ S = \id_W/
+        S \circ T = \id_V  \text{ en }   T \circ S = \id_W/
       </me>
     </p>
 
     <p>
       Daarom,
       <me>
-        [S \circ T]_{\basis{B} \leftarrow \basis{B}} = [\id_V]_{\basis{B}
-        \leftarrow \basis{B}}  \text{ en }   [T \circ S]_{\basis{C}
-        \leftarrow \basis{C}} = [\id_W]_{\basis{C} \leftarrow \basis{C}}
+        [S \circ T]_{\basis{B} \leftarrow \basis{B}} = [\id_V]_{\basis{B} \leftarrow \basis{B}}  \text{ en }   [T \circ S]_{\basis{C} \leftarrow \basis{C}} = [\id_W]_{\basis{C} \leftarrow \basis{C}}
       </me>.
     </p>
 
     <p>
-      Daarom, volgens die Funktorialiteit van die Matriks van 'n Line&#xea;re
-      Afbeelding (<xref ref="functoriality_of_matrix">Stelling</xref>),
+      Daarom, volgens die Funktorialiteit van die Matriks van 'n Line&#xea;re Afbeelding (<xref ref="functoriality_of_matrix">Stelling</xref>),
       <me>
-        [S]_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow
-        \basis{B}} = I  \text{ en }   [T]_{\basis{C} \leftarrow
-        \basis{B}} [S]_{\basis{B} \leftarrow \basis{C}} = I
+        [S]_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} = I  \text{ en }   [T]_{\basis{C} \leftarrow \basis{B}} [S]_{\basis{B} \leftarrow \basis{C}} = I
       </me>
     </p>
 
@@ -385,21 +348,18 @@
       Daarom is die matriks <m>[T]_{\basis{C} \leftarrow \basis{B}}</m>
       inverteerbaar, met inverse
       <me>
-        [T]^{-1}_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B}
-        \leftarrow \basis{C}}
+        [T]^{-1}_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{C}}
       </me>.
     </p>
 
     <p>
       <m>\Leftarrow</m>.
-      Veronderstel die matriks <m>[T] \equiv [T]_{\basis{C}
-      \leftarrow \basis{B}}</m> is inverteerbaar.
-      Definieer die line&#xea;re
-      afbeelding
+      Veronderstel die matriks <m>[T] \equiv [T]_{\basis{C} \leftarrow \basis{B}}</m> is inverteerbaar.
+      Definieer die line&#xea;re afbeelding
       <me>
         S : W \rightarrow V
       </me>
-      deur eerstens dit op die basisvektore in <m>\basis{C}</m> te definieer as
+      deur dit eerstens op die basisvektore in <m>\basis{C}</m> te definieer as
       <me>
         S(\ve{c}_i) := \sum_{p=1}^{\dim V} [T]^{-1}_{pi} \basis{b}_p
       </me>
@@ -408,10 +368,8 @@
       <md>
         <mrow>(T \circ S)(\basis{c}_i) \amp = T(S(\basis{c}_i))</mrow>
         <mrow>\amp = T\left( \sum_{p=1}^{\dim V} [T]_{pi}^{-1} \ve{b}_p \right)</mrow>
-        <mrow>\amp = \sum_{p=1}^{\dim V} \sum_{q=1}^{\dim W} [T]^{-1}_{pi} [T]_{qp}
-        \ve{c}_q</mrow>
-        <mrow>\amp = \sum_{q=1}^{\dim W} \left( \sum_{p=1}^{\dim V} [T]_{qp}
-        [T]^{-1}_{pi} \right) \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{p=1}^{\dim V} \sum_{q=1}^{\dim W} [T]^{-1}_{pi} [T]_{qp} \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{q=1}^{\dim W} \left( \sum_{p=1}^{\dim V} [T]_{qp} [T]^{-1}_{pi} \right) \ve{c}_q</mrow>
         <mrow>\amp = \sum_{q=1}^{\dim W} \left( [T] [T]^{-1} \right)_{qi} \ve{c}_q</mrow>
         <mrow>\amp = \sum_{q=1}^{\dim W} I_{qi} \ve{c}_q</mrow>
         <mrow>\amp = \sum_{q=1}^{\dim W} \delta_{qi} \ve{c}_q</mrow>
@@ -421,8 +379,7 @@
 
     <p>
       Daarom, <m>T \circ S = \id_W</m>.
-      Op 'n soortgelyke manier kan ons bewys dat
-      <m>S \circ T = \id_V</m>.
+      Op 'n soortgelyke manier kan ons bewys dat <m>S \circ T = \id_V</m>.
       Daarom is die line&#xea;re afbeelding <m>T</m> 'n
       isomorfisme, met inverse <m>T^{-1} = S</m>.
     </p>
@@ -430,24 +387,18 @@
 
   <p>
     Ons kan dit nog verder verfyn,
-    naamlik, <sq>die inverse van die matriks van </sq>n
-    line&#xea;re afbeelding is gelyk aan die matriks van die inverse van die
-    line&#xea;re afbeelding.'
+    naamlik, <sq>die inverse van die matriks van 'n line&#xea;re afbeelding is gelyk aan die matriks van die inverse van die line&#xea;re afbeelding</sq>.
   </p>
 
   <corollary xml:id="inverse-of-map-via-matrices">
     <statement>
       <p>
-        Veronderstel
-        <m>\basis{B}</m> en <m>\basis{C}</m> is basisse vir vektorruimtes <m>V</m> en <m>W</m>
-        onderskeidelik.
-        Veronderstel 'n line&#xea;re afbeelding
-        <m>T : V
-        \rightarrow W</m> het inverse <m>T^{-1} : W \rightarrow V</m>.
+        Veronderstel <m>\basis{B}</m> en <m>\basis{C}</m>
+        is basisse vir vektorruimtes <m>V</m> en <m>W</m>onderskeidelik.
+        Veronderstel 'n line&#xea;re afbeelding <m>T : V \rightarrow W</m> het inverse <m>T^{-1} : W \rightarrow V</m>.
         Dan
         <me>
-          [T]_{\basis{C} \leftarrow \basis{B}}^{-1} = [T^{-1}]_{\basis{B}
-          \leftarrow \basis{C}}
+          [T]_{\basis{C} \leftarrow \basis{B}}^{-1} = [T^{-1}]_{\basis{B} \leftarrow \basis{C}}
         </me>.
       </p>
     </statement>
@@ -456,7 +407,7 @@
   <proof>
     <p>
       Ons het
-<md>
+      <md>
         <mrow>[T]_{\basis{C} \leftarrow \basis{B}} [T^{-1}]_{\basis{B} \leftarrow \basis{C}} \amp = [T \circ T^{-1}]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
         <mrow>\amp = [\id_W]_{\basis{C} \leftarrow \basis{C}} \amp \amp  \mbox{(\(T \circ T^{-1} = \id_W\))}</mrow>
         <mrow>\amp = I</mrow>
@@ -471,21 +422,17 @@
   </proof>
 
   <p>
-    Die volgende Lemma s&#xea;
-    dat die <sq>basisveranderingsmatriks</sq> in <xref ref="ACh2Sec5ChangeOfBasis">Afdeling</xref>
-    is net die matriks van die identiteitsline&#xea;re
-    afbeelding met betrekking tot die betrokke basisse.
+    Die volgende Lemma s&#xea; dat die basisomskakelingsmatriks in <xref ref="ACh2Sec5ChangeOfBasis">Afdeling</xref>
+    gewoon die matriks van die identiteitsafbeelding met betrekking tot die betrokke basisse is.
   </p>
 
   <lemma xml:id="change-of-basis-as-matrix">
     <statement>
       <p>
-        Laat <m>\basis{B}</m> en
-        <m>\basis{C}</m> basisse vir 'n <m>m</m>-dimensionele vektorruimte <m>V</m> wees.
+        Laat <m>\basis{B}</m> en <m>\basis{C}</m> basisse vir 'n <m>m</m>-dimensionele vektorruimte <m>V</m> wees.
         Dan
         <me>
-          \mat{P}_{\basis{C} \leftarrow \basis{B}} = [\id]_{\basis{C}
-          \leftarrow \basis{B}}
+          \mat{P}_{\basis{C} \leftarrow \basis{B}} = [\id]_{\basis{C} \leftarrow \basis{B}}
         </me>.
       </p>
     </statement>
@@ -493,53 +440,42 @@
 
   <proof>
     <md>
-      <mrow>\mat{P}_{\basis{C} \leftarrow \basis{B}} \amp = \left[
-      [\ve{b}_1]_{\basis{C}} \cdots [\ve{b}_m]_{\basis{C}} \right] \amp \amp 
-      \mbox{(Defn van \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
-      <mrow>\amp = \left[ [\id(\ve{b}_1)]_{\basis{C}} \cdots
-      [\id(\ve{b}_m)]_{\basis{C}} \right]</mrow>
-      <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}}. \amp \amp  \mbox{(Defn van
-      \([\id]_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
+      <mrow>\mat{P}_{\basis{C} \leftarrow \basis{B}} \amp = \left[ [\ve{b}_1]_{\basis{C}} \cdots [\ve{b}_m]_{\basis{C}} \right] \amp \amp \mbox{(Defn van \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
+      <mrow>\amp = \left[ [\id(\ve{b}_1)]_{\basis{C}} \cdots [\id(\ve{b}_m)]_{\basis{C}} \right]</mrow>
+      <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}}. \amp \amp  \mbox{(Defn van \([\id]_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
     </md>
   </proof>
 
   <p>
-    Die volgende Stelling s&#xea;
-    vir ons hoe die matriks van 'n line&#xea;re
-    bewerking verander as ons die basis verander waarmee ons die matriks
-    bereken.
+    Die volgende Stelling s&#xea; vir ons hoe die matriks van 'n line&#xea;re bewerking verander as ons die basis verander waarmee ons die matriks bereken.
   </p>
 
   <theorem xml:id="matrix-in-different-basis">
     <statement>
       <p>
-        Laat <m>\basis{B}</m> en
-        <m>\basis{C}</m> basisse vir 'n vektorruimte <m>V</m> wees, en laat
-        <m>T : V
-        \rightarrow V</m> 'n line&#xea;re bewerking op <m>V</m> wees.
+        Laat <m>\basis{B}</m> en <m>\basis{C}</m> basisse vir 'n vektorruimte <m>V</m> wees, en laat
+        <m>T : V \rightarrow V</m> 'n line&#xea;re operator op <m>V</m> wees.
         Dan
         <me>
-          [T]_{\basis{C} \leftarrow \basis{C}} = \mat{P}^{-1} [T]_{\basis{B}
-          \leftarrow \basis{B}} P
+          [T]_{\basis{C} \leftarrow \basis{C}} = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P
         </me>
         waar <m>P \equiv P_{\basis{B} \leftarrow \basis{C}}</m>.
       </p>
     </statement>
-
+    <proof>
+     <md>
+        <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
+        <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="change-of-basis-as-matrix"/>)</mrow>
+        <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="inverse-of-map-via-matrices"/>)</mrow>
+        <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+        <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{C}}</mrow>
+        <mrow>\amp = \mbox{LHS} </mrow>
+      </md>.
+    </proof>
   </theorem>
-  <proof>
-   <md>
-      <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
-      <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="change-of-basis-as-matrix"/>)</mrow>
-      <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="inverse-of-map-via-matrices"/>)</mrow>
-      <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
-      <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{C}}</mrow>
-      <mrow>\amp = \mbox{LHS} </mrow>
-    </md>.
-  </proof>
 
   <exercises>
-      <exercise xml:id="trig_ex_1">
+    <exercise xml:id="trig_ex_1">
     <statement>
       <p>
         Let
@@ -558,21 +494,20 @@
         <md>
           <mrow>\sin(2x) \amp = 2 \sin x \cos x</mrow>
           <mrow> \cos(2x) \amp = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1-2\sin^2 x</mrow>.
-          </md>
-           With these in mind, we compute:
-          <md>
-            <mrow>T(T_0) \amp= \sin x = T_2 </mrow>
-            <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
-            <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>.
-      </md>
-      Thus
-      <me>
-[T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
-    </me>
+        </md>
+        With these in mind, we compute:
+        <md>
+          <mrow>T(T_0) \amp= \sin x = T_2 </mrow>
+          <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
+          <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>.
+        </md>
+        Thus
+        <me>
+          [T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
+        </me>
       </p>
     </solution>
   </exercise>
-
 
   <exercise xml:id="trig_ex_2">
     <statement>
@@ -582,10 +517,18 @@
           S : \Trig_2 \rightarrow \Trig_2
         </me>
         die <sq>skuif met <m>\frac{\pi}{6}</m></sq>-afbeelding wees,
-        <m>S(f)(x) = f(x -
-        \frac{\pi}{6})</m>.
-        Bereken <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> met
-        betrekking tot die standaardbasis <m>\basis{C}</m> van <m>\Trig_2</m>.
+        <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
+        <ol>
+          <li>
+            Bereken <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> met betrekking tot die standaardbasis <m>\basis{C}</m> van <m>\Trig_2</m>.
+          </li>
+          <li>
+            Bereken <m>[S]_{\basis{B} \leftarrow \basis{C}}</m> waar <m>\basis{B}</m> die volgende basis vir <m>\Trig_2</m> is:
+            <me>
+              \basis{B} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin^2 x \bclose
+            </me>
+          </li>
+        </ol>
       </p>
     </statement>
     <solution>
@@ -597,17 +540,17 @@
         </md>
         We compute
         <md>
-<mrow> S(T_0) \amp = 1 = T_0 </mrow>
+          <mrow> S(T_0) \amp = 1 = T_0 </mrow>
 
-<mrow> S(T_1) \amp = \cos ( x - \frac{\pi}{6}) =  \frac{\sqrt{3}}{2} \cos x + \frac{1}{2}\sin x = \frac{\sqrt 3}{2} T_1 + \frac{1}{2} T_2</mrow>
+          <mrow> S(T_1) \amp = \cos ( x - \frac{\pi}{6}) =  \frac{\sqrt{3}}{2} \cos x + \frac{1}{2}\sin x = \frac{\sqrt 3}{2} T_1 + \frac{1}{2} T_2</mrow>
 
-<mrow> S(T_2) \amp = \sin( x - \frac{\pi}{6}) =  -\frac{1}{2} \cos x +  \frac{\sqrt 3}{2}\sin x =  -\frac{1}{2}T_1 + \frac{\sqrt 3}{2} T_2 </mrow>
+          <mrow> S(T_2) \amp = \sin( x - \frac{\pi}{6}) =  -\frac{1}{2} \cos x +  \frac{\sqrt 3}{2}\sin x =  -\frac{1}{2}T_1 + \frac{\sqrt 3}{2} T_2 </mrow>
 
-<mrow> S(T_3) \amp = \cos(2x - \frac{\pi}{6})=  -\frac{1}{2}\sin^2 x  + \frac{\sqrt 3}{2}\cos^2 x + \sin x \cos x</mrow>
+          <mrow> S(T_3) \amp = \cos(2x - \frac{\pi}{6})=  -\frac{1}{2}\sin^2 x  + \frac{\sqrt 3}{2}\cos^2 x + \sin x \cos x</mrow>
 
-<mrow> \amp  = -\frac{\sqrt 3}{2}(\frac{1}{2} - \frac{1}{2}\cos x) + \frac{\sqrt 3}{2}(\frac{1}{2} + \frac{1}{2}\cos 2x) + \frac{1}{2}\sin 2x </mrow>
+          <mrow> \amp  = -\frac{\sqrt 3}{2}(\frac{1}{2} - \frac{1}{2}\cos x) + \frac{\sqrt 3}{2}(\frac{1}{2} + \frac{1}{2}\cos 2x) + \frac{1}{2}\sin 2x </mrow>
 
-<mrow> \amp = \frac{\sqrt 3}{2}\cos 2x + \frac{1}{2} \sin 2x = \frac{\sqrt 3}{2} T_3 + \frac{1}{2} \sin 2x .</mrow>
+          <mrow> \amp = \frac{\sqrt 3}{2}\cos 2x + \frac{1}{2} \sin 2x = \frac{\sqrt 3}{2} T_3 + \frac{1}{2} \sin 2x .</mrow>
         </md>
         Similarly,
         <md>
@@ -615,18 +558,18 @@
         </md>
         Hence
         <me>
-        [S]_{\basis{C} \leftarrow \basis{C}} = \begin{bmatrix}
-1  \mamp 0 \mamp 0 \mamp 0 \mamp 0 \\
+          [S]_{\basis{C} \leftarrow \basis{C}} = \begin{bmatrix}
+          1  \mamp 0 \mamp 0 \mamp 0 \mamp 0 \\
 
-0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \mamp 0 \mamp 0 \\
+          0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \mamp 0 \mamp 0 \\
 
-0 \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2} \mamp 0 \mamp 0 \\
+          0 \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2} \mamp 0 \mamp 0 \\
 
-0 \mamp 0 \mamp 0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \\
+          0 \mamp 0 \mamp 0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \\
 
-0 \mamp 0 \mamp 0  \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2}
-\end{bmatrix}.
-      </me>
+          0 \mamp 0 \mamp 0  \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2}
+          \end{bmatrix}.
+        </me>
       </p>
     </solution>
   </exercise>
@@ -635,16 +578,15 @@
     <statement>
       <p>
         Bevestig <xref ref="lin-map-in-matrix-theorem">Stelling</xref> vir die
-        line&#xea;re afbeelding <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> gegee
-        deur <m>S(\mat{M}) = \mat{M}^T</m>,
-        met behulp van die volgende basisse van
-        <m>\Mat_{2,2}</m>:
+        line&#xea;re afbeelding <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> gegee deur <m>S(\mat{M}) = \mat{M}^T</m>,
+        vir die vektor gegee deur
         <md>
-          \basis{B} = \basis{C} = \bopen \mat{M}_1 = \cmatrix{1 \amp  1 \\ 2 \amp 
-          3}, \, \mat{M}_2 = \cmatrix{1 \amp  0 \\ 1 \amp  1}, \, \mat{M}_3 =
-          \cmatrix{1 \amp  1 \\ 1 \amp  1}, \, \mat{M}_4 = \cmatrix{0 \amp  1 \\ 1 \amp  1}
-          \bclose.
+          <mrow> \mat{A} = \begin{bmatrix} 0 \mamp  1 \\ 0 \mamp  0 \end{bmatrix}</mrow>
         </md>
+        deur die volgende basisse van <m>\Mat_{2,2}</m> te gebruik:
+        <me>
+          \basis{B} = \basis{C} = \bopen \mat{M}_1 = \begin{bmatrix}1 \mamp  1 \\ 2 \mamp  3\end{bmatrix}, \, \mat{M}_2 = \begin{bmatrix}1 \amp  0 \\ 1 \amp  1 \end{bmatrix}, \, \mat{M}_3 = \begin{bmatrix}1 \amp  1 \\ 1 \amp  1\end{bmatrix}, \, \mat{M}_4 =\begin{bmatrix}0 \amp  1 \\ 1 \amp  1 \end{bmatrix} \bclose.
+        </me>
       </p>
     </statement>
   </exercise>
@@ -660,21 +602,7 @@
         <me>
           T(p)(x) := p(\cos x).
         </me>
-        Use the standard bases <m>\basis{B}</m> for <m>\Poly_3</m> and <m>\basis{C}</m> for <m>\Trig_3</m>. 
-      </p>
-    </statement>
-
-  </exercise>
-
-
-  <exercise>
-    <statement>
-      <p>
-        Maak seker dat die line&#xea;re afbeeldings <m>T</m> en <m>S</m> van
-        <xref ref="trig_ex_1">Oefeninge</xref>
-        <xref ref="trig_ex_2">en</xref> <m>[S \circ T]_{\basis{C}
-        \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{B}}
-        [T]_{\basis{C} \leftarrow \basis{B}}</m> bevredig.
+        Use the standard bases <m>\basis{B}</m> for <m>\Poly_3</m> and <m>\basis{C}</m> for <m>\Trig_3</m>.
       </p>
     </statement>
   </exercise>
@@ -682,7 +610,17 @@
   <exercise>
     <statement>
       <p>
-        Verifieer <xref ref="functoriality_of_matrix"/> vir die `gradieënt' and `divergensie' lineêre afbeeldings
+        Maak seker dat die line&#xea;re afbeeldings <m>T</m> en <m>S</m> van <xref ref="trig_ex_1">Oefeninge</xref>
+        <xref ref="trig_ex_2">en</xref>
+        die vergelyking <m>[S \circ T]_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{B}} [T]_{\basis{C} \leftarrow \basis{B}}</m> bevredig.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Verifieer <xref ref="functoriality_of_matrix"/> vir die <sq>gradiënt</sq> and <sq>divergensie</sq> lineêre afbeeldings
         <md>
          <mrow> G : \Poly_3[x,y] \amp \rightarrow \Vect_2(\mathbb{R}^2) </mrow>
          <mrow> G(p) := \nabla p</mrow>
@@ -713,7 +651,6 @@
     </statement>
   </exercise>
 
-
   <exercise>
     <statement>
       <p>
@@ -729,7 +666,7 @@
         Gebruik die standaardbasis <m>\basis{B}</m> vir <m>\Mat_{2,3}</m> (sien <xref ref="dimension_of_matrix_space_example"/>), die basis
         <me>
           \basis{C} = \bopen \begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1\end{bmatrix} \bclose
-        </me> 
+        </me>
         vir <m>\Col_3</m>, en die standaardbasis
         <me>
           \basis{C} = \bopen 1, x, y, x^2, xy, y^2 \bclose
@@ -742,7 +679,7 @@
         <me>
           [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
         </me>
-        and verifieer dat hulle gelyk aan mekaar is. 
+        and verifieer dat hulle gelyk aan mekaar is.
       </p>
     </statement>
   </exercise>
