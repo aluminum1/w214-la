@@ -6,7 +6,8 @@
     <statement>
       <p>
         Ons s&#xea; dat 'n <m>n \times n</m>-matriks <m>\mat{A}</m> is
-        <term>diagonaliseerbaar</term> as daar 'n inverteerbare <m>n \times n</m>-matriks
+        <term>diagonaliseerbaar</term>
+        as daar 'n inverteerbare <m>n \times n</m>-matriks
         <m>\mat{P}</m> bestaan sodat <m>\mat{P}^{-1} \mat{A} \mat{P}</m> 'n
         diagonaalmatriks is.
       </p>
@@ -27,34 +28,18 @@
         </md>
         en ons gaan na,
         <md>
-          <mrow>\mat{P}^{-1} \mat{A} \mat{P} \amp = -\frac{1}{3} {\cmatrix{1 \amp  -1</mrow>
-          <mrow>-1
-          \amp  -2}} {\cmatrix{2 \amp  1</mrow>
-          <mrow>\frac{1}{2} \amp  \frac{5}{3}}} {\cmatrix{ -2
-          \amp  1</mrow>
-          <mrow>1 \amp  1}}</mrow>
-          <mrow>\amp = - \frac{1}{3} {\cmatrix{ \frac{3}{2} \amp  - \frac{3}{2}</mrow>
-          <mrow>-3 \amp 
-          -6}} {\cmatrix{-2 \amp  1</mrow>
-          <mrow>1 \amp  1}}</mrow>
-          <mrow>\amp = - \frac{1}{3} {\cmatrix{ - \frac{9}{2} \amp  0</mrow>
-          <mrow>0 \amp  -9}}</mrow>
-          <mrow>= {\cmatrix{\frac{3}{2} \amp  0</mrow>
-          <mrow>0 \amp  3}}</mrow>
+          <mrow>\mat{P}^{-1} \mat{A} \mat{P} \amp = -\frac{1}{3} {\cmatrix{1 \amp  -1\\ -1 \amp  -2}} {\cmatrix{2 \amp  1\\ \frac{1}{2} \amp  \frac{5}{3}}} {\cmatrix{ -2 \amp  1\\ 1 \amp  1}}</mrow>
+          <mrow>\amp = - \frac{1}{3} {\cmatrix{ \frac{3}{2} \amp  - \frac{3}{2}\\ -3 \amp  -6}} {\cmatrix{-2 \amp  1\\ 1 \amp  1}}</mrow>
+          <mrow>\amp = - \frac{1}{3} {\cmatrix{ - \frac{9}{2} \amp  0\\ 0 \amp  -9}}</mrow>
+          <mrow>= {\cmatrix{\frac{3}{2} \amp  0\\ 0 \amp  3}}</mrow>
         </md>
         wat wel 'n diagonaalmatriks is.
-        Meer hieroor volg in die tweede
-        semester!
+        Meer hieroor volg in die tweede semester!
         Vir nou is dit al wat jy moet weet.
       </p>
     </statement>
   </example>
 
-  <p>
-    \begin{appendices}
-    \appendixpage
-    \noappendicestocpagenum
-    \addappheadtotoc
-  </p>
+
 </section>
 
