@@ -11,6 +11,7 @@ To do list:
 - Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the assemblage in Ch2Sec4 line 165 needs reconsidering too.
 - Rob Beezer says that CDATA should never be necessary - is it easier in a tikz picture, though? I guess you have to be careful of things like arrow heads -->
 - Create index?
+- Consistency between \dim and \Dim?
 
 
 Afrikaans:
@@ -26,6 +27,7 @@ Afrikaans:
 - Ch3Sec1 line 354, 419, 512, 676 (rework to use linear combination instead of coordinate vectors), 875, 973, 1217
 - Ch3Sec3 line 471, 526,
 - Ch3Sec4 line 296, 481
+- Ch3Sec5 line 943, 1071, 1174, (1322 & 1338 add sol)
 - Check that all of the following are consistent:
   - addition -> optelling (not sommering)
   - well-defined -> wel-gedefinieerd (not goedgedefinieerd)
