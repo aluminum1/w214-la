@@ -221,14 +221,14 @@
         </ul>
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
       (1) is equivalent to (2) by <xref ref="inj-surj">Lemma</xref>.
       On the other hand, (1) and (2) is equivalent to (3) by <xref ref="iso-inj-surj">Proposition</xref>.
     </p>
   </proof>
+</proposition>
+
 
 <exercises>
 
