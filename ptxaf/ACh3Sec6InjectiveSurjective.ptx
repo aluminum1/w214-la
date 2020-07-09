@@ -221,15 +221,13 @@
         </ul>
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
       (1) is ekwivalent aan (2) deur <xref ref="inj-surj">Lemma</xref>.
-      Aan die
-      ander kant is (1) en (2) ekwivalent aan (3) volgens <xref ref="iso-inj-surj">Proposisie</xref>.
+      Aan die ander kant is (1) en (2) ekwivalent aan (3) volgens <xref ref="iso-inj-surj">Proposisie</xref>.
     </p>
   </proof>
+</proposition>
 
 
 <exercises>
