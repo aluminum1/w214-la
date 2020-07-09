@@ -1,6 +1,5 @@
 <section  xml:id="ACh1Sec3ExampleVectorSpace">
   <title>Eerste voorbeeld van 'n vektorruimte</title>
-  <introduction>
     <p>
       Ons is na die definisie
       (<xref ref="real_vec_space">Definisie</xref>)
@@ -15,7 +14,6 @@
       Om te toets dat die ander twee versamelings
       vektorruimtes is, sal as oefeninge aan jou oorgelaat word.
     </p>
-  </introduction>
 
   <example xml:id="B_is_vs">
     <title>Die versameling <m>B</m> is 'n vektorruimte.</title>
