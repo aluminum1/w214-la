@@ -8,7 +8,7 @@
       <p>
         Define the set <m>V</m> by
         <men>
-          V := \{ \ve{a}, \ve{b} \} 
+          V := \{ \ve{a}, \ve{b} \}
         </men>
       </p>
 
@@ -41,7 +41,7 @@
     <p>
       Define the set <m>V</m> by
       <men>
-        V := \{ \ve{a}, \ve{b} \} 
+        V := \{ \ve{a}, \ve{b} \}
       </men>.
     </p>
 
@@ -131,8 +131,8 @@
         <md>
           <mrow>\text{RHS} \amp = 2.\ve{b} + 2.\ve{b}</mrow>
           <mrow> \amp = \ve{b} + \ve{b}</mrow>
-          <mrow>\amp =\ve{a}</mrow>.
-        </md>
+          <mrow>\amp =\ve{a}</mrow>
+        </md>.
         Since <m>\text{LHS} \neq \text{RHS}</m>, R5 cannot be true.
       </p>
     </solution>
@@ -251,13 +251,13 @@
       </men>
     </p>
 
-    <assemblage>
+    <aside>
       <p>
         Thinking about infinity is an important part of mathematics.
         Have you watched the movie about me called
         <em>The man who knew infinity</em>?
       </p>
-    </assemblage>
+    </aside>
 
     </statement>
   </example>
@@ -275,8 +275,8 @@
         <p>R4: Let
           <md>
             <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
-            <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>.
-          </md>
+            <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>
+          </md>.
           We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
           <md>
             <mrow>\text{LHS} \amp = k.(\ve{v} + \ve{w})</mrow>
@@ -531,7 +531,7 @@
         by using the following table:
         <me>
           \begin{array}{c|ccc}
-          + \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\ 
+          + \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\
           \hline
           \ve{0} \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\
           \ve{a} \amp  \ve{a} \amp  \ve{0} \amp  \ve{a} \\
@@ -695,20 +695,20 @@
     <ol>
       <li>
         <p>
-          No &mdash; here is a counterexample:
+          No <mdash /> here is a counterexample:
           <me>
            (1, 2) \oplus (2, 1) = (1 + 1, 2 + 2) = (2,4)
           </me>
           but
           <me>
-            (2,1) \oplus (1,2) = (2 + 2, 1 + 1) = (4,2). 
+            (2,1) \oplus (1,2) = (2 + 2, 1 + 1) = (4,2).
           </me>
         </p>
       </li>
 
       <li>
         <p>
-          No &mdash; here is a counterexample:
+          No <mdash /> here is a counterexample:
           <me>
            ((1, 2) \oplus (2, 1)) \oplus (1,3) = (2, 4) \oplus (1,3) = (5, 5)
           </me>
