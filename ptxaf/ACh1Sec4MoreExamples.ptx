@@ -8,7 +8,7 @@
       <p>
         Definieer die versameling <m>V</m> deur
         <men>
-          V := \{ \ve{a}, \ve{b} \} 
+          V := \{ \ve{a}, \ve{b} \}
         </men>.
       </p>
 
@@ -41,7 +41,7 @@
       <p>
         Definieer die versameling <m>V</m> deur
         <men>
-          V := \{ \ve{a}, \ve{b} \} 
+          V := \{ \ve{a}, \ve{b} \}
         </men>.
       </p>
 
@@ -131,8 +131,8 @@
         <md>
           <mrow>\text{RK} \amp = 2.\ve{b} + 2.\ve{b}</mrow>
           <mrow> \amp = \ve{b} + \ve{b}</mrow>
-          <mrow>\amp =\ve{a}</mrow>.
-        </md>
+          <mrow>\amp =\ve{a}</mrow>
+        </md>.
         Omdat <m>\text{LK} \neq \text{RK}</m> in hierdie geval nie, kan R5 nie in algemeen waar wees nie.
       </p>
     </solution>
@@ -251,13 +251,13 @@
         </men>
       </p>
 
-      <assemblage>
+      <aside>
         <p>
           Die studie van oneindigheid is 'n belangrike deel van wiskunde.
           Het jy al die fliek <em>The man who knew
           infinity</em> wat oor my gaan, gesien?
         </p>
-      </assemblage>
+      </aside>
 
     </statement>
   </example>
@@ -275,8 +275,8 @@
       <p>R4: Laat
         <md>
           <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
-          <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>.
-        </md>
+          <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>
+        </md>.
         Ons moet kontrolleer of <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
         <md>
           <mrow>\text{LK} \amp = k.(\ve{v} + \ve{w})</mrow>
@@ -701,7 +701,7 @@
           </me>
           maar
           <me>
-            (2,1) \oplus (1,2) = (2 + 2, 1 + 1) = (4,2). 
+            (2,1) \oplus (1,2) = (2 + 2, 1 + 1) = (4,2).
           </me>
         </p>
       </li>
