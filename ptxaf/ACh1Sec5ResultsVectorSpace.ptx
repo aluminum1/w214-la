@@ -28,10 +28,12 @@
   </lemma>
 
   <proof>
-    <md>
-      <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero" text="title"/> \text{ vir } \ve{v}=\ve{0} </mrow>
-      <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3b" text="title"></xref>\text{)}</mrow>
-    </md>
+    <p>
+      <md>
+        <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero" text="title"/> \text{ vir } \ve{v}=\ve{0} </mrow>
+        <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3b" text="title"></xref>\text{)}</mrow>
+      </md>
+    </p>
   </proof>
 
   <definition>
@@ -57,24 +59,25 @@
         </men>.
       </p>
     </statement>
+    <proof>
+      <p>
+        <md>
+          <mrow>-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \text{(Definisie \(- \ve{v}\))}</mrow>
+          <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \text{}</mrow>
+          <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \text{(R5)}</mrow>
+          <mrow>\amp = 0 \smul\ve{v}</mrow>
+          <mrow>\amp = \ve{0} \amp \amp  \mbox{(R8)}</mrow>
+        </md>
+      </p>
+      <p>
+        Verder,
+        <md>
+          <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \mbox{(R1)}</mrow>
+          <mrow>\amp  = \ve{0} \amp \amp  \mbox{(deur vorige bewys)}</mrow>
+        </md>
+      </p>
+    </proof>
   </lemma>
-
-  <proof>
-    <md>
-      <mrow>-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \text{(Definisie \(- \ve{v}\))}</mrow>
-      <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \text{}</mrow>
-      <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \text{(R5)}</mrow>
-      <mrow>\amp = 0 \smul\ve{v}</mrow>
-      <mrow>\amp = \ve{0} \amp \amp  \mbox{(R8)}</mrow>
-    </md>
-    <p>
-      Verder,
-      <md>
-        <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \mbox{(R1)}</mrow>
-        <mrow>\amp  = \ve{0} \amp \amp  \mbox{(deur vorige bewys)}</mrow>
-      </md>
-    </p>
-  </proof>
 
   <lemma>
     <statement>
@@ -85,17 +88,18 @@
         Dan volg dit dat <m>\ve{w} = -\ve{v}</m>.
       </p>
     </statement>
+    <proof>
+      <p>
+        <md>
+          <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \text{(R3b)}</mrow>
+          <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv" text="global"/></mrow>
+          <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \text{(R2)}</mrow>
+          <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \text{(volgens aanname)}</mrow>
+          <mrow>\amp = -\ve{v} \amp \amp  \text{(R3a)} </mrow>
+        </md>.
+      </p>
+    </proof>
   </lemma>
-
-  <proof>
-    <md>
-      <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \text{(R3b)}</mrow>
-      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv" text="global"/></mrow>
-      <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \text{(R2)}</mrow>
-      <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \text{(volgens aanname)}</mrow>
-      <mrow>\amp = -\ve{v} \amp \amp  \text{(R3a)} </mrow>
-    </md>.
-  </proof>
 
   <p>
     Kom ons bewys nog twee hulpstellings, vir nog 'n bietjie oefening.
@@ -110,15 +114,17 @@
       </me>.
      </p>
     </statement>
+    <proof>
+      <p>
+        <md>
+          <mrow> k \smul\ve{0} \amp = k \smul(0 \smul\ve{0}) \amp \text{(R8 vir } \ve{v}=\ve{0}\text{)} </mrow>
+          <mrow> \amp = ((k)(0))\smul\ve{0} \amp \text{(R6)} </mrow>
+          <mrow> \amp = 0 \smul\ve{0} \amp \text{(} (k)(0)=0 \text{ vir enige reële getal }  k \text{)} </mrow>
+          <mrow> \amp = \ve{0} \amp \text{(R8 vir } \ve{v}=\ve{0}\text{)} </mrow>
+        </md>
+      </p>
+    </proof>
   </lemma>
-  <proof>
-    <md>
-      <mrow> k \smul\ve{0} \amp = k \smul(0 \smul\ve{0}) \amp \text{(R8 vir } \ve{v}=\ve{0}\text{)} </mrow>
-      <mrow> \amp = ((k)(0))\smul\ve{0} \amp \text{(R6)} </mrow>
-      <mrow> \amp = 0 \smul\ve{0} \amp \text{(} (k)(0)=0 \text{ vir enige reële getal }  k \text{)} </mrow>
-      <mrow> \amp = \ve{0} \amp \text{(R8 vir } \ve{v}=\ve{0}\text{)} </mrow>
-    </md>
-  </proof>
 
   <lemma xml:id="dichotomy_lem">
     <statement>
@@ -299,16 +305,16 @@
         <md>
          <mrow>2 \smul \ve x + 6 \smul \ve w  \amp = \ve 0</mrow>
 
-        <mrow>\implies  (2 \smul \ve x + 6 \smul \ve w) + (-(6 \smul \ve w))  \amp =  \ve 0 + (-(6 \smul \ve w)) 
+        <mrow>\implies  (2 \smul \ve x + 6 \smul \ve w) + (-(6 \smul \ve w))  \amp =  \ve 0 + (-(6 \smul \ve w))
          \amp (\text{tel } -(6\smul\ve{w}) \text{ by beide kante})</mrow>
 
         <mrow> \implies 2 \smul \ve{x} + (6 \smul \ve{w} + (-(6 \smul \ve{w}))) \amp = -(6 \smul \ve{w})
         \amp (<xref ref="R2" text="title"></xref> \text{ aan die LK}, <xref ref="R3a" text="title"></xref> \text{ aan die RK}) </mrow>
 
-        <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)  
+        <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)
         \amp (<xref ref = "add_inv" text="global"/>) </mrow>
 
-        <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)  
+        <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)
         \amp (<xref ref = "R3b" text="title"></xref>)</mrow>
 
         <mrow> \implies  (\frac{1}{2})\smul (2 \smul \ve x) \amp = \frac{1}{2} \smul (-(6 \smul \ve{w}))  </mrow>
@@ -396,7 +402,9 @@
       </p>
     </statement>
     <solution>
-      Waar. As ons <xref ref = "R1" text="title"></xref> en <xref ref = "R3a" text="title"></xref> saam sit, gee dit <xref ref="R3b" text="title"></xref>.
+      <p>
+        Waar. As ons <xref ref = "R1" text="title"></xref> en <xref ref = "R3a" text="title"></xref> saam sit, gee dit <xref ref="R3b" text="title"></xref>.
+      </p>
     </solution>
     </exercise>
 
@@ -409,7 +417,7 @@
       <solution>
       <p>
         Onwaar. Laat <m>V</m> 'n nie-nul vektorruimte wees (soos byvoorbeeld <m>\mathbb{R}^2</m>). Herdefinieer nou skalaarvermenigvuldiging deur
-        <me> 
+        <me>
             k\smul v := 0 \mbox{ vir alle skalare } k \text{ en alle vektore } v
         </me>.
         Dan sal <m>V</m> al die reëls vir 'n vektorruimte bevredig, behalwe R7. Dus is dit nie die geval dat R7 uit die ander reëls volg nie.
