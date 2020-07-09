@@ -157,13 +157,14 @@
           </li>
 
           <li xml:id="lin_comb_other_vec">
-            <emph>(Linear Combination of Other Vectors)</emph>
-            <p> One of the vectors in the list <m>\basis{B}</m> is a linear combination of the other vectors in <m>\basis{B}</m>.
-            </p>
+            <em>(Linear Combination of Other Vectors)</em>
+            One of the vectors in the list <m>\basis{B}</m> is a linear combination of the other vectors in <m>\basis{B}</m>.
           </li>
 
-          <li xml:id="lin_comb_prec_vec"> <emph>(Linear Combination of Preceding Vectors)</emph><title>Linear Combination of Preceding Vectors</title>
+          <li xml:id="lin_comb_prec_vec">
+            <title>Linear Combination of Preceding Vectors</title>
             <p>
+              <em>(Linear Combination of Preceding Vectors)</em>
               Either <m>\ve{v}_1 = \ve{0}</m>,
               or for some <m>r \in \{2, 3, \ldots,
               n\}</m>, <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1</m>,
@@ -196,9 +197,9 @@
     </p>
 
     <p>
-      (2) <m>\Rightarrow</m> (1). Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is, 
+      (2) <m>\Rightarrow</m> (1). Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is,
       <md>
-        <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \mbox{(No }<m>\ve{v}_s</m> \mbox{term on RHS.)} </mrow>
+        <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \mbox{(No } \ve{v}_s \mbox{term on RHS.)} </mrow>
       </md>
       Rearranging this equation gives:
       <men xml:id="rearranged_lin_dep">
@@ -324,7 +325,7 @@
     <p>
       Begin met die oorspronglike lys vektore
       <men>
-        \basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose      
+        \basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose
       </men>
       wat <m>V</m> span en oorweeg die <sq>opgeblase</sq> lys
       <men xml:id="bloated_list">
@@ -333,20 +334,23 @@
     </p>
 
     <p>
-      Nou, omdat <m>\basis{S}</m> vir <m>V</m> span, weet ons in besonder dat <m>\ve{l}_1</m> kan uitgedruk word as 'n lineêre kombinasie van die vektore <m>\ve{s}_1, \ldots, \ve{s}_n</m>. Dus, deur <xref ref="lin_comb_other_vec"/> van <xref ref="lin_dependence_prop"/>, weet ons dat  <m>\basis{S}'</m> lineêr afhanklik is. Dus, deur <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/>, óf:</p>
+      Nou, omdat <m>\basis{S}</m> vir <m>V</m> span, weet ons in besonder dat <m>\ve{l}_1</m> kan uitgedruk word as 'n lineêre kombinasie van die vektore <m>\ve{s}_1, \ldots, \ve{s}_n</m>. Dus, deur <xref ref="lin_comb_other_vec"/> van <xref ref="lin_dependence_prop"/>, weet ons dat  <m>\basis{S}'</m> lineêr afhanklik is. Dus, deur <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/>, óf:
+    </p>
+    <p>
       <ul>
         <li> <m>\ve{l}_1 = \ve{0}</m>. Dit kan nie waar wees nie, want dan sou <m>\basis{L}</m> lineêr afhanklik wees weens <xref ref="remark_about_lin_dependence"/>, wat in teenstryding is met ons oorspronklike aanname. </li>
         <li> een van die <m>\ve{s}</m>-vectore, noem dit <m>\ve{s}_r</m>, kan uitgedruk word as 'n lineêre kombinasie van die voorafgaande vektore. Ons kan dan <m>\ve{s}_r</m> uit die lys <m>\basis{S}'</m> verwyder (<sq>afstamp</sq>), en die resulterende lys
-      <men>
-        \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}
-      </men>
-      sal nog steeds vir <m>V</m> span, deur <xref ref="exercise-span-omission"/>. </li>
-    </ul>
+        <men>
+          \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}
+        </men>
+        sal nog steeds vir <m>V</m> span, deur <xref ref="exercise-span-omission"/>. </li>
+      </ul>
+    </p>
     <p>
       In hierdie manier kan ons aangaan: elke keer 'n <m>\ve{l}</m>-vektor oor te dra en 'n <m>\ve{s}</m>-vektor te verwyder, en die resulterende lys sal nog steeds vir  <m>V</m> span:
       <md>
-        <mrow> 
-        \basis{L} \amp = \bopen \ve{l}_1, \ldots, \ve{l}_m \bclose \amp \basis{S} \amp = \bopen \ve{s}_1, \ldots, \ve{s}_n \bclose 
+        <mrow>
+        \basis{L} \amp = \bopen \ve{l}_1, \ldots, \ve{l}_m \bclose \amp \basis{S} \amp = \bopen \ve{s}_1, \ldots, \ve{s}_n \bclose
       </mrow>
       <mrow>
         \basis{L}_1 \amp = \bopen \ve{l}_2, \ldots, \ve{l}_m \bclose \amp \basis{S}_1 \amp = \bopen \ve{l}_1, \underbrace{\ve{s}_1, \ldots, \ve{s}_n}_{n-1} \bclose </mrow>
@@ -388,18 +392,18 @@
             2 \mamp 1 \mamp 7 \\
             3 \mamp -1 \mamp 3\\
             1 \mamp 2 \mamp c
-          \end{bmatrix} 
+          \end{bmatrix}
           \begin{bmatrix}
             k_1 \\
             k_2 \\
             k_3\\
-          \end{bmatrix} 
+          \end{bmatrix}
             =
           \begin{bmatrix}
-            0 \\ 
+            0 \\
             0 \\
             0
-          \end{bmatrix} 
+          \end{bmatrix}
         </me>
         This matrix is non-invertible if and only if its determinant is 0. Furthermore, the matrix being non-invertible will mean we can find a non-trivial solution to the intial equation. We compute the determinant:s
         <me>
@@ -489,13 +493,13 @@
         c \begin{bmatrix}
           1 &amp; 0 \\
           2 &amp; 3
-        \end{bmatrix} = 
+        \end{bmatrix} =
         \begin{bmatrix}
           0 &amp; 3 \\
           1 &amp; -1
         \end{bmatrix}
       </me>
-      The equation for the entry in position (1,2) is simply 
+      The equation for the entry in position (1,2) is simply
       <me>
         2a = 3
       </me>
@@ -516,7 +520,10 @@
   </exercise>
 
   <exercise xml:id="exercise-span-omission">
-    <statement> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
+    <statement>
+      <p>
+        Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
+      </p>
     </statement>
     <solution>
       <p>
@@ -526,7 +533,7 @@
         </me>.
         But of course, it is also true that
         <me>
-          0 \ve w + \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v 
+          0 \ve w + \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v
         </me> because <m> 0 \ve w = 0 </m> and so has no effect on the sum. Hence any vector in <m> V </m> is a linear combination of <m>\ve{w}, \ve{v}_1, \ldots, \ve{v}_n </m> which is to say that the set <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m>  spans <m>V</m>.
       </p>
     </solution>
@@ -579,7 +586,7 @@ and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-
 <exercise>
   <statement>
     <p>
-      (Bonus) Try adapt the argument in the question above to show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m> \Cont([0,1])</m>, the vector space of all <emph>continuous</emph> real valued functions on <m>[0,1]</m>.
+      (Bonus) Try adapt the argument in the question above to show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m> \Cont([0,1])</m>, the vector space of all <em>continuous</em> real valued functions on <m>[0,1]</m>.
     </p>
   </statement>
 </exercise>
