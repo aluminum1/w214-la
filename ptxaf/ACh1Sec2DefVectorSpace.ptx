@@ -11,7 +11,7 @@
     In elke versamiling is daar 'n optellingsbewerking, 'n
     nulvektor en 'n skalaarvermenigvuldigingbewerking.
     Verder geld dieselfde re&#xeb;ls vir hierdie bewerkings.
-    Kom ons noteer hierdie patroon deur dit 'n naam te gee 
+    Kom ons noteer hierdie patroon deur dit 'n naam te gee
     en die re&#xeb;ls eksplisiet neer te skryf.
   </p>
 
@@ -34,7 +34,7 @@
           <li xml:id = "D2">
             <title>D2.</title>
             <p>
-              'n <em>Nul-vektor</em>. 
+              'n <em>Nul-vektor</em>.
               (M.a.w. 'n spesiale vektor
               <m>\ve{0} \in V</m>
                word gekies.)
@@ -61,6 +61,7 @@
         aan die volgende re&#xeb;ls voldoen:
       </p>
 
+      <p>
         <dl>
           <li xml:id="R1">
             <title>R1.</title>
@@ -124,6 +125,7 @@
             </p>
           </li>
         </dl>
+      </p>
     </statement>
   </definition>
 
@@ -177,7 +179,7 @@
 
       <li>
         <p>
-          Gaan na dat hierdie data aan re&#xeb;ls (R1) <mdash /> (R8) voldoen.
+          Gaan na dat hierdie data aan re&#xeb;ls (R1) <ndash /> (R8) voldoen.
         </p>
       </li>
     </ol>
