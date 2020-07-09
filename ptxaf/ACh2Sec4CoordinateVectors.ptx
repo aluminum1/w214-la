@@ -277,6 +277,7 @@
           <mrow> a_1 - a_2 + a_3  \amp = 3 </mrow>
         </md>
         We can solve these equations by hand, or we can use SageMath:
+      </p>
         <sage>
           <input>
           var('a1 a2 a3')
@@ -286,6 +287,7 @@
                 a1 - a2 + a3 == 3), (a1, a2, a3)))
           </input>
         </sage>
+      <p>
         We compute the coordinates of <m>p</m> as <m>a_1 = -4</m>, <m>a_2 = -\frac{5}{2}</m>, <m>a_3 = \frac{9}{2}</m>. In other words,
         <me>
           2x^2 - 2x + 3 = -4(1+x) - \frac{5}{2} (x^2 + x -1) + \frac{9}{2}(x^2 + x +1)
@@ -384,7 +386,7 @@
         Laat <m>\basis{B} = \left\{\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \right\}</m> 'n basis vir 'n vektorruimte <m>V</m> wees.
         Dan het ons dat vir alle vektore <m>\ve{v}, \ve{w} \in V</m> en alle skalare <m>k</m> dat
 
-        <ol type="a">
+        <ol label="a">
           <li>
             <p>
               <m>[\ve{v} + \ve{w}]_\basis{B} = [\ve{v}]_\basis{B} + [\ve{w}]_\basis{B}</m>
@@ -439,9 +441,9 @@
       <p>
         As before, suppose that
         <md>
-          <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 </mrow>.
-        </md>
-        Which gives
+          <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 </mrow>
+        </md>,
+        which gives
         <me>
         [\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
         </me>
@@ -526,7 +528,6 @@
     <statement>
         <ol>
           <li>
-            <title>(a)</title>
             <p>Bepaal 'n basis  <m>\basis{B}</m> vir die vektorruimte
               <me>
                 V := \{ p \in \Poly_2 : p(2) = 0 \}
@@ -534,14 +535,12 @@
             </p>
           </li>
           <li>
-            <title>(b)</title>
             <p>
                Beskou <m>p(x) = x^2 + x - 6</m>. Toon aan dat <m>p \in V</m>.
             </p>
           </li>
 
           <li>
-            <title>(c)</title>
             <p>
               Bepaal die koëffisiënte van <m>p</m> met betrekking tot jou basis <m>\basis{B}</m>,
               m.a.w. bepaal <m>[p]_\basis{B}</m>.
@@ -550,6 +549,7 @@
         </ol>
     </statement>
    <solution>
+    <p>
       <ol>
         <li>
           <p>
@@ -573,6 +573,7 @@
           </p>
         </li>
       </ol>
+    </p>
    </solution>
  </exercise>
 
@@ -680,11 +681,11 @@ for some <m>s \in \mathbb R</m>. By considering only the first coordinate of <m>
         <li>
           <p>
             Laat <m>z(x) = \cos\left(x - \frac{\pi}{3} \right)</m>.
+            <ol>
+              <li>Toon aan dat <m>z \in V</m> deur te kontrolleer dat dit die differensiaalvergelyking  <xref ref="diff_eqn_exerc_1"/> op los.</li>
+              <li>Bereken <m>[z]_{\basis{B}}</m>. </li>
+            </ol>
           </p>
-          <ol>
-            <li>Toon aan dat <m>z \in V</m> deur te kontrolleer dat dit die differensiaalvergelyking  <xref ref="diff_eqn_exerc_1"/> op los.</li>
-            <li>Bereken <m>[z]_{\basis{B}}</m>. </li>
-          </ol>
         </li>
       </ol>
     </statement>
@@ -793,8 +794,8 @@ b = \frac{1}{2}
               Without performing any explicit calculations, determine the dimension of <m>V</m>.
             </li>
 
-            <li>
-              Using Sage, find a basis for <m>V</m>, if you're unsure of the syntax, look at the examples in <xref ref = "ACh2Sec3BasisDimension"/>. Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.
+            <li><p>
+              Using Sage, find a basis for <m>V</m>, if you're unsure of the syntax, look at the examples in <xref ref = "ACh2Sec3BasisDimension"/>. Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.</p>
               <sage>
                 <input>
                 </input>
@@ -819,8 +820,8 @@ b = \frac{1}{2}
               Does the function <m> y_3 = y_1 + y_2 </m> also solve <xref ref = "diff_eqn_exerc_3"/>? By <xref ref = "diff_eqn_exist_unique"/>, <m>y_3</m> is the unique solution to an initial value problem involving <xref ref = "diff_eqn_exerc_3"/> - what are those initial conditions?
             </li>
 
-            <li>
-              Read through <link xml:link="plot_sage" href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </link>. Plot <m>y_1, y_2, y_3</m> (you don't need to plot them on the same set of axes) on the interval <m>x = [0,10]</m> with a step size of <m> \Delta x = 0.5</m>. Sketch the results.
+            <li><p>
+              Read through <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Plot <m>y_1, y_2, y_3</m> (you don't need to plot them on the same set of axes) on the interval <m>x = [0,10]</m> with a step size of <m> \Delta x = 0.5</m>. Sketch the results.</p>
               <sage>
                 <input>
                 </input>
