@@ -1,6 +1,5 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch1Sec3ExampleVectorSpace">
   <title>First example of a vector space</title>
-  <introduction>
     <p>
       We were led to the definition
       (<xref ref="real_vec_space">Definition</xref>)
@@ -15,7 +14,6 @@
       That the other two sets form vector spaces
       will be left as exercises for you.
     </p>
-  </introduction>
 
   <example xml:id="B_is_vs">
     <title>The set <m>B</m> is a vector space</title>
