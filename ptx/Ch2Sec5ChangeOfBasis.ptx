@@ -1,6 +1,6 @@
 <section xml:id="Ch2Sec5ChangeOfBasis">
   <title>Change of basis</title>
-  <introduction>
+  <introduction><p></p>
 <!--
     <figure>
         <caption>Video recording for <xref ref="Ch2Sec5ChangeOfBasis"/>.</caption>
@@ -322,7 +322,7 @@
           Then,
           <md>
             <mrow>[\ve{v}]_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}</mrow>
-            <mrow>\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  (<xref ref="lin_of_coord_vectors">Lemma</xref>)</mrow>)
+            <mrow>\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  (<xref ref="lin_of_coord_vectors">Lemma</xref>)</mrow>
             <mrow>\amp =   \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right] \amp \amp <xref ref = "column_vector_multiplication"/></mrow>
             <mrow>\amp =    \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
           </md>.
@@ -549,8 +549,8 @@
       <md>
         <mrow>  \mathcal A = \bopen (1,0,0), (0,1,0), (0,0,1) \bclose </mrow>
         <mrow> \mathcal B = \bopen (2,1,1) , (1,1,1), (0,2,1) \bclose </mrow>
-        <mrow> \mathcal C= \bopen (1,2,3),(0,1,0),(1,0,1) \bclose</mrow>.
-      </md>
+        <mrow> \mathcal C= \bopen (1,2,3),(0,1,0),(1,0,1) \bclose</mrow>
+      </md>.
       Compute <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}, \mat{P}_{\basis{B} \leftarrow \basis{A}}, \mat{P}_{\basis{C} \leftarrow \basis{A}}</m> and verify the equation
       <me>
         \mat{P}_{\basis{C} \leftarrow \basis{B}}  \mat{P}_{\basis{B} \leftarrow \basis{A}} =  \mat{P}_{\basis{C} \leftarrow \basis{A}}.
