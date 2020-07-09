@@ -5,96 +5,77 @@
   <definition>
     <statement>
       <p>
-        'n Funksie <m>f : X \rightarrow Y</m> vanaf 'n versameling
-        <m>X</m> na 'n versameling <m>Y</m> word <term>een-tot-een</term>
+        'n Funksie <m>f : X \rightarrow Y</m> vanaf 'n versameling <m>X</m> na 'n versameling <m>Y</m> word <term>een-tot-een</term>
         (of <term>injektief</term>)
-        genoem as wanneer <m>f(x) = f(x')</m> vir <m>x,
-        x' \in X</m> dit noodwendig volg
-        dat <m>x = y</m>.
+        genoem as wanneer <m>f(x) = f(x')</m> vir
+        <m>x, x' \in X</m> dit noodwendig volg dat <m>x = x'</m>.
         Die funksie <m>f</m> word <q><term>op</term></q>
         (of <term>surjektief</term>)
-        genoem as, vir alle <m>y \in Y</m> daar 'n <m>x \in X</m> bestaan sodat <m>f(x) =
-        y</m>.
+        genoem as, vir alle <m>y \in Y</m> daar 'n <m>x \in X</m> bestaan sodat <m>f(x) = y</m>.
       </p>
     </statement>
   </definition>
 
   <p>
     As <m>f</m> 'n <em>line&#xea;re afbeelding</em> tussen vektorruimtes is
-    (en nie
-    bloot 'n arbitr&#xea;re funksie tussen versamelings is nie),
-    dan bestaan
-    daar 'n eenvoudige manier om na te gaan of <m>f</m> injektief is.
+    (en nie net enige arbitr&#xea;re funksie tussen versamelings is nie),
+    dan is daar 'n eenvoudige manier om te toets of <m>f</m> injektief is.
   </p>
 
   <lemma xml:id="injective-kernel-lemma">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m>
-        tussen vektorruimtes.
-        Dan:
+        Laat <m>T : V \rightarrow W</m> tussen vektorruimtes.
+        Dan is <m>T</m> injektief as en slegs as
         <me>
-          T \text{ is injektief}  \Longleftrightarrow \Ker(T) = \{\ve{0}_V\} 
+          \Ker(T) = \{\ve{0}_V\}
         </me>.
       </p>
     </statement>
-  </lemma>
-
   <proof>
     <p>
       <m>\Rightarrow</m>.
-      Veronderstel <m>T : V \rightarrow W</m> is
-      een-tot-een.
+      Veronderstel dat <m>T : V \rightarrow W</m> een-tot-een is.
       Ons weet reeds van een element in <m>\Ker(T)</m>, naamlik
-      <m>\ve{0}_V</m>, aangesien <m>T(\ve{0}_V) = \ve{0}_W</m>,
-      want <m>T</m> is line&#xea;r.
+      <m>\ve{0}_V</m>, aangesien <m>T(\ve{0}_V) = \ve{0}_W</m>, want <m>T</m> is line&#xea;r.
       Aangesien <m>T</m> een-tot-een is,
-      moet dit die enigste element in <m>\Ker(T)</m>
-      wees.
+      moet dit die enigste element in <m>\Ker(T)</m>  wees.
     </p>
 
     <p>
       <m>\Leftarrow</m>.
-      Veronderstel <m>\Ker(T) = \{\ve{0}_V\}</m>.
-      Nou, veronderstel
-      dat
+      Veronderstel nou <m>\Ker(T) = \{\ve{0}_V\}</m> en dat
       <me>
         T(\ve{v}) = T(\ve{v}')
       </me>
       vir vektore <m>\ve{v}, \ve{v}' \in V</m>.
-      Dan het ons <m>T(\ve{v}) -
-      T(\ve{v}') = \ve{0}_W</m>, en aangesien <m>T</m> line&#xea;r is,
-      beteken dit
-      <m>T(\ve{v} - \ve{v}') = \ve{0}_W</m>.
-      Gevolglik <m>\ve{v} - \ve{v}' \in
-      \Ker(T)</m>,
-      en so <m>\ve{v} - \ve{v}' = \ve{0}_V</m>, met ander woorde,
-      <m>\ve{v} = \ve{v}'</m>, wat is wat ons wou wys.
+      Dan het ons <m>T(\ve{v}) - T(\ve{v}') = \ve{0}_W</m>,
+      en aangesien <m>T</m> line&#xea;r is,
+      beteken dit dat <m>T(\ve{v} - \ve{v}') = \ve{0}_W</m>.
+      Gevolglik <m>\ve{v} - \ve{v}' \in \Ker(T)</m>,
+      en so <m>\ve{v} - \ve{v}' = \ve{0}_V</m>,
+      met ander woorde, <m>\ve{v} = \ve{v}'</m>,
+      wat is wat ons wou wys.
     </p>
   </proof>
+</lemma>
 
   <p>
-    'n Verdere vereenvoudiging kom voor as <m>T</m> 'n line&#xea;re afbeelding vanaf
-    'n vektorruimte <m>V</m> na <m>V</m> is (i.e.
-    <m>T</m> is 'n line&#xea;re bewerking op
+    'n Verdere vereenvoudiging kom voor as <m>T</m> 'n line&#xea;re afbeelding vanaf 'n vektorruimte <m>V</m> na ditself is (i.e.
+    <m>T</m> is 'n line&#xea;re operator op
     <m>V</m>), en <m>V</m> eindig-dimensioneel is.
   </p>
 
   <lemma xml:id="inj-surj">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re
-        afbeelding op 'n eindigdimensionele vektorruimte <m>V</m> wees.
+        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re operator op 'n eindigdimensionele vektorruimte <m>V</m> wees.
         Dan:
-             <me>
-          \mbox{\(T\) is injective}  \Longleftrightarrow \mbox{\(T\) is surjektief} 
+        <me>
+          \mbox{\(T\) is injective}  \Longleftrightarrow \mbox{\(T\) is surjektief}
         </me>.
       </p>
     </statement>
-  </lemma>
-
-
-
   <proof>
     <p>
       <m>\Rightarrow</m>.
@@ -114,47 +95,38 @@
     <p>
       <m>\Leftarrow</m>.
       Veronderstel <m>T</m> is surjektief.
-    <md>
+      <md>
         <mrow>\amp \therefore \Be(T) = V</mrow>
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
         <mrow>\amp \therefore \Nhg(T) = 0 \amp \amp  (<xref ref="rank-nullity-theorem"/>) </mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
-        <mrow>\amp \therefore \mbox{\(T\) is injective. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
+        <mrow>\amp \therefore \mbox{\(T\) is injektief. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
       </md>
     </p>
   </proof>
+</lemma>
 
   <proposition xml:id="iso-inj-surj">
     <statement>
       <p>
-        'n Line&#xea;re afbeelding
-        <m>T : V
-        \rightarrow W</m> is 'n isomorfisme as en slegs as <m>T</m> injektief en
-        surjektief is.
+        'n Line&#xea;re afbeelding <m>T : V \rightarrow W</m> is 'n isomorfisme as en slegs as <m>T</m> injektief en surjektief is.
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
       <m>\Rightarrow</m>.
-      Veronderstel <m>V</m> en <m>W</m> is isomorfies.
-      Dit is, daar bestaan
-      'n paar line&#xea;re afbeeldings <m>T : V\rightleftarrows W : S</m> sodat
-      <m>T
-      \circ S = \id_W</m> en <m>S \circ T = \id_C</m>.
-      Ons sal wys dat <m>T</m> injektief
-      en surjektief is.
+      Veronderstel dat <m>V</m> en <m>W</m> isomorf is.
+      Dan bestaan daar 'n paar line&#xea;re afbeeldings <m>T : V\rightleftarrows W : S</m> sodat
+      <m>T\circ S = \id_W</m> en <m>S \circ T = \id_C</m>.
+      Ons sal wys dat <m>T</m> injektief en surjektief is.
       <md>
-        <mrow>\mbox{Veronderstel dat }  T(\ve{v}_1) \amp = T(\ve{v}_2).</mrow>
+        <mrow>\text{Veronderstel dat }  T(\ve{v}_1) \amp = T(\ve{v}_2).</mrow>
         <mrow>\therefore S(T(\ve{v}_1)) \amp = S(T(\ve{v}_2))</mrow>
-        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \mbox{(want \(S
-        \circ T = \id_V\))}</mrow>
+        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \mbox{(want \(S \circ T = \id_V\))}</mrow>
         <mrow>\therefore \ve{v}_1 \amp = \ve{v}_2</mrow>
       </md>
       wat wys dat <m>T</m> injektief is.
-      Om te wys dat <m>T</m> surjektief is, laat
-      <m>\ve{w} \in W</m>.
+      Om te wys dat <m>T</m> surjektief is, laat <m>\ve{w} \in W</m>.
       Ons moet wys dat daar<m>\ve{v} \in V</m> bestaan sodat
       <m>T(\ve{v}) = \ve{w}</m>.
       Inderdaad, stel <m>\ve{v} := S(\ve{w})</m>.
@@ -169,53 +141,44 @@
     <p>
       <m>\Leftarrow</m>.
       Veronderstel dat daar 'n line&#xea;re afbeelding
-      <m>T : V
-      \rightarrow W</m> bestaan wat injektief en surjektief is.
-      Ons wil wys dat
-      daar 'n line&#xea;re afbeelding <m>S : W \rightarrow V</m> bestaan sodat
-      <m>S
-      \circ T = \id_V</m> en <m>T \circ S = \id_W</m>,
-      wat sal bewys dat <m>V</m> en <m>W</m>
-      isomorfies is.
+      <m>T : V\rightarrow W</m> bestaan wat injektief en surjektief is.
+      Ons wil wys dat daar 'n line&#xea;re afbeelding <m>S : W \rightarrow V</m> bestaan sodat
+      <m>S \circ T = \id_V</m> en <m>T \circ S = \id_W</m>,
+      wat sal bewys dat <m>V</m> en <m>W</m> isomorf is.
     </p>
 
     <p>
       Ons definieer die inverse-afbeelding <m>S</m> soos volg:
       <md>
         <mrow>S : W \amp  \rightarrow V</mrow>
-        <mrow>\ve{w} \amp  \mapsto \mbox{die unieke \(\ve{v} \in V\) sodat \(T(\ve{v}) =
-        \ve{w}\).}</mrow>
+        <mrow>\ve{w} \amp  \mapsto \mbox{die unieke \(\ve{v} \in V\) sodat \(T(\ve{v}) = \ve{w}\).}</mrow>
       </md>
     </p>
 
     <p>
-      Hierdie afbeelding is goed-gedefinieer.
-      Inderdaad, gegee <m>\ve{w} \in
-      W</m>, die feit dat <m>T</m> surjektief is beteken daar bestaan <em>ten
-      minste een</em> <m>\ve{v} \in V</m> sodat <m>T(\ve{v}) = \ve{w}</m>.
-      Die feit dat <m>T</m>
-      injektief is impliseer dat <m>\ve{v}</m> uniek is.
+      Hierdie afbeelding is wel-gedefinieerd.
+      Inderdaad, gegee <m>\ve{w} \in W</m>, die feit dat <m>T</m> surjektief is beteken daar bestaan <em>ten
+      minste een</em> <m>\ve{v} \in V</m> sodat
+      <m>T(\ve{v}) = \ve{w}</m>.
+      Die feit dat <m>T</m> injektief is impliseer dat <m>\ve{v}</m> uniek is.
       Want, as daar nog 'n
       <m>\ve{v}' \in V</m> bestaan met <m>S(\ve{v}') = \ve{w}</m>,
-      dan het ons
-      <m>\ve{v}'
-      = \ve{v}</m>, want <m>T</m> is injektief.
+      dan het ons <m>\ve{v}' = \ve{v}</m>, want <m>T</m> is injektief.
     </p>
 
     <p>
       Nou het ons 'n goed-gedefinieerde <em>funksie</em>
       <m>S : W \rightarrow V</m>
       wat <m>T \circ S = \id_W</m> en <m>S \circ T = \id_V</m> bevredig.
-      Ons moet slegs
-      nagaan dat <m>S</m> line&#xea;r is.
+      Ons moet slegs nagaan dat <m>S</m> line&#xea;r is.
     </p>
 
     <p>
       Laat <m>\ve{w}_1, \ve{w}_2 \in W</m>.
       Dan
-     <md>
+      <md>
         <mrow>S( a \ve{w}_1 + b \ve{w}_2) \amp = S\big(a T(S(\ve{w}_1)) + b T(S(\ve{w}_2)) \big) \amp \amp  (\text{using } T \circ S = \id_W )</mrow>
-        <mrow>\amp = S\big( a T(\ve{v}_1) + b T(\ve{v}_2) \big) \amp \amp \left(\text{setting }  \ve{v}_1 := S(\ve{w}_1), 
+        <mrow>\amp = S\big( a T(\ve{v}_1) + b T(\ve{v}_2) \big) \amp \amp \left(\text{setting }  \ve{v}_1 := S(\ve{w}_1),
         \ve{v}_2 := S(\ve{w}_2)) \right) </mrow>
         <mrow>\amp = S\big(T(a \ve{v}_1 + b \ve{v}_2)\big) \amp \amp  (T \text{ is linear})</mrow>
         <mrow>\amp = a \ve{v}_1 + b \ve{v}_2 \amp \amp   ((S \circ T = \id_V)</mrow>
@@ -226,12 +189,12 @@
       Gevolglik is <m>S</m> line&#xea;r, wat die bewys voltooi.
     </p>
   </proof>
+</proposition>
 
   <proposition xml:id="equiv-inj-sur-iso">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n
-        line&#xea;re bewerking op 'n eindig-dimensionele vektorruimte <m>V</m> wees.
+        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re bewerking op 'n eindig-dimensionele vektorruimte <m>V</m> wees.
         Die volgende stellings is ekwivalent:
 
         <ul>
@@ -267,6 +230,11 @@
       ander kant is (1) en (2) ekwivalent aan (3) volgens <xref ref="iso-inj-surj">Proposisie</xref>.
     </p>
   </proof>
+
+
+<exercises>
+
+</exercises>
 
 <!-- <solutions divisional="solution answer" />  -->
 
