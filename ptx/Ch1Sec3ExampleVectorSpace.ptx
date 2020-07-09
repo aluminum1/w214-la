@@ -23,13 +23,13 @@
     <p>
       We define
       <men xml:id="def_of_b">
-        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\} 
+        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\}
       </men>.
     </p>
 
     <p> <alert>2. Define addition, the zero vector, and
       scalar multiplication</alert></p>
-    <dl>
+    <p><dl>
       <li>
         <title>D1. Addition</title>
         <p>
@@ -43,7 +43,7 @@
           <m>v_1 - v_2 + v_3 = 0</m>.
           We define <m>\ve{u} + \ve{v}</m> by:
           <men xml:id="def_add_in_B">
-            \ve{u} + \ve{v} := 
+            \ve{u} + \ve{v} :=
             (u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3)
           </men>.
         </p>
@@ -61,7 +61,7 @@
           Let us check:
           <md>
             <mrow>\amp (u_1 + v_1) - (u_2 + v_2) + (u_3 + v_3)</mrow>
-            <mrow>\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3) 
+            <mrow>\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3)
             \amp \amp  \mbox{(this algebra
             step is true for ordinary numbers)}</mrow>
             <mrow>\amp = 0 + 0 \amp \amp  \mbox{(since \(\ve{u}\) and \(\ve{v}\) are in \(B\))}</mrow>
@@ -124,8 +124,8 @@
           equation <xref ref="def_of_b" />:
           <md>
             <mrow>\amp  ku_1 - ku_2 + ku_3</mrow>
-            <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp  
-            \mbox{(this algebra step is true for 
+            <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp
+            \mbox{(this algebra step is true for
             ordinary numbers)}</mrow>
             <mrow>\amp = k 0 \amp \amp  \mbox{(since \(\ve{u}\) is in \(B\))}</mrow>
             <mrow>\amp = 0</mrow>
@@ -139,7 +139,7 @@
           scalar multiplication operation on <m>B</m>.
         </p>
       </li>
-    </dl>
+    </dl></p>
 
     <p><alert>3. Check that the data satisfies the rules</alert></p>
     <p>
@@ -152,18 +152,18 @@
       and that <m>k</m> and <m>l</m> are real numbers.
     </p>
 
-    <dl>
+    <p><dl>
       <li> <title>R1</title>
       <p>
         We check:
         <md>
           <mrow>\amp  \ve{v} + \ve{w}\tag{R1.}</mrow>
-          <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) 
+          <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3)
           \amp \amp  \mbox{(definition of addition in \(B\))}</mrow>
-          <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp  
+          <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp
           \mbox{(because \(x + y = y + x\) is true for
           real numbers)}</mrow>
-          <mrow>\amp = \ve{w} + \ve{v}. \amp \amp  
+          <mrow>\amp = \ve{w} + \ve{v}. \amp \amp
           \mbox{(definition of addition in \(B\))}</mrow>
         </md>
       </p>
@@ -175,14 +175,14 @@
         We check:
         <md>
           <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
-          <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} 
+          <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w}
           \amp \amp  \mbox{(definition of addition in \(B\))}</mrow>
-          <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp  
+          <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp
           \mbox{(by defn of addition in \(B\))}</mrow>
-          <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp  
-          \mbox{(since \((x + y) + z = x + (y + z)\) is 
+          <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp
+          \mbox{(since \((x + y) + z = x + (y + z)\) is
           true for real numbers)}</mrow>
-          <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  
+          <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp
           \mbox{(definition of addition in \(B\))}</mrow>
           <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \mbox{(definition of addition in \(B\))} </mrow>
         </md>.
@@ -195,11 +195,11 @@
         We check:
         <md>
           <mrow>\amp \ve{0} + \ve{v}</mrow>
-          <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp  
+          <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp
           \mbox{(definition of the zero vector in \(B\)}</mrow>
-          <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp  
+          <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp
           \mbox{(definition of addition in \(B\))}</mrow>
-          <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  
+          <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp
           \mbox{(because \(x + 0 = x\) is true for real numbers)}</mrow>
           <mrow>\amp = \ve{v}</mrow>
         </md>.
@@ -276,7 +276,7 @@
         </md>.
       </p>
       </li>
-    </dl>
+    </dl></p>
   </example>
 
   <exercises>
