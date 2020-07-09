@@ -13,6 +13,7 @@ To do list:
 - Create index?
 - Consistency between \dim and \Dim?
 - Make sure all <proofs> are inside the <result> tags and not outside
+- nonzero vs non-zero and other
 
 Afrikaans:
 - Proof of Lemma id="subspace-lem" in Ch1Sec6
@@ -34,6 +35,8 @@ Afrikaans:
   - span (verb) -> onderspan (not span - verbs only)
   - isomorphic -> isomorf (not isomorfies)
   - composition -> samestelling (not komposisie)
+  - operator (V to V) -> operator
+  - operator (+) -> bewerking
   - verify
 
 
