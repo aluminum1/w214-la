@@ -12,7 +12,7 @@ To do list:
 - Rob Beezer says that CDATA should never be necessary - is it easier in a tikz picture, though? I guess you have to be careful of things like arrow heads -->
 - Create index?
 - Consistency between \dim and \Dim?
-
+- Make sure all <proofs> are inside the <result> tags and not outside
 
 Afrikaans:
 - Proof of Lemma id="subspace-lem" in Ch1Sec6
