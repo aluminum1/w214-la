@@ -16,7 +16,7 @@ To do list:
 - nonzero vs non-zero and other
 
 Afrikaans:
-- Proof of Lemma id="subspace-lem" in Ch1Sec6
+- Proof of Lemma id="subspace-lem" in Ch1Sec6, line 95
 - Ch1Sec6 translate from line 293 and from line 606
 - Ch2Sec1 translate from line 38 and from 195 and from 345
 - Ch2Sec2 from 104, 149, 451
@@ -48,3 +48,6 @@ I would like to add
 Use??
 - <objective>?
 - <reading-questions>?
+
+
+- Ch3Sec1 captions line 208, 258,
