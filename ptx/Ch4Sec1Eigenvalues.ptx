@@ -8,7 +8,7 @@
         Let <m>T : V \rightarrow V</m> be a linear operator on a vector space <m>V</m>.
         We say that <m>\lambda \in \mathbb{R}</m> is an
         <term>eigenvalue of <m>T</m></term>
-        if there exists a nonzero vector
+        if there exists a non-zero vector
         <m>\ve{v} \in V</m> such that <m>T(\ve{v}) = \lambda \ve{v}</m>.
       </p>
     </statement>
@@ -56,7 +56,7 @@
 
   <assemblage>
     <p>
-      I hope you understand the notation here.
+      Let us take a moment to analyse the notation here.
       If <m>S, T : V \rightarrow W</m> are linear maps,
       we can <em>add them</em> together to get a new linear map
       <me>
@@ -108,7 +108,7 @@
 
   <p>
     We have a simple test for when a <em>matrix</em>
-    <m>A</m> is invertible: simply
+    <m>A</m> is invertible <mdash/> simply
     compute the determinant <m>\det(A)</m>.
     If <m>\det(A) = 0</m>, then the matrix is
     <em>not</em> invertible.
@@ -142,8 +142,7 @@
   <lemma>
     <statement>
       <p>
-        The determinant of a linear operator,
-        as defined above, is well-defined.
+        The determinant of a linear operator, as defined above, is well-defined.
         That is, if <m>\basis{B}</m> and
         <m>\basis{C}</m> are bases for <m>V</m>, then
         <me>
@@ -151,8 +150,6 @@
         </me>.
       </p>
     </statement>
-  </lemma>
-
   <proof>
     <p>
       We know from <xref ref="matrix-in-different-basis">Theorem</xref> that
@@ -169,6 +166,7 @@
       </md>.
     </p>
   </proof>
+</lemma>
 
   <p>
     Now that we know how to define the determinant of a linear operator,
@@ -233,8 +231,6 @@
         </ul>
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
       The only thing left to show is that (2) <m>\Leftrightarrow</m> (3).
@@ -247,6 +243,7 @@
       </md>
     </p>
   </proof>
+</proposition>
 
   <example xml:id="poly-example-eigenvalue">
     <statement>
@@ -296,9 +293,9 @@
 
       <p>
         So the matrix of <m>T</m> relative to <m>\basis{B}</m> is
-        <md>
+        <me>
           [T]_{\basis{B} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  3 \amp  9 \\ 0 \amp  2 \amp  12 \\ 0 \amp  0 \amp  4}
-        </md>
+        </me>
       </p>
 
       <p>
@@ -307,9 +304,7 @@
           <mrow>\chi_T (\lambda) \amp = \det(\lambda \id - T) \amp \amp  \mbox{(defn of \(\chi_T\))}</mrow>
           <mrow>\amp = \det \left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) \amp \amp  \mbox{(defn of \(\det\))}</mrow>
           <mrow>\amp = \det \left( [\lambda \id]_{\basis{B} \leftarrow \basis{B}} - [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
-          <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9</mrow>
-          <mrow>0 \amp  \lambda - 2 \amp  -12</mrow>
-          <mrow>0 \amp  0 \amp  4}} \right)</mrow>
+          <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9\\ 0 \amp  \lambda - 2 \amp  -12\\ 0 \amp  0 \amp  4}} \right)</mrow>
           <mrow>\amp = (\lambda - 1)(\lambda - 2)(\lambda - 4)</mrow>
         </md>.
       </p>
@@ -377,8 +372,7 @@
       <p>
         The characteristic polynomial of <m>A</m> is
         <md>
-          <mrow>\chi_A(\lambda) \amp = \det \left({\cmatrix{ \lambda - 2 \amp  -1</mrow>
-          <mrow>-\frac{1}{2} \amp  \lambda - \frac{5}{2} }} \right)</mrow>
+          <mrow>\chi_A(\lambda) \amp = \det \left({\cmatrix{ \lambda - 2 \amp  -1\\ -\frac{1}{2} \amp  \lambda - \frac{5}{2} }} \right)</mrow>
           <mrow>\amp = (\lambda - 2)(\lambda - \frac{5}{2}) - \frac{1}{2}</mrow>
           <mrow>\amp = \Leftrightarrow \lambda^2 - \frac{9}{2} \lambda + \frac{9}{2}</mrow>
         </md>.
@@ -413,9 +407,9 @@
     <solution>
       <p>
         The characteristic polynomial of <m>A</m> is
-        <md>
+        <me>
           \det (\lambda I - A) = \det \cmatrix{ \lambda - 1 \amp  3 \\ \lambda + 2 \amp  2} = \lambda^2 - 3\lambda + 8.
-        </md>
+        </me>
       </p>
 
       <p>
@@ -432,5 +426,10 @@
       </p>
     </solution>
   </example>
+
+<exercises>
+
+</exercises>
+
 </section>
 
