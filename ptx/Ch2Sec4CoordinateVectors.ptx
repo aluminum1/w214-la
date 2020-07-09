@@ -15,23 +15,25 @@
         <p>
           Let <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2,\ldots,\ve{e}_n\right\}</m> be a list of vectors in a vector space <m>V</m>. Then the following statements are equivalent:
         </p>
-        <ol>
-          <li> <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
-          </li>
-          <li> <p> Every vector
-          <m>\ve{v} \in V</m> <em>can</em> be written as a linear combination
-          <men xml:id="trying_to_formulate_basis">
-            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
-          </men>
-          in precisely <em>one</em> way. (That is,
-          for each <m>\ve{v} \in V</m> there
-          <em></em><em>exist</em> scalars <m>a_1</m>,
-          <m>a_2</m>, <m>\ldots</m>,
-          <m>a_n</m> satisfying <xref ref="trying_to_formulate_basis" />,
-          and that moreover these scalars are
-          <em>unique</em>). </p>
-        </li>
-      </ol>
+        <p>
+          <ol>
+            <li> <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
+            </li>
+            <li> <p> Every vector
+            <m>\ve{v} \in V</m> <em>can</em> be written as a linear combination
+            <men xml:id="trying_to_formulate_basis">
+              \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+            </men>
+            in precisely <em>one</em> way. (That is,
+            for each <m>\ve{v} \in V</m> there
+            <em></em><em>exist</em> scalars <m>a_1</m>,
+            <m>a_2</m>, <m>\ldots</m>,
+            <m>a_n</m> satisfying <xref ref="trying_to_formulate_basis" />,
+            and that moreover these scalars are
+            <em>unique</em>). </p>
+            </li>
+          </ol>
+        </p>
       </statement>
     </proposition>
 
@@ -47,8 +49,9 @@
     </assemblage>
 
     <proof>
-      <paragraphs>
-        <title><m>1 \Rightarrow 2</m></title>
+      <p>
+        <alert><m>1 \Rightarrow 2</m></alert>
+      </p>
       <p>
         Suppose that the list of vectors<m>\basis{B} = \left\{ \ve{e}_1,
           \ve{e}_2,\ldots,
@@ -91,10 +94,10 @@
         <m>a_2 = b_2</m>, and so on up to <m>a_n = b_n</m>,
         and hence the expansion <xref ref="one_way_of_expanding" /> is unique.
       </p>
-    </paragraphs>
 
-    <paragraphs>
-      <title><m>2 \Leftarrow 1</m></title>
+    <p>
+      <alert><m>2 \Leftarrow 1</m></alert>
+    </p>
       <p>
         Conversely, suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
         <me>
@@ -126,7 +129,6 @@
         i.e. we must have <m>b_1 = b_2 = \cdots = b_n = 0</m>,
         and so the list <m>\basis{B}</m> is linearly independent.
       </p>
-    </paragraphs>
     </proof>
 
 
@@ -277,6 +279,7 @@ has been updated.  -->
           <mrow> a_1 - a_2 + a_3  \amp = 3 </mrow>
         </md>
         We can solve these equations by hand, or we can use SageMath:
+      </p>
         <sage>
           <input>
           var('a1 a2 a3')
@@ -286,6 +289,7 @@ has been updated.  -->
                 a1 - a2 + a3 == 3), (a1, a2, a3)))
           </input>
         </sage>
+      <p>
         We compute the coordinates of <m>p</m> as <m>a_1 = -4</m>, <m>a_2 = -\frac{5}{2}</m>, <m>a_3 = \frac{9}{2}</m>. In other words,
         <me>
           2x^2 - 2x + 3 = -4(1+x) - \frac{5}{2} (x^2 + x -1) + \frac{9}{2}(x^2 + x +1)
@@ -384,7 +388,7 @@ has been updated.  -->
         Let <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \right\}</m> be a basis for a vector space <m>V</m>.
         Then for all vectors <m>\ve{v}, \ve{w} \in V</m> and all scalars <m>k</m> we have
 
-        <ol type="a">
+        <ol label="a">
           <li>
             <p>
               <m>[\ve{v} + \ve{w}]_\basis{B} = [\ve{v}]_\basis{B} + [\ve{w}]_\basis{B}</m>
@@ -439,9 +443,9 @@ has been updated.  -->
       <p>
         As before, suppose that
         <md>
-          <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 </mrow>.
-        </md>
-        Which gives
+          <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 </mrow>
+        </md>,
+        which gives
         <me>
         [\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
         </me>
@@ -526,7 +530,6 @@ has been updated.  -->
     <statement>
         <ol>
           <li>
-            <title>(a)</title>
             <p>Find a basis <m>\basis{B}</m> for the vector space
               <me>
                 V := \{ p \in \Poly_2 : p(2) = 0 \}
@@ -534,14 +537,12 @@ has been updated.  -->
             </p>
           </li>
           <li>
-            <title>(b)</title>
             <p>
                Consider <m>p(x) = x^2 + x - 6</m>. Show that <m>p \in V</m>.
             </p>
           </li>
 
           <li>
-            <title>(c)</title>
             <p>
               Determine the coordinate vector of <m>p</m> with respect to your basis <m>\basis{B}</m>,
               i.e. determine <m>[p]_\basis{B}</m>.
@@ -550,6 +551,7 @@ has been updated.  -->
         </ol>
     </statement>
    <solution>
+    <p>
       <ol>
         <li>
           <p>
@@ -573,6 +575,7 @@ has been updated.  -->
           </p>
         </li>
       </ol>
+    </p>
    </solution>
   </exercise>
 
@@ -680,11 +683,11 @@ for some <m>s \in \mathbb R</m>. By considering only the first coordinate of <m>
         <li>
           <p>
             Let <m>z(x) = \cos\left(x - \frac{\pi}{3} \right)</m>.
+            <ol>
+              <li>Show that <m>z \in V</m> by checking that it solves the differential equation <xref ref="diff_eqn_exerc_1"/>.</li>
+              <li>Determine <m>[z]_{\basis{B}}</m>. </li>
+            </ol>
           </p>
-          <ol>
-            <li>Show that <m>z \in V</m> by checking that it solves the differential equation <xref ref="diff_eqn_exerc_1"/>.</li>
-            <li>Determine <m>[z]_{\basis{B}}</m>. </li>
-          </ol>
         </li>
       </ol>
     </statement>
@@ -793,8 +796,8 @@ b = \frac{1}{2}
               Without performing any explicit calculations, determine the dimension of <m>V</m>.
             </li>
 
-            <li>
-              Using Sage, find a basis for <m>V</m>, if you're unsure of the syntax, look at the examples in <xref ref = "ACh2Sec3BasisDimension"/>. Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.
+            <li><p>
+              Using Sage, find a basis for <m>V</m>, if you're unsure of the syntax, look at the examples in <xref ref = "ACh2Sec3BasisDimension"/>. Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.</p>
               <sage>
                 <input>
                 </input>
@@ -819,8 +822,8 @@ b = \frac{1}{2}
               Does the function <m> y_3 = y_1 + y_2 </m> also solve <xref ref = "diff_eqn_exerc_3"/>? By <xref ref = "diff_eqn_exist_unique"/>, <m>y_3</m> is the unique solution to an initial value problem involving <xref ref = "diff_eqn_exerc_3"/> - what are those initial conditions?
             </li>
 
-            <li>
-              Read through <link xml:link="plot_sage" href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </link>. Plot <m>y_1, y_2, y_3</m> (you don't need to plot them on the same set of axes) on the interval <m>x = [0,10]</m> with a step size of <m> \Delta x = 0.5</m>. Sketch the results.
+            <li><p>
+              Read through <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Plot <m>y_1, y_2, y_3</m> (you don't need to plot them on the same set of axes) on the interval <m>x = [0,10]</m> with a step size of <m> \Delta x = 0.5</m>. Sketch the results.</p>
               <sage>
                 <input>
                 </input>
