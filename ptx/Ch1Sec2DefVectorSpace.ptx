@@ -35,7 +35,7 @@
             <title>D2.</title>
             <p>
               A <em>zero vector</em>.
-              (That is, a special vector 
+              (That is, a special vector
               <m>\ve{0} \in V</m>
                is marked out.)
             </p>
@@ -61,6 +61,7 @@
         and for all real numbers <m>k</m> and <m>l</m>:
       </p>
 
+      <p>
         <dl>
           <li xml:id="R1">
             <title>R1.</title>
@@ -124,6 +125,7 @@
             </p>
           </li>
         </dl>
+      </p>
     </statement>
   </definition>
 
@@ -177,7 +179,7 @@
 
       <li>
         <p>
-          Check that this data satisfies the rules (R1) &ndash; (R8).
+          Check that this data satisfies the rules (R1) <ndash /> (R8).
         </p>
       </li>
     </ol>
