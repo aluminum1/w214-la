@@ -28,17 +28,10 @@
         </md>
         and we check,
         <md>
-          <mrow>\mat{P}^{-1} \mat{A} \mat{P} \amp = -\frac{1}{3} {\cmatrix{1 \amp  -1</mrow>
-          <mrow>-1 \amp  -2}} {\cmatrix{2 \amp  1</mrow>
-          <mrow>\frac{1}{2} \amp  \frac{5}{3}}} {\cmatrix{ -2 \amp  1</mrow>
-          <mrow>1 \amp  1}}</mrow>
-          <mrow>\amp = - \frac{1}{3} {\cmatrix{ \frac{3}{2} \amp  - \frac{3}{2}</mrow>
-          <mrow>-3 \amp  -6}} {\cmatrix{-2 \amp  1</mrow>
-          <mrow>1 \amp  1}}</mrow>
-          <mrow>\amp = - \frac{1}{3} {\cmatrix{ - \frac{9}{2} \amp  0</mrow>
-          <mrow>0 \amp  -9}}</mrow>
-          <mrow>= {\cmatrix{\frac{3}{2} \amp  0</mrow>
-          <mrow>0 \amp  3}}</mrow>
+          <mrow>\mat{P}^{-1} \mat{A} \mat{P} \amp = -\frac{1}{3} {\cmatrix{1 \amp  -1\\ -1 \amp  -2}} {\cmatrix{2 \amp  1\\ \frac{1}{2} \amp  \frac{5}{3}}} {\cmatrix{ -2 \amp  1\\ 1 \amp  1}}</mrow>
+          <mrow>\amp = - \frac{1}{3} {\cmatrix{ \frac{3}{2} \amp  - \frac{3}{2}\\ -3 \amp  -6}} {\cmatrix{-2 \amp  1\\ 1 \amp  1}}</mrow>
+          <mrow>\amp = - \frac{1}{3} {\cmatrix{ - \frac{9}{2} \amp  0\\ 0 \amp  -9}}</mrow>
+          <mrow>= {\cmatrix{\frac{3}{2} \amp  0\\ 0 \amp  3}}</mrow>
         </md>
         which is indeed a diagonal matrix.
         More on this in the second semester!
@@ -47,11 +40,6 @@
     </statement>
   </example>
 
-  <p>
-    \begin{appendices}
-    \appendixpage
-    \noappendicestocpagenum
-    \addappheadtotoc
-  </p>
+
 </section>
 
