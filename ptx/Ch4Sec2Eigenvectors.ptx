@@ -30,9 +30,8 @@
 
   <assemblage>
     <p>
-      It is perfectly fine for a linear operator <m>T</m> to have a zero <em>eigenvalue</em>.
-      But our convention is that an <em>eigenvector</em>
-      cannot be the zero vector.
+      It is still possible for a linear operator <m>T</m> to have a zero <em>eigenvalue</em>.
+      But our convention is that an <em>eigenvector</em> cannot be the zero vector.
     </p>
   </assemblage>
 
@@ -60,7 +59,7 @@
     <p>
       Note that if <m>\lambda</m> is an eigenvalue of <m>T</m>,
       then the zero vector <m>\ve{0}</m> <em>is</em>
-      in the eigenspace <m>E_\lambda</m> of <m>T</m> associated to <m>\lambda</m>.
+      in the <em>eigenspace</em> <m>E_\lambda</m> of <m>T</m> associated to <m>\lambda</m>.
       But it is not an <em>eigenvector</em> of <m>T</m>.
       That is just terminology.
     </p>
@@ -80,8 +79,6 @@
         <m>E_\lambda</m> is a subspace of <m>V</m>.
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
       This follows immediately from the fact
@@ -91,6 +88,7 @@
       by <xref ref="ker-im-subspace">Lemma</xref>.
     </p>
   </proof>
+</proposition>
 
   <proposition xml:id="lin_ind_eig_distinct">
     <title>Eigenvectors from Distinct Eigenspaces are Linearly Independent</title>
@@ -222,8 +220,9 @@
         Let us think for a second.
         Since the eigenvalues are all distinct,
         if we find eigenvectors <m>q_1</m>,
-        <m>q_2</m> and <m>q_3</m> with eigenvalues <m>\lambda_1</m>,
-        <m>\lambda_2</m> and <m>\lambda_3</m> respectively,
+        <m>q_2</m> and <m>q_3</m> with eigenvalues
+        <m>\lambda_1</m>, <m>\lambda_2</m> and
+        <m>\lambda_3</m> respectively,
         then <m>\basis{Q} = \bopen q_1, q_2, q_3 \bclose</m> will be linearly independent by <xref ref="lin_ind_eig_distinct">Proposition</xref>.
         This means that the eigenspaces <m>E_1</m>,
         <m>E_2</m> and <m>E_4</m> associated with these eigenvalues will be 1-dimensional.
@@ -233,7 +232,7 @@
         <ul>
           <li>
             <p>
-              <m>\lambda = 1</m>: 
+              <m>\lambda = 1</m>:
 
               We seek polynomials <m>q</m> such that
               <me>
@@ -335,8 +334,7 @@
               <me>
                 \cmatrix{a_0 \\ a_1 \\ a_2} = t \cmatrix{9 \\ 6 \\ 1}, \, t \in \mathbb{R}
               </me>.
-              In other words,
-              an eigenvector of <m>T</m> with eigenvalue <m>4</m> is
+              In other words, an eigenvector of <m>T</m> with eigenvalue <m>4</m> is
               <me>
                 q_4(x) = 9 + 6x + x^2
               </me>,
@@ -571,5 +569,32 @@
       </p>
     </solution>
   </example>
+
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Determine the eigenvalues and eigenspaces of the linear operator
+        <md>
+          <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
+          <mrow>T(p)(x) \amp  := \frac{d^2}{dx^2} p(x^2 + x - 2)</mrow>
+        </md>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Determine the eigenvalues and eigenspaces of the linear operator
+        <md>
+          <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
+          <mrow>T(p)(x) \amp  := x^2 p\left(\frac{1}{x}\right)</mrow>
+        </md>
+      </p>
+    </statement>
+  </exercise>
+</exercises>
+
 </section>
 
