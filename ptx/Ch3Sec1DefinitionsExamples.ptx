@@ -98,11 +98,10 @@
         (<xref ref="props_of_matrix_ops">Proposition</xref> parts 2 and 3).
       </p>
 
-      <assemblage>
-        <p>
-          Note that an <m>n \times m</m> matrix gives rise to a linear map from <m>\Col_m</m> to <m>\Col_n</m>!
-        </p>
-      </assemblage>
+      <p>
+        Note that an <m>n \times m</m> matrix gives rise to a linear map from <m>\Col_m</m> to <m>\Col_n</m>!
+      </p>
+
       <p>
         For instance, consider
         <me>
@@ -205,21 +204,25 @@
       Here is a a graphical version of this proof:
     </p>
 
-    <image>
-      <latex-image>
-        <![CDATA[\begin{tikzpicture}[xscale=1.5]
-        \draw[<->] (-1, 0) -- (3, 0);
-        \draw[<->] (0, -1) -- (0, 3);
-        \draw[very thick, red, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
-        \draw[very thick, red, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
-        \draw[dotted] (0.5, 1) -- (0.5, 0);
-        \draw[dotted] (1.5, 1.5) -- (1.5, 0);
-        \draw[very thick, red, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
-        \draw[very thick, red, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
-        \node[red] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
-        \node[red] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
-      </latex-image>
-    </image>
+    <figure>
+      <caption>
+      </caption>
+      <image>
+        <latex-image>
+          <![CDATA[\begin{tikzpicture}[xscale=1.5]
+          \draw[<->] (-1, 0) -- (3, 0);
+          \draw[<->] (0, -1) -- (0, 3);
+          \draw[very thick, red, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
+          \draw[very thick, red, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
+          \draw[dotted] (0.5, 1) -- (0.5, 0);
+          \draw[dotted] (1.5, 1.5) -- (1.5, 0);
+          \draw[very thick, red, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
+          \draw[very thick, red, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
+          \node[red] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
+          \node[red] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
+        </latex-image>
+      </image>
+    </figure>
     </statement>
   </example>
 
@@ -251,15 +254,19 @@
         by a similar graphical argument as in <xref ref="projection_map_example">Example</xref>.
       </p>
 
-    <image width="60%">
-      <latex-image>
-        <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
-        \draw[<->] (0, -1) -- (0, 2);
-        \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(\ve{v}\)} ;
-        \draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {\(R (\ve{v})\)};
-        \draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {\(\theta\)} ;\end{tikzpicture}]]>
-      </latex-image>
-    </image>
+      <figure>
+        <caption>
+        </caption>
+        <image width="60%">
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+            \draw[<->] (0, -1) -- (0, 2);
+            \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(\ve{v}\)} ;
+            \draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {\(R (\ve{v})\)};
+            \draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {\(\theta\)} ;\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
 
     </statement>
   </example>
@@ -307,14 +314,12 @@
         </md>.
       </p>
 
-      <assemblage>
         <p>
           We will soon see that <em>all</em>
           linear maps <m>\mathbb{R}^3 \rightarrow \mathbb{R}</m>
           (indeed all linear maps <m>\mathbb{R}^n \rightarrow \mathbb{R}</m>)
           are of this form.
         </p>
-      </assemblage>
 
     </statement>
   </example>
@@ -341,7 +346,7 @@
 
   <exercise>
     <statement>
-      <ol type="a">
+      <ol label="a">
         <li><p> Why is <m>D</m> a map from <m>\Poly_n</m> to <m>\Poly_{n-1}</m>?</p></li>
         <li><p> Check that <m>D</m> is linear.</p></li>
       </ol>
@@ -573,20 +578,20 @@
       <mrow> \begin{bmatrix} a \\ b \end{bmatrix} \amp \mapsto \text{unique } y \in V \text{ such that } y(x_0) = a, y'(x_0)=b </mrow>
     </md>
   </p>
-  <assemblage>
-    <p>Now is a good time to review <xref ref="diff_eqn_exist_unique"/> and <xref ref="geogebra_diff_eqn_1"/>. </p>
-  </assemblage>
+
+  <p>(Now is a good time to review <xref ref="diff_eqn_exist_unique"/> and <xref ref="geogebra_diff_eqn_1"/>.) </p>
+
   <p>
     This is illustrated in <xref ref="ode_lin_map"/> for the case of the differential equation
     <me>
        y^{''}  + xy = 0.
     </me>
     Drag the blue vector <m>\ve{v}</m> to see the effect on its image <m>T_{x_0}(\ve{v}) = y</m> in <m>V</m>. You can also change the value of <m>x_0</m>.
+  </p>
     <figure xml:id="ode_lin_map">
       <interactive geogebra="https://www.geogebra.org/material/iframe/id/kxcmtv5t/width/800/height/909/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="800:909" width="90%"/>
       <caption>GeoGebra App: Understanding the linear map <m>T</m>.</caption>
     </figure>
-  </p>
 </statement>
 </example>
 
@@ -621,7 +626,6 @@
   <proof>
     <p>
       We go to work as follows:
-    </p>
 
     <ol>
         <li>
@@ -644,6 +648,7 @@
           </p>
         </li>
       </ol>
+    </p>
   </proof>
 
   <p>
@@ -1031,8 +1036,8 @@ and then Eng and Afr will need to be matched again -->
           <me>
           p_0(x) = 1, p_1(x) = x, p_2(x) = x^2, p_3(x)=x^3
         </me>
-        </li>
         are the standard basis vectors for <m>\Poly_3</m>. Express your answers in terms of the standard basis of <m>\Trig_n</m>.
+        </li>
         </ol>
       </p>
     </statement>
@@ -1259,7 +1264,9 @@ and then Eng and Afr will need to be matched again -->
 
   <exercise>
     <statement>
-      If <m>V </m> is a finite dimensional vector space, find a basis for <m> \mathcal L(V , \mathbb R) </m>.
+      <p>
+        If <m>V </m> is a finite dimensional vector space, find a basis for <m> \mathcal L(V , \mathbb R) </m>.
+      </p>
     </statement>
   </exercise>
 
