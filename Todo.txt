@@ -37,7 +37,7 @@ Afrikaans:
   - composition -> samestelling (not komposisie)
   - operator (V to V) -> operator
   - operator (+) -> bewerking
-  - verify
+  - verify -> bevestig?, nagaan?, toets?
 
 
 I would like to add
