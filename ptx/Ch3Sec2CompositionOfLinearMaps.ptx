@@ -145,13 +145,11 @@
       Hence <m>D \circ A = \id_{\Poly_n}</m>.
     </p>
 
-    <assemblage>
-      <p>
-        In fact, the statement that
-        <m>D \circ A = \id_{\Poly_n}</m> is precisely Part I of the Fundamental Theorem of Calculus,
-        applied to the special case of polynomials!
-      </p>
-    </assemblage>
+    <p>
+      In fact, the statement that
+      <m>D \circ A = \id_{\Poly_n}</m> is precisely Part I of the Fundamental Theorem of Calculus,
+      applied to the special case of polynomials!
+    </p>
   </solution>
   </example>
 
