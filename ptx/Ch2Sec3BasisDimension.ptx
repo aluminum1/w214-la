@@ -4,7 +4,7 @@
     <p>
       In this section we introduce the notions of:
       <ul>
-        <li> a <em>basis</em> of a vector space </li>, and
+        <li> a <em>basis</em> of a vector space , and </li>
         <li> the <em>dimension</em> of a vector space. </li>
       </ul>
       Then we compute the dimensions of the vector spaces we have introduced up to now. We end by explaining the <em>sifting algorithm</em> which allows us to prove some useful results concerning bases and dimension. </p>
@@ -153,10 +153,11 @@
                   [a1, a2, a3, a4])
           </input>
         </sage>
-      <p> SageMath outputs:
+      <p> SageMath outputs: </p>
       <sidebyside>
        <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
       </sidebyside>
+      <p>
       So indeed,  equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  have only the trivial solution. Therefore the list of vectors is linearly independent. </p>
 
       <p> Next, we need to check that the list of vectors spans <m>\mathbb{R}^4</m>. (There is a shorter way of doing this, using <xref ref="lin-ind-implies-basis"/> below, but for now we prove it from first principles.) So, let <m>\ve{w} = (w_1, w_2, w_3, w_4)</m> be an arbitrary vector in <m>\mathbb{R}^4</m>. We need to show that there exists at least one way to express <m>\ve{w}</m> as a linear combination of the vectors <m>\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4</m>. In other words, we need to check if there exists at least one solution to the following equation:
@@ -331,22 +332,20 @@
         We will prove this in a series of exercises.
       </p>
 
-      <assemblage>
-        <p>
-          The formula on the right hand side of
-          <xref ref="defn_of_basis_of_functions" /> occurs so often
-          in mathematics we give it a symbol of its own,
-          <m>\delta_{ab}</m>
-          (the <sq>Kronecker delta</sq>).
-          This symbol stands for the formula:
-          <q>If <m>a=b</m>, return a 1.
-          If <m>a \neq b</m>, return a <m>0</m></q>.
-          In this language, we can rewrite the definition of the functions <m>f_a</m> as
-          <men>
-            f_a (x) := \delta_{ax}
-          </men>.
-        </p>
-      </assemblage>
+      <p>
+        The formula on the right hand side of
+        <xref ref="defn_of_basis_of_functions" /> occurs so often
+        in mathematics we give it a symbol of its own,
+        <m>\delta_{ab}</m>
+        (the <sq>Kronecker delta</sq>).
+        This symbol stands for the formula:
+        <q>If <m>a=b</m>, return a 1.
+        If <m>a \neq b</m>, return a <m>0</m></q>.
+        In this language, we can rewrite the definition of the functions <m>f_a</m> as
+        <men>
+          f_a (x) := \delta_{ax}
+        </men>.
+      </p>
       </statement>
     </example>
 
@@ -416,20 +415,18 @@
         which have a <m>1</m> in the <m>i</m>th row and <m>j</m>th column and zeroes everywhere else.
       </p>
 
-      <assemblage>
-        <p>
-          Usually <m>\mat{A}</m> is a matrix,
-          and <m>\mat{A}_{ij}</m> is the element of the matrix at position <m>(i,j)</m>.
-          But now <m>\mat{E}_{ij}</m> is a matrix in its own right!
-          Its element at position <m>(k,l)</m> will be written as <m>(\mat{E}_{ij})_{kl}</m>.
-          I hope you don't find this too confusing.
-          In fact, we can write down an elegant formula for the elements of
-          <m>\mat{E}_{ij}</m> using the Kronecker delta symbol:
-          <men xml:id="kronecker_for_matrix_basis">
-            (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
-          </men>
-        </p>
-      </assemblage>
+      <p>
+        Usually <m>\mat{A}</m> is a matrix,
+        and <m>\mat{A}_{ij}</m> is the element of the matrix at position <m>(i,j)</m>.
+        But now <m>\mat{E}_{ij}</m> is a matrix in its own right!
+        Its element at position <m>(k,l)</m> will be written as <m>(\mat{E}_{ij})_{kl}</m>.
+        I hope you don't find this too confusing.
+        In fact, we can write down an elegant formula for the elements of
+        <m>\mat{E}_{ij}</m> using the Kronecker delta symbol:
+        <men xml:id="kronecker_for_matrix_basis">
+          (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
+        </men>
+      </p>
       </statement>
     </example>
 
@@ -541,33 +538,36 @@
         </p>
       </statement>
       <hint>
-        Find a basis for the solution space of the equation determining <m>W</m>.
+        <p>
+          Find a basis for the solution space of the equation determining <m>W</m>.
+        </p>
       </hint>
     </exercise>
     </subsection>
 
     <subsection>
       <title>Dimension of space of solutions to a homogenous linear differential equation</title>
-      <introduction>
-        <p>
-          We will now compute the dimension of the vector space of solutions to a homogenous linear ordinary differential equation. We will need the following theorem from the theory of differential equations, which we won't prove.
-        </p>
-      </introduction>
+      <p>
+        We will now compute the dimension of the vector space of solutions to a homogenous linear ordinary differential equation. We will need the following theorem from the theory of differential equations, which we won't prove.
+      </p>
 
       <theorem xml:id="diff_eqn_exist_unique">
         <title>Existence and uniqueness of solutions to linear ODE's</title>
-        <statement>Let
-        <men xml:id="diff_eqn_in_thm">
-          y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y == 0
-        </men>
-        be a linear homogenous ordinary differential equation on an interval <m>I</m>, where <m>a_0(x), \cdots, a_{n-1}(x)</m> are continuous on <m>I</m>. Suppose we are given initial conditions
-        <mdn>
-          <mrow xml:id="diff_eqn_thm_ic1"> y(x_0) \amp = c_0 </mrow>
-          <mrow> y^{(1)}(x_0) \amp = c_1 </mrow>
-          <mrow> \vdots  \amp </mrow>
-          <mrow xml:id="diff_eqn_thm_iclast"> y^{(n-1)}(x_0) \amp = c_{n-1} </mrow>
-        </mdn>
-        where <m>x_0 \in I</m> and <m>c_0, \ldots, c_{n-1}</m> are arbitrary constants. Then there exists a unique function <m>y(x)</m> on <m>I</m> saisfying the differential equation <xref ref="diff_eqn_in_thm"/> and the initial conditions <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
+        <statement>
+          <p>
+            Let
+            <men xml:id="diff_eqn_in_thm">
+              y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y == 0
+            </men>
+            be a linear homogenous ordinary differential equation on an interval <m>I</m>, where <m>a_0(x), \cdots, a_{n-1}(x)</m> are continuous on <m>I</m>. Suppose we are given initial conditions
+            <mdn>
+              <mrow xml:id="diff_eqn_thm_ic1"> y(x_0) \amp = c_0 </mrow>
+              <mrow> y^{(1)}(x_0) \amp = c_1 </mrow>
+              <mrow> \vdots  \amp </mrow>
+              <mrow xml:id="diff_eqn_thm_iclast"> y^{(n-1)}(x_0) \amp = c_{n-1} </mrow>
+            </mdn>
+            where <m>x_0 \in I</m> and <m>c_0, \ldots, c_{n-1}</m> are arbitrary constants. Then there exists a unique function <m>y(x)</m> on <m>I</m> saisfying the differential equation <xref ref="diff_eqn_in_thm"/> and the initial conditions <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
+          </p>
         </statement>
       </theorem>
 
@@ -578,7 +578,9 @@
       <example xml:id="geogebra_diff_eqn_1">
         <title>Visualizing <xref ref="diff_eqn_exist_unique"/></title>
         <statement>
+        <p>
           The following app gives a visual demonstration of <xref ref="diff_eqn_exist_unique"/>. Drag the red and green sliders to change the coefficients of the differential equation (in this example, the coefficients are just numbers, but in general they are functions of <m>x</m>). Drag the blue points to change the initial conditions.
+        </p>
           <figure>
             <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%"/>
             <caption>GeoGebra App: 2nd order ODE with constant coefficients.</caption>
@@ -626,8 +628,9 @@
           I claim that <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> is a basis for <m>V</m>.
         </p>
 
-    <paragraphs>
-      <title>Step 1. <m> \bopen y_0, \ldots, y_{n-1} \bclose </m> is linearly independent.</title>
+    <p>
+      <alert>Step 1. <m> \bopen y_0, \ldots, y_{n-1} \bclose </m> is linearly independent.</alert>
+    </p>
       <p>
         Suppose
         <men xml:id="lin_dep_no_wronskian">
@@ -652,10 +655,10 @@
         </md>
         Similarly, evaluating the remaining higher derivatives at <m>x=a</m> gives <m>k_2 = 0, \ldots, k_{n-1} = 0</m>. Therefore, <m>\bopen y_0, \ldots, y_{n-1} \bclose</m> is linearly independent.
       </p>
-    </paragraphs>
 
-    <paragraphs>
-      <title>Step 2. <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> spans <m>V</m>.</title>
+      <p>
+      <alert>Step 2. <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> spans <m>V</m>.</alert>
+      </p>
       <p>
         Let <m>y</m> be an arbitrary solution to the differential equation <xref ref="diff_eqn_in_thm"/>. We need to show that <m>y</m> can be expressed as a linear combination of <m>y_0, \ldots, y_{n-1}</m>.
       </p>
@@ -692,7 +695,6 @@
          </md>
          These are precisely the same initial conditions satisfied by <m>y</m> in Equations <xref first="ics_delta_1" last="ics_delta_n"/>! Therefore, by the uniqueness part of <xref ref="diff_eqn_exist_unique"/>,  we conclude that <m>f = y</m>. Hence <xref ref="span_ode_rtp"/> is indeed true.
       </p>
-    </paragraphs>
   </proof>
 
   <p>
@@ -717,6 +719,7 @@
           <mrow xml:id="ic2_diff_eqn_ex"> y'(1) \amp = c_1 </mrow>
         </mdn>
         Let us verify this in SageMath. First, we ask SageMath to find the most general solution to the differential equation <xref ref="diff_eqn_example_thm"/>:
+      </p>
         <sage>
           <input>
             x = var('x')
@@ -727,6 +730,7 @@
             show(desolve(ode, y))
           </input>
         </sage>
+      <p>
         SageMath tells us that the most general solution to the differential equation <xref ref="diff_eqn_example_thm"/> is
         <men xml:id="gen_soln_formula_ode">
           y = K_1 x^2 \sin(\log(x)) + K_2 x^2 \cos(\log(x)).
@@ -750,6 +754,7 @@
           y = -2 x^2 \sin(\log(x)) + x^2 \cos(\log(x)).
         </men>
         You can also check this explicitly in SageMath, using the <c>ics=[1,1,0]</c> option of <c>desolve</c> (the first number is the value of <m>x_0</m>, the second number is the value of <m>y(x_0)</m>, and the third number is the value of y'(x_0), etc.):
+      </p>
         <sage>
           <input>
             x = var('x')
@@ -761,6 +766,7 @@
 
           </input>
         </sage>
+      <p>
         SageMath outputs the same solution as in <xref ref="soln_example_ic"/>.
 
         Similarly, if our initial conditions were
@@ -795,42 +801,56 @@
     </proposition>
 
     <proof>
-      <paragraphs>
-      <title>Proving that <m>\Dim(W) \leq \Dim(V)</m></title>
+      <p>
+        <alert>Proving that <m>\Dim(W) \leq \Dim(V)</m></alert>
+      </p>
       <p> Let
-      <me>
+        <me>
           \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose
         </me>
         be a basis for <m>V</m>, so that <m>\Dim(V) = n</m>. We just need to show that <m>W</m> is finite-dimensional, i.e. that there exists a basis
-      <me>
-        \basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_k \bclose
-      </me>
-      for <m>W</m>. For then <m>\basis{B}</m> will be a list of <m>k</m> linearly independent vectors which live in <m>W</m> (and hence also in <m>V</m>) and hence we must have <m>k \leq n</m> by <xref ref="bumping_off_lemma"/>, as <m>\basis{C}</m> spans <m>V</m>.</p>
+        <me>
+          \basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_k \bclose
+        </me>
+        for <m>W</m>. For then <m>\basis{B}</m> will be a list of <m>k</m> linearly independent vectors which live in <m>W</m> (and hence also in <m>V</m>) and hence we must have <m>k \leq n</m> by <xref ref="bumping_off_lemma"/>, as <m>\basis{C}</m> spans <m>V</m>.
+      </p>
 
-      <p>We show that <m>W</m> is finite-dimensional as follows.</p>
+      <p>
+        We show that <m>W</m> is finite-dimensional as follows.
+      </p>
 
-      <p> If <m>W</m> is the zero vector space <m>\{ \ve{0} \} </m>, then <m>W</m> is finite-dimensional <xref ref="defn_dim_zero_vec_space" text="title">by definition</xref>. </p>
+      <p>
+        If <m>W</m> is the zero vector space <m>\{ \ve{0} \} </m>, then <m>W</m> is finite-dimensional <xref ref="defn_dim_zero_vec_space" text="title">by definition</xref>.
+      </p>
 
-      <p>If <m>W</m> is not the zero vector space, then there exists a nonzero vector <m>\ve{w}_1 \in W</m>. Consider the list <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Note that <m>\basis{B}_1</m> is linearly independent, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_1</m> spans <m>W</m>, then it is a basis for <m>W</m>, and so <m>W</m> is finite-dimensional and we are done.</p>
+      <p>
+        If <m>W</m> is not the zero vector space, then there exists a nonzero vector <m>\ve{w}_1 \in W</m>. Consider the list <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Note that <m>\basis{B}_1</m> is linearly independent, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_1</m> spans <m>W</m>, then it is a basis for <m>W</m>, and so <m>W</m> is finite-dimensional and we are done.
+      </p>
 
-      <p>If <m>\basis{B}_1</m> does not span <m>W</m>, then there exists a vector <m>\ve{w}_2 \in W</m> which is not a scalar multiple of <m>\ve{e}_1</m>.
-        Now consider the list <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>. Once again, <m>\basis{B}_2</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_2</m> spans <m>W</m>, then it is a basis for <m>W</m>, and we are done. </p>
-      <p>If <m>\basis{B}_2</m> does not span <m>W</m>, then there exists a vector
+      <p>
+        If <m>\basis{B}_1</m> does not span <m>W</m>, then there exists a vector <m>\ve{w}_2 \in W</m> which is not a scalar multiple of <m>\ve{e}_1</m>.
+        Now consider the list <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>. Once again, <m>\basis{B}_2</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_2</m> spans <m>W</m>, then it is a basis for <m>W</m>, and we are done.
+      </p>
+
+      <p>
+        If <m>\basis{B}_2</m> does not span <m>W</m>, then there exists a vector
         <m>\ve{w}_3 \in W</m> which is not a linear combination of <m>\ve{w}_1</m> and <m>\ve{w}_2</m>.
-        Now consider the list <m>\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}</m>. Again, <m>\basis{B}_3</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. If it does not span <m>W</m>, then there exists a vector <m>\ve{w}_4 \in W</m> which is not a linear combination of <m>\ve{w}_1, \ve{w}_2, \ve{w}_3</m>. So consider the list <m>\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose </m>. </p>
+        Now consider the list <m>\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}</m>. Again, <m>\basis{B}_3</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. If it does not span <m>W</m>, then there exists a vector <m>\ve{w}_4 \in W</m> which is not a linear combination of <m>\ve{w}_1, \ve{w}_2, \ve{w}_3</m>. So consider the list <m>\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose </m>.
+      </p>
 
-       <p>This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="bumping_off_lemma"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.</p>
-      </paragraphs>
-      <paragraphs>
-        <title>Proving that <m>\Dim(V) = \Dim(W) \Rightarrow W = V</m></title>
-        <p>
-          Suppose that <m>\Dim(W) = \Dim(V)</m> but that <m>W \neq V</m>. Since <m>W \neq V</m>, there exists a vector <m>\ve{v}</m> which is an element of <m>V</m> but not an element of <m>W</m>. Let <m>\basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_n \bclose</m> be a basis for <m>W</m>. We can add <m>\ve{v}</m> to <m>\basis{B}</m> to get the following list of vectors in <m>V</m>:
-          <me>
-            \basis{B}' = \bopen \ve{w}_1, \ldots, \ve{w}_n, \ve{v} \bclose.
-          </me>
-          Since <m>\ve{v}</m> cannot be written as a linear combination of <m>\ve{w}_1, \ldots, \ve{w}_n</m>, we conclude that <m>\basis{B}'</m> linearly lindependent, by <xref ref="lin_comb_prec_vec"/>. But then <m>\basis{B}'</m> is a list of <m>n+1</m> linearly independent vectors in an <m>n</m>-dimensional vector space <m>V</m>. This is impossible, by <xref ref="bumping_off_lemma"/>. Therefore our assumption was false, and we must have <m>W = V</m>.
-        </p>
-      </paragraphs>
+       <p>
+        This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="bumping_off_lemma"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.
+      </p>
+      <p>
+        <alert>Proving that <m>\Dim(V) = \Dim(W) \Rightarrow W = V</m></alert>
+      </p>
+      <p>
+        Suppose that <m>\Dim(W) = \Dim(V)</m> but that <m>W \neq V</m>. Since <m>W \neq V</m>, there exists a vector <m>\ve{v}</m> which is an element of <m>V</m> but not an element of <m>W</m>. Let <m>\basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_n \bclose</m> be a basis for <m>W</m>. We can add <m>\ve{v}</m> to <m>\basis{B}</m> to get the following list of vectors in <m>V</m>:
+        <me>
+          \basis{B}' = \bopen \ve{w}_1, \ldots, \ve{w}_n, \ve{v} \bclose.
+        </me>
+        Since <m>\ve{v}</m> cannot be written as a linear combination of <m>\ve{w}_1, \ldots, \ve{w}_n</m>, we conclude that <m>\basis{B}'</m> linearly lindependent, by <xref ref="lin_comb_prec_vec"/>. But then <m>\basis{B}'</m> is a list of <m>n+1</m> linearly independent vectors in an <m>n</m>-dimensional vector space <m>V</m>. This is impossible, by <xref ref="bumping_off_lemma"/>. Therefore our assumption was false, and we must have <m>W = V</m>.
+      </p>
     </proof>
   </subsection>
 
@@ -1110,13 +1130,11 @@
           we see that it is a basis of <m>\Poly_3</m>.
         </p>
 
-        <assemblage>
-          <p>
-            In <xref ref="chebyshev_example">Exercise</xref>,
-            you showed that <m>\ve{q}_0, \ldots, \ve{q}_3</m> is a basis for <m>\Poly_3</m> by checking it directly against the definition.
-            This new method is <em>different</em>!
-          </p>
-        </assemblage>
+        <p>
+          In <xref ref="chebyshev_example">Exercise</xref>,
+          you showed that <m>\ve{q}_0, \ldots, \ve{q}_3</m> is a basis for <m>\Poly_3</m> by checking it directly against the definition.
+          This new method is <em>different</em>!
+        </p>
       </statement>
     </example>
   </subsection>
@@ -1166,24 +1184,20 @@
         <ol>
           <li>
             <p>
-             True
-             <proof>
-              <p>
-             Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\dim V \geq n+1 </m> contradicting, the fact that <m> \dim V = n</m>.
-           </p>
-           </proof>
+              True
+            </p>
+            <p>
+              Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\dim V \geq n+1 </m> contradicting, the fact that <m> \dim V = n</m>.
            </p>
           </li>
 
           <li>
             <p>
-            True
-            <proof>
-              <p>
-                Try it yourself! Your proof will be very similar to the one given for <m>a</m>.
-              </p>
-            </proof>
-          </p>
+              True
+            </p>
+            <p>
+              Try it yourself! Your proof will be very similar to the one given for <m>a</m>.
+            </p>
           </li>
         </ol>
       </p>
@@ -1459,7 +1473,7 @@
         </ol>
       </p>
     </statement>
-    <solution>
+    <solution><p>
       <ol>
         <li>
           We omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m> since it is routine. Let us now construct a basis for <m> V </m>. Begin with a non-zero vector <m> \ve v_1 </m>  in <m> V </m>. We make the most obvious choice, let <m> \ve v_1 = x -2 </m>. Next pick any vector  <m> \ve v_2 </m> in <m> V </m> not in the span of <m> \left \{ \ve v_1 \right\} </m>. An obvious choice is <m> \ve v_2 = x(x-2) </m>. Since <m> V </m> is not all of <m>\Poly_2 </m>, we know that <m> \dim V \lt 3 </m>. Thus <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> is a basis for <m> V </m> and so <m> \dim V = 2 </m>.
@@ -1474,7 +1488,7 @@
           Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples of <m> \ve v_1 = x </m>. Hence <m> \bopen \ve v_1 \bclose </m> is a basis for <m> V </m> and so <m> \dim V = 1</m>.
         </li>
       </ol>
-    </solution>
+    </p></solution>
   </exercise>
 
   <exercise xml:id="ex_basis_no_deg_2">
@@ -1517,8 +1531,8 @@
               Without performing any explicit calculations, determine the dimension of <m>V</m>.
             </li>
 
-            <li>
-              Using SageMath, find a basis for <m>V</m>. (If you're unsure of the syntax, look at the examples in <xref ref = "Ch2Sec3BasisDimension"/>.) Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.
+            <li><p>
+              Using SageMath, find a basis for <m>V</m>. (If you're unsure of the syntax, look at the examples in <xref ref = "Ch2Sec3BasisDimension"/>.) Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.</p>
               <sage>
                 <input>
                 </input>
@@ -1543,8 +1557,8 @@
               Does the function <m> y_3 = y_1 + y_2 </m> also solve <xref ref = "diff_eqn_exerc_3"/>? By <xref ref = "diff_eqn_exist_unique"/>, <m>y_3</m> is the unique solution to an initial value problem involving <xref ref = "diff_eqn_exerc_3"/>. What are those initial conditions?
             </li>
 
-            <li>
-              Read through <link xml:link="plot_sage" href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </link>. Use SageMath to plot a graph of <m>y_1, y_2, y_3</m> on the interval <m>[0,10]</m> .
+            <li><p>
+              Read through <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Use SageMath to plot a graph of <m>y_1, y_2, y_3</m> on the interval <m>[0,10]</m> .</p>
               <sage>
                 <input>
                 </input>
@@ -1557,8 +1571,8 @@
 
   </exercises>
 
- <solutions divisional="solution answer" scope="ch2sec3exercises" xml:id="my_solutions" />
-
+ <solutions divisional="solution answer" xml:id="my_solutions" />
+<!-- Originally this had a scope attribute, but the code didn't validate with it -->
 
 </section>
 
