@@ -92,7 +92,6 @@
   </lemma>
 
   <proof>
-    <todo> Rephrase based on new lemma statement </todo>
     <p>
       Since <m>U</m> is a subspace,
       we know that it actually makes sense to
@@ -189,7 +188,8 @@
         Similarly a line <m>L</m> or a plane <m>P</m>
         through the origin in <m>\mathbb{R}^3</m> is a
         subspace of <m>\mathbb{R}^3</m>:
-        <sidebyside width="40%">
+      </p>
+      <sidebyside width="40%">
         <figure xml:id="line-in-R3-example-subspace">
           <caption>A line through the origin in <m>\mathbb{R}^3</m>.</caption>
           <image>
@@ -224,8 +224,7 @@
           </latex-image>
           </image>
         </figure>
-        </sidebyside>
-      </p>
+      </sidebyside>
     </statement>
   </example>
 
@@ -267,6 +266,7 @@
         <m>\ve{v}'</m> on <m>L</m>,
         we end up with a vector <m>\ve{v} + \ve{v}'</m>
         which does not lie on <m>L</m>:
+      </p>
         <sidebyside>
           <figure xml:id="line-not-through-origin-non-example">
             <caption>A line which does not pass through the origin is not closed under addition.</caption>
@@ -286,7 +286,6 @@
             </image>
         </figure>
       </sidebyside>
-      </p>
     </statement>
   </example>
 
@@ -313,52 +312,54 @@
 
     <exercise xml:id="prove_hyperplane_subspace">
       <statement>
-    Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. Show that
-        <me>
-    W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
-    </me>
-    is a subspace of <m>\mathbb{R}^n</m>.
+        <p>
+          Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. Show that
+              <me>
+          W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+          </me>
+          is a subspace of <m>\mathbb{R}^n</m>.
+        </p>
     </statement>
     <solution>
-    <paragraphs>
-      <title>Closed under addition.</title>
-      <p> Suppose <m>\ve{w}, \ve{w}' \in W</m>. </p>
-      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m> and <m>\ve{v} \dotp \ve{w}' = 0 </m>.  </p>
-      <p> We must show that <m>\ve{w} + \ve{w}' \in W</m>. </p>
-      <p> That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>. </p>
-      <p> Indeed, 
+      <p>
+        First we check whether it is closed under addition.
+      </p>
+      <p>
+        Suppose <m>\ve{w}, \ve{w}' \in W</m>.
+        That is, <m>\ve{v} \dotp \ve{w} = 0 </m> and <m>\ve{v} \dotp \ve{w}' = 0 </m>.
+        We must show that <m>\ve{w} + \ve{w}' \in W</m>.That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>.
+        Indeed,
         <md>
-      <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
-      <mrow> \amp = 0 + 0 </mrow>
-      <mrow> \amp = 0. </mrow>
-      </md>
+          <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
+          <mrow> \amp = 0 + 0 </mrow>
+          <mrow> \amp = 0. </mrow>
+        </md>
       </p>
-    </paragraphs>
 
-    <paragraphs>
-      <title>Contains the zero vector.</title>
-      <p> Since <m>\ve{v} \dotp \ve{0} = 0</m>, we conclude that <m>\ve{0} \in W</m>.
+      <p>
+        Next we check whether it contains the zero vector.
       </p>
-    </paragraphs>
+      <p>
+        Since <m>\ve{v} \dotp \ve{0} = 0</m>, we conclude that <m>\ve{0} \in W</m>.
+      </p>
 
-    <paragraphs>
-      <title>Closed under scalar multiplication.</title>
-      <p> Suppose <m>\ve{w} \in W</m> and <m>k</m> is a scalar. </p>
-      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m>.  </p>
-      <p> We must show that <m>k \smul \ve{w}  \in W</m>. </p>
-      <p> That is, we must show that <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>. </p>
-      <p> Indeed, 
+      <p>
+        Lastly, we check whether it is closed under scalar multiplication.
+      </p>
+      <p>
+        Suppose <m>\ve{w} \in W</m> and <m>k</m> is a scalar.
+        That is, <m>\ve{v} \dotp \ve{w} = 0 </m>.
+        We must show that <m>k \smul \ve{w}  \in W</m>.
+        That is, we must show that <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>.
+        Indeed,
         <md>
-      <mrow> \ve{v} \dotp (k \smul \ve{w}) \amp = k \smul (\ve{v} \dotp \ve{w}) </mrow>
-      <mrow> \amp = (k)(0) </mrow>
-      <mrow> \amp = 0. </mrow>
-      </md>
+          <mrow> \ve{v} \dotp (k \smul \ve{w}) \amp = k \smul (\ve{v} \dotp \ve{w}) </mrow>
+          <mrow> \amp = (k)(0) </mrow>
+          <mrow> \amp = 0 </mrow>
+        </md>.
       </p>
-    </paragraphs>
-  </solution>
+    </solution>
   </exercise>
-
-
 
   <example>
     <title>Continuous functions as a subspace</title>
@@ -507,11 +508,11 @@
   </p>
   </statement>
 
-  <assemblage>
-    <p>When we say simply '<m>p</m> is a polynomial' we will mean that <m>p</m> is a polynomial in a single variable, i.e. <m>p \in \Poly</m>. Note that <m>\Poly = \Poly[x]</m>. </p>
-  </assemblage>
-
   </example>
+
+  <aside>
+    <p>When we say simply <sq><m>p</m> is a polynomial</sq> we will mean that <m>p</m> is a polynomial in a single variable, i.e. <m>p \in \Poly</m>. Note that <m>\Poly = \Poly[x]</m>. </p>
+  </aside>
 
 <example xml:id="poly_vector_fields_example">
   <title>Polynomial vector fields</title>
@@ -609,7 +610,7 @@
     <p> A homogenous <m>n</m>th order linear ordinary differential equation on an interval <m>I</m> is a differential equation of the form
     <men xml:id="general_lin_diff_eqn">
         a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I
-    </men> 
+    </men>
     where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn"/>.</p>
 
 
@@ -623,16 +624,16 @@
       <men xml:id="a_soln_to_my_ode">
         y_1(x) = x^2 \sin (\log x)
       </men>
-      is a solution to <xref ref="first_example_2nd_order_ode_eqn"/>. Similarly, 
+      is a solution to <xref ref="first_example_2nd_order_ode_eqn"/>. Similarly,
       <men xml:id="a_2nd_soln_to_my_ode">
         y_2(x) = x^2 \cos (\log x)
       </men>
       is also a solution to <xref ref="first_example_2nd_order_ode_eqn"/>.
       </p>
-      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation. 
+      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation.
       </p>
       <sage>
-      
+
       <input>
         def solves_de(y):
          return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
@@ -643,10 +644,9 @@
       </input>
       </sage>
 
-      <assemblage>
-         <p>
-         Edit the code above to check whether <m>y_2</m> is a solution of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.</p>
-      </assemblage>
+      <p>
+        Edit the code above to check whether <m>y_2</m> is a solution of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.
+      </p>
 
       <p>We can also plot the graphs of <m>y_1</m> and <m>y_2</m>. Again, click on <c>Evaluate (Sage)</c>. </p>
       <sage>
@@ -657,10 +657,9 @@
         plot([y1, y2], (x, 0, 1), legend_label=['y1', 'y2'])
       </input>
       </sage>
-      <assemblage>
-        <p>Play with the code above, and plot some different functions.
-        </p>
-      </assemblage>
+      <p>
+        Play with the code above, and plot some different functions.
+      </p>
 
       </statement>
 
@@ -690,7 +689,7 @@
       <p>
      Show that <m>V</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun(I)</m>.
       </p>
-     </statement> 
+     </statement>
     </exercise>
 
     <p>So, by <xref ref="subspace_lem"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
@@ -719,7 +718,7 @@
         solves_de(2*y1 + 5*y2)
       </input>
     </sage>
-              
+
       </statement>
     </example>
 
@@ -741,7 +740,7 @@
             are solutions.
           </p>
           <p>
-            Use the SageMath script below to check whether the linear combination <m>y_1 + y_2</m> is also a solution. 
+            Use the SageMath script below to check whether the linear combination <m>y_1 + y_2</m> is also a solution.
             </p>
           <sage>
           <input>
@@ -785,7 +784,7 @@
     <p>SageMath reports that the general solution is given in terms of two unspecified constants <c>_K1</c> and <c>_K2</c> as <c>(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</c>.
     </p>
     <p>
-    If we set <c>_K1</c> equal to 1 and <c>_K2</c> equal to 0 in the general solution, we will get a particular solution <m>y_1</m> of the differential equation. 
+    If we set <c>_K1</c> equal to 1 and <c>_K2</c> equal to 0 in the general solution, we will get a particular solution <m>y_1</m> of the differential equation.
   </p>
     <sage>
         <input>
@@ -801,11 +800,13 @@
         y1
         </input>
       </sage>
-    <p>SageMath is telling us that <m>y_1 = e^{-x} \sin(2x)</m> is a particular solution. </p>
-    <assemblage>
-      <p>
-    Edit the code to set <c>_K2</c> equal to 0 and <c>_K1</c> equal to 1 in the general solution to get a different particular solution <m>y_2</m>. What is <m>y_2</m>? </p>
-  </assemblage>
+    <p>
+      SageMath is telling us that <m>y_1 = e^{-x} \sin(2x)</m> is a particular solution.
+    </p>
+
+    <p>
+      Edit the code to set <c>_K2</c> equal to 0 and <c>_K1</c> equal to 1 in the general solution to get a different particular solution <m>y_2</m>. What is <m>y_2</m>?
+    </p>
 
     </statement>
     </example>
@@ -923,27 +924,26 @@
 
 <exercisegroup>
   <introduction>
-<p>The next 4 exercises will help acquaint the reader with the concept of the <emp>sum of two subspaces</emp>. First, we'll need a definition.</p>
-
-<definition xml:id="def_sum_subspace">
-  <statement>
     <p>
-Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
-<me>
-U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
-</me>
-</p>
-</statement>
-</definition>
-<p>
-  In the exercises below, <m>V,U,W</m> will be as above.
-</p>
-</introduction>
-<exercise xml:id="sum_of_subspaces_is_subspace">
+      The next 4 exercises will help acquaint the reader with the concept of the <em>sum of two subspaces</em>. First, we'll need to define what that is.
+    </p>
+
+    <p>
+      Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
+      <me>
+        U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
+      </me>
+    </p>
+
+    <p>
+      In the exercises below, <m>V,U,W</m> will be as above.
+    </p>
+  </introduction>
+  <exercise xml:id="sum_of_subspaces_is_subspace">
     <statement>
       <p>
-      Show that <m>U + V</m> is a subspace of <m>V</m>.
-    </p>
+        Show that <m>U + V</m> is a subspace of <m>V</m>.
+      </p>
     </statement>
   </exercise>
 
@@ -966,8 +966,8 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
    <exercise>
     <statement>
       <p>
-      Can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <m>\mathbb{R}^2</m>? Similarly, can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <emp>not</emp> all of <m>\mathbb{R}^2</m>?
-    </p>
+        Can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <m>\mathbb{R}^2</m>? Similarly, can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <em>not</em> all of <m>\mathbb{R}^2</m>?
+      </p>
     </statement>
   </exercise>
 </exercisegroup>
@@ -976,9 +976,5 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
 <solutions divisional="solution answer" />
 
 
-
 </section>
-
-
-
 
