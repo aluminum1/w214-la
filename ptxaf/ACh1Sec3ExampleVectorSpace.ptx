@@ -17,19 +17,19 @@
     </p>
   </introduction>
 
- <example xml:id="B_is_vs">
+  <example xml:id="B_is_vs">
     <title>Die versameling <m>B</m> is 'n vektorruimte.</title>
     <p> <alert>1. Definieer 'n versameling <m>B</m></alert> </p>
     <p>
       Ons definieer
       <men xml:id="def_of_b">
-        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\} 
+        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\}
       </men>.
     </p>
 
     <p> <alert>2. Definieer optelling, die nul-vektor en
     skalaarvermenigvuldiging.</alert></p>
-    <dl>
+    <p><dl>
      <li>
       <title>D1. Optelling</title>
       <p>
@@ -43,7 +43,7 @@
         <m>v_1 - v_2 + v_3 = 0</m>.
         Ons definieer <m>\ve{u} + \ve{v}</m> as:
         <men xml:id="def_add_in_B">
-          \ve{u} + \ve{v} := 
+          \ve{u} + \ve{v} :=
           (u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3)
         </men>.
       </p>
@@ -61,7 +61,7 @@
         Kom ons kyk:
         <md>
           <mrow>\amp (u_1 + v_1) - (u_2 + v_2) + (u_3 + v_3)</mrow>
-          <mrow>\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3) 
+          <mrow>\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3)
           \amp \amp  \mbox{(Hierdie algebra{\"i}ese
           stap is waar vir gewone getalle)}</mrow>
           <mrow>\amp = 0 + 0 \amp \amp  \mbox{(want \(\ve{u}\) en \(\ve{v}\) is in \(B\))}</mrow>
@@ -91,7 +91,7 @@
       <p>
         Ons moet seker maak dat dit sin maak.
         Is <m>(0,0,0)</m> regtig 'n element van <m>B</m>?
-        Met ander woorde, bevredig dit vergelyking 
+        Met ander woorde, bevredig dit vergelyking
         <xref ref="def_of_b" />?
         Ja, omdat <m>0 - 0 + 0 = 0</m>.
         So ons het 'n wel-gedefinieerde nul-vektor.
@@ -124,7 +124,7 @@
         <xref ref="def_of_b" /> bevredig:
         <md>
           <mrow>\amp  ku_1 - ku_2 + ku_3</mrow>
-          <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp  
+          <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp
           \mbox{(Hierdie algebra{\"i}ese stap is
           waar vir gewone getalle)}</mrow>
           <mrow>\amp = k 0 \amp \amp  \mbox{(want \(\ve{u}\) is in \(B\))}</mrow>
@@ -139,7 +139,7 @@
         skalaarvermenigvuldigingsbewerking op <m>B</m> gevind.
       </p>
     </li>
-  </dl>
+  </dl></p>
 
   <p><alert>3. Maak seker die data bevredig die reëls.</alert></p>
   <p>
@@ -152,18 +152,18 @@
     en dat <m>k</m> en <m>l</m> reële getalle is.
   </p>
 
-  <dl>
+  <p><dl>
     <li><title>R1</title>
     <p>
       Ons gaan na:
       <md>
         <mrow>\amp  \ve{v} + \ve{w}\tag{R1.}</mrow>
-        <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) 
+        <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3)
         \amp \amp  \mbox{(definisie van optelling in \(B\))}</mrow>
-        <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp 
+        <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp
         \mbox{(want  \(x + y = y + x\) is waar vir
         re{\"e}le getalle)}</mrow>
-        <mrow>\amp = \ve{w} + \ve{v}. \amp \amp  
+        <mrow>\amp = \ve{w} + \ve{v}. \amp \amp
         \mbox{(definisie van optelling in \(B\))}</mrow>
       </md>
     </p>
@@ -175,14 +175,14 @@
       Ons gaan na:
       <md>
         <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
-        <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} \amp \amp 
+        <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} \amp \amp
         \mbox{(definisie van optelling in \(B\))}</mrow>
-        <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp 
+        <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp
         \mbox{(definisie van optelling in \(B\))}</mrow>
-        <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp 
+        <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp
         \mbox{(want \((x + y) + z = x + (y + z)\) is waar
         vir re{\"e}le getalle)}</mrow>
-        <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp 
+        <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp
         \mbox{(definisie van optelling in \(B\))}</mrow>
         <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \mbox{(definisie van optelling in \(B\))} </mrow>
       </md>.
@@ -195,11 +195,11 @@
       Ons gaan na:
       <md>
         <mrow>\amp \ve{0} + \ve{v}</mrow>
-        <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp  
+        <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp
         \mbox{(definisie van die nul-vektor in\(B\)}</mrow>
         <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp
         \mbox{(definisie van optelling in \(B\))}</mrow>
-        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  
+        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp
         \mbox{(want \(x + 0 = x\) is waar vir re{\"e}le getalle)}</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>.
@@ -276,7 +276,7 @@
       </md>.
     </p>
     </li>
-  </dl>
+  </dl></p>
   </example>
 
   <exercises>
