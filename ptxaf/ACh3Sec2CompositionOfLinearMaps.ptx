@@ -145,13 +145,11 @@
         Daarom is <m>D \circ A = \id_{\Poly_n}</m>.
       </p>
 
-      <assemblage>
-        <p>
-          Om die waarheid te s&#xea;, die stelling dat
-          <m>D \circ A = \id_{\Poly_n}</m> is presies Deel I van die
-          Fundamentele Stelling van Calculus, toegepas op die spesiale geval van polinome!
-        </p>
-      </assemblage>
+      <p>
+        Om die waarheid te s&#xea;, die stelling dat
+        <m>D \circ A = \id_{\Poly_n}</m> is presies Deel I van die
+        Fundamentele Stelling van Calculus, toegepas op die spesiale geval van polinome!
+      </p>
     </solution>
   </example>
 
