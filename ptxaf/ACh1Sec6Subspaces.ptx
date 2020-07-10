@@ -367,7 +367,7 @@
       <p>
         Die versameling
         <me>
-          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ kontinu}  \}
+          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \text{ kontinu}  \}
         </me>
         van alle kontinue funksies op die interval <m>I</m> is
         'n deelruimte van die versameling <m>\Fun(I)</m> van
@@ -412,7 +412,7 @@
       <p>
         Op soortgelyke wyse is die versameling
         <me>
-          \Diff(I) := \{ \ve{f}: (0,1) \rightarrow \mathbb{R}, \, \ve{f} \mbox{differensieerbaar}  \}
+          \Diff(I) := \{ \ve{f}: (0,1) \rightarrow \mathbb{R}, \, \ve{f} \text{differensieerbaar}  \}
         </me>
         van differensieerbare fuksies op die oop interval <m>I</m> 'n <xref ref="defn-subspace" text="custom">deelruimte</xref> van <m>\Fun (I)</m>.
       </p>
