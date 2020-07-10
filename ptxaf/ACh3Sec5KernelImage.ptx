@@ -442,7 +442,7 @@
     </solution>
   </example>
 
-  <example>
+  <example xml:id="old_example_ker_range_poly">
     <statement>
       <p>
         Oorweeg die funksie
