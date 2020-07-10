@@ -930,7 +930,7 @@
 
     <p>
       Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
-      <me>
+      <me xml:id="def_sum_subspace">
         U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
       </me>
     </p>
