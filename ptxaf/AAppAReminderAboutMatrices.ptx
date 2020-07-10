@@ -10,14 +10,13 @@
     <m>\mat{A}</m> is 'n reghoekige skikking van getalle,
     met <m>n</m> rye en <m>m</m> kolomme:
     <me>
-      \mat{A} = \left[
-      \begin{array}{cccc}
+      \mat{A} =
+      \begin{bmatrix}
       \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1m} \\
       \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2m} \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nm}
-      \end{array}
-      \right]
+      \end{bmatrix}
     </me>
     Elke <m> A_{ij} </m> dui hier 'n re&#xeb;le getal aan.
   </p>
@@ -45,14 +44,13 @@
   <p>
     Daar is die <em>nul <m>n \times m</m>-matriks</em>:
     <me>
-      \mat{0} = \left[
-      \begin{array}{cccc}
+      \mat{0} =
+      \begin{bmatrix}
       0 \amp  0 \amp   \cdots \amp 0 \\
       0 \amp  0 \amp   \cdots \amp  0 \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       0 \amp  0 \amp  \cdots \amp  0
-      \end{array}
-      \right]
+      \end{bmatrix}
     </me>
   </p>
 
