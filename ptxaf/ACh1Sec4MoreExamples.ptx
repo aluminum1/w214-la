@@ -685,8 +685,8 @@
       (a_1, a_2) \oplus (b_1, b_2) := (a_1 + b_2, a_2 + b_1).
     </me>
     <ol>
-      <li> Bevredig hierdie bewerking <xref ref="R1" text="title"></xref>? </li>
-      <li> Bevredig hierdie bewerking <xref ref="R2" text="title"></xref>? </li>
+      <li> Bevredig hierdie bewerking <xref ref="R1" text="title" />? </li>
+      <li> Bevredig hierdie bewerking <xref ref="R2" text="title" />? </li>
     </ol>
     </p>
 </statement>
