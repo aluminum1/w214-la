@@ -128,7 +128,7 @@
       Deur <m>T</m> aan beide kante van <xref ref="eigenvalue-1st-eqn" /> toe te pas, kry ons 'n nuwe vergelyking:
       <mdn>
         <mrow>T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) \nonumber</mrow>
-        <mrow>\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  \mbox{(\(T\) is line{\^e}r)} \nonumber</mrow>
+        <mrow>\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  (T \text{ is line{\^e}r)} \nonumber</mrow>
         <mrow xml:id="eigenvalue-2nd-eqn">\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2  \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp (T(\ve{v}_r) = \lambda_r \ve{v}_r)</mrow>
       </mdn>
     </p>
@@ -299,7 +299,7 @@
                 <mrow>\amp = 6 + 6x</mrow>
                 <mrow>\amp = 2(3 + 3x)</mrow>
                 <mrow>\amp = (2q_2)(x)</mrow>
-                <mrow>\therefore T(q_2) \amp = 2q_1 \mbox{ (soos verwag!)}</mrow>
+                <mrow>\therefore T(q_2) \amp = 2q_1 \text{ (soos verwag!)}</mrow>
               </md>
             </p>
           </li>
@@ -353,7 +353,7 @@
                 <mrow>\amp = 36 + 24x + 4x^2</mrow>
                 <mrow>\amp = 4(9 + 6x + x^2)</mrow>
                 <mrow>\amp = (4q_4)(x)</mrow>
-                <mrow>\therefore T(q_4) \amp = 4q_4 \mbox{ (soos verwag!)}</mrow>
+                <mrow>\therefore T(q_4) \amp = 4q_4 \text{ (soos verwag!)}</mrow>
               </md>
             </p>
           </li>
