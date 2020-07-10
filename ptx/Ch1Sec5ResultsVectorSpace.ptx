@@ -55,7 +55,7 @@
         If <m>V</m> is a vector space,
         then for all <m>\ve{v} \in V</m> we have
         <men>
-          -\ve{v} + \ve{v} = \ve{0} \mbox{ and }  \ve{v} + (-\ve{v}) = \ve{0}
+          -\ve{v} + \ve{v} = \ve{0} \text{ and }  \ve{v} + (-\ve{v}) = \ve{0}
         </men>.
       </p>
     </statement>
@@ -66,14 +66,14 @@
           <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \text{(R7)}</mrow>
           <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \text{(R5)}</mrow>
           <mrow>\amp = 0 \smul\ve{v}</mrow>
-          <mrow>\amp = \ve{0} \amp \amp  \mbox{(R8)}</mrow>
+          <mrow>\amp = \ve{0} \amp \amp  \text{(R8)}</mrow>
         </md>
       </p>
       <p>
         In addition,
         <md>
-          <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \mbox{(R1)}</mrow>
-          <mrow>\amp  = \ve{0} \amp \amp  \mbox{(by previous proof)}</mrow>
+          <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \text{(R1)}</mrow>
+          <mrow>\amp  = \ve{0} \amp \amp  \text{(by previous proof)}</mrow>
         </md>
       </p>
     </proof>
@@ -187,13 +187,13 @@
         We do this using the rules as follows:
         <md>
           <mrow>\ve{v} + 7 \smul\ve{x} \amp  = \ve{w}</mrow>
-          <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \smul\ve{x}) \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(Added \(-\ve{v}\) on left to both sides)}</mrow>
-          <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \smul\ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(used R2 on LHS)}</mrow>
-          <mrow>\therefore  \ve{0} + 7 \smul\ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(used } <xref ref="add_inv"/> \mbox{ on LHS)}</mrow>
-          <mrow>\therefore  7 \smul\ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \mbox{(used R3a on LHS)}</mrow>
-          <mrow>\therefore  \frac{1}{7} \smul(7 \smul\ve{x}) \amp  = \frac{1}{7} \smul(-\ve{v} + \ve{w}) \amp \amp  \mbox{(scalar multiplied both sides by \(\frac{1}{7}\))}</mrow>
-          <mrow>\therefore  (\frac{1}{7} 7) \smul  \ve{x} \amp  = \frac{1}{7} \smul(-\ve{v} + \ve{w}) \amp \amp  \mbox{(used R6 on LHS)}</mrow>
-          <mrow>\therefore  1 \smul\ve{x} \amp  =  \frac{1}{7} \smul(-\ve{v} + \ve{w})  \amp \amp  \mbox{(multiplied \(\frac{1}{7}\) with \(7\))}</mrow>
+          <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \smul\ve{x}) \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(Add } -\ve{v} \text{ to left of both sides)}</mrow>
+          <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \smul\ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(R2 on LHS)}</mrow>
+          <mrow>\therefore  \ve{0} + 7 \smul\ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  <xref ref="add_inv"/> \text{ on LHS)}</mrow>
+          <mrow>\therefore  7 \smul\ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \text{(R3a on LHS)}</mrow>
+          <mrow>\therefore  \frac{1}{7} \smul(7 \smul\ve{x}) \amp  = \frac{1}{7} \smul(-\ve{v} + \ve{w}) \amp \amp  \text{(scalar multiplied both sides by } \frac{1}{7})}</mrow>
+          <mrow>\therefore  (\frac{1}{7} 7) \smul  \ve{x} \amp  = \frac{1}{7} \smul(-\ve{v} + \ve{w}) \amp \amp  \text{(R6 on LHS)}</mrow>
+          <mrow>\therefore  1 \smul\ve{x} \amp  =  \frac{1}{7} \smul(-\ve{v} + \ve{w})  \amp \amp  \text{(multiplied } frac{1}{7} \text{ with } 7)}</mrow>
           <mrow>\therefore  \ve{x} \amp  =  \frac{1}{7} \smul(-\ve{v} + \ve{w}) \amp \amp  \text{(R7)}</mrow>
         </md>
       </p>
