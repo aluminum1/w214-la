@@ -323,7 +323,7 @@
     </statement>
     <solution>
       <p>
-        Met die sommeringsformules vir <m>\sin</m> en <m>\cos</m> soos
+        Met die optellingsformules vir <m>\sin</m> en <m>\cos</m> soos
         in <xref ref="trig_ex_early">Oefening</xref> bereken ons
         <men xml:id="expansion_of_nasty_trig">
           \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{3}{4} \cos x - \frac{1}{2} \cos 2x - \frac{1}{4} \cos 3x
