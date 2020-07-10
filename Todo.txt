@@ -1,19 +1,26 @@
 To do list:
 
 - In 1.4 the English denotes functions f while Afrikaans does \mathbf{f}. Perhaps use a macro \fun{} that can be changed in one place?
-- Change \mbox to \text to conform to specifications in Sample Article. Also make sure there is no "maths inside a text box"
 - Can the first two lemmas in 1.5 be written using more words?
 - Decide whether to move Bumping Off Proposition to section on bases where it can be explained that its relevance is to show that two bases have the same size.
 - Change its name to the more standard: Steinitz Exchange Lemma or Steinitz Replacement Theorem: https://en.wikipedia.org/wiki/Steinitz_exchange_lemma
-- Give all xref's a text=""
-- There is some inconsistency in using either \left[\begin{array}... or \begin{bmatrix} for matrices. For now I don't care much about this.
 - First person to first person plural? (I to we)
 - Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the assemblage in Ch2Sec4 line 165 needs reconsidering too.
 - Rob Beezer says that CDATA should never be necessary - is it easier in a tikz picture, though? I guess you have to be careful of things like arrow heads -->
 - Create index?
-- Consistency between \dim and \Dim?
-- Make sure all <proofs> are inside the <result> tags and not outside
+- Ch3Sec 3 line 6 & 25: images not allowed in text mode --- rework.
+- Ch2Sec4 (in a few places actually) I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
+
+Consistency and technique:
+- Replace cmatrix and cvector with \begin{bmatrix}
+- There is some inconsistency in using either \left[\begin{array}... or \begin{bmatrix} for matrices. For now I don't care much about this.
 - nonzero vs non-zero and other
+- Consistency between \dim and \Dim?
+- Make sure all <proofs> are inside the <result> tags and not outside (?)
+- Change \mbox to \text to conform to specifications in Sample Article. Also make sure there is no "maths inside a text box"
+- Change all &xea; to ê, etc.
+- All phrases in 'quotes' -> <sq> or <q>
+
 
 Afrikaans:
 - Proof of Lemma id="subspace-lem" in Ch1Sec6, line 95
@@ -21,7 +28,6 @@ Afrikaans:
 - Ch2Sec1 translate from line 38 and from 195 and from 345
 - Ch2Sec2 from 104, 149, 451
 - Ch2Sec3 from 116, 796, 980, 1164, 1242, 1283, 1343, 1385, 1466,
-- Ch2Sec4 I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
 - Ch2Sec4 Proposition on line 12 still has different versions for Eng and Afr.
 - Ch2Sec4 line 265, 440, 499, 561, (624 & 692 commented out), 750
 - Ch2Sec5 line 436
@@ -30,11 +36,7 @@ Afrikaans:
 - Ch3Sec4 line 296, 481
 - Ch3Sec5 line 943, 1071, 1174, (1322 & 1338 add sol)
 - Check that all of the following are consistent:
-  - addition -> optelling (not sommering)
-  - well-defined -> wel-gedefinieerd (not goedgedefinieerd)
   - span (verb) -> onderspan (not span - verbs only)
-  - isomorphic -> isomorf (not isomorfies)
-  - composition -> samestelling (not komposisie)
   - operator (V to V) -> operator
   - operator (+) -> bewerking
   - verify -> bevestig?, nagaan?, toets?
@@ -50,4 +52,4 @@ Use??
 - <reading-questions>?
 
 
-- Ch3Sec1 captions line 208, 258,
+- Throughout there are some figure with <caption> tags, but no text.
