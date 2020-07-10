@@ -269,9 +269,9 @@
     <p>
       (Ons basisomskakelingsmatriks <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> is
       so gevorm.) Dan kan ons die produk van hierdie matriks met 'n kolomvektor soos volg bereken:
-      <me>
+      <men xml:id="column_vector_multiplication">
         \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}
-      </me>
+      </men>
     </p>
 
     <exercise>
@@ -536,7 +536,7 @@
         </p>
       </li>
       <li> <p>
-        Multiply the matrix you computed in <xref ref="ch-basis-exercise1" text="title">(c)</xref> with the column vector you computed in <xref ref="ch-basis-exercise2" text="title">(a)</xref>. That is, compute the product <m>\mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{w}]_{\basis{B}}</m>. Is your answer the same as what you obtained in <xref ref="ch-basis-exercise3" text="title">(b)</xref>?
+        Multiply the matrix you computed in <xref ref="ch-basis-exercise1" >(c)</xref> with the column vector you computed in <xref ref="ch-basis-exercise2" >(a)</xref>. That is, compute the product <m>\mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{w}]_{\basis{B}}</m>. Is your answer the same as what you obtained in <xref ref="ch-basis-exercise3" >(b)</xref>?
       </p></li>
     </ol>
     </statement>
