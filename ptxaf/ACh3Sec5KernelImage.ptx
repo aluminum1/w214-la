@@ -20,7 +20,7 @@
         <m>\ve{v} \in V</m>.
         Dit is,
         <me>
-          \Be(T) := \{ \ve{w} \in W : \ve{w} = T(\ve{v}) \mbox{ vir 'n \(\ve{v} \in V\)}  \}
+          \Be(T) := \{ \ve{w} \in W : \ve{w} = T(\ve{v}) \text{ vir 'n } \ve{v} \in V   \}
         </me>
       </p>
     </statement>
@@ -279,7 +279,7 @@
         waar <m>\theta</m> die hoek tussen <m>\ve{a}</m> en <m>\ve{v}</m> is,
         sien ons dat
         <me>
-          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow \mbox{\(\ve{v}=\ve{0}\) of \(\theta = 0\) of \(\theta= \pi\)}
+          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow \ve{v}=\ve{0} \text{ of }\theta = 0\text{ of }\theta= \pi
         </me>.
       </p>
 
@@ -463,11 +463,11 @@
         Laat <m>p,q \in \Poly_2</m>.
         Dan
         <md>
-          <mrow>T(p + q) \amp = ( (p+q)(1), \, (p+q)'(1) )  \amp \amp  \mbox{(Defn van \(T\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, (p+q)'(1) ) \amp \amp  \mbox{(Defn van die funksie \(p+q\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, (p'+q')(1) ) \amp \amp  \mbox{(\((p+q)' = p'+q'\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, p'(1) + q'(1)) \amp \amp  \mbox{(Defn van \(p' + q'\))}</mrow>
-          <mrow>\amp = (p(1), \, p'(1)) + (q(1), \, q'(1)) \amp \amp  \mbox{(Defn of \(+\) in \(\mathbb{R}^2\))}</mrow>
+          <mrow>T(p + q) \amp = ( (p+q)(1), \, (p+q)'(1) )  \amp \amp  \text{(Defn van } T)</mrow>
+          <mrow>\amp = (p(1) + q(1), \, (p+q)'(1) ) \amp \amp  \text{(Defn van die funksie } p+q )</mrow>
+          <mrow>\amp = (p(1) + q(1), \, (p'+q')(1) ) \amp \amp  ((p+q)' = p'+q')</mrow>
+          <mrow>\amp = (p(1) + q(1), \, p'(1) + q'(1)) \amp \amp  \text{(Defn van } p' + q' )</mrow>
+          <mrow>\amp = (p(1), \, p'(1)) + (q(1), \, q'(1)) \amp \amp  \text{(Defn van optelling in } \mathbb{R}^2)</mrow>
           <mrow>\amp = T(p) + T(q)</mrow>
         </md>.
       </p>
@@ -499,7 +499,7 @@
         waar <m>t \in \mathbb{R}</m>.
         Daarom
         <me>
-          \Ker(T) =  \left\{ \mbox{polinome van die vorm \( -t -2t x + t x^2\)  waar  \(t \in \mathbb{R}\) }  \right\}
+          \Ker(T) =  \left\{ \text{polinome van die vorm }  -t -2t x + t x^2 \text{ waar } t \in \mathbb{R} \right\}
         </me>.
       </p>
 
@@ -542,7 +542,7 @@
         Let daarop dat <m>T(p) = (v,w)</m>.
         Daarom,
         <me>
-          \Be(T) = \{\mbox{all }  (v,w) \in \mathbb{R}^2 \} = \mathbb{R}^2
+          \Be(T) = \{\text{alle }  (v,w) \in \mathbb{R}^2 \} = \mathbb{R}^2
         </me>.
       </p>
 
@@ -775,7 +775,7 @@
         <mrow>\ve{w} \amp =   T(\ve{v})</mrow>
         <mrow>\amp = T(a_1 \ve{e}_1 + \cdots + a_k \ve{e}_k + b_1 \ve{f}_1 + \cdots +  b_p \ve{f}_p)</mrow>
         <mrow>\amp = a_1 T(\ve{e}_1) + \cdots + a_k T(\ve{e}_k) + b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p)</mrow>
-        <mrow>\amp = b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p) \amp \amp  \mbox{(\(\ve{e}_i \in \Ker(T)\))}</mrow>
+        <mrow>\amp = b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p) \amp \amp  (\ve{e}_i \in \Ker(T))</mrow>
       </md>
       sodat <m>\ve{w}</m> wel 'n line&#xea;re kombinasie van die vektore in <m>\basis{D}</m> is.
     </p>
@@ -1236,7 +1236,7 @@
         where <m>\theta</m> is the angle from <m>\ve{a}</m> to <m>\ve{\theta}</m>,
         we see that
         <me>
-          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow  \mbox{\(\ve{v}=\ve{0}\) or \(\theta = 0\) or \(\theta= \pi\)}
+          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow \ve{v}=\ve{0}\text{ of }\theta = 0\text{ of }\theta= \pi
         </me>.
       </p>
 
