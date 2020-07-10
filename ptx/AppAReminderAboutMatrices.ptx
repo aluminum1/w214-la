@@ -10,14 +10,13 @@
     <m>\mat{A}</m> is  a rectangular array of numbers,
     with <m>n</m> rows and <m>m</m> columns:
     <me>
-      \mat{A} = \left[
-      \begin{array}{cccc}
+      \mat{A} =
+      \begin{bmatrix}
       \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1m} \\
       \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2m} \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nm}
-      \end{array}
-      \right]
+      \end{bmatrix}
     </me>
     Here, each <m> A_{ij}</m> denotes a real number.
   </p>
@@ -45,14 +44,13 @@
   <p>
     There is the <em>zero <m>n \times m</m> matrix</em>:
     <me>
-      \mat{0} = \left[
-      \begin{array}{cccc}
+      \mat{0} =
+      \begin{bmatrix}
       0 \amp  0 \amp   \cdots \amp 0 \\
       0 \amp  0 \amp   \cdots \amp  0 \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       0 \amp  0 \amp  \cdots \amp  0
-      \end{array}
-      \right]
+      \end{bmatrix}
     </me>
   </p>
 
