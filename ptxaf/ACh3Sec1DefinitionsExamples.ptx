@@ -775,7 +775,7 @@
         <m>\mat{e}_1</m> en <m>\mat{e}_2</m> na <em>enige
         funksies</em> <m>f_1</m> en <m>f_2</m> wat ons wil te stuur,
         en ons is gewaarborg dat
-        dit 'n goed-gedefinieerde line&#xea;re afbeelding <m>T : \Col_2 \rightarrow \Fun(\mathbb{R})</m> sal gee.
+        dit 'n wel-gedefinieerde line&#xea;re afbeelding <m>T : \Col_2 \rightarrow \Fun(\mathbb{R})</m> sal gee.
         Byvoorbeeld, ons stel <m>f_1 (x) = \sin x</m> en <m>f_2 (x) = |x|</m>.
         Dan is die algemene formule vir <m>T</m>
         <me>
