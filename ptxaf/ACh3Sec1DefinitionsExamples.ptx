@@ -192,10 +192,10 @@
       <p>
         Kom ons bevestig optelling algebra&#xef;es:
         <me>
-          T \left ( (x_1, y_1 \right)) + \left((x_2, y_2) \right) \stackrel{\mbox{?} }{=} T\left((x_1, y_1) \right) + T\left((x_2, y_2)\right)
+          T \left ( (x_1, y_1 \right)) + \left((x_2, y_2) \right) \stackrel{\text{?} }{=} T\left((x_1, y_1) \right) + T\left((x_2, y_2)\right)
         </me>
         <md>
-          <mrow>\mbox{LK}  \amp = T \left( (x_1 + x_2, y_1 + y_2) \right) \amp  \mbox{RK} \amp = x_1 + x_2</mrow>
+          <mrow>\text{LK}  \amp = T \left( (x_1 + x_2, y_1 + y_2) \right) \amp  \text{RK} \amp = x_1 + x_2</mrow>
           <mrow>\amp = x_1 + x_2</mrow>
         </md>
       </p>
@@ -248,7 +248,7 @@
         Die funksie
         <md>
           <mrow>R_\theta : \mathbb{R}^2 \amp  \rightarrow \mathbb{R}^2</mrow>
-          <mrow>\ve{v} \amp  \mapsto \mbox{rotasie van \(\ve{v}\) anti-kloksgewys met 'n hoek \(\theta\)}</mrow>
+          <mrow>\ve{v} \amp  \mapsto \text{rotasie van } \ve{v} \text{ anti-kloksgewys met 'n hoek } \theta</mrow>
         </md>
         is 'n line&#xea;re afbeelding,
         met 'n soortgelyke grafiese argument as in <xref ref="projection_map_example">Voorbeeld</xref>.
@@ -705,8 +705,8 @@
         \cdots + [\ve{v} + \ve{v}']_{\basis{B}, m} \ve{w}_m</mrow>
         <mrow>\amp = \big([\ve{v}]_{\basis{B}, 1} + [\ve{v}']_{\basis{B}, 1} \big)
         \ve{w}_1 + \cdots + \big([\ve{v}]_{\basis{B}, m} +
-        [\ve{v}']_{\basis{B}, m}\big) \ve{w}_m \amp \amp  \mbox{(\([\ve{v} +
-        \ve{v}']_\basis{B} = [\ve{v}]_\basis{B} + [\ve{v}']_\basis{B}\))}</mrow>
+        [\ve{v}']_{\basis{B}, m}\big) \ve{w}_m \amp \amp  ([\ve{v} +
+        \ve{v}']_\basis{B} = [\ve{v}]_\basis{B} + [\ve{v}']_\basis{B})</mrow>
         <mrow>\amp =  [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots +
         [\ve{v}]_{\basis{B}, m} \ve{w}_m   +</mrow>
         <mrow>\amp  \qquad \qquad
@@ -738,14 +738,14 @@
         <mrow>S (\ve{v}) \amp = S\big([\ve{v}]_{\basis{B}, 1} \ve{e}_1 + \cdots +
         [\ve{v}]_{\basis{B}, m} \ve{e}_m\big)</mrow>
         <mrow>\amp = [\ve{v}]_{\basis{B}, 1} S(\ve{e}_1) + \cdots +
-        [\ve{v}]_{\basis{B}, m} S(\ve{e}_m) \amp  \mbox{(\(S\) is line{\^e}r)}</mrow>
+        [\ve{v}]_{\basis{B}, m} S(\ve{e}_m) \amp (S \text{ is line{\^e}r)}</mrow>
         <mrow>\amp = [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}]_{\basis{B},
-        m} \ve{w}_m \amp  \mbox{(want \(S(\ve{e}_i) = \ve{w}_i\))}</mrow>
+        m} \ve{w}_m \amp  \text{(want } S(\ve{e}_i) = \ve{w}_i)</mrow>
         <mrow>\amp = [\ve{v}]_{\basis{B}, 1} T(\ve{e}_1) + \cdots +
-        [\ve{v}]_{\basis{B}, m} T(\ve{e}_m) \amp  \mbox{(want \(T(\ve{e}_i) =
-        \ve{w}_i\))}</mrow>
+        [\ve{v}]_{\basis{B}, m} T(\ve{e}_m) \amp  \text{(want } T(\ve{e}_i) =
+        \ve{w}_i)</mrow>
         <mrow>\amp = T([\ve{v}]_{\basis{B}, 1} \ve{e}_1 +  \cdots +
-        [\ve{v}]_{\basis{B}, m} \ve{e}_m) \amp  \mbox{(\(T\) is line{\^e}r)}</mrow>
+        [\ve{v}]_{\basis{B}, m} \ve{e}_m) \amp  (T \text{ is line{\^e}r)}</mrow>
         <mrow>\amp = T(\ve{v})</mrow>
       </md>.
     </p>
