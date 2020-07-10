@@ -25,7 +25,7 @@
         bestaan, sodat <m>M</m> die nulversameling van <m>f</m> is,
         en as vir alle <m>\ve{p} \in M</m>,
         <me>
-          \nabla_{\ve{p}} f \mbox{ bestaan en is ongelyk aan }  \ve{0}
+          \nabla_{\ve{p}} f \text{ bestaan en is ongelyk aan }  \ve{0}
         </me>.
       </p>
     </statement>
@@ -80,7 +80,7 @@
         Die gradi&#xeb;nt bestaan duidelik oral.
         Verder, vir 'n punt <m>\ve{p} = (a,b)</m> op <m>M</m>, het ons
         <me>
-          \nabla_\ve{p} f = (2b, -2a)  \mbox{where }  b^2 = 1 + a^2
+          \nabla_\ve{p} f = (2b, -2a)  \text{ waar }  b^2 = 1 + a^2
         </me>
       </p>
 
@@ -283,7 +283,7 @@
       <p>
         Ons het reeds die gradi(&#xeb;)nt van <m>f</m> by 'n punt <m>\ve{p} = (a,b) \in M</m> bereken:
         <me>
-          \nabla_\ve{p} = (2b, -2a)  \mbox{ where \(b^2 = 1 + a^2\)}
+          \nabla_\ve{p} = (2b, -2a)  \text{ waar }b^2 = 1 + a^2
         </me>.
       </p>
 
