@@ -1,12 +1,12 @@
 
 
 <section xml:id="ACh3Sec2CompositionOfLinearMaps">
-  <title>Komposisie van line&#xea;re afbeeldings</title>
+  <title>Samestelling van line&#xea;re afbeeldings</title>
   <definition>
     <statement>
       <p>
         As <m>S : U \rightarrow V</m> en <m>T : V \rightarrow W</m> line&#xea;re afbeeldings is,
-        dan is die <term>komposisie van <m>T</m> met <m>S</m></term> die
+        dan word die <term>samestelling van <m>T</m> met <m>S</m></term> die
         afbeelding <m>T \circ S : U \rightarrow W</m> gedefinieer as
         <me>
           (T \circ S) (\ve{u}) := T(S(\ve{u}))
