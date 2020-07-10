@@ -314,8 +314,8 @@
       <statement>
         <p>
           Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. Show that
-              <me>
-          W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+          <me>
+            W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
           </me>
           is a subspace of <m>\mathbb{R}^n</m>.
         </p>
@@ -327,13 +327,13 @@
       <p>
         Suppose <m>\ve{w}, \ve{w}' \in W</m>.
         That is, <m>\ve{v} \dotp \ve{w} = 0 </m> and <m>\ve{v} \dotp \ve{w}' = 0 </m>.
-        We must show that <m>\ve{w} + \ve{w}' \in W</m>.That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>.
+        We must show that <m>\ve{w} + \ve{w}' \in W</m>. That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>.
         Indeed,
         <md>
           <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
           <mrow> \amp = 0 + 0 </mrow>
-          <mrow> \amp = 0. </mrow>
-        </md>
+          <mrow> \amp = 0 </mrow>
+        </md>.
       </p>
 
       <p>
@@ -602,8 +602,6 @@
     </exercise>
   </subsection>
 
-
-
   <subsection xml:id="soln-diff-eqns-sec">
   <title>Solutions to homogenous linear differential equations</title>
 
@@ -611,8 +609,7 @@
     <men xml:id="general_lin_diff_eqn">
         a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I
     </men>
-    where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn"/>.</p>
-
+    where <m>y^{(k)}</m> means the <m>k</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn"/>.</p>
 
     <example xml:id="first_example_2nd_order_ode">
       <title>An example of a <m>2</m>nd order homogenous linear differential equation</title>
@@ -630,7 +627,7 @@
       </men>
       is also a solution to <xref ref="first_example_2nd_order_ode_eqn"/>.
       </p>
-      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation.
+      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button <mdash /> it should output <sq>True</sq>, indicating that <m>y_1</m> is indeed a solution to the differential equation.
       </p>
       <sage>
 
@@ -687,7 +684,7 @@
     <exercise>
     <statement>
       <p>
-     Show that <m>V</m> is a <xref ref="defn-subspace" text="custom">subspace</xref> of <m>\Fun(I)</m>.
+        Show that <m>V</m> is a <xref ref="defn-subspace" text="custom">subspace</xref> of <m>\Fun(I)</m>.
       </p>
      </statement>
     </exercise>
@@ -811,10 +808,7 @@
     </statement>
     </example>
 
-
 </subsection>
-
-
 
 <exercises>
   <exercise>
