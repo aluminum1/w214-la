@@ -129,7 +129,7 @@
       <md>
         <mrow>T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) \nonumber</mrow>
         <mrow>\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  \mbox{(\(T\) is line{\^e}r)} \nonumber</mrow>
-        <mrow>\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2  \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp \mbox{(<m>T(\ve{v}_r) = \lambda_r \ve{v}_r</m>)}</mrow>
+        <mrow>\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2  \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp (T(\ve{v}_r) = \lambda_r \ve{v}_r)</mrow>
       </md>
     </p>
 
@@ -366,18 +366,18 @@
     <statement>
       <p>
         Bepaal die eieruimtes van die matriks
-        <md>
+        <me>
           \mat{A} = \cmatrix{2 \amp  1 \\ \frac{1}{2} \amp  \frac{5}{2}}
-        </md>
+        </me>
         vanuit <xref ref="desmos_matrix">Voorbeeld</xref>.
       </p>
     </statement>
     <solution>
       <p>
         Vanuit <xref ref="eigenspace_as_kernel" />, het ons dat die eieruimte <m>E_\lambda</m> as volg bereken kan word
-        <md>
+        <me>
           E_\lambda = \Ker (\mat{A} - \lambda I) = \Ker \left( \cmatrix{2 - \lambda \amp  1 \\ \frac{1}{2} \amp  \frac{5}{2} - \lambda} \right)
-        </md>
+        </me>
       </p>
 
       <p>
@@ -389,14 +389,14 @@
             <p>
               <m>\lambda = \frac{3}{2}</m>:
               Ons moet soos volg bereken
-              <md>
+              <me>
                 E_{\frac{3}{2}} = \Ker \left( \cmatrix{\frac{1}{2} \amp  1 \\ \frac{1}{2} \amp  1} \right).
-              </md>
+              </me>
               Met ander woorde,
               ons moet die kolomvektore <m>\cmatrix{v_1 \\ v_2}</m>  vind waarvoor
-              <md>
+              <me>
                 \cmatrix{\frac{1}{2} \amp  1 \\ \frac{1}{2} \amp  1} \cmatrix{v_1 \\ v_2} = \cmatrix{ 0 \\ 0}.
-              </md>
+              </me>
               Dit kom neer op die enkele vergelyking
               <me>
                 \frac{1}{2}v_1 + v_2 = 0
@@ -418,14 +418,14 @@
             <p>
               <m>\lambda = 3</m>:
               Ons moet bereken
-              <md>
+              <me>
                 E_3 = \Ker \left( \cmatrix{-1 \amp  1 \\ \frac{1}{2} \amp -\frac{1}{2}} \right).
-              </md>
+              </me>
               Met ander woorde, ons moet die kolomvektore <m>\cmatrix{v_1 \\ v_2}</m> vind waarvoor
-              <md>
+              <me>
                 \cmatrix{-1 \amp  1 \\ \frac{1}{2} \amp  - \frac{1}{2}}
                 \cmatrix{v_1 \\ v_2} = \cmatrix{ 0 \\ 0}.
-              </md>
+              </me>
               Dit kom op die enkele vergelyking
               <me>
                 -v_1 + v_2 = 0
@@ -477,9 +477,9 @@
 
       <p>
         Ons bereken die matriks van <m>T</m> relatief tot die basis <m>\basis{B}</m>:
-        <md>
+        <me>
           [T]_{\basis{B} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  3 \amp  9 \\ 0 \amp  2 \amp  12 \\ 0 \amp  0 \amp  4}.
-        </md>
+        </me>
       </p>
 
       <p>
@@ -492,11 +492,11 @@
       <p>
         Met ander woorde,  vir elke eiewaarde <m>\lambda</m>, verg die berekening
         van <m>E_\lambda</m> dat ons die kern van die <em>matriks</em>
-        <md>
+        <me>
           \cmatrix{ 1 - \lambda \amp  3 \amp  9 \\
           0 \amp  2 - \lambda \amp  12 \\
           0 \amp  0 \amp  4-\lambda}
-        </md>
+        </me>
         moet bereken en dan dat ons die resulterende kolomvektore as
         polinome in die vorm <xref ref="q-stand-basis-ex1" /> herskryf.
 
@@ -506,11 +506,11 @@
               <m>\lambda = 1</m>:
 
               Ons benodig skalare <m>a_0</m>, <m>a_1</m>, <m>a_2</m> sodat
-              <md>
+              <me>
                 \cmatrix{ 0 \amp  3 \amp  9 \\
                 0 \amp  1  \amp  12 \\
                 0 \amp  0 \amp  3} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\ 0 \\ 0}.
-              </md>
+              </me>
               Die vergelyking het die algemene oplossing
               <me>
                 \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{1 \\ 0 \\ 0}, \, t \in \mathbb{R}
@@ -527,11 +527,11 @@
               <m>\lambda = 2</m>:
 
               Ons benodig skalare <m>a_0</m>, <m>a_1</m>, <m>a_2</m> sodat
-              <md>
+              <me>
                 \cmatrix{ -1 \amp  3 \amp  9 \\
                 0 \amp  0  \amp  12 \\
                 0 \amp  0 \amp  2} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\ 0 \\ 0}.
-              </md>
+              </me>
               Hierdie vergelyking het die algemene oplossing
               <me>
                 \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{3 \\ 1 \\ 0}, \, t \in \mathbb{R}
@@ -549,11 +549,11 @@
               <m>\lambda = 4</m>:
 
               Ons benodig skalare <m>a_0</m>, <m>a_1</m>, <m>a_2</m> sodat
-              <md>
+              <me>
                 \cmatrix{ -3 \amp  3 \amp  9 \\
                 0 \amp  -2  \amp  12 \\
                 0 \amp  0 \amp  0} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\ 0 \\ 0}.
-              </md>
+              </me>
               Hierdie vergelyking het die algemene oplossing
               <me>
                 \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{9 \\ 6 \\ 1}, \, t \in \mathbb{R}
