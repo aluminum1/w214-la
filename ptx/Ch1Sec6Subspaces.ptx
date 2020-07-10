@@ -687,7 +687,7 @@
     <exercise>
     <statement>
       <p>
-     Show that <m>V</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun(I)</m>.
+     Show that <m>V</m> is a <xref ref="defn-subspace" text="custom">subspace</xref> of <m>\Fun(I)</m>.
       </p>
      </statement>
     </exercise>
