@@ -190,7 +190,7 @@
       Let <m>k_s</m> be one of the nonzero coefficients. Then, by taking the other vectors to the other side of the equation, and multuplying by <m>\frac{1}{k_s}</m> we can solve for <m>\ve{v}_s</m> in terms of the other vectors:
       <md>
         <mrow>
-          \ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \mbox{(No } \ve{v}_i \mbox{ terms on RHS)}
+          \ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \text{(No } \ve{v}_i \text{ terms on RHS)}
         </mrow>
       </md>
       Therefore, (2) is true.
@@ -199,7 +199,7 @@
     <p>
       (2) <m>\Rightarrow</m> (1). Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is,
       <md>
-        <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \mbox{(No } \ve{v}_s  \mbox{term on RHS.)} </mrow>
+        <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \text{(No } \ve{v}_s  \text{term on RHS.)} </mrow>
       </md>
       Rearranging this equation gives:
       <men xml:id="rearranged_lin_dep">
@@ -224,7 +224,7 @@
       If <m>r=1</m>,
       then <xref ref="lin_dep_lem_first_eqn" /> is simply the equation
       <me>
-        k_1 \ve{v}_1 = \ve{0},  \mbox{where }  k_1 \neq 0
+        k_1 \ve{v}_1 = \ve{0},  \text{ where }  k_1 \neq 0
       </me>.
     </p>
 
@@ -234,7 +234,7 @@
       On the other hand, suppose <m>r \neq 1</m>.
       Then <xref ref="lin_dep_lem_first_eqn" /> becomes the equation
       <me>
-        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_r \neq 0
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \text{ where }  k_r \neq 0
       </me>.
     </p>
 
@@ -341,7 +341,7 @@
         <li> <m>\ve{l}_1 = \ve{0}</m>. This cannot be true, since then <m>\basis{L}</m> would be linearly dependent by <xref ref="remark_about_lin_dependence"/>, contradicting our initial assumption. </li>
         <li> or one of the <m>\ve{s}</m>-vectors, say <m>\ve{s}_r</m>, can be expressed as a linear combination of the preceding vectors. We can then remove <m>\ve{s}_r</m> from the list <m>\basis{S}'</m> (<sq>bump it off</sq>), and the resulting list
         <men>
-          \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}
+          \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad (\ve{s}_r \text{ omitted)}
         </men>
         will still span <m>V</m>, by <xref ref="exercise-span-omission"/>. </li>
       </ul>
