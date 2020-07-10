@@ -452,8 +452,8 @@ has been updated.  -->
         Then
         <md>
           <mrow> k\ve v \amp = k(a_1 \ve e_1 + a_2 \ve e_2) </mrow>
-          <mrow> \amp = k(a_1 \ve e_1) + k(a_2 \ve e_2) \amp (<xref ref="R4">R4</xref>)</mrow>
-          <mrow> \amp = (ka_1)\ve e_1 + (ka_2) \ve e_2 \amp  (<xref ref="R6">R6</xref>)</mrow>
+          <mrow> \amp = k(a_1 \ve e_1) + k(a_2 \ve e_2) \amp (<xref ref="R4" text="title" />)</mrow>
+          <mrow> \amp = (ka_1)\ve e_1 + (ka_2) \ve e_2 \amp  (<xref ref="R6" text="title" />)</mrow>
         </md>
         Reading off the coefficients, we obtain
         <me>
@@ -797,7 +797,7 @@ b = \frac{1}{2}
             </li>
 
             <li><p>
-              Using Sage, find a basis for <m>V</m>, if you're unsure of the syntax, look at the examples in <xref ref = "ACh2Sec3BasisDimension"/>. Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.</p>
+              Using Sage, find a basis for <m>V</m>, if you're unsure of the syntax, look at the examples in <xref ref = "Ch2Sec3BasisDimension"/>. Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.</p>
               <sage>
                 <input>
                 </input>
