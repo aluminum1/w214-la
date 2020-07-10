@@ -367,7 +367,7 @@
       <p>
         The set
         <me>
-          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ continuous}  \}
+          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \text{ continuous}  \}
         </me>
         of all continuous functions on an interval <m>I</m>
         is a subspace of the set <m>\Fun(I)</m> of
@@ -412,7 +412,7 @@
       <p>
         Similarly, the set
         <me>
-          \Diff(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ differentiable}  \}
+          \Diff(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \text{ differentiable}  \}
         </me>
         of differentiable functions on an open interval <m>I</m> is a <xref ref="defn-subspace" text="custom">subspace</xref> of <m>\Fun (I)</m>.
       </p>
