@@ -239,7 +239,7 @@
       Dit is, <m>\mat{u} = [\ve{v}]_\basis{B}</m>.
       So,
       <md>
-        <mrow>\left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} \right) (\mat{c})  \amp = [ \cdot ]_\basis{C} \left( T \left(\ve{vec}_{V, \basis{B}}(\mat{u})\right)\right) \amp \amp  \mbox{(Defn van komposisieafbeelding)}</mrow>
+        <mrow>\left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} \right) (\mat{c})  \amp = [ \cdot ]_\basis{C} \left( T \left(\ve{vec}_{V, \basis{B}}(\mat{u})\right)\right) \amp \amp  \mbox{(Defn van saamgestelde afbeelding)}</mrow>
         <mrow>\amp = [\cdot]_\basis{C} (T(\ve{v})) \amp \amp  \mbox{(Defn van \(\ve{v}\))}</mrow>
         <mrow>\amp = [T(\ve{v})]_\basis{C} \amp \amp  \mbox{(Defn van \([\cdot]_\basis{C}\))}</mrow>
         <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \amp \amp (<xref ref="lin-map-in-matrix-theorem">Stelling</xref>) </mrow>
