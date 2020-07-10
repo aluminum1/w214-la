@@ -623,7 +623,7 @@
     </p>
 
     <p>
-      Geld hierdie re&#xeb;l <xref ref="comm_in_A" /> ook vir sommeringsoperators in <m>B</m> en <m>C</m>?
+      Geld die re&#xeb;l in  <xref ref="comm_in_A">vergelyking</xref> ook vir optellingsoperators in <m>B</m> en <m>C</m>?
       Ja.
       Byvoorbeeld, kom ons gaan na dat dit vir <m>C</m> geld.
       Veronderstel dat <m>\ve{c}</m> en <m>\ve{c}'</m> polinome in <m>C</m> is.
@@ -635,7 +635,7 @@
     </p>
 
     <p>
-      Die linker- en regterkante van <xref ref="must_check" /> is elemente van <m>C</m>.
+      Die linker- en regterkante van <xref ref="must_check">vergelyking</xref> is elemente van <m>C</m>.
       En alle elemente van <m>C</m> is polinome.
       Om na te gaan of twee polinome gelyk
       is, moet ons nagaan of hulle gelyk is
