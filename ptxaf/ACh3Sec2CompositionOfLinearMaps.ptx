@@ -89,20 +89,20 @@
       Laat <m>\ve{u_1}, \ve{u}_2 \in U</m>.
       Dan:
       <md>
-        <mrow>(T \circ S) (\ve{u}_1 + \ve{u}_2)   \amp = T(S(\ve{u}_1 + \ve{u}_2)) \amp \mbox{(defn van \(T \circ S\))}</mrow>
+        <mrow>(T \circ S) (\ve{u}_1 + \ve{u}_2)   \amp = T(S(\ve{u}_1 + \ve{u}_2)) \amp \text{(defn van } T \circ S)</mrow>
         <mrow>\amp = T(S(\ve{u}_1) + S(\ve{u}_2)) \amp  (S \text{ is line&#xea;r })</mrow>
         <mrow>\amp = T(S(\ve{u}_1)) + T(S(\ve{u}_2)) \amp (T \text{ is line&#xea;r }) </mrow>
-        <mrow>\amp = (T \circ S) (\ve{u}_1) + (T \circ S)(\ve{u}_2) \amp  \mbox{(defn van \(T \circ S\))}</mrow>
+        <mrow>\amp = (T \circ S) (\ve{u}_1) + (T \circ S)(\ve{u}_2) \amp  \text{(defn van } T \circ S)</mrow>
       </md>
     </p>
 
     <p>
       Op soortgelyke wyse het ons
       <md>
-        <mrow>(T \circ S) (k \ve{u}) \amp = T(S(k \ve{u})) \amp  \mbox{(defn van \(T \circ S\))}</mrow>
+        <mrow>(T \circ S) (k \ve{u}) \amp = T(S(k \ve{u})) \amp  \text{(defn van } T \circ S)</mrow>
         <mrow>\amp = T(kS(\ve{u})) \amp  (S \text{ is line&#xea;r })</mrow>
         <mrow>\amp = k T(S(\ve{u})) \amp  (T \text{ is line&#xea;r })</mrow>
-        <mrow>\amp = k (T \circ S) (\ve{u}) \amp  \mbox{(defn van \(T \circ S\))}</mrow>
+        <mrow>\amp = k (T \circ S) (\ve{u}) \amp  \text{(defn van } T \circ S)</mrow>
       </md>
     </p>
   </proof>
