@@ -55,7 +55,7 @@
         As <m>V</m> 'n vektorruimte is,
         dan vir alle <m>\ve{v} \in V</m> is
         <men>
-          -\ve{v} + \ve{v} = \ve{0} \mbox{ en }  \ve{v} + (-\ve{v}) = \ve{0}
+          -\ve{v} + \ve{v} = \ve{0} \text{ en }  \ve{v} + (-\ve{v}) = \ve{0}
         </men>.
       </p>
     </statement>
@@ -66,14 +66,14 @@
           <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \text{}</mrow>
           <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \text{(R5)}</mrow>
           <mrow>\amp = 0 \smul\ve{v}</mrow>
-          <mrow>\amp = \ve{0} \amp \amp  \mbox{(R8)}</mrow>
+          <mrow>\amp = \ve{0} \amp \amp  \text{(R8)}</mrow>
         </md>
       </p>
       <p>
         Verder,
         <md>
-          <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \mbox{(R1)}</mrow>
-          <mrow>\amp  = \ve{0} \amp \amp  \mbox{(deur vorige bewys)}</mrow>
+          <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \text{(R1)}</mrow>
+          <mrow>\amp  = \ve{0} \amp \amp  \text{(deur vorige bewys)}</mrow>
         </md>
       </p>
     </proof>
@@ -187,10 +187,10 @@
         Ons gaan as volg te werk met die re&#xeb;ls:
         <md>
           <mrow>\ve{v} + 7 \smul \ve{x} \amp  = \ve{w}</mrow>
-          <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \cdot \ve{x}) \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(tel \(-\ve{v}\) aan beide kante by)}</mrow>
-          <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(gebruik R2 aan LK)}</mrow>
-          <mrow>\therefore  \ve{0} + 7 \smul \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp \text{(gebruik <xref ref="add_inv" text="global">Lemma</xref> aan LK)}</mrow>
-          <mrow>\therefore  7 \smul \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \mbox{(gebruik R3a aan LK)}</mrow>
+          <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \cdot \ve{x}) \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(tel } -\ve{v} \text{ links aan beide kante by)}</mrow>
+          <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(gebruik R2 aan LK)}</mrow>
+          <mrow>\therefore  \ve{0} + 7 \smul \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp <xref ref="add_inv" text="global">Lemma</xref> \text{ aan LK)}</mrow>
+          <mrow>\therefore  7 \smul \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \text{(R3a aan LK)}</mrow>
           <mrow>\therefore  \frac{1}{7} \smul (7 \cdot \ve{x}) \amp  = \frac{1}{7} \smul (-\ve{v} + \ve{w}) \amp \amp  \text{(skalaarvermenigvuldig aan beide kante met }\frac{1}{7})}</mrow>
           <mrow>\therefore  (\frac{1}{7} 7) \cdot   \ve{x} \amp  = \frac{1}{7} \smul (-\ve{v} + \ve{w}) \amp \amp  \text{(gebruik R6 aan LK)}</mrow>
           <mrow>\therefore  1 \cdot \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} + \ve{w})  \amp \amp  \text{(vermenigvuldig }\frac{1}{7}\text{ met 7)}</mrow>
@@ -418,7 +418,7 @@
       <p>
         Onwaar. Laat <m>V</m> 'n nie-nul vektorruimte wees (soos byvoorbeeld <m>\mathbb{R}^2</m>). Herdefinieer nou skalaarvermenigvuldiging deur
         <me>
-            k\smul v := 0 \mbox{ vir alle skalare } k \text{ en alle vektore } v
+            k\smul v := 0 \text{ vir alle skalare } k \text{ en alle vektore } v
         </me>.
         Dan sal <m>V</m> al die reëls vir 'n vektorruimte bevredig, behalwe R7. Dus is dit nie die geval dat R7 uit die ander reëls volg nie.
       </p>
