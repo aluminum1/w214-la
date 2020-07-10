@@ -1,7 +1,7 @@
 
 
-<section xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ACh0NoteForStudent">
-  <title title="no">Nota aan die student</title>
+<preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ACh0NoteForStudent">
+  <title >Nota aan die student</title>
   <p>
     Jou tweede ontmoeting met line&#xea;re algebra l&#xea;     tans voor jou.
     In die eerste jaar is daar gefokus op stelsels van line&#xea;re vergelykings,
@@ -16,23 +16,23 @@
     en om slegs die mees belangrike kenmerke van 'n probleem in ag te neem.
     Dit help jou om die probleem beter te verstaan.
     Daar is minder om jou te verwar!
-    Verder, as jy 'n ander probleem sou te&#xeb;kom 
-    wat op eerste oogopslag anders lyk, 
+    Verder, as jy 'n ander probleem sou te&#xeb;kom
+    wat op eerste oogopslag anders lyk,
     maar dieselfde belangrike kenmerke as die oorskpronklike het,
     dan kan jy die probleem op dieselfde manier verstaan.
     D&#xed;t maak abstraksie baie kragtig.
   </p>
 
   <p>
-    In die studie van abstrakte wiskunde 
-    gebruik ons die taal van <em>definisies</em>, 
+    In die studie van abstrakte wiskunde
+    gebruik ons die taal van <em>definisies</em>,
     <em>stellings</em> en <em>bewyse</em>.
     Om aan hierdie denkwyse gewoond te raak
     (en abstrakte wiskundige denke te ontwikkel)
     kan aanvanklik oorweldigend voel.
     Maar volhard!
-    Eendag sal jy dit <sq>snap</sq> 
-    en jy sal besef dat dit heelwat eenvoudiger is 
+    Eendag sal jy dit <sq>snap</sq>
+    en jy sal besef dat dit heelwat eenvoudiger is
     as wat jy jou voorgestel het.
   </p>
 
@@ -40,7 +40,7 @@
     'n Mens kan nie wiskunde soos 'n roman lees nie.
     Jy het 'n <em>pen en notaboekie</em> byderhand nodig
     en jy sal aktief by die materiaal <em>betrokke</em> moet raak.
-    As jy byvoorbeeld 'n definisie te&#xeb;kom, 
+    As jy byvoorbeeld 'n definisie te&#xeb;kom,
     begin deur dit in jou notaboekie neer te skryf.
     Net die blote skryf daarvan kan terapeuties wees!
   </p>
@@ -58,5 +58,5 @@
     Baie sterkte met hierdie nuwe fase van jou wiskundige opleiding.
     Geniet die reis!
   </p>
-</section>
+</preface>
 
