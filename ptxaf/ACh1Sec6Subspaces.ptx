@@ -493,7 +493,7 @@
       <mrow> p : \mathbb{R}^2 \amp \rightarrow \mathbb{R} </mrow>
       <mrow> (x,y) \amp \mapsto p(x,y) </mrow>
     </md>
-    In hierdie manier kan ons <m>\Poly_n[x,y]</m> beskou as'n deelversameling van die vektorruimte <m>\Fun(\mathbb{R}^2)</m> van <em>alle</em> reëelwaardige funksies op <m>\mathbb{R}^2</m> (sien <xref ref="functions_on_set_vec_space" text="title"/> om ouself te herinner van die vektorruimte van reëelwaardige funksies op 'n versameling <m>X</m>). Inderdaad, <m>\Poly_n[x,y]</m> is 'n <em>deelruimte</em> van <m>\Fun(\mathbb{R}^2)</m>, en dus is dit 'n vektorruimte.
+    In hierdie manier kan ons <m>\Poly_n[x,y]</m> beskou as'n deelversameling van die vektorruimte <m>\Fun(\mathbb{R}^2)</m> van <em>alle</em> reëelwaardige funksies op <m>\mathbb{R}^2</m> (sien <xref ref="functions_on_set_vec_space" /> om ouself te herinner van die vektorruimte van reëelwaardige funksies op 'n versameling <m>X</m>). Inderdaad, <m>\Poly_n[x,y]</m> is 'n <em>deelruimte</em> van <m>\Fun(\mathbb{R}^2)</m>, en dus is dit 'n vektorruimte.
   </p>
 
   <p>
@@ -611,7 +611,7 @@
     <men xml:id="general_lin_diff_eqn">
         a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I
     </men>
-    where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn" text="title"/>.</p>
+    where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn" />.</p>
 
 
     <example xml:id="first_example_2nd_order_ode">
@@ -624,13 +624,13 @@
       <men xml:id="a_soln_to_my_ode">
         y_1(x) = x^2 \sin (\log x)
       </men>
-      is a solution to <xref ref="first_example_2nd_order_ode_eqn" text="title"/>. Similarly,
+      is a solution to <xref ref="first_example_2nd_order_ode_eqn" />. Similarly,
       <men xml:id="a_2nd_soln_to_my_ode">
         y_2(x) = x^2 \cos (\log x)
       </men>
-      is also a solution to <xref ref="first_example_2nd_order_ode_eqn" text="title"/>.
+      is also a solution to <xref ref="first_example_2nd_order_ode_eqn" />.
       </p>
-      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn" text="title"/>. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation.
+      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn" />. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation.
       </p>
       <sage>
 
@@ -668,12 +668,12 @@
     <exercise>
       <statement>
         <p>
-          Check by hand that <xref ref="a_soln_to_my_ode" text="title"/> and <xref ref="a_2nd_soln_to_my_ode" text="title"/> are indeed  solutions of the differential equation <xref ref="first_example_2nd_order_ode_eqn" text="title"/>.
+          Check by hand that <xref ref="a_soln_to_my_ode" /> and <xref ref="a_2nd_soln_to_my_ode" /> are indeed  solutions of the differential equation <xref ref="first_example_2nd_order_ode_eqn" />.
         </p>
       </statement>
     </exercise>
 
-    <p> Suppose we are given an <m>n</m>th order homogenous linear differential equation of the form <xref ref="general_lin_diff_eqn" text="title"/> on some interval <m>I \subseteq \mathbb{R}</m>. Write <m>V</m> for the set of <em>all</em> solutions to the differential equation. That is,
+    <p> Suppose we are given an <m>n</m>th order homogenous linear differential equation of the form <xref ref="general_lin_diff_eqn" /> on some interval <m>I \subseteq \mathbb{R}</m>. Write <m>V</m> for the set of <em>all</em> solutions to the differential equation. That is,
     <men>
      V := \{ y : a_n(x) y^{(n)}(x) + \cdots + a_1(x) y'(x) + a_0(x) y(x) = 0 \}
     </men>
@@ -687,17 +687,17 @@
     <exercise>
     <statement>
       <p>
-     Show that <m>V</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun(I)</m>.
+     Show that <m>V</m> is a <xref ref="defn-subspace" >subspace</xref> of <m>\Fun(I)</m>.
       </p>
      </statement>
     </exercise>
 
-    <p>So, by <xref ref="subspace_lem" text="title"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
+    <p>So, by <xref ref="subspace_lem" text="type-global"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
 
     <example xml:id="first_example_2nd_order_ode_cont">
-      <title>Continuation of <xref ref="first_example_2nd_order_ode" text="title"/></title>
+      <title>Continuation of <xref ref="first_example_2nd_order_ode" /></title>
       <statement>
-        <p> Consider the differential equation from <xref ref="first_example_2nd_order_ode" text="title"/>. We saw that
+        <p> Consider the differential equation from <xref ref="first_example_2nd_order_ode" />. We saw that
         <me>
         y_1 = x^2 \sin (\log x), \quad y_2 = x^2 \cos (\log x)
         </me>
@@ -756,7 +756,7 @@
         </input>
         </sage>
         <p>
-        The answer is <c>False!</c> So linear combinations of solutions to the nonlinear differential equation <xref ref="explicit_nonlinear_ode" text="title"/> are no longer solutions, in general.
+        The answer is <c>False!</c> So linear combinations of solutions to the nonlinear differential equation <xref ref="explicit_nonlinear_ode" /> are no longer solutions, in general.
           </p>
         </statement>
     </example>
