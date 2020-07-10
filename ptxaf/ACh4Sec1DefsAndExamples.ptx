@@ -75,7 +75,7 @@
       (1) <m>\Rightarrow</m> (2).
       Veronderstel <m>\lambda</m> is 'n eiewaarde van <m>T</m>.
       <md>
-        <mrow>\amp \therefore \mbox{Daar bestaan 'n nie-nul \(\ve{v} \in V\), sodat \(T(\ve{v}) = \lambda \ve{v}\).}</mrow>
+        <mrow>\amp \therefore \text{Daar bestaan 'n nie-nul } \ve{v} \in V,\text{ sodat } T(\ve{v}) = \lambda \ve{v}.</mrow>
         <mrow>\amp \therefore T(\ve{v}) - \lambda \ve{v} = \ve{0}</mrow>
         <mrow>\amp  \therefore (T - \lambda \id_V)(\ve{v}) = \ve{0}</mrow>
         <mrow>\amp  \therefore \ve{v} \in \Ker(T - \lambda \id_V)</mrow>
@@ -93,10 +93,10 @@
       (2) <m>\Rightarrow</m> (1).
       Veronderstel <m>T - \lambda \id_V</m> is nie injektief nie.
       <md>
-        <mrow>\amp  \therefore \Ker(T - \lambda \id_V) \neq \{\ve{0} \} \amp \amp \mbox{(deur <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
-        <mrow>\amp  \therefore \mbox{daar bestaan 'n nie-nul \(\ve{v} \in V\), sodat }</mrow>
+        <mrow>\amp  \therefore \Ker(T - \lambda \id_V) \neq \{\ve{0} \} \amp \amp \text{(deur <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
+        <mrow>\amp  \therefore \text{daar bestaan 'n nie-nul } (\ve{v} \in V, \text{ sodat }</mrow>
         <mrow>\amp   (T - \lambda \id_V)(\ve{v}) = \ve{0}.</mrow>
-        <mrow>\amp  \mbox{Dit is, \(T(\ve{v}) = \lambda \ve{v}\), so \(\lambda\) is 'n eiewaarde van \(T\).}</mrow>
+        <mrow>\amp  \text{Dit is, } T(\ve{v}) = \lambda \ve{v},\text{ so }\lambda\text{ is 'n eiewaarde van } T.</mrow>
       </md>
     </p>
 
@@ -160,7 +160,7 @@
       Daarom,
       <md>
         <mrow>\det\left( [T]_{\basis{C} \leftarrow \basis{C}} \right) \amp = \det \left( \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} \mat{P} \right)</mrow>
-        <mrow>\amp = \det(\mat{P}^{-1}) \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})  \amp \amp  \mbox{(\(\det(\mat{A} \mat{B}) = \det(\mat{A}) \det (\mat{B})\))}</mrow>
+        <mrow>\amp = \det(\mat{P}^{-1}) \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})  \amp \amp  (\det(\mat{A} \mat{B}) = \det(\mat{A}) \det (\mat{B}))</mrow>
         <mrow>\amp = \frac{1}{\det(\mat{P})} \det\left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})</mrow>
         <mrow>\amp = \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
       </md>.
@@ -236,10 +236,10 @@
       Die enigste ding wat ons moet wys is dat (2) <m>\Leftrightarrow</m> (3).
       Inderdaad, as <m>\basis{B}</m> 'n basis vir <m>V</m> is, dan
       <md>
-        <mrow>\amp \mbox{\(\lambda \id - T\) is nie inverteerbaar nie}</mrow>
-        <mrow>\amp \Leftrightarrow \mbox{die matriks \([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}}\) is nie inverteerbaar nie}  \amp \amp  \mbox{(<xref ref="map-iso-matrix-iso">Gevolgtrekking</xref>)}</mrow>
-        <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) = 0 \amp \amp  \mbox{(Eienskap van \(\det\))}</mrow>
-        <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \mbox{(Defn van \(\chi_T(\lambda)\))}</mrow>
+        <mrow>\amp \lambda \id - T \text{ is nie inverteerbaar nie}</mrow>
+        <mrow>\amp \Leftrightarrow \text{die matriks }[\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \text{ is nie inverteerbaar nie}  \amp \amp  \text{(<xref ref="map-iso-matrix-iso">Gevolgtrekking</xref>)}</mrow>
+        <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) = 0 \amp \amp  \text{(Eienskap van }\det)</mrow>
+        <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \text{(Defn van } \chi_T(\lambda))</mrow>
       </md>
     </p>
   </proof>
@@ -301,8 +301,8 @@
       <p>
         So die karakteristieke polinoom van <m>T</m> is
         <md>
-          <mrow>\chi_T (\lambda) \amp = \det(\lambda \id - T) \amp \amp  \mbox{(defn van \(\chi_T\))}</mrow>
-          <mrow>\amp = \det \left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) \amp \amp  \mbox{(defn van \(\det\))}</mrow>
+          <mrow>\chi_T (\lambda) \amp = \det(\lambda \id - T) \amp \amp  \text{(defn van }\chi_T)</mrow>
+          <mrow>\amp = \det \left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) \amp \amp  \text{(defn van }\det)</mrow>
           <mrow>\amp = \det \left( [\lambda \id]_{\basis{B} \leftarrow \basis{B}} - [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
           <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9\\ 0 \amp  \lambda - 2 \amp  -12\\ 0 \amp  0 \amp  4}} \right)</mrow>
           <mrow>\amp = (\lambda - 1)(\lambda - 2)(\lambda - 4)</mrow>
