@@ -41,7 +41,7 @@
         Die enkele dubbelpunt <m>:</m> staan vir
         <sq>waar</sq> of <sq>sodat</sq>.
         Die komma tussen <m>a</m> en <m>b</m> staan vir <sq>en</sq>.
-        Die <m>\in</m> staan vir `'n element van'.
+        Die <m>\in</m> staan vir <q>'n element van</q>.
         En <m>\mathbb{R}</m> staan vir die versameling van alle re&#xeb;le getalle.
       </p>
 
@@ -94,7 +94,7 @@
       <m>(u_1, \, u_2, \, u_3)</m>, wat <m>u_1 - u_2 + u_3 = 0</m> bevredig.
       In wiskundige simbole is dit soos volg:
       <men>
-        B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \mbox{ en } b_1 - b_2 + b_3 = 0\}
+        B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \text{ en } b_1 - b_2 + b_3 = 0\}
       </men>.
     </p>
 
@@ -130,7 +130,7 @@
       is die versameling van alle polinome van graad 4 of minder.
       Omgesit in wiskundige simbole,
       <men>
-        C := \{ \mbox{polinome met graad \(\leq 4\)} \}
+        C := \{ \text{polinome met graad } \leq 4 \}
       </men>.
     </p>
 
