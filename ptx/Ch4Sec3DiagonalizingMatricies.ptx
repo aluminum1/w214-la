@@ -19,13 +19,13 @@
       <p>
         <m>\mat{A} = \cmatrix{ 2 \amp  1 \\ \frac{1}{2} \amp  \frac{5}{2} }</m> is diagonalizable,
         since if we set
-        <md>
+        <me>
           \mat{P} = \cmatrix{-2 \amp  1 \\ 1 \amp  1}
-        </md>
+        </me>
         then
-        <md>
+        <me>
           \mat{P}^{-1} = -\frac{1}{3} \cmatrix{1 \amp  -1 \\ -1 \amp  -2}
-        </md>
+        </me>
         and we check,
         <md>
           <mrow>\mat{P}^{-1} \mat{A} \mat{P} \amp = -\frac{1}{3} {\cmatrix{1 \amp  -1\\ -1 \amp  -2}} {\cmatrix{2 \amp  1\\ \frac{1}{2} \amp  \frac{5}{3}}} {\cmatrix{ -2 \amp  1\\ 1 \amp  1}}</mrow>
