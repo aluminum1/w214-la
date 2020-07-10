@@ -623,7 +623,7 @@
     </p>
 
     <p>
-      Does this rule <xref ref="comm_in_A" /> also hold for the addition operations in <m>B</m> and <m>C</m>?
+      Does the rule in <xref ref="comm_in_A">equation</xref> also hold for the addition operations in <m>B</m> and <m>C</m>?
       Yes.
       For instance, let us check that it holds in <m>C</m>.
       Suppose that <m>\ve{c}</m> and <m>\ve{d}</m> are polynomials in <m>C</m>.
@@ -635,7 +635,7 @@
     </p>
 
     <p>
-      The left and right hand sides of <xref ref="must_check" /> are elements of <m>C</m>.
+      The left and right hand sides of <xref ref="must_check">equation</xref> are elements of <m>C</m>.
       And elements of <m>C</m> are polynomials.
       To check if two polynomials are equal,
       we need to check if they are equal
