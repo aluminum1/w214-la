@@ -126,11 +126,11 @@
       (otherwise, <m>i</m> would not be the <em>smallest</em>
       index for which <m>\ve{v}_i</m> is a linear combination of the preceding vectors).
       Applying <m>T</m> to both sides of <xref ref="eigenvalue-1st-eqn" /> gives us a new equation:
-      <md>
+      <mdn>
         <mrow>T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) \nonumber</mrow>
         <mrow>\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  \mbox{(\(T\) is linear)} \nonumber</mrow>
-        <mrow>\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2 \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp  (T(\ve{v}_r) = \lambda_r \ve{v}_r)</mrow>
-      </md>
+        <mrow xml:id="eigenvalue-2nd-eqn">\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2 \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp  (T(\ve{v}_r) = \lambda_r \ve{v}_r)</mrow>
+      </mdn>
     </p>
 
     <p>
@@ -238,7 +238,7 @@
               <me>
                 T(q) = 1 q
               </me>
-              By inspection of the formulas <xref ref="Tp0" />-<xref ref="Tp1" /> for how <m>T</m> works,
+              By inspection of the formulas <xref ref="poly-example-eigenvalue-Tp0" />, <xref ref="poly-example-eigenvalue-Tp1" /> and <xref ref="poly-example-eigenvalue-Tp2" /> for how <m>T</m> works,
               we already see one such polynomial,
               namely <m>q = p_0</m>, since <m>T(p_0) = p_0</m>.
               Since <m>E_1</m> is 1-dimensional,
