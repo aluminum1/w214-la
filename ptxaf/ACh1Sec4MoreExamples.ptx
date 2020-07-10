@@ -74,7 +74,7 @@
         Definieer skalaarvermenigvuldiging met 'n re&#xeb;le getal <m>k \in
         \mathbb{R}</m> as
         <men xml:id="ne_14">
-          k \cdot \ve{a} := \ve{a}  \mbox{ en }   k \cdot \ve{b} := \ve{b}
+          k \cdot \ve{a} := \ve{a}  \text{ en }   k \cdot \ve{b} := \ve{b}
         </men>.
       </p>
 
@@ -186,7 +186,7 @@
       <p>
         Definieer die versameling <m>\mathbb{R}^n</m> as
         <men>
-          \mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in \mathbb{R} \mbox{ vir alle }  i = 1 \ldots n\}
+          \mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in \mathbb{R} \text{ vir alle }  i = 1 \ldots n\}
         </men>.
       </p>
 
@@ -227,7 +227,7 @@
       <p>
         Definieer die versameling <m>\mathbb{R}^\infty</m> as
         <men>
-          \mathbb{R}^\infty := \{ (x_1, \, x_2, \, x_3, \, \ldots, ) : x_i \in \mathbb{R} \mbox{ vir alle }  i = 1, 2, 3, \ldots\}
+          \mathbb{R}^\infty := \{ (x_1, \, x_2, \, x_3, \, \ldots, ) : x_i \in \mathbb{R} \text{ vir alle }  i = 1, 2, 3, \ldots\}
         </men>
       </p>
 
@@ -347,7 +347,7 @@
         as die funksie wat die getal <m>0</m>
         lewer vir elke insetwaarde <m>x \in X</m>:
         <men xml:id="zero_vec_functions">
-          \ve{z} (x) := 0  \mbox{ vir alle \(x \in X\).}
+          \ve{z} (x) := 0  \text{ vir alle } x \in X.}
         </men>
       </p>
 
@@ -508,8 +508,8 @@
         <m>\Mat_{n,1}</m> van <m>n</m>-dimensionele
         <em>kolomvektore</em>,
         <me>
-          \Col_n = \left\{ \left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n
-          \end{array}  \right] : x_1, \ldots, x_n \in \mathbb{R} \right\}
+          \Col_n = \left\{ \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n
+          \end{bmatrix}   : x_1, \ldots, x_n \in \mathbb{R} \right\}
         </me>.
       </p>
 
