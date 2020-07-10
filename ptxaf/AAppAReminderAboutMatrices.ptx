@@ -1,22 +1,22 @@
 <appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AAppAReminderAboutMatrices">
   <title>Matrikshersiening</title>
   <p>
-    Kom ons hersien 'n paar goed oor matrikse 
+    Kom ons hersien 'n paar goed oor matrikse
     en stel vas watter notasie ons gaan gebruik.
   </p>
 
   <p>
     'n <em><m>n \times m</m>-matriks</em>
-    <m>\mat{A}</m> is 'n reghoekige skikking van getalle, 
+    <m>\mat{A}</m> is 'n reghoekige skikking van getalle,
     met <m>n</m> rye en <m>m</m> kolomme:
     <me>
       \mat{A} = \left[
-      \begin{array}{cccc} 
+      \begin{array}{cccc}
       \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1m} \\
       \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2m} \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nm}
-      \end{array} 
+      \end{array}
       \right]
     </me>
     Elke <m> A_{ij} </m> dui hier 'n re&#xeb;le getal aan.
@@ -45,13 +45,13 @@
   <p>
     Daar is die <em>nul <m>n \times m</m>-matriks</em>:
     <me>
-      \mat{0} = \left[ 
-      \begin{array}{cccc} 
+      \mat{0} = \left[
+      \begin{array}{cccc}
       0 \amp  0 \amp   \cdots \amp 0 \\
       0 \amp  0 \amp   \cdots \amp  0 \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       0 \amp  0 \amp  \cdots \amp  0
-      \end{array}  
+      \end{array}
       \right]
     </me>
   </p>
@@ -66,28 +66,30 @@
 
   <lemma>
     <statement>
-      <ol>
-        <li>
-          <p>
-            Saam met hierdie bewerkings 
-            is die versameling <m>\Mat_{n, m}</m>
-            van alle <m>n \times m</m> matrikse 'n vektorruimte.
-          </p>
-        </li>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Saam met hierdie bewerkings
+              is die versameling <m>\Mat_{n, m}</m>
+              van alle <m>n \times m</m> matrikse 'n vektorruimte.
+            </p>
+          </li>
 
-        <li>
-          <p>
-            Die dimensie van <m>\Mat_{nm}</m> is <m>nm</m>, 
-            met die matrikse
-            <me>
-              \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
-            </me>
-            as basis, elk met 'n <m>1</m> in die inskrywing 
-            in ry <m>i</m> en kolom <m>j</m> en
-            nulle orals anders.
-          </p>
-        </li>
-      </ol>
+          <li>
+            <p>
+              Die dimensie van <m>\Mat_{nm}</m> is <m>nm</m>,
+              met die matrikse
+              <me>
+                \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
+              </me>
+              as basis, elk met 'n <m>1</m> in die inskrywing
+              in ry <m>i</m> en kolom <m>j</m> en
+              nulle orals anders.
+            </p>
+          </li>
+        </ol>
+      </p>
     </statement>
   </lemma>
 
@@ -103,11 +105,11 @@
         <m>\Mat_{2,2}</m> het basis
         <me>
           \mat{E}_{11} = \left[ \begin{array}{cc} 1 \amp  0 \\ 0 \amp  0
-          \end{array}  \right], \, 
+          \end{array}  \right], \,
           \mat{E}_{12} = \left[ \begin{array}{cc} 0 \amp  1 \\ 0 \amp  0
-          \end{array}  \right], 
+          \end{array}  \right],
           \mat{E}_{21} = \left[ \begin{array}{cc} 0 \amp  0 \\ 1 \amp  0
-          \end{array}  \right], 
+          \end{array}  \right],
           \mat{E}_{22} = \left[ \begin{array}{cc} 0 \amp  0 \\ 0 \amp  1
           \end{array}  \right]
         </me>.
@@ -129,33 +131,33 @@
         (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
       </men>
     </p>
-
-    <exercise>
-      <statement>
-        <p>
-          Bevestig dat <xref ref="kronecker_for_matrix_basis-2" /> wel
-          die korrekte formule vir die matrikselemente van <m>\mat{E}_{ij}</m> is.
-        </p>
-      </statement>
-    </exercise>
   </assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+        Bevestig dat <xref ref="kronecker_for_matrix_basis-2" /> wel
+        die korrekte formule vir die matrikselemente van <m>\mat{E}_{ij}</m> is.
+      </p>
+    </statement>
+  </exercise>
 
   <example>
     <statement>
       <p>
         Ons skryf <m>\Col_n</m> vir die vektorruimte <m>\Mat_{n,1}</m> van
-        <m>n</m>-dimensional <em>kolomvektore</em>, 
+        <m>n</m>-dimensional <em>kolomvektore</em>,
         en ons sal die standaard basisvektore
-        <m>{\mathbf \mat{E}}_{i1}</m> van <m>\Col_n</m> 
+        <m>{\mathbf \mat{E}}_{i1}</m> van <m>\Col_n</m>
         op eenvoudiger wyse as <m>\col{e}_i</m> skryf:
         <me>
           \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
-          \end{array}  \right], \, 
+          \end{array}  \right], \,
           \col{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
-          \end{array}  \right], \, 
+          \end{array}  \right], \,
           \ldots, \,
           \col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
-          \end{array}  \right] 
+          \end{array}  \right]
         </me>.
       </p>
 
@@ -174,16 +176,16 @@
     met dimensie<m>nm</m>
     <!--(sien <xref ref="dimension_of_matrix_space_example">Voorbeeld</xref>). -->
     Ons skryf <m>\Col_n</m> vir die
-    vektorruimte <m>\Mat_{n,1}</m> van <m>n</m>-dimensionele 
+    vektorruimte <m>\Mat_{n,1}</m> van <m>n</m>-dimensionele
     <em>kolomvektore</em>.
   </p>
 
   <p>
     Die belangrikste bewerking is <em>matriksvermenigvuldiging</em>. 'n
     <m>n \times k</m>-matriks <m>\mat{A}</m> kan van regs met 'n
-    <m>k \times m</m>-matriks <m>\mat{B}</m> vermenigvuldig word 
+    <m>k \times m</m>-matriks <m>\mat{B}</m> vermenigvuldig word
     om 'n <m>n \times m</m>-matriks <m>\mat{AB}</m> te kry,
-    <md>
+    <me>
       \left[ \begin{array}{cccc} \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1k} \\
       \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2k} \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
@@ -192,13 +194,13 @@
       \mat{B}_{21} \amp  \mat{B}_{22} \amp  \cdots \amp  \mat{B}_{2m} \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       \mat{B}_{k1} \amp  \mat{B}_{k2} \amp  \cdots \amp  \mat{B}_{km}
-      \end{array}  \right] \, = \\ 
+      \end{array}  \right] \, = \\
       \left[ \begin{array}{cccc} (\mat{AB})_{11} \amp  (\mat{AB})_{12} \amp  \cdots \amp  (\mat{AB}_{1m} \\
       (\mat{AB})_{21} \amp  (\mat{AB})_{22} \amp  \cdots \amp  (\mat{AB})_{2m} \\
       \vdots \amp  \amp  \ddots \amp  \vdots \\
       (\mat{AB})_{k1} \amp  (\mat{AB})_{k2} \amp  \cdots \amp  (\mat{AB})_{nm}
       \end{array}  \right]
-    </md>
+    </me>
     deur die inskrywings van <m>\mat{AB}</m> as
     <me>
       (\mat{AB})_{ij} := \mat{A}_{i1} \mat{B}_{1j} + \mat{A}_{i2} \mat{B}_{2j} + \cdots + \mat{A}_{ik} \mat{B}_{kj}
@@ -208,7 +210,7 @@
   <proposition xml:id="props_of_matrix_ops">
     <statement>
       <p>
-        Die bostaande bewerkings op matrikse bevredig die volgende 
+        Die bostaande bewerkings op matrikse bevredig die volgende
         re&#xeb;ls wanneer ook al die somme en produkte gedefinieer is:
         <ol>
           <li>
@@ -297,17 +299,19 @@
 
   <exercise>
     <statement>
-      Bewys dat indien <m>A \in \Mat_{2,2}</m> 
-      <me>
-        AB = BA
-      </me>
-      vir alle <m>B \in \Mat_{2,2}</m> bevredig, dan is <m>A</m> van die vorm
-      <me>
-        \mat{A} = \begin{bmatrix} a \mamp 0 \\
-        0 \mamp a
-        \end{bmatrix}  .
-      </me>
-      </statement>
+      <p>
+        Bewys dat indien <m>A \in \Mat_{2,2}</m>
+        <me>
+          AB = BA
+        </me>
+        vir alle <m>B \in \Mat_{2,2}</m> bevredig, dan is <m>A</m> van die vorm
+        <me>
+          \mat{A} = \begin{bmatrix} a \mamp 0 \\
+          0 \mamp a
+          \end{bmatrix}  .
+        </me>
+      </p>
+    </statement>
   </exercise>
 
 </appendix>
