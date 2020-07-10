@@ -1,6 +1,6 @@
 
 
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AppBHypersurfaces">
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AppBHypersurfaces">
   <title>Hypersurfaces</title>
   <definition>
     <statement>
@@ -8,7 +8,7 @@
         Let <m>f : \mathbb{R}^{n+1} \rightarrow \mathbb{R}</m> be a function.
         The <term>zero set</term> of <m>f</m> is the subset <m>M \subset \mathbb{R}^{n+1}</m> given by
         <me>
-          M := \{ \ve{x} \in \mathbb{R}^{n+1} : f(\ve{x}) = 0 \} 
+          M := \{ \ve{x} \in \mathbb{R}^{n+1} : f(\ve{x}) = 0 \}
         </me>.
       </p>
     </statement>
@@ -17,10 +17,12 @@
   <definition>
     <statement>
       <p>
-        We say that a subset <m>M \subset \mathbb{R}^{n+1}</m> is an
+        We say that a subset
+        <m>M \subset \mathbb{R}^{n+1}</m> is an
         <term><m>n</m>-dimensional hypersurface</term>
         if there exists a function
-        <m>f : \mathbb{R}^{n+1} \rightarrow \mathbb{R}</m> such that <m>M</m> is the zero set of <m>f</m>,
+        <m>f : \mathbb{R}^{n+1} \rightarrow \mathbb{R}</m>
+        such that <m>M</m> is the zero set of <m>f</m>,
         and if for all <m>\ve{p} \in M</m>,
         <me>
           \nabla_{\ve{p}} f \mbox{ exists and is not equal to }  \ve{0}
@@ -51,19 +53,20 @@
           M = \{ (x,y) \in \mathbb{R}^2 : y^2 - x^2 - 1 = 0 \}
         </me>
         which is a hyperbola:
-        tikzalign
       </p>
 
-      <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[domain=-1.2:1.2]
-  \draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
-  \draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
-  \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
-  \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});\end{tikzpicture}]]>
-</latex-image>
-      </image>
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}[domain=-1.2:1.2]
+            \draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
+            \draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
+            \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
+            \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
 
       <p>
         To show that <m>M</m> is a hypersurface,
@@ -117,29 +120,32 @@
 
       <p>
         This is called the <em>2-sphere</em>,
-        and is pictured below: tikzalign
+        and is pictured below:
       </p>
 
-      <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\shade[ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);
-\draw (0,0) circle (2cm);
-\draw (-2,0) arc (180:360:2 and 0.6);
-\draw[dashed] (2,0) arc (0:180:2 and 0.6);
-\fill[fill=black] (0,0) circle (1pt);
-\draw[dashed] (0,0) -- (2, 0);
-\draw[->] (2,0) -- node[pos=1.4] {\(y\)} (2.5, 0);  
-\draw[dashed] (0,0) --  (0, 2);
-\draw[->] (0,2) -- node[pos=1.4] {\(z\)} (0, 2.5);
-\draw[dashed] (0,0) -- (-0.43, -0.43*4/3);
-\draw[->] (-0.43, -0.43*4/3) -- node[pos=1.2] {\(x\)} (-1.5, -2);\end{tikzpicture}]]>
-</latex-image>
-      </image>
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}\shade[ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);
+            \draw (0,0) circle (2cm);
+            \draw (-2,0) arc (180:360:2 and 0.6);
+            \draw[dashed] (2,0) arc (0:180:2 and 0.6);
+            \fill[fill=black] (0,0) circle (1pt);
+            \draw[dashed] (0,0) -- (2, 0);
+            \draw[->] (2,0) -- node[pos=1.4] {\(y\)} (2.5, 0);
+            \draw[dashed] (0,0) --  (0, 2);
+            \draw[->] (0,2) -- node[pos=1.4] {\(z\)} (0, 2.5);
+            \draw[dashed] (0,0) -- (-0.43, -0.43*4/3);
+            \draw[->] (-0.43, -0.43*4/3) -- node[pos=1.2] {\(x\)} (-1.5, -2);\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
 
       <p>
         To show it is a hypersurface,
-        we first compute <m>\nabla f</m> at a general point <m>\ve{r} = (x,y,z) \in \mathbb{R}^3</m>:
+        we first compute <m>\nabla f</m> at a general point
+        <m>\ve{r} = (x,y,z) \in \mathbb{R}^3</m>:
         <me>
           \nabla_\ve{r} f = (2x, 2y, 2z)
         </me>
@@ -147,7 +153,8 @@
 
       <p>
         This clearly exists everywhere.
-        Moreover, for a point <m>\ve{p} = (a, b, c)</m> on <m>M</m>, we have
+        Moreover, for a point <m>\ve{p} = (a, b, c)</m>
+        on <m>M</m>, we have
         <me>
           \nabla_\ve{p} f = (2a, 2b, 2c) \neq (0, 0, 0)
         </me>
@@ -180,22 +187,25 @@
       </p>
 
       <p>
-        This is a <em>torus</em>, and is pictured below: tikzalign
+        This is a <em>torus</em>, and is pictured below:
       </p>
 
-      <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\node at (0,0) {\includegraphics[width=0.45\textwidth]{torus.pdf}};
-  \draw[->, very thick] (2.5,0) -- node[pos=1.4] {\(y\)} (3.2, 0);  
-  \draw[->, very thick] (0,0) -- node[pos=1.1] {\(z\)} (0, 2.5);
-  \draw[->, very thick] (-0.9, -0.9*4/3) -- node[pos=1.2] {\(x\)} (-1.5, -2);\end{tikzpicture}]]>
-</latex-image>
-      </image>
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}\node at (0,0) {\includegraphics[width=0.45\textwidth]{torus.pdf}};
+            \draw[->, very thick] (2.5,0) -- node[pos=1.4] {\(y\)} (3.2, 0);
+            \draw[->, very thick] (0,0) -- node[pos=1.1] {\(z\)} (0, 2.5);
+            \draw[->, very thick] (-0.9, -0.9*4/3) -- node[pos=1.2] {\(x\)} (-1.5, -2);\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
 
       <p>
         To show <m>M</m> is a hypersurface,
-        we first compute <m>\nabla f</m> at a general point <m>\ve{r} = (x,y,z) \in \mathbb{R}^3</m>:
+        we first compute <m>\nabla f</m> at a general point
+        <m>\ve{r} = (x,y,z) \in \mathbb{R}^3</m>:
         <me>
           \nabla_\ve{r} f = \left( \frac{2x(2 - \sqrt{x^2 + y^2)}}{\sqrt{x^2 + y^2}}, \, \frac{2y(2 - \sqrt{x^2 + y^2)}}{\sqrt{x^2 + y^2}}, \, 2z \right)
         </me>
@@ -231,7 +241,8 @@
   <definition>
     <statement>
       <p>
-        Let <m>M \subset \mathbb{R}^{n+1}</m> be a hypersurface associated to a function <m>f : \mathbb{R}^{n+1} \rightarrow \mathbb{R}</m>.
+        Let <m>M \subset \mathbb{R}^{n+1}</m> be a hypersurface
+        associated to a function <m>f : \mathbb{R}^{n+1} \rightarrow \mathbb{R}</m>.
         The <term>tangent space</term> of <m>M</m> at <m>\ve{p} \in M</m> is:
         <me>
           T_\ve{p} M := \{ \ve{v} \in \mathbb{R}^{n+1} \, : \, \nabla_\ve{p} f \dotp \ve{v} = 0 \}
@@ -262,7 +273,8 @@
   <example>
     <statement>
       <p>
-        Compute a basis for the tangent space to the hyperbola <m>M</m> from <xref ref="hyperbola_example">Example</xref>
+        Compute a basis for the tangent space to the hyperbola <m>M</m>
+        from <xref ref="hyperbola_example">Example</xref>
         at <m>\ve{p} = (1, \sqrt{2})</m>.
         Draw a picture to illustrate the result.
       </p>
@@ -271,7 +283,7 @@
       <p>
         We have already computed the gradient of <m>f</m> at a point <m>\ve{p} = (a,b) \in M</m>:
         <me>
-          \nabla_\ve{p} = (2b, -2a)  \mbox{ where \(b^2 = 1 + a^2\)} 
+          \nabla_\ve{p} = (2b, -2a)  \mbox{ where \(b^2 = 1 + a^2\)}
         </me>.
       </p>
 
@@ -295,47 +307,46 @@
         The picture is: tikzalign
       </p>
 
-      <image>
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
+            \draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
+            \draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
+            \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
+            \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
+            \draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x) + (sqrt(2)-1/sqrt(2))});
+            \draw[very thick, fill] (1, 1.414) circle (1pt) node[below right] {\(\ve{p}\)};
+            \node at (-1.5, 1.4) {\(M\)};
+            \draw[line width=0.5mm, blue, ->] (1, 1.414) -- (1.5, 1.414 + 0.5*0.707) node[below right] {\(\ve{u}\)};\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
 
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
-\draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
-\draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
-\draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
-\draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
-\draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x) + (sqrt(2)-1/sqrt(2))}); 
-\draw[very thick, fill] (1, 1.414) circle (1pt) node[below right] {\(\ve{p}\)};
-\node at (-1.5, 1.4) {\(M\)};
-\draw[line width=0.5mm, blue, ->] (1, 1.414) -- (1.5, 1.414 + 0.5*0.707) node[below right] {\(\ve{u}\)};\end{tikzpicture}]]>
-</latex-image>
-      </image>
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
+            \draw[<->] (-2,0) -- (2,0) node[below] {\(v_1\)};
+            \draw[<->] (0, -2) -- (0,2) node[right] {\(v_2\)};
+            \draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x)});
+            \node[red] at (2, 1.8) {\(T_\ve{p} M\)};
+            \draw[line width=0.5mm, blue, ->] (0,0) -- (0.5, 0.5*0.707) node[right, yshift=-2pt] {\(\ve{u}\)};\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
 
-      <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
-\draw[<->] (-2,0) -- (2,0) node[below] {\(v_1\)};
-\draw[<->] (0, -2) -- (0,2) node[right] {\(v_2\)};
-\draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x)});   
-\node[red] at (2, 1.8) {\(T_\ve{p} M\)};
-\draw[line width=0.5mm, blue, ->] (0,0) -- (0.5, 0.5*0.707) node[right, yshift=-2pt] {\(\ve{u}\)};\end{tikzpicture}]]>
-</latex-image>
-      </image>
-
-      <assemblage>
-        <p>
-          The red line in the first picture,
-          drawn for the sake of illustration,
-          is the tangent space shifted so that it passes through <m>\ve{p}</m>.
-          The actual tangent space <m>T_\ve{p} M</m> goes through the origin as in the second picture.
-        </p>
-      </assemblage>
+      <p>
+        The red line in the first picture,
+        drawn for the sake of illustration,
+        is the tangent space shifted so that it passes through <m>\ve{p}</m>.
+        The actual tangent space <m>T_\ve{p} M</m> goes through the origin as in the second picture.
+      </p>
 
     </solution>
   </example>
 
-  <p>
-    \end{appendices}
-  </p>
-</chapter>
+</appendix>
 
