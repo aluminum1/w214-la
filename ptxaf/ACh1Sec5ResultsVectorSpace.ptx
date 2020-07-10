@@ -30,8 +30,8 @@
   <proof>
     <p>
       <md>
-        <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero" text="title"/> \text{ vir } \ve{v}=\ve{0} </mrow>
-        <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3b" text="title"></xref>\text{)}</mrow>
+        <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero"/> \text{ vir } \ve{v}=\ve{0} </mrow>
+        <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3b" text="title" />\text{)}</mrow>
       </md>
     </p>
   </proof>
@@ -247,7 +247,7 @@
         <me>
           k \smul \ve{0} = k \smul (\ve 0 + \ve 0)
         </me>.
-        Uit <xref ref = "R4"/> kry ons
+        Uit <xref ref = "R4" text="title"/> kry ons
         <me>
           k \smul (\ve 0 + \ve 0) = k \smul \ve 0 + k \smul 0
         </me>.
@@ -322,7 +322,7 @@
         <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6" text="title"></xref> \text{ aan LK, definisie van inverse aan RK}) </mrow>
 
 
-        <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6">R6</xref> \text{ aan RK}) </mrow>
+        <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6" text="title" /> \text{ aan RK}) </mrow>
 
         <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7" text="title"></xref> \text{ aan LK})  </mrow>
 
@@ -385,7 +385,7 @@
     <exercise xml:id="empty_vector_space">
       <statement>
       <p>
-        Die le&#xea; versameling kan met die data <xref ref="D1" text="title"></xref>, <xref ref="D2" text="title"></xref>, <xref ref="D3" text="title"></xref> toegerus word wat aan die re&#xeb;ls vir 'n vektorruimte voldoen.
+        Die le&#xea; versameling kan met die data <xref ref="D1" text="title" />, <xref ref="D2" text="title" />, <xref ref="D3" text="title" /> toegerus word wat aan die re&#xeb;ls vir 'n vektorruimte voldoen.
       </p>
     </statement>
      <solution>
