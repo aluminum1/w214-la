@@ -125,7 +125,7 @@
         Laat <m>\ve{v} \in V</m>.
         Brei dit uit in die basis <m>\basis{B}</m>:
         <me>
-          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_m \ve{b}_m,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix}
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_m \ve{b}_m,  \text{i.e. }  [\ve{v}]_\basis{B} = \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix}
         </me>.
       </p>
 
@@ -133,7 +133,7 @@
         Dan,
          <md>
           <mrow>[\ve{v}]_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
-          <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  \mbox{(\(T\) is line&#xea;r)}</mrow>
+          <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  (T \text{ is line&#xea;r)}</mrow>
           <mrow>\amp = a_1 [T(\ve{b}_1)]_\basis{C} + \cdots + a_n [T(\ve{b}_m)]_\basis{C}  \amp \amp  (<xref ref = "lin_of_coord_vectors" />)</mrow>
          <mrow> \amp =  \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
           <mrow>\amp =    [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
@@ -239,9 +239,9 @@
       Dit is, <m>\mat{u} = [\ve{v}]_\basis{B}</m>.
       So,
       <md>
-        <mrow>\left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} \right) (\mat{c})  \amp = [ \cdot ]_\basis{C} \left( T \left(\ve{vec}_{V, \basis{B}}(\mat{u})\right)\right) \amp \amp  \mbox{(Defn van saamgestelde afbeelding)}</mrow>
-        <mrow>\amp = [\cdot]_\basis{C} (T(\ve{v})) \amp \amp  \mbox{(Defn van \(\ve{v}\))}</mrow>
-        <mrow>\amp = [T(\ve{v})]_\basis{C} \amp \amp  \mbox{(Defn van \([\cdot]_\basis{C}\))}</mrow>
+        <mrow>\left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} \right) (\mat{c})  \amp = [ \cdot ]_\basis{C} \left( T \left(\ve{vec}_{V, \basis{B}}(\mat{u})\right)\right) \amp \amp  \text{(Defn van saamgestelde afbeelding)}</mrow>
+        <mrow>\amp = [\cdot]_\basis{C} (T(\ve{v})) \amp \amp  \text{(Defn van } \ve{v})</mrow>
+        <mrow>\amp = [T(\ve{v})]_\basis{C} \amp \amp  \text{(Defn van } [\cdot]_\basis{C})</mrow>
         <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \amp \amp (<xref ref="lin-map-in-matrix-theorem">Stelling</xref>) </mrow>
       </md>.
     </p>
@@ -296,15 +296,15 @@
     <p>
       Ons het:
      <md>
-        <mrow>\mbox{\(i\)th colu} \amp \mbox{mn of \([T \circ S]_{\basis{D} \leftarrow \basis{B}}\)}</mrow>
-        <mrow>\amp = \left[(T \circ S)(\ve{b}_i)\right]_\basis{D} \amp \amp  \mbox{(Defn of \([T \circ S]_{\basis{D} \leftarrow \basis{B}}\))}</mrow>
-        <mrow>\amp = \left[T(S(\ve{b}_i))\right]_\basis{D} \amp \amp  \mbox{(Defn of \(T \circ S\))}</mrow>
+        <mrow>i\text{-ste kol} \amp \text{om van } [T \circ S]_{\basis{D} \leftarrow \basis{B}}</mrow>
+        <mrow>\amp = \left[(T \circ S)(\ve{b}_i)\right]_\basis{D} \amp \amp  \text{(Defn van }[T \circ S]_{\basis{D} \leftarrow \basis{B}})</mrow>
+        <mrow>\amp = \left[T(S(\ve{b}_i))\right]_\basis{D} \amp \amp  \text{(Defn van } T \circ S )</mrow>
         <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S(\ve{b}_i]_\basis{C} \amp \amp  (<xref ref = "lin-map-in-matrix-theorem"/>)</mrow>
         <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, [\ve{b}_i]_\basis{B} \amp \amp  (<xref ref = "lin-map-in-matrix-theorem"/>)</mrow>
-        <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, \mat{e}_i \amp \amp  \left(\mbox{
-        want \([\ve{b}_i]_\basis{B} = \mat{e}_i\)
-        }  \right)</mrow>
-        <mrow>\amp = \mbox{\(i\)th column of \([T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}\)}  \amp \amp  <xref ref = "fact-about-columns"/> </mrow>
+        <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, \mat{e}_i \amp \amp  \left(\text{want }
+        [\ve{b}_i]_\basis{B} = \mat{e}_i
+        \right)</mrow>
+        <mrow>\amp = i\text{-ste kolom van } [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}  \amp \amp  <xref ref = "fact-about-columns"/> </mrow>
       </md>.
     </p>
   </proof>
@@ -317,7 +317,7 @@
         vir <m>V</m>, en <m>\basis{C}</m> is 'n basis vir <m>W</m>.
         Dan
         <me>
-          \mbox{\(T\) is 'n isomorfisme}  \Longleftrightarrow \mbox{\([T]_{\basis{C} \leftarrow \basis{B}}\) is inverteerbaar.}
+          (T \text{ is 'n isomorfisme}  \Longleftrightarrow [T]_{\basis{C} \leftarrow \basis{B}} \text{ is inverteerbaar.}
         </me>
       </p>
     </statement>
@@ -412,13 +412,13 @@
       Ons het
       <md>
         <mrow>[T]_{\basis{C} \leftarrow \basis{B}} [T^{-1}]_{\basis{B} \leftarrow \basis{C}} \amp = [T \circ T^{-1}]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
-        <mrow>\amp = [\id_W]_{\basis{C} \leftarrow \basis{C}} \amp \amp  \mbox{(\(T \circ T^{-1} = \id_W\))}</mrow>
+        <mrow>\amp = [\id_W]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (T \circ T^{-1} = \id_W)</mrow>
         <mrow>\amp = I</mrow>
       </md>
       en
       <md>
         <mrow>[T^{-1}]_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} \amp = [T^{-1} \circ T]_{\basis{B} \leftarrow \basis{B}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
-        <mrow>\amp = [\id_V]_{\basis{B} \leftarrow \basis{B}} \amp \amp  \mbox{(\(T^{-1} \circ T = \id_V\))}</mrow>
+        <mrow>\amp = [\id_V]_{\basis{B} \leftarrow \basis{B}} \amp \amp  (T^{-1} \circ T = \id_V)</mrow>
         <mrow>\amp = I</mrow>
       </md>.
     </p>
@@ -443,9 +443,9 @@
   <proof>
     <p>
       <md>
-        <mrow>\mat{P}_{\basis{C} \leftarrow \basis{B}} \amp = \left[ [\ve{b}_1]_{\basis{C}} \cdots [\ve{b}_m]_{\basis{C}} \right] \amp \amp \mbox{(Defn van \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
+        <mrow>\mat{P}_{\basis{C} \leftarrow \basis{B}} \amp = \left[ [\ve{b}_1]_{\basis{C}} \cdots [\ve{b}_m]_{\basis{C}} \right] \amp \amp \text{(Defn van } \mat{P}_{\basis{C} \leftarrow \basis{B}})</mrow>
         <mrow>\amp = \left[ [\id(\ve{b}_1)]_{\basis{C}} \cdots [\id(\ve{b}_m)]_{\basis{C}} \right]</mrow>
-        <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}}. \amp \amp  \mbox{(Defn van \([\id]_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
+        <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}}. \amp \amp  \text{(Defn van } [\id]_{\basis{C} \leftarrow \basis{B}})</mrow>
       </md>
     </p>
   </proof>
@@ -470,12 +470,12 @@
     <proof>
       <p>
        <md>
-          <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
+          <mrow>\text{RK}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
           <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="change-of-basis-as-matrix"/>)</mrow>
           <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="inverse-of-map-via-matrices"/>)</mrow>
           <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
           <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{C}}</mrow>
-          <mrow>\amp = \mbox{LHS} </mrow>
+          <mrow>\amp = \text{LK} </mrow>
         </md>.
       </p>
     </proof>
