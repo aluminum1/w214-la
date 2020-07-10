@@ -324,7 +324,7 @@
           word deur die funksies <m>f_a</m>,
           <m>a \in X</m>, gedefinieer deur:
           <men xml:id="defn_of_basis_of_functions">
-            f_a (x) := \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ andersins} \end{cases}
+            f_a (x) := \begin{cases} 1 \amp  \text{ if }  x = a \\ 0 \amp  \text{ andersins} \end{cases}
           </men>
         </p>
 
@@ -707,11 +707,11 @@
       <p>
         Beskou die GDV
         <men>
-          x^2 y^{''} - 3xy^{'} + 5y = 0 \quad \mbox{on } (0, \infty)
+          x^2 y^{''} - 3xy^{'} + 5y = 0 \quad \text{ on } (0, \infty)
         </men>
         uit <xref ref="first_example_2nd_order_ode"/>. Om <xref ref="diff_eqn_exist_unique"/> toe te pas, heskryf ons dit eers in die vorm
         <men xml:id="diff_eqn_example_thm">
-          y^{''} - \frac{3}{x} y' + \frac{5}{x^2} y = 0 \quad \mbox{on } (0, \infty).
+          y^{''} - \frac{3}{x} y' + \frac{5}{x^2} y = 0 \quad \text{ on } (0, \infty).
         </men>
         Die koëffisiëntfunksies <m>\frac{3}{x}</m> en <m>\frac{5}{x^2}</m> is albei kontinu op  <m>(0, \infty)</m> en so kan ons  <xref ref="diff_eqn_exist_unique"/> toepas. Kies, byvoorbeeld, <m>x_0 = 1</m> en willekeurige getalle <m>c_0, c_1</m>. Dan sê <xref ref="diff_eqn_exist_unique"/> dat daar bestaan 'n unieke oplossing <m>y(x)</m> van die differensiaalvergelyking  <xref ref="diff_eqn_example_thm"/> wat die volgende beginwaardes bevredig:
         <mdn>
