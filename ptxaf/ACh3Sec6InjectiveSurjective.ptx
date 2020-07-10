@@ -72,7 +72,7 @@
         Laat <m>T : V \rightarrow V</m> 'n line&#xea;re operator op 'n eindigdimensionele vektorruimte <m>V</m> wees.
         Dan:
         <me>
-          \mbox{\(T\) is injective}  \Longleftrightarrow \mbox{\(T\) is surjektief}
+          T \text{ is injektief}  \Longleftrightarrow T \text{ is surjektief}
         </me>.
       </p>
     </statement>
@@ -100,7 +100,7 @@
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
         <mrow>\amp \therefore \Nhg(T) = 0 \amp \amp  (<xref ref="rank-nullity-theorem"/>) </mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
-        <mrow>\amp \therefore \mbox{\(T\) is injektief. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
+        <mrow>\amp \therefore T \text{ is injektief. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
       </md>
     </p>
   </proof>
@@ -122,7 +122,7 @@
       <md>
         <mrow>\text{Veronderstel dat }  T(\ve{v}_1) \amp = T(\ve{v}_2).</mrow>
         <mrow>\therefore S(T(\ve{v}_1)) \amp = S(T(\ve{v}_2))</mrow>
-        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \mbox{(want \(S \circ T = \id_V\))}</mrow>
+        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \text{(want } S \circ T = \id_V)</mrow>
         <mrow>\therefore \ve{v}_1 \amp = \ve{v}_2</mrow>
       </md>
       wat wys dat <m>T</m> injektief is.
@@ -133,7 +133,7 @@
       Dan
       <md>
         <mrow>T(\ve{v}) \amp = T(S(\ve{w}))</mrow>
-        <mrow>\amp = \id_W (\ve{w})  \mbox{(deur \(T \circ S = \id_W\))}</mrow>
+        <mrow>\amp = \id_W (\ve{w})  \text{(deur } T \circ S = \id_W)</mrow>
         <mrow>\amp = \ve{w}</mrow>
       </md>.
     </p>
@@ -151,7 +151,7 @@
       Ons definieer die inverse-afbeelding <m>S</m> soos volg:
       <md>
         <mrow>S : W \amp  \rightarrow V</mrow>
-        <mrow>\ve{w} \amp  \mapsto \mbox{die unieke \(\ve{v} \in V\) sodat \(T(\ve{v}) = \ve{w}\).}</mrow>
+        <mrow>\ve{w} \amp  \mapsto \text{die unieke } \ve{v} \in V\text{ sodat } T(\ve{v}) = \ve{w}.</mrow>
       </md>
     </p>
 
