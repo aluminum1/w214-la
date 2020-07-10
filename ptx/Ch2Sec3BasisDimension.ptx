@@ -127,7 +127,7 @@
 
       <solution>
         <p>
-          First we check if the list of vectors is <xref ref="defn_of_linear_ind" text="title">linearly independent</xref>. Consider the equation
+          First we check if the list of vectors is <xref ref="defn_of_linear_ind" text="custom">linearly independent</xref>. Consider the equation
           <mdn>
             <mrow> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{0} </mrow>
             <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (0, 0, 0, 0) </mrow>
@@ -140,7 +140,7 @@
           <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = 0 </mrow>
           <mrow xml:id="R4-example-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = 0 </mrow>
         </mdn>
-        We can compute the solutions to equations <xref first="R4-example-eqn1" last="R-example-eqn4"/>  by hand, or using SageMath.
+        We can compute the solutions to equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  by hand, or using SageMath.
         </p>
         <sage>
           <input>
@@ -820,7 +820,7 @@
       </p>
 
       <p>
-        If <m>W</m> is the zero vector space <m>\{ \ve{0} \} </m>, then <m>W</m> is finite-dimensional <xref ref="defn_dim_zero_vec_space" text="title">by definition</xref>.
+        If <m>W</m> is the zero vector space <m>\{ \ve{0} \} </m>, then <m>W</m> is finite-dimensional <xref ref="defn_dim_zero_vec_space" text="custom">by definition</xref>.
       </p>
 
       <p>
@@ -1300,7 +1300,7 @@
     </solution>
   </exercise>
 
-  <exercise xml:id="dim_poly_at_2_ex">
+  <exercise xml:id="dim_poly_at_2_ex-a">
     <statement>
       <p>
         In each case,
@@ -1449,7 +1449,7 @@
     </solution>
   </exercise>
 
-  <exercise xml:id="dim_poly_at_2_ex">
+  <exercise xml:id="dim_poly_at_2_ex-b">
     <statement>
       <p>
         For each of the following,
@@ -1507,7 +1507,7 @@
   <exercise>
     <statement>
       <p>
-        Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="title">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.)
+        Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="custom">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.)
       </p>
     </statement>
     <solution>
