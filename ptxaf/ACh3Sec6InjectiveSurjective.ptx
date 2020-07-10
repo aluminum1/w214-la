@@ -167,7 +167,7 @@
     </p>
 
     <p>
-      Nou het ons 'n goed-gedefinieerde <em>funksie</em>
+      Nou het ons 'n wel-gedefinieerde <em>funksie</em>
       <m>S : W \rightarrow V</m>
       wat <m>T \circ S = \id_W</m> en <m>S \circ T = \id_V</m> bevredig.
       Ons moet slegs nagaan dat <m>S</m> line&#xea;r is.
