@@ -48,7 +48,7 @@
   <p>
     Dan neem ons waar dat
     <men xml:id="bijection_eqn">
-      T \circ S = \id_A  \mbox{and}   S \circ T = \id_B
+      T \circ S = \id_A  \text{ en }   S \circ T = \id_B
     </men>.
   </p>
 
@@ -96,7 +96,7 @@
         Ons sê dat 'n lineêre afbeelding <m>T : V  \rightarrow W</m> 'n <term>isomorfisme</term>
         is as daar 'n lineêre afbeelding <m>T^{-1} : W \rightarrow V</m> bestaan, sodat
         <men xml:id="inverse_map_in_iso">
-          T^{-1} \circ T = \id_V  \mbox{en}   T \circ T^{-1} = \id_W
+          T^{-1} \circ T = \id_V  \text{ en }   T \circ T^{-1} = \id_W
         </men>.
       </p>
     </statement>
@@ -130,12 +130,12 @@
       <m>S(\ve{w}) = S'(\ve{w})</m>.
       Inderdaad:
       <md>
-        <mrow>S(\ve{w}) \amp = S(\id_W (\ve{w})) \amp \amp  \mbox{(Defn of \(\id_W\))}</mrow>
-        <mrow>\amp = S( (T \circ S')(\ve{w})) \amp \amp  \mbox {($T \circ S' = \id_W$)}</mrow>
-        <mrow>\amp = S(T(S'(\ve{w}))) \amp \amp  \mbox {(Defn of $T \circ S'$)}</mrow>
-        <mrow>\amp = (S \circ T)(S'(\ve{w})) \amp \amp  \mbox {(Defn of $S \circ T$)}</mrow>
-        <mrow>\amp = \id_V (S'(\ve{w})) \amp \amp  \mbox{(\(S \circ T = \id_V\))}</mrow>
-        <mrow>\amp = S'(\ve{w}) \amp \amp  \mbox {(Defn of $\id_V$)}</mrow>
+        <mrow>S(\ve{w}) \amp = S(\id_W (\ve{w})) \amp \amp  \text{(Defn van } \id_W)</mrow>
+        <mrow>\amp = S( (T \circ S')(\ve{w})) \amp \amp  (T \circ S' = \id_W)</mrow>
+        <mrow>\amp = S(T(S'(\ve{w}))) \amp \amp  \text{(Defn of } T \circ S')</mrow>
+        <mrow>\amp = (S \circ T)(S'(\ve{w})) \amp \amp  \text{(Defn of } S \circ T)</mrow>
+        <mrow>\amp = \id_V (S'(\ve{w})) \amp \amp  (S \circ T = \id_V)</mrow>
+        <mrow>\amp = S'(\ve{w}) \amp \amp  \text{(Defn of } \id_V)</mrow>
       </md>.
     </p>
   </proof>
@@ -207,8 +207,8 @@
       dan lewer die toepassing van <m>T</m> aan beide kante
       <md>
         <mrow>T(a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m)) \amp  = T(\ve{0}_W)</mrow>
-        <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  \mbox{(\(T\) is line&#xea;r)}</mrow>
-        <mrow>\therefore a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m \amp = \ve{0}_V \amp \amp  \mbox{(\(T\circ S = \id_V\))}</mrow>
+        <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  (T \text{ is line&#xea;r)}</mrow>
+        <mrow>\therefore a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m \amp = \ve{0}_V \amp \amp  (T\circ S = \id_V)</mrow>
       </md>
       wat impliseer dat <m>a_1 = a_2 = \cdots = a_m = 0</m>,
       aangesien <m>\basis{B}</m> line&#xea;r onafhanklik is.
@@ -220,9 +220,9 @@
       skryf vir skalare <m>a_i</m> aangesien<m>\basis{B}</m> vir <m>V</m> onderspan.
       Maar dan
       <md>
-        <mrow>\ve{w} \amp = S(T(\ve{w})) \amp \amp  \mbox{(since \(S \circ T = \id_W\))}</mrow>
+        <mrow>\ve{w} \amp = S(T(\ve{w})) \amp \amp  \text{(since } S \circ T = \id_W)</mrow>
         <mrow>\amp = S(a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m)</mrow>
-        <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp \mbox{(\(S\) is line&#xea;r)}</mrow>
+        <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp (S \text{ is line&#xea;r)}</mrow>
       </md>
       sodat <m>\basis{C}</m> <m>W</m> span.
       Daarom is <m>\basis{C}</m> 'n basis vir <m>V</m>, so
