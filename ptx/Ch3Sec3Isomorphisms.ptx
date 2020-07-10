@@ -4,6 +4,7 @@
   <title>Isomorphisms of vector spaces</title>
   <p>
     Suppose you have two sets,
+    <!--
     <me>
       A = \{ \mbox{bird} , \mbox{eye} , \mbox{person}  \}  \mbox{and}
       B = \left\{ \begin{aligned}<image width="100%" source="images/bird.png" />
@@ -11,6 +12,7 @@
       \end{aligned} , \begin{aligned}<image width="100%" source="images/person.png" />
       \end{aligned}  \right\}
     </me>.
+    -->
   </p>
 
   <p>
@@ -22,6 +24,7 @@
 
   <p>
     We could define two maps, say
+    <!-- For now images aren't allowed in text mode, so rework this:
     <md>
       <mrow>S: A \amp \rightarrow B</mrow>
       <mrow>\mbox{bird}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" />
@@ -39,6 +42,7 @@
       <mrow>\begin{aligned}<image width="100%" source="images/person.png" />
       \end{aligned}  \amp  \mapsto \mbox{cross}  </mrow>
     </md>.
+    -->
   </p>
 
   <p>
@@ -77,11 +81,9 @@
     In bookshops,
     cross-language dictionaries like this most often come bundled as a pair,
     in a single volume.
-    After all, if one needs to look up the English word for <m>\begin{aligned}<image width="100%" source="images/bird.png" />
-    \end{aligned}</m>,
+    After all, if one needs to look up the English word for <c>BIRD</c>
     it is a nuisance to have to traverse through the entire English-to-Chinese dictionary,
-    trying to find the English word which translates to <m>\begin{aligned}<image width="100%" source="images/bird.png" />
-    \end{aligned}</m>!
+    trying to find the English word which translates to <c>BIRD</c>!
   </p>
 
   <p>
@@ -152,21 +154,21 @@
     <p>
       Show that <m>\mathbb{R}^n</m> is isomorphic to <m>\Poly_{n-1}</m>
     </p>
-    <solution>
-      <p>
-        We define the following linear maps:
-        <md>
-          <mrow>T : \mathbb{R}^n \amp  \rightarrow \Poly_{n-1}</mrow>
-          <mrow>(a_1, a_2, \ldots, a_n) \amp \mapsto a_1 + a_2 x + \cdots + a_n x^{n-1}</mrow>
-          <mrow>T^{-1} : \Poly_{n-1} \amp \rightarrow \mathbb{R}^n </mrow>
-          <mrow> a_1 + a_2 x + \cdots + a_n x^{n-1} \amp \mapsto (a_1, a_2, \ldots, a_n)</mrow>
-        </md>
-      </p>
-      <p>
+  </statement>
+  <solution>
+    <p>
+      We define the following linear maps:
+      <md>
+        <mrow>T : \mathbb{R}^n \amp  \rightarrow \Poly_{n-1}</mrow>
+        <mrow>(a_1, a_2, \ldots, a_n) \amp \mapsto a_1 + a_2 x + \cdots + a_n x^{n-1}</mrow>
+        <mrow>T^{-1} : \Poly_{n-1} \amp \rightarrow \mathbb{R}^n </mrow>
+        <mrow> a_1 + a_2 x + \cdots + a_n x^{n-1} \amp \mapsto (a_1, a_2, \ldots, a_n)</mrow>
+      </md>
+    </p>
+    <p>
       We clearly have <m>T^{-1} \circ T = \id_{\mathbb{R}^n}</m> and <m>T \circ T^{-1} = \id_{\Poly_{n-1}}</m>.
     </p>
     </solution>
-    </statement>
   </example>
 
  <exercise>
