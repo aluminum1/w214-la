@@ -23,7 +23,7 @@
 
         <dl>
           <li xml:id="D1">
-            <title>D1.</title>
+            <title>D1</title>
             <p>
               An <em>addition operation</em>.
               (That is, for every pair of elements <m>\ve{u}, \ve{v} \in V</m>,
@@ -32,7 +32,7 @@
           </li>
 
           <li xml:id="D2">
-            <title>D2.</title>
+            <title>D2</title>
             <p>
               A <em>zero vector</em>.
               (That is, a special vector
@@ -42,7 +42,7 @@
           </li>
 
           <li xml:id="D3">
-            <title>D3.</title>
+            <title>D3</title>
             <p>
               A <em>scalar multiplication operation</em>.
               (That is, for each real number <m>k</m>
@@ -64,62 +64,62 @@
       <p>
         <dl>
           <li xml:id="R1">
-            <title>R1.</title>
+            <title>R1</title>
             <p>
               <m>\ve{v} + \ve{w} = \ve{w} + \ve{v}</m>
             </p>
           </li>
 
           <li xml:id="R2">
-            <title>R2.</title>
+            <title>R2</title>
             <p>
               <m>(\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})</m>
             </p>
           </li>
 
           <li xml:id="R3a">
-            <title>R3a.</title>
+            <title>R3a</title>
             <p>
               <m>\ve{0} + \ve{v} = \ve{v}</m>
             </p>
           </li>
 
           <li xml:id="R3b">
-            <title>R3b.</title>
+            <title>R3b</title>
             <p> <m>\ve{v} + \ve{0} = \ve{v}</m>
             </p>
           </li>
 
           <li xml:id="R4">
-            <title>R4.</title>
+            <title>R4</title>
             <p>
               <m>k \smul(\ve{v} + \ve{w}) = k \smul\ve{v} + k \smul\ve{w}</m>
             </p>
           </li>
 
           <li xml:id="R5">
-            <title>R5.</title>
+            <title>R5</title>
             <p>
               <m>(k + l) \smul\ve{v} = k \smul\ve{v} + l \smul{\ve{v}}</m>
             </p>
           </li>
 
           <li xml:id="R6">
-            <title>R6.</title>
+            <title>R6</title>
             <p>
               <m>k \smul(l \smul\ve{v}) = (kl) \smul\ve{v}</m>
             </p>
           </li>
 
           <li xml:id="R7">
-            <title>R7.</title>
+            <title>R7</title>
             <p>
               <m>1 \smul\ve{v} = \ve{v}</m>
             </p>
           </li>
 
           <li xml:id="R8">
-            <title>R8.</title>
+            <title>R8</title>
             <p>
               <m>0 \smul\ve{v} = \ve{0}</m>
             </p>
