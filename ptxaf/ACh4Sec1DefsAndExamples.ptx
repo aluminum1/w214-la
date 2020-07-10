@@ -273,22 +273,22 @@
 
       <p>
         Dan
-        <md>
-          <mrow>T(p_0)(x) \amp = p_0 (2x+3) \nonumber</mrow>
-          <mrow>\amp = 1 \nonumber</mrow>
-          <mrow>\therefore T(p_0) \amp = p_0</mrow>
-        </md>
-        <md>
-          <mrow>T(p_1)(x) \amp = p_1 (2x+3) \nonumber</mrow>
-          <mrow>\amp = 2x+3  \nonumber</mrow>
-          <mrow>\therefore T(p_1) \amp = 3p_0 + 2p_1</mrow>
-        </md>
-        <md>
-          <mrow>T(p_2)(x) \amp = p_2 (2x+3) \nonumber</mrow>
-          <mrow>\amp = (2x+3)^2 \nonumber</mrow>
-          <mrow>\amp = 4x^2 + 12x + 9 \nonumber</mrow>
-          <mrow>\therefore T(p_2) \amp = 9p_0 + 12p_1 + 4p_0</mrow>
-        </md>.
+        <mdn>
+          <mrow number="no">T(p_0)(x) \amp = p_0 (2x+3) </mrow>
+          <mrow number="no">\amp = 1 </mrow>
+          <mrow xml:id="poly-example-eigenvalue-Tp0">\therefore T(p_0) \amp = p_0</mrow>
+        </mdn>
+        <mdn>
+          <mrow number="no">T(p_1)(x) \amp = p_1 (2x+3) </mrow>
+          <mrow number="no">\amp = 2x+3  </mrow>
+          <mrow xml:id="poly-example-eigenvalue-Tp1">\therefore T(p_1) \amp = 3p_0 + 2p_1</mrow>
+        </mdn>
+        <mdn>
+          <mrow number="no">T(p_2)(x) \amp = p_2 (2x+3) </mrow>
+          <mrow number="no">\amp = (2x+3)^2 </mrow>
+          <mrow number="no">\amp = 4x^2 + 12x + 9 </mrow>
+          <mrow xml:id="poly-example-eigenvalue-Tp2">\therefore T(p_2) \amp = 9p_0 + 12p_1 + 4p_0</mrow>
+        </mdn>.
       </p>
 
       <p>
