@@ -95,7 +95,7 @@
     <p>
       Since <m>U</m> is a subspace,
       we know that it actually makes sense to
-      <q>equip it with the same addition operation,
+      <q>equip it with the same (restricted) addition operation,
       zero vector and scalar multiplication as in <m>V</m></q>.
       (If <m>U</m> was <em>not</em> a subspace,
       then we might have for instance
