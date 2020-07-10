@@ -2,11 +2,18 @@
 
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ACh1AbstractVectorSpaces">
   <title>Abstrakte vektorruimtes</title>
+
   <xi:include  href="ACh1Sec1Intro.ptx" />
+
   <xi:include  href="ACh1Sec2DefVectorSpace.ptx" />
+
   <xi:include  href="ACh1Sec3ExampleVectorSpace.ptx" />
+
   <xi:include  href="ACh1Sec4MoreExamples.ptx" />
+
   <xi:include  href="ACh1Sec5ResultsVectorSpace.ptx" />
+
   <xi:include  href="ACh1Sec6Subspaces.ptx" />
+
 </chapter>
 
