@@ -72,7 +72,7 @@
         Let <m>T : V \rightarrow V</m> be a linear operator on a finite-dimensional vector space <m>V</m>.
         Then:
         <me>
-          T \mbox{ is injective}  \Longleftrightarrow T \mbox{ is surjective}
+          T \text{ is injective}  \Longleftrightarrow T \text{ is surjective}
         </me>.
       </p>
     </statement>
@@ -100,7 +100,7 @@
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
         <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  ( <xref ref="rank-nullity-theorem"/> )</mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
-        <mrow>\amp \therefore T \mbox{ is injective. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
+        <mrow>\amp \therefore T \text{ is injective. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
       </md>
     </p>
   </proof>
@@ -122,7 +122,7 @@
       <md>
         <mrow>\text{Suppose that }  T(\ve{v}_1) \amp = T(\ve{v}_2).</mrow>
         <mrow>\therefore S(T(\ve{v}_1)) \amp = S(T(\ve{v}_2))</mrow>
-        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \mbox{(using } S \circ T = \id_V)</mrow>
+        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \text{(using } S \circ T = \id_V)</mrow>
         <mrow>\therefore \ve{v}_1 \amp = \ve{v}_2</mrow>
       </md>
       which shows that <m>T</m> is injective.
@@ -133,7 +133,7 @@
       Then
       <md>
         <mrow>T(\ve{v}) \amp = T(S(\ve{w}))</mrow>
-        <mrow>\amp = \id_W (\ve{w})  \mbox{(using } T \circ S = \id_W)</mrow>
+        <mrow>\amp = \id_W (\ve{w})  \text{(using } T \circ S = \id_W)</mrow>
         <mrow>\amp = \ve{w}</mrow>
       </md>.
     </p>
@@ -151,7 +151,7 @@
       We define the inverse map <m>S</m> as follows:
       <md>
         <mrow>S : W \amp  \rightarrow V</mrow>
-        <mrow>\ve{w} \amp  \mapsto \mbox{the unique } \ve{v} \in V \text{ such that } T(\ve{v}) = \ve{w}.</mrow>
+        <mrow>\ve{w} \amp  \mapsto \text{the unique } \ve{v} \in V \text{ such that } T(\ve{v}) = \ve{w}.</mrow>
       </md>
     </p>
 
