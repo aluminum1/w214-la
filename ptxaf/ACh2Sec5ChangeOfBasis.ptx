@@ -314,7 +314,7 @@
           Laat <m>\ve{v} \in V</m>.
           Brei <m>\ve{v}</m> in die basis <m>\basis{B}</m> uit:
           <me>
-            \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right]
+            \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \text{i.e. }  [\ve{v}]_\basis{B} = \left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right]
           </me>.
         </p>
 
