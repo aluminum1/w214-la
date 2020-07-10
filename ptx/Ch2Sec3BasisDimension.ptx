@@ -324,7 +324,7 @@
         with basis given by the functions <m>f_a</m>,
         <m>a \in X</m>, defined by:
         <men xml:id="defn_of_basis_of_functions">
-          f_a (x) :=  \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ otherwise}  \end{cases}
+          f_a (x) :=  \begin{cases} 1 \amp  \text{ if }  x = a \\ 0 \amp  \text{ otherwise}  \end{cases}
         </men>
       </p>
 
@@ -707,11 +707,11 @@
       <p>
         Consider the ODE
         <men>
-          x^2 y^{''} - 3xy^{'} + 5y = 0 \quad \mbox{on } (0, \infty)
+          x^2 y^{''} - 3xy^{'} + 5y = 0 \quad \text{ on } (0, \infty)
         </men>
         from <xref ref="first_example_2nd_order_ode"/>. To apply <xref ref="diff_eqn_exist_unique"/>, we first rewrite it in the form
         <men xml:id="diff_eqn_example_thm">
-          y^{''} - \frac{3}{x} y' + \frac{5}{x^2} y = 0 \quad \mbox{on } (0, \infty).
+          y^{''} - \frac{3}{x} y' + \frac{5}{x^2} y = 0 \quad \text{ on } (0, \infty).
         </men>
         The coefficient functions <m>\frac{3}{x}</m> and <m>\frac{5}{x^2}</m> are continuous on <m>(0, \infty)</m> so we can apply <xref ref="diff_eqn_exist_unique"/>. Choose, say, <m>x_0 = 1</m> and arbitrary numbers <m>c_0, c_1</m>. Then <xref ref="diff_eqn_exist_unique"/> says that there exists a unique solution <m>y(x)</m> to the differential equation <xref ref="diff_eqn_example_thm"/> satisfying the initial conditions:
         <mdn>
