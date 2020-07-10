@@ -20,7 +20,7 @@
         <m>\ve{w} = T(\ve{v})</m> for some <m>\ve{v} \in V</m>.
         That is,
         <me>
-          \Im(T) := \{ \ve{w} \in W : \ve{w} = T(\ve{v}) \mbox{ for some \(\ve{v} \in V\)}  \}
+          \Im(T) := \{ \ve{w} \in W : \ve{w} = T(\ve{v}) \text{ for some } \ve{v} \in V  \}
         </me>
       </p>
     </statement>
@@ -280,7 +280,7 @@
         where <m>\theta</m> is the angle from <m>\ve{a}</m> to <m>\ve{\theta}</m>,
         we see that
         <me>
-          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow  \mbox{\(\ve{v}=\ve{0}\) or \(\theta = 0\) or \(\theta= \pi\)}
+          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow  \ve{v}=\ve{0}\text{ or }\theta = 0\text{ or }\theta= \pi
         </me>.
       </p>
 
@@ -464,11 +464,11 @@
         Let <m>p,q \in \Poly_2</m>.
         Then
         <md>
-          <mrow>T(p + q) \amp = ( (p+q)(1), \, (p+q)'(1) )  \amp \amp  \mbox{(Defn of \(T\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, (p+q)'(1) ) \amp \amp  \mbox{(Defn of the function \(p+q\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, (p'+q')(1) ) \amp \amp  \mbox{(\((p+q)' = p'+q'\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, p'(1) + q'(1)) \amp \amp  \mbox{(Defn of the function \(p' + q'\))}</mrow>
-          <mrow>\amp = (p(1), \, p'(1)) + (q(1), \, q'(1)) \amp \amp  \mbox{(Defn of addition in \(\mathbb{R}^2\))}</mrow>
+          <mrow>T(p + q) \amp = ( (p+q)(1), \, (p+q)'(1) )  \amp \amp  \text{(Defn of } T)</mrow>
+          <mrow>\amp = (p(1) + q(1), \, (p+q)'(1) ) \amp \amp  \text{(Defn of the function } p+q)</mrow>
+          <mrow>\amp = (p(1) + q(1), \, (p'+q')(1) ) \amp \amp  ((p+q)' = p'+q')</mrow>
+          <mrow>\amp = (p(1) + q(1), \, p'(1) + q'(1)) \amp \amp  \text{(Defn of the function } p' + q')</mrow>
+          <mrow>\amp = (p(1), \, p'(1)) + (q(1), \, q'(1)) \amp \amp  \text{(Defn of addition in } \mathbb{R}^2)</mrow>
           <mrow>\amp = T(p) + T(q)</mrow>
         </md>.
       </p>
@@ -500,7 +500,7 @@
         where <m>t \in \mathbb{R}</m>.
         Hence
         <me>
-          \Ker(T) =  \left\{ \mbox{ all polynomials of the form \( -t -2t x + t x^2\)  where  \(t \in \mathbb{R}\) }  \right\}
+          \Ker(T) =  \left\{ \text{ all polynomials of the form }  -t -2t x + t x^2\text{ where } t \in \mathbb{R}  \right\}
         </me>.
       </p>
 
@@ -543,7 +543,7 @@
         Note that indeed <m>T(p) = (v,w)</m>.
         Hence,
         <me>
-          \Im(T) = \{\mbox{all }  (v,w) \in \mathbb{R}^2 \} = \mathbb{R}^2
+          \Im(T) = \{\text{all }  (v,w) \in \mathbb{R}^2 \} = \mathbb{R}^2
         </me>.
       </p>
 
@@ -776,7 +776,7 @@
         <mrow>\ve{w} \amp =   T(\ve{v})</mrow>
         <mrow>\amp = T(a_1 \ve{e}_1 + \cdots + a_k \ve{e}_k + b_1 \ve{f}_1 + \cdots + b_p \ve{f}_p)</mrow>
         <mrow>\amp = a_1 T(\ve{e}_1) + \cdots + a_k T(\ve{e}_k) + b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p)</mrow>
-        <mrow>\amp = b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p) \amp \amp  \mbox{(\(\ve{e}_i \in \Ker(T)\))}</mrow>
+        <mrow>\amp = b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p) \amp \amp  (\ve{e}_i \in \Ker(T))</mrow>
       </md>
       so that <m>\ve{w}</m> is indeed a linear combination of the vectors from <m>\basis{D}</m>.
     </p>
@@ -1237,7 +1237,7 @@
         where <m>\theta</m> is the angle from <m>\ve{a}</m> to <m>\ve{\theta}</m>,
         we see that
         <me>
-          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow  \mbox{\(\ve{v}=\ve{0}\) or \(\theta = 0\) or \(\theta= \pi\)}
+          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow \ve{v}=\ve{0}\text{ or }\theta = 0\text{ or }\theta= \pi
         </me>.
       </p>
 
