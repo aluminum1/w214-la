@@ -49,6 +49,7 @@
   </assemblage>
 
   <figure xml:id = "ker_fig">
+    <caption><m>\Ker(T)</m> </caption>
     <image>
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -64,10 +65,10 @@
         \node at (0, -0.5) {\(\Ker(T)\)};\end{tikzpicture}]]>
       </latex-image>
     </image>
-    <caption><m>\Ker(T)</m> </caption>
   </figure>
 
 <figure xml:id = "im_fig">
+  <caption > <m>\Be(T)</m></caption>
     <image>
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -81,7 +82,6 @@
         \node at (3, -0.5) {\(\Im(T)\)};\end{tikzpicture}]]>
       </latex-image>
     </image>
-   <caption > <m>\Be(T)</m></caption>
   </figure>
 
   <lemma xml:id="ker-im-subspace">
@@ -305,15 +305,18 @@
         As jy my glo, dan is die prentjie soos volg:
       </p>
 
-      <image>
-        <latex-image>
-          <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-          \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
-          \draw (1.5, -0.1) -- (1.5, -2);
-          \node at (3.3, 1) {\(\Im(C)\)};
-          \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
-        </latex-image>
-      </image>
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+            \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
+            \draw (1.5, -0.1) -- (1.5, -2);
+            \node at (3.3, 1) {\(\Im(C)\)};
+            \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
 
       <p>
         Kom ons bewys vergelyking <xref ref="image-of-C" />.
@@ -333,14 +336,17 @@
         <m>I</m>, en dit soos nodig te skaleer:
       </p>
 
-      <image>
-        <latex-image>
-          <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-          \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
-          \draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
-          \draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
-          </latex-image>
-      </image>
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+            \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
+            \draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
+            \draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
+            </latex-image>
+        </image>
+      </figure>
 
       <p>
         In terme van 'n formule het ons
@@ -1175,15 +1181,15 @@
               <md>
                 <mrow> D_\ve{p}(\ve u + \ve v) \amp = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot (\ve u + \ve v) </mrow>
                 <mrow>\amp  = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u + \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve v  </mrow>
-                <mrow>\amp = D_\ve{p}(\ve u) + D_\ve{p}(\ve v) </mrow>.
-              </md>
+                <mrow>\amp = D_\ve{p}(\ve u) + D_\ve{p}(\ve v) </mrow>
+              </md>.
               Similarly,
               <md>
                 <mrow> D_\ve{p}(k\ve u) \amp = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve ku</mrow>
                 <mrow> \amp =\begin{bmatrix} k\frac{\partial f}{\partial x}(\ve p)\\ k\frac{\partial f}{\partial y}(\ve p) \\k \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u </mrow>
                 <mrow> \amp = k \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u</mrow>
-                <mrow> \amp = k D_\ve{p} \cdot \ve u</mrow>.
-              </md>
+                <mrow> \amp = k D_\ve{p} \cdot \ve u</mrow>
+              </md>.
               And so <m>D_\ve{p}</m> is linear.
             </p>
           </li>
@@ -1218,7 +1224,7 @@
         For reference, we reproduce a portion of the proof in in <xref ref="cross-product-example">Example</xref>:
       </p>
 
-      <assemblage>
+      <blockquote>
       <p>
         The kernel of <m>C</m> is the subspace of
         <m>\mathbb{R}^3</m> consisting of all vectors
@@ -1255,17 +1261,20 @@
       <p>
         If you believe me, then the picture is as follows:
       </p>
-
-      <image>
-        <latex-image>
-          <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-          \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
-          \draw (1.5, -0.1) -- (1.5, -2);
-          \node at (3.3, 1) {\(\Im(C)\)};
-          \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
-        </latex-image>
-      </image>
-
+<!--  This image should already be elsewhere - maybe link to it to for a knowl? (Can't have an image inside a blockquote!)
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}\draw (0,0) - - (1,2) - - (3,2) - - (2,0) - - (0,0);
+            \draw (1.5, 1) - - (1.5,3.5) node[right] {\(\Ker{C}\)};
+            \draw (1.5, -0.1) - - (1.5, -2);
+            \node at (3.3, 1) {\(\Im(C)\)};
+            \draw[very thick, red, ->] (1.5,1) - - (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
+-->
       <p>
         Let me prove equation <xref ref="image-of-C" />.
         By definition, the image of <m>C</m> is the subspace of
@@ -1273,7 +1282,7 @@
         <m>\ve{w} = \ve{a} \times \ve{v}</m> for some <m>\ve{v} \in \mathbb{R}^3</m>.
         This implies that <m>\ve{w}</m> is perpendicular to <m>\ve{a}</m>.
       </p>
-    </assemblage>
+    </blockquote>
       <p>
         And thus we know that
         <me>
@@ -1287,7 +1296,7 @@
         <me>
          \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
         </me>
-        is also 2-dimensional. But now, if one 2-dimensional subspace is contained in another 2-dimensional subspace then the two subspaces must necessarily be <emp>the same</emp>! Hence
+        is also 2-dimensional. But now, if one 2-dimensional subspace is contained in another 2-dimensional subspace then the two subspaces must necessarily be <em>the same</em>! Hence
         <me>
           \Im(C) = \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
         </me>
@@ -1295,19 +1304,22 @@
       <p>
         (By using the Rank-Nullity theorem, we managed to bypass the trickest part of <xref ref="cross-product-example"/>!)
       </p>
-    </p>
   </solution>
 </exercise>
 
   <exercise>
-    Determine the kernel and image of the linear map
-    <me>
-      T : \Poly_2[x,y,z] \rightarrow \Poly_2
-    </me>
-    defined by
-    <me>
-      T(p)(x) := p(x,x,x).
-    </me>
+    <statement>
+      <p>
+        Determine the kernel and image of the linear map
+        <me>
+          T : \Poly_2[x,y,z] \rightarrow \Poly_2
+        </me>
+        defined by
+        <me>
+          T(p)(x) := p(x,x,x).
+        </me>
+      </p>
+    </statement>
   </exercise>
 
 
