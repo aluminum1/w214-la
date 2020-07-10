@@ -89,20 +89,20 @@
       Let <m>\ve{u_1}, \ve{u}_2 \in U</m>.
       Then:
       <md>
-        <mrow>(T \circ S) (\ve{u}_1 + \ve{u}_2)   \amp = T(S(\ve{u}_1 + \ve{u}_2)) \amp  \mbox{(defn of \(T \circ S\))}</mrow>
-        <mrow>\amp = T(S(\ve{u}_1) + S(\ve{u}_2)) \amp  \mbox{ (\(S\) is linear)}</mrow>
-        <mrow>\amp = T(S(\ve{u}_1)) + T(S(\ve{u}_2)) \amp  \mbox{ (\(T\) is linear)}</mrow>
-        <mrow>\amp = (T \circ S) (\ve{u}_1) + (T \circ S)(\ve{u}_2) \amp  \mbox{(defn of \(T \circ S\))}</mrow>
+        <mrow>(T \circ S) (\ve{u}_1 + \ve{u}_2)   \amp = T(S(\ve{u}_1 + \ve{u}_2)) \amp  \text{(defn of } T \circ S)</mrow>
+        <mrow>\amp = T(S(\ve{u}_1) + S(\ve{u}_2)) \amp  (S \text{  is linear)}</mrow>
+        <mrow>\amp = T(S(\ve{u}_1)) + T(S(\ve{u}_2)) \amp (T) \text{ is linear)}</mrow>
+        <mrow>\amp = (T \circ S) (\ve{u}_1) + (T \circ S)(\ve{u}_2) \amp  \text{(defn of } T \circ S)</mrow>
       </md>
     </p>
 
     <p>
       Similarly,
       <md>
-        <mrow>(T \circ S) (k \ve{u}) \amp = T(S(k \ve{u})) \amp  \mbox{(defn of \(T \circ S\))}</mrow>
-        <mrow>\amp = T(kS(\ve{u})) \amp  \mbox{(\(S\) is linear)}</mrow>
-        <mrow>\amp = k T(S(\ve{u})) \amp  \mbox{(\(T\) is linear)}</mrow>
-        <mrow>\amp = k (T \circ S) (\ve{u}) \amp  \mbox{(defn of \(T \circ S\))}</mrow>
+        <mrow>(T \circ S) (k \ve{u}) \amp = T(S(k \ve{u})) \amp  \text{(defn of } T \circ S)</mrow>
+        <mrow>\amp = T(kS(\ve{u})) \amp  (S \text{ is linear)}</mrow>
+        <mrow>\amp = k T(S(\ve{u})) \amp  (T \text{ is linear)}</mrow>
+        <mrow>\amp = k (T \circ S) (\ve{u}) \amp  \text{(defn of } T \circ S)</mrow>
       </md>
     </p>
   </proof>
