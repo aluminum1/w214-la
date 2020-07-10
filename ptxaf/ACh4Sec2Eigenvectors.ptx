@@ -126,11 +126,11 @@
       (andersins sou <m>i</m> nie die <em>kleinste</em>
       indeks wees waarvoor <m>\ve{v}_i</m> 'n line&#xea;re kombinasie van die voorafgaande vektore is nie).
       Deur <m>T</m> aan beide kante van <xref ref="eigenvalue-1st-eqn" /> toe te pas, kry ons 'n nuwe vergelyking:
-      <md>
+      <mdn>
         <mrow>T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) \nonumber</mrow>
         <mrow>\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  \mbox{(\(T\) is line{\^e}r)} \nonumber</mrow>
-        <mrow>\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2  \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp (T(\ve{v}_r) = \lambda_r \ve{v}_r)</mrow>
-      </md>
+        <mrow xml:id="eigenvalue-2nd-eqn">\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2  \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp (T(\ve{v}_r) = \lambda_r \ve{v}_r)</mrow>
+      </mdn>
     </p>
 
     <p>
@@ -238,7 +238,7 @@
               <me>
                 T(q) = 1 q
               </me>
-              Deur inspeksie van die formules <xref ref="Tp0" />-<xref ref="Tp1" /> vir
+              Deur inspeksie van die formules <xref ref="poly-example-eigenvalue-Tp0" />, <xref ref="poly-example-eigenvalue-Tp1" /> en <xref ref="poly-example-eigenvalue-Tp2" /> vir
               hoe <m>T</m> werk, sien ons reeds ons eerste polinoom, naamlik
               <m>q = p_0</m>, aangesien <m>T(p_0) = p_0</m>.
               Aangesien <m>E_1</m> een-dimensioneel is,
@@ -317,17 +317,17 @@
                 q = a_0 p_0 + a_1 p_1 + a_2 p_2
               </me>.
               So ons benodig skalare <m>a_0, a_1, a_2</m> sodat
-              <men xml:id="Tq-2nd-eig">
+              <men xml:id="Tq-3rd-eig">
                 T(a_0 p_0 + a_1 p_1 + a_2 p_2) = 4 (a_0 p_0 + a_1 p_1 + a_2 p_2).
               </men>.
               Met behulp van die formules <xref ref="eigenspace_as_kernel" /> vir hoe <m>T</m> op die standaard basis tewerk gaan, word
-              <xref ref="Tq-2nd-eig" />
+              <xref ref="Tq-3rd-eig" />
               <me>
                 (-3a_0 + 3a_1 + 9a_2) p_0 + (-2 a_1 + 12 a_2) p_1 + 0 p_2 = 0
               </me>.
               Aangesien <m>\bopen p_0, p_1, p_2 \bclose</m> line&#xea;r
               onafhanklik is, word dit die volgende stel vergelykings:
-              <men xml:id="eqns-eig-T-internal">
+              <men xml:id="eqns-eig-T-internal-2">
                 \systeme{-3a_0 + 3a_1 + 9a_2 = 0, -2a_1 + 12 a_2 = 0}
               </men>
               Die algemene oplossing vir hierdie vergelykings is
