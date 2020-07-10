@@ -21,7 +21,7 @@
     <p>
       We define
       <men xml:id="def_of_b">
-        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\}
+        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \text{ and }  u_1 - u_2 + u_3 = 0\}
       </men>.
     </p>
 
@@ -60,9 +60,8 @@
           <md>
             <mrow>\amp (u_1 + v_1) - (u_2 + v_2) + (u_3 + v_3)</mrow>
             <mrow>\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3)
-            \amp \amp  \mbox{(this algebra
-            step is true for ordinary numbers)}</mrow>
-            <mrow>\amp = 0 + 0 \amp \amp  \mbox{(since \(\ve{u}\) and \(\ve{v}\) are in \(B\))}</mrow>
+            \amp \amp  \text{(true for ordinary numbers)}</mrow>
+            <mrow>\amp = 0 + 0 \amp \amp  (\text{since } \ve{u} \text{ and } \ve{v} \text{ are in } B)</mrow>
             <mrow>\amp = 0</mrow>
           </md>.
         </p>
@@ -123,9 +122,9 @@
           <md>
             <mrow>\amp  ku_1 - ku_2 + ku_3</mrow>
             <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp
-            \mbox{(this algebra step is true for
+            \text{(true for
             ordinary numbers)}</mrow>
-            <mrow>\amp = k 0 \amp \amp  \mbox{(since \(\ve{u}\) is in \(B\))}</mrow>
+            <mrow>\amp = k 0 \amp \amp  (\text{since } \ve{u} \text{ is in } B)</mrow>
             <mrow>\amp = 0</mrow>
           </md>.
         </p>
@@ -142,7 +141,7 @@
     <p><alert>3. Check that the data satisfies the rules</alert></p>
     <p>
       We must check that our data D1, D2 and D3
-      satisfy the rules R1 <mdash /> R8.
+      satisfy the rules R1 <ndash /> R8.
       So, suppose that
       <m>\ve{u} = (u_1, \, u_2, \,u_3)</m>,
       <m>\ve{v} = (v_1, \, v_2, \, v_3)</m> and
@@ -157,12 +156,12 @@
         <md>
           <mrow>\amp  \ve{v} + \ve{w}\tag{R1.}</mrow>
           <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3)
-          \amp \amp  \mbox{(definition of addition in \(B\))}</mrow>
+          \amp \amp  (\text{definition of addition in } B)</mrow>
           <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp
-          \mbox{(because \(x + y = y + x\) is true for
-          real numbers)}</mrow>
+          (\text{because } x + y = y + x \text{ is true for
+          real numbers})</mrow>
           <mrow>\amp = \ve{w} + \ve{v}. \amp \amp
-          \mbox{(definition of addition in \(B\))}</mrow>
+          (\text{definition of addition in } B)</mrow>
         </md>
       </p>
       </li>
@@ -174,15 +173,15 @@
         <md>
           <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
           <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w}
-          \amp \amp  \mbox{(definition of addition in \(B\))}</mrow>
+          \amp \amp  \text{(definition of addition in } B)</mrow>
           <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp
-          \mbox{(by defn of addition in \(B\))}</mrow>
+          \text{(definition addition in } B)</mrow>
           <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp
-          \mbox{(since \((x + y) + z = x + (y + z)\) is
+          (x + y) + z = x + (y + z) \text{ is
           true for real numbers)}</mrow>
           <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp
-          \mbox{(definition of addition in \(B\))}</mrow>
-          <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \mbox{(definition of addition in \(B\))} </mrow>
+          \text{(definition of addition in }B)</mrow>
+          <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \text{(definition of addition in }B) </mrow>
         </md>.
       </p>
       </li>
@@ -194,11 +193,11 @@
         <md>
           <mrow>\amp \ve{0} + \ve{v}</mrow>
           <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp
-          \mbox{(definition of the zero vector in \(B\)}</mrow>
+          \text{(definition of the zero vector in } B</mrow>
           <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp
-          \mbox{(definition of addition in \(B\))}</mrow>
+          \text{(definition of addition in } B)</mrow>
           <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp
-          \mbox{(because \(x + 0 = x\) is true for real numbers)}</mrow>
+          x + 0 = x \text{ is true for real numbers)}</mrow>
           <mrow>\amp = \ve{v}</mrow>
         </md>.
       </p>
@@ -214,11 +213,11 @@
       We check:
       <md>
         <mrow>\amp  k \smul( \ve{v + w} )</mrow>
-        <mrow>\amp = k \smul(v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(definition of addition in \(B\)}</mrow>
-        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp  \mbox{(definition of scalar multiplication in \(B\))}</mrow>
-        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  \mbox{(since \(k(x+y) = kx + ky\) for real numbers \(x,y\))}</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp  \mbox{(definition of addition in \(B\))}</mrow>
-        <mrow>\amp = k \smul\ve{v} + k \smul\ve{w} \amp \amp  \mbox{(definition of scalar multiplication in \(B\))}</mrow>
+        <mrow>\amp = k \smul(v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \text{(definition of addition in } B)</mrow>
+        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp  \text{(definition of scalar multiplication in }B)</mrow>
+        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  (k(x+y) = kx + ky \text{ for real numbers } x,y)</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp  \text{(definition of addition in } B)</mrow>
+        <mrow>\amp = k \smul\ve{v} + k \smul\ve{w} \amp \amp  \text{(definition of scalar multiplication in }B)</mrow>
       </md>
       </p>
       </li>
@@ -229,10 +228,10 @@
       We check:
       <md>
         <mrow>\amp  (k + l) \smul\ve{v}</mrow>
-        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \mbox{(definition of scalar multiplication in \(B\))}</mrow>
-        <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  \mbox{(since \((k+l)x = kx + lx\) for real numbers)}</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp = k \smul\ve{v} + l \smul\ve{v} \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
+        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \text{(definition of scalar multiplication in } B)</mrow>
+        <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  ((k+l)x = kx + lx \text{ for real numbers)}</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp  \text{(by defn of addition in }B)</mrow>
+        <mrow>\amp = k \smul\ve{v} + l \smul\ve{v} \amp \amp  \text{(by defn of scalar multiplication in } B)</mrow>
       </md>
       </p>
       </li>
@@ -243,10 +242,10 @@
         We check:
         <md>
           <mrow>\amp  k \smul(l \smul\ve{v})</mrow>
-          <mrow>\amp = k \smul(l v_1, \, l v_2, \, lv_3) \amp \amp  \mbox{(definition of scalar multiplication in \(B\))}</mrow>
-          <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \mbox{(definition of scalar multiplication in \(B\))}</mrow>
-          <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  \mbox{(since \(k(lx) = (kl)x\) for real numbers)}</mrow>
-          <mrow>\amp = (kl) \smul\ve{v} \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))} </mrow>
+          <mrow>\amp = k \smul(l v_1, \, l v_2, \, lv_3) \amp \amp  \text{(definition of scalar multiplication in }B )</mrow>
+          <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \text{(definition of scalar multiplication in }B )</mrow>
+          <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  (k(lx) = (kl)x \text{ for real numbers)}</mrow>
+          <mrow>\amp = (kl) \smul\ve{v} \amp \amp  \text{(by defn of scalar multiplication in } B) </mrow>
         </md>.
       </p>
       </li>
@@ -256,8 +255,8 @@
       <p>
         We check:
         <md>
-          <mrow>1 \smul\ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \mbox{(definition of scalar multiplication in \(B\))}</mrow>
-          <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(since \(1 x = x\) for real numbers \(x\))}</mrow>
+          <mrow>1 \smul\ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \text{(definition of scalar multiplication in } B)</mrow>
+          <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  \text{(since } 1 x = x  \text{ for real numbers }x)</mrow>
           <mrow>\amp = \ve{v}</mrow>
         </md>.
       </p>
@@ -268,9 +267,9 @@
       <p>
         We check:
         <md>
-          <mrow>0 \smul\ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
-          <mrow>\amp = (0, \, 0, \, 0) \amp \amp  \mbox{(since \(0 x = 0\) for real numbers}</mrow>
-          <mrow>\amp = \ve{0} \amp \amp  \mbox{(by defn of the zero vector in \(B\))} </mrow>
+          <mrow>0 \smul\ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \text{(by defn of scalar multiplication in }B)</mrow>
+          <mrow>\amp = (0, \, 0, \, 0) \amp \amp  \text{(since } 0 x = 0 \text{ for real numbers}</mrow>
+          <mrow>\amp = \ve{0} \amp \amp  \text{(by defn of the zero vector in } B) </mrow>
         </md>.
       </p>
       </li>
