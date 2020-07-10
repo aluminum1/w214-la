@@ -95,7 +95,7 @@
     <p>
       Aangesien <m>U</m> 'n deelruimte is,
       weet ons dat dit sin maak om
-      dit <q>toe te rus met dieselfde optellingsbewerking, nul-vektor en
+      dit <q>toe te rus met dieselfde (beperkte) optellingsbewerking, nul-vektor en
       skalaarvermenigvuldigingsbewerking as <m>V</m></q>.
       (As <m>U</m> <em>nie</em> 'n
       deelruimte was nie, dan sou ons byvoorbeeld kon vind dat
@@ -290,68 +290,68 @@
   </example>
 
   <example xml:id="hyperplanes_example_subspace">
-    <title>Hyperplanes orthogonal to a fixed vector</title>
+    <title>Hipervlakke ortognaal tot 'n vaste vektor</title>
     <statement>
-      <p>This example generalizes <xref ref="lines_planes_R3" text="type-global"/> to higher dimensions. Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. The <em>hyperplane orthogonal to <m>\ve{v}</m></em> is the set <m>W</m> of all vectors orthogonal to <m>\ve{v}</m>, that is,
+      <p>Hierdie voorbeeld veralgemeen <xref ref="lines_planes_R3" text="type-global"/> na hoër dimensies. Laat <m>\ve{v} \in \mathbb{R}^n </m> 'n vaste nie-nul vektor wees. Die <em>hipervlak ortogonaal tot <m>\ve{v}</m></em> is die versameling <m>W</m> van alle vektore ortogonaal tot <m>\ve{v}</m>, met ander woorde,
       <men>
       W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
       </men>
-      You will prove in Exercise <xref ref="prove_hyperplane_subspace" text="type-global"/> that <m>W</m> is a subspace of <m>\mathbb{R}^n</m>.  </p>
+      Jy sal in Oefening <xref ref="prove_hyperplane_subspace" text="type-global"/> bewys dat <m>W</m> 'n deelruimte van <m>\mathbb{R}^n</m> is.  </p>
 
-      <p>For example, consider the vector <m>\ve{v} = (1,2,3) \in \mathbb{R}^3</m>. Then the hyperplane orthogonal to <m>\ve{v}</m> is
+      <p>Beskou byvoorbeeld die vektor  <m>\ve{v} = (1,2,3) \in \mathbb{R}^3</m>. Dan is die hipervlak ortogonaal tot <m>\ve{v}</m> die versameling
       <men>
         W = \{ \ve{w} \in \mathbb{R}^3 : \ve{v} \dotp \ve{w} = 0 \}.
       </men>
-      If we write <m>\ve{w} = (w_1, w_2, w_3)</m> then <m>\ve{v} \dotp \ve{w} = 0</m> translates into the equation
+      As ons <m>\ve{w} = (w_1, w_2, w_3)</m> skryf, dan is <m>\ve{v} \dotp \ve{w} = 0</m> ekwivalent aan die vergelyking
       <men xml:id="explicit_eqn_hyperplane1">
         w_1 + 2 w_2 + 3w_3 = 0.
       </men>
-      So, <m>W</m> can be regarded as the set of vectors in <m>\mathbb{R}^3</m> whose components satisfy <xref ref="explicit_eqn_hyperplane1" text="global"/>.</p>
+      So, <m>W</m> kan gesien word as die versameling vektore in <m>\mathbb{R}^3</m> wie se komponente <xref ref="explicit_eqn_hyperplane1" text="global"/> bevredig.</p>
     </statement>
   </example>
 <!-- TO DO: translate hyperplane example below and also polynomials in many variables -->
     <exercise xml:id="prove_hyperplane_subspace">
       <statement>
         <p>
-          Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. Show that
-              <me>
-          W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+          Laat <m>\ve{v} \in \mathbb{R}^n </m> 'n vaste nie-nul vektor wees. Wys dat
+          <me>
+            W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
           </me>
-          is a subspace of <m>\mathbb{R}^n</m>.
+          'n deelruimte van <m>\mathbb{R}^n</m> is.
         </p>
       </statement>
     <solution>
       <p>
-        First we check whether it is closed under addition.
+        Ons stel eers vas of dit geslote is onder optelling.
       </p>
       <p>
-        Suppose <m>\ve{w}, \ve{w}' \in W</m>.
-        That is, <m>\ve{v} \dotp \ve{w} = 0 </m> and <m>\ve{v} \dotp \ve{w}' = 0 </m>.
-        We must show that <m>\ve{w} + \ve{w}' \in W</m>.That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>.
-        Indeed,
+        Veronderstel dat <m>\ve{w}, \ve{w}' \in W</m>.
+        Dus is, <m>\ve{v} \dotp \ve{w} = 0 </m> en <m>\ve{v} \dotp \ve{w}' = 0 </m>.
+        Ons moet wys dat <m>\ve{w} + \ve{w}' \in W</m>, met ander woorde dat <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>.
+        Dit geld inderdaad, omdat
         <md>
           <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
           <mrow> \amp = 0 + 0 </mrow>
-          <mrow> \amp = 0. </mrow>
-        </md>
+          <mrow> \amp = 0 </mrow>
+        </md>.
       </p>
 
       <p>
-        Next we check whether it contains the zero vector.
+        Volgende kyk ons of dit die nul-vektor bevat.
       </p>
       <p>
-        Since <m>\ve{v} \dotp \ve{0} = 0</m>, we conclude that <m>\ve{0} \in W</m>.
+        Aangesien <m>\ve{v} \dotp \ve{0} = 0</m>, lei ons af dat <m>\ve{0} \in W</m>.
       </p>
 
       <p>
-        Lastly, we check whether it is closed under scalar multiplication.
+        Laastens moet ons kyk of dit geslote is onder skalaarvermenigvuldiging.
       </p>
       <p>
-        Suppose <m>\ve{w} \in W</m> and <m>k</m> is a scalar.
-        That is, <m>\ve{v} \dotp \ve{w} = 0 </m>.
-        We must show that <m>k \smul \ve{w}  \in W</m>.
-        That is, we must show that <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>.
-        Indeed,
+        Veronderstel dat <m>\ve{w} \in W</m> en dat <m>k</m> 'n skalaar is.
+        Met ander woorde veronderstel dat, <m>\ve{v} \dotp \ve{w} = 0 </m>.
+        Ons moet wys dat <m>k \smul \ve{w}  \in W</m>,
+        of met ander woorde dat <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>.
+        Dit geld ook, omdat
         <md>
           <mrow> \ve{v} \dotp (k \smul \ve{w}) \amp = k \smul (\ve{v} \dotp \ve{w}) </mrow>
           <mrow> \amp = (k)(0) </mrow>
@@ -602,35 +602,32 @@
   </exercise>
 </subsection>
 
-<!-- TO DO: Translate into Afrikaans, beginning here -->
-
   <subsection xml:id="soln-diff-eqns-sec">
-  <title>Solutions to homogenous linear differential equations</title>
+  <title>Oplossings van homogene lineêre differensiaalvergelykings</title>
 
-    <p> A homogenous <m>n</m>th order linear ordinary differential equation on an interval <m>I</m> is a differential equation of the form
+    <p> 'n Homogene <m>n</m>-de graadse lineêre gewone differensiaalvergelyking op 'n interval  <m>I</m> is 'n differentiaalvergelyking van die vorm
     <men xml:id="general_lin_diff_eqn">
         a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I
     </men>
-    where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn" />.</p>
-
+    waar <m>y^{(k)}</m> die <m>k</m>-ste afgeleide van <m>y</m> aandui. 'n <em>Oplossing</em> vir die differensiaalvergelyking is 'n funksie <m>y(x)</m> gedefinieer op die interval <m>I</m>wat <xref ref="general_lin_diff_eqn" /> bevredig.</p>
 
     <example xml:id="first_example_2nd_order_ode">
-      <title>An example of a <m>2</m>nd order homogenous linear differential equation</title>
-      <statement> <p> For instance,
+      <title>Voorbeeld van 'n tweedegraadse homogene lineêre differensiaalvergelyking</title>
+      <statement> <p> Die differensiaalvergelyking
       <men xml:id="first_example_2nd_order_ode_eqn">
         x^2 y^{''} -3 x y' + 5 y = 0, \quad x \in (0, \infty)
       </men>
-      is a homogenous 2nd order linear differential equation on the interval <m>(0, \infty)</m>, and
+      is byvoorbeeld 'n 2de graadse lineêre differensiaalvergelyking op die interval <m>(0, \infty)</m> en
       <men xml:id="a_soln_to_my_ode">
         y_1(x) = x^2 \sin (\log x)
       </men>
-      is a solution to <xref ref="first_example_2nd_order_ode_eqn" />. Similarly,
+      is een oplossing vir <xref ref="first_example_2nd_order_ode_eqn" /> en die funksie
       <men xml:id="a_2nd_soln_to_my_ode">
         y_2(x) = x^2 \cos (\log x)
       </men>
-      is also a solution to <xref ref="first_example_2nd_order_ode_eqn" />.
+      is 'n tweede oplossing vir <xref ref="first_example_2nd_order_ode_eqn" />.
       </p>
-      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn" />. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation.
+      <p>Ons kan SageMath gebruik om te kyk dat hulle inderdaad oplossing vir <xref ref="first_example_2nd_order_ode_eqn" /> is. Kliek die <c>Evaluate (Sage)</c> knoppie <mdash /> die behoort die uitset <sq>True</sq> te gee wat aandui dat <m>y_1</m> werklik 'n oplossing vir die differensiaalvergelyking is.
       </p>
       <sage>
 
@@ -645,10 +642,10 @@
       </sage>
 
       <p>
-        Edit the code above to check whether <m>y_2</m> is a solution of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.
+        Pas die kode hier bo aan om te bepaal of <m>y_2</m> 'n oplossing vir die differensiaalvergelyking <xref ref="first_example_2nd_order_ode_eqn"/> is.
       </p>
 
-      <p>We can also plot the graphs of <m>y_1</m> and <m>y_2</m>. Again, click on <c>Evaluate (Sage)</c>. </p>
+      <p>Ons kan ook die grafieke van <m>y_1</m> and <m>y_2</m> met SageMath teken. Kliek weer op <c>Evaluate (Sage)</c>. </p>
       <sage>
       <input>
         y1 = x^2*sin(log(x))
@@ -658,7 +655,7 @@
       </input>
       </sage>
       <p>
-        Play with the code above, and plot some different functions.
+        Speel met die kode hier bo en teken nog 'n paar ander funksies.
       </p>
 
       </statement>
@@ -668,17 +665,17 @@
     <exercise>
       <statement>
         <p>
-          Check by hand that <xref ref="a_soln_to_my_ode" /> and <xref ref="a_2nd_soln_to_my_ode" /> are indeed  solutions of the differential equation <xref ref="first_example_2nd_order_ode_eqn" />.
+          Toets met pen en papier berekeninge dat <xref ref="a_soln_to_my_ode" /> en <xref ref="a_2nd_soln_to_my_ode" /> werklik oplossings vir die differensiaalvergelyking <xref ref="first_example_2nd_order_ode_eqn" /> is.
         </p>
       </statement>
     </exercise>
 
-    <p> Suppose we are given an <m>n</m>th order homogenous linear differential equation of the form <xref ref="general_lin_diff_eqn" /> on some interval <m>I \subseteq \mathbb{R}</m>. Write <m>V</m> for the set of <em>all</em> solutions to the differential equation. That is,
+    <p> Veronderstel daar word aan ons 'n <m>n</m>-de graadse homogene differensiaalvergelyking van die vorm <xref ref="general_lin_diff_eqn" /> op 'n sekere interval <m>I \subseteq \mathbb{R}</m> gegee. Skryf <m>V</m> vir die versameling van <em>alle</em> oplossings vir die differensiaalvergelyking. Dit is,
     <men>
      V := \{ y : a_n(x) y^{(n)}(x) + \cdots + a_1(x) y'(x) + a_0(x) y(x) = 0 \}
     </men>
     </p>
-    <p> We can regard <m>V</m> as a subset of the set of <em>all</em> functions on the interval <m>I</m>:
+    <p> Ons kan <m>V</m> sien as 'n deelversameling van die versameling van <em>alle</em> funksies op die interval <m>I</m>:
     <me>
       V \subseteq \Fun(I)
     </me>
@@ -687,7 +684,7 @@
     <exercise>
     <statement>
       <p>
-     Show that <m>V</m> is a <xref ref="defn-subspace" >subspace</xref> of <m>\Fun(I)</m>.
+        Wys dat <m>V</m> 'n <xref ref="defn-subspace" >deelruimte</xref> van <m>\Fun(I)</m> is.
       </p>
      </statement>
     </exercise>
@@ -695,17 +692,17 @@
     <p>So, by <xref ref="subspace_lem" text="type-global"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
 
     <example xml:id="first_example_2nd_order_ode_cont">
-      <title>Continuation of <xref ref="first_example_2nd_order_ode" /></title>
+      <title>Vervlging van <xref ref="first_example_2nd_order_ode" /></title>
       <statement>
-        <p> Consider the differential equation from <xref ref="first_example_2nd_order_ode" />. We saw that
+        <p> Beskou weer die differensiaalvergelyking van  <xref ref="first_example_2nd_order_ode" />. Ons het gesien dat
         <me>
         y_1 = x^2 \sin (\log x), \quad y_2 = x^2 \cos (\log x)
         </me>
-      are solutions. So, any linear combination of <m>y_1</m> and <m>y_2</m> is <em>also</em> a solution. For instance,
+        oplosings hiervoor is. Dus is enige lineêre kombinasie van  <m>y_1</m> en <m>y_2</m>  <em>ook</em> 'n oplossing. Byvoorbeeld,
       <me>
        y = 2y_1 + 5 y_2
      </me>
-     is also a solution. Let us check this in SageMath. </p>
+     is ook 'n oplossing. Kom ons gebruik weer SageMath om dit na te gaan. </p>
 
     <sage>
       <input>
@@ -723,24 +720,24 @@
     </example>
 
         <example xml:id="non_example_nonlinear_ode">
-        <title>A non-example: Solutions to a nonlinear ODE</title>
+        <title>'n Nie-voorbeeld: Oplossings vir 'n nie-lineêre gewone differensiaalvergelyking</title>
         <statement>
           <p>
-            We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
+            Ons het in die vorige voorbeeld gesien dat lineêre gewone differensiaalvergelykings gemaklik 'n gemaklike teorie het, omdat lineêre kombinasies van oplossings weer oplossings is. Dit hoef nie noodwendig in die nie-lineêre geval te gebeur nie. Kyk byvoorbeeld na die nie-lineêre differensiaalvergelyking
             <men xml:id="explicit_nonlinear_ode">
             y^\prime = y^2.
             </men>
-            The general solution is given by
+            Die algemene oplossing word gegee deur
             <me>
             y_c = \frac{1}{c - x}
-            </me> where <m>c</m> is a constant. For instance,
+            </me> waar <m>c</m> 'n konstante is. Die funksies
             <me>
               y_1 = \frac{1}{1-x}, \quad y_2 =\frac{1}{2-x}
             </me>
-            are solutions.
+            is byvoorbeeld oplossings.
           </p>
           <p>
-            Use the SageMath script below to check whether the linear combination <m>y_1 + y_2</m> is also a solution.
+            Gebruik die SageMath kode hier onder om vas te stel of die lineêre kombinasie <m>y_1 + y_2</m> ook 'n oplossing is.
             </p>
           <sage>
           <input>
@@ -756,20 +753,20 @@
         </input>
         </sage>
         <p>
-        The answer is <c>False!</c> So linear combinations of solutions to the nonlinear differential equation <xref ref="explicit_nonlinear_ode" /> are no longer solutions, in general.
+        Die antwoord is <c>False!</c> So lineêre kombinasies van oplossings vir die nie-ilneêre differensiaalvergelyking <xref ref="explicit_nonlinear_ode" /> is nie noodwendig weer oplossings nie.
           </p>
         </statement>
     </example>
 
 
-    <example> <title>Finding the general solution to a differential equation in SageMath</title>
+    <example> <title>Uitwerk van die algemene oplossing van 'n differensiaalvergelyking m.b.v. SageMath</title>
       <statement>
       <p>
       Let us use SageMath to find the general solution of the following ordinary differential equation
       <men xml:id="explicit_diff_eq">
     y^{\prime \prime} + 2y^\prime + y = 0.
       </men>
-      We can do this as follows. Note that we need to be a bit more careful now, first defining our variable <m>x</m> and then declaring that <m>y</m> is a function of <m>x</m>.</p>
+      Ons kan die as volg doen. Let op dat ons nou 'n bietjie meer versigtig moet wees. Ons moet eers ons veranderlike <m>x</m> definieer en dan sê dat <m>y</m>  'n funksie van <m>x</m> is.</p>
       <sage>
         <input>
         var('x')
@@ -781,10 +778,10 @@
         desolve(diff_eqn, y)
         </input>
       </sage>
-    <p>SageMath reports that the general solution is given in terms of two unspecified constants <c>_K1</c> and <c>_K2</c> as <c>(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</c>.
+    <p>SageMath rapporteer dat die algemene oplossing in terme van twee onbepaalde konstantes <c>_K1</c> en <c>_K2</c> gegee word as <c>(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</c>.
     </p>
     <p>
-    If we set <c>_K1</c> equal to 1 and <c>_K2</c> equal to 0 in the general solution, we will get a particular solution <m>y_1</m> of the differential equation.
+    As ons <c>_K1</c> gelyk aan 1 stel en <c>_K2</c> gelyk aan 0 stel, dan kry ons 'n spesifieke oplossing <m>y_1</m> vir die differensiaalvergelyking.
   </p>
     <sage>
         <input>
@@ -801,20 +798,17 @@
         </input>
       </sage>
     <p>
-      SageMath is telling us that <m>y_1 = e^{-x} \sin(2x)</m> is a particular solution.
+      SageMath sê dat <m>y_1 = e^{-x} \sin(2x)</m> 'n spesifieke olossing is.
     </p>
 
     <p>
-      Edit the code to set <c>_K2</c> equal to 0 and <c>_K1</c> equal to 1 in the general solution to get a different particular solution <m>y_2</m>. What is <m>y_2</m>?
+      Pas die kode aan om <c>_K2</c> gelyk aan 0 en <c>_K1</c> gelyk aan 1 te stel om 'n ander spesifieke oplossing  <m>y_2</m> te kry. Wat is <m>y_2</m>?
     </p>
 
     </statement>
     </example>
 
-
 </subsection>
-
-<!-- Translation job ends here. -->
 
  <exercises>
   <exercise>
