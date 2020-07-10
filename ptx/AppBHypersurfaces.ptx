@@ -25,7 +25,7 @@
         such that <m>M</m> is the zero set of <m>f</m>,
         and if for all <m>\ve{p} \in M</m>,
         <me>
-          \nabla_{\ve{p}} f \mbox{ exists and is not equal to }  \ve{0}
+          \nabla_{\ve{p}} f \text{ exists and is not equal to }  \ve{0}
         </me>.
       </p>
     </statement>
@@ -80,7 +80,7 @@
         The gradient clearly exists everywhere.
         Moreover, for a point <m>\ve{p} = (a,b)</m> on <m>M</m>, we have
         <me>
-          \nabla_\ve{p} f = (2b, -2a)  \mbox{where }  b^2 = 1 + a^2
+          \nabla_\ve{p} f = (2b, -2a)  \text{ where }  b^2 = 1 + a^2
         </me>
       </p>
 
@@ -283,7 +283,7 @@
       <p>
         We have already computed the gradient of <m>f</m> at a point <m>\ve{p} = (a,b) \in M</m>:
         <me>
-          \nabla_\ve{p} = (2b, -2a)  \mbox{ where \(b^2 = 1 + a^2\)}
+          \nabla_\ve{p} = (2b, -2a)  \text{ where }b^2 = 1 + a^2
         </me>.
       </p>
 
