@@ -94,7 +94,7 @@
       <m>(b_1, \, b_2, \, b_3)</m> satisfying <m>b_1 - b_2 + b_3 = 0</m>.
       Translated into mathematical symbols,
       <men>
-        B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \mbox{ and }  b_1 - b_2 + b_3 = 0\}
+        B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \text{ and }  b_1 - b_2 + b_3 = 0\}
       </men>.
     </p>
 
@@ -130,7 +130,7 @@
       is the set of all polynomials of degree less than or equal to 4.
       Translated into mathematical symbols,
       <men>
-        C := \{ \mbox{polynomials of degree \(\leq 4\)} \}
+        C := \{ \text{polynomials of degree } \leq 4 \}
       </men>.
     </p>
 
