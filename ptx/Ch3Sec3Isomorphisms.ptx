@@ -48,7 +48,7 @@
   <p>
     Then we observe that
     <men xml:id="bijection_eqn">
-      T \circ S = \id_A  \mbox{and}   S \circ T = \id_B
+      T \circ S = \id_A  \text{ and }   S \circ T = \id_B
     </men>.
   </p>
 
@@ -96,7 +96,7 @@
         We say that a linear map <m>T : V \rightarrow W</m> is an <term>isomorphism</term>
         if there exists a linear map <m>T^{-1} : W \rightarrow V</m> such that
         <men xml:id="inverse_map_in_iso">
-          T^{-1} \circ T = \id_V  \mbox{and}   T \circ T^{-1} = \id_W
+          T^{-1} \circ T = \id_V  \text{ and }   T \circ T^{-1} = \id_W
         </men>.
       </p>
     </statement>
@@ -130,12 +130,12 @@
       <m>S(\ve{w}) = S'(\ve{w})</m>.
       Indeed:
       <md>
-        <mrow>S(\ve{w}) \amp = S(\id_W (\ve{w})) \amp \amp  \mbox{(Defn of \(\id_W\))}</mrow>
-        <mrow>\amp = S( (T \circ S')(\ve{w})) \amp \amp  \mbox {($T \circ S' = \id_W$)}</mrow>
-        <mrow>\amp = S(T(S'(\ve{w}))) \amp \amp  \mbox {(Defn of $T \circ S'$)}</mrow>
-        <mrow>\amp = (S \circ T)(S'(\ve{w})) \amp \amp  \mbox {(Defn of $S \circ T$)}</mrow>
-        <mrow>\amp = \id_V (S'(\ve{w})) \amp \amp  \mbox{(\(S \circ T = \id_V\))}</mrow>
-        <mrow>\amp = S'(\ve{w}) \amp \amp  \mbox {(Defn of $\id_V$)}</mrow>
+        <mrow>S(\ve{w}) \amp = S(\id_W (\ve{w})) \amp \amp  \text{(Defn of } \id_W)</mrow>
+        <mrow>\amp = S( (T \circ S')(\ve{w})) \amp \amp   (T \circ S' = \id_W)</mrow>
+        <mrow>\amp = S(T(S'(\ve{w}))) \amp \amp  \text{(Defn of } T \circ S')</mrow>
+        <mrow>\amp = (S \circ T)(S'(\ve{w})) \amp \amp  \text {(Defn of } S \circ T)</mrow>
+        <mrow>\amp = \id_V (S'(\ve{w})) \amp \amp  (S \circ T = \id_V)</mrow>
+        <mrow>\amp = S'(\ve{w}) \amp \amp  \text{(Defn of } \id_V)</mrow>
       </md>.
     </p>
   </proof>
@@ -207,8 +207,8 @@
       then applying <m>T</m> to both sides we obtain
       <md>
         <mrow>T(a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m)) \amp  = T(\ve{0}_W)</mrow>
-        <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  \mbox{(\(T\) is linear)}</mrow>
-        <mrow>\therefore a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m \amp = \ve{0}_V \amp \amp  \mbox{(\(T\circ S = \id_V\))}</mrow>
+        <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  (T \text{ is linear)}</mrow>
+        <mrow>\therefore a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m \amp = \ve{0}_V \amp \amp  (T\circ S = \id_V)</mrow>
       </md>
       which implies that <m>a_1 = a_2 = \cdots = a_m = 0</m>,
       since <m>\basis{B}</m> is linearly independent.
@@ -220,9 +220,9 @@
       for some scalars <m>a_i</m> since <m>\basis{B}</m> spans <m>V</m>.
       But then
       <md>
-        <mrow>\ve{w} \amp = S(T(\ve{w})) \amp \amp  \mbox{(since \(S \circ T = \id_W\))}</mrow>
+        <mrow>\ve{w} \amp = S(T(\ve{w})) \amp \amp  \text{(since } S \circ T = \id_W)</mrow>
         <mrow>\amp = S(a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m)</mrow>
-        <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp  \mbox{(\(S\) is linear)}</mrow>
+        <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp (S \text{ is linear)}</mrow>
       </md>
       so that <m>\basis{C}</m> spans <m>W</m>.
       Hence <m>\basis{C}</m> is a basis for <m>V</m>,
