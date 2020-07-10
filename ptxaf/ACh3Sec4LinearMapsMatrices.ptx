@@ -180,26 +180,29 @@
     line&#xea;re afbeeldings van vektorruimtes:
   </p>
 
-  <image>
-    <latex-image>
-      <![CDATA[\begin{tikzpicture}[yscale=0.8]
-      \draw (0, 0) circle (1);
-      \draw (6,0) circle (1);
-      \draw [<->] (-1, -6) -- (1, -6);
-      \draw [<->] (0, -5) -- (0, -7);
-      \draw [<->] (5, -6) -- (7, -6);
-      \draw [<->] (6, -5) -- (6, -7);
-      \draw[->] (2, 0) -- node[above]{\(T\)} (4, 0);
-      \draw[->] (6, -2) -- node[right] {\([ \smul]_\basis{C}\)} (6, -4);
-      \draw[->, dotted] (2, -6) -- node[below] {\([\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}}\)} (4, -6);
-      \draw[->] (-0.1, -2) -- node[left] {\([ \smul]_\basis{B}\)} (-0.1, -4);
-      \draw[<-] (0.1, -2) -- node[right] {\(\ve{vec}_{V, \basis{B}}\)} (0.1, -4);
-      \node at (1, 1) {\(V\)};
-      \node at (7, 1) {\(W\)};
-      \node at (1, -5) {\(\Col_m\)};
-      \node at (7, -5) {\(\Col_n\)};\end{tikzpicture}]]>
-    </latex-image>
-  </image>
+  <figure>
+    <caption></caption>
+    <image>
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}[yscale=0.8]
+        \draw (0, 0) circle (1);
+        \draw (6,0) circle (1);
+        \draw [<->] (-1, -6) -- (1, -6);
+        \draw [<->] (0, -5) -- (0, -7);
+        \draw [<->] (5, -6) -- (7, -6);
+        \draw [<->] (6, -5) -- (6, -7);
+        \draw[->] (2, 0) -- node[above]{\(T\)} (4, 0);
+        \draw[->] (6, -2) -- node[right] {\([ \smul]_\basis{C}\)} (6, -4);
+        \draw[->, dotted] (2, -6) -- node[below] {\([\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}}\)} (4, -6);
+        \draw[->] (-0.1, -2) -- node[left] {\([ \smul]_\basis{B}\)} (-0.1, -4);
+        \draw[<-] (0.1, -2) -- node[right] {\(\ve{vec}_{V, \basis{B}}\)} (0.1, -4);
+        \node at (1, 1) {\(V\)};
+        \node at (7, 1) {\(W\)};
+        \node at (1, -5) {\(\Col_m\)};
+        \node at (7, -5) {\(\Col_n\)};\end{tikzpicture}]]>
+      </latex-image>
+    </image>
+  </figure>
 
   <p>
     Die boonste afbeelding is die line&#xea;re afbeelding <m>T : V \rightarrow W</m>.
@@ -436,15 +439,17 @@
         </me>.
       </p>
     </statement>
-  </lemma>
 
   <proof>
-    <md>
-      <mrow>\mat{P}_{\basis{C} \leftarrow \basis{B}} \amp = \left[ [\ve{b}_1]_{\basis{C}} \cdots [\ve{b}_m]_{\basis{C}} \right] \amp \amp \mbox{(Defn van \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
-      <mrow>\amp = \left[ [\id(\ve{b}_1)]_{\basis{C}} \cdots [\id(\ve{b}_m)]_{\basis{C}} \right]</mrow>
-      <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}}. \amp \amp  \mbox{(Defn van \([\id]_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
-    </md>
+    <p>
+      <md>
+        <mrow>\mat{P}_{\basis{C} \leftarrow \basis{B}} \amp = \left[ [\ve{b}_1]_{\basis{C}} \cdots [\ve{b}_m]_{\basis{C}} \right] \amp \amp \mbox{(Defn van \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
+        <mrow>\amp = \left[ [\id(\ve{b}_1)]_{\basis{C}} \cdots [\id(\ve{b}_m)]_{\basis{C}} \right]</mrow>
+        <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}}. \amp \amp  \mbox{(Defn van \([\id]_{\basis{C} \leftarrow \basis{B}}\))}</mrow>
+      </md>
+    </p>
   </proof>
+</lemma>
 
   <p>
     Die volgende Stelling s&#xea; vir ons hoe die matriks van 'n line&#xea;re bewerking verander as ons die basis verander waarmee ons die matriks bereken.
@@ -463,14 +468,16 @@
       </p>
     </statement>
     <proof>
-     <md>
-        <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
-        <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="change-of-basis-as-matrix"/>)</mrow>
-        <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="inverse-of-map-via-matrices"/>)</mrow>
-        <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
-        <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{C}}</mrow>
-        <mrow>\amp = \mbox{LHS} </mrow>
-      </md>.
+      <p>
+       <md>
+          <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
+          <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="change-of-basis-as-matrix"/>)</mrow>
+          <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="inverse-of-map-via-matrices"/>)</mrow>
+          <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
+          <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{C}}</mrow>
+          <mrow>\amp = \mbox{LHS} </mrow>
+        </md>.
+      </p>
     </proof>
   </theorem>
 
@@ -493,14 +500,14 @@
         Recall the standard double angle formulae:
         <md>
           <mrow>\sin(2x) \amp = 2 \sin x \cos x</mrow>
-          <mrow> \cos(2x) \amp = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1-2\sin^2 x</mrow>.
-        </md>
+          <mrow> \cos(2x) \amp = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1-2\sin^2 x</mrow>
+        </md>.
         With these in mind, we compute:
         <md>
           <mrow>T(T_0) \amp= \sin x = T_2 </mrow>
           <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
-          <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>.
-        </md>
+          <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>
+        </md>.
         Thus
         <me>
           [T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
@@ -536,8 +543,8 @@
         In this exercise, we shall use the standard angle addition formulae for trigonometric functions:
         <md>
           <mrow>\cos(x - y) \amp = \cos x \cos y + \sin x \sin y </mrow>
-          <mrow>\sin(x-y) \amp = \sin x \cos y - \cos x \sin y </mrow>.
-        </md>
+          <mrow>\sin(x-y) \amp = \sin x \cos y - \cos x \sin y </mrow>
+        </md>.
         We compute
         <md>
           <mrow> S(T_0) \amp = 1 = T_0 </mrow>
