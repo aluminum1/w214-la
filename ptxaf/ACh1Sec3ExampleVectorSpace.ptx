@@ -281,7 +281,7 @@
     <exercise>
       <statement>
         <p>
-          Bewys dat die versameling <m>A</m> ui <xref ref="ACh1Sec1Intro"/>
+          Bewys dat die versameling <m>A</m> uit <xref ref="ACh1Sec1Intro"/>
           toegerus met die optellingsbewerking <xref ref="add_in_A" />,
           die nulvektor <xref ref="zero_in_A" /> en die skalaarvermenigsvuldigingsbewerking <xref ref="sm_in_A"/> 'n vektorruimte is.
         </p>
