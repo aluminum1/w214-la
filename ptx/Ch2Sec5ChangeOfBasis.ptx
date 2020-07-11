@@ -502,7 +502,7 @@
       <li xml:id="ch-basis-exercise3">
         <p> Determine <m>[\ve{w}]_\basis{C}</m>, directly from <xref ref="w_in_c_basis_exc"/>. </p>
       </li>
-      <li xml:id="ch-basis-exercise1"> <p>The following figure displays the <m>\basis{B}</m> basis against a background of integral linear combinations of the <m>\basis{C}</m> basis:</p>
+      <li xml:id="ch-basis-exercise1"> <p>The following figure displays the basis <m>\basis{B}</m>  against a background of integral linear combinations of the basis <m>\basis{C}</m>:</p>
 
     <figure>
       <caption></caption>
@@ -533,7 +533,7 @@
         </image>
       </figure>
         <p>
-          Determine the change-of-basis matrix <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m>. (You may assume that all coefficients are either integers and half-integers.)
+          Determine the change-of-basis matrix <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m>. (You may assume that all coefficients are either integers and half-integers (like <m>3/2</m>).)
         </p>
       </li>
       <li> <p>
