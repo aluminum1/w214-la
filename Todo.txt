@@ -22,7 +22,6 @@ Consistency and technique:
 
 
 Afrikaans:
-- Ch2Sec1 translate from line  345
 - Ch2Sec2 from 104, 149, 451
 - Ch2Sec3 from 116, 796, 980, 1164, 1242, 1283, 1343, 1385, 1466,
 - Ch2Sec4 Proposition on line 12 still has different versions for Eng and Afr.
