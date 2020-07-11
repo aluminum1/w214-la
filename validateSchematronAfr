@@ -1,0 +1,1 @@
+/c/xsltproc/xsltproc -xinclude /c/PreTeXt/mathbook/schema/pretext-schematron.xsl  /c/PreTeXt/w214-la/ptxaf/W214-Lin-Alg-Af.ptx

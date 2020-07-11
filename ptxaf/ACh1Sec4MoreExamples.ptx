@@ -347,7 +347,7 @@
         as die funksie wat die getal <m>0</m>
         lewer vir elke insetwaarde <m>x \in X</m>:
         <men xml:id="zero_vec_functions">
-          \ve{z} (x) := 0  \text{ vir alle } x \in X.}
+          \ve{z} (x) := 0  \text{ vir alle } x \in X.
         </men>
       </p>
 

@@ -347,7 +347,7 @@
       to be the function which outputs the number <m>0</m>
       for every input value of <m>x \in X</m>:
       <men xml:id="zero_vec_functions">
-        z (x) := 0  \text{ for all } x \in X.}
+        z (x) := 0  \text{ for all } x \in X.
       </men>
     </p>
 

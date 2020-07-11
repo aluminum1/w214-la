@@ -226,7 +226,7 @@
       </md>
       so that <m>\basis{C}</m> spans <m>W</m>.
       Hence <m>\basis{C}</m> is a basis for <m>V</m>,
-      so <m>\Dim V = \text{number of vectors in }\basis{B}}</m> = <m>m</m>,
+      so <m>\Dim V = \text{number of vectors in }\basis{B}</m> = <m>m</m>,
       while <m>\Dim W = \text{number of vectors in }\basis{C}  = m</m>.
     </p>
 

@@ -1,5 +1,7 @@
 /c/xsltproc/xsltproc --xinclude /c/pretext/mathbook/xsl/pretext-latex.xsl /c/pretext/w214-la/ptx/W214-Lin-Alg.ptx > /c/pretext/w214-la/ptx/latex/W214-Lin-Alg.tex
 
+echo "PreTeXt to LaTeX complete. Now compiling LaTeX to pdf"
+
 cd /c/pretext/w214-la/ptx/latex
 
 pdflatex W214-Lin-Alg.tex

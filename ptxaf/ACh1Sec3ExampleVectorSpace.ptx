@@ -177,8 +177,8 @@
         <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp
         \text{(definisie van optelling in }B)</mrow>
         <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp
-        ((x + y) + z = x + (y + z)\) is waar
-        vir re{\"e}le getalle)}</mrow>
+        ((x + y) + z = x + (y + z) \text is waar
+        vir re{\"e}le getalle)</mrow>
         <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp
         \text{(definisie van optelling in }B)</mrow>
         <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \text{(definisie van optelling in }B) </mrow>

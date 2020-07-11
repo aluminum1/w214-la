@@ -32,8 +32,8 @@
 \newcommand{\mat}[1]{\mathsf{#1}}
 \newcommand{\col}[1]{\boldsymbol{\mat{#1}}}
 \newcommand{\basis}[1]{{\mathcal #1}}
-\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
-\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\cvector}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\cmatrix}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 \newcommand{\dotp}{\boldsymbol{\cdot}}
 \newcommand{\smul}{.}
 \newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
@@ -86,6 +86,7 @@
     </frontmatter>
 
 
+
     <xi:include href="./Ch1AbstractVectorSpaces.ptx" />
 
     <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
@@ -95,21 +96,24 @@
     <xi:include href="./Ch4EigenvaluesEigenvectors.ptx" />
 
 
-
+<!--
     <xi:include href="./ChTutorials.ptx"/>
 
+-->
 
     <backmatter>
-      <xi:include href="./Videos.ptx" />
-
       <xi:include href="./AppAReminderAboutMatrices.ptx" />
 
       <xi:include href="./AppBHypersurfaces.ptx" />
+<!--
+      <xi:include href="./Videos.ptx" />
 
-      <!--<xi:include href="./SageExamples.ptx" />-->
+      <xi:include href="./SageExamples.ptx" />
 
       <xi:include href="./bibliography.ptx" />
+-->
     </backmatter>
+
   </book>
 </pretext>
 

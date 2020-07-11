@@ -155,7 +155,7 @@
         <md>
           <mrow>\amp a(x + x') + b (y + y')</mrow>
           <mrow>\amp  = (ax + by) + (ax' + by')</mrow>
-          <mrow>\amp = 0 + 0 \amp \amp  \text{(want }ax + by = 0\text{ en }ax' + by' = 0)}</mrow>
+          <mrow>\amp = 0 + 0 \amp \amp  \text{(want }ax + by = 0\text{ en }ax' + by' = 0)</mrow>
           <mrow>\amp = 0</mrow>
         </md>.
       </p>
