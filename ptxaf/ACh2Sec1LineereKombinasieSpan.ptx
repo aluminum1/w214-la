@@ -34,7 +34,7 @@
     </statement>
   </example>
 
-<!-- TO DO: Translate to Afrikaaans, beginning here-->
+
     <example> <title>Toets of 'n vektor 'n lineêre kombinasie van ander vektore is</title>
     <statement>
       <p>
@@ -197,7 +197,7 @@
     </statement>
   </example>
 
-<!-- TO DO: Translate to Afrikaans -->
+
   <example xml:id="three_vectors_spanning_R2_example">
     <title>Toets of 'n lys vektore 'n vektorruimte onderspan</title>
     <statement>
@@ -400,7 +400,7 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
       Indien <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> vir <m>V</m> onderspan, en ons moet wys dat 'n ander lys vektore vir <m>V</m> onderspan, is dit uit <xref ref="spanning_check_thm"/> genoeg om te wys dat elkeen van die vektore <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> geskryf kan word as 'n lineêre kombinasie van die vektore in die nuwe lys.
     </p>
     <p>
-      With this observation in hand, the exercise has an easy solution.
+      Met hierdie waarneming het die oefening 'n redelik maklike oplossing.
       <md>
         <mrow> \ve v_1 \amp = (\ve v_1 - \ve v_2)  + (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
         <mrow> \ve v_2 \amp= (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
@@ -414,23 +414,23 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
  <exercise>
     <statement>
       <p>
-        Consider the following polynomials in <m>\Poly_2</m>:
+        Beskou die volgende polinome in <m>\Poly_2</m>:
         <me>
           \ve{r}_1 (x) := 3x^2 - 2, \, \ve{r}_2 (x) := x^2 + x, \, \ve{r}_3 (x) := x + 1, \, \ve{r}_4 (x) := x-1
         </me>
         <ol>
           <li>
             <p>
-              Can the polynomial <m>\ve{p}</m> with
-              <m>\ve{p}(x) = x^2 + 1</m> be written as a linear combination of <m>\ve{r}_1</m>,
+              Kan die polinoom <m>\ve{p}</m> met
+              <m>\ve{p}(x) = x^2 + 1</m> as 'n lineêre kombinasie van <m>\ve{r}_1</m>,
               <m>\ve{r}_2</m>,
-              <m>\ve{r}_3</m>, <m>\ve{r}_4</m>?
+              <m>\ve{r}_3</m>, <m>\ve{r}_4</m> geskryf word?
             </p>
           </li>
 
           <li>
             <p>
-              If so, in <em>how many ways</em> can this be done?
+              Indien wel, in <em>hoeveel maniere</em> kan ons dit doen?
             </p>
           </li>
         </ol>
@@ -440,32 +440,32 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
       <p>
         <ol>
           <li>
-          We must set up the appropriate system of linear equations:
+          Ons moet die regte stelsel lineêre vergelykings opstel:
           <md>
             <mrow> \amp a\ve r_1(x) + b \ve r_2(x) + c \ve r_3(x) + d \ve r_4(x) \amp = \amp\ve p(x)</mrow>
             <mrow> \implies \amp a(3x^2 - 2) + b(x^2 + x) + c(x+1) + d(x-1) \amp  = \amp x^2 + 1 </mrow>
           </md>
-          After grouping like powers of <m>x</m> we obtain
+          Nadat ons dieselfde magte van <m>x</m> saam groepeer, kry ons
           <me>
             x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
           </me>
-          We equate coefficients on both sides of the equation to obtain the following system of linear equations:
+          Ons stel die koëffisiënte aan beide kante gelyk aan mekaar en verkry die volgende stelsel lineêre vergelykings:
           <md>
             <mrow> 3a +  b +  0c +  0d  = 1,</mrow>
-            <mrow>0a +  1b +  1c +  1d  = 0, </mrow>
+            <mrow> 0a + 1b +  1c +  1d  = 0, </mrow>
             <mrow>-2a + 0b + 1c +  -1d  = 1 .</mrow>
           </md>
-          Using your preferred method for solving a system of linear equations (such as Gauss reduction), we obtain a solution set of the form:
+          Nou kan jy jou gunsteling metode gebruik om so 'n stelsel lineêre vergelykings op te los (soos bv. Gauss reduksie), kry ons 'n oplossing van die volgende vorm:
           <md>
             <mrow>\amp d \text{ is free},</mrow>
             <mrow>\amp  a = 2 + 2d, </mrow>
             <mrow>\amp  b = -5 - 6d, </mrow>
             <mrow>\amp  c = 5 + 5d. </mrow>
           </md>
-          And so <m>\ve p (x)</m> is indeed a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m>.
+          En dus is <m>\ve p (x)</m> inderdaad 'n lineêre kombinasie van <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m>.
           </li>
           <li>
-            Since <m>d</m> is free in the above solution set, we can write <m>\ve p (x)</m> as a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m> in an uncountably infinite number of ways (one for each real number!).
+            Aangesien <m>d</m> 'n vrye veranderlike in die bostaande oplossing is, kan ons <m>\ve p (x)</m> in oneindig baie maniere as 'n lineêre kombinasie van <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m> skryf.
           </li>
         </ol>
       </p>
@@ -475,17 +475,17 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
   <exercise>
     <statement>
       <p>
-        Suppose that the vectors <m>\ve{e}_1</m>, <m>\ve{e}_2</m>,
-        <m>\ve{e}_3</m> and <m>\ve{e}_4</m> span a vector space <m>V</m>.
-        Show that the vectors <m>\ve{f}_1 := \ve{e}_2 - \ve{e}_1</m>,
+        Veronderstel dat die vektore <m>\ve{e}_1</m>, <m>\ve{e}_2</m>,
+        <m>\ve{e}_3</m> en <m>\ve{e}_4</m> die vektorruimte <m>V</m> onderspan.
+        Wys dat die vektore <m>\ve{f}_1 := \ve{e}_2 - \ve{e}_1</m>,
         <m>\ve{f}_2 := \ve{e}_3 - \ve{e}_2</m>,
         <m>\ve{f}_3 := \ve{e}_4 - \ve{e}_3</m>,
-        <m>\ve{f}_4 := \ve{e}_4</m> also span <m>V</m>.
+        <m>\ve{f}_4 := \ve{e}_4</m> ook vir <m>V</m> onderspan.
       </p>
     </statement>
     <solution>
       <p>
-        You could choose to show this directly or we could use a clever approach based on <m>\mathbf 2 </m>. From <m>\mathbf 2  </m>, we know that <m> \ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4</m> must span <m> V </m>. But if these vectors span <m> V </m>, then non-zero multiples of the vectors also span <m>V</m>. Thus <m> \ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 </m> must span <m> V</m>.
+        Jy kan kies of jy dit direk wil wys of 'n slim metode wil gebruik gebaseer op  <m>\mathbf 2 </m> en <xref ref ="spanning_check_thm"/>. Uit <m>\mathbf 2  </m> weet ons dat <m> \ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4</m> vir <m> V </m> moet onderspan. Maar as hierdie vektore vir  <m> V </m> onderspan, dan sal nie-nul skalaarveelvoude van hulle ook vir <m>V</m> onderspan. Dus moet <m> \ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 </m> vir <m> V</m> onderspan.
       </p>
     </solution>
   </exercise>
@@ -493,21 +493,22 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
   <exercise xml:id="chebyshev_example">
     <statement>
       <p>
-        Show that the polynomials
+        Wys dat die polinome
         <me>
           \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
         </me>
-        span <m>\Poly_3</m>.
+        vir <m>\Poly_3</m> onderspan.
       </p>
     </statement>
     <solution>
       <p>
-        Once again we base our strategy on <m>2</m>. Pick a spanning set for <m>\Poly_3</m>. We'll use <m>1, x , x^2 , x^3</m>, since it's the simplest. <m> 1, x</m> are certainly spanned by <m>\ve q_0x), \ve q_1, \ve q_2, \ve q_3</m> since <m>1 = \ve q_0(x)</m> and <m>x = \ve q_1(x)</m>. It can easily be seen that
-        <me>
-          x^2 = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) \\
-          x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
-        </me>
-        completing the proof.
+        Weereens baseer ons ons stretegie op  <m>2</m>. Kies 'n versameling wat vir <m>\Poly_3</m> onderspan. Ons sal sommer  <m>1, x , x^2 , x^3</m> gebruik, want dis die eenvoudigste. Die vektore <m> 1, x</m> word duidelik deur <m>\ve q_0, \ve q_1, \ve q_2, \ve q_3</m> onderspan, want <m>1 = \ve q_0(x)</m> en <m>x = \ve q_1(x)</m>. Dit kan ook maklik gesien word dat
+        <md>
+          <mrow>
+          x^2 \amp = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) </mrow>
+          <mrow> x^3 \amp = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x)</mrow>
+        </me>,
+        en dit voltooi die bewys.
       </p>
     </solution>
   </exercise>
@@ -515,7 +516,7 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
   <exercise>
     <statement>
       <p>
-        Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
+        Laat <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> 'n lys vektore in 'n vektorruimte <m>V</m> wees. Veronderstel dat <m>\basis{S}</m> vir <m>V</m> onderspan en veronderstel dat <m>w</m> 'n ander vektor in <m>V</m> is. Bewys dat die lys vektore <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> ook vir <m>V</m> onderspan.
       </p>
     </statement>
   </exercise>
@@ -523,34 +524,32 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
   <exercise xml:id="exercise-span-omission">
     <statement>
       <p>
-        Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that one of the vectors in the list, say <m>\ve{v}_r</m>, can be expressed as a linear combination of the preceding vectors:
+        Laat <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> 'n lys vektore in 'n vektorruimte <m>V</m> wees. Veronderstel dat <m>\basis{S}</m> vir <m>V</m> onderspan. Veronderstel dat een van die vektore, sê  <m>\ve{v}_r</m> uitgedruk kan word as 'n lineêre kombinasie van die voorafgaande vektore:
         <men xml:id="exercise-span-omission-1">
           \ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}
         </men>
-        Suppose that we remove <m>\ve{v}_r</m> from <m>\basis{S}</m>, to arrive at a new list
+        As ons <m>\ve{v}_r</m> uit <m>\basis{S}</m> verwyder om die nuwe lys
         <me>
           \basis{T} = \bopen \ve{v}_1, \ldots, \hat{\ve{v}_r}, \ldots, \ve{s}_n \bclose
-        </me>
-        Prove that <m>\basis{T}</m> also spans <m>V</m>.
+        </me> te kry,
+        bewys dat <m>\basis{T}</m> ook vir <m>V</m> onderspan.
       </p>
     </statement>
     <solution>
       <p>
-        We must show that every vector <m>\ve{v} \in V</m> can be written as a linear combination of the vectors from <m>\basis{T}</m>. So let <m>\ve{v} \in V</m>. Since <m>\basis{S}</m> spans <m>V</m>, we know we can write <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{S}</m>:
+        Ons moet wys dat elke vektor <m>\ve{v} \in V</m> uitgedruk kan word as 'n lineêre kombinasie van vektore in <m>\basis{T}</m>. Laat dus <m>\ve{v} \in V</m>. Aangesien <m>\basis{S}</m> vir <m>V</m> onderspan, weet ons dat ons <m>\ve{v}</m> as 'n lineêre kombinasie van die vektore in <m>\basis{S}</m> kan skryf:
         <men xml:id="exercise-span-omission-2">
           \ve{v} = b_1 \ve{v}_1 + \cdots + b_r \ve{v}_r + \cdots + b_{n} \ve{v}_n
         </men>
-        Substituting <xref ref="exercise-span-omission-1"/> into <xref ref="exercise-span-omission-2"/> gives
+        Deur nou <xref ref="exercise-span-omission-1"/> in <xref ref="exercise-span-omission-2"/> te vervang gee
         <mdn>
           <mrow> \ve{v} \amp = b_1 \ve{v}_1 + \cdots + b_r (a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}) + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
           <mrow xml:id="exercise-span-omission-3"> \amp = (b_1 + b_r a_1) \ve{v}_1 + \cdots + (b_r + b_r a_{r-1}) \ve{v}_{r-1} + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
         </mdn>
-        Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{T}</m>. Hence <m>\basis{T}</m> spans V.
+        Vergelyking <xref ref="exercise-span-omission-3"/> wys dat ons <m>\ve{v}</m> as 'n lineêre kombninasie van die vektore uit <m>\basis{T}</m> kan skryf. Dus sal <m>\basis{T}</m> vir <m>V</m> onderspan.
       </p>
     </solution>
   </exercise>
-
-<!-- Translation job ends here -->
 
 </exercises>
 
