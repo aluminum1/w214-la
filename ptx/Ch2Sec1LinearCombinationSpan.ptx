@@ -502,11 +502,12 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
     </statement>
     <solution>
       <p>
-        Once again we base our strategy on <xref ref="spanning_check_thm"/>. Pick a spanning set for <m>\Poly_3</m>. We'll use <m>1, x , x^2 , x^3</m>, since it's the simplest. <m> 1, x</m> are certainly spanned by <m>\ve q_0x), \ve q_1, \ve q_2, \ve q_3</m> since <m>1 = \ve q_0(x)</m> and <m>x = \ve q_1(x)</m>. It can easily be seen that
-        <me>
-          x^2 = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) \\
-          x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
-        </me>
+        Once again we base our strategy on <xref ref="spanning_check_thm"/>. Pick a spanning set for <m>\Poly_3</m>. We'll use <m>1, x , x^2 , x^3</m>, since it's the simplest. <m> 1, x</m> are certainly spanned by <m>\ve q_0, \ve q_1, \ve q_2, \ve q_3</m> since <m>1 = \ve q_0(x)</m> and <m>x = \ve q_1(x)</m>. It can easily be seen that
+        <md>
+          <mrow>
+          x^2 \amp = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) </mrow>
+          <mrow> x^3 \amp = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x)</mrow>
+        </me>,
         completing the proof.
       </p>
     </solution>
@@ -545,12 +546,10 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
           <mrow> \ve{v} \amp = b_1 \ve{v}_1 + \cdots + b_r (a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}) + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
           <mrow xml:id="exercise-span-omission-3"> \amp = (b_1 + b_r a_1) \ve{v}_1 + \cdots + (b_r + b_r a_{r-1}) \ve{v}_{r-1} + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
         </mdn>
-        Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{T}</m>. Hence <m>\basis{T}</m> spans V.
+        Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{T}</m>. Hence <m>\basis{T}</m> spans <m>V</m>.
       </p>
     </solution>
   </exercise>
-
-
 
 </exercises>
 
