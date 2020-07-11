@@ -433,12 +433,12 @@
   <exercise>
     <statement>
       <p>
-        <xref ref="w_in_b_basis_exc"/> displays a basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> for <m>\mathbb{R}^2</m>, a background of integral linear combinations of <m>\ve{b}_1</m> and <m>\ve{b}_2</m>, and a certain vector <m>\ve{w} \in \mathbb{R}^2</m>. Similarly, <xref ref="w_in_c_basis_exc"/> displays another basis <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose</m> for <m>\mathbb{R}^2</m>, a background of integral linear combinations of <m>\ve{c}_1</m> and <m>\ve{c}_2</m>, and the same vector <m>\ve{w} \in \mathbb{R}^2</m>.
+        <xref ref="w_in_b_basis_exc"/> wys vir ons 'n basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> vir <m>\mathbb{R}^2</m>, 'n agtergrond van heeltallige lineêre kombinasies van <m>\ve{b}_1</m> en <m>\ve{b}_2</m>, asook 'n ander vektor <m>\ve{w} \in \mathbb{R}^2</m>. Soortgelyk wys <xref ref="w_in_c_basis_exc"/> 'n ander basis <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose</m> vir <m>\mathbb{R}^2</m>, 'n agtergrond van heeltallige lineêre kombinasies van <m>\ve{c}_1</m> en <m>\ve{c}_2</m>, en dieselfde vektor <m>\ve{w} \in \mathbb{R}^2</m>.
       </p>
       <sidebyside>
         <figure xml:id="w_in_b_basis_exc">
           <caption>
-            The vector <m>\ve{w}</m> against a background of integral linear combinations of the basis vectors from <m>\basis{B}</m>.
+            Die vektor <m>\ve{w}</m> teen 'n agtergrond van heeltallige lineêre kombinasies van die basisvektore van <m>\basis{B}</m>.
           </caption>
           <image>
             <latex-image>
@@ -467,7 +467,7 @@
         </figure>
 
         <figure xml:id="w_in_c_basis_exc">
-          <caption>The vector <m>\ve{w}</m> against a background of integral linear combinations of the basis vectors from <m>\basis{C}</m>. </caption>
+          <caption>Die vektor <m>\ve{w}</m> teen 'n agtergrond van heeltallige lineêre kombinasies van die basisvektore van <m>\basis{C}</m>. </caption>
           <image>
             <latex-image>
               <![CDATA[\begin{tikzpicture}[scale=0.5]
@@ -497,12 +497,12 @@
 
     <ol>
       <li xml:id="ch-basis-exercise2">
-        <p> Determine <m>[\ve{w}]_\basis{B}</m>, directly from <xref ref="w_in_b_basis_exc"/>. </p>
+        <p> Bepaal <m>[\ve{w}]_\basis{B}</m>, direk uit <xref ref="w_in_b_basis_exc"/>. </p>
       </li>
       <li xml:id="ch-basis-exercise3">
-        <p> Determine <m>[\ve{w}]_\basis{C}</m>, directly from <xref ref="w_in_c_basis_exc"/>. </p>
+        <p> Bepaal <m>[\ve{w}]_\basis{C}</m>, direk uit <xref ref="w_in_c_basis_exc"/>. </p>
       </li>
-      <li xml:id="ch-basis-exercise1"> <p>The following figure displays the <m>\basis{B}</m> basis against a background of integral linear combinations of the <m>\basis{C}</m> basis:</p>
+      <li xml:id="ch-basis-exercise1"> <p>Die volgende figuur wys die basis <m>\basis{B}</m> teen 'n agtergrond van lineêre kombinasies van die basis <m>\basis{C}</m>:</p>
 
     <figure>
       <caption></caption>
@@ -533,11 +533,11 @@
         </image>
       </figure>
         <p>
-          Determine the change-of-basis matrix <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m>. (You may assume that all coefficients are either integers and half-integers.)
+          Bepaal die basisomskakelingsmatriks <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m>. (Jy mag aanneem dat alle koëffisiënte of heelgetalle of half-heelgetalle (soos <m>3/2</m>) is.)
         </p>
       </li>
       <li> <p>
-        Multiply the matrix you computed in <xref ref="ch-basis-exercise1" >(c)</xref> with the column vector you computed in <xref ref="ch-basis-exercise2" >(a)</xref>. That is, compute the product <m>\mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{w}]_{\basis{B}}</m>. Is your answer the same as what you obtained in <xref ref="ch-basis-exercise3" >(b)</xref>?
+        Vermenigvuldig die matriks wat jy in  <xref ref="ch-basis-exercise1" >(c)</xref> bereken het met die kolomvektor wat jy in <xref ref="ch-basis-exercise2" >(a)</xref> bereken het. Met ander woorde, bereken die produk <m>\mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{w}]_{\basis{B}}</m>. Is jou antwoord dieselfde as wat jy in <xref ref="ch-basis-exercise3" >(b)</xref> gekry het?
       </p></li>
     </ol>
     </statement>
