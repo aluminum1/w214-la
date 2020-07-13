@@ -103,7 +103,7 @@
     </statement>
     <solution>
       <p>
-        We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have 3 unknowns but only 2 equations, we do not have a unique solution. Let <m>k_1</m> be free, i.e. <m> k_1 = t, t \in \mathbb{R}</m>. Then
+        We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have three unknowns but only two equations, we do not have a unique solution. Let <m>k_1</m> be free, i.e. <m> k_1 = t, t \in \mathbb{R}</m>. Then
         <me>
           (-k_1 + k_2 + 2k_3) - (2k_1 + k_2 - k_3) = 0 = -3k_1 + 3k_3 \\
           \implies -k_1 + k_3 = 0 \implies k_3 = t.
@@ -187,7 +187,7 @@
       <men xml:id="lin_dep_lem_another_eqn">
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
       </men>.
-      Let <m>k_s</m> be one of the nonzero coefficients. Then, by taking the other vectors to the other side of the equation, and multuplying by <m>\frac{1}{k_s}</m> we can solve for <m>\ve{v}_s</m> in terms of the other vectors:
+      Let <m>k_s</m> be one of the nonzero coefficients. Then, by taking the other vectors to the other side of the equation, and multiplying by <m>\frac{1}{k_s}</m> we can solve for <m>\ve{v}_s</m> in terms of the other vectors:
       <md>
         <mrow>
           \ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \text{(No } \ve{v}_i \text{ terms on RHS)}
@@ -205,7 +205,7 @@
       <men xml:id="rearranged_lin_dep">
         k_1 \ve{v}_1 + \ldots + (-1)\ve{v}_s + \ldots + k_n \ve{v}_n = \ve{0}.
       </men>
-      Not all the coefficients on the LHS of <xref ref="rearranged_lin_dep"/> are zero, since the coefficient of <m>\ve{v}_s</m> is equal to <m>-1</m>. Therefore, <m>\basis{B}</m> is linearly dependent.
+      Not all the coefficients on the left hand-side of <xref ref="rearranged_lin_dep"/> are zero, since the coefficient of <m>\ve{v}_s</m> is equal to <m>-1</m>. Therefore, <m>\basis{B}</m> is linearly dependent.
     </p>
 
     <p>
@@ -231,16 +231,16 @@
     <p>
       Therefore <m>\ve{v}_1 = \ve{0}</m> by <xref ref="dichotomy_lem">Lemma</xref>,
       and we are done.
-      On the other hand, suppose <m>r \neq 1</m>.
-      Then <xref ref="lin_dep_lem_first_eqn" /> becomes the equation
+      Otherwise we must have <m>r \neq 1</m>.
+      In that case <xref ref="lin_dep_lem_first_eqn" /> becomes the equation
       <me>
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \text{ where }  k_r \neq 0
       </me>.
     </p>
 
     <p>
-      By dividing by <m>k_r</m>,
-      we can now solve for <m>\ve{v}_r</m> in terms of the preceding vectors <m>\ve{v}_1</m>,
+      Then we can multiply by the scalar <m>\frac{1}{k_r}</m>,
+      and solve for <m>\ve{v}_r</m> in terms of the preceding vectors <m>\ve{v}_1</m>,
       <m>\ve{v}_2</m>, <m>\ldots</m>, <m>\ve{v}_{r-1}</m>:
       <me>
         \therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r} \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \,
@@ -248,10 +248,10 @@
       Therefore, (3) is true.
     </p>
 
-     <p> (3) <m>\Rightarrow</m> (2) Suppose that (3) is true. In other words, either:
+     <p> (3) <m>\Rightarrow</m> (2) Suppose that (3) is true. In other words, either of the following two holds:
         <ul>
           <li> <m>\ve{v}_1 = \ve{0}</m>. Therefore, <m>\basis{B}</m> is linearly dependent, by <xref ref="remark_about_lin_dependence"/>. In other words, (1) is true. Therefore, since we have already proved that (1) <m>\Rightarrow </m> (2), we conclude that (2) is true. </li>
-          <li> For some <m>r \in \{2, \ldots, n\}</m>, <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m>. In this case, clearly <m>\ve{v}_r</m> is a linear combination of the other vectors in <m>\basis{B}</m>, so (2) is true.</li>
+          <li> For some <m>r \in \{2, \ldots, n\}</m>, the vector <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m>. In this case, clearly <m>\ve{v}_r</m> is a linear combination of the other vectors in <m>\basis{B}</m>, so (2) is true.</li>
         </ul>
         In both cases, (2) is true. So, (3) <m>\Rightarrow</m> (2).
     </p>
@@ -480,7 +480,7 @@
           2 &amp; 3
         \end{bmatrix}
       </me>
-      for any choice of <m> b</m>. Hence <m> \ve v_3 </m> is not a scalar multiple of <m> \ve v_1 </m> and <m> \ve v_2</m>. We consider <m> \ve v_4 </m> next. Suppose
+      for any choice of <m> b</m>. Hence <m> \ve v_3 </m> is not a linear combination of <m> \ve v_1 </m> and <m> \ve v_2</m>. We consider <m> \ve v_4 </m> next. Suppose
       <me>
         a\begin{bmatrix}
           1 &amp; 2 \\
@@ -514,7 +514,10 @@
         \implies 2c = -1
         \implies c = -\frac{1}{2}
       </me>
-      and so <m> b = -1 </m>. SHOW THAT THIS IS INCONSISTENT WITH (2,1).
+      and so <m> b = -1 </m>.
+    </p>
+    <p>
+      But these values are onconsistent with the entries in position (2,1). Can you see why?
     </p>
     </solution>
   </exercise>
@@ -545,9 +548,13 @@
         Let <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> be a linearly independent list of vectors in a vector space <m>V</m>.
         Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors in <m>\basis{B}</m>.
         Show that the list <m>\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is still linearly independent.
-        (Hint: Use the Linear Combination of Preceding Vectors Proposition.)
       </p>
     </statement>
+    <hint>
+      <p>
+        Use the Linear Combination of Preceding Vectors Proposition.
+      </p>
+    </hint>
     <!--
     <solution>
       <p>
@@ -560,7 +567,7 @@
   <exercise>
     <statement>
       <p>
-        Consider the vector space of functions on the closed unit interval, <m>\Fun ([0,1])</m>. Show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m>\Fun ([0,1])</m>.
+        Consider the vector space of functions on the closed interval, <m>\Fun ([0,1])</m>. Show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m>\Fun ([0,1])</m>.
       </p>
     </statement>
 <!--  	<solution>
