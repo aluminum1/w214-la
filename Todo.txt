@@ -19,11 +19,11 @@ Consistency and technique:
 - Make sure all <proofs> are inside the <result> tags and not outside (?)
 - Change all &xea; to ê, etc.
 - All phrases in 'quotes' -> <sq> or <q>
+- Make sure all LaTeX line breaks \\ are appropriate.
 
 
 Afrikaans:
-- Ch2Sec2 from 104, 149, 451
-- Ch2Sec3 from 116, 796, 980, 1164, 1242, 1283, 1343, 1385, 1466,
+- Ch2Sec2 from 533 (but this may be the same question as in the previous section ??)
 - Ch2Sec4 Proposition on line 12 still has different versions for Eng and Afr.
 - Ch2Sec4 line 265, 440, 499, 561, (624 & 692 commented out), 750
 - Ch3Sec1 line 354, 419, 512, 676 (rework to use linear combination instead of coordinate vectors), 875, 973, 1217
