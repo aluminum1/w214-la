@@ -112,35 +112,35 @@
       </statement>
     </example>
 
-<!-- TO DO: Translate into Afrikaans -->
+
     <example>
-      <title>A basis for <m>\mathbb{R}^4</m></title>
+      <title>'n Basis vir <m>\mathbb{R}^4</m></title>
       <statement>
         <p>
-          Check whether the following list of vectors
+          Toets of die volgende lys vektore
           <men>
           \ve{v}_1 = (1, 0, 2, -3), \, \ve{v}_2 = (1, 3, -1, 2), \, \ve{v}_3 = (0, 1, 2, -1), \ve{v}_4 = (1, 2, 3, 4)
           </men>
-          is a basis for <m>\mathbb{R}^4</m>.
+          'n basis vir <m>\mathbb{R}^4</m> is.
         </p>
       </statement>
 
       <solution>
         <p>
-          First we check if the list of vectors is <xref ref="defn_of_linear_ind" >linearly independent</xref>. Consider the equation
+          Ons kyk eers of die lys vektore <xref ref="defn_of_linear_ind" >lineêr onafhanklik</xref> is. Beskou die vergelyking
           <mdn>
             <mrow> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{0} </mrow>
             <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (0, 0, 0, 0) </mrow>
             <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (0,0,0,0) </mrow>
         </mdn>
-        So the list of vectors is linearly indepedent if and only if the following equations have only the trivial solution <m>a_1 = 0, a_2 = 0, a_3 = 0, a_4 = 0</m>:
+        Die lys vektore is lineêr onafhanklik as en slegs as die volgende vergelykings slegs die triviale oplossing <m>a_1 = 0, a_2 = 0, a_3 = 0, a_4 = 0</m> het:
         <mdn>
           <mrow xml:id="R4-example-eqn1"> a_1 - a_2 + a_4 \amp = 0 </mrow>
           <mrow> 3a_1 + a_3 + 2a_4 \amp = 0 </mrow>
           <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = 0 </mrow>
           <mrow xml:id="R4-example-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = 0 </mrow>
         </mdn>
-        We can compute the solutions to equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  by hand, or using SageMath.
+        Ons kan die oplossings vir hierdie vergelykings <xref first="R4-example-eqn1" last="R4-example-eqn4"/> met die hand bereken, of deur SageMath te gebruik.
         </p>
         <sage>
           <input>
@@ -153,27 +153,27 @@
                   [a1, a2, a3, a4])
           </input>
         </sage>
-      <p> SageMath outputs:</p>
+      <p> SageMath se antwoord is:</p>
       <sidebyside>
        <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
       </sidebyside>
       <p>
-      So indeed,  equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  have only the trivial solution. Therefore the list of vectors is linearly independent. </p>
+      So inderdaad het die vergelykings <xref first="R4-example-eqn1" last="R4-example-eqn4"/> slegs die triviale oplossing. Dus is die lys vektore lineêr onafhanklik. </p>
 
-      <p> Next, we need to check that the list of vectors spans <m>\mathbb{R}^4</m>. (There is a shorter way of doing this, using <xref ref="lin-ind-implies-basis"/> below, but for now we prove it from first principles.) So, let <m>\ve{w} = (w_1, w_2, w_3, w_4)</m> be an arbitrary vector in <m>\mathbb{R}^4</m>. We need to show that there exists at least one way to express <m>\ve{w}</m> as a linear combination of the vectors <m>\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4</m>. In other words, we need to check if there exists at least one solution to the following equation:
+      <p> Volgende moet ons kyk of die lys vekore vir <m>\mathbb{R}^4</m> onderspan. (Daar is 'n vinniger manier om dit te doen, deur <xref ref="lin-ind-implies-basis"/> hier onder te gebruik, maar ons gaan dit hier uit eerste beginsels bewys.) Laat dus <m>\ve{w} = (w_1, w_2, w_3, w_4)</m> 'n willekeurige vektor in <m>\mathbb{R}^4</m> wees. Ons moet wys dat daar ten minste een manier bestaan om <m>\ve{w}</m> as 'n lineêre kombinasie van die vektore <m>\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4</m> uit te druk. Met ander woorde, ons moet kyk of daar ten minste een oplossing vir die volgende vergelyking bestaan:
          <mdn>
             <mrow xml:id="fund_eqn_span_r4_ex"> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{w} </mrow>
             <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (w_1, w_2, w_3, w_4) </mrow>
             <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (w_1, w_2, w_3, w_4) </mrow>
         </mdn>
-        So the list of vectors spans <m>\mathbb{R}^4</m> if and only if the following equations for <m>a_1, a_2, a_3, a_4</m> always have a solution, no matter what the values of <m>w_1, w_2, w_3, w_4</m> are:
+        So die lys vektore onderspan vir <m>\mathbb{R}^4</m> as en slegs as die volgende stelsel vergelykings vir <m>a_1, a_2, a_3, a_4</m> altyd 'n oplossing het, maak nie saak wat die waardes van <m>w_1, w_2, w_3, w_4</m> is nie:
      <mdn>
        <mrow xml:id="R4-example-span-eqn1"> a_1 - a_2 + a_4 \amp = w_1 </mrow>
        <mrow> 3a_1 + a_3 + 2a_4 \amp = w_2 </mrow>
        <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = w_3 </mrow>
        <mrow xml:id="R4-example-span-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = w_4 </mrow>
       </mdn>
-      We can compute the solutions to equations <xref first="R4-example-span-eqn1" last="R4-example-span-eqn4"/>  by hand, or using SageMath:</p>
+      Ons kan die oplossings vir die vergelykings <xref first="R4-example-span-eqn1" last="R4-example-span-eqn4"/>  met die hand bereken, of deur SageMath te gebruik:</p>
       <sage>
         <input>
           var('a1, a2, a3, a4, w1, w2, w3, w4')
@@ -185,27 +185,30 @@
                 [a1, a2, a3, a4])
         </input>
       </sage>
-      <p>Note that we ask SageMath to solve for <c>a1, a2, a3, a4</c>, since <c>w1, w2, w3, w4</c> are regarded as constants in the equation... we are not trying to solve for them, they are fixed, but arbitrary! SageMath outputs:</p>
+      <p>Let op dat ons vir SageMath vra om vir <c>a1, a2, a3, a4</c> op te los, aangesien <c>w1, w2, w3, w4</c> as konstantes in hierdie vergelykings beskou word<ellipsis /> ons los nie vir hulle op nie; hulle is vas maar willekeurig.  SageMath outputs:</p>
+      <aside>
+        Dit is eintlik iets belangrik om te besef in die skryf van bewyse. Die <m>w_i</m> is willekeurig, maar word aan die begin van die bewys vasgemaak en die argument word dan op die vaste vektore <m>w_i</m> toegepas. Selfs al kan ons na die tyd verskillende waardes vir die <m>w_i</m> kies, geld die <em>argument</em> nogsteeds vir daardie waardes en weet ons dat die stelsel 'n oplossing het vir enige vaste waardes wat ons kan kies.
+      </aside>
       <sidebyside>
         <p>
           <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </c>
         </p>
       </sidebyside>
-      <p>In other words, there does indeed exist a solution, no matter what <m>(w_1, w_2, w_3, w_4)</m> is. For instance, if <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, then the solution is
+      <p>Met ander woorde, daar bestaan wel 'n oplossing, maak nie saak wat <m>(w_1, w_2, w_3, w_4)</m> is nie. Byyvoorbeeld, as  <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, dan is die oplossing
       <me>
          a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{36}.
       </me>
-        In other words,
+        Met ander woorde,
         <me>
           (3, 1, 2, 4) = \frac{1}{18} \ve{v}_1 - \frac{19}{12} \ve{v}_2 - \frac{17}{9} \ve{v}_3 + \frac{49}{36} \ve{v}_4.
       </me>
-      Since there exists a solution to equation <xref ref="fund_eqn_span_r4_ex"/> for each vector <m>\ve{w} \in \mathbb{R}^4</m>, we conclude that <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m> spans <m>\mathbb{R}^4</m>. </p>
+      Aangesien daar vir elke vektor <m>\ve{w} \in \mathbb{R}^4</m> 'n oplossing vir die vergelyking <xref ref="fund_eqn_span_r4_ex"/> is, lei ons af dat <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m> vir <m>\mathbb{R}^4</m> onderspan. </p>
 
       <p>Hence <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m>  is a basis for <m>\mathbb{R}^4</m>, since it is linearly independent and spans <m>\mathbb{R}^4</m>.</p>
       </solution>
 
     </example>
-<!-- Translation job ends -->
+
     <example>
       <title> Dimensie van <m>Poly_n</m></title>
       <statement>
@@ -799,61 +802,61 @@
         </p>
       </statement>
     </proposition>
-<!-- TO DO: Translate this -->
+
     <proof>
       <p>
-        <alert>Proving that <m>\Dim(W) \leq \Dim(V)</m></alert>
+        <alert>Bewys dat <m>\Dim(W) \leq \Dim(V)</m></alert>
       </p>
-      <p> Let
+      <p> Laat
         <me>
           \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose
         </me>
-        be a basis for <m>V</m>, so that <m>\Dim(V) = n</m>. We just need to show that <m>W</m> is finite-dimensional, i.e. that there exists a basis
+        'n basis vir <m>V</m> wees, sodat <m>\Dim(V) = n</m>. Ons moet net wys dat <m>W</m> eindig-dimensioneel is, m.a.w. dat daar 'n basis
         <me>
           \basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_k \bclose
         </me>
-        for <m>W</m>. For then <m>\basis{B}</m> will be a list of <m>k</m> linearly independent vectors which live in <m>W</m> (and hence also in <m>V</m>) and hence we must have <m>k \leq n</m> by <xref ref="bumping_off_lemma"/>, as <m>\basis{C}</m> spans <m>V</m>.
+        vir <m>W</m> bestaan. As ons dit kan doen, dan sal <m>\basis{B}</m> 'n lys van <m>k</m> lineêr onafhanklike vektore in <m>W</m> (en dus ook in <m>V</m>) wees en dus moet  <m>k \leq n</m> uit <xref ref="bumping_off_lemma"/>, omdat <m>\basis{C}</m> vir <m>V</m> onderspan.
       </p>
 
       <p>
-        We show that <m>W</m> is finite-dimensional as follows.
+        Ons wys as volg dat <m>W</m> eindig-dimensioneel is.
       </p>
 
       <p>
-        If <m>W</m> is the zero vector space <m>\{ \ve{0} \} </m>, then <m>W</m> is finite-dimensional <xref ref="defn_dim_zero_vec_space" text="custom">by definition</xref>.
+        As <m>W</m> die nul-vektorruimte <m>\{ \ve{0} \} </m> is, dan is <m>W</m> <xref ref="defn_dim_zero_vec_space" text="custom">per definisie</xref> eindig-dimensioneel.
       </p>
 
       <p>
-        If <m>W</m> is not the zero vector space, then there exists a nonzero vector <m>\ve{w}_1 \in W</m>. Consider the list <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Note that <m>\basis{B}_1</m> is linearly independent, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_1</m> spans <m>W</m>, then it is a basis for <m>W</m>, and so <m>W</m> is finite-dimensional and we are done.
+        As <m>W</m> nie die nul-vektorruimte is nie, dan bestaan daar 'n nie-nul vektor <m>\ve{w}_1 \in W</m>. Beskou nou die lys <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Let op dat <m>\basis{B}_1</m> lineêr onafhanklik is uit <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/>. So, as <m>\basis{B}_1</m> vir <m>W</m> onderspan, dan is dit 'n basis vir <m>W</m>, en dus is <m>W</m> eindig-dimensioneel en ons is klaar.
       </p>
 
       <p>
-        If <m>\basis{B}_1</m> does not span <m>W</m>, then there exists a vector <m>\ve{w}_2 \in W</m> which is not a scalar multiple of <m>\ve{e}_1</m>.
-        Now consider the list <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>. Once again, <m>\basis{B}_2</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_2</m> spans <m>W</m>, then it is a basis for <m>W</m>, and we are done.
+        As <m>\basis{B}_1</m> nie vir <m>W</m> onderspan nie, dan is daar 'n vektor <m>\ve{w}_2 \in W</m> wat nie 'n skalaarveelvoud van <m>\ve{e}_1</m>is nie.
+        Beskou nou die lys <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>. Weereens is <m>\basis{B}_2</m> lineêr onafhanklik uit <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/>. So, as <m>\basis{B}_2</m> vir <m>W</m> onderspan, dan is dit 'n basis vir <m>W</m>, en ons is klaar.
       </p>
 
       <p>
-        If <m>\basis{B}_2</m> does not span <m>W</m>, then there exists a vector
-        <m>\ve{w}_3 \in W</m> which is not a linear combination of <m>\ve{w}_1</m> and <m>\ve{w}_2</m>.
-        Now consider the list <m>\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}</m>. Again, <m>\basis{B}_3</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. If it does not span <m>W</m>, then there exists a vector <m>\ve{w}_4 \in W</m> which is not a linear combination of <m>\ve{w}_1, \ve{w}_2, \ve{w}_3</m>. So consider the list <m>\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose </m>.
+        As <m>\basis{B}_2</m> nog nie vir <m>W</m> onderspan nie, dan is daar 'n vektor
+        <m>\ve{w}_3 \in W</m> wat nie 'n lineêre kombinasie van <m>\ve{w}_1</m> en <m>\ve{w}_2</m> is nie.
+        Beskou nou die lys <m>\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}</m>. Weereens is <m>\basis{B}_3</m> lineêr onafhanklik uit <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/>. As dit nogsteeds nie vir <m>W</m> onderspan nie, dan is daar 'n vektor <m>\ve{w}_4 \in W</m> wat nie 'n lineêre kombinasie van <m>\ve{w}_1, \ve{w}_2, \ve{w}_3</m> is nie. Beskou dan die lys <m>\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose </m>.
       </p>
 
        <p>
-        This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="bumping_off_lemma"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.
+        So gaan ons aan, maar hierdie proses moet stop vir een of ander <m>k \leq n</m>. As dit nie die geval is nie, sou dit 'n lys <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m> tot gevolg hê wat uit <m>n+1</m> lineêr onafhanklike vektore uit <m>V</m> bestaan. Maar <m>\Dim V = n</m>, so dit is uit <xref ref="bumping_off_lemma"/> onmoontlik. Dus moet die versameling <m>\basis{B}_k</m> vir een of ander <m>k \leq n</m> 'n basis vir <m>W</m> wees.
       </p>
       <p>
-        <alert>Proving that <m>\Dim(V) = \Dim(W) \Rightarrow W = V</m></alert>
+        <alert>Bewys dat <m>\Dim(V) = \Dim(W) \Rightarrow W = V</m></alert>
       </p>
       <p>
-        Suppose that <m>\Dim(W) = \Dim(V)</m> but that <m>W \neq V</m>. Since <m>W \neq V</m>, there exists a vector <m>\ve{v}</m> which is an element of <m>V</m> but not an element of <m>W</m>. Let <m>\basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_n \bclose</m> be a basis for <m>W</m>. We can add <m>\ve{v}</m> to <m>\basis{B}</m> to get the following list of vectors in <m>V</m>:
+        Veronderstel dat <m>\Dim(W) = \Dim(V)</m> maar dat <m>W \neq V</m>. Aangesien <m>W \neq V</m>, moet daar 'n vektor <m>\ve{v}</m> bestaan wat 'n element van <m>V</m> is, maar nie 'n element van <m>W</m> is nie. Laat <m>\basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_n \bclose</m> 'n basis vir <m>W</m> wees. Ons kan nou <m>\ve{v}</m> by <m>\basis{B}</m> voeg om die volgende lys vektore in <m>V</m> te kry:
         <me>
           \basis{B}' = \bopen \ve{w}_1, \ldots, \ve{w}_n, \ve{v} \bclose.
         </me>
-        Since <m>\ve{v}</m> cannot be written as a linear combination of <m>\ve{w}_1, \ldots, \ve{w}_n</m>, we conclude that <m>\basis{B}'</m> linearly lindependent, by <xref ref="lin_comb_prec_vec"/>. But then <m>\basis{B}'</m> is a list of <m>n+1</m> linearly independent vectors in an <m>n</m>-dimensional vector space <m>V</m>. This is impossible, by <xref ref="bumping_off_lemma"/>. Therefore our assumption was false, and we must have <m>W = V</m>.
+        Aangesien <m>\ve{v}</m> nie as 'n lineêre kombinasie van <m>\ve{w}_1, \ldots, \ve{w}_n</m> geskryf kan word nie, lei ons af dat <m>\basis{B}'</m> uit <xref ref="lin_comb_prec_vec"/> ook lineêr onafhanklik is. Maar dan is <m>\basis{B}'</m> 'n lys van <m>n+1</m> lineêr onafhanklike vektore in 'n <m>n</m>-dimensionele vektorruimte <m>V</m>. Uit <xref ref="bumping_off_lemma"/> is dit onmoontlik. Daarom was ons aanname onwaar en dit volg dat <m>W = V</m>.
       </p>
     </proof>
   </subsection>
- <!-- End of translation needed -->
+
   <subsection>
     <title>Oneindig-dimensionele vektorruimtes</title>
     <p>
@@ -997,29 +1000,30 @@
         <ol>
           <li>
             <p>
-              Suppose <me> (a,2a,-a) = (1,0,5) </me>. Then the first entry requires that <m> a =1 </m> but the second entry requires that <m> a = 0 </m>. Hence there can be no <m> a </m> satisfying the equation.
+              Veronderstel dat <me> (a,2a,-a) = (1,0,5) </me>. Uit die eerste inskrywing volg dit dat <m> a =1 </m>, maar die tweede vereis dat <m> a = 0 </m>. Dus kan daar geen <m> a </m> wees wat die vergelyking bevredig nie.
             </p>
           </li>
 
           <li>
             <p>
-              <me>
-              2 \ve v_1 + 3 \ve v_2 = 2(1,2,-1) + 3(1,0,5) \\ = (2 + 3, 4 + 0, -2 + 15) =  (5,4,13) = \ve v_4
-              </me>
+              <md>
+                <mrow> 2 \ve v_1 + 3 \ve v_2 \amp = 2(1,2,-1) + 3(1,0,5) </mrow>
+                <mrow> \amp = (2 + 3, 4 + 0, -2 + 15) =  (5,4,13) = \ve v_4</mrow>
+              </md>
             </p>
           </li>
 
           <li>
             <p>
-              Suppose
+              Veronderstel dat
               <me>
                 a \ve v_1 + b \ve v_4 = \ve v_6
               </me>
-              i.e.
+              m.a.w.
               <me>
                 (a,2a,-a) + (b,0,5b)= (1,1,0).
               </me>
-              Consideration of the second entry gives <m> a = \frac{1}{2} </m> which, by looking at the first entry, forces <m> b = \frac{1}{2}</m> but then, if we look at the third entry, <m> -\frac{1}{2} + \frac{5}{2} \neq 0 </m>. Hence there are no solutions to the equation.
+              As ons na die tweede inskrywing kyk, kry ons <m> a = \frac{1}{2} </m> wat, as ons dan na die eerste inskrywing kyk, <m> b = \frac{1}{2}</m> forseer. Maar dan, as ons na die derde inskrywing kyk, moet <m> -\frac{1}{2} + \frac{5}{2} \neq 0 </m>. Dus is daar geen oplossings vir die vergelyking nie.
             </p>
           </li>
 
@@ -1178,25 +1182,25 @@
           </ul>
         </p>
       </statement>
-      <!-- TO DO: Translate the solutions -->
+
       <solution>
         <p>
           <ol>
             <li>
             <p>
-              True
+              Waar
             </p>
             <p>
-              Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\dim V \geq n+1 </m> contradicting, the fact that <m> \dim V = n</m>.
+              Veonderstel ons het 'n lys van <m>n+1</m> lineêr onafhanklike vektore gehad. Uit <xref ref = "first_corollary_please">Gevolgtrekking </xref>, kan ons die lys uitbrei tot 'n basis vir <m>V</m>. Dus sou ons 'n basis vir <m>V</m> met ten minste <m> n + 1</m> hê. Ons lei af dat <m>\dim V \geq n+1 </m> wat teenstrydig is met die feit dat <m> \dim V = n</m>.
            </p>
           </li>
 
             <li>
             <p>
-              True
+              Waar
             </p>
             <p>
-              Try it yourself! Your proof will be very similar to the one given for <m>a</m>.
+              Probeer dit self. Jou bewys sal baie soortgelyk wees aan die een wat vir <m>a</m> gegee is.
             </p>
           </li>
           </ol>
@@ -1253,13 +1257,13 @@
       <ol>
         <li>
           <p>
-            Any linearly independent spanning set is by definition a basis, contradicting our assumption.
+            Enige lineêr onafhanklike versameling wat 'n vektorruimte onderspan is per definisie 'n basis. Dit is teenstrydig met ons aanname.
           </p>
         </li>
 
         <li>
           <p>
-            <m> \ve v </m> is not a linearly combination of the vectors in <m> \basis B </m>.
+            <m> \ve v </m> is nie 'n lineêre kombinasie van die vektore in <m> \basis B </m> nie.
           </p>
         </li>
 
@@ -1271,13 +1275,13 @@
 
         <li>
           <p>
-            No vector in  <m> \basis B'  </m> is a linear combination of the previous vectors and so the list is thus linearly indepedent by <xref ref = "lin_dependence_prop" />.
+            Geen vektor in <m> \basis B'  </m> is 'n lineêre kombinasie van die voorafgaande vektore nie, so die lys is uit <xref ref = "lin_dependence_prop" /> lineêr onafhanklik.
           </p>
         </li>
 
         <li>
           <p>
-            The vector subspace <m> W </m> of <m> V </m> spanned by the vectors in <m> \basis B' </m> has dimension <m> n + 1</m> and so <m> \dim(W) > \dim(V)</m> which contradicts <xref ref = "dim-of-subspace-prop" />.
+            Die deelruimte <m> W </m> van <m> V </m> wat onderspan word deur die vektore in <m> \basis B' </m> het dimensie <m> n + 1</m> en dus is <m> \dim(W) > \dim(V)</m> wat teenstrydig is met <xref ref = "dim-of-subspace-prop" />.
           </p>
         </li>
       </ol>
@@ -1294,8 +1298,8 @@
       </statement>
       <solution>
         <p>
-          <m>\Mat_{2,2}</m> has dimension 4 since it is spanned by <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> where <m> \ve e_{i,j}</m> is the matrix with a <m> 1 </m> in the <m>ij^\text{th} </m> entry and 0's everywhere else. By <xref ref="true_false_span_lin_ind">Exercise</xref>(a), any linearly indepedent list of vectors in  <m>\Mat_{2,2}</m> has length at most 4. Since the list of matrices in
-          <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> has length 5, it cannot be linearly independent.
+          <m>\Mat_{2,2}</m> is 4-dimensioneel omdat dit deur <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> onderspan word, waar <m> \ve e_{i,j}</m> die matriks is met 'n <m> 1 </m> in die inskrywing in ry <m>i</m> en kolom <m>j</m> en nulle oral anders. Uit <xref ref="true_false_span_lin_ind">Oefening</xref>(a), het enige lineêr onafhanklike lys vektore in <m>\Mat_{2,2}</m> 'n lengte van hoogstens 4. Aangesien die lys matrikse in
+          <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Oefening</xref>5 elemente het, kan dit nie lineêr onafhanklik wees nie.
         </p>
       </solution>
     </exercise>
@@ -1354,15 +1358,15 @@
         <ol>
 
           <li>
-            <m> \Poly_2 </m> has a basis <m> \basis B' = \bopen 1 , x , x^2 \bclose </m> and so has dimension 3. Since <m> \basis B </m> has length 4, it cannot be linearly independent by <xref ref="true_false_span_lin_ind">Exercise</xref>(a). Hence <m> \basis B </m> cannot be a basis for  <m> \Poly_2 </m>.
+            Die versameling <m> \basis B' = \bopen 1 , x , x^2 \bclose </m> is 'n basis vir <m> \Poly_2 </m> en hierdie vektorruimte het dus dimensie 3. Aangesien <m> \basis B </m> uit 4 elemente bestaan, kan dit uit <xref ref="true_false_span_lin_ind">Oefening</xref>(a) nie lineêr onafhanklik wees nie. Dus kan <m> \basis B </m> nie 'n basis vir <m> \Poly_2 </m> wees nie.
           </li>
 
           <li>
-          <m> \Mat_{2,2} </m> has dimension 4. Since <m> \basis B </m> has length 3, it cannot span <m> \Mat_{2,2} </m>. Hence  <m> \basis B </m> cannot be a basis for <m> \Mat_{2,2} </m>.
+          <m> \Mat_{2,2} </m> het dimensie 4. Aagesien <m> \basis B </m> lengte 3 het, kan dit nie <m> \Mat_{2,2} </m> onderspan nie. Dus kan <m> \basis B </m> nie 'n basis vir <m> \Mat_{2,2} </m> wees nie.
           </li>
 
           <li>
-            <m> \Trig_2 </m> has dimension 5. Since <m> \basis B </m> has length 5, it cannot span <m> \Trig_2 </m>. Hence <m> \basis B </m> cannot be a basis for <m> \Trig_2 </m>.
+            <m> \Trig_2 </m> het dimensie 5. Aangesien <m> \basis B </m> lengte 4 het, kan dit nie <m> \Trig_2 </m> onderspan nie. Dus is <m> \basis B </m> nie 'n basis vir <m> \Trig_2 </m> nie.
           </li>
         </ol>
       </p>
@@ -1401,47 +1405,49 @@
         <ol>
           <li>
             <p>
-              True. Suppose there is a linear relation on  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m>:
+              Waar. Veronderstel daar was 'n lineêre verband tussen  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m>:
               <me>
                 a( \ve{u} + \ve{v}) + b(\ve{v} + \ve{w}) + c(\ve{u} + \ve{w}).
               </me>
-              This induces a linear relation on <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m>:
+              Dit sou 'n lineêre verband tussen <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> tot gevolg hê:
               <m>
                 (a + c)\ve u + (a +b )\ve v + (b + c)w = \ve 0
               </m>
-              Since <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> is linearly independent, we must have that
+              Aangesien <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> lineêr onafhanklik is, moet ons
               <md>
                 <mrow> a + c = 0 \qquad (1) </mrow>
                 <mrow> a + b = 0 \qquad (2) </mrow>
                 <mrow> b + c = 0 \qquad (3) </mrow>
-              </md>
-              <m> (1) + (2) </m> combined with <m> (3) </m> gives us that <m> a = 0 </m> and so <m> b = c = 0 </m> too. We conclude that  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
+              </md> hê.
+              <m> (1) + (2) </m> saam met <m> (3) </m> gee aan ons dat <m> a = 0 </m> en dus ook <m> b = c = 0 </m>. Ons lei af dat <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> lineêr onafhanklik is.
             </p>
           </li>
 
           <li>
             <p>
-              False. Let <m> V = \mathbb{R}^3 </m>. Let
+              Onwaar. Laat <m> V = \mathbb{R}^3 </m> en
               <me>
                 \ve u = (1,0,0) \, \ve v = (0,1,0), \, \ve w = (0,0,1)
               </me>
-              and so
-              <me>
-                \ve u - \ve v = (1,-1,0) \\  \ve v - \ve w = (0,1,-1) \\ \ve u - \ve w = (1,0,-1)
-              </me>.
-              By inspection, we see that
+              sodat
+              <md>
+                <mrow> \ve u - \ve v \amp = (1,-1,0) </mrow>
+                <mrow> \ve v - \ve w \amp = (0,1,-1) </mrow>
+                <mrow> \ve u - \ve w \amp = (1,0,-1) </mrow>
+              </md>.
+              Deur inspeksie sien ons dat
               <me>
                 (1,-1,0) + (0,1,-1) = (1,0,-1)
               </me>
-              and so  <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly dependent.
+              en dus is  <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> lineêr afhanklik.
             </p>
 
             <p>
-              Alternatively, we could have noticed that for any vectors <m> \ve u , \ve v , \ve w </m>:
+              Alternatiewelik kon ons oplet dat vir enige vektore <m> \ve u , \ve v , \ve w </m> geld
               <me>
-                (\ve u - \ve v) + (\ve v - \ve w) = \ve u - \ve w.
-              </me>
-              Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m>  satisfies <xref ref = "lin_dependence_prop" /> and so is linearly dependent.
+                (\ve u - \ve v) + (\ve v - \ve w) = \ve u - \ve w
+              </me>.
+              Dus sal <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m>  vir <xref ref = "lin_dependence_prop" /> bevredig en is dus lineêr afhanklik.
             </p>
           </li>
         </ol>
@@ -1476,16 +1482,16 @@
     <solution><p>
       <ol>
         <li>
-          We omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m> since it is routine. Let us now construct a basis for <m> V </m>. Begin with a non-zero vector <m> \ve v_1 </m>  in <m> V </m>. We make the most obvious choice, let <m> \ve v_1 = x -2 </m>. Next pick any vector  <m> \ve v_2 </m> in <m> V </m> not in the span of <m> \left \{ \ve v_1 \right\} </m>. An obvious choice is <m> \ve v_2 = x(x-2) </m>. Since <m> V </m> is not all of <m>\Poly_2 </m>, we know that <m> \dim V \lt 3 </m>. Thus <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> is a basis for <m> V </m> and so <m> \dim V = 2 </m>.
+          Ons los die toets dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is uit, omdat dit eencoudig is. Kom ons konstrueer nou 'n basis vir <m> V </m>. Begin met 'n nie-nul vektor <m> \ve v_1 </m>  in <m> V </m>. Ons maak die vanselfsprekende keuse <m> \ve v_1 = x -2 </m>. Kies volgende enige vektor <m> \ve v_2 </m> in <m> V </m> wat nie in die span van <m> \left \{ \ve v_1 \right\} </m> is nie. Een keuse daarvoor is <m> \ve v_2 = x(x-2) </m>. Aangesien <m> V </m> nie die hele vektorruimte <m>\Poly_2 </m>, is nie, weet ons dat <m> \dim V \lt 3 </m>. Dus is <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> 'n basis vir <m> V </m> en dus is <m> \dim V = 2 </m>.
         </li>
 
         <li>
-          Once again, we omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m>. Pick any non-zero vector <m>\ve v_1 </m> in <m> V </m>. Let's choose <m> \ve v_1 = x </m>. It is not as obvious as before whether there are indeed any vectors in <m> V </m> not in the span of <m> \left\{ \ve v_1 \right\} </m>, and so we must do some computations. If <m> p(x) = ax^2 + bx + c</m> is in <m> V </m>, <m> p(x)</m> must satisfy
-          <me>
-            x(2ax + b) = ax^2 + bx + c \\
-            \implies 2ax^2 + bx = ax^2 + bx + c.
-          </me>
-          Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples of <m> \ve v_1 = x </m>. Hence <m> \bopen \ve v_1 \bclose </m> is a basis for <m> V </m> and so <m> \dim V = 1</m>.
+          Weereens laat ons die toets uit dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is. Kies enige nie-nul vektor <m>\ve v_1 </m> in <m> V </m>. Kom ons kies <m> \ve v_1 = x </m>. Hierdie keer is dit nie so duidelik dat daar enige vektore in <m> V </m> is wat nie in die span van <m> \left\{ \ve v_1 \right\} </m> is nie, en dus moet ons 'n paar berekeninge doen. As <m> p(x) = ax^2 + bx + c</m> in <m> V </m> is, moet <m> p(x)</m> die vergelykings
+          <md>
+            <mrow> x(2ax + b) = ax^2 + bx + c </mrow>
+            <mrow> \implies 2ax^2 + bx = ax^2 + bx + c </mrow>
+          </md> bevredig.
+          Dus is <m> a  = c = 0 </m>. Dus is alle vektore in <m> V </m> inderdaad skalaarveelvoude van <m> \ve v_1 = x </m>. Dus is <m> \bopen \ve v_1 \bclose </m> 'n basis vir <m> V </m> en gevolglik is <m> \dim V = 1</m>.
         </li>
       </ol>
     </p></solution>
@@ -1494,12 +1500,12 @@
   <exercise xml:id="ex_basis_no_deg_2">
     <statement >
       <p>
-        Prove or disprove: there exits a basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> of <m>\Poly_3 </m> such that none of the polynomials <m> p_0, p_1, p_2, p_3</m> have degree 2.
+        Bewys of bewys verkeerd: daar bestaan 'n basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> van <m>\Poly_3 </m> sodat geen van die polinome <m> p_0, p_1, p_2, p_3</m> graad 2 het nie.
       </p>
     </statement>
     <solution>
       <p>
-        The basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> works. The check is routine.
+        Die basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> werk. Dit is vinnig om te toets.
       </p>
     </solution>
   </exercise>
@@ -1507,12 +1513,12 @@
   <exercise>
     <statement>
       <p>
-        Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="custom">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.)
+        Bewys of bewys verkeerd: Laat <m>U</m> en <m> W </m> verskillende deelruimtes van <m>V</m> met <m>U \neq V</m>, en <m> W \neq V</m> wees. Dan is <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Hersien die <xref ref="def_sum_subspace" text="custom">definisie van die som van twee deelruimtes</xref> van <xref ref="sum_of_subspaces_is_subspace"/>.)
       </p>
     </statement>
    <solution>
       <p>
-        We can disprove the statement with the following counterexample. Let <m> V = \mathbb{R}^3 </m>. Let <m>U</m> be the vector subspace with basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> and let <m>W</m> be the vector subspace with basis <m>\bopen (0,0,1), (0,1,0) \bclose</m>. Clearly <m>\dim U = \dim W = 2 </m> and thus <m> \dim(U) + \dim(V) = 4</m>. But since <m>U + W =  \mathbb{R}^3</m>, <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
+        Ons gee 'n teenvoorbeeld wat die bewering verkeerd bewys. Laat <m> V = \mathbb{R}^3 </m>, laat <m>U</m> die vektorruimte met basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> en laat <m>W</m> die vektorruimte met basis <m>\bopen (0,0,1), (0,1,0) \bclose</m> wees. Duidelik is <m>\dim U = \dim W = 2 </m> en dus <m> \dim(U) + \dim(V) = 4</m>. Maar <m>U + W =  \mathbb{R}^3</m> en dus is <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
       </p>
     </solution>
   </exercise>
@@ -1528,11 +1534,11 @@
         <p>
           <ol>
             <li>
-              Sonder om enige eksplisiete berekeninge to doen, bepaal die dimensie van <m>V</m>.
+              Bereken die dimensie van <m>V</m> sonder om enige eksplisiete berekeninge to doen
             </li>
 
             <li><p>
-              Deur SageMath te gebruik, vind 'n basis vir <m>V</m>. (Sien die voorbeelde in  <xref ref = "ACh2Sec3BasisDimension"/>). Toon eksplisiet aan (met had berekeninge!) dat elkeen van jou basis vektore inderdaad <xref ref = "diff_eqn_exerc_3"/> bevredig.</p>
+              Vind 'n basis vir <m>V</m> deur SageMath te gebruik. (Sien die voorbeelde in  <xref ref = "ACh2Sec3BasisDimension"/>). Toon eksplisiet aan (met had berekeninge!) dat elkeen van jou basis vektore inderdaad <xref ref = "diff_eqn_exerc_3"/> bevredig.</p>
               <sage>
                 <input>
                 </input>
