@@ -356,26 +356,26 @@
         <ol>
           <li>
             <p>
-              As you know from calculus, taking the derivative of a polynomial decreases every power of <m> x </m> by 1. So if <m> p </m> is in <m>\Poly_n </m>, then <m> p </m> has degree at most <m> n </m> . Therefore, its image under <m> D </m> has degree at most <m> n - 1</m>. Thus <m> p' </m> is in <m>\Poly_{n-1} </m>.
+              Soos jy uit Kalkulus weet, verminder elke mag van <m> x </m> met 1 wanneer ons die afgeleide neem. So as <m> p </m> in <m>\Poly_n </m> is, dan het <m> p </m> 'n graad van hoogstens <m> n </m>. Daarom het sy beeld onder <m> D </m> 'n graad van hoogstens <m> n - 1</m>. Dus is <m> p' </m> in <m>\Poly_{n-1} </m>.
             </p>
           </li>
 
           <li>
             <p>
-              Let <m> p, q </m> be in <m> \Poly_n </m>. Then:
+              Laat <m> p, q </m> in <m> \Poly_n </m> wees. Dan is:
               <md>
                 <mrow>
                   D(p + q) \amp = (p+q)'
                 </mrow>
-                <mrow> \amp = p' + q' \amp (\text{rule of differentiation})</mrow>
+                <mrow> \amp = p' + q' \amp (\text{reël van differensiasie})</mrow>
                 <mrow> \amp = D(p) + D(q) </mrow>
               </md>
             </p>
             <p>
-              Similarly,
+              Soortgelyk is
               <md>
                 <mrow> D(kp) \amp = (kp)' </mrow>
-                <mrow> \amp = kp' \amp (\text{rule of differentiation})</mrow>
+                <mrow> \amp = kp' \amp (\text{reël van differensiasie})</mrow>
                 <mrow> \amp = k D(p)</mrow>
               </md>
             </p>
@@ -421,18 +421,17 @@
           <ol>
             <li>
               <p>
-              You know from calculus that the antiderivative of a polynomial <m> \ve p </m> must always have degree one greater than <m> \ve p </m>. Hence <m> A </m> maps <m>\Poly_n</m> to <m> \Poly_{n+1}</m>.
+                Jy weet uit Kalkulus dat die anti-afgeleide van 'n nie-nul polinoom <m> \ve p </m> altyd 'n graad van een meer as <m> \ve p </m> het. Dus sal <m> A </m> die vektorruimte <m>\Poly_n</m> op <m> \Poly_{n+1}</m> afbeeld.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m> \ve p , \ve q </m> be in <m> \Poly_n </m>. Using the usual properties of the integral, we compute
+                Laat <m> \ve p , \ve q </m> in <m> \Poly_n </m> wees. Deur die gewone eienskappe van die integraal te gebruik, bereken ons dat
                 <me>
                   A(\ve p + \ve q) = \int_0^x \ve p(t) + \ve q(t) \, dt = \int_0^x \ve p(t) \, dt + \int_0^x \ve q(t) \, dt \\ = A(\ve p) + A(\ve q).
                 </me>
-                Similarly,
-                <me>
+                Soortgelyk is                <me>
                   A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
                 </me>
                 </p>
@@ -504,33 +503,33 @@
     <solution>
       <p>
         <m> S(\ve p_0) = \ve p_0 </m> is trivial.
-        <me>
-          S(\ve p_1) = x-1 = \ve p_1 - \ve p_0 \\
-          S(\ve p_2) = (x-1)^2 = x^2 - 2x + 1 = \ve p_2 - 2\ve p_1 + \ve p_0 \\
-          S(\ve p_3) = (x-1)^3 = x^3 - 3x^2 + 3x - 1 = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0.
-        </me>
+        <md>
+          <mrow> S(\ve p_1) = x-1 = \ve p_1 - \ve p_0 </mrow>
+          <mrow> S(\ve p_2) = (x-1)^2 = x^2 - 2x + 1 = \ve p_2 - 2\ve p_1 + \ve p_0 </mrow>
+          <mrow>S(\ve p_3) = (x-1)^3 = x^3 - 3x^2 + 3x - 1 = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0</mrow>
+        </md>.
       </p>
     </solution>
   </exercise>
 
   <example xml:id="grad_as_linear_map">
-    <title>Gradient as a linear map</title>
+    <title>Gradiënt as 'n lineêre afbeelding</title>
     <statement>
       <p>
-        Recall the vector space <m>\Poly_n</m> of polynomials in <m>x</m> and <m>y</m> (<xref ref="poly_many_variables_example"/>, dimension computed in <xref ref="dim_poly_many_variables"/>) and the vector space <m>\Vect_n (\mathbb{R}^2)</m> of polynomial vector fields on <m>\mathbb{R}^2</m> (<xref ref="poly_vector_fields_example"/>, dimension computed in <xref ref="dim_poly_vec_fields"/>).
+        Kom ons kyk weer na die vektorruimte <m>\Poly_n</m> van polinome in <m>x</m> en <m>y</m> (<xref ref="poly_many_variables_example"/>, dimensie in <xref ref="dim_poly_many_variables"/> bereken) en die vektorruimte <m>\Vect_n (\mathbb{R}^2)</m> van vektorvelde op <m>\mathbb{R}^2</m> (<xref ref="poly_vector_fields_example"/>, dimensie in <xref ref="dim_poly_vec_fields"/> bereken).
       </p>
 
       <p>
-        The operation <sq>take the gradient</sq> can be thought of as a linear map
+        Die bewerking <sq>neem die gradiënt</sq> kan as 'n lineêr afbeelding
         <md>
           <mrow> \nabla : \Poly_n[x,y] \amp \rightarrow \Vect_{n-1} (\mathbb{R}^2) </mrow>
           <mrow> f \amp \mapsto \nabla f </mrow>
-        </md>
-        This is a linear map because <m>\nabla(f + g) = \nabla f + \nabla g </m> and <m>\nabla (kf) = k \nabla f</m>.
+        </md> gesien word.
+        Dis 'n lineêre afbeelding omdat <m>\nabla(f + g) = \nabla f + \nabla g </m> en <m>\nabla (kf) = k \nabla f</m>.
       </p>
 
       <p>
-        For example,
+        Byvoorbeeld
         <me>
           \nabla(x + xy) = (1 + y, x).
         </me>
@@ -539,15 +538,15 @@
   </example>
 
   <example>
- <title>Double integral as a linear map</title>
+ <title>Dubbelintegraal as 'n lineêre afbeelding</title>
    <statement>
     <p>
-      Let <m>D \subseteq \mathbb{R}^2</m> be a region in the plane. Integrating polynomial functions over <m>D</m> can be thought of as a linear map
+      Laat <m>D \subseteq \mathbb{R}^2</m> 'n gebied in die vlak wees. Die integrasie van polinoomfunksies oor die gebied <m>D</m> kan gesien word as 'n lineêre afbeelding
       <md>
         <mrow> I : \Poly_n [x,y] \amp \mapsto \mathbb{R} </mrow>
         <mrow> f \amp \mapsto \iint_{D} f dA </mrow>
-      </md>
-      This is a linear map because
+      </md>.
+      Dis 'n lineêre afbeelding, omdat
       <md>
         <mrow> \iint_D (f+g) dA \amp = \iint_D f dA + \iint_D g dA </mrow>
         <mrow> \iint_D kf \, dA \amp = k \iint_D f \, dA </mrow>
@@ -555,11 +554,11 @@
     </p>
 
     <p>
-      For example, let <m>D = \{ (x,y) : x^2 + y^2 \leq 1 \} </m>, and let <m>f = x^2</m>. Then
+      Byvoorbeeld, laat <m>D = \{ (x,y) : x^2 + y^2 \leq 1 \} </m>, en <m>f = x^2</m>. Dan is
       <me>
         I(f) = \iint_D x^2 \, dA = \frac{\pi}{4}
       </me>
-      as the reader will verify.
+      soos wat die leser self kan bevestig.
     </p>
    </statement>
   </example>
@@ -877,11 +876,11 @@
           </li>
           <li>
             <p>
-              According to <xref ref = "lin_map_zero_to_zero"/>, <m> T(0) = 0 </m> is a necessary condition for <m>T</m> to be linear. However,
+              Volgens <xref ref = "lin_map_zero_to_zero"/>, is <m> T(0) = 0 </m> 'n nodige voorwaarde vir <m>T</m> om lineêr te wees. However,
               <me>
               T(\ve 0) = \ve a + 0 = \ve a \neq \ve 0.
             </me>
-            Hence <m> T </m> cannot be linear.
+            Dus kan <m> T </m> nie lineêr wees nie.
             </p>
           </li>
         </ol>
@@ -975,17 +974,17 @@
         <ol>
           <li>
             <p>
-              If <m> p(x) </m> has degree at most <m>n</m>, then <m> \ve q(x) := x^2 \ve p(x) </m> has degree at most <m>n+2</m>.
+              As <m> p(x) </m> graad hoogstens <m>n</m> het, dan het <m> \ve q(x) := x^2 \ve p(x) </m> graad hoogstens <m>n+2</m>.
             </p>
           </li>
 
           <li>
             <p>
-              The proof is simple and follows from the usual properties of polynomials. Using the fact that multiplication of polynomials distributes over addition we compute
+              Die bewys is eenvoudig en volg uit die gewone eienskappe van polinome. Deur die feit te gebruik dat vermenigvuldiging van polinome oor optelling distrubeer, bereken ons dat
               <me>
-                M(\ve p + \ve q)(x) = x^2(\ve p(x) + \ve q(x)) = x^2\ve p(x) + x^2\ve q(x) = M(\ve p)(x) + M(\ve q)(x).
-              </me>
-              We may consider the scalar <m> k </m> as a constant polynomial. Thus, using the commutativity and associativity of polynomial multiplication we compute
+                M(\ve p + \ve q)(x) = x^2(\ve p(x) + \ve q(x)) = x^2\ve p(x) + x^2\ve q(x) = M(\ve p)(x) + M(\ve q)(x)
+              </me>.
+              Ons kan die skalaar <m> k </m> as 'n konstante polinoom sien. Dus volg uit die kommutatiwiteit en assosiatiwiteit van polinoomvermenigvuldiging dat
               <me>
                 M(k\ve p)(x) = x^2k\ve p (x) = k(x^2 \ve p(x)) = kM(\ve p)(x).
               </me>
@@ -994,12 +993,12 @@
 
           <li>
             <p>
-              <me>
-                M(\ve p_0) = x^2 1 = x^2 = \ve p_2 \\
-                M(\ve p_1) = x^2 x = x^3 = \ve p_3 \\
-                M(\ve p_2) = x^2 x^2 = x^4 = \ve p_4 \\
-                M(\ve p_3) = x^2 x^3 = x^5 = \ve p_5.
-              </me>
+              <md>
+                <mrow>M(\ve p_0) = x^2 1 = x^2 = \ve p_2 </mrow>
+                <mrow>M(\ve p_1) = x^2 x = x^3 = \ve p_3 </mrow>
+                <mrow>M(\ve p_2) = x^2 x^2 = x^4 = \ve p_4 </mrow>
+                <mrow>M(\ve p_3) = x^2 x^3 = x^5 = \ve p_5 </mrow>
+              </md>.
             </p>
           </li>
         </ol>
@@ -1010,33 +1009,33 @@
   <exercise>
     <statement>
       <p>
-        Define the map
+        Definieer die afbeelding
         <md>
         <mrow>  C : \Poly_n \amp \rightarrow \Trig_n </mrow>
         </md>
-        by the formula
+        deur die formule
         <me>
           C(p)(x) := p(\cos x).
         </me>
         <ol>
           <li>
-          Compute <m>C(p)</m>, where <m>p(x)=3x^2-x+1</m>. Express your answer in terms of the standard basis for <m>Trig_2</m>,
+          Bereken <m>C(p)</m>, waar <m>p(x)=3x^2-x+1</m>. Druk jou antwoord in terme van die standaardbasis van <m>Trig_2</m>, naamlik
           <me>
-            T_0(x) = 1, T_1(x) = \cos x, T_2 (x) = \sin x, T_3 (x) = \cos (2x), T_4 (x) = \sin (2x).
-          </me>
+            T_0(x) = 1, T_1(x) = \cos x, T_2 (x) = \sin x, T_3 (x) = \cos (2x), T_4 (x) = \sin (2x)
+          </me> uit.
         </li>
         <li>
-          Is <m>C</m> a linear map?
+          Is <m>C</m> 'n lineêre afbeelding?
         </li>
         <li>
-          Justify that for every polynomial <m>p \in \Poly_n</m>, the function <m>C(p) \in \Trig_n</m>? (This is implicitly assumed above.)
+          Regverdig dat die funksie <m>C(p)</m> vir alle polinome <m>p \in \Poly_n</m> 'n element van <m>\Trig_n</m> is? (Dit word implisiet hier bo aangeneem.)
         </li>
         <li>
-          Compute <m>C(p_0), C(p_1), C(p_2), C(p_3)</m> where
+          Bereken <m>C(p_0), C(p_1), C(p_2), C(p_3)</m> waar
           <me>
           p_0(x) = 1, p_1(x) = x, p_2(x) = x^2, p_3(x)=x^3
         </me>
-        are the standard basis vectors for <m>\Poly_3</m>. Express your answers in terms of the standard basis of <m>\Trig_n</m>.
+        die standaardbasisvektore vir <m>\Poly_3</m> is. Druk jou antwoorde in terme van die standaardbasis vir <m>\Trig_n</m> uit.
         </li>
         </ol>
       </p>
@@ -1045,28 +1044,28 @@
 
  <exercise>
     <p>
-      Determine the action of the gradient linear map
+      Bepaal die werking van die gradiënt-lineêre afbeelding
       <me>
         \nabla : \Poly_2[x,y] \rightarrow \Vect_1(\mathbb{R}^2)
       </me>
-      from <xref ref="grad_as_linear_map"/> in terms of the standard bases
+      uit <xref ref="grad_as_linear_map"/> in terme van die standaardbasis
       <md>
         <mrow> \bopen q_1, q_2, q_3, q_4, q_5 \bclose  </mrow>
         <mrow> q_1 = 1, q_2 = x, q_3 = y, q_4 = x^2, q_5 = xy, q_6 = y^2</mrow>
       </md>
-      of <m>\Poly_2</m> and
+      van <m>\Poly_2</m> en
       <md>
         <mrow>  \bopen V_1, V_2, V_3, V_4, V_5, V_6 \bclose </mrow>
         <mrow>  V_1 = (1, 0), V_2 = (x, 0), V_3 = (y, 0) </mrow>
         <mrow> V_4 = (0, 1), V_5 = (0, x), V_6 = (0, y)</mrow>
       </md>
-      of <m>\Vect_1(\mathbb{R}^2)</m>respectively.
+      van <m>\Vect_1(\mathbb{R}^2)</m> onderskeidelik.
     </p>
   </exercise>
 
   <exercise>
     <p>
-      Consider the following function:
+      Beskou die volgende funksie:
       <md>
         <mrow> T : \Poly_2 \amp \rightarrow \mathbb{R}^2        </mrow>
         <mrow> p \amp \mapsto \begin{bmatrix} p(0) \\ p(1) \end{bmatrix} </mrow>
@@ -1074,25 +1073,25 @@
     </p>
     <ol>
       <li><p>
-        Is <m>T</m> a linear map? (Yes / No).
+        Is <m>T</m> 'n lineêre afbeelding?
       </p></li>
-      <li><p> Prove your assertion from (a).
+      <li><p> Bewys jou keuse in (a).
       </p></li>
     </ol>
   </exercise>
 
   <exercise>
     <p>
-      Let <m>V</m> be the vector space of solutions to the differential equation
+      Laat <m>V</m> die vektorruimte van oplossings vir die differensiaalvergelyking
       <me>
-        y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y' + a_0(x) = 0.
-      </me>
-      Consider the 'evaluate at <m>x=1</m>' map
+        y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y' + a_0(x) = 0
+      </me> wees.
+      Beskou die <sq>werk by <m>x=1</m> uit</sq> afbeelding
       <md>
         <mrow>T : V \amp \rightarrow \mathbb{R} </mrow>
         <mrow>y \amp \mapsto y(1)</mrow>
       </md>
-      Is <m>T</m> a linear map? Prove your assertion.
+      Is <m>T</m> 'n lineêre afbeelding? Bewys jou antwoord.
     </p>
   </exercise>
 
@@ -1219,41 +1218,41 @@
    <exercise>
     <statement>
       <p>
-        Prove that if <m>V</m> is a finite dimensional vector space then the set of all linear maps from <m>V</m> to <m>\mathbb R</m>,<m>\mathcal L (V,\mathbb R)</m>, is itself a vector space. Since we already know that the set of all real valued functions from <m> V </m> to <m>\mathbb R</m> forms a vector space, you will only have to show that <m>\mathcal L (V,\mathbb R)</m> contains the function <m>\ve 0</m>, and is closed under both addition and scalar multiplication.
+        Bewys dat as <m>V</m> 'n eindig-dimensionele vektorruimte is, dan is die versameling van alle lineêre afbeeldings van <m>V</m> na <m>\mathbb R</m>, wat deur <m>\mathcal L (V,\mathbb R)</m> aangedui word, self ook 'n vektorruimte. Aangesien ons reeds weet dat die versameling van alle funksies van <m> V </m> na <m>\mathbb R</m> 'n vektorruimte is, hoef jy slegs te wys dat <m>\mathcal L (V,\mathbb R)</m> die funksie <m>\ve 0</m> bevat, en geslote is onder beide optelling en skalaarvermenigvuldiging.
       </p>
     </statement>
     <solution>
       <p>
-        For all <m>\ve v,\ve w \in  V</m>, for all <m>S, T \in \mathcal L (V,\mathbb R)</m> and for all <m>a , b \in \mathbb R</m>:
+        Vir alle <m>\ve v,\ve w \in  V</m>, en vir alle <m>S, T \in \mathcal L (V,\mathbb R)</m> en vir alle <m>a , b \in \mathbb R</m> geld:
       <ol>
         <li>
           <p>
-            <me>
-            \ve 0(\ve v + \ve w) = 0 = \ve 0\ve v + \ve 0\ve w \\
-            0(a\ve v) = 0 = a \ve 0 \\
-          </me>
-          and hence <m> \ve 0 \in \mathcal L (V,\mathbb R)</m>.
+            <md>
+              <mrow>\ve 0(\ve v + \ve w) = 0 = \ve 0\ve v + \ve 0\ve w </mrow>
+              <mrow>0(a\ve v) = 0 = a \ve 0 </mrow>
+            </md>
+            en dus <m> \ve 0 \in \mathcal L (V,\mathbb R)</m>.
           </p>
         </li>
 
         <li>
           <p>
-            <me>
-            (a S)(\ve v + \ve W) = a(S (\ve v + \ve w )) = a(S \ve v+ S\ve w) = (a S)\ve v + (a S) \ve w\\
-            (a S)(b \ve v) = (ab) S \ve v = b( a S \ve v) \\
-          </me>
-          and hence <m> a S \in \mathcal L (V,\mathbb R)</m>.
+            <md>
+              <mrow>(a S)(\ve v + \ve W) = a(S (\ve v + \ve w )) = a(S \ve v+ S\ve w) = (a S)\ve v + (a S) \ve w</mrow>
+              <mrow>(a S)(b \ve v) = (ab) S \ve v = b( a S \ve v) </mrow>
+            </md>
+            and hence <m> a S \in \mathcal L (V,\mathbb R)</m>.
           </p>
         </li>
 
         <li>
           <p>
-            <me>
-            (S + T)(\ve v + \ve w) = S(\ve v+ \ve w) + T(\ve v + \ve w) \\
-            = S\ve v + S \ve w + T \ve v + T \ve w  = (S + T)\ve v + (S + T)\ve w \\
-            (S + T)(a \ve v) = S (a \ve v) + T(a \ve w ) = aS\ve v+  aT \ve w = a(S+T)\ve v
-          </me>
-          and hence <m> S + T  \in \mathcal L (V,\mathbb R)</m>.
+            <md>
+              <mrow>(S + T)(\ve v + \ve w) = S(\ve v+ \ve w) + T(\ve v + \ve w) </mrow>
+              <mrow>= S\ve v + S \ve w + T \ve v + T \ve w  = (S + T)\ve v + (S + T)\ve w </mrow>
+              <mrow>(S + T)(a \ve v) = S (a \ve v) + T(a \ve w ) = aS\ve v+  aT \ve w = a(S+T)\ve v</mrow>
+            </md>
+            en dus <m> S + T  \in \mathcal L (V,\mathbb R)</m>.
           </p>
         </li>
 
@@ -1265,7 +1264,7 @@
   <exercise>
     <statement>
       <p>
-        If <m>V </m> is a finite dimensional vector space, find a basis for <m> \mathcal L(V , \mathbb R) </m>.
+        As <m>V </m> 'n eindig-dimensionele vektorruimte is, vind 'n basis vir <m> \mathcal L(V , \mathbb R) </m>.
       </p>
     </statement>
   </exercise>
