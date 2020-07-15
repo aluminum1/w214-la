@@ -470,7 +470,7 @@
     </statement>
     <solution>
       <p>
-        V consists of all vectors <m>(x,y,z,w)</m> satisyfing the linear equations
+        <m>V</m> consists of all vectors <m>(x,y,z,w)</m> satisyfing the linear equations
         <md>
 
          <mrow> x + 2y - w = 0 </mrow>
@@ -483,7 +483,7 @@
       </p>
 
       <p>
-        Onto <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
+        Now on to <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
 
         <me>
           \int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
