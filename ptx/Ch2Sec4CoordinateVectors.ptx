@@ -138,8 +138,6 @@ To be corrected after the Afrikaans version of the previous Proposition
 has been updated.  -->
 
 
-
-
   <definition>
     <statement>
       <p>
@@ -521,7 +519,7 @@ has been updated.  -->
         Hence
         <me>
           [\mat{A}]_\basis{B} = \begin{bmatrix} 0 \\ -\frac{3}{2} \\ \frac{5}{2} \\ -\frac{1}{2} \end{bmatrix}
-        </me>
+        </me>.
       </p>
     </solution>
   </exercise>
@@ -558,7 +556,7 @@ has been updated.  -->
             <me>
               p(x) = x^2 + x -6 = (x+3)(x - 2)
             </me>
-            and so <m> p(2) = </m> and hence <m> p \in V </m>.
+            and so <m> p(2) = 0 </m> and hence <m> p \in V </m>.
           </p>
         </li>
 
@@ -589,13 +587,13 @@ has been updated.  -->
       <p>
         We shall use the basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose</m>. Since <m> \ve p(x) </m> has no degree 2 term, we know immediately that
         <me>
-          \ve p(x) = ax^3 + 0(x^3 + x^2) + cx + d.
-        </me>
+          \ve p(x) = ax^3 + 0(x^3 + x^2) + cx + d
+        </me>.
         Reading off the rest of the coefficients, we see that <m> a =3, c = -7, d = 1 </m>.
         Hence
         <me>
-          [p]_\basis{B} = \begin{bmatrix} 3 \\ 0 \\-7 \\1\end{bmatrix}.
-        </me>
+          [p]_\basis{B} = \begin{bmatrix} 3 \\ 0 \\-7 \\1\end{bmatrix}
+        </me>.
       </p>
     </solution>
   </exercise>
@@ -752,8 +750,8 @@ b = \frac{1}{2}
       <p>
         Let <m>V</m> be the vector space of solutions to the differential equation
         <men xml:id="diff_eqn_exerc_2">
-          (1-x^2)y^{''} - xy' + 4y = 0, \quad x \in (-1, 1).
-        </men>
+          (1-x^2)y^{''} - xy' + 4y = 0, \quad x \in (-1, 1)
+        </men>.
       </p>
       <ol>
         <li>
@@ -773,8 +771,8 @@ b = \frac{1}{2}
           <p>
             Let <m>y \in V</m> be defined as the unique solution to the differential equation in <xref ref="diff_eqn_exerc_2"/> satisfying
             <me>
-              y(\frac{1}{2}) = 1, \quad y'(\frac{1}{2}) = 0.
-            </me>
+              y(\frac{1}{2}) = 1, \quad y'(\frac{1}{2}) = 0
+            </me>.
             (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>.
           </p>
         </li>
@@ -807,19 +805,19 @@ b = \frac{1}{2}
             <li>
               Find that unique function <m>y_1</m> that is a solution to <xref ref = "diff_eqn_exerc_3"/> subject to the initial conditions
               <me>
-                y_1(1) = 1 \quad y_1'(1) = 0 \quad y_1''(1) = 0.
-              </me>
+                y_1(1) = 1 \quad y_1'(1) = 0 \quad y_1''(1) = 0
+              </me>.
             </li>
 
              <li>
               Find that unique function <m>y_2</m> that is a solution to <xref ref = "diff_eqn_exerc_3"/> subject to the initial conditions
               <me>
-                y_2(1) = 0 \quad y_2'(1) = 1 \quad y_2''(1) = 0.
-              </me>
+                y_2(1) = 0 \quad y_2'(1) = 1 \quad y_2''(1) = 0
+              </me>.
             </li>
 
             <li>
-              Does the function <m> y_3 = y_1 + y_2 </m> also solve <xref ref = "diff_eqn_exerc_3"/>? By <xref ref = "diff_eqn_exist_unique"/>, <m>y_3</m> is the unique solution to an initial value problem involving <xref ref = "diff_eqn_exerc_3"/> - what are those initial conditions?
+              Does the function <m> y_3 = y_1 + y_2 </m> also solve <xref ref = "diff_eqn_exerc_3"/>? By <xref ref = "diff_eqn_exist_unique"/>, <m>y_3</m> is the unique solution to an initial value problem involving <xref ref = "diff_eqn_exerc_3"/> <mdash/> what are those initial conditions?
             </li>
 
             <li><p>
