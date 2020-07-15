@@ -470,38 +470,38 @@
     </statement>
     <solution>
       <p>
-        V consists of all vectors <m>(x,y,z,w)</m> satisyfing the linear equations
+        <m>V</m> bestaan uit alle vektore <m>(x,y,z,w)</m> wat di lineêre vergelykings
         <md>
 
          <mrow> x + 2y - w = 0 </mrow>
 
          <mrow> -x + y + z = 0 </mrow>
 
-        </md>.
+        </md> bevredig.
 
-        We are free to choose <m>x</m> and <m> y </m> arbitrarily, but then (1) above fixes <m> w </m> and (2) fixes <m> z </m>. Hence <m> V </m> is a 2 dimensional subspace.
+        Ons kan <m>x</m> en <m> y </m> willekeurig kies, maar dan is <m> w </m> vas uit (1) hier bo en <m> z </m> vas uit (2) hier bo. Dus is <m> V </m> 'n 2-dimensionele deelruimte.
       </p>
 
       <p>
-        Onto <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
+        Nou kyk ons na <m>W</m>. Laat <m>p(x) = ax^2 + bx +c</m>. Vir <m> p(x) </m> om in <m> W</m> te wees, moet <m> p(x)</m> die volgendde vergelyking bevredig:
 
         <me>
           \int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
         </me>
-        Thus, for any choice of <m> a </m> and <m> b </m>, <m> c </m> is uniquely determined. Hence <m>W</m> is a 2 dimensional subspace.
+        Dus, vir enige keuse van <m> a </m> en <m> b </m>, word <m> c </m> uniek daaruit bepaal. Dus is <m>W</m> 'n 2-dimensionele deelruimte.
       </p>
 
       <p>
-        Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are isomorphic by <xref ref = "iso_same_dim" />. To exhibit an explicit isomorphism between the <m> V</m> and <m> W </m> we shall need find bases for both spaces.
+        Aangesien <m> V </m> en <m> W </m> beide 2 dimensioneel is, moet hulle uit <xref ref = "iso_same_dim" /> isomorf wees. Om 'n eksplisiete isomorfisme tussen <m> V</m> en <m> W </m> te vind, sal ons basisse vir beide moet kry.
       </p>
 
       <p>
-        Since <m>V</m> is 2 dimensional, a basis for <m> V </m> consists of any two non-zero vectors in <m>V</m> that are not scalar multiples of one another. By inspection, we find the basis <m> \basis B_V = \bopen (1,0,1,1) , (0,1,-1,2) \bclose</m>. By similar reasoning, we find a basis <m> \basis B_W = \bopen  \frac{3}{8}x^2 - \frac{1}{2} , x - 1\bclose </m>. By <xref ref="defining_linear_map_on_basis" />, there is a unique linear map <m> T: V \to W </m> such that
+        Aangesien <m>V</m> 2-dimensioneel is, sal 'n basis vir <m> V </m> uit twee nie-nul vektore in <m>V</m> bestaan wat nie skalaarveelvoude van mekaar is nie. Deur inspeksie, vind ons die basis <m> \basis B_V = \bopen (1,0,1,1) , (0,1,-1,2) \bclose</m>. Met 'n soortgelyke argument vind ons 'n basis <m> \basis B_W = \bopen  \frac{3}{8}x^2 - \frac{1}{2} , x - 1\bclose </m>. Uit <xref ref="defining_linear_map_on_basis" /> is daar 'n unieke lineêre afbeelding <m> T: V \to W </m> sodat
         <md>
          <mrow> T((1,0,1,1)) \amp = \frac{3}{8}x^2 - \frac{1}{2} </mrow>
 
          <mrow> T((0,1,-1,2)) \amp = x -1 </mrow>
-        </md>. This map is an isomorphism, as demonstrated by the proof of <xref ref ="iso_same_dim" />.
+        </md>. Hierdie afbeelding is 'n isomorfisme, soos in die bewys van <xref ref ="iso_same_dim" /> aangetoon is.
       </p>
     </solution>
   </exercise>
@@ -525,30 +525,30 @@
     </statement>
   <solution>
     <p>
-      We use some geometry to find the dimension of <m> V</m>. <m> \ve v \in V  </m> if and only if
+      Ons gebruik bietjie meetkunde om die dimensie van <m> V</m> te bereken. Die vektor <m> \ve v \in V  </m> as en slegs as
       <me>
         |\ve v||(1,2,3)|\sin \theta =0
       </me>
-      where <m> \theta</m> is the angle between <m> \ve v </m> and <m> (1,2,3)</m>. Thus <m> V </m> consists of <m> \ve 0 </m> as well as all those vectors parallel to <m> (1,2,3)</m>. But this set is precisely all vectors of the form <m>k(1,2,3)</m> with <m> k \in \mathbb R </m>. Hence <m> V </m> is 1 dimensional with basis <m> \bopen (1,2,3) \bclose </m>.
+      waar <m> \theta</m> die hoek tussen  <m> \ve v </m> en <m> (1,2,3)</m> is. Dus bestaan <m> V </m> uit <m> \ve 0 </m> asook al die vektore parallel aan <m> (1,2,3)</m>. Maar hierdie versameling is presies al die vektore van die vorm <m>k(1,2,3)</m> met <m> k \in \mathbb R </m>. Dus is <m> V </m> 1-dimensioneel met basis <m> \bopen (1,2,3) \bclose </m>.
     </p>
 
     <p>
-      <m> W </m> consists of all matrices <m>(a_{ij})</m> satisfying
+      <m> W </m> bestaan uit alle matrikse <m>(a_{ij})</m> wat
       <me>
-        \begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}.
-      </me>
-      Thus <m> a_{11}  = a_{22} = 0 </m> and <m> b = -c</m>. So <m>W</m> consists of all those matrices  of the form
+        \begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}
+      </me> bevredig.
+      Dus is <m> a_{11}  = a_{22} = 0 </m> en <m> b = -c</m>. So <m>W</m> bestaan uit alle matrikse van die vorm
       <me>
         \begin{bmatrix} 0 \mamp k \\ -k \mamp 0\end{bmatrix}
       </me>.
-      This also shows that
+      Dit wys ook dat
       <me>
         \bopen \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix} \bclose
       </me>
-      is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the isomorphism given by the unique linear map <m> V \to W</m> satisfying
+      'n basis vir <m>W</m> is. Dus is <m> V </m> en <m> W</m> isomorf met die isomorfisme gegee deur die unieke lineêre afbeelding <m> V \to W</m> wat
       <me>
         (1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix}
-      </me>
+      </me> bevredig.
     </p>
   </solution>
   </exercise>
@@ -556,20 +556,20 @@
   <exercise>
     <statement>
       <p>
-        Are the following vector spaces
+        Is die volgende vektorruimtes
         <me>
           V = \{ \ve{v} \in \mathbb{R}^4 : (1, -1, 2, 1) \cdot \ve{v} = 0 \}
         </me>
-        and
+        en
         <me>
           \Poly_1[x,y]
         </me>
-        isomorphic?
+        isomorf?
       </p>
 
       <p>
-        If they are, construct an explicit isomorphism between them.
-        If not, prove that they are not isomorphic.
+        As hulle is, konstrueer 'n eksplisiete isomorfise tussen hulle.
+        As hulle nie is nie, bewys dat hulle nie is nie.
       </p>
     </statement>
   </exercise>
@@ -577,11 +577,12 @@
   <exercise>
     <statement>
       <p>
-        Are the following vector spaces isomorphic?
-        <me>
-          V = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \} \\
-          D = \{ (x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \}
-        </me>
+        Is die volgende vektorruimtes isomorf?
+        <md>
+          <mrow>
+          V = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \} </mrow>
+          <mrow>D = \{ (x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \}</mrow>
+        </md>
         <me>
           \Vect_2 (\mathbb{R}^2)
         </me>
