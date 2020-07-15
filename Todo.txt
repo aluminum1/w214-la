@@ -12,29 +12,29 @@ To do list:
 - Ch2Sec4 (in a few places actually) I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
 
 Consistency and technique:
-- Replace cmatrix and cvector with \begin{bmatrix}
-- There is some inconsistency in using either \left[\begin{array}... or \begin{bmatrix} for matrices. For now I don't care much about this.
-- nonzero vs non-zero and other
+- There is some inconsistency in using either \left[\begin{array}... or \begin{bmatrix} for matrices. (low priority)
+- nonzero vs non-zero and other (low priority)
 - Consistency between \dim and \Dim?
-- Make sure all <proofs> are inside the <result> tags and not outside (?)
-- Change all &xea; to ê, etc.
-- All phrases in 'quotes' -> <sq> or <q>
+- Make sure all <proofs> are inside the <result> tags and not outside (?) (low priority)
+- Change all &xea; to ê, etc. (low priority_)
+- All phrases in 'quotes' -> <sq> or <q> (low priority)
 - Make sure all LaTeX line breaks \\ are appropriate.
+- Full stops after </md>, not inside the equations. (low priority)
 
 
 Afrikaans:
 - Ch2Sec2 from 533 (but this may be the same question as in the previous section ??)
 - Ch2Sec4 Proposition on line 12 still has different versions for Eng and Afr.
-- Ch2Sec4 line 265, 440, 499, 561, (624 & 692 commented out), 750
-- Ch3Sec1 line 354, 419, 512, 676 (rework to use linear combination instead of coordinate vectors), 875, 973, 1217
-- Ch3Sec3 line 471, 526,
+- Ch2Sec4 line (624 & 692 commented out)
+- Ch3Sec1 line 676 (rework to use linear combination instead of coordinate vectors)
 - Ch3Sec4 line 296, 481
 - Ch3Sec5 line 943, 1071, 1174, (1322 & 1338 add sol)
-- Check that all of the following are consistent:
+- Check that all of the following translations are consistent:
   - span (verb) -> onderspan (not span - verbs only)
   - operator (V to V) -> operator
   - operator (+) -> bewerking
   - verify -> bevestig?, nagaan?, toets?
+  - respectively -> onderskeidelik
 
 
 I would like to add
