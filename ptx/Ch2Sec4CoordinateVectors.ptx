@@ -26,7 +26,7 @@
             </men>
             in precisely <em>one</em> way. (That is,
             for each <m>\ve{v} \in V</m> there
-            <em></em><em>exist</em> scalars <m>a_1</m>,
+            <em>exist</em> scalars <m>a_1</m>,
             <m>a_2</m>, <m>\ldots</m>,
             <m>a_n</m> satisfying <xref ref="trying_to_formulate_basis" />,
             and that moreover these scalars are
@@ -95,9 +95,9 @@
         and hence the expansion <xref ref="one_way_of_expanding" /> is unique.
       </p>
 
-    <p>
-      <alert><m>2 \Leftarrow 1</m></alert>
-    </p>
+      <p>
+        <alert><m>2 \Leftarrow 1</m></alert>
+      </p>
       <p>
         Conversely, suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
         <me>
@@ -121,7 +121,8 @@
 
       <p>
         We need to show that all the <m>b_i</m> must equal zero.
-        We already know <em>one</em> possible solution of <xref ref="finding_bs_making_zero" /> : simply set each <m>b_i = 0</m>.
+        We already know <em>one</em> possible solution of <xref ref="finding_bs_making_zero" /> :
+        simply set each <m>b_i = 0</m>.
         But we are told that each vector
         (in particular, the vector <m>\ve{0}</m>)
         can be expressed as a linear combination of the <m>\ve{e}_i</m> in exactly one way.
@@ -130,13 +131,6 @@
         and so the list <m>\basis{B}</m> is linearly independent.
       </p>
     </proof>
-
-
-
-<!--   Adding some whitespace to ensure that the line numbers match up.
-To be corrected after the Afrikaans version of the previous Proposition
-has been updated.  -->
-
 
   <definition>
     <statement>
