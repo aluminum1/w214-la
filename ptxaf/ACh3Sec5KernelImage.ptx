@@ -946,57 +946,57 @@
         <ol>
           <li>
             <p>
-              <m>\id_V</m> sends only a single vector to <m>0</m>, namely the vector <m>\ve 0_v</m>. Thus <m>\Ker(\id_v) = \{\ve 0_v\}</m> and hence <m>\Nullity(\id_v) = 0</m>. <m>\Im(\id_V) = V</m>  and so <m>\Rank(\id_V) = \Dim(V) </m>. The equation
+              <m>\id_V</m> stuur slegs een vektor na <m>0</m>, naamlik die vektor <m>\ve 0_v</m>. Dus is <m>\Ker(\id_v) = \{\ve 0_v\}</m> en dus <m>\Nullity(\id_v) = 0</m>. Ons het ook <m>\Im(\id_V) = V</m> en dus <m>\Rank(\id_V) = \Dim(V) </m>. Die vergeyking
               <me>
                 \Dim V + 0 = \Dim V .
               </me>
-              verifies the Rank-Nullity Theorem for this example.
+              bevestig dat die Rang-Nulheidsgraadstelling in hierdie voorbeeld geld.
             </p>
           </li>
 
           <li>
             <p>
-              The zero map spends every element in <m>V </m> to <m> \ve 0 </m>. Hence <m>\Ker(Z) = V </m> and so <m> \Nullity(Z) = \Dim V </m>. For the same reason <m>\Im(Z) = \{0\}</m> and thus <m>\Rank(Z) = 0 </m>. The equation
+              Die nul-afbeelding stuur elke element in <m>V </m> na <m> \ve 0 </m>. Dus is <m>\Ker(Z) = V </m> en dus <m> \Nullity(Z) = \Dim V </m>. Vir dieselfde rede is <m>\Im(Z) = \{0\}</m> en dus <m>\Rank(Z) = 0 </m>. Die vergelyking
               <me>
                 \Dim V + 0 = \Dim V .
               </me>
-              verifies the Rank-Nullity Theorem for this example.
+              wys nou dat die Rang-Nulheidsgraadstelling wel geld vir hierdie voorbeeld.
             </p>
           </li>
 
           <li>
             <p>
-              <m> \ve p(x) \in \Ker(T) </m> if and only if
+              <m> \ve p(x) \in \Ker(T) </m> as en slegs as
               <me>
-                p(1) = p(2) = p(3) = 0.
-              </me>
-              But any degree 3 polynomial with <m>1, 2</m> and <m> 3</m> as roots must be of the form
+                p(1) = p(2) = p(3) = 0
+              </me>.
+              Maar enige derdegraadse polinoom met <m>1, 2</m> en <m> 3</m> as wortels, moet van die vorm
               <me>
                 a(x-1)(x-2)(x-3)
-              </me>
-              where <m> a \in \mathbb R </m>. Conversely, any element of this form is in <m> \Ker T </m>. Hence
+              </me> wees
+              waar <m> a \in \mathbb R </m>. Omgekeerd, is enige element van hierdie vorm wel in <m> \Ker T </m>. Dus is
               <me>
                 \Ker(T) = \{a(x-1)(x-2)(x-3) \in \Poly_3 \, : \, a \in \mathbb R\}
               </me>
-              and thus <m> \Nullity(T)  = 1 </m>.
+              en dus is <m> \Nullity(T)  = 1 </m>.
             </p>
 
             <p>
-              I claim that <m>\Im(T) = \Col_3</m>. That is, for any
+              Ons beweer nou dat <m>\Im(T) = \Col_3</m>. Met ander woorde, vir enige
               <me>
                 \begin{bmatrix} s \\ t \\u \end{bmatrix} \in \Col_3,
               </me>
-              we can find a polynomial  <m>\ve p</m>, of degree 3 or less, such that <m> p(1) = s, p(2) = t, p(3) = u</m>. To show this, you could set up the system of linear equations
+              kan ons 'n polinoom <m>\ve p</m>, van graad 3 of minder vind, sodat <m> p(1) = s, p(2) = t, p(3) = u</m>. Om dit te wys, kan jy byvoorbeeld die stelsel lineêre vergelykings
               <md>
                 <mrow> a + b + c +d = s </mrow>
                 <mrow> 8a + 4b + 2c + d = t</mrow>
                 <mrow> 27b + 9 b + 3c + d  = u</mrow>
-              </md>
-              and solve for the coefficients of <m> \ve p </m>. What is perhaps more elegant is to use the theory of Lagrange interpolation polynomials <fn> https://en.wikipedia.org/wiki/Lagrange_polynomial</fn>. Given any 3 distinct points in <m>\mathbb R^2 </m>, we can always find a degree two polynomial going through these 3 points. In our case, let the points be <m>(1,s), (2,t), (3,u)</m>. The degree two Lagrange polynomial going through these points is
+              </md> opstel
+              en oplos vir die koëffisiënte van <m> \ve p </m>. Dit is miskien meer elegant om die teorie van Lagrange interpolasie polinome <fn> https://en.wikipedia.org/wiki/Lagrange_polynomial</fn> te gebruik. Vir enige 3 verskillende punte in <m>\mathbb R^2 </m> (met geen twee van hulle op dieselfde vertikale lyn nie), kan ons altyd 'n tweedegraadse polinoom vind wat deur hierdie 3 punte gaan. In ons geval, laat one die punte <m>(1,s), (2,t), (3,u)</m> wees. Die graad twee Lagrange polinoom wat deur hierdie punte gaan is
               <me>
                 \ve p(x) = u\left[ \frac{(x-2)(x-3)}{(1-2)(1-3)}\right] + s\left[ \frac{(x-1)(x-3)}{(2-1)(2-3)}\right] + t\left[ \frac{(x-1)(x-2)}{(3-1)(3-2)}\right].
               </me>
-              It is easy to check that <m> p(1) = s, p(2) = t, p(3) = u</m>. Hence <m>\Im(T) = \Col_3</m> and so <m>\Rank(T) = 3</m>.
+              Dit is maklik om te bevestig dat <m> p(1) = s, p(2) = t, p(3) = u</m>. Dus is <m>\Im(T) = \Col_3</m> en dus <m>\Rank(T) = 3</m>.
               <me>
                 \Rank(T) + \Nullity(T) = 1 + 3 = 4 = \Dim(\Poly_3).
               </me>
@@ -1005,7 +1005,7 @@
 
           <li>
             <p>
-              It will be useful to have the following integrals at hand:
+              Dit sal handig wees om die volgende integrale byderhand te hê:
               <md>
                 <mrow>\amp \int_0^\pi \cos(x) = 0 </mrow>
                 <mrow>\amp \int_0^\pi \sin(x) = 0 </mrow>
@@ -1020,44 +1020,44 @@
             </p>
 
             <p>
-              Now suppose
+              Veronderstel nou
               <me>
               \ve f(x) = a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \in \Ker(S).
               </me>
-              Then
+              Dan is
               <mdn>
                 <mrow> \int_0^\pi f(x)\cos(x) \, dx = b\frac{\pi}{2} + e\frac{4}{3} = 0</mrow>
                 <mrow> \int_0^\pi f(x)\sin(x) \, dx = c\frac{\pi}{2} - d\frac{2}{3} = 0</mrow>
               </mdn>.
-              Conversely, any <m> f </m> satisfying the linear equations above is certainly in <m> \Ker(S)</m>. Hence
+              Omgekeerd, is enige <m> f </m> wat die lineêre vergelykings hierbo bevredig, definitied in <m> \Ker(S)</m>. Dus is
               <me>
-              \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: \\ b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \}
-              </me>We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by (1) above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by (2).
-              Hence <me>
+              \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: \\ b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ en }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \}
+              </me>. Ons is vry om  <m> a </m> op enige manier te kies, want die konstante sal nie enige van die integrale beïnvloed nie. Ons kan ook <m> b </m> vryelik kies, maar dan word <m> e </m> uit (1) bepaal. Soortgelyk kan ons <m> c </m> kies, maar dan word <m> d </m> uit (2) bepaal.
+              Dus is <me>
               \Nullity(S) = 3.
               </me>
             </p>
 
             <p>
-              We claim that <m> \Im(S) = \Col_2</m>. To see this, suppose
+              Ons beweer dat <m> \Im(S) = \Col_2</m>. Om dit te sien, veronderstel dat
               <me>
-                \begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2.
-              </me>
-              Now consider
+                \begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2
+              </me>.
+              Beskou nou
               <me>
-                f(x) = \frac{2s}{\pi}\cos(x) + \frac{2t}{\pi}\sin(x).
-              </me>
-              Using the table of integrals above, we see that
+                f(x) = \frac{2s}{\pi}\cos(x) + \frac{2t}{\pi}\sin(x)
+              </me>.
+              Deur die tabel van integrale hier bo na te slaan, sien ons dat
               <me>
                 S(T) = \begin{bmatrix} s \\ t \end{bmatrix} .
               </me>
               Hence <me>
-              \Rank(T) = 2.
-              </me>
+              \Rank(T) = 2
+              </me>.
             </p>
 
             <p>
-              Since <m>\Dim(\Trig_2) = 5</m>, the Rank-Nullity theorem is verified for <m>S</m>.
+              Aangesien <m>\Dim(\Trig_2) = 5</m>, geld die Rang-Nulheidsgraadstelling vir <m>S</m>.
             </p>
           </li>
         </ol>
@@ -1074,21 +1074,21 @@
     </statement>
     <solution>
       <p>
-        Define <m> T </m> by
+        Defineer <m> T </m> deur
         <me>
-          T: \begin{bmatrix} x\\y\\z\\w\end{bmatrix} \mapsto \begin{bmatrix} x\\y\\0\\0\end{bmatrix}.
+          T: \begin{bmatrix} x\\y\\z\\w\end{bmatrix} \mapsto \begin{bmatrix} x\\y\\0\\0\end{bmatrix}
         </me>
         <me>
-          \Ker(T) = \left\{\begin{bmatrix} 0\\0\\z\\w\end{bmatrix} \in \Col_4 \right\}.
+          \Ker(T) = \left\{\begin{bmatrix} 0\\0\\z\\w\end{bmatrix} \in \Col_4 \right\}
         </me>
-        and
+        en
         <me>
-          \Im(T) = \left\{\begin{bmatrix} x\\y\\0\\0\end{bmatrix} \in \Col_4 \right\}.
-        </me>
-        Both <m>\Ker(T)</m> and <m>\Im(T)</m> are isomorphic to <m>\Col_2</m> and hence
+          \Im(T) = \left\{\begin{bmatrix} x\\y\\0\\0\end{bmatrix} \in \Col_4 \right\}
+        </me>.
+        Beide <m>\Ker(T)</m> en <m>\Im(T)</m> is nou isomorf aan <m>\Col_2</m> en dus is
         <me>
-          \Rank(T) = \Nullity(2) = 2.
-        </me>
+          \Rank(T) = \Nullity(2) = 2
+        </me>.
       </p>
     </solution>
   </exercise>
@@ -1096,7 +1096,7 @@
   <exercise>
     <statement>
       <p>
-        Vir elk van die volgende bewerings, s&#xea; of dit
+        Vir elkeen van die volgende bewerings, s&#xea; of dit
         <em>waar</em> of <em>onwaar</em> is.
         As dit waar is, bewys dit.
         Indien nie, bewys dit.
@@ -1125,17 +1125,17 @@
         <ol>
           <li>
             <p>
-             The statement is false. To see this, notice that if such a map were to exist then its kernel would be 2-dimensional since any choice of <m> x_1</m> and <m>x_3 </m> uniquely determines an element in <m>\Ker(T)</m>. But then by the Rank-Nullity theorem, <m> \Rang(T) = 3 </m> since <m> \mathbb R^5 </m> is 5 dimensional. But <m>\Be(T)</m> is a subspace of <m>\mathbb R^2</m> - which is absurd, since <m> \mathbb R^2 </m> itself is 2-dimensional.
+              Hierdie bewerking is onwaar. Om dit te sien, let op dat as so 'n afbeelding bestaan het, dan sou sy kern 2-dimensioneel wees, want enige keuse van <m> x_1</m> en <m>x_3 </m> bepaal 'n element in <m>\Ker(T)</m> uniek. Maar dan sê die Rang-Nulheidsgraadstelling dat <m> \Rang(T) = 3 </m>, want <m> \mathbb R^5 </m> is 5 dimensioneel. Maar <m>\Be(T)</m> is 'n deelruimte van <m>\mathbb R^2</m> <mdash/> dit is belaglik, want <m> \mathbb R^2 </m> is self  2-dimensioneel.
             </p>
           </li>
 
           <li>
             <p>
-              The statement is false. Suppose such a map were to exist. Recall that <m> \Dim(\Trig_3) = 7</m>. Then by the Rank-Nullity theorem,
+              Die bewering is onwaar. Veronderstel dat so 'n afbeelding bestaan het. Onthou dat <m> \Dim(\Trig_3) = 7</m>. Uit die Rang-Nulheidsgraadstelling volg dan dat
               <me>
               7 = \Rang(T) + \Nhg(T) = 2\Rang(T).
             </me>
-            But 7 is odd, so we have a contradiction! Thus no such map can exist.
+            Maar 7 is onewe, soons het 'n teenstrydigheid! Dus kan so 'n afbeelding nie bestaan nie.
             </p>
           </li>
         </ol>
@@ -1177,32 +1177,32 @@
 
           <li>
             <p>
-              <m>D_\ve{p}</m> being a linear maps follows from the usual properties of the dot product:
+              Die feit dat <m>D_\ve{p}</m> 'n lineêre afbeelding is volg uit die gewone eienskappe van die dotproduk:
               <md>
                 <mrow> D_\ve{p}(\ve u + \ve v) \amp = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot (\ve u + \ve v) </mrow>
                 <mrow>\amp  = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u + \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve v  </mrow>
                 <mrow>\amp = D_\ve{p}(\ve u) + D_\ve{p}(\ve v) </mrow>
               </md>.
-              Similarly,
+              Soortgelyk is
               <md>
                 <mrow> D_\ve{p}(k\ve u) \amp = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve ku</mrow>
                 <mrow> \amp =\begin{bmatrix} k\frac{\partial f}{\partial x}(\ve p)\\ k\frac{\partial f}{\partial y}(\ve p) \\k \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u </mrow>
                 <mrow> \amp = k \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u</mrow>
                 <mrow> \amp = k D_\ve{p} \cdot \ve u</mrow>
               </md>.
-              And so <m>D_\ve{p}</m> is linear.
+              En dus is <m>D_\ve{p}</m> lineêr.
             </p>
           </li>
 
           <li>
             <p>
-              <m> \ve u = (x_1,y_1,z_1) \in \Ker(D_\ve{p}) </m> if and only if
+              <m> \ve u = (x_1,y_1,z_1) \in \Ker(D_\ve{p}) </m> as en slegs as
               <mdn>
                 <mrow> \amp D_\ve{p}(\ve u ) = 0</mrow>
                 <mrow>\iff \amp \left( \frac{\partial f}{\partial x}(\ve p) , \frac{\partial f}{\partial y}(\ve p) , \frac{\partial f}{\partial z}(\ve p)\right) \cdot (u_0,u_1,u_2) = 0 </mrow>
-                <mrow>\iff \amp 2x_0x_1 + 2y_0y_1 + 2z_0z_1 = 0.</mrow>
-            </mdn>
-            Geometrically, <m>\Ker(D_\ve{p}</m> consists of all vectors <m>\ve v</m> that lie tangent to a circle of radius <m>|\ve p |</m> centred at the origin at the point <m>\ve p </m>.
+                <mrow>\iff \amp 2x_0x_1 + 2y_0y_1 + 2z_0z_1 = 0</mrow>
+            </mdn>.
+            Meetkundig gesien, bestaan <m>\Ker(D_\ve{p}</m> uit alle vektore <m>\ve v</m> wat raak aan 'n sirkel van radius <m>|\ve p |</m> met middepunt by die punt <m>\ve p </m>.
             </p>
           </li>
         </ol>
@@ -1221,45 +1221,45 @@
     </statement>
     <solution>
       <p>
-        For reference, we reproduce a portion of the proof in in <xref ref="cross-product-example">Example</xref>:
+        As verwysing herproduseer ons 'n gedeelte van die bewys in <xref ref="cross-product-example">Oefening</xref>:
       </p>
 
       <blockquote>
       <p>
-        The kernel of <m>C</m> is the subspace of
-        <m>\mathbb{R}^3</m> consisting of all vectors
-        <m>\ve{v} \in V</m> such that <m>\ve{a} \times \ve{v} = \ve{0}</m>.
-        From the geometric formula for the cross-product,
+        Die kern van <m>C</m> is die deelruimte van <m>\mathbb{R}^3</m>
+        wat uit al die vektore <m>\ve{v} \in V</m> bestaan, sodat <m>\ve{a} \times
+        \ve{v} = \ve{0}</m>.
+        Uit die meetkundige formule van die kruisproduk,
         <me>
           |\ve{a} \times \ve{v}| = |\ve{a}| |\ve{v}| \sin \theta
         </me>
-        where <m>\theta</m> is the angle from <m>\ve{a}</m> to <m>\ve{\theta}</m>,
-        we see that
+        waar <m>\theta</m> die hoek tussen <m>\ve{a}</m> en <m>\ve{v}</m> is,
+        sien ons dat
         <me>
-          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow \ve{v}=\ve{0}\text{ of }\theta = 0\text{ of }\theta= \pi
+          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow \ve{v}=\ve{0} \text{ of }\theta = 0\text{ of }\theta= \pi
         </me>.
       </p>
 
       <p>
-        In other words,
-        <m>\ve{v}</m> must be a scalar multiple of <m>\ve{a}</m>.
-        So,
+        Met ander woorde,
+        <m>\ve{v}</m> moet 'n skalaarveelvoud van <m>\ve{a}</m>
+        wees. So,
         <me>
           \Ker(C) = \{ k \ve{a}, k \in \mathbb{R} \}
         </me>.
       </p>
 
       <p>
-        I claim that the <em>image</em>
-        of <m>C</m> is the subspace of <em>all</em>
-        vectors perpendicular to <m>\ve{a}</m>, i.e.
-        <men>
-          \Im(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+        Ek beweer dat die <em>beeld</em>
+        van <m>C</m> die deelruimte van
+        <em>alle</em> vektore loodreg op <m>\ve{a}</m> is, i.e.
+        <men xml:id="image-of-C">
+          \Be(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}
         </men>.
       </p>
 
       <p>
-        If you believe me, then the picture is as follows:
+        As jy my glo, dan is die prentjie soos volg:
       </p>
 <!--  This image should already be elsewhere - maybe link to it to for a knowl? (Can't have an image inside a blockquote!)
       <figure>
@@ -1276,33 +1276,34 @@
       </figure>
 -->
       <p>
-        Let me prove equation <xref ref="image-of-C" />.
-        By definition, the image of <m>C</m> is the subspace of
-        <m>\mathbb{R}^3</m> consisting of all vectors <m>\ve{w}</m> of the form
-        <m>\ve{w} = \ve{a} \times \ve{v}</m> for some <m>\ve{v} \in \mathbb{R}^3</m>.
-        This implies that <m>\ve{w}</m> is perpendicular to <m>\ve{a}</m>.
+        Kom ons bewys vergelyking <xref ref="image-of-C" />.
+        Per definisie is die beeld van <m>C</m> die deelruimte van <m>\mathbb{R}^3</m> wat bestaan uit alle
+        vektore <m>\ve{w}</m> van die vorm <m>\ve{w} = \ve{a} \times \ve{v}</m> vir
+        een of ander <m>\ve{v} \in \mathbb{R}^3</m>.
+        Dit impliseer dat <m>\ve{w}</m> loodreg op <m>\ve{a}</m> is.
       </p>
     </blockquote>
       <p>
-        And thus we know that
+        En dus weet ons dat
         <me>
           \Im(C) \subset \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
-        </me>We shall use the Rank-Nullity theorem to show the converse in a fantastically succint way. By the Rank-Nullity theorem
+        </me>.
+        Ons sal die Rang-Nulheidsgraad gebruik om die omgekeerde in 'n fantasties kompakte manier vas te stel. Uit die Rang-Nulheidsgraadstelling is
         <md>
           <mrow> \amp \Dim(\mathbb R^3)  = \Nullity(C) + \Rank(C)</mrow>
           <mrow>\implies \amp 3 = 1 + \Rank(C).</mrow>
         </md>
-        And so we also know the <m> \Im(C) </m> is a 2-dimensional subspace of <m>\mathbb R^3 </m>. Of course,
+        En dus weet ons ook dat <m> \Im(C) </m> 'n 2-dimensionele deelruimte van <m>\mathbb R^3 </m> is. Natuurlik is
         <me>
          \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
         </me>
-        is also 2-dimensional. But now, if one 2-dimensional subspace is contained in another 2-dimensional subspace then the two subspaces must necessarily be <em>the same</em>! Hence
+        ook 2-dimensioneel. Maaras een 2-dimensionele vektorruimte bevat is in 'n ander 2-dimensionele vektorruimte, dan moet hierdie twee vektorruimts  <em>dieselfde</em> wees! Dus is
         <me>
           \Im(C) = \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
         </me>
       </p>
       <p>
-        (By using the Rank-Nullity theorem, we managed to bypass the trickest part of <xref ref="cross-product-example"/>!)
+        (Deur die Rang-Nulheidsgraadstelling te gebruik, kan ons die moeilikste deel van <xref ref="cross-product-example"/> vermy!)
       </p>
   </solution>
 </exercise>
@@ -1310,14 +1311,14 @@
   <exercise>
     <statement>
       <p>
-        Determine the kernel and image of the linear map
+        Breken die kern en beeld van die lineêre afbeelding
         <me>
           T : \Poly_2[x,y,z] \rightarrow \Poly_2
         </me>
-        defined by
+        gedefinieer deur
         <me>
-          T(p)(x) := p(x,x,x).
-        </me>
+          T(p)(x) := p(x,x,x)
+        </me>.
       </p>
     </statement>
   </exercise>
