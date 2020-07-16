@@ -22,11 +22,13 @@ Consistency and technique:
 - Full stops after </md>, not inside the equations. (low priority)
 
 
+Add solutions:
+- Ch2Sec4 line (624 & 692 commented out)
+- Ch3Sec5 line (1322 & 1338 add sol)
+
+
 Afrikaans:
 - Ch2Sec2 from 533 (but this may be the same question as in the previous section ??)
-- Ch2Sec4 line (624 & 692 commented out)
-- Ch3Sec1 line 676 (rework to use linear combination instead of coordinate vectors)
-- Ch3Sec5 line (1322 & 1338 add sol)
 - Check that all of the following translations are consistent:
   - span (verb) -> onderspan (not span - verbs only)
   - operator (V to V) -> operator
