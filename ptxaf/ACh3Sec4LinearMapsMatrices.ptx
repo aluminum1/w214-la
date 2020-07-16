@@ -485,30 +485,30 @@
     <exercise xml:id="trig_ex_1">
     <statement>
       <p>
-        Let
+        Laat
         <me>
           T : \Trig_1 \rightarrow \Trig_2
         </me>
-        be the <sq>multiply with <m>\sin x</m></sq> linear map,
-        <m>T(f)(x) = \sin x f(x)</m>.
-        Compute <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> with respect to the standard basis
-        <m>\basis{B}</m> of <m>\Trig_1</m> and <m>\basis{C}</m> of <m>\Trig_2</m>.
+        die <sq>vermenigvuldig met <m>\sin x</m></sq> lineêre afbeelding
+        <m>T(f)(x) = \sin x f(x)</m> wees.
+        Bereken <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> met betrekking tot die standaardbasis
+        <m>\basis{B}</m> van <m>\Trig_1</m> en <m>\basis{C}</m> van <m>\Trig_2</m>.
       </p>
     </statement>
     <solution>
       <p>
-        Recall the standard double angle formulae:
+        Ons herinner jou aan die standaard dubbelhoekformules:
         <md>
           <mrow>\sin(2x) \amp = 2 \sin x \cos x</mrow>
           <mrow> \cos(2x) \amp = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1-2\sin^2 x</mrow>
         </md>.
-        With these in mind, we compute:
+        Met hulle in gedagte bereken ons dat:
         <md>
           <mrow>T(T_0) \amp= \sin x = T_2 </mrow>
           <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
           <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>
         </md>.
-        Thus
+        DDus i
         <me>
           [T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
         </me>
@@ -540,12 +540,12 @@
     </statement>
     <solution>
       <p>
-        In this exercise, we shall use the standard angle addition formulae for trigonometric functions:
+        In hierdie oefening, sal ons die standaard saamgestelde hoekformules vir trigonometriese funksies gebruik:
         <md>
           <mrow>\cos(x - y) \amp = \cos x \cos y + \sin x \sin y </mrow>
           <mrow>\sin(x-y) \amp = \sin x \cos y - \cos x \sin y </mrow>
         </md>.
-        We compute
+        Ons bereken dat
         <md>
           <mrow> S(T_0) \amp = 1 = T_0 </mrow>
 
@@ -559,11 +559,11 @@
 
           <mrow> \amp = \frac{\sqrt 3}{2}\cos 2x + \frac{1}{2} \sin 2x = \frac{\sqrt 3}{2} T_3 + \frac{1}{2} \sin 2x .</mrow>
         </md>
-        Similarly,
+        Soortgelyk is
         <md>
-          <mrow> S(T_4) = \sin (2x - \frac{\pi}{6}) =  -\frac{1}{2} \cos 2x + \frac{\sqrt 3}{2} \sin 2x = -\frac{1}{2} T_3 + \frac{\sqrt 3}{2}T_4.</mrow>
-        </md>
-        Hence
+          <mrow> S(T_4) = \sin (2x - \frac{\pi}{6}) =  -\frac{1}{2} \cos 2x + \frac{\sqrt 3}{2} \sin 2x = -\frac{1}{2} T_3 + \frac{\sqrt 3}{2}T_4</mrow>
+        </md>.
+        Dus is
         <me>
           [S]_{\basis{C} \leftarrow \basis{C}} = \begin{bmatrix}
           1  \mamp 0 \mamp 0 \mamp 0 \mamp 0 \\
@@ -601,15 +601,15 @@
   <exercise>
     <statement>
       <p>
-        Verify <xref ref="lin-map-in-matrix-theorem"/> for the linear map
+        Bevestig <xref ref="lin-map-in-matrix-theorem"/> vir die lineêre afbeelding
         <me>
           T : \Poly_3 \rightarrow \Trig_3
         </me>
-        defined by
+        gedefinieer deur
         <me>
           T(p)(x) := p(\cos x).
         </me>
-        Use the standard bases <m>\basis{B}</m> for <m>\Poly_3</m> and <m>\basis{C}</m> for <m>\Trig_3</m>.
+        Gebruik die standaardbasis <m>\basis{B}</m> vir <m>\Poly_3</m> en <m>\basis{C}</m> vir <m>\Trig_3</m>.
       </p>
     </statement>
   </exercise>
@@ -627,7 +627,7 @@
   <exercise>
     <statement>
       <p>
-        Verifieer <xref ref="functoriality_of_matrix"/> vir die <sq>gradiënt</sq> and <sq>divergensie</sq> lineêre afbeeldings
+        Bevestig <xref ref="functoriality_of_matrix"/> vir die <sq>gradiënt</sq> and <sq>divergensie</sq> lineêre afbeeldings
         <md>
          <mrow> G : \Poly_3[x,y] \amp \rightarrow \Vect_2(\mathbb{R}^2) </mrow>
          <mrow> G(p) := \nabla p</mrow>
@@ -661,7 +661,7 @@
   <exercise>
     <statement>
       <p>
-        Verifieer <xref ref="functoriality_of_matrix"/> in die geval van die lineêre afbeeldings
+        Bevestig <xref ref="functoriality_of_matrix"/> in die geval van die lineêre afbeeldings
         <md>
           <mrow> S : \Mat_{2,3} \amp \rightarrow \Col_3</mrow>
           <mrow> \begin{bmatrix} A_{11} \amp A_{12} \amp A_{13} \\ A_{21} \amp A_{22} \amp A_{23} \end{bmatrix} \amp \mapsto \begin{bmatrix} A_{11} + A_{21} \\ A_{12} + A_{22} \\ A_{13} + A_{23} \end{bmatrix} </mrow>
@@ -686,7 +686,7 @@
         <me>
           [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
         </me>
-        and verifieer dat hulle gelyk aan mekaar is.
+        and bevestig dat hulle gelyk aan mekaar is.
       </p>
     </statement>
   </exercise>
