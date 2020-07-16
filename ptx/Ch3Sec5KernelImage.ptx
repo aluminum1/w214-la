@@ -947,7 +947,7 @@
         <ol>
           <li>
             <p>
-              <m>\id_V</m> sends only a single vector to <m>0</m>, namely the vector <m>\ve 0_v</m>. Thus <m>\Ker(\id_v) = \{\ve 0_v\}</m> and hence <m>\Nullity(\id_v) = 0</m>. <m>\Im(\id_V) = V</m>  and so <m>\Rank(\id_V) = \Dim(V) </m>. The equation
+              <m>\id_V</m> sends only a single vector to <m>0</m>, namely the vector <m>\ve 0_v</m>. Thus <m>\Ker(\id_v) = \{\ve 0_v\}</m> and hence <m>\Nullity(\id_v) = 0</m>. We also have <m>\Im(\id_V) = V</m>  and so <m>\Rank(\id_V) = \Dim(V) </m>. The equation
               <me>
                 \Dim V + 0 = \Dim V .
               </me>
@@ -969,8 +969,8 @@
             <p>
               <m> \ve p(x) \in \Ker(T) </m> if and only if
               <me>
-                p(1) = p(2) = p(3) = 0.
-              </me>
+                p(1) = p(2) = p(3) = 0
+              </me>.
               But any degree 3 polynomial with <m>1, 2</m> and <m> 3</m> as roots must be of the form
               <me>
                 a(x-1)(x-2)(x-3)
@@ -993,7 +993,7 @@
                 <mrow> 8a + 4b + 2c + d = t</mrow>
                 <mrow> 27b + 9 b + 3c + d  = u</mrow>
               </md>
-              and solve for the coefficients of <m> \ve p </m>. What is perhaps more elegant is to use the theory of Lagrange interpolation polynomials <fn> https://en.wikipedia.org/wiki/Lagrange_polynomial</fn>. Given any 3 distinct points in <m>\mathbb R^2 </m>, we can always find a degree two polynomial going through these 3 points. In our case, let the points be <m>(1,s), (2,t), (3,u)</m>. The degree two Lagrange polynomial going through these points is
+              and solve for the coefficients of <m> \ve p </m>. What is perhaps more elegant is to use the theory of Lagrange interpolation polynomials <fn> https://en.wikipedia.org/wiki/Lagrange_polynomial</fn>. Given any 3 distinct points in <m>\mathbb R^2 </m> (no two on the same vertical line), we can always find a degree two polynomial going through these 3 points. In our case, let the points be <m>(1,s), (2,t), (3,u)</m>. The degree two Lagrange polynomial going through these points is
               <me>
                 \ve p(x) = u\left[ \frac{(x-2)(x-3)}{(1-2)(1-3)}\right] + s\left[ \frac{(x-1)(x-3)}{(2-1)(2-3)}\right] + t\left[ \frac{(x-1)(x-2)}{(3-1)(3-2)}\right].
               </me>
@@ -1033,7 +1033,7 @@
               Conversely, any <m> f </m> satisfying the linear equations above is certainly in <m> \Ker(S)</m>. Hence
               <me>
               \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: \\ b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \}
-              </me>We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by (1) above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by (2).
+              </me>. We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by (1) above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by (2).
               Hence <me>
               \Nullity(S) = 3.
               </me>
@@ -1042,19 +1042,19 @@
             <p>
               We claim that <m> \Im(S) = \Col_2</m>. To see this, suppose
               <me>
-                \begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2.
-              </me>
+                \begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2
+              </me>.
               Now consider
               <me>
-                f(x) = \frac{2s}{\pi}\cos(x) + \frac{2t}{\pi}\sin(x).
-              </me>
+                f(x) = \frac{2s}{\pi}\cos(x) + \frac{2t}{\pi}\sin(x)
+              </me>.
               Using the table of integrals above, we see that
               <me>
                 S(T) = \begin{bmatrix} s \\ t \end{bmatrix} .
               </me>
               Hence <me>
-              \Rank(T) = 2.
-              </me>
+              \Rank(T) = 2
+              </me>.
             </p>
 
             <p>
@@ -1077,19 +1077,19 @@
       <p>
         Define <m> T </m> by
         <me>
-          T: \begin{bmatrix} x\\y\\z\\w\end{bmatrix} \mapsto \begin{bmatrix} x\\y\\0\\0\end{bmatrix}.
+          T: \begin{bmatrix} x\\y\\z\\w\end{bmatrix} \mapsto \begin{bmatrix} x\\y\\0\\0\end{bmatrix}
         </me>
         <me>
-          \Ker(T) = \left\{\begin{bmatrix} 0\\0\\z\\w\end{bmatrix} \in \Col_4 \right\}.
+          \Ker(T) = \left\{\begin{bmatrix} 0\\0\\z\\w\end{bmatrix} \in \Col_4 \right\}
         </me>
         and
         <me>
-          \Im(T) = \left\{\begin{bmatrix} x\\y\\0\\0\end{bmatrix} \in \Col_4 \right\}.
-        </me>
+          \Im(T) = \left\{\begin{bmatrix} x\\y\\0\\0\end{bmatrix} \in \Col_4 \right\}
+        </me>.
         Both <m>\Ker(T)</m> and <m>\Im(T)</m> are isomorphic to <m>\Col_2</m> and hence
         <me>
-          \Rank(T) = \Nullity(2) = 2.
-        </me>
+          \Rank(T) = \Nullity(2) = 2
+        </me>.
       </p>
     </solution>
   </exercise>
@@ -1126,7 +1126,7 @@
         <ol>
           <li>
             <p>
-             The statement is false. To see this, notice that if such a map were to exist then its kernel would be 2-dimensional since any choice of <m> x_1</m> and <m>x_3 </m> uniquely determines an element in <m>\Ker(T)</m>. But then by the Rank-Nullity theorem, <m> \Rank(T) = 3 </m> since <m> \mathbb R^5 </m> is 5 dimensional. But <m>\Im(T)</m> is a subspace of <m>\mathbb R^2</m> - which is absurd, since <m> \mathbb R^2 </m> itself is 2-dimensional.
+             The statement is false. To see this, notice that if such a map were to exist then its kernel would be 2-dimensional since any choice of <m> x_1</m> and <m>x_3 </m> uniquely determines an element in <m>\Ker(T)</m>. But then by the Rank-Nullity theorem, <m> \Rank(T) = 3 </m> since <m> \mathbb R^5 </m> is 5 dimensional. But <m>\Im(T)</m> is a subspace of <m>\mathbb R^2</m> <mdash/> which is absurd, since <m> \mathbb R^2 </m> itself is 2-dimensional.
             </p>
           </li>
 
@@ -1178,7 +1178,7 @@
 
           <li>
             <p>
-              <m>D_\ve{p}</m> being a linear maps follows from the usual properties of the dot product:
+              The fact that <m>D_\ve{p}</m> is a linear map follows from the usual properties of the dot product:
               <md>
                 <mrow> D_\ve{p}(\ve u + \ve v) \amp = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot (\ve u + \ve v) </mrow>
                 <mrow>\amp  = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u + \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve v  </mrow>
@@ -1201,8 +1201,8 @@
               <mdn>
                 <mrow> \amp D_\ve{p}(\ve u ) = 0</mrow>
                 <mrow>\iff \amp \left( \frac{\partial f}{\partial x}(\ve p) , \frac{\partial f}{\partial y}(\ve p) , \frac{\partial f}{\partial z}(\ve p)\right) \cdot (u_0,u_1,u_2) = 0 </mrow>
-                <mrow>\iff \amp 2x_0x_1 + 2y_0y_1 + 2z_0z_1 = 0.</mrow>
-            </mdn>
+                <mrow>\iff \amp 2x_0x_1 + 2y_0y_1 + 2z_0z_1 = 0</mrow>
+            </mdn>.
             Geometrically, <m>\Ker(D_\ve{p}</m> consists of all vectors <m>\ve v</m> that lie tangent to a circle of radius <m>|\ve p |</m> centred at the origin at the point <m>\ve p </m>.
             </p>
           </li>
@@ -1222,7 +1222,7 @@
     </statement>
     <solution>
       <p>
-        For reference, we reproduce a portion of the proof in in <xref ref="cross-product-example">Example</xref>:
+        For reference, we reproduce a portion of the proof in <xref ref="cross-product-example">Example</xref>:
       </p>
 
       <blockquote>
@@ -1288,7 +1288,8 @@
         And thus we know that
         <me>
           \Im(C) \subset \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
-        </me>We shall use the Rank-Nullity theorem to show the converse in a fantastically succint way. By the Rank-Nullity theorem
+        </me>.
+        We shall use the Rank-Nullity theorem to show the converse in a fantastically succint way. By the Rank-Nullity theorem
         <md>
           <mrow> \amp \Dim(\mathbb R^3)  = \Nullity(C) + \Rank(C)</mrow>
           <mrow>\implies \amp 3 = 1 + \Rank(C).</mrow>
@@ -1317,8 +1318,8 @@
         </me>
         defined by
         <me>
-          T(p)(x) := p(x,x,x).
-        </me>
+          T(p)(x) := p(x,x,x)
+        </me>.
       </p>
     </statement>
   </exercise>
