@@ -540,7 +540,7 @@
     </statement>
     <solution>
       <p>
-        In this exercise, we shall use the standard angle addition formulae for trigonometric functions:
+        In this exercise, we shall use the standard composite angle formulae for trigonometric functions:
         <md>
           <mrow>\cos(x - y) \amp = \cos x \cos y + \sin x \sin y </mrow>
           <mrow>\sin(x-y) \amp = \sin x \cos y - \cos x \sin y </mrow>
