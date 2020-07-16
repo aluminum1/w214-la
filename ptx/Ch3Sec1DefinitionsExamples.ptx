@@ -680,28 +680,25 @@
       <em>Proof of existence</em>.
       To define a linear map <m>T</m>,
       we must define <m>T(\ve{v})</m> for each vector <m>\ve{v}</m>.
-      We can write <m>\ve{v}</m> in terms of its coordinate vector
-      <m>[\ve{v}]_\basis{B}</m> with respect to the basis <m>\basis{B}</m> as
+      We can write any <m>\ve{v}</m> uniquely as a linear combination of the vectors in the basis <m>\basis{B}</m>:
       <men xml:id="expansion_of_v_in_coords">
-        \ve{v} = [\ve{v}]_{\basis{B}, 1} \ve{e}_1 + \cdots + [\ve{v}]_{\basis{B}, m} \ve{e}_m
-      </men>
-      where <m>[\ve{v}]_{\basis{B}, i}</m> is the entry at row <m>i</m> of the coordinate vector <m>[\ve{v}]_\basis{B}</m>.
+        \ve{v} = a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m
+      </men>.
       We define
       <men xml:id="formula_for_T">
-        T(\ve{v}) := [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + [\ve{v}]_{\basis{B}, 2} \ve{w}_2 + \cdots [\ve{v}]_{\basis{B}, m} \ve{w}_m
+        T(\ve{v}) := a_1 \ve{w}_1 + a_2 \ve{w}_2 + \cdots a_m \ve{w}_m
       </men>.
     </p>
 
     <p>
       We clearly have <m>T(\ve{e}_i) = \ve{w}_i</m>.
       To complete the proof of existence,
-      we must show that <m>T</m> is linear:
+      we must show that <m>T</m> is linear.
+      For that, also let <m>\ve{v}' = b_1\ve{e}_1+\cdots+b_m\ve{e}_m</m>. Then
       <md>
-        <mrow>T(\ve{v} + \ve{v}') \amp = [\ve{v} + \ve{v}']_{\basis{B},1} \ve{w}_1 + \cdots + [\ve{v} + \ve{v}']_{\basis{B}, m} \ve{w}_m</mrow>
-        <mrow>\amp = \big([\ve{v}]_{\basis{B}, 1} + [\ve{v}']_{\basis{B}, 1} \big) \ve{w}_1 + \cdots + \big([\ve{v}]_{\basis{B}, m} + [\ve{v}']_{\basis{B}, m}\big) \ve{w}_m \amp \amp  ([\ve{v} + \ve{v}']_\basis{B} = [\ve{v}]_\basis{B} + [\ve{v}']_\basis{B})</mrow>
-        <mrow>\amp =  [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}]_{\basis{B}, m} \ve{w}_m   +</mrow>
-        <mrow>\amp  \qquad \qquad  [\ve{v}']_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}']_{\basis{B}, m} \ve{w}_m</mrow>
-        <mrow>\amp = T(\ve{v}) + T(\ve{v}')</mrow>
+        <mrow>T(\ve{v} + \ve{v}') \amp = (a_1 + b_1) \ve{w}_1 + \cdots + (a_m + b_m) \ve{w}_m</mrow>
+        <mrow>\amp =  \big(a_1 \ve{w}_1 + \cdots + a_m \ve{w}_m \big)  + \big(b_1 \ve{w}_1 + \cdots + b_m \ve{w}_m \big)</mrow>
+        <mrow>\amp = T(\ve{v}) + T(\ve{w})</mrow>
       </md>.
     </p>
 
@@ -721,11 +718,11 @@
     <p>
       Then,
       <md>
-        <mrow>S (\ve{v}) \amp = S\big([\ve{v}]_{\basis{B}, 1} \ve{e}_1 + \cdots + [\ve{v}]_{\basis{B}, m} \ve{e}_m\big)</mrow>
-        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} S(\ve{e}_1) + \cdots + [\ve{v}]_{\basis{B}, m} S(\ve{e}_m) \amp (S) \text{ is linear)}</mrow>
-        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}]_{\basis{B}, m} \ve{w}_m \amp  \text{(since } S(\ve{e}_i) = \ve{w}_i)</mrow>
-        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} T(\ve{e}_1) + \cdots + [\ve{v}]_{\basis{B}, m} T(\ve{e}_m) \amp  \text{(since } T(\ve{e}_i) = \ve{w}_i)</mrow>
-        <mrow>\amp = T([\ve{v}]_{\basis{B}, 1} \ve{e}_1 +  \cdots + [\ve{v}]_{\basis{B}, m} \ve{e}_m) \amp  (T \text{ is linear)}</mrow>
+        <mrow>S (\ve{v}) \amp = S\big(a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m\big)</mrow>
+        <mrow>\amp = a_1 S(\ve{e}_1) + \cdots + a_m S(\ve{e}_m) \amp (S \text{ is line{\^e}r)}</mrow>
+        <mrow>\amp = a_1 \ve{w}_1 + \cdots + a_m \ve{w}_m \amp  \text{(want } S(\ve{e}_i) = \ve{w}_i)</mrow>
+        <mrow>\amp = a_1 T(\ve{e}_1) + \cdots + a_m T(\ve{e}_m) \amp  \text{(want } T(\ve{e}_i) = \ve{w}_i)</mrow>
+        <mrow>\amp = T(a_1 \ve{e}_1 +  \cdots + a_m \ve{e}_m) \amp  (T \text{ is line{\^e}r)}</mrow>
         <mrow>\amp = T(\ve{v})</mrow>
       </md>.
     </p>
@@ -735,27 +732,6 @@
       in other words the linear map satisfying <xref ref="thing_to_satisfy" /> is unique.
     </p>
   </proof>
-
-<!-- Extra space, because proof will be refactored
-and then Eng and Afr will need to be matched again -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <example>
     <statement>
