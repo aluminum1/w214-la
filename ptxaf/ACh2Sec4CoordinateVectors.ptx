@@ -13,62 +13,59 @@
       <title>Basisse gee ko&#xf6;rdinate</title>
       <statement>
         <p>
-          'n Lys vektore <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m> in 'n vektorruimte <m>V</m> is 'n basis van <m>V</m> as en slegs as elke vektor
-          <m>\ve{v} \in V</m> op presies <em>een</em>
-          manier as 'n line&#xea;re kombinasie
-          <men xml:id="trying_to_formulate_basis">
-            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
-          </men>
-          geskryf kan word.
-          Dit is, vir elke <m>\ve{v} \in V</m>
-          <em>bestaan</em> daar skalare <m>a_1</m>,
-          <m>a_2</m>, <m>\ldots</m>, <m>a_n</m> wat
-          <xref ref="trying_to_formulate_basis" /> bevredig en verder is hierdie skalare
-          <em>uniek</em>.
+          Laat <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2,\ldots,\ve{e}_n\right\}</m> 'n lys vektore in 'n vektorruimte <m>V</m> wees. Dan is die volgende bewerings ekwivalent:
+        </p>
+        <p>
+          <ol>
+            <li> <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
+            </li>
+            <li> <p> Elke vektor
+            <m>\ve{v} \in V</m> <em>kan</em> in <em>presies een manier</em> as 'n lineêre kombinasie
+            <men xml:id="trying_to_formulate_basis">
+              \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+            </men>
+            geskryf word. (Dit is,
+            vir elke <m>\ve{v} \in V</m>
+            <em>bestaan</em> daar skalare <m>a_1</m>,
+            <m>a_2</m>, <m>\ldots</m>,
+            <m>a_n</m> wat <xref ref="trying_to_formulate_basis" /> bevredig,
+            en verder is sulke skalare
+            <em>uniek</em>). </p>
+            </li>
+          </ol>
         </p>
       </statement>
     </proposition>
 
     <assemblage>
       <p>
-        Dit is belangrik om die wiskundige frase <q>daar bestaan 'n unieke <m>X</m>
-        wat <m>Y</m> bevredig</q> te verstaan.
+        Dit is belangrik te verstaan wat die wiskundige frase <q>daar bestaan 'n unieke <m>X</m> wat <m>Y</m> bevredig</q> beteken.
         Dit beteken twee dinge.
         Eerstens, daar
         <em>bestaan</em> 'n <m>X</m> wat <m>Y</m> bevredig.
-        Tweedens, daar <em>geen
+        Tweedens, is daar <em>geen
         ander</em> <m>X</m> wat <m>Y</m> bevredig nie.
-      </p>
-    </assemblage>
-
-    <assemblage>
-      <p>
-        Ons noem die skalare <m>a_1, a_2, \ldots, a_n</m> in
-        <xref ref="trying_to_formulate_basis" /> die
-        <em>ko&#xf6;rdinate</em> van
-        <m>\ve{v}</m> in die basis <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m>.
       </p>
     </assemblage>
 
     <proof>
       <p>
-        <m>\Rightarrow</m>.
+        <alert><m>1 \Rightarrow 2</m></alert>
+      </p>
+      <p>
         Veronderstel dat die lys vektore <m>\ve{e}_1</m>,
         <m>\ve{e}_2</m>, <m>\ldots</m>,
         <m>\ve{e}_n</m> 'n basis vir <m>V</m> vorm.
-        Veronderstel
-        <m>\ve{v} \in V</m>.
+        Veronderstel <m>\ve{v} \in V</m>.
         Omdat die lys vektore <m>V</m> span, weet ons dat ons
-        <m>\ve{v}</m> as 'n line&#xea;re kombinasie van vektore in die lys op ten
-        minste een manier <em>kan</em> skryf,
+        <m>\ve{v}</m> op ten minste een manier as 'n line&#xea;re kombinasie van vektore in die lys <em>kan</em> skryf,
         <men xml:id="one_way_of_expanding">
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
         </men>.
       </p>
 
       <p>
-        Ons moet wys dat dit die <em>enigste</em>
-        manier is om <m>\ve{v}</m> as 'n
+        Ons moet wys dat dit die <em>enigste</em> manier is om <m>\ve{v}</m> as 'n
         line&#xea;re kombinasie van die vektore <m>\ve{e}_i</m> uit te druk.
         Veronderstel ons het ook
         <men xml:id="second_way_of_expanding">
@@ -79,8 +76,7 @@
       <p>
         Die verskil van die twee vergelykings lewer
         <me>
-          \ve{0} = (a_1 - b_1) \ve{e}_1 + (a_2 - b_2) \ve{e}_2 + \cdots +
-          (a_n - b_n) \ve{e}_n
+          \ve{0} = (a_1 - b_1) \ve{e}_1 + (a_2 - b_2) \ve{e}_2 + \cdots +  (a_n - b_n) \ve{e}_n
         </me>.
       </p>
 
@@ -89,8 +85,7 @@
         <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m>
         line&#xea;r onafhanklik is, kom ons tot die gevolgtrekking dat
         <me>
-          a_1 - b_1 = 0, \,\, a_2 - b_2 = 0, \,\, \cdots, \,\, a_n - b_n =
-          0
+          a_1 - b_1 = 0, \,\, a_2 - b_2 = 0, \,\, \cdots, \,\, a_n - b_n =  0
         </me>.
       </p>
 
@@ -101,13 +96,16 @@
       </p>
 
       <p>
-        <m>\Leftarrow</m>.
-        Aan die ander kant, veronderstel dat elke vektor <m>\ve{v}</m>
-        as 'n unieke line&#xea;re kombinasie
+        <alert><m>2 \Leftarrow 1</m></alert>
+      </p>
+      <p>
+        Omgekeerd, veronderstel dat elke vektor <m>\ve{v}</m> as 'n unieke line&#xea;re kombinasie
         <me>
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
-        </me>
-        geskryf kan word.
+        </me> geskryf kan word.
+      </p>
+
+      <p>
         Die feit dat elke <m>\ve{v}</m> as 'n line&#xea;re
         kombinasie van <m>\ve{e}_1</m>,
         <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m> geskryf
@@ -123,18 +121,14 @@
 
       <p>
         Ons moet wys dat <m>b_i</m> almal nul moet wees.
-        Ons weet reeds van
-        <em>een</em> moontlike oplossing van <xref ref="finding_bs_making_zero" /> :
+        Ons weet reeds van <em>een</em> moontlike oplossing van <xref ref="finding_bs_making_zero" /> :
         stel elke <m>b_i = 0</m>.
-        Maar ons weet ook dat elke vektor (spesifiek, die
-        vektor <m>\ve{0}</m>) op presies een manier as 'n line&#xea;re kombinasie van
-        vektore <m>\ve{e}_i</m> uitgedurk kan word.
-        Daarom moet dit die enigste
-        oplossing wees,
+        Maar ons weet ook dat elke vektor
+        (spesifiek, die vektor <m>\ve{0}</m>)
+        op presies een manier as 'n line&#xea;re kombinasie van vektore <m>\ve{e}_i</m> uitgedurk kan word.
+        Daarom moet dit die enigste oplossing wees,
         i.e. ons vind dat <m>b_1 = b_2 = \cdots = b_n = 0</m>, en
-        daarom is die lys vektore <m>\ve{e}_1</m>,
-        <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m>
-        line&#xea;r onafhanklik.
+        daarom is die lys vektore <m>\basis{B}</m> line&#xea;r onafhanklik.
       </p>
     </proof>
 
