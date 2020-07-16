@@ -431,7 +431,8 @@
                 <me>
                   A(\ve p + \ve q) = \int_0^x \ve p(t) + \ve q(t) \, dt = \int_0^x \ve p(t) \, dt + \int_0^x \ve q(t) \, dt \\ = A(\ve p) + A(\ve q).
                 </me>
-                Soortgelyk is                <me>
+                Soortgelyk is
+                <me>
                   A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
                 </me>
                 </p>
@@ -679,38 +680,24 @@
       <em>Bestaansbewys</em>.
       Om 'n line&#xea;re afbeelding <m>T</m> te definieer,
       moet ons <m>T(\ve{v})</m> vir elke vektor <m>\ve{v}</m> definieer.
-      Ons kan <m>\ve{v}</m> in terme van sy ko&#xf6;rdinaatvektor
-      <m>[\ve{v}]_\basis{B}</m> met betrekking tot die basis <m>\basis{B}</m> as
+      Ons kan enige <m>\ve{v}</m> op 'n unieke wyse as 'n lineêre kombinasie van die vektore in die basis <m>\basis{B}</m> skryf:
       <men xml:id="expansion_of_v_in_coords">
-        \ve{v} = [\ve{v}]_{\basis{B}, 1} \ve{e}_1 + \cdots +
-        [\ve{v}]_{\basis{B}, m} \ve{e}_m
-      </men>
-      skryf, waar <m>[\ve{v}]_{\basis{B}, i}</m> die inskrywing in ry <m>i</m> van die
-      ko&#xf6;rdinaatvektor <m>[\ve{v}]_\basis{B}</m> is.
+        \ve{v} = a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m
+      </men>.
       Ons definieer
       <men xml:id="formula_for_T">
-        T(\ve{v}) := [\ve{v}]_{\basis{B}, 1} \ve{w}_1 +
-        [\ve{v}]_{\basis{B}, 2}
-        \ve{w}_2 + \cdots [\ve{v}]_{\basis{B}, m} \ve{w}_m
+        T(\ve{v}) := a_1 \ve{w}_1 + a_2 \ve{w}_2 + \cdots a_m \ve{w}_m
       </men>.
     </p>
 
     <p>
       Duidelik het ons <m>T(\ve{e}_i) = \ve{w}_i</m>.
       Om die bestaansbewys te
-      voltooi, moet ons wys dat <m>T</m> line&#xea;r is:
+      voltooi, moet ons wys dat <m>T</m> line&#xea;r is.
+      Laat ook <m>\ve{v}' = b_1\ve{e}_1+\cdots+b_m\ve{e}_m</m>. Dan is
       <md>
-        <mrow>T(\ve{v} + \ve{v}') \amp = [\ve{v} + \ve{v}']_{\basis{B},1} \ve{w}_1 +
-        \cdots + [\ve{v} + \ve{v}']_{\basis{B}, m} \ve{w}_m</mrow>
-        <mrow>\amp = \big([\ve{v}]_{\basis{B}, 1} + [\ve{v}']_{\basis{B}, 1} \big)
-        \ve{w}_1 + \cdots + \big([\ve{v}]_{\basis{B}, m} +
-        [\ve{v}']_{\basis{B}, m}\big) \ve{w}_m \amp \amp  ([\ve{v} +
-        \ve{v}']_\basis{B} = [\ve{v}]_\basis{B} + [\ve{v}']_\basis{B})</mrow>
-        <mrow>\amp =  [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots +
-        [\ve{v}]_{\basis{B}, m} \ve{w}_m   +</mrow>
-        <mrow>\amp  \qquad \qquad
-        [\ve{v}']_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}']_{\basis{B},
-        m} \ve{w}_m</mrow>
+        <mrow>T(\ve{v} + \ve{v}') \amp = (a_1 + b_1) \ve{w}_1 + \cdots + (a_m + b_m) \ve{w}_m</mrow>
+        <mrow>\amp =  \big(a_1 \ve{w}_1 + \cdots + a_m \ve{w}_m \big)  + \big(b_1 \ve{w}_1 + \cdots + b_m \ve{w}_m \big)</mrow>
         <mrow>\amp = T(\ve{v}) + T(\ve{w})</mrow>
       </md>.
     </p>
@@ -722,37 +709,27 @@
 
     <p>
       <em>Uniekheidsbewys</em>.
-      Veronderstel dat <m>S, T  : V
-      \rightarrow W</m> line&#xea;re afbeeldings is met
+      Veronderstel dat <m>S, T  : V \rightarrow W</m> line&#xea;re afbeeldings is met
       <men xml:id="thing_to_satisfy">
-        S(\ve{e}_i) = \ve{w}_i,  \text{ en }   T(\ve{e}_i) =
-        \ve{w}_i,
-        i = 1 \ldots m
+        S(\ve{e}_i) = \ve{w}_i,  \text{ en }   T(\ve{e}_i) =  \ve{w}_i,  i = 1 \ldots m
       </men>.
     </p>
 
     <p>
       Dan,
       <md>
-        <mrow>S (\ve{v}) \amp = S\big([\ve{v}]_{\basis{B}, 1} \ve{e}_1 + \cdots +
-        [\ve{v}]_{\basis{B}, m} \ve{e}_m\big)</mrow>
-        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} S(\ve{e}_1) + \cdots +
-        [\ve{v}]_{\basis{B}, m} S(\ve{e}_m) \amp (S \text{ is line{\^e}r)}</mrow>
-        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}]_{\basis{B},
-        m} \ve{w}_m \amp  \text{(want } S(\ve{e}_i) = \ve{w}_i)</mrow>
-        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} T(\ve{e}_1) + \cdots +
-        [\ve{v}]_{\basis{B}, m} T(\ve{e}_m) \amp  \text{(want } T(\ve{e}_i) =
-        \ve{w}_i)</mrow>
-        <mrow>\amp = T([\ve{v}]_{\basis{B}, 1} \ve{e}_1 +  \cdots +
-        [\ve{v}]_{\basis{B}, m} \ve{e}_m) \amp  (T \text{ is line{\^e}r)}</mrow>
+        <mrow>S (\ve{v}) \amp = S\big(a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m\big)</mrow>
+        <mrow>\amp = a_1 S(\ve{e}_1) + \cdots + a_m S(\ve{e}_m) \amp (S \text{ is line{\^e}r)}</mrow>
+        <mrow>\amp = a_1 \ve{w}_1 + \cdots + a_m \ve{w}_m \amp  \text{(want } S(\ve{e}_i) = \ve{w}_i)</mrow>
+        <mrow>\amp = a_1 T(\ve{e}_1) + \cdots + a_m T(\ve{e}_m) \amp  \text{(want } T(\ve{e}_i) = \ve{w}_i)</mrow>
+        <mrow>\amp = T(a_1 \ve{e}_1 +  \cdots + a_m \ve{e}_m) \amp  (T \text{ is line{\^e}r)}</mrow>
         <mrow>\amp = T(\ve{v})</mrow>
       </md>.
     </p>
 
     <p>
       Gevolglik <m>S = T</m>, met ander woorde,
-      die line&#xea;re afbeelding wat
-      <xref ref="thing_to_satisfy" /> bevredig is uniek.
+      die line&#xea;re afbeelding wat <xref ref="thing_to_satisfy" /> bevredig is uniek.
     </p>
   </proof>
 
