@@ -37,7 +37,7 @@
       </statement>
     </proposition>
 
-    <assemblage>
+    <note>
       <p>
         Dit is belangrik te verstaan wat die wiskundige frase <q>daar bestaan 'n unieke <m>X</m> wat <m>Y</m> bevredig</q> beteken.
         Dit beteken twee dinge.
@@ -46,11 +46,11 @@
         Tweedens, is daar <em>geen
         ander</em> <m>X</m> wat <m>Y</m> bevredig nie.
       </p>
-    </assemblage>
+    </note>
 
     <proof>
       <p>
-        <alert><m>1 \Rightarrow 2</m></alert>
+        Ons wys eers dat <m>1 \Rightarrow 2</m>.
       </p>
       <p>
         Veronderstel dat die lys vektore <m>\ve{e}_1</m>,
@@ -96,7 +96,7 @@
       </p>
 
       <p>
-        <alert><m>2 \Leftarrow 1</m></alert>
+        Omgekeerd, wys ons dat <m>2 \Leftarrow 1</m>.
       </p>
       <p>
         Omgekeerd, veronderstel dat elke vektor <m>\ve{v}</m> as 'n unieke line&#xea;re kombinasie
@@ -156,7 +156,7 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <convention>
     <p>
       Ek dui aan dat 'n kolleksie objekte 'n <em>lys</em> is
       (waar volgorde van belang is) en nie bloot 'n <em>versameling</em>
@@ -165,7 +165,7 @@
       \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose</m> is 'n lys vektore.
       Die volgorde van die vektore is van belang want dit beïnvloed die koördinaatvektor <m>[\ve{v}]_\basis{B}</m>.
     </p>
-  </assemblage>
+  </convention>
 
   <example xml:id="coord_vectors_finding_example">
     <title>Koördinaatvektore in <m>\mathbb{R}^2</m></title>

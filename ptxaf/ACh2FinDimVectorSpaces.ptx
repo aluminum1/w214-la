@@ -9,12 +9,12 @@
       vektorruimtes, wat ons in hierdie hoofstuk sal definieer.
     </p>
 
-    <assemblage>
+    <warning>
       <p>
-        <em>Waarskuwing</em>: Van hier af verder gaan ek verkorte notasie
+        Van hier af verder gaan ek verkorte notasie
         vir skalaarvermenigvuldiging gebruik en <m>k \cdot \ve{v}</m> bloot as <m>k \ve{v}</m> skryf!
       </p>
-    </assemblage>
+    </warning>
   </introduction>
 
   <xi:include  href="ACh2Sec1LineereKombinasieSpan.ptx" />

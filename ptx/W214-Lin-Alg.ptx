@@ -43,7 +43,6 @@
 \newcommand{\R}{\mathbb{R}}
 
 
-
 \DeclareMathOperator{\Fun}{Fun}
 \DeclareMathOperator{\Cont}{Cont}
 \DeclareMathOperator{\Diff}{Diff}
@@ -59,10 +58,12 @@
 \DeclareMathOperator{\Rank}{Rank}
 \DeclareMathOperator{\Vect}{Vect}
 \DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Nhg}{Nhg}
+\DeclareMathOperator{\Rang}{Rang}
+\DeclareMathOperator{\Be}{Be}
 %% Override standard "calligraphic" imaginary macro in TeX
 \let \Im \relax
 \DeclareMathOperator{\Im}{Im}
-
 
 </macros>
 
@@ -72,20 +73,15 @@
   <book xml:id="w214-lin-alg">
     <title>W214 Linear Algebra</title>
     <frontmatter>
-
       <titlepage>
-
         <author>
           <personname> Bruce Bartlett</personname>
         </author>
-
       </titlepage>
 
       <xi:include href="./Ch0NoteForStudent.ptx" />
 
     </frontmatter>
-
-
 
     <xi:include href="./Ch1AbstractVectorSpaces.ptx" />
 
@@ -98,7 +94,6 @@
 
 <!--
     <xi:include href="./ChTutorials.ptx"/>
-
 -->
 
     <backmatter>
@@ -112,6 +107,28 @@
 
       <xi:include href="./bibliography.ptx" />
 -->
+
+      <appendix>
+        <title> Solutions to Exercises</title>
+        <section>
+          <title>Hints and Answers to Exercises</title>
+          <p></p>
+          <solutions divisional = "hint answer" reading = "hint answer" worksheet = "hint answer" project = "hint answer" scope="w214-lin-alg" >
+            <title>Hints and answers</title>
+          </solutions>
+        </section>
+
+        <section>
+          <title>Solutions to exercises</title>
+          <p></p>
+          <solutions divisional = "solution" reading = "solution" worksheet = "solution" project = "solution" scope="w214-lin-alg" >
+            <title>
+              Solutions
+            </title>
+          </solutions>
+        </section>
+      </appendix>
+
     </backmatter>
 
   </book>

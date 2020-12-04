@@ -31,22 +31,22 @@
     for a schematic representation.
   </p>
 
-  <assemblage>
+  <convention>
     <p>
       Sometimes, to be absolutely clear, I will put a subscript on the zero vector to indicate which vector space it belongs to, e.g.
       <m>\ve{0}_W</m> refers to the zero vector in <m>W</m>,
       while <m>\ve{0}_V</m> refers to the zero vector in <m>V</m>.
     </p>
-  </assemblage>
+  </convention>
 
-  <assemblage>
+  <note>
     <p>
       The kernel of <m>T</m> is closely related to the
       <em>nullspace</em> of the matrix for <m>T</m>,
       and another name for the image of <m>T</m> is the
       <em>range</em> of <m>T</m>.
     </p>
-  </assemblage>
+  </note>
 
   <figure xml:id = "ker_fig">
     <caption><m>\Ker(T)</m> </caption>
@@ -242,7 +242,7 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <insight>
     <p>
       The <sq>dimension of <m>\Ker(T)</m></sq> makes sense because <m>\Ker(T)</m> is a subspace of a finite-dimensional vector space <m>V</m>,
       and hence is finite-dimensional by <xref ref="dim-of-subspace-prop">Proposition</xref>.
@@ -250,7 +250,7 @@
       but this will follow from the Rank-Nullity Theorem
       (<xref ref="rank-nullity-theorem">Theorem</xref>).
     </p>
-  </assemblage>
+  </insight>
 
   <example xml:id="cross-product-example">
     <statement>

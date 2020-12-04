@@ -54,7 +54,7 @@
     </statement>
   </proposition>
 
-  <assemblage>
+  <insight>
     <p>
       Let us take a moment to analyse the notation here.
       If <m>S, T : V \rightarrow W</m> are linear maps,
@@ -68,7 +68,7 @@
         (\lambda \id_V - T) (\ve{v}) := \lambda \id_V(\ve{v}) - T (\ve{v}) = \lambda \ve{v} - T(\ve{v})
       </me>.
     </p>
-  </assemblage>
+  </insight>
 
   <proof>
     <p>
@@ -115,12 +115,12 @@
     If <m>\det(A) \neq 0</m>, the matrix is invertible.
   </p>
 
-  <assemblage>
+  <historical>
     <p>
       Indeed, this is where the word <sq>determinant</sq> comes from!
       It <em>determines</em> whether a matrix is invertible or not.
     </p>
-  </assemblage>
+  </historical>
 
   <p>
     But how do we know when a <em>linear operator</em> is invertible?
@@ -186,14 +186,14 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <note>
     <p>
       The reason that <m>\chi_T</m> is a <em>polynomial</em>
       (and not just an arbitrary function)
       comes from the formula for the determinant.
       More on this later.
     </p>
-  </assemblage>
+  </note>
 
   <p>
     In summary, we see that <m>\lambda</m> is an eigenvalue of a linear operator <m>T</m> if and only if <m>\lambda</m> is a root of the characteristic polynomial of <m>T</m>.

@@ -24,7 +24,7 @@
       <m>x</m> and <m>y</m> are real numbers.
     </p>
 
-    <assemblage>
+    <remark>
       <p>
         Let us pause for a second and translate this
         definition from English into mathematical symbols.
@@ -48,7 +48,7 @@
       <p>
         Well done <mdash /> you are learning the language of mathematics!
       </p>
-    </assemblage>
+    </remark>
 
     <p>
       An element of <m>A</m> is an arbitrary pair of real numbers
@@ -552,7 +552,7 @@
       </ul>
     </p>
 
-      <assemblage>
+      <warning>
         <p>
           Note that there is no <em>integration</em>
           map from <m>C</m> to <m>C</m>,
@@ -561,7 +561,7 @@
           so the result might be a polynomial of degree <m>5</m>,
           which does not live in <m>C</m>!
         </p>
-      </assemblage>
+      </warning>
   </subsection>
 
   <subsection>

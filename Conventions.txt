@@ -37,7 +37,7 @@ Read this page (https://pretextbook.org/doc/guide/html/advice-math-textbook.html
 
 - Project like environments:
   - <project>
-  - <activity> 
+  - <activity>
   - <exploration>
   - <investigation>
   - Include:
@@ -56,6 +56,6 @@ scalar product:			\smul
 
 ** GLOSSARY (for translation):
 
-well-defined		wel-gedefinieerd
-summation			optelling (rather than sommering)
+well-defined		  wel-gedefinieerd
+summation			    optelling (rather than sommering)
 spanned (verb)		onderspan

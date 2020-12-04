@@ -28,12 +28,12 @@
     In that case <sq>being an eigenvector</sq> wouldn't be a very special property of <m>T</m>.
   </p>
 
-  <assemblage>
+  <note>
     <p>
       It is still possible for a linear operator <m>T</m> to have a zero <em>eigenvalue</em>.
       But our convention is that an <em>eigenvector</em> cannot be the zero vector.
     </p>
-  </assemblage>
+  </note>
 
   <p>
     Instead of considering just a <em>single</em>
@@ -55,7 +55,7 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <insight>
     <p>
       Note that if <m>\lambda</m> is an eigenvalue of <m>T</m>,
       then the zero vector <m>\ve{0}</m> <em>is</em>
@@ -63,7 +63,7 @@
       But it is not an <em>eigenvector</em> of <m>T</m>.
       That is just terminology.
     </p>
-  </assemblage>
+  </insight>
 
   <p>
     Note that we can also express <m>E_\lambda</m> as
@@ -127,8 +127,8 @@
       index for which <m>\ve{v}_i</m> is a linear combination of the preceding vectors).
       Applying <m>T</m> to both sides of <xref ref="eigenvalue-1st-eqn" /> gives us a new equation:
       <mdn>
-        <mrow>T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) \nonumber</mrow>
-        <mrow>\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  (T \text{ is linear)} \nonumber</mrow>
+        <mrow number="no">T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) </mrow>
+        <mrow number="no">\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  (T \text{ is linear)} </mrow>
         <mrow xml:id="eigenvalue-2nd-eqn">\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2 \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp  (T(\ve{v}_r) = \lambda_r \ve{v}_r)</mrow>
       </mdn>
     </p>

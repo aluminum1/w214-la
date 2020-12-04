@@ -5,9 +5,9 @@ To do list:
 - Decide whether to move Bumping Off Proposition to section on bases where it can be explained that its relevance is to show that two bases have the same size.
 - Change its name to the more standard: Steinitz Exchange Lemma or Steinitz Replacement Theorem: https://en.wikipedia.org/wiki/Steinitz_exchange_lemma
 - First person to first person plural? (I to we)
-- Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the assemblage in Ch2Sec4 line 165 needs reconsidering too.
+- Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.
 - Rob Beezer says that CDATA should never be necessary - is it easier in a tikz picture, though? I guess you have to be careful of things like arrow heads -->
-- Create index?
+- Create index? And index of notation?
 - Ch3Sec 3 line 6 & 25: images not allowed in text mode --- rework.
 - Ch2Sec4 (in a few places actually) I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
 
@@ -15,7 +15,7 @@ Consistency and technique:
 - There is some inconsistency in using either \left[\begin{array}... or \begin{bmatrix} for matrices. (low priority)
 - nonzero vs non-zero and other (low priority)
 - Consistency between \dim and \Dim?
-- Make sure all <proofs> are inside the <result> tags and not outside (?) (low priority)
+- Make sure all <proofs> are inside the <theorem> (etc.) tags and not outside (?) (low priority)
 - Change all &xea; to ê, etc. (low priority_)
 - All phrases in 'quotes' -> <sq> or <q> (low priority)
 - Make sure all LaTeX line breaks \\ are appropriate.
@@ -40,11 +40,12 @@ Afrikaans:
 I would like to add
 - learning outcomes for each section
 - link exercises or groups of exercises to these learning outcomes.
-- longer paragraph, especially in introductions
+- longer paragraphs, especially in introductions
+- overspecified or underspecified problems
 
 Use??
 - <objective>?
 - <reading-questions>?
 
 
-- Throughout there are some figure with <caption> tags, but no text.
+- Throughout there are some figure with <caption> tags, but no text. But I think this is ok.

@@ -24,7 +24,7 @@
       waar <m>x</m> en <m>y</m> re&#xeb;le getalle is.
     </p>
 
-    <assemblage>
+    <remark>
       <p>
         Kom ons stop hier vir 'n oomblik en vertaal die
         definisie van Afrikaans na wiskundige simbole.
@@ -48,7 +48,7 @@
       <p>
         Veels geluk! <mdash /> jy is besig om die taal van wiskunde te leer!
       </p>
-    </assemblage>
+    </remark>
 
     <p>
       'n Element van <m>A</m> is 'n willekeurige paar re&#xeb;le getalle
@@ -552,7 +552,7 @@
       </ul>
     </p>
 
-      <assemblage>
+      <warning>
         <p>
           Let daarop dat daar geen <em>integrasie</em>
           afbeelding van <m>C</m> na <m>C</m> is nie,
@@ -561,7 +561,7 @@
           so die resultaat mag dalk 'n polinoom van
           graad <m>5</m> wees, wat nie in <m>C</m> is nie!
         </p>
-      </assemblage>
+      </warning>
   </subsection>
 
   <subsection>

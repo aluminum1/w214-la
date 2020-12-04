@@ -37,7 +37,7 @@
       </statement>
     </proposition>
 
-    <assemblage>
+    <note>
       <p>
         It is important to understand the mathematical phrase <q>There exists a unique <m>X</m> satisfying <m>Y</m></q>.
         It means two things.
@@ -46,11 +46,11 @@
         And secondly, that there is <em>no more than one</em>
         <m>X</m> which satisfies <m>Y</m>.
       </p>
-    </assemblage>
+    </note>
 
     <proof>
       <p>
-        <alert><m>1 \Rightarrow 2</m></alert>
+        First we prove that 1 implies 2.
       </p>
       <p>
         Suppose that the list of vectors<m>\basis{B} = \left\{ \ve{e}_1,
@@ -95,41 +95,41 @@
         and hence the expansion <xref ref="one_way_of_expanding" /> is unique.
       </p>
 
-      <p>
-        <alert><m>2 \Leftarrow 1</m></alert>
-      </p>
-      <p>
-        Conversely, suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
-        <me>
-          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
-        </me>.
-      </p>
+        <p>
+          Conversely, we prove that <m>2 \Leftarrow 1</m>.
+        </p>
+        <p>
+          Conversely, suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
+          <me>
+            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+          </me>.
+        </p>
 
-      <p>
-        The fact that each <m>\ve{v}</m> <em>can</em>
-        be written as a linear combination of the vectors <m>\ve{e}_1</m>,
-        <m>\ve{e}_2</m>, <m>\ldots</m>,
-        <m>\ve{e}_n</m> means that <m>\basis{B}</m> spans <m>V</m>.
-        We still need to show that this list
-        <m>\basis{B}</m> is linearly independent.
-        So, suppose that there exist scalars <m>b_1</m>, <m>b_2</m>,
-        <m>\ldots</m>, <m>b_n</m> such that
-        <men xml:id="finding_bs_making_zero">
-          b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n = \ve{0}
-        </men>.
-      </p>
+        <p>
+          The fact that each <m>\ve{v}</m> <em>can</em>
+          be written as a linear combination of the vectors <m>\ve{e}_1</m>,
+          <m>\ve{e}_2</m>, <m>\ldots</m>,
+          <m>\ve{e}_n</m> means that <m>\basis{B}</m> spans <m>V</m>.
+          We still need to show that this list
+          <m>\basis{B}</m> is linearly independent.
+          So, suppose that there exist scalars <m>b_1</m>, <m>b_2</m>,
+          <m>\ldots</m>, <m>b_n</m> such that
+          <men xml:id="finding_bs_making_zero">
+            b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n = \ve{0}
+          </men>.
+        </p>
 
-      <p>
-        We need to show that all the <m>b_i</m> must equal zero.
-        We already know <em>one</em> possible solution of <xref ref="finding_bs_making_zero" /> :
-        simply set each <m>b_i = 0</m>.
-        But we are told that each vector
-        (in particular, the vector <m>\ve{0}</m>)
-        can be expressed as a linear combination of the <m>\ve{e}_i</m> in exactly one way.
-        Hence this must be the only solution,
-        i.e. we must have <m>b_1 = b_2 = \cdots = b_n = 0</m>,
-        and so the list <m>\basis{B}</m> is linearly independent.
-      </p>
+        <p>
+          We need to show that all the <m>b_i</m> must equal zero.
+          We already know <em>one</em> possible solution of <xref ref="finding_bs_making_zero" /> :
+          simply set each <m>b_i = 0</m>.
+          But we are told that each vector
+          (in particular, the vector <m>\ve{0}</m>)
+          can be expressed as a linear combination of the <m>\ve{e}_i</m> in exactly one way.
+          Hence this must be the only solution,
+          i.e. we must have <m>b_1 = b_2 = \cdots = b_n = 0</m>,
+          and so the list <m>\basis{B}</m> is linearly independent.
+        </p>
     </proof>
 
   <definition>
@@ -156,7 +156,7 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <convention>
     <p>
       I indicate that a collection of things is a <em>list</em>
       (where the order matters) and not merely a <em>set</em>
@@ -165,7 +165,7 @@
       A basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \right\}</m> is a list of vectors.
       The order of the vectors matters because it affects the coordinate vector <m>[\ve{v}]_\basis{B}</m>.
     </p>
-  </assemblage>
+  </convention>
 
   <example xml:id="coord_vectors_finding_example">
     <title>Coordinate vectors in <m>\mathbb{R}^2</m></title>

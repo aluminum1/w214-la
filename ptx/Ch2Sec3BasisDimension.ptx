@@ -55,17 +55,17 @@
       </statement>
     </definition>
 
-    <assemblage>
+    <remark>
       <p>
-        Note that the concept of <sq>dimension of a vector space</sq> is only well-defined because onlyf <xref ref="inv_dim">Theorem</xref>.
+        Note that the concept of <sq>dimension of a vector space</sq> is only well-defined because of <xref ref="inv_dim">Theorem</xref>.
       </p>
-    </assemblage>
+    </remark>
 
-    <assemblage xml:id="defn_dim_zero_vec_space">
+    <convention xml:id="defn_dim_zero_vec_space">
       <p>
         The case of the zero vector space <m>Z = \{\ve{0}\}</m> is not explicitly handled in <xref ref="dim_vec_space"/> and we treat it as a special case. Namely, we <em>define</em> the dimension of the zero vector space <m>Z</m> to be <m>0</m>. So, by definition, <m>Z</m> is finite-dimensional, and its dimension equals <m>0</m>.
       </p>
-    </assemblage>
+    </convention>
   </introduction>
 
   <subsection>
@@ -187,7 +187,9 @@
       </sage>
       <p>Note that we ask SageMath to solve for <c>a1, a2, a3, a4</c>, since <c>w1, w2, w3, w4</c> are regarded as constants in the equation<ellipsis /> we are not trying to solve for them; they are fixed, but arbitrary! SageMath outputs:</p>
       <aside>
-        This is actually something important to realise in the writing of proofs. The <m>w_i</m> are arbitrary, but are fixed at the start of the proof and the argument is then applied to the fixed vectors <m>w_i</m>. Even if we choose different values for the <m>w_i</m> afterwards, the <em>argument</em> still applies to those values and we know that they system has a solution for any values we can choose.
+        <p>
+          This is actually something important to realise in the writing of proofs. The <m>w_i</m> are arbitrary, but are fixed at the start of the proof and the argument is then applied to the fixed vectors <m>w_i</m>. Even if we choose different values for the <m>w_i</m> afterwards, the <em>argument</em> still applies to those values and we know that they system has a solution for any values we can choose.
+        </p>
       </aside>
       <sidebyside>
         <p>

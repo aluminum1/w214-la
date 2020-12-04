@@ -43,7 +43,7 @@
     </image>
   </figure>
 
-  <assemblage>
+  <insight>
     <p>
       The standard convention in mathematics is to write the evaluation of a function from right-to-left, eg.
       <m>f(x)</m>.
@@ -51,7 +51,7 @@
       then you apply <m>f</m>.
       So the most natural way to draw these pictures is from right-to-left!
     </p>
-  </assemblage>
+  </insight>
 
   <example>
     <statement>

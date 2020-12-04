@@ -116,12 +116,12 @@
     </statement>
   </lemma>
 
-  <assemblage>
+  <convention>
     <p>
       Hierdie lemma beteken dat dit maak sin om te praat van  <q>die inverse</q> (in plaas van <q>'n inverse</q>) van 'n lineêre afbeelding. So dit maak sin vir oms om die notasie<m>T^{-1}</m> te gebruik, wat gelees word as
       <q>die</q> inverse van <m>T</m>.
     </p>
-  </assemblage>
+  </convention>
 
   <proof>
     <p>
@@ -439,14 +439,14 @@
     </p>
   </proof>
 
-  <assemblage>
+  <insight>
     <p>
       Die bostaande resultaat is baie belangrik in line&#xea;re algebra.
       Dit s&#xea; dat, sodra ons 'n basis vir 'n abstrakte
       eindig dimensionele vektorruimte <m>V</m> gekies het, dan kan ons die
       elemente van <m>V</m> behandel asof hulle kolomvektore is!
     </p>
-  </assemblage>
+  </insight>
 
 <exercises>
   <exercise>

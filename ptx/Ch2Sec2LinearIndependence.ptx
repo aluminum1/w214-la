@@ -310,7 +310,8 @@
   </example>
 
   <proposition xml:id="bumping_off_lemma">
-    <title>Bumping Off Proposition</title>
+    <title>Steinitz Exchange Lemma</title>
+
     <statement>
       <p>
         Suppose <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose</m> is a linearly independent list of vectors

@@ -55,17 +55,17 @@
       </statement>
     </definition>
 
-    <assemblage>
+    <remark>
       <p>
         Let op dat die konsep van die <sq>dimensie van </sq> 'n vektorruimte slegs wel-gedefinieerd is as gevolg van <xref ref="inv_dim">Stelling</xref>.
       </p>
-    </assemblage>
+    </remark>
 
-      <assemblage xml:id="defn_dim_zero_vec_space">
+      <convention xml:id="defn_dim_zero_vec_space">
         <p>
           Die geval van die nulvektorruimte <m>Z = \{\ve{0}\}</m> is nie eksplisiet in <xref ref="dim_vec_space"/> gehanteer nie. Ons hanteer dit as 'n spesiale geval. Naamlik, ons <em>defineer</em> die dimensie van die nulvektorruimte <m>Z</m> as <m>0</m>. So, volgens die definisie is <m>Z</m> is eindig-dimensionaal, en sy dimensie is gelyk aan <m>0</m>.
         </p>
-    </assemblage>
+    </convention>
 </introduction>
 
 <subsection>
@@ -187,7 +187,9 @@
       </sage>
       <p>Let op dat ons vir SageMath vra om vir <c>a1, a2, a3, a4</c> op te los, aangesien <c>w1, w2, w3, w4</c> as konstantes in hierdie vergelykings beskou word<ellipsis /> ons los nie vir hulle op nie; hulle is vas maar willekeurig.  SageMath outputs:</p>
       <aside>
-        Dit is eintlik iets belangrik om te besef in die skryf van bewyse. Die <m>w_i</m> is willekeurig, maar word aan die begin van die bewys vasgemaak en die argument word dan op die vaste vektore <m>w_i</m> toegepas. Selfs al kan ons na die tyd verskillende waardes vir die <m>w_i</m> kies, geld die <em>argument</em> nogsteeds vir daardie waardes en weet ons dat die stelsel 'n oplossing het vir enige vaste waardes wat ons kan kies.
+        <p>
+          Dit is eintlik iets belangrik om te besef in die skryf van bewyse. Die <m>w_i</m> is willekeurig, maar word aan die begin van die bewys vasgemaak en die argument word dan op die vaste vektore <m>w_i</m> toegepas. Selfs al kan ons na die tyd verskillende waardes vir die <m>w_i</m> kies, geld die <em>argument</em> nogsteeds vir daardie waardes en weet ons dat die stelsel 'n oplossing het vir enige vaste waardes wat ons kan kies.
+        </p>
       </aside>
       <sidebyside>
         <p>

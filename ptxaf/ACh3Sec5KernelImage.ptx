@@ -31,22 +31,22 @@
     vir 'n skematiese voorstelling.
   </p>
 
-  <assemblage>
+  <convention>
     <p>
       Soms, om absoluut duidelik te wees, sal ek 'n onderskrif op die nul-vektor sit om aan te dui aan watter vektorruimte dit behoort, bv.
       <m>\ve{0}_W</m> verwys na die nulvektor in <m>W</m>, terwyl
       <m>\ve{0}_V</m> na die nulvektor in <m>V</m> verwys.
     </p>
-  </assemblage>
+  </convention>
 
-  <assemblage>
+  <note>
     <p>
       Nog 'n naam vir die kern van <m>T</m> is die
       <em>nulruimte</em> van <m>T</m>,
       en nog 'n naam vir die beeld van <m>T</m> is die
       <em>waardeversameling</em> van <m>T</m>.
     </p>
-  </assemblage>
+  </note>
 
   <figure xml:id = "ker_fig">
     <caption><m>\Ker(T)</m> </caption>
@@ -241,7 +241,7 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <insight>
     <p>
       Die <sq>dimensie van <m>\Ker(T)</m></sq> maak sin, want <m>\Ker(T)</m> is 'n deelruimte van 'n eindig-dimensionele vektorruimte <m>V</m>,
       en daarom is dit eindig-dimensioneel volgens <xref ref="dim-of-subspace-prop">Proposisie</xref>.
@@ -249,7 +249,7 @@
       eindig-dimensioneel is nie, maar dit sal volg uit die  Rang-Nulheidgraad-stelling
       (<xref ref="rank-nullity-theorem">Stelling</xref>).
     </p>
-  </assemblage>
+  </insight>
 
   <example xml:id="cross-product-example">
     <statement>

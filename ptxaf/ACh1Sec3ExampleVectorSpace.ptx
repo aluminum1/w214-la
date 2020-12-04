@@ -17,16 +17,17 @@
 
   <example xml:id="B_is_vs">
     <title>Die versameling <m>B</m> is 'n vektorruimte.</title>
-    <p> <alert>1. Definieer 'n versameling <m>B</m></alert> </p>
     <p>
+      Eers definieer ons die versameling <m>B</m>.
       Ons definieer
       <men xml:id="def_of_b">
         B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \text{ and }  u_1 - u_2 + u_3 = 0\}
       </men>.
     </p>
 
-    <p> <alert>2. Definieer optelling, die nul-vektor en
-    skalaarvermenigvuldiging.</alert></p>
+    <p>
+      Dan definieer ons optelling, die nul-vektor en skalaarvermenigvuldiging
+    </p>
     <p><dl>
      <li>
       <title>D1. Optelling</title>
@@ -138,7 +139,9 @@
     </li>
   </dl></p>
 
-  <p><alert>3. Maak seker die data bevredig die reëls.</alert></p>
+  <p>
+    Laastens maak ons seker dat die data al die reëls bevredig
+  </p>
   <p>
     Ons moet seker maak dat ons data D1, D2 en D3
     die reëls R1 <ndash /> R8 bevredig.

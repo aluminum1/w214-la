@@ -194,7 +194,8 @@
         <caption></caption>
         <image>
           <latex-image>
-            <![CDATA[\begin{tikzpicture}\node at (0,0) {\includegraphics[width=0.45\textwidth]{torus.pdf}};
+            <![CDATA[\begin{tikzpicture}\node at (0,0) {Missing torus.pdf};
+            %{\includegraphics[width=0.45\textwidth]{torus.pdf}};
             \draw[->, very thick] (2.5,0) -- node[pos=1.4] {\(y\)} (3.2, 0);
             \draw[->, very thick] (0,0) -- node[pos=1.1] {\(z\)} (0, 2.5);
             \draw[->, very thick] (-0.9, -0.9*4/3) -- node[pos=1.2] {\(x\)} (-1.5, -2);\end{tikzpicture}]]>

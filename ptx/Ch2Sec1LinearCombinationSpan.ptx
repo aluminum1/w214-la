@@ -507,7 +507,7 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
           <mrow>
           x^2 \amp = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) </mrow>
           <mrow> x^3 \amp = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x)</mrow>
-        </me>,
+        </md>,
         completing the proof.
       </p>
     </solution>

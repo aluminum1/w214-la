@@ -20,11 +20,11 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <exercise>
     <p>
-      Verstaan jy hoekom <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> 'n <m>n \times m</m>-matriks is?
+      Waarom is <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> 'n <m>n \times m</m>-matriks?
     </p>
-  </assemblage>
+  </exercise>
 
   <example xml:id="first_example_matrix_lin_map">
     <title>

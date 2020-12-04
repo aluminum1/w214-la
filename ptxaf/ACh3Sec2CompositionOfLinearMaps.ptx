@@ -43,7 +43,7 @@
     </image>
   </figure>
 
-  <assemblage>
+  <insight>
     <p>
       Volgens wiskundige konvensie skryf ons die evaluasie van funksies van regs na links, bv.
       <m>f(x)</m>.
@@ -51,7 +51,7 @@
       en dan pas jy <m>f</m> daarop toe.
       Daarom is die mees natuurlike manier om hierdie prentjies te teken van regs na links!
     </p>
-  </assemblage>
+  </insight>
 
   <example>
     <statement>

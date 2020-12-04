@@ -17,16 +17,18 @@
 
   <example xml:id="B_is_vs">
     <title>The set <m>B</m> is a vector space</title>
-    <p> <alert>1. Define a set <m>B</m>. </alert> </p>
     <p>
+      First we need to define the set <m>B</m>.
       We define
       <men xml:id="def_of_b">
         B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \text{ and }  u_1 - u_2 + u_3 = 0\}
       </men>.
     </p>
 
-    <p> <alert>2. Define addition, the zero vector, and
-      scalar multiplication</alert></p>
+    <p>
+      Then we define addition, the zero vector, and
+      scalar multiplication:
+    </p>
     <p><dl>
       <li>
         <title>D1. Addition</title>
@@ -138,7 +140,9 @@
       </li>
     </dl></p>
 
-    <p><alert>3. Check that the data satisfies the rules</alert></p>
+    <p>
+      Lastly we check that the data satisfies the rules
+    </p>
     <p>
       We must check that our data D1, D2 and D3
       satisfy the rules R1 <ndash /> R8.

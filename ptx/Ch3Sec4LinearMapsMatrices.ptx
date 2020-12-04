@@ -20,11 +20,11 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <exercise>
     <p>
-      Do you understand why <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> is an <m>n \times m</m> matrix?
+      Why is <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> an <m>n \times m</m> matrix?
     </p>
-  </assemblage>
+  </exercise>
 
   <example xml:id="first_example_matrix_lin_map">
     <title>

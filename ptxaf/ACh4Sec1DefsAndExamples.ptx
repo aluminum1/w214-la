@@ -54,7 +54,7 @@
     </statement>
   </proposition>
 
-  <assemblage>
+  <insight>
     <p>
       Kom ons neem 'n oomblik om die notasie hier te analiseer.
       As <m>S, T : V \rightarrow W</m> line&#xea;re afbeeldings is,
@@ -68,7 +68,7 @@
         (\lambda \id_V - T) (\ve{v}) := \lambda \id_V(\ve{v}) - T (\ve{v}) = \lambda \ve{v} - T(\ve{v})
       </me>.
     </p>
-  </assemblage>
+  </insight>
 
   <proof>
     <p>
@@ -115,12 +115,12 @@
     As <m>\det(A) \neq 0</m>, dan is die matriks inverteerbaar.
   </p>
 
-  <assemblage>
+  <historical>
     <p>
       Dit is inderwaarheid waar die woord <sq>determinant</sq>
       vandaan kom!. Dit <em>bepaal</em> (Eng. <foreign>determine</foreign>) of die matriks inverteerbaar is of nie.
     </p>
-  </assemblage>
+  </historical>
 
   <p>
     Maar hoe weet ons of 'n <em>line&#xea;re operator</em> inverteerbaar is?
@@ -186,14 +186,14 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <note>
     <p>
       Die rede dat <m>\chi_T</m> 'n <em>polinoom</em> is
       (en nie bloot 'n arbitr&#xea;re funksie is nie)
       spruit uit die formule vir die determinant.
       Meer hieroor volg later.
     </p>
-  </assemblage>
+  </note>
 
   <p>
     Om op te som, sien ons dat <m>\lambda</m> 'n eiewaarde van 'n line&#xea;re operator <m>T</m> is as en slegs as <m>\lambda</m> 'n wortel van die karakteristieke polinoom van <m>T</m> is.

@@ -9,12 +9,12 @@
       which we will define in this chapter.
     </p>
 
-    <assemblage>
+    <warning>
       <p>
-        <em>Warning</em>: From now on, I will use shorthand and write scalar multiplication
+         From now on, I will use shorthand and write scalar multiplication
         <m>k \smul\ve{v}</m> simply as <m>k \ve{v}</m>!
       </p>
-    </assemblage>
+    </warning>
   </introduction>
 
   <xi:include  href="Ch2Sec1LinearCombinationSpan.ptx" />

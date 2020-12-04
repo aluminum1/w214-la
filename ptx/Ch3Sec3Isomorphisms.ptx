@@ -116,12 +116,12 @@
     </statement>
   </lemma>
 
-  <assemblage>
+  <convention>
     <p>
       This lemma justifies us talking about <q>the inverse</q> (instead of <q>an inverse</q>) of a linear map. So it makes sense for us to use the notation <m>T^{-1}</m>, which reads as
       <q>the</q> inverse of <m>T</m>.
     </p>
-  </assemblage>
+  </convention>
 
   <proof>
     <p>
@@ -439,14 +439,14 @@
     </p>
   </proof>
 
-  <assemblage>
+  <insight>
     <p>
       The result above is very important in linear algebra.
       It says that,
       once we have chosen a basis for an abstract finite-dimensional vector space <m>V</m>,
       we can treat the elements of <m>V</m> as if they were column vectors!
     </p>
-  </assemblage>
+  </insight>
 
 <exercises>
    <exercise>

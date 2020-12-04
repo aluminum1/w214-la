@@ -266,7 +266,7 @@
     </mdn>
   </p>
   <p>
-    Met ander woorde, maak nie saak wat  <m>v_1, v_2</m> is nie, daar is altyd oneindig baie oplossings (geparametriseer deur die vrye veranderlike <m>t</m>) vir  <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/>, en dus vir ons oorspronklike vergelyking  <xref ref="eqn_for_R2_span"/>. Ons kan dus <em>enige</em> <m>\ve{v} \in \mathbb{R}^2</m> as 'n lineêre kombinasie van die vektore <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m> uitdruk <elllipsis /> en daar is selfs <em>oneindig</em> baie maniere om dit te doen! </p>
+    Met ander woorde, maak nie saak wat  <m>v_1, v_2</m> is nie, daar is altyd oneindig baie oplossings (geparametriseer deur die vrye veranderlike <m>t</m>) vir  <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/>, en dus vir ons oorspronklike vergelyking  <xref ref="eqn_for_R2_span"/>. Ons kan dus <em>enige</em> <m>\ve{v} \in \mathbb{R}^2</m> as 'n lineêre kombinasie van die vektore <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m> uitdruk <ellipsis /> en daar is selfs <em>oneindig</em> baie maniere om dit te doen! </p>
 
     <p>
     Kom ons probeer byvoorbeeld die vektor <m>\ve{v} = (2,3)</m> as 'n lineêre kombinasie van <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m> skryf. As ons ons algemene oplossing <xref first="span_ex_aa1" last="span_ex_aa2"/> neem, en  <m>t=0</m>, neem, dan kry ons
@@ -507,7 +507,7 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
           <mrow>
           x^2 \amp = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) </mrow>
           <mrow> x^3 \amp = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x)</mrow>
-        </me>,
+        </md>,
         en dit voltooi die bewys.
       </p>
     </solution>

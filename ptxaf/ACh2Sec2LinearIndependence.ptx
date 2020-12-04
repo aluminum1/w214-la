@@ -310,7 +310,8 @@
   </example>
 
   <proposition xml:id="bumping_off_lemma">
-    <title>Afstampproposisie</title>
+    <title>Steinitz Omruil Lemma</title>
+
     <statement>
       <p>
         Veronderstel <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2,  \ldots, \ve{l}_m \bclose</m> is 'n line&#xea;r onafhanklike lys vektore in 'n
@@ -320,7 +321,7 @@
       </p>
     </statement>
   </proposition>
-
+  <aside> <p> In Engels: <em>Steinitz Exchange Lemma</em></p></aside>
   <proof>
     <p>
       Begin met die oorspronglike lys vektore

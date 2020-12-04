@@ -61,6 +61,9 @@
 \DeclareMathOperator{\Nhg}{Nhg}
 \DeclareMathOperator{\Rang}{Rang}
 \DeclareMathOperator{\Be}{Be}
+%% Override standard "calligraphic" imaginary macro in TeX
+\let \Im \relax
+\DeclareMathOperator{\Im}{Im}
 
 </macros>
 
@@ -80,9 +83,6 @@
 
     </frontmatter>
 
-
-
-
     <xi:include href="./ACh1AbstractVectorSpaces.ptx" />
 
     <xi:include href="./ACh2FinDimVectorSpaces.ptx" />
@@ -101,8 +101,34 @@
 
       <xi:include href="./AAppBHypersurfaces.ptx" />
 <!--
+      <xi:include href="./Videos.ptx" />
+
+      <xi:include href="./SageExamples.ptx" />
+
       <xi:include href="./bibliography.ptx" />
 -->
+
+      <appendix>
+        <title> Solutions to exercises</title>
+        <section>
+          <title>Wenke en antwoorde vir Oefeninge</title>
+          <p></p>
+          <solutions divisional = "hint answer" reading = "hint answer" worksheet = "hint answer" project = "hint answer" scope="w214-lin-alg" >
+            <title>Wenke en antwoorde</title>
+          </solutions>
+        </section>
+
+        <section>
+          <title>Oplossings vir Oefeninge</title>
+          <p></p>
+          <solutions divisional = "solution" reading = "solution" worksheet = "solution" project = "solution" scope="w214-lin-alg" >
+            <title>
+              Oplossings
+            </title>
+          </solutions>
+        </section>
+      </appendix>
+
     </backmatter>
 
   </book>

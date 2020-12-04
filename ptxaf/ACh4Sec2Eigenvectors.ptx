@@ -28,12 +28,12 @@
     In daardie geval sal dit minder betekenis dra om 'n eievektor van <m>T</m> te wees.
   </p>
 
-  <assemblage>
+  <note>
     <p>
       Dit is nogsteeds moontlik vir nul om 'n <em>eiewaarde</em> van <m>T</m> te wees nie.
       Maar die konvensie is dat 'n <em>eievektor</em> nie  die nulvektor kan wees nie.
     </p>
-  </assemblage>
+  </note>
 
   <p>
     In plaas daarvan om 'n <em>enkele</em>
@@ -55,7 +55,7 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <insight>
     <p>
       Let daarop dat as<m>\lambda</m> 'n eiewaarde van <m>T</m> is,
       dan is die nulvektor <m>\ve{0}</m> <em>wel</em>
@@ -63,7 +63,7 @@
       Maar dit is nie 'n <em>eievektor</em> van <m>T</m> nie.
       Dit is hoe die terminologie gedefinieer  is.
     </p>
-  </assemblage>
+  </insight>
 
   <p>
     Let daarop dat ons <m>E_\lambda</m> as
@@ -127,8 +127,8 @@
       indeks wees waarvoor <m>\ve{v}_i</m> 'n line&#xea;re kombinasie van die voorafgaande vektore is nie).
       Deur <m>T</m> aan beide kante van <xref ref="eigenvalue-1st-eqn" /> toe te pas, kry ons 'n nuwe vergelyking:
       <mdn>
-        <mrow>T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) \nonumber</mrow>
-        <mrow>\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  (T \text{ is line{\^e}r)} \nonumber</mrow>
+        <mrow number="no">T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) </mrow>
+        <mrow number="no">\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  (T \text{ is line{\^e}r)} </mrow>
         <mrow xml:id="eigenvalue-2nd-eqn">\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2  \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp (T(\ve{v}_r) = \lambda_r \ve{v}_r)</mrow>
       </mdn>
     </p>
