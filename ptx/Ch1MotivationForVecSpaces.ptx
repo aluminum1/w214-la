@@ -25,7 +25,7 @@
     </p>
 
     <p>
-      In statistics, there is a notion of how well two random samples or random variables <q>go in the same direction</q> called the <term>covariance</term> between them. 
+      In statistics, there is a notion of how well two random samples or random variables <q>go in the same direction</q> called the <term>covariance</term> between them.
       <!-- Here is something I wrote, but I am very unsure now of whether it makes sense:
       When there are only finitely many outcomes (say <m>i=1,2,\ldots, n</m>) with probabilities <m>w_1,\ldots, w_n</m> and <m>(x_1,\ldots, x_n)</m> and <m>(y_1,\ldots, y_n)</m> are two vectors representating ... what? Experimental data? How do the probabilities fit in with this? I need to read up on this again. Then the covariance between <m>x</m> and <m>y</m> is defined as
       <me> w_1x_1y_1+\cdots + w_nx_ny_n</me>
@@ -36,8 +36,8 @@
 
     <p>
       The covariance defined in the previous paragraph can be extended to cases where we have an infinite number of
-      <!-- 
-       ... again - what? Read up! 
+      <!--
+       ... again - what? Read up!
        If the ?? is an infinite number, corresponding to one for each positive integer, then we can define the covariance as an infinite sum
        <me> w_1x_1y_1+w_2x_2y_2+\cdots <me>
        in cases where this sum converges. But if the possible states (?) are continuous, say all real numbers between 0 and 1, then we need a continuous analogue of a sum <mdash/> an integral!
@@ -127,8 +127,8 @@
      The <q>basis-free</q> approach would be to think simply of the function as an object. Maybe eventually you will write down the two pieces as <m> a_1+b_1x+c_1x^2+d_1x^3</m> and <m> a_2+b_2x+c_2x^2+d_3x^3</m>. If you want to store it as a column vector, you could store it as a column vector
      <me> \begin{bmatrix} a\\b\\c\\d\\e\\f \end{bmatrix} </me>
      where the function is defined as
-     <me> 
-       f(x) = \left\{\begin{array}{cl} a+bx+cx^2+dx^3 &amp; \text{if } x\lt t\\ (??) + (??)x+ (c+3dt-3et)x^2 + ex^3 &amp; \text{if }x\ge t \end{array}\right.
+     <me>
+       f(x) = \left\{\begin{array}{cl} a+bx+cx^2+dx^3 \amp \text{if } x\lt t\\ (??) + (??)x+ (c+3dt-3et)x^2 + ex^3 \amp \text{if }x\ge t \end{array}\right.
      </me>.
      This is acceptable, but much harder to work with than having generic polynomials for both pieces keeping in mind that they satisfy some equation.
    </p>

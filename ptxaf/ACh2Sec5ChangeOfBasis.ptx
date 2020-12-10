@@ -14,7 +14,7 @@
     <p>
       Veronderstel dat <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m> en
       <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}</m> twee verskillende basisse
-      vir <m>\mathbb{R}^2</m> is, ge&#xef;llustreer soos volg:
+      vir <m>\mathbb{R}^2</m> is, geïllustreer soos volg:
     </p>
     <figure xml:id="w_in_different_bases">
       <caption>Twee verskillende basisse <m>\mathbb{R}^2</m></caption>
@@ -48,17 +48,15 @@
       Veronderstel ons word 'n vektor <m>\ve{w} \in \mathbb{R}^2</m> gegee:
     </p>
 
-    <sidebyside width="30%">
-      <image>
-        <latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.4]
-          \draw[thick, ->] (0,0) -- node[pos=1.3] {\(\ve{w}\)} (-4, 1);\end{tikzpicture}]]>
-        </latex-image>
-      </image>
-    </sidebyside>
+    <image width="30%">
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}[scale=0.4]
+        \draw[thick, ->] (0,0) -- node[pos=1.3] {\(\ve{w}\)} (-4, 1);\end{tikzpicture}]]>
+      </latex-image>
+    </image>
 
     <p>
-      Ons wil die ko&#xf6;rdinaatvektor van <em>dieselfde</em> vektor <m>\ve{w}</m>
+      Ons wil die koördinaatvektor van <em>dieselfde</em> vektor <m>\ve{w}</m>
       relatief tot twee verskillende basisse
       <m>\basis{B}</m> en <m>\basis{C}</m> bereken.
     </p>
@@ -67,14 +65,14 @@
       Met hierdie spesifieke vektor <m>\ve{w}</m>, sien ons uit
       <xref ref="w_in_b_basis"/> dat ons in terme van die basis <m>\basis{B}</m>
       <men>
-        \ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2 \qquad \therefore \, [\ve{w}]_\basis{B} = \left[\begin{array}{c} -3 \\ 2   \end{array}\right] \,
+        \ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2 \qquad \therefore \, [\ve{w}]_\basis{B} = \begin{bmatrix} -3 \\ 2   \end{bmatrix} \,
       </men> het.
     </p>
 
     <p>
       Aan die anderkant, in terme van basis <m>\basis{C}</m> sien ons uit <xref ref="w_in_c_basis"/> dat:
       <men xml:id="correct_exp_w">
-        \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} = \left[\begin{array}{c} 1 \\ -3   \end{array}\right]
+        \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} = \begin{bmatrix} 1 \\ -3   \end{bmatrix}
       </men>.
     </p>
 
@@ -138,7 +136,7 @@
   </sidebyside>
 
     <p>
-      So <em>dieselfde</em> vektor <m>\ve{w}</m> het verskillende ko&#xf6;rdinaatvektore
+      So <em>dieselfde</em> vektor <m>\ve{w}</m> het verskillende koördinaatvektore
       <m>[\ve{w}]_\basis{B}</m> en
       <m>[\ve{w}]_\basis{C}</m> relatief tot die basisse
       <m>\basis{B}</m> en <m>\basis{C}</m>!
@@ -150,7 +148,7 @@
     <p>
       Veronderstel nou dat ons die basisse <m>\basis{B}</m> en <m>\basis{C}</m> ken, asook die koördinaatvektor <m>[\ve{w}]_\basis{B}</m> van <m>\ve{w}</m> in die basis <m>\basis{B}</m>,
      <me>
-        [\ve{w}]_\basis{B} = \left[ \begin{array}{c} -3 \\ 2 \end{array}\right]
+        [\ve{w}]_\basis{B} = \begin{bmatrix} -3 \\ 2 \end{bmatrix}
       </me>,
       dit is, <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>.
       Hoe kan ons <m>[\ve{w}]_\basis{C}</m>,
@@ -158,13 +156,12 @@
     </p>
 
     <p>
-      Die beste benadering is om elke vektor in <m>\basis{B}</m> as 'n line&#xea;re
+      Die beste benadering is om elke vektor in <m>\basis{B}</m> as 'n lineêre
       kombinasie van die basisvektore in <m>\basis{C}</m> uit te druk.
       In die volgende figuur word die vektore <m>\ve{b}_1</m> en <m>\ve{b}_2</m> uitgebeeld teen die
       agtergrond van heeltallige lineêre kombinasies van die basis <m>\basis{C}</m>:
     </p>
 
-    <sidebyside>
       <image>
         <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=0.5]
@@ -190,7 +187,6 @@
           \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);\end{tikzpicture}]]>
         </latex-image>
       </image>
-    </sidebyside>
 
     <p>
       Ons lees af dat:
@@ -212,7 +208,7 @@
     <p>
       Hiervan lees ons af dat
       <men xml:id="w_in_basis_C">
-        [\ve{w}]_\basis{C} = \left[\begin{array}{c} 1 \\ -3 \end{array}\right]
+        [\ve{w}]_\basis{C} = \begin{bmatrix} 1 \\ -3 \end{bmatrix}
       </men>
       wat die korrekte antwoord is, soos ons weet uit <xref ref="correct_exp_w" />.
     </p>
@@ -232,7 +228,7 @@
           <m>n \times n</m>-matriks <m>P_{\basis{C} \leftarrow \basis{B}}</m> waarvan die kolomme die koördinaatvektore
           <m>[\ve{b}_1]_\basis{C}, \ldots, [\ve{b}_n]_\basis{C}</m> is:
           <me>
-            \mat{P}_{\basis{C} \leftarrow \basis{B}} := \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}\,
+            \mat{P}_{\basis{C} \leftarrow \basis{B}} := \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right]_\basis{C} \amp \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right]_\basis{C} \amp \ldots \amp \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}\,
           </me>.
         </p>
       </statement>
@@ -244,7 +240,7 @@
           In ons deurlopende voorbeeld, sien ons uit
           <xref ref="b_in_terms_of_c" /> en <xref ref="b_in_terms_of_c_2" /> dat
           <me>
-            [\ve{b}_1]_\basis{C} = \left[ \begin{array}{c} 1 \\ 3 \end{array} \right], \quad [\ve{b}_2]_\basis{C} = \left[ \begin{array}{c} 2 \\ 3 \end{array} \right] \,
+            [\ve{b}_1]_\basis{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}, \quad [\ve{b}_2]_\basis{C} = \begin{bmatrix} 2 \\ 3 \end{bmatrix} \,
           </me>.
         </p>
 
@@ -252,7 +248,7 @@
           Daarom is die basisomskakelingsmatriks van
           <m>\basis{B}</m> na <m>\basis{C}</m>
            <me>
-            \mat{P}_{\basis{C} \leftarrow \basis{B}} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 3  \end{bmatrix}
+            \mat{P}_{\basis{C} \leftarrow \basis{B}} = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 3  \end{bmatrix}
           </me>.
         </p>
       </statement>
@@ -262,7 +258,7 @@
       Voordat ons verder gaan, moet ons 'n aspek van matriksvermenigvuldiging hersien.
       Veronderstel ons groepeer <m>m</m> kolomvektore saam om 'n matriks te vorm:
       <me>
-        \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}
+        \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] \amp \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] \amp \ldots \amp \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}
       </me>
     </p>
 
@@ -270,7 +266,7 @@
       (Ons basisomskakelingsmatriks <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> is
       so gevorm.) Dan kan ons die produk van hierdie matriks met 'n kolomvektor soos volg bereken:
       <men xml:id="column_vector_multiplication">
-        \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}
+        \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] \amp \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] \amp \ldots \amp \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}
       </men>
     </p>
 
@@ -314,7 +310,7 @@
           Laat <m>\ve{v} \in V</m>.
           Brei <m>\ve{v}</m> in die basis <m>\basis{B}</m> uit:
           <me>
-            \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \text{i.e. }  [\ve{v}]_\basis{B} = \left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right]
+            \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \text{i.e. }  [\ve{v}]_\basis{B} = \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}
           </me>.
         </p>
 
@@ -323,7 +319,7 @@
           <md>
             <mrow>[\ve{v}]_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}</mrow>
             <mrow>\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  (<xref ref="lin_of_coord_vectors">Lemma</xref>)</mrow>
-            <mrow>\amp =   \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right] \amp \amp <xref ref = "column_vector_multiplication"/></mrow>
+            <mrow>\amp =   \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right] \amp \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right] \amp \ldots \amp \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right] \amp \amp <xref ref = "column_vector_multiplication"/></mrow>
             <mrow>\amp =    \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
           </md>.
         </p>
@@ -333,25 +329,25 @@
     <example>
       <statement>
         <p>
-          In ons deurlopende voorbeeld, s&#xea; die stelling dat vir
+          In ons deurlopende voorbeeld, sê die stelling dat vir
           <em>enige</em> vektor <m>\ve{v} \in \mathbb{R}^2</m>,
           <me>
-            [\ve{v}]_\basis{C} = \begin{bmatrix} 1 &amp;  2 \\ 3 &amp;  3  \end{bmatrix} [\ve{v}]_\basis{B}  .
+            [\ve{v}]_\basis{C} = \begin{bmatrix} 1 \amp  2 \\ 3 \amp  3  \end{bmatrix} [\ve{v}]_\basis{B}  .
           </me>
         </p>
 
         <p>
           Dit geld in besonder ook vir ons vektor <m>\ve{w}</m>,
-          waarvan die ko&#xf6;rdinate in die basis <m>\ve{B}</m> is:
+          waarvan die koördinate in die basis <m>\ve{B}</m> is:
           <me>
-            [\ve{w}]_\basis{B} = \left[\begin{array}{c} -3 \\ 2 \end{array}\right]
+            [\ve{w}]_\basis{B} = \begin{bmatrix} -3 \\ 2 \end{bmatrix}
           </me>.
         </p>
 
         <p>
-          So in hierdie geval s&#xea; die stelling dat
+          So in hierdie geval sê die stelling dat
            <me>
-            [\ve{w}]_{\basis{C}} = \begin{bmatrix} 1 &amp;  2 \\ 3 &amp;  3 \end{bmatrix} \left[\begin{array}{c} -3 \\ 2\end{array}\right] = \left[ \begin{array}{c} 1 \\ -3 \end{array} \right]
+            [\ve{w}]_{\basis{C}} = \begin{bmatrix} 1 \amp  2 \\ 3 \amp  3 \end{bmatrix} \begin{bmatrix} -3 \\ 2\end{bmatrix} = \begin{bmatrix} 1 \\ -3 \end{bmatrix}
           </me>
           wat met ons vorige berekening <xref ref="w_in_basis_C" /> ooreenstem!
         </p>
@@ -367,19 +363,19 @@
           Beskou die volgende twee basisse vir <m>\Mat_{2,2}</m>:
           <me>
             \basis B = \left\{
-            \text{B}_1 =   \begin{bmatrix} 1 &amp;  0 \\ 0 &amp;  1 \end{bmatrix}, \,
-            \text{B}_2 =   \begin{bmatrix} 1 &amp;  0\\ 0 &amp;  -1 \end{bmatrix}, \,
-            \text{B}_3 =   \begin{bmatrix} 1 &amp;  1 \\ 1 &amp;  1 \end{bmatrix}, \,
-            \text{B}_4 =   \begin{bmatrix} 0 &amp;  1 \\ -1 &amp; 0 \end{bmatrix}
+            \text{B}_1 =   \begin{bmatrix} 1 \amp  0 \\ 0 \amp  1 \end{bmatrix}, \,
+            \text{B}_2 =   \begin{bmatrix} 1 \amp  0\\ 0 \amp  -1 \end{bmatrix}, \,
+            \text{B}_3 =   \begin{bmatrix} 1 \amp  1 \\ 1 \amp  1 \end{bmatrix}, \,
+            \text{B}_4 =   \begin{bmatrix} 0 \amp  1 \\ -1 \amp 0 \end{bmatrix}
             \right\}
           </me>
 
           <me>
             \basis C = \left\{
-            \text{C}_1 =   \begin{bmatrix} 1 &amp;  1 \\ 0 &amp;  0  \end{bmatrix}, \,
-            \text{C}_2 =   \begin{bmatrix} 1 &amp;  -1 \\ 0 &amp;  0 \end{bmatrix}, \,
-            \text{C}_3 =   \begin{bmatrix} 0 &amp;  0 \\ 1 &amp;  1 \end{bmatrix}, \,
-            \text{C}_4 =   \begin{bmatrix} 0 &amp;  0 \\ 1 &amp; -1 \end{bmatrix}
+            \text{C}_1 =   \begin{bmatrix} 1 \amp  1 \\ 0 \amp  0  \end{bmatrix}, \,
+            \text{C}_2 =   \begin{bmatrix} 1 \amp  -1 \\ 0 \amp  0 \end{bmatrix}, \,
+            \text{C}_3 =   \begin{bmatrix} 0 \amp  0 \\ 1 \amp  1 \end{bmatrix}, \,
+            \text{C}_4 =   \begin{bmatrix} 0 \amp  0 \\ 1 \amp -1 \end{bmatrix}
             \right\}
           </me>
 
@@ -397,7 +393,7 @@
               <p>
                 Bereken <m>[\mat{A}]_\basis{B}</m> en <m>[\mat{A}]_\basis{C}</m>, waar
                 <me>
-                  A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
+                  A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}
                 </me>.
               </p>
             </li>

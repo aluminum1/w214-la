@@ -5,7 +5,7 @@
   <definition>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding tussen vektorruimtes <m>V</m> en <m>W</m> wees.
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding tussen vektorruimtes <m>V</m> en <m>W</m> wees.
         Die <term>kern</term> van <m>T</m>, geskryf <m>\Ker(T)</m>,
         is die versameling van alle vektore <m>\ve{v} \in V</m> wat deur <m>T</m> op <m>\ve{0}_W</m> afgebeeld word.
         Dit is,
@@ -49,7 +49,7 @@
   </note>
 
   <figure xml:id = "ker_fig">
-    <caption><m>\Ker(T)</m> </caption>
+    <caption>'n Uitbeelding van <m>\Ker(T)</m>, die kern van <m>T</m> </caption>
     <image>
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -68,7 +68,7 @@
   </figure>
 
 <figure xml:id = "im_fig">
-  <caption > <m>\Be(T)</m></caption>
+  <caption > 'n Uitbeelding van <m>\Be(T)</m>, die beeld van <m>T</m></caption>
     <image>
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -87,19 +87,17 @@
   <lemma xml:id="ker-im-subspace">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding wees.
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding wees.
         Dan:
 
-        <ol>
+        <ol label="a">
           <li>
-
             <p>
               <m>\Ker(T)</m> is 'n deelruimte van <m>V</m>
             </p>
           </li>
 
           <li>
-
             <p>
               <m>\Be(T)</m> is 'n deelruimte van <m>W</m>
             </p>
@@ -111,7 +109,7 @@
 
   <proof>
     <p>
-      (i) Ons moet seker maak dat die drie vereistes van 'n  deelruimte bevredig word.
+      In albei gevalle moet ons seker maak dat die drie vereistes van 'n  deelruimte bevredig word.
 
       <ol>
         <li>
@@ -140,7 +138,7 @@
           <p>
             Om te wys dat <m>\ve{0}_V</m> in <m>\Ker(T)</m> is, moet ons wys dat
             <m>T(\ve{0}_V) = \ve{0}_W</m>. Inderdaad, dit is waar want <m>T</m>
-            is 'n line&#xea;re afbeelding, volgens <xref ref="lin_map_zero_to_zero">Lemma</xref>.
+            is 'n lineêre afbeelding, volgens <xref ref="lin_map_zero_to_zero">Lemma</xref>.
           </p>
         </li>
 
@@ -163,7 +161,7 @@
     </p>
 
     <p>
-      (ii) Weereens moet ons die drie vereistes van 'n deelruimte nagaan.
+      Nou bevestig ons dat <m>\Be(T)</m> die drie vereistes bevredig.
 
       <ol>
         <li>
@@ -200,7 +198,6 @@
         </li>
 
         <li>
-          <title>c.</title>
           <p>
             <m>\Be(T)</m> is geslote onder skalaarvermenigvuldiging.
           </p>
@@ -222,7 +219,7 @@
   </proof>
 
   <p>
-    Nou dat ons weet dat die kern en beeld van 'n line&#xea;re afbeelding
+    Nou dat ons weet dat die kern en beeld van 'n lineêre afbeelding
     deelruimtes is en dus vektorruimtes in eie reg,
     kan ons die volgende definisie gee.
   </p>
@@ -230,12 +227,12 @@
   <definition>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding vanaf 'n eindig-dimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding vanaf 'n eindig-dimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
         Die <term>nulheidsgraad</term> van <m>T</m> is die dimensie van <m>\Ker(T)</m>,
         en die <term>rang</term> van <m>T</m> is die dimensie van <m>\Be(T)</m>:
         <md>
           <mrow>\Nhg(T) \amp := \Dim (\Ker(T))</mrow>
-          <mrow>\Rang(T) \amp = \Dim (\Be(T))</mrow>
+          <mrow>\Rang(T) \amp := \Dim (\Be(T))</mrow>
         </md>
       </p>
     </statement>
@@ -243,7 +240,7 @@
 
   <insight>
     <p>
-      Die <sq>dimensie van <m>\Ker(T)</m></sq> maak sin, want <m>\Ker(T)</m> is 'n deelruimte van 'n eindig-dimensionele vektorruimte <m>V</m>,
+      Die <q>dimensie van <m>\Ker(T)</m></q> maak sin, want <m>\Ker(T)</m> is 'n deelruimte van 'n eindig-dimensionele vektorruimte <m>V</m>,
       en daarom is dit eindig-dimensioneel volgens <xref ref="dim-of-subspace-prop">Proposisie</xref>.
       Ons weet nog nie dat <m>\Be(T)</m>
       eindig-dimensioneel is nie, maar dit sal volg uit die  Rang-Nulheidgraad-stelling
@@ -255,7 +252,7 @@
     <statement>
       <p>
         Laat <m>\ve{a} \in \mathbb{R}^3</m> 'n konstante nie-nul vektor wees.
-        Oorweeg die <sq>kruisproduk met <m>\ve{a}</m></sq>-line&#xea;re afbeelding van
+        Oorweeg die <q>kruisproduk met <m>\ve{a}</m></q>-lineêre afbeelding van
         <xref ref="cross_prod_as_linear_map">Voorbeeld</xref>,
         <md>
           <mrow>C : \mathbb{R}^3 \amp  \rightarrow \mathbb{R}^3</mrow>
@@ -324,8 +321,8 @@
         vektore <m>\ve{w}</m> van die vorm <m>\ve{w} = \ve{a} \times \ve{v}</m> vir
         een of ander <m>\ve{v} \in \mathbb{R}^3</m>.
         Dit impliseer dat <m>\ve{w}</m> loodreg op <m>\ve{a}</m> is.
-        Dit was die <sq>maklike</sq> deel.
-        Die <sq>moeliker</sq> deel is om die omgekeerde rigting te bewys.
+        Dit was die <q>maklike</q> deel.
+        Die <q>moeliker</q> deel is om die omgekeerde rigting te bewys.
         Dit is, ons moet wys dat as <m>\ve{u}</m> loodreg op <m>\ve{a}</m> is,
         dan is <m>\ve{u}</m> in die beeld van
         <m>C</m>, i.e. daar bestaan 'n vektor <m>\ve{v}</m> sodat <m>C(\ve{v}) = \ve{u}</m>.
@@ -374,7 +371,7 @@
   <example>
     <statement>
       <p>
-        Bepaal die kern, beeld en nulheidsgraad van die line&#xea;re afbeelding
+        Bepaal die kern, beeld en nulheidsgraad van die lineêre afbeelding
         <md>
           <mrow>I : \Trig_2 \amp  \rightarrow \mathbb{R}</mrow>
           <mrow>T \amp  \mapsto \int_0^\pi T(x) dx </mrow>
@@ -410,7 +407,7 @@
       </p>
 
       <p>
-        Die beeld van <m>I</m> bestaan uit alle re&#xeb;le getalle
+        Die beeld van <m>I</m> bestaan uit alle reële getalle
         <m>p \in \mathbb{R}</m>, sodat daar 'n
         <m>T \in \Trig_2</m> bestaan waarvoor <m>I(T) = p</m>.
         Ek beweer nou dat
@@ -433,7 +430,7 @@
 
       <p>
         Let daarop dat die keuse van <m>T(x) = \frac{p}{2} \sin(x)</m> wat <m>I(T) = p</m> bevredig nie uniek is nie.
-        Ons kan s&#xea; <m>\tilde{T} = T + S</m> waar <m>S \in \Ker(I)</m> en ons sal steeds h&#xea;
+        Ons kan sê <m>\tilde{T} = T + S</m> waar <m>S \in \Ker(I)</m> en ons sal steeds hê
         dat <m>I(\tilde{T})=p</m>:
         <me>
           I(\tilde{T}) = I(T + S) = I(T) + I(S) =  p + 0 = p
@@ -453,13 +450,13 @@
       </p>
 
       <p>
-        Wys dat <m>T</m> 'n line&#xea;re afbeelding is,
+        Wys dat <m>T</m> 'n lineêre afbeelding is,
         en bepaal <m>T</m> se kern, beeld, rang en nulheidsgraad.
       </p>
     </statement>
     <solution>
       <p>
-        Ons wys eers dat <m>T</m> 'n line&#xea;re afbeelding is.
+        Ons wys eers dat <m>T</m> 'n lineêre afbeelding is.
         Laat <m>p,q \in \Poly_2</m>.
         Dan
         <md>
@@ -694,7 +691,7 @@
     <title>Rang-Nulheidsgraadstelling</title>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding vanaf 'n eindig dimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding vanaf 'n eindig dimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
         Dan
         <me>
           \Nhg(T) + \Rang(T) = \Dim(V)
@@ -725,7 +722,7 @@
     </p>
 
     <p>
-      <em><m>\basis{D}</m> is line&#xea;r onafhanklik</em>.
+      <em><m>\basis{D}</m> is lineêr onafhanklik</em>.
       Veronderstel
       <me>
         b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p) = \ve{0}_W
@@ -738,7 +735,7 @@
       <me>
         b_1 \ve{f}_1 + \cdots + b_p \ve{f}_p \in \Ker(T)
       </me>
-      wat beteken ons kan dit as 'n line&#xea;re kombinasie van vektore in <m>\basis{B}</m> skryf,
+      wat beteken ons kan dit as 'n lineêre kombinasie van vektore in <m>\basis{B}</m> skryf,
       <me>
         b_1 \ve{f}_1 + \cdots + b_p \ve{f}_p = a_1 \ve{e}_1 + \cdots + a_k \ve{e}_k
       </me>.
@@ -752,8 +749,8 @@
     </p>
 
     <p>
-      Ons herken die linkerkant as 'n line&#xea;re kombinasie van die <m>\basis{C}</m>-basisvektore.
-      Aangesien hulle line&#xea;r onafhanklik is,
+      Ons herken die linkerkant as 'n lineêre kombinasie van die <m>\basis{C}</m>-basisvektore.
+      Aangesien hulle lineêr onafhanklik is,
       moet al die skalare nul wees.
       Onder andere, <m>b_1 = \cdots = b_p = 0</m>,
       wat is wat ons wou bewys.
@@ -762,7 +759,7 @@
     <p>
       <em><m>\basis{D}</m> span <m>W</m></em>.
       Veronderstel <m>\ve{w} \in\Be(T)</m>.
-      Ons moet wys dat <m>\ve{w}</m> 'n line&#xea;re kombinasie van vektore in <m>\basis{D}</m> is.
+      Ons moet wys dat <m>\ve{w}</m> 'n lineêre kombinasie van vektore in <m>\basis{D}</m> is.
       Aangesien <m>\ve{w}</m> in die beeld van <m>T</m> is,
       bestaan daar 'n <m>\ve{v} \in V</m> sodat <m>T(\ve{v}) = \ve{w}</m>.
       Omdat <m>\basis{C}</m> 'n basis vir <m>V</m> is, kan ons
@@ -777,7 +774,7 @@
         <mrow>\amp = a_1 T(\ve{e}_1) + \cdots + a_k T(\ve{e}_k) + b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p)</mrow>
         <mrow>\amp = b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p) \amp \amp  (\ve{e}_i \in \Ker(T))</mrow>
       </md>
-      sodat <m>\ve{w}</m> wel 'n line&#xea;re kombinasie van die vektore in <m>\basis{D}</m> is.
+      sodat <m>\ve{w}</m> wel 'n lineêre kombinasie van die vektore in <m>\basis{D}</m> is.
     </p>
   </proof>
 </theorem>
@@ -870,7 +867,7 @@
   <exercise>
     <statement>
       <p>
-        Verifieer die Rang-Nulheidgraad-stelling vir die volgende line&#xea;re afbeeldings.
+        Verifieer die Rang-Nulheidgraad-stelling vir die volgende lineêre afbeeldings.
         D.w.s., vir elke afbeelding <m>T</m>,
         (a) bepaal <m>\Ker(T)</m> en <m>\Be(T)</m> eksplisiet,
         (b) bepaal die dimensie van <m>\Ker(T)</m> en <m>\Be(T)</m>,
@@ -917,7 +914,7 @@
 
           <li>
             <p>
-              Die <sq>krul</sq> afbeelding
+              Die <q>krul</q> afbeelding
               <md>
                 <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
                 <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
@@ -1068,7 +1065,7 @@
   <exercise>
     <statement>
       <p>
-        Gee 'n voorbeeld van 'n line&#xea;re afbeelding
+        Gee 'n voorbeeld van 'n lineêre afbeelding
         <m>T : \Col_4 \rightarrow \Col_4</m> sodat <m>\Rang(T) = \Nhg(T)</m>.
       </p>
     </statement>
@@ -1096,7 +1093,7 @@
   <exercise>
     <statement>
       <p>
-        Vir elkeen van die volgende bewerings, s&#xea; of dit
+        Vir elkeen van die volgende bewerings, sê of dit
         <em>waar</em> of <em>onwaar</em> is.
         As dit waar is, bewys dit.
         Indien nie, bewys dit.
@@ -1104,7 +1101,7 @@
         <ol>
           <li>
             <p>
-              Daar bestaan 'n line&#xea;re afbeelding <m>T : \mathbb{R}^5 \rightarrow \mathbb{R}^2</m> sodat
+              Daar bestaan 'n lineêre afbeelding <m>T : \mathbb{R}^5 \rightarrow \mathbb{R}^2</m> sodat
               <me>
                 \Ker(T) = \{ (x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5 :  x_1 = 3x_2 \text{ en }  x_3 = x_4 = x_5\}
               </me>.
@@ -1113,7 +1110,7 @@
 
           <li>
             <p>
-              Daar bestaan 'n line&#xea;re afbeelding
+              Daar bestaan 'n lineêre afbeelding
               <m>F : \Trig_3 \rightarrow \Trig_3</m> sodat <m>\Rang(T) = \Nhg(T)</m>.
             </p>
           </li>
@@ -1158,7 +1155,7 @@
         <ol>
           <li>
             <p>
-              Wys dat <m>D_{\ve{p}}</m> soos hierbo gedefinieer 'n line&#xea;re afbeelding is.
+              Wys dat <m>D_{\ve{p}}</m> soos hierbo gedefinieer 'n lineêre afbeelding is.
             </p>
           </li>
 
@@ -1253,7 +1250,7 @@
         Ek beweer dat die <em>beeld</em>
         van <m>C</m> die deelruimte van
         <em>alle</em> vektore loodreg op <m>\ve{a}</m> is, i.e.
-        <men xml:id="image-of-C">
+        <men>
           \Be(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}
         </men>.
       </p>

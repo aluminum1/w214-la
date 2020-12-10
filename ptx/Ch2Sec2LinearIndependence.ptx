@@ -89,7 +89,7 @@
       <me>
         2 (-1, \, 2) - 2 (1, \, 1) + 2 (2, \, -1) = (0, \, 0)
       </me>
-      so that <xref ref="eqn_to_check_lin_ind" /> has nontrivial solutions.
+      so that <xref ref="eqn_to_check_lin_ind" /> has non-trivial solutions.
     </p>
     </statement>
   </example>
@@ -187,7 +187,7 @@
       <men xml:id="lin_dep_lem_another_eqn">
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
       </men>.
-      Let <m>k_s</m> be one of the nonzero coefficients. Then, by taking the other vectors to the other side of the equation, and multiplying by <m>\frac{1}{k_s}</m> we can solve for <m>\ve{v}_s</m> in terms of the other vectors:
+      Let <m>k_s</m> be one of the non-zero coefficients. Then, by taking the other vectors to the other side of the equation, and multiplying by <m>\frac{1}{k_s}</m> we can solve for <m>\ve{v}_s</m> in terms of the other vectors:
       <md>
         <mrow>
           \ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \text{(No } \ve{v}_i \text{ terms on RHS)}
@@ -309,8 +309,8 @@
     </solution>
   </example>
 
-  <proposition xml:id="bumping_off_lemma">
-    <title>Steinitz Exchange Lemma</title>
+  <proposition xml:id="Steinitz-exchange-lemma">
+    <title>The Steinitz Exchange Lemma</title>
 
     <statement>
       <p>
@@ -328,7 +328,7 @@
       <men>
         \basis{S} = \left\{ \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \right\}
       </men>
-      and consider the <sq>bloated</sq> list
+      and consider the <q>bloated</q> list
       <men xml:id="bloated_list">
         \basis{S}' = \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \ve{s}_n \right\}
       </men>
@@ -340,7 +340,7 @@
     <p>
       <ul>
         <li> <m>\ve{l}_1 = \ve{0}</m>. This cannot be true, since then <m>\basis{L}</m> would be linearly dependent by <xref ref="remark_about_lin_dependence"/>, contradicting our initial assumption. </li>
-        <li> or one of the <m>\ve{s}</m>-vectors, say <m>\ve{s}_r</m>, can be expressed as a linear combination of the preceding vectors. We can then remove <m>\ve{s}_r</m> from the list <m>\basis{S}'</m> (<sq>bump it off</sq>), and the resulting list
+        <li> or one of the <m>\ve{s}</m>-vectors, say <m>\ve{s}_r</m>, can be expressed as a linear combination of the preceding vectors. We can then remove <m>\ve{s}_r</m> from the list <m>\basis{S}'</m> (<q>exchange it with <m>\ve{l}_1</m></q>), and the resulting list
         <men>
           \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad (\ve{s}_r \text{ omitted)}
         </men>
@@ -425,24 +425,24 @@
         The list of vectors in <m>\Mat_{2,2}</m> given by
         <me>
           \ve{v}_1 = \begin{bmatrix}
-            1 &amp; 2 \\
-            1 &amp; 1
+            1 \amp 2 \\
+            1 \amp 1
           \end{bmatrix},\,
           \ve{v}_2 = \begin{bmatrix}
-            1 &amp; 0 \\
-            -2 &amp; 1
+            1 \amp 0 \\
+            -2 \amp 1
           \end{bmatrix},\,
           \ve{v}_3 = \begin{bmatrix}
-            1 &amp; 0 \\
-            2 &amp; 3
+            1 \amp 0 \\
+            2 \amp 3
           \end{bmatrix},\,
           \ve{v}_4 = \begin{bmatrix}
-            0 &amp; 3 \\
-            1 &amp; -1
+            0 \amp 3 \\
+            1 \amp -1
           \end{bmatrix},\,
           \ve{v}_5 = \begin{bmatrix}
-            1 &amp; 0 \\
-            0 &amp; 1
+            1 \amp 0 \\
+            0 \amp 1
           \end{bmatrix}
         </me>
         is linearly dependent
@@ -457,14 +457,14 @@
       Firstly note that <m> \ve v_1  </m> is non-zero, so we consider <m> \ve v_2 </m>. <m> \ve v_2 </m> cannnot be a scalar multiple of <m> \ve v_1</m> by considering the matrix entry in position (1,2). We now consider <m> \ve v_3 </m>. Suppose
       <me>
         a\begin{bmatrix}
-          1 &amp; 2 \\
-          1 &amp; 1
+          1 \amp 2 \\
+          1 \amp 1
         \end{bmatrix} + b \begin{bmatrix}
-          1 &amp; 0 \\
-          -2 &amp; 1
+          1 \amp 0 \\
+          -2 \amp 1
         \end{bmatrix} = \begin{bmatrix}
-          1 &amp; 0 \\
-          2 &amp; 3
+          1 \amp 0 \\
+          2 \amp 3
         \end{bmatrix}
       </me>
       This gives rise to a system of four linear equations. In particular, we have the equation for the matrix entry in position (1,2):
@@ -474,30 +474,30 @@
       And hence <m> a = 0 </m>. But clearly
       <me>
         b \begin{bmatrix}
-          1 &amp; 0 \\
-          -2 &amp; 1
+          1 \amp 0 \\
+          -2 \amp 1
         \end{bmatrix} \neq \begin{bmatrix}
-          1 &amp; 0 \\
-          2 &amp; 3
+          1 \amp 0 \\
+          2 \amp 3
         \end{bmatrix}
       </me>
       for any choice of <m> b</m>. Hence <m> \ve v_3 </m> is not a linear combination of <m> \ve v_1 </m> and <m> \ve v_2</m>. We consider <m> \ve v_4 </m> next. Suppose
       <me>
         a\begin{bmatrix}
-          1 &amp; 2 \\
-          1 &amp; 1
+          1 \amp 2 \\
+          1 \amp 1
         \end{bmatrix} +
         b \begin{bmatrix}
-          1 &amp; 0 \\
-          -2 &amp; 1
+          1 \amp 0 \\
+          -2 \amp 1
         \end{bmatrix} +
         c \begin{bmatrix}
-          1 &amp; 0 \\
-          2 &amp; 3
+          1 \amp 0 \\
+          2 \amp 3
         \end{bmatrix} =
         \begin{bmatrix}
-          0 &amp; 3 \\
-          1 &amp; -1
+          0 \amp 3 \\
+          1 \amp -1
         \end{bmatrix}
       </me>
       The equation for the entry in position (1,2) is simply
@@ -553,7 +553,7 @@
     </statement>
     <hint>
       <p>
-        Use the Linear Combination of Preceding Vectors Proposition.
+        Use <xref ref="lin_dependence_prop"/>.
       </p>
     </hint>
     <!--
@@ -601,7 +601,6 @@ and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-
 
 </exercises>
 
-<solutions divisional="solution answer" />
 
 
 </section>

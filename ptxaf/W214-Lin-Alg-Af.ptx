@@ -39,7 +39,8 @@
 \newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
 \newcommand{\bopen}{\{\llap{-}}
 \newcommand{\bclose}{\rlap{-}\}}
-\newcommand{\mamp}{&amp;}
+\newcommand{\mamp}{\amp}
+% The \amp command changes correctly whether html or latex is used. This used to be &amp; which works correctly only in html. I didn't want to search for all occurrences of \mamp.
 \newcommand{\mapsfrom}{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
 
 
@@ -113,7 +114,7 @@
         <section>
           <title>Wenke en antwoorde vir Oefeninge</title>
           <p></p>
-          <solutions divisional = "hint answer" reading = "hint answer" worksheet = "hint answer" project = "hint answer" scope="w214-lin-alg" >
+          <solutions divisional = "hint answer" reading = "hint answer" worksheet = "hint answer" project = "hint answer" scope="W214-Lin-Alg-Af" >
             <title>Wenke en antwoorde</title>
           </solutions>
         </section>
@@ -121,7 +122,7 @@
         <section>
           <title>Oplossings vir Oefeninge</title>
           <p></p>
-          <solutions divisional = "solution" reading = "solution" worksheet = "solution" project = "solution" scope="w214-lin-alg" >
+          <solutions divisional = "solution" reading = "solution" worksheet = "solution" project = "solution" scope="W214-Lin-Alg-Af" >
             <title>
               Oplossings
             </title>

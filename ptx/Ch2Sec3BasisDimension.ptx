@@ -32,8 +32,7 @@
 
     <proof>
       <p>
-        This is a consequence of <xref ref="bumping_off_lemma">Proposition</xref>
-        (the Bumping Off Proposition).
+        This is a consequence of <xref ref="Steinitz-exchange-lemma" text="title"></xref>.
         Since the <m>\ve{b}</m>-vectors are linearly independent and the <m>\ve{c}</m>-vectors span <m>V</m>,
         we have <m>m \leq n</m>.
         On the other hand,
@@ -57,7 +56,7 @@
 
     <remark>
       <p>
-        Note that the concept of <sq>dimension of a vector space</sq> is only well-defined because of <xref ref="inv_dim">Theorem</xref>.
+        Note that the concept of <q>dimension of a vector space</q> is only well-defined because of <xref ref="inv_dim">Theorem</xref>.
       </p>
     </remark>
 
@@ -154,9 +153,9 @@
           </input>
         </sage>
       <p> SageMath outputs: </p>
-      <sidebyside>
-       <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
-      </sidebyside>
+
+      <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
+
       <p>
       So indeed,  equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  have only the trivial solution. Therefore the list of vectors is linearly independent. </p>
 
@@ -191,11 +190,11 @@
           This is actually something important to realise in the writing of proofs. The <m>w_i</m> are arbitrary, but are fixed at the start of the proof and the argument is then applied to the fixed vectors <m>w_i</m>. Even if we choose different values for the <m>w_i</m> afterwards, the <em>argument</em> still applies to those values and we know that they system has a solution for any values we can choose.
         </p>
       </aside>
-      <sidebyside>
+
         <p>
           <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </c>
         </p>
-      </sidebyside>
+
       <p>In other words, there does indeed exist a solution, no matter what <m>(w_1, w_2, w_3, w_4)</m> is. For instance, if <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, then the solution is
       <me>
          a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{36}.
@@ -253,7 +252,7 @@
       </p>
 
         <p>
-          But, we know from algebra that a polynomial equation of the form <xref ref="root_of_poly" /> with nonzero coefficients has <em>at most</em>
+          But, we know from algebra that a polynomial equation of the form <xref ref="root_of_poly" /> with non-zero coefficients has <em>at most</em>
           <m>n</m> roots <m>x_1, x_2, \ldots, x_n</m>.
           So, in order for <xref ref="root_of_poly" /> to hold for
           <em>all</em> real numbers <m>x</m>,
@@ -342,7 +341,7 @@
         <xref ref="defn_of_basis_of_functions" /> occurs so often
         in mathematics we give it a symbol of its own,
         <m>\delta_{ab}</m>
-        (the <sq>Kronecker delta</sq>).
+        (the <q>Kronecker delta</q>).
         This symbol stands for the formula:
         <q>If <m>a=b</m>, return a 1.
         If <m>a \neq b</m>, return a <m>0</m></q>.
@@ -450,26 +449,26 @@
         <p>
           The standard basis of <m>\Mat_{2,2}</m> is
           <me>
-            \mat{E}_{11} = \left[
-            \begin{array}{cc}
+            \mat{E}_{11} =
+            \begin{bmatrix}
               1 \amp  0 \\
               0 \amp  0
-            \end{array}
-            \right], \, \mat{E}_{12} = \left[
-            \begin{array}{cc}
+            \end{bmatrix}, \,
+            \mat{E}_{12} =
+            \begin{bmatrix}
               0 \amp  1 \\
               0 \amp  0
-            \end{array}
-            \right], \mat{E}_{21} = \left[
-            \begin{array}{cc}
+            \end{bmatrix}, \,
+            \mat{E}_{21} =
+            \begin{bmatrix}
               0 \amp  0 \\
               1 \amp  0
-            \end{array}  \right], \mat{E}_{22} = \left[
-            \begin{array}{cc}
+            \end{bmatrix}, \,
+            \mat{E}_{22} =
+            \begin{bmatrix}
               0 \amp  0 \\
               0 \amp  1
-            \end{array}
-            \right]
+            \end{bmatrix}
           </me>.
         </p>
       </statement>
@@ -480,13 +479,13 @@
         <p>
           The standard basis of <m>\Col_n</m> is
           <me>
-            \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
-            \end{array}  \right], \,
-            \col{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
-            \end{array}  \right], \,
+            \col{e}_1 := \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0
+            \end{bmatrix}, \,
+            \col{e}_2 := \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0
+            \end{bmatrix}, \,
             \ldots, \,
-            \col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
-            \end{array}  \right]
+            \col{e}_n := \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1
+            \end{bmatrix}
           </me>.
         </p>
       </statement>
@@ -504,7 +503,7 @@
           <men xml:id="eqn_for_W_1">
             W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.
           </men>
-          There is no <sq>standard</sq> basis for <m>W</m>. But, here is one basis (as good as any other):
+          There is no <q>standard</q> basis for <m>W</m>. But, here is one basis (as good as any other):
           <men xml:id="ab_basis_orth_plane">
             \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{2}{3}).
           </men>
@@ -634,7 +633,7 @@
         </p>
 
     <p>
-      <alert>Step 1. <m> \bopen y_0, \ldots, y_{n-1} \bclose </m> is linearly independent.</alert>
+      Step 1: We show that <m> \bopen y_0, \ldots, y_{n-1} \bclose </m> is linearly independent.
     </p>
       <p>
         Suppose
@@ -662,7 +661,7 @@
       </p>
 
       <p>
-      <alert>Step 2. <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> spans <m>V</m>.</alert>
+      Step 2: We show that <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> spans <m>V</m>.
       </p>
       <p>
         Let <m>y</m> be an arbitrary solution to the differential equation <xref ref="diff_eqn_in_thm"/>. We need to show that <m>y</m> can be expressed as a linear combination of <m>y_0, \ldots, y_{n-1}</m>.
@@ -807,7 +806,7 @@
 
     <proof>
       <p>
-        <alert>Proving that <m>\Dim(W) \leq \Dim(V)</m></alert>
+        First we prove that <m>\Dim(W) \leq \Dim(V)</m>.
       </p>
       <p> Let
         <me>
@@ -817,7 +816,7 @@
         <me>
           \basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_k \bclose
         </me>
-        for <m>W</m>. For then <m>\basis{B}</m> will be a list of <m>k</m> linearly independent vectors which live in <m>W</m> (and hence also in <m>V</m>) and hence we must have <m>k \leq n</m> by <xref ref="bumping_off_lemma"/>, as <m>\basis{C}</m> spans <m>V</m>.
+        for <m>W</m>. For then <m>\basis{B}</m> will be a list of <m>k</m> linearly independent vectors which live in <m>W</m> (and hence also in <m>V</m>) and hence we must have <m>k \leq n</m> by <xref ref="Steinitz-exchange-lemma" text="title"/>, as <m>\basis{C}</m> spans <m>V</m>.
       </p>
 
       <p>
@@ -829,7 +828,7 @@
       </p>
 
       <p>
-        If <m>W</m> is not the zero vector space, then there exists a nonzero vector <m>\ve{w}_1 \in W</m>. Consider the list <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Note that <m>\basis{B}_1</m> is linearly independent, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_1</m> spans <m>W</m>, then it is a basis for <m>W</m>, and so <m>W</m> is finite-dimensional and we are done.
+        If <m>W</m> is not the zero vector space, then there exists a non-zero vector <m>\ve{w}_1 \in W</m>. Consider the list <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Note that <m>\basis{B}_1</m> is linearly independent, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_1</m> spans <m>W</m>, then it is a basis for <m>W</m>, and so <m>W</m> is finite-dimensional and we are done.
       </p>
 
       <p>
@@ -844,23 +843,34 @@
       </p>
 
        <p>
-        This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="bumping_off_lemma"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.
+        This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="Steinitz-exchange-lemma" text="title"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.
       </p>
       <p>
-        <alert>Proving that <m>\Dim(V) = \Dim(W) \Rightarrow W = V</m></alert>
+        Now we prove that if <m>\Dim(V) = \Dim(W)</m>, then <m>W = V</m>.
       </p>
       <p>
         Suppose that <m>\Dim(W) = \Dim(V)</m> but that <m>W \neq V</m>. Since <m>W \neq V</m>, there exists a vector <m>\ve{v}</m> which is an element of <m>V</m> but not an element of <m>W</m>. Let <m>\basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_n \bclose</m> be a basis for <m>W</m>. We can add <m>\ve{v}</m> to <m>\basis{B}</m> to get the following list of vectors in <m>V</m>:
         <me>
           \basis{B}' = \bopen \ve{w}_1, \ldots, \ve{w}_n, \ve{v} \bclose.
         </me>
-        Since <m>\ve{v}</m> cannot be written as a linear combination of <m>\ve{w}_1, \ldots, \ve{w}_n</m>, we conclude that <m>\basis{B}'</m> linearly lindependent, by <xref ref="lin_comb_prec_vec"/>. But then <m>\basis{B}'</m> is a list of <m>n+1</m> linearly independent vectors in an <m>n</m>-dimensional vector space <m>V</m>. This is impossible, by <xref ref="bumping_off_lemma"/>. Therefore our assumption was false, and we must have <m>W = V</m>.
+        Since <m>\ve{v}</m> cannot be written as a linear combination of <m>\ve{w}_1, \ldots, \ve{w}_n</m>, we conclude that <m>\basis{B}'</m> linearly lindependent, by <xref ref="lin_comb_prec_vec"/>. But then <m>\basis{B}'</m> is a list of <m>n+1</m> linearly independent vectors in an <m>n</m>-dimensional vector space <m>V</m>. This is impossible, by <xref ref="Steinitz-exchange-lemma" text="title"/>. Therefore our assumption was false, and we must have <m>W = V</m>.
       </p>
     </proof>
   </subsection>
 
   <subsection>
     <title>Infinite-dimensional vector spaces</title>
+
+    <definition>
+      <statement>
+        <p>
+          A vector space <m>V</m> is called
+          <term>infinite-dimensional</term> if
+          it is not finite dimensional.
+        </p>
+      </statement>
+    </definition>
+
     <p>
       It is good to have an example of an infinite-dimensional vector space.
     </p>
@@ -909,7 +919,7 @@
 
             <li>
               <p>
-                <m>\Cont(I)</m> for any nonempty interval <m>I</m>, and
+                <m>\Cont(I)</m> for any non-empty interval <m>I</m>, and
               </p>
             </li>
 
@@ -933,8 +943,8 @@
   <subsection xml:id="sifting_subsection">
     <title>The sifting algorithm and its uses</title>
     <p>
-      If we consider the proof of <xref ref="bumping_off_lemma">Proposition</xref>
-      (the <sq>Bumping off</sq> Proposition)
+      If we consider the proof of
+      <xref ref="Steinitz-exchange-lemma" text="title"></xref>
       carefully, we find that it makes use of a <em>sifting algorithm</em>.
       This algorithm can actually be applied to <em>any</em>
       list of vectors <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> in a vector space.
@@ -994,7 +1004,7 @@
     <exercise>
         <statement>
           <p>
-            Do the three <sq>check this</sq> calculations above.
+            Do the three <q>check this</q> calculations above.
           </p>
         </statement>
         <solution>
@@ -1167,16 +1177,14 @@
         If it is true, prove it.
         If it is false, give a counterexample.
 
-        <ol>
+        <ol label="a">
           <li>
-            <title>(a)</title>
             <p>
               Any linearly independent list of vectors in <m>V</m> contains at most <m>n</m> vectors.
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               Any list of vectors which spans <m>V</m> contains at least <m>n</m> vectors.
             </p>
@@ -1314,9 +1322,8 @@
         and <xref ref="n_lin_ind_is_basis"></xref>
         to determine if <m>\basis{B}</m> is a basis for <m>V</m>.
 
-        <ol>
+        <ol label="a">
           <li>
-            <title>(a)</title>
             <p>
               <m>V = \Poly_2</m>,
               <m>\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1 + x - 3x^2, \, x-x^2 \right\}</m>
@@ -1324,21 +1331,20 @@
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               <m>V = \Mat_{2,2}</m>,
               <me>\basis{B} = \left\{
                  \begin{bmatrix}
-                  1 &amp; 2 \\
-                  -1 &amp; 3
+                  1 \amp 2 \\
+                  -1 \amp 3
                 \end{bmatrix},\,
                  \begin{bmatrix}
-                  0 &amp; 1\\
-                  3 &amp; -1
+                  0 \amp 1\\
+                  3 \amp -1
                 \end{bmatrix},\,
                 \begin{bmatrix}
-                  1 &amp; 2\\
-                  3 &amp; 4
+                  1 \amp 2\\
+                  3 \amp 4
                 \end{bmatrix}
                      \right\}
               </me>
@@ -1346,7 +1352,6 @@
           </li>
 
           <li>
-            <title>(c)</title>
             <p>
               <m>V = \Trig_2</m>,
               <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
@@ -1385,16 +1390,14 @@
         If it is false, give a counterexample.
         (Hint: Use the definition of linear independence.)
 
-        <ol>
+        <ol label="a">
           <li>
-            <title>(a)</title>
             <p>
               The list <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               The list <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly independent.
             </p>
@@ -1464,16 +1467,14 @@
         show that <m>V</m> is a subspace of <m>\Poly_2</m>,
         find a basis for <m>V</m>, and compute <m>\Dim V</m>.
 
-        <ol>
+        <ol label="a">
           <li>
-            <title>(a)</title>
             <p>
               <m>V = \{ p \in \Poly_2 : p(2) = 0 \}</m>
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               <m>V = \{ p \in \Poly_2 : xp'(x) = p(x) \}</m>
             </p>
@@ -1579,8 +1580,7 @@
 
   </exercises>
 
- <solutions divisional="solution answer" xml:id="my_solutions" />
-<!-- Originally this had a scope attribute, but the code didn't validate with it -->
+
 
 </section>
 

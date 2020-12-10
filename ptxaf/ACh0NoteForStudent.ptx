@@ -3,8 +3,8 @@
 <preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ACh0NoteForStudent">
   <title >Nota aan die student</title>
   <p>
-    Jou tweede ontmoeting met line&#xea;re algebra l&#xea;     tans voor jou.
-    In die eerste jaar is daar gefokus op stelsels van line&#xea;re vergelykings,
+    Jou tweede ontmoeting met lineêre algebra lê     tans voor jou.
+    In die eerste jaar is daar gefokus op stelsels van lineêre vergelykings,
     matrikse en hul determinante.
     Hierdie kursus (Wiskunde 214) keer terug na hierdie
     onderwerpe, maar met 'n meer abstrakte, wiskundige aanslag.
@@ -16,11 +16,11 @@
     en om slegs die mees belangrike kenmerke van 'n probleem in ag te neem.
     Dit help jou om die probleem beter te verstaan.
     Daar is minder om jou te verwar!
-    Verder, as jy 'n ander probleem sou te&#xeb;kom
+    Verder, as jy 'n ander probleem sou teëkom
     wat op eerste oogopslag anders lyk,
     maar dieselfde belangrike kenmerke as die oorskpronklike het,
     dan kan jy die probleem op dieselfde manier verstaan.
-    D&#xed;t maak abstraksie baie kragtig.
+    Dít maak abstraksie baie kragtig.
   </p>
 
   <p>
@@ -31,7 +31,7 @@
     (en abstrakte wiskundige denke te ontwikkel)
     kan aanvanklik oorweldigend voel.
     Maar volhard!
-    Eendag sal jy dit <sq>snap</sq>
+    Eendag sal jy dit <q>snap</q>
     en jy sal besef dat dit heelwat eenvoudiger is
     as wat jy jou voorgestel het.
   </p>
@@ -40,7 +40,7 @@
     'n Mens kan nie wiskunde soos 'n roman lees nie.
     Jy het 'n <em>pen en notaboekie</em> byderhand nodig
     en jy sal aktief by die materiaal <em>betrokke</em> moet raak.
-    As jy byvoorbeeld 'n definisie te&#xeb;kom,
+    As jy byvoorbeeld 'n definisie teëkom,
     begin deur dit in jou notaboekie neer te skryf.
     Net die blote skryf daarvan kan terapeuties wees!
   </p>
@@ -49,8 +49,8 @@
     As jy 'n uitgewerkte voorbeeld behandel,
     skryf die voorbeeld self uit.
     Miskien probeer die voorbeeld vir jou wys dat <m>A</m> gelyk aan <m>B</m> is.
-    Vra jouself: Verstaan ek regtig wat <sq><m>A</m></sq> beteken?
-    En wat <sq><m>B</m></sq> beteken?
+    Vra jouself: Verstaan ek regtig wat <q><m>A</m></q> beteken?
+    En wat <q><m>B</m></q> beteken?
     Dan eers is jy gereed om te oorweeg of <m>A</m> gelyk is aan <m>B</m>!
   </p>
 

@@ -10,13 +10,13 @@
     </figure>
 -->
     <proposition xml:id="prop_bases_give_coordinates">
-      <title>Basisse gee ko&#xf6;rdinate</title>
+      <title>Basisse gee koördinate</title>
       <statement>
         <p>
           Laat <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2,\ldots,\ve{e}_n\right\}</m> 'n lys vektore in 'n vektorruimte <m>V</m> wees. Dan is die volgende bewerings ekwivalent:
         </p>
         <p>
-          <ol>
+          <ol label="(a)">
             <li> <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
             </li>
             <li> <p> Elke vektor
@@ -50,7 +50,7 @@
 
     <proof>
       <p>
-        Ons wys eers dat <m>1 \Rightarrow 2</m>.
+        Ons wys eers dat (a) vir (b) impliseer.
       </p>
       <p>
         Veronderstel dat die lys vektore <m>\ve{e}_1</m>,
@@ -58,7 +58,7 @@
         <m>\ve{e}_n</m> 'n basis vir <m>V</m> vorm.
         Veronderstel <m>\ve{v} \in V</m>.
         Omdat die lys vektore <m>V</m> span, weet ons dat ons
-        <m>\ve{v}</m> op ten minste een manier as 'n line&#xea;re kombinasie van vektore in die lys <em>kan</em> skryf,
+        <m>\ve{v}</m> op ten minste een manier as 'n lineêre kombinasie van vektore in die lys <em>kan</em> skryf,
         <men xml:id="one_way_of_expanding">
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
         </men>.
@@ -66,7 +66,7 @@
 
       <p>
         Ons moet wys dat dit die <em>enigste</em> manier is om <m>\ve{v}</m> as 'n
-        line&#xea;re kombinasie van die vektore <m>\ve{e}_i</m> uit te druk.
+        lineêre kombinasie van die vektore <m>\ve{e}_i</m> uit te druk.
         Veronderstel ons het ook
         <men xml:id="second_way_of_expanding">
           \ve{v} = b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n
@@ -83,7 +83,7 @@
       <p>
         Omdat die lys vektore <m>\ve{e}_1</m>,
         <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m>
-        line&#xea;r onafhanklik is, kom ons tot die gevolgtrekking dat
+        lineêr onafhanklik is, kom ons tot die gevolgtrekking dat
         <me>
           a_1 - b_1 = 0, \,\, a_2 - b_2 = 0, \,\, \cdots, \,\, a_n - b_n =  0
         </me>.
@@ -96,22 +96,22 @@
       </p>
 
       <p>
-        Omgekeerd, wys ons dat <m>2 \Leftarrow 1</m>.
+        Omgekeerd, wys ons dat (b) vir (a) impliseer.
       </p>
       <p>
-        Omgekeerd, veronderstel dat elke vektor <m>\ve{v}</m> as 'n unieke line&#xea;re kombinasie
+        Omgekeerd, veronderstel dat elke vektor <m>\ve{v}</m> as 'n unieke lineêre kombinasie
         <me>
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
         </me> geskryf kan word.
       </p>
 
       <p>
-        Die feit dat elke <m>\ve{v}</m> as 'n line&#xea;re
+        Die feit dat elke <m>\ve{v}</m> as 'n lineêre
         kombinasie van <m>\ve{e}_1</m>,
         <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m> geskryf
         <em>kan</em> word, beteken hulle span <m>V</m>.
         Ons moet steeds wys dat hulle
-        line&#xea;r onafhanklik is.
+        lineêr onafhanklik is.
         So, veronderstel daar bestaan skalare
         <m>b_1</m>, <m>b_2</m>, <m>\ldots</m>, <m>b_n</m>, sodat
         <men xml:id="finding_bs_making_zero">
@@ -125,10 +125,10 @@
         stel elke <m>b_i = 0</m>.
         Maar ons weet ook dat elke vektor
         (spesifiek, die vektor <m>\ve{0}</m>)
-        op presies een manier as 'n line&#xea;re kombinasie van vektore <m>\ve{e}_i</m> uitgedurk kan word.
+        op presies een manier as 'n lineêre kombinasie van vektore <m>\ve{e}_i</m> uitgedurk kan word.
         Daarom moet dit die enigste oplossing wees,
         i.e. ons vind dat <m>b_1 = b_2 = \cdots = b_n = 0</m>, en
-        daarom is die lys vektore <m>\basis{B}</m> line&#xea;r onafhanklik.
+        daarom is die lys vektore <m>\basis{B}</m> lineêr onafhanklik.
       </p>
     </proof>
 
@@ -147,8 +147,8 @@
         Die skalare <m>a_i</m> wat in die bostaande uitdrukking voorkom, word die <term>koördinate van die vektor <m>\ve{v}</m> met betrekking tot die basis <m>\basis{B}</m></term> genoem.
         Die kolomvektor word
         <me>
-          [\ve{v}]_\basis{B} := \left[ \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n
-          \end{array}  \right] \in \Col_n
+          [\ve{v}]_\basis{B} := \begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n
+          \end{bmatrix} \in \Col_n
         </me>
         die <term>koördinaatvektor van <m>\ve{v}</m> met betrekking tot basis
         <m>\basis{B}</m></term> genoem.
@@ -171,7 +171,7 @@
     <title>Koördinaatvektore in <m>\mathbb{R}^2</m></title>
     <statement>
       <p>
-        Vind die ko&#xf6;rdinaatvektore van <m>\ve{v}</m> en <m>\ve{w}</m> in <xref ref="v_and_w_in_basis_B">Figuur</xref>
+        Vind die koördinaatvektore van <m>\ve{v}</m> en <m>\ve{w}</m> in <xref ref="v_and_w_in_basis_B">Figuur</xref>
         met betrekking tot die basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m>.
       </p>
     <figure xml:id="v_and_w_in_basis_B">
@@ -210,8 +210,8 @@
         Deur inspeksie sien ons dat <m>\ve{v} = 2 \ve{b}_1 -
         \ve{b}_2</m>, sodat
         <me>
-           [\ve{v}]_\basis{B} := \left[ \begin{array}{c} 2 \\  -1
-          \end{array}  \right]
+          [\ve{v}]_\basis{B} := \begin{bmatrix} 2 \\  -1
+          \end{bmatrix}
         </me>
       </p>
 
@@ -219,8 +219,8 @@
         Ook deur inspeksie sien ons dat <m>\ve{w} = -3 \ve{b}_1 + 2
         \ve{b}_2</m>, sodat
         <me>
-          [\ve{v}]_\basis{B} = \left[ \begin{array}{c} -3 \\  2
-          \end{array}  \right]
+          [\ve{v}]_\basis{B} = \begin{bmatrix} -3 \\  2
+          \end{bmatrix}
         </me>
       </p>
     </solution>
@@ -288,7 +288,7 @@
         </me>
         Daarom is
         <me>
-          [\ve{p}]_\basis{B} := \left[ \begin{array}{c} -4 \\ -\frac{5}{2}\\  \frac{9}{2} \end{array}  \right]
+          [\ve{p}]_\basis{B} := \begin{bmatrix} -4 \\ -\frac{5}{2}\\  \frac{9}{2} \end{bmatrix}
         </me>
       </p>
     </solution>
@@ -303,7 +303,7 @@
     </figure>
 -->
       <p>
-        Vind die ko&#xf6;rdinaatvektor van die funksie <m>\ve{f}</m> gegee deur
+        Vind die koördinaatvektor van die funksie <m>\ve{f}</m> gegee deur
         <me>
           \ve{f}(x) = \sin^2 x - \cos^3 x
         </me>
@@ -337,8 +337,8 @@
       <p>
         Gevolglik is
        <me>
-          [\ve{f}]_\basis{S} = \left[ \begin{array}{c} \frac{1}{2} \\  -\frac{3}{4} \\ 0 \\ -\frac{1}{2} \\ 0 \\ -\frac{1}{4} \\ 0
-          \end{array}  \right]
+          [\ve{f}]_\basis{S} = \begin{bmatrix} \frac{1}{2} \\  -\frac{3}{4} \\ 0 \\ -\frac{1}{2} \\ 0 \\ -\frac{1}{4} \\ 0
+          \end{bmatrix}
         </me>
       </p>
     </solution>
@@ -380,7 +380,7 @@
         Laat <m>\basis{B} = \left\{\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \right\}</m> 'n basis vir 'n vektorruimte <m>V</m> wees.
         Dan het ons dat vir alle vektore <m>\ve{v}, \ve{w} \in V</m> en alle skalare <m>k</m> dat
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>[\ve{v} + \ve{w}]_\basis{B} = [\ve{v}]_\basis{B} + [\ve{w}]_\basis{B}</m>
@@ -412,8 +412,8 @@
     <p>
       Hieruit lees ons af dat
       <me>
-        [\ve{v} + \ve{w}]_\basis{B} = \left[ \begin{array}{c} a_1 + b_1 \\  a_2 + b_2 \\ \vdots \\ a_n + b_n
-        \end{array}  \right]
+        [\ve{v} + \ve{w}]_\basis{B} = \begin{bmatrix} a_1 + b_1 \\  a_2 + b_2 \\ \vdots \\ a_n + b_n
+        \end{bmatrix}
       </me>.
     </p>
 
@@ -428,7 +428,7 @@
       <p>
         Bewys <xref ref="lin_of_coord_vectors">Lemma</xref>(b) in die geval waar <m>V</m> twee-dimensioneel is,
         sodat <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2\right\}</m>.
-        Verduidelik elke stap met die toepaslike re&#xeb;l van 'n vektorruimte.
+        Verduidelik elke stap met die toepaslike reël van 'n vektorruimte.
       </p>
     </statement>
       <solution>
@@ -439,8 +439,8 @@
         </md>,
         wat lei tot
         <me>
-        [\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
-        </me>
+          [\ve v]_{\basis B} =\begin{bmatrix} a_1  \\  a_2 \end{bmatrix}
+        </me>.
         Dan is
         <md>
           <mrow> k\ve v \amp = k(a_1 \ve e_1 + a_2 \ve e_2) </mrow>
@@ -449,8 +449,8 @@
         </md>
         Deur nou koëffisiënte af te lees, kry ons
         <me>
-          k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c} ka_1  \\  ka_2 \end{array}\right],
-        </me>
+          k\begin{bmatrix} a_1  \\  a_2 \end{bmatrix} = \begin{bmatrix} ka_1  \\  ka_2 \end{bmatrix}
+        </me>,
         soos vereis.
       </p>
     </solution>
@@ -462,20 +462,20 @@
         Laat <m>\basis{B} = \bopen \mat{B}_1, \mat{B}_2, \mat{B}_3, \mat{B}_4 \bclose</m> die volgende basis van <m>\Mat_{2,2}</m> wees:
         <me>
           \mat{B}_1 = \begin{bmatrix}
-            1 &amp; 0 \\
-            0 &amp; 1
+            1 \amp 0 \\
+            0 \amp 1
           \end{bmatrix}, \mat{B}_2 =
           \begin{bmatrix}
-            1 &amp; 0\\
-            0&amp; -1
+            1 \amp 0\\
+            0\amp -1
           \end{bmatrix},
           \mat{B}_3 = \begin{bmatrix}
-            1 &amp; 1\\
-            1 &amp; 1
+            1 \amp 1\\
+            1 \amp 1
           \end{bmatrix},
           \mat{B}_4 = \begin{bmatrix}
-            0 &amp; 1\\
-            -1 &amp; 0
+            0 \amp 1\\
+            -1 \amp 0
           \end{bmatrix}
         </me>.
       </p>
@@ -484,8 +484,8 @@
         Bereken <m>[\mat{A}]_\basis{B}</m>, waar
         <me>
           \mat{A} =  \begin{bmatrix}
-            1 &amp; 2\\
-            3 &amp; 4
+            1 \amp 2\\
+            3 \amp 4
           \end{bmatrix}.
         </me>
       </p>

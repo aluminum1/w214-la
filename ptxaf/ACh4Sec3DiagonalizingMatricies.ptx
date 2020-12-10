@@ -5,7 +5,7 @@
   <definition>
     <statement>
       <p>
-        Ons s&#xea; dat 'n <m>n \times n</m>-matriks <m>\mat{A}</m> is
+        Ons sê dat 'n <m>n \times n</m>-matriks <m>\mat{A}</m> is
         <term>diagonaliseerbaar</term>
         as daar 'n inverteerbare <m>n \times n</m>-matriks
         <m>\mat{P}</m> bestaan sodat <m>\mat{P}^{-1} \mat{A} \mat{P}</m> 'n

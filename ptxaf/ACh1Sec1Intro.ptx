@@ -13,7 +13,7 @@
 
     <p>
       Ek gaan vir jou drie verskillende versamelings wys
-       en dan moet jy s&#xea;  watter eienskappe
+       en dan moet jy sê  watter eienskappe
        hulle in gemeen het.
     </p>
 
@@ -21,10 +21,10 @@
       Die eerste versameling, <m>A</m>,
       word gedefinieer as die versameling van alle
       geordende pare <m>(x, y)</m>,
-      waar <m>x</m> en <m>y</m> re&#xeb;le getalle is.
+      waar <m>x</m> en <m>y</m> reële getalle is.
     </p>
 
-    <remark>
+    <convention>
       <p>
         Kom ons stop hier vir 'n oomblik en vertaal die
         definisie van Afrikaans na wiskundige simbole.
@@ -35,23 +35,23 @@
       </p>
 
       <p>
-        Die <m>:=</m> staan vir <sq>is gedefinieer as</sq>.
+        Die <m>:=</m> staan vir <q>is gedefinieer as</q>.
         Die <m>\{</m> en <m>\}</m> simbole staan
-        vir <sq>die versameling van alle</sq>.
+        vir <q>die versameling van alle</q>.
         Die enkele dubbelpunt <m>:</m> staan vir
-        <sq>waar</sq> of <sq>sodat</sq>.
-        Die komma tussen <m>a</m> en <m>b</m> staan vir <sq>en</sq>.
+        <q>waar</q> of <q>sodat</q>.
+        Die komma tussen <m>a</m> en <m>b</m> staan vir <q>en</q>.
         Die <m>\in</m> staan vir <q>'n element van</q>.
-        En <m>\mathbb{R}</m> staan vir die versameling van alle re&#xeb;le getalle.
+        En <m>\mathbb{R}</m> staan vir die versameling van alle reële getalle.
       </p>
 
       <p>
         Veels geluk! <mdash /> jy is besig om die taal van wiskunde te leer!
       </p>
-    </remark>
+    </convention>
 
     <p>
-      'n Element van <m>A</m> is 'n willekeurige paar re&#xeb;le getalle
+      'n Element van <m>A</m> is 'n willekeurige paar reële getalle
       <m>\ve{a} = (a_1, \, a_2)</m>.
       Byvoorbeeld, <m>(1, \, 2) \in A</m> en
       <m>(3.891, \, e^\pi)</m> is elemente van <m>A</m>.
@@ -65,8 +65,8 @@
 
     <p>
       Ons kan 'n element <m>\ve{a}</m> van <m>A</m> visualiseer as 'n punt in die
-      Cartesiese vlak waarvan die <m>x</m>-ko&#xf6;rdinaat <m>a_1</m> en die
-      <m>y</m>-ko&#xf6;rdinaat <m>a_2</m> is:
+      Cartesiese vlak waarvan die <m>x</m>-koördinaat <m>a_1</m> en die
+      <m>y</m>-koördinaat <m>a_2</m> is:
     </p>
       <sidebyside valign="middle" margins="20% 40%">
         <p> <m> \ve{a} \xmapsto{\text{visualiseer as}} </m> </p>
@@ -90,7 +90,7 @@
     <p>
       Die tweede versameling, <m>B</m>,
       word gedefinieer as die versameling van alle
-      geordende re&#xeb;le drietalle
+      geordende reële drietalle
       <m>(u_1, \, u_2, \, u_3)</m>, wat <m>u_1 - u_2 + u_3 = 0</m> bevredig.
       In wiskundige simbole is dit soos volg:
       <men>
@@ -136,7 +136,7 @@
 
     <p>
       Onthou dat die <em>graad</em> van 'n polinoom
-      die grootse mag van <m>x</m> is wat (met 'n nie-nul ko&#xeb;ffisi&#xeb;nt) daarin verskyn.
+      die grootse mag van <m>x</m> is wat (met 'n nie-nul koëffisiënt) daarin verskyn.
       Byvoorbeeld,
       <m>\ve{c} = x^4 - 3 x^3 + 2x^2</m> is 'n vierdegraadse polinoom en
       die polinoom <m>\ve{p} = 2x^3 + \pi x</m> het 'n graad van 3.
@@ -282,7 +282,7 @@
         Hoe weet ons dat die uitdrukking aan die
         regterkant regtig 'n element van <m>B</m> is?
         Ons moet seker maak dat dit die vergelyking
-        <sq>die eerste komponent minus die tweede komponent plus die derde komponent is gelyk aan nul</sq> bevredig.
+        <q>die eerste komponent minus die tweede komponent plus die derde komponent is gelyk aan nul</q> bevredig.
         Kom ons doen dit formeel:
         <md>
           <mrow>(\ve{b} + \ve{b}')_1 - (\ve{b}+\ve{b}')_2 + (\ve{b}+\ve{b}')_3 \amp = (b_1 + b'_1) - (b_2 + b'_2) + (b_3 + b'_3)</mrow>
@@ -299,8 +299,8 @@
 
       <p>
         Daar is ook 'n optellingsbewerking in die versameling <m>C</m>.
-        Ons kan twee polinome algebra&#xef;es bymekaartel
-        deur hulle ooreenkomstige ko&#xeb;ffisi&#xeb;nte bymekaar te tel:
+        Ons kan twee polinome algebraïes bymekaartel
+        deur hulle ooreenkomstige koëffisiënte bymekaar te tel:
         <mdn>
          <mrow number="no">[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
           <mrow xml:id="add_in_C">:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
@@ -320,7 +320,7 @@
         Elke polinoom <m>\ve{c}</m> kan gesien word as 'n
         <em>funksie</em>, in die sin dat ons
         <m>x</m> met enige waarde in die polinoom <m>\ve{c}</m> kan vervang
-        (ons s&#xea; dat ons die polinomm by hierdie waarde uitwerk of <em>evalueer</em>)
+        (ons sê dat ons die polinomm by hierdie waarde uitwerk of <em>evalueer</em>)
         en dit sal 'n waarde <m>\ve{c}(x)</m> voortbring.
         Byvoorbeeld, as <m>\ve{c}(x) = 3x^2 - 1</m>,
         dan is <m>\ve{c}(2) = 11</m>.
@@ -340,7 +340,6 @@
         <m>\ve{c} + \ve{d}</m> as die som van
         die grafieke van <m>\ve{c}</m> en <m>\ve{d}</m> voorstel:
       </p>
-        <sidebyside>
               <image>
               <latex-image>
               <![CDATA[
@@ -375,7 +374,6 @@
 ]]>
               </latex-image>
               </image>
-        </sidebyside>
     </subsubsection>
 
     <subsubsection>
@@ -405,7 +403,7 @@
 
       <p>
         Moenie die nul-element <m>\ve{0} \in A</m>
-        met die re&#xeb;le getal nul (<m>0 \in\mathbb{R}</m>) verwar nie.
+        met die reële getal nul (<m>0 \in\mathbb{R}</m>) verwar nie.
         Dit is nog 'n rede hoekom ek vetdruk gebruik!
         (Jy kan elemente van <m>A</m> onderstreep om die onderskeid te tref.)
       </p>
@@ -422,8 +420,8 @@
       <p>
         In <m>C</m> is die <em>nul-polinoom</em>
         die nul-element <m>\ve{0}</m>.
-        Algebra&#xef;es is dit die vierdegraadse polinoom
-        waarvan die ko&#xeb;ffisi&#xeb;nte almal nul is:
+        Algebraïes is dit die vierdegraadse polinoom
+        waarvan die koëffisiënte almal nul is:
         <men xml:id="zero_in_C">
           \ve{0} = 0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0
         </men>
@@ -448,14 +446,14 @@
       <p>
         Die laaste kenmerk wat die versamelings <m>A</m>,
         <m>B</m> en <m>C</m> in gemeen het, is dat die elemente van
-        elkeen met 'n re&#xeb;le getal <em>vermenigvuldig</em> kan
+        elkeen met 'n reële getal <em>vermenigvuldig</em> kan
         word en steeds in die versameling sal wees.
       </p>
 
       <p>
         Byvoorbeeld,
         as <m>\ve{a} = (a_1, a_2)</m> 'n elment van <m>A</m> is,
-        dan kan ons dit met 'n willekeurige re&#xeb;le getal, s&#xea;
+        dan kan ons dit met 'n willekeurige reële getal, sê
         maar <m>9</m>, vermenigvuldig, om
         'n nuwe element <m>9\cdot a</m> van <m>A</m> te kry.
         Hierdie vermenigvuldiging word komponentsgewys gedoen:
@@ -465,7 +463,7 @@
       </p>
 
       <p>
-        In die algemeen, as <m>k \in \mathbb{R}</m> enige re&#xeb;le getal is,
+        In die algemeen, as <m>k \in \mathbb{R}</m> enige reële getal is,
         dan kan ons enige element
         <m>\ve{a} \in A</m> met <m>k</m> vermenigvuldig
         om 'n nuwe element <m>k \cdot \ve{a} \in A</m> te kry deur
@@ -478,7 +476,7 @@
       <p>
         Wees versigtig om te onderskei tussen skalaarvermenigvuldiging
         <m>k \smul \ve{a}</m> (aangedui met <m>\smul</m>) en
-        gewone vermenigvuldiging van re&#xeb;le getalle <m>k a_1</m>
+        gewone vermenigvuldiging van reële getalle <m>k a_1</m>
         (aangedui sonder enige simbool; die twee simbole word bloot langs mekaar geplaas).
         Later gaan ons die wiskundige konvensie volg
         en ophou om die <m>\cdot</m> eksplisiet uit te skryf
@@ -500,7 +498,7 @@
 
       <p>
         Daar is ook 'n skalaarvermenigvuldigingsbewerking in <m>C</m>.
-        Ons vermenigvuldig elke ko&#xeb;ffisient van 'n polinoom <m>\ve{c} \in C</m> met <m>k</m>:
+        Ons vermenigvuldig elke koëffisient van 'n polinoom <m>\ve{c} \in C</m> met <m>k</m>:
         <men xml:id="sm_in_C">
           k \cdot [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] = k c_0 x^4 + k c_3 x^3 + k c_2 x^2 + k c_1 x + k c_0
         </men>
@@ -538,11 +536,11 @@
 
         <li>
           <p>
-            Daar is 'n <em><sq>bereken die afgeleide</sq></em>-bewerking op <m>C</m>,
+            Daar is 'n <q>bereken die afgeleide</q>-bewerking op <m>C</m>,
             <me>
               \ve{c} \mapsto \frac{d}{dx} \ve{c}
             </me>
-            wat ons later weer sal te&#xeb;kom.
+            wat ons later weer sal teëkom.
             Let op dat die wanneer die afgeleide bereken word, die graad van 'n polinoom met 1 afneem, so die resultaat bly in <m>C</m>,
             wat beteken dat dit 'n wel-gedefinieerde afbeelding van <m>C</m> na <m>C</m> is.
             Daar is geen ooreenstemmende bewerking hiervoor in <m>A</m> en <m>B</m> nie.
@@ -552,34 +550,34 @@
       </ul>
     </p>
 
-      <warning>
-        <p>
-          Let daarop dat daar geen <em>integrasie</em>
-          afbeelding van <m>C</m> na <m>C</m> is nie,
-          want integrasie van 'n polinoom <em>verhoog</em>
-          die graad met <m>1</m>,
-          so die resultaat mag dalk 'n polinoom van
-          graad <m>5</m> wees, wat nie in <m>C</m> is nie!
-        </p>
-      </warning>
+    <warning>
+      <p>
+        Let daarop dat daar geen <em>integrasie</em>
+        afbeelding van <m>C</m> na <m>C</m> is nie,
+        want integrasie van 'n polinoom <em>verhoog</em>
+        die graad met <m>1</m>,
+        so die resultaat mag dalk 'n polinoom van
+        graad <m>5</m> wees, wat nie in <m>C</m> is nie!
+      </p>
+    </warning>
   </subsection>
 
   <subsection>
-    <title>Re&#xeb;ls</title>
+    <title>Reëls</title>
     <p>
       Ons het gevind dat elk van ons drie versamelings <m>A</m>,
       <m>B</m> en <m>C</m> 'n
       <em>optellingsbewerking</em> <m>+</m>, 'n
       <em>nul-element</em> <m>\ve{0}</m> en 'n
       <em>skalaarvermenigvuldigingsbewerking</em> <m>\cdot</m> het.
-      Kan ons enige re&#xeb;ls identifiseer waaraan hierdie bewerkings in al drie versamelings moet voldoen?
+      Kan ons enige reëls identifiseer waaraan hierdie bewerkings in al drie versamelings moet voldoen?
     </p>
 
     <p>
       Byvoorbeeld,
       ons kan aan die optellingsbewerking in <m>A</m> dink as 'n funksie wat aan elke elementpaar <m>\ve{a}</m> en <m>\ve{a}'</m> in <m>A</m> 'n nuwe element
       <m>\ve{a} + \ve{a}'</m> in <m>A</m> toeken.
-      Voldoen hierdie bewerking aan enige re&#xeb;ls?
+      Voldoen hierdie bewerking aan enige reëls?
     </p>
 
     <p>
@@ -602,16 +600,16 @@
       <men xml:id="comm_in_A">
         \ve{a} + \ve{a}' = \ve{a}' + \ve{a}
       </men>
-      as 'n re&#xeb;l?
+      as 'n reël?
       Die antwoord is <em>ja</em>, maar hoekom?
       Om na te gaan of twee elemente van <m>A</m> dieselfde is,
       moet ons nagaan of elkeen van hulle komponente gelyk is.
       Die eerste komponent van <m>\ve{a} + \ve{a}'</m> is <m>a_1 + a'_1</m>.
       Die eerste komponent van <m>\ve{a}' + \ve{a}</m> is <m>a'_1 + a_1</m>.
       Is <m>a_1 + a'_1 = a'_1 + a_1</m>?
-      Ja <mdash /> want beide is gewone re&#xeb;le
+      Ja <mdash /> want beide is gewone reële
       getalle (nie elemente van <m>A</m> nie),
-      en ons weet dat vir gewone re&#xeb;le
+      en ons weet dat vir gewone reële
       getalle kan jy in enige orde saamtel met dieselfde resultaat.
       So die eerste komponent van <m>\ve{a} + \ve{a}'</m> is gelyk aan die eerste komponent van <m>\ve{a}'+ \ve{a}</m>.
       Net so kan ons nagaan dat die tweede komponent van
@@ -623,11 +621,11 @@
     </p>
 
     <p>
-      Geld die re&#xeb;l in  <xref ref="comm_in_A">vergelyking</xref> ook vir optellingsoperators in <m>B</m> en <m>C</m>?
+      Geld die reël in  <xref ref="comm_in_A">vergelyking</xref> ook vir optellingsoperators in <m>B</m> en <m>C</m>?
       Ja.
       Byvoorbeeld, kom ons gaan na dat dit vir <m>C</m> geld.
       Veronderstel dat <m>\ve{c}</m> en <m>\ve{c}'</m> polinome in <m>C</m> is.
-      Geld die re&#xeb;l
+      Geld die reël
       <men xml:id="must_check">
         \ve{c} + \ve{c}' = \ve{c}' + \ve{c}
       </men>
@@ -644,7 +642,7 @@
     </p>
 
     <p>
-      By 'n arbitr&#xea;re insetwaarde <m>x</m> is die linkerkant
+      By 'n arbitrêre insetwaarde <m>x</m> is die linkerkant
       <m>(\ve{c} + \ve{c}')(x) = \ve{c}(x) + \ve{c}'(x)</m>.
       Aan die anderkant is die regterkant
       <m>(\ve{c}' + \ve{c})(x) = \ve{c}'(x) + \ve{c}(x)</m>.
@@ -661,14 +659,14 @@
     </p>
 
     <p>
-      Daar is ander re&#xeb;ls wat ook vir al drie versamelings geld.
-      Byvoorbeeld, in al drie versamelings geld die re&#xeb;l
+      Daar is ander reëls wat ook vir al drie versamelings geld.
+      Byvoorbeeld, in al drie versamelings geld die reël
       <men>
         (\ve{x} + \ve{y}) + \ve{z} = \ve{x} + (\ve{y} + \ve{z})
       </men>
       vir alle elemente <m>\ve{x}</m>,
       <m>\ve{y}</m> en <m>\ve{z}</m>.
-      Kan jy ander re&#xeb;ls identifiseer wat vir al drie versamelings geld?
+      Kan jy ander reëls identifiseer wat vir al drie versamelings geld?
     </p>
   </subsection>
 

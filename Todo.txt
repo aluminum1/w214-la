@@ -1,9 +1,15 @@
 To do list:
 
-- In 1.4 the English denotes functions f while Afrikaans does \mathbf{f}. Perhaps use a macro \fun{} that can be changed in one place?
-- Can the first two lemmas in 1.5 be written using more words?
-- Decide whether to move Bumping Off Proposition to section on bases where it can be explained that its relevance is to show that two bases have the same size.
-- Change its name to the more standard: Steinitz Exchange Lemma or Steinitz Replacement Theorem: https://en.wikipedia.org/wiki/Steinitz_exchange_lemma
+- Image sizes are inconsistent.
+- Some images aren't showing. Make sure that they do after running the pretext script.
+- Parts in Theorems and Proofs to (a) etc instead 1. etc. using <ol label="(a)"> (?) Maybe this can be set in a publisher's file?
+- It seems that <xref>s in displayed equations should not be placed inside \text{}.
+- Some exercises do not have solutions yet.
+- Titles for examples? and Exercises?
+
+- In 1.4 the English denotes functions f while Afrikaans does \mathbf{f}. Perhaps use a macro \funcVec{} that can be changed in one place?
+- Can the first two lemmas in 1.5 be written using more words? And many others...
+- Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
 - First person to first person plural? (I to we)
 - Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.
 - Rob Beezer says that CDATA should never be necessary - is it easier in a tikz picture, though? I guess you have to be careful of things like arrow heads -->
@@ -12,14 +18,11 @@ To do list:
 - Ch2Sec4 (in a few places actually) I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
 
 Consistency and technique:
-- There is some inconsistency in using either \left[\begin{array}... or \begin{bmatrix} for matrices. (low priority)
-- nonzero vs non-zero and other (low priority)
 - Consistency between \dim and \Dim?
 - Make sure all <proofs> are inside the <theorem> (etc.) tags and not outside (?) (low priority)
-- Change all &xea; to ê, etc. (low priority_)
-- All phrases in 'quotes' -> <sq> or <q> (low priority)
 - Make sure all LaTeX line breaks \\ are appropriate.
 - Full stops after </md>, not inside the equations. (low priority)
+- Decide on using => and <= in proofs.
 
 
 Add solutions:
@@ -33,7 +36,7 @@ Afrikaans:
   - span (verb) -> onderspan (not span - verbs only)
   - operator (V to V) -> operator
   - operator (+) -> bewerking
-  - verify -> bevestig?, nagaan?, toets?
+  - verify -> bevestig, nagaan?, toets?
   - respectively -> onderskeidelik
 
 
@@ -42,10 +45,13 @@ I would like to add
 - link exercises or groups of exercises to these learning outcomes.
 - longer paragraphs, especially in introductions
 - overspecified or underspecified problems
+- more problems
+- solutions
 
 Use??
 - <objective>?
+- <outcomes>
 - <reading-questions>?
 
 
-- Throughout there are some figure with <caption> tags, but no text. But I think this is ok.
+- Throughout there are some figures with <caption> tags, but no text. But I think this is ok.

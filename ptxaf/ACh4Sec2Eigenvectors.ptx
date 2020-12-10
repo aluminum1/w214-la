@@ -10,7 +10,7 @@
   <definition>
     <statement>
       <p>
-        'n <term>Eievektor</term> van 'n line&#xea;re operator
+        'n <term>Eievektor</term> van 'n lineêre operator
         <m>T : V \rightarrow V</m> is 'n nie-nul vektor <m>\ve{v} \in V</m>, sodat
         <m>T(\ve{v}) = \lambda \ve{v}</m> vir een of ander skalaar <m>\lambda \in \mathbb{R}</m>
         (die gepaardgaande eiewaarde).
@@ -45,7 +45,7 @@
   <definition>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re operator op 'n vektorruimte <m>V</m> wees,
+        Laat <m>T : V \rightarrow V</m> 'n lineêre operator op 'n vektorruimte <m>V</m> wees,
         en laat <m>\lambda</m> 'n eiewaarde van <m>T</m> wees.
         Die <term>eieruimte van <m>T</m> wat ooreenstem met <m>\lambda</m></term> is die versameling
         <me>
@@ -55,22 +55,24 @@
     </statement>
   </definition>
 
-  <insight>
+  <note>
     <p>
       Let daarop dat as<m>\lambda</m> 'n eiewaarde van <m>T</m> is,
       dan is die nulvektor <m>\ve{0}</m> <em>wel</em>
       in die <em>eieruimte</em> <m>E_\lambda</m> van <m>T</m> wat met <m>\lambda</m> gepaardgaan.
       Maar dit is nie 'n <em>eievektor</em> van <m>T</m> nie.
-      Dit is hoe die terminologie gedefinieer  is.
+      Die rede, soos ons binnekort sal sien, is dat
+      <m>E_\lambda</m> sodoende 'n vektorruimte is.
+      Sonder die nulvektor sou dit nie 'n vektorruimte wees nie. (Waarom nie?
     </p>
-  </insight>
+  </note>
 
   <p>
     Let daarop dat ons <m>E_\lambda</m> as
     <men xml:id="eigenspace_as_kernel">
       E_\lambda = \Ker(\lambda \id - T)
     </men>
-    kan uitdruk, want <m>T(\ve{v}) = \lambda \ve{v}</m> is ekwivalent daaraan om te s&#xea; dat <m>(\lambda \id - T)(\ve{v}) = \ve{0}</m>.
+    kan uitdruk, want <m>T(\ve{v}) = \lambda \ve{v}</m> is ekwivalent daaraan om te sê dat <m>(\lambda \id - T)(\ve{v}) = \ve{0}</m>.
   </p>
 
   <proposition xml:id="eigenspace-is-subspace">
@@ -83,8 +85,8 @@
     <p>
       Dit volg direk uit die feit (vergelyking
       <xref ref="eigenspace_as_kernel" />) dat ons <m>E_\lambda</m> as 'n kern van 'n
-      line&#xea;re operator kan skryf.
-      Die kern van enige line&#xea;re operator op <m>V</m> is 'n deelruimte van <m>V</m>,
+      lineêre operator kan skryf.
+      Die kern van enige lineêre operator op <m>V</m> is 'n deelruimte van <m>V</m>,
       volgens <xref ref="ker-im-subspace">Lemma</xref>.
     </p>
   </proof>
@@ -94,9 +96,9 @@
     <title>Eievektore uit verskillende eieruimtes is lineêr onafhanklik</title>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re operator van 'n eindig-dimensionele vektorruimte <m>V</m>
+        Laat <m>T : V \rightarrow V</m> 'n lineêre operator van 'n eindig-dimensionele vektorruimte <m>V</m>
         wees, en veronderstel dat <m>\ve{v}_1, \ldots, \ve{v}_k</m> eievektore van <m>T</m> met verskillende eiewaardes <m>\lambda_1, \ldots, \lambda_k</m>  onderskeidelik is.
-        Dan is <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> line&#xea;r onafahanklik.
+        Dan is <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> lineêr onafahanklik.
       </p>
     </statement>
   </proposition>
@@ -104,13 +106,13 @@
   <proof>
     <p>
       Veronderstel <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> is <em>nie</em>
-      line&#xea;r onafhanklik nie, met andewr woorde, dit is line&#xea;r afhanklik.
-      Dan, volgens die Line&#xea;re Kombinasie van Voorafgaande
+      lineêr onafhanklik nie, met andewr woorde, dit is lineêr afhanklik.
+      Dan, volgens die Lineêre Kombinasie van Voorafgaande
       Vektore-stelling
       (<xref ref="lin_dependence_prop">Stelling</xref>),
-      is &#xf3;f <m>\ve{v}_1 = \ve{0}</m> (onmoontlik,
-      want eievektore kan nie die nul-vektor wees nie), &#xf3;f een van die
-      <m>\ve{v}_i</m> is 'n line&#xea;re kombinasie van die voorafgaande vektore.
+      is òf <m>\ve{v}_1 = \ve{0}</m> (onmoontlik,
+      want eievektore kan nie die nul-vektor wees nie), òf een van die
+      <m>\ve{v}_i</m> is 'n lineêre kombinasie van die voorafgaande vektore.
       Laat <m>i</m> die <em>kleinste</em> indeks wees
       waarvoor dit waar is.
       So, vir 'n <m>i</m> met <m>2 \leq i \leq k</m>, het ons
@@ -122,9 +124,9 @@
       <me>
         \bopen \ve{v}_1, \ldots, \ve{v}_{i-1} \bclose
       </me>
-      line&#xea;r onafhanklik
+      lineêr onafhanklik
       (andersins sou <m>i</m> nie die <em>kleinste</em>
-      indeks wees waarvoor <m>\ve{v}_i</m> 'n line&#xea;re kombinasie van die voorafgaande vektore is nie).
+      indeks wees waarvoor <m>\ve{v}_i</m> 'n lineêre kombinasie van die voorafgaande vektore is nie).
       Deur <m>T</m> aan beide kante van <xref ref="eigenvalue-1st-eqn" /> toe te pas, kry ons 'n nuwe vergelyking:
       <mdn>
         <mrow number="no">T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) </mrow>
@@ -142,7 +144,7 @@
     </p>
 
     <p>
-      Aangesien die lys vektore <m>\bopen \ve{v}_1, \ldots, \ve{v}_{i-1} \bclose</m> line&#xea;r afhanklik is, het ons
+      Aangesien die lys vektore <m>\bopen \ve{v}_1, \ldots, \ve{v}_{i-1} \bclose</m> lineêr afhanklik is, het ons
       <me>
         (\lambda_i - \lambda_1) a_1 =0, \, (\lambda_i - \lambda_2) a_2 =0\, \, \ldots, \,  (\lambda_i - \lambda_{i-1}) a_{i-1}=0
       </me>.
@@ -155,14 +157,14 @@
       <m>a_2 = 0</m>, <m>\ldots</m>, <m>a_{i-1} = 0</m>.
       Maar dit is in teenstelling met <xref ref="eigenvalue-1st-eqn" /> wat impliseer het dat die skalare <em>nie</em> almal nul is nie.
       So ons oorpronklike aanname moes verkeerd wees.
-      Daarom is <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> line&#xea;r afhanklik.
+      Daarom is <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> lineêr afhanklik.
     </p>
   </proof>
 
   <example>
     <statement>
       <p>
-        Bepaal die eiewaardes en ooreenstemmende eieruimtes vir die line&#xea;re operator
+        Bepaal die eiewaardes en ooreenstemmende eieruimtes vir die lineêre operator
         <md>
           <mrow>T : \Poly_4 \amp  \rightarrow \Poly_4</mrow>
           <mrow>T(p)(x) \amp = x^2 \frac{d^2}{dx^2} (p)</mrow>
@@ -205,7 +207,7 @@
   <example xml:id="eigenspaces-lin-op-T">
     <statement>
       <p>
-        Bepaal die eieruimtes van die line&#xea;re operator
+        Bepaal die eieruimtes van die lineêre operator
         <md>
           <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
           <mrow>T(p(x)) \amp = p(2x + 3)</mrow>
@@ -223,7 +225,7 @@
         <m>q_2</m> en <m>q_3</m> met eiewaardes
         <m>\lambda_1</m>, <m>\lambda_2</m> and
         <m>\lambda_3</m> onderskeidelik vind,
-        dan sal <m>\basis{Q} = \bopen q_1, q_2, q_3 \bclose</m> line&#xea;r onafhanklik wees volgens <xref ref="lin_ind_eig_distinct">Proposisie</xref>.
+        dan sal <m>\basis{Q} = \bopen q_1, q_2, q_3 \bclose</m> lineêr onafhanklik wees volgens <xref ref="lin_ind_eig_distinct">Proposisie</xref>.
         Dit beteken dat die eieruimtes <m>E_1</m>,
         <m>E_2</m> en <m>E_4</m> wat met die eiewaardes gepaard gaan 1-dimensioneel sal wees.
         Dit is nuttige inligting.
@@ -270,7 +272,7 @@
               <me>
                 (-a_0 + 3a_1 + 9a_2) p_0 + 12a_2 p_1 + 2 a_2 p_2 = 0
               </me>.
-              Aangesien <m>\bopen p_0, p_1, p_2 \bclose</m> line&#xea;r
+              Aangesien <m>\bopen p_0, p_1, p_2 \bclose</m> lineêr
               onafhanklik is, word dit die volgende stel vergelykings:
               <mdn>
                 <mrow> \amp -a_0 \amp + 3a_1 \amp + 9a_2 \amp = \amp 0 </mrow>
@@ -327,7 +329,7 @@
               <me>
                 (-3a_0 + 3a_1 + 9a_2) p_0 + (-2 a_1 + 12 a_2) p_1 + 0 p_2 = 0
               </me>.
-              Aangesien <m>\bopen p_0, p_1, p_2 \bclose</m> line&#xea;r
+              Aangesien <m>\bopen p_0, p_1, p_2 \bclose</m> lineêr
               onafhanklik is, word dit die volgende stel vergelykings:
               <mdn>
                 <mrow> \amp -3a_0 \amp + 3a_1 \amp + 9a_2 \amp = \amp 0</mrow>
@@ -450,22 +452,22 @@
   </example>
 
   <p>
-    Let daarop dat die <sq>kern van </sq>n matriks'-metode wat ons gebruik het om die
+    Let daarop dat die <q>kern van 'n matriks</q>-metode wat ons gebruik het om die
     eieruimtes in <xref ref="eigvectors_desmos_matrix">Voorbeeld</xref> te bereken, gebruik
-    kan word om die eievektore van <em>enige</em> line&#xea;re operator te bereken.
+    kan word om die eievektore van <em>enige</em> lineêre operator te bereken.
   </p>
 
   <example>
     <statement>
       <p>
-        Bepaal die eieruimtes van die line&#xea;re operator <m>T</m> uit
-        <xref ref="eigenspaces-lin-op-T">Voorbeeld</xref> met die <sq>kern-van-'n-matriks</sq>-metode.
+        Bepaal die eieruimtes van die lineêre operator <m>T</m> uit
+        <xref ref="eigenspaces-lin-op-T">Voorbeeld</xref> met die <q>kern van 'n matriks</q>-metode.
       </p>
     </statement>
     <solution>
       <p>
-        Die eieruimte <m>E_\lambda</m> wat met die eiewaarde <m>\lambda</m> ooreenstem is die kern van die line&#xea;re operator <m>T - \lambda \id</m>.
-        Dit wil s&#xea;, ons benodig die polinome <m>q \in \Poly_2</m> sodat
+        Die eieruimte <m>E_\lambda</m> wat met die eiewaarde <m>\lambda</m> ooreenstem is die kern van die lineêre operator <m>T - \lambda \id</m>.
+        Dit wil sê, ons benodig die polinome <m>q \in \Poly_2</m> sodat
         <men xml:id="kernel-operator-this-ex">
           (T - \lambda \id) (q) = 0
         </men>.
@@ -577,7 +579,7 @@
   <exercise>
     <statement>
       <p>
-        Bepaal die eiewaardes en eieruimtes van die line&#xea;re operator
+        Bepaal die eiewaardes en eieruimtes van die lineêre operator
         <md>
           <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
           <mrow>T(p)(x) \amp  := \frac{d^2}{dx^2} p(x^2 + x - 2)</mrow>
@@ -589,7 +591,7 @@
   <exercise>
     <statement>
       <p>
-        Bepaal die eiewaardes en eieruimtes van die line&#xea;re operator
+        Bepaal die eiewaardes en eieruimtes van die lineêre operator
         <md>
           <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
           <mrow>T(p)(x) \amp  := x^2 p\left(\frac{1}{x}\right)</mrow>

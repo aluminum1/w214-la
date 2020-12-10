@@ -5,8 +5,8 @@
   <definition>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re operator op 'n vektorruimte <m>V</m> wees.
-        Ons s&#xea; dat <m>\lambda \in \mathbb{R}</m> is 'n
+        Laat <m>T : V \rightarrow V</m> 'n lineêre operator op 'n vektorruimte <m>V</m> wees.
+        Ons sê dat <m>\lambda \in \mathbb{R}</m> is 'n
         <term>eiewaarde van <m>T</m></term>
         as daar 'n nie-nul vektor <m>\ve{v} \in V</m>
         bestaan, sodat <m>T(\ve{v}) = \lambda \ve{v}</m>.
@@ -17,39 +17,35 @@
   <proposition xml:id="prop_eigenvalue">
     <statement>
       <p>
-        Veronderstel <m>T : V \rightarrow V</m> is 'n line&#xea;re afbeelding,
+        Veronderstel <m>T : V \rightarrow V</m> is 'n lineêre afbeelding,
         en <m>V</m> is eindig-dimensioneel.
         Dan is die volgende ekwivalent:
 
-        <ul>
+        <ol>
           <li>
-            <title>1.</title>
             <p>
               <m>\lambda</m> is 'n eiewaarde van <m>T</m>.
             </p>
           </li>
 
           <li>
-            <title>2.</title>
             <p>
               <m>\lambda \id_V - T</m> is nie injektief nie.
             </p>
           </li>
 
           <li>
-            <title>3.</title>
             <p>
               <m>\lambda \id_V - T</m> is nie surjektief nie.
             </p>
           </li>
 
           <li>
-            <title>4.</title>
             <p>
               <m>\lambda \id_V - T</m> is nie inverteerbaar nie.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
   </proposition>
@@ -57,13 +53,13 @@
   <insight>
     <p>
       Kom ons neem 'n oomblik om die notasie hier te analiseer.
-      As <m>S, T : V \rightarrow W</m> line&#xea;re afbeeldings is,
-      kan ons hulle <em>saamtel</em> om 'n nuwe line&#xea;re afbeelding
+      As <m>S, T : V \rightarrow W</m> lineêre afbeeldings is,
+      kan ons hulle <em>saamtel</em> om 'n nuwe lineêre afbeelding
       <me>
         S+T : V \rightarrow W
       </me>
       te verkry wat gedefinieer word as <m>(S+T)(\ve{v}) := S(\ve{v}) + T(\ve{v})</m>.
-      So as ek skryf <sq><m>T - \lambda \id_V</m></sq>, verwys ek na die line&#xea;re afbeelding <m>V \rightarrow V</m> gedefineer deur
+      So as ek skryf <q><m>T - \lambda \id_V</m></q>, verwys ek na die lineêre afbeelding <m>V \rightarrow V</m> gedefineer deur
       <me>
         (\lambda \id_V - T) (\ve{v}) := \lambda \id_V(\ve{v}) - T (\ve{v}) = \lambda \ve{v} - T(\ve{v})
       </me>.
@@ -71,6 +67,7 @@
   </insight>
 
   <proof>
+    <title> Bewys van <xref ref="prop_eigenvalue" /></title>
     <p>
       (1) <m>\Rightarrow</m> (2).
       Veronderstel <m>\lambda</m> is 'n eiewaarde van <m>T</m>.
@@ -93,7 +90,7 @@
       (2) <m>\Rightarrow</m> (1).
       Veronderstel <m>T - \lambda \id_V</m> is nie injektief nie.
       <md>
-        <mrow>\amp  \therefore \Ker(T - \lambda \id_V) \neq \{\ve{0} \} \amp \amp \text{(deur <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
+        <mrow>\amp  \therefore \Ker(T - \lambda \id_V) \neq \{\ve{0} \} \amp \amp \text{(deur <xref ref="injective-kernel-lemma"></xref>)}</mrow>
         <mrow>\amp  \therefore \text{daar bestaan 'n nie-nul } (\ve{v} \in V, \text{ sodat }</mrow>
         <mrow>\amp   (T - \lambda \id_V)(\ve{v}) = \ve{0}.</mrow>
         <mrow>\amp  \text{Dit is, } T(\ve{v}) = \lambda \ve{v},\text{ so }\lambda\text{ is 'n eiewaarde van } T.</mrow>
@@ -110,26 +107,26 @@
     Daar is 'n eenvoudige toets om te sien wanneer 'n
     <em>matriks</em> <m>A</m> inverteerbaar
     is <mdash/> bereken die determinant <m>\det(A)</m>.
-    As <m>\det(A) = 0</m>, Dan is die
+    As <m>\det(A) = 0</m>, dan is die
     matriks <em>nie</em> inverteerbaar <em>nie</em>.
     As <m>\det(A) \neq 0</m>, dan is die matriks inverteerbaar.
   </p>
 
   <historical>
     <p>
-      Dit is inderwaarheid waar die woord <sq>determinant</sq>
+      Dit is waar die woord <q>determinant</q>
       vandaan kom!. Dit <em>bepaal</em> (Eng. <foreign>determine</foreign>) of die matriks inverteerbaar is of nie.
     </p>
   </historical>
 
   <p>
-    Maar hoe weet ons of 'n <em>line&#xea;re operator</em> inverteerbaar is?
+    Maar hoe weet ons of 'n <em>lineêre operator</em> inverteerbaar is?
   </p>
 
   <definition xml:id="determinant_lin_op">
     <statement>
       <p>
-        Die <term>determinant</term> van 'n  line&#xea;re operator <m>T : V \rightarrow V</m> op 'n eindig-dimensionele
+        Die <term>determinant</term> van 'n  lineêre operator <m>T : V \rightarrow V</m> op 'n eindig-dimensionele
         vektorruimte <m>V</m> is die determinant van die matriks van <m>T</m> met betrekking tot enige basis <m>\basis{B}</m> van <m>V</m>.
         Dit is,
         <me>
@@ -142,7 +139,7 @@
   <lemma>
     <statement>
       <p>
-        Die determinant van 'n line&#xea;re operator, soos hierbo gedefinieer, is wel-gedefinieerd.
+        Die determinant van 'n lineêre operator, soos hierbo gedefinieer, is wel-gedefinieerd.
         Dit is, as <m>\basis{B}</m> en
         <m>\basis{C}</m> basisse vir <m>V</m> is, dan
         <me>
@@ -169,7 +166,7 @@
 </lemma>
 
   <p>
-    Nou dat ons weet hoe om die determinant van 'n line&#xea;re operator te
+    Nou dat ons weet hoe om die determinant van 'n lineêre operator te
     definieer, kan ons die volgende definisie gee.
   </p>
 
@@ -177,7 +174,7 @@
     <statement>
       <p>
         Die <term>karakteristieke polinoom</term> <m>\chi_T</m> van 'n
-        line&#xea;re operator <m>T : V \rightarrow V</m> op 'n eindig-dimensionele
+        lineêre operator <m>T : V \rightarrow V</m> op 'n eindig-dimensionele
         vektorruimte <m>V</m> word gedefinieer as
         <me>
           \chi_T (\lambda) := \det(\lambda \id - T)
@@ -189,46 +186,43 @@
   <note>
     <p>
       Die rede dat <m>\chi_T</m> 'n <em>polinoom</em> is
-      (en nie bloot 'n arbitr&#xea;re funksie is nie)
+      (en nie bloot 'n arbitrêre funksie is nie)
       spruit uit die formule vir die determinant.
       Meer hieroor volg later.
     </p>
   </note>
 
   <p>
-    Om op te som, sien ons dat <m>\lambda</m> 'n eiewaarde van 'n line&#xea;re operator <m>T</m> is as en slegs as <m>\lambda</m> 'n wortel van die karakteristieke polinoom van <m>T</m> is.
+    Om op te som, sien ons dat <m>\lambda</m> 'n eiewaarde van 'n lineêre operator <m>T</m> is as en slegs as <m>\lambda</m> 'n wortel van die karakteristieke polinoom van <m>T</m> is.
     Kom ons noteer dit formeel as 'n uitbreiding van <xref ref="prop_eigenvalue">Proposisie</xref>.
   </p>
 
   <proposition>
     <statement>
       <p>
-        Laat <m>T</m> 'n line&#xea;re operator op 'n eindig-dimensionele vektorruimte <m>V</m> wees,
+        Laat <m>T</m> 'n lineêre operator op 'n eindig-dimensionele vektorruimte <m>V</m> wees,
         en <m>\lambda \in \mathbb{R}</m>.
         Dan is die volgende stellings ekwivalent:
 
-        <ul>
+        <ol>
           <li>
-            <title>1.</title>
             <p>
               <m>\lambda</m> is an eiewaarde van <m>T</m>.
             </p>
           </li>
 
           <li>
-            <title>2.</title>
             <p>
               <m>\lambda \id - T</m> is nie inverteerbaar nie.
             </p>
           </li>
 
           <li>
-            <title>3.</title>
             <p>
               <m>\chi_T(\lambda) = 0</m>.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
   <proof>
@@ -237,7 +231,7 @@
       Inderdaad, as <m>\basis{B}</m> 'n basis vir <m>V</m> is, dan
       <md>
         <mrow>\amp \lambda \id - T \text{ is nie inverteerbaar nie}</mrow>
-        <mrow>\amp \Leftrightarrow \text{die matriks }[\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \text{ is nie inverteerbaar nie}  \amp \amp  \text{(<xref ref="map-iso-matrix-iso">Gevolgtrekking</xref>)}</mrow>
+        <mrow>\amp \Leftrightarrow \text{die matriks }[\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \text{ is nie inverteerbaar nie}  \amp \amp  \text{(<xref ref="map-iso-matrix-iso"></xref>)}</mrow>
         <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) = 0 \amp \amp  \text{(Eienskap van }\det)</mrow>
         <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \text{(Defn van } \chi_T(\lambda))</mrow>
       </md>
@@ -248,7 +242,7 @@
   <example xml:id="poly-example-eigenvalue">
     <statement>
       <p>
-        Vind die eiewaardes van die line&#xea;re operator
+        Vind die eiewaardes van die lineêre operator
         <me>
           T : \Poly_2 \rightarrow \Poly_2
         </me>
@@ -304,7 +298,7 @@
           <mrow>\chi_T (\lambda) \amp = \det(\lambda \id - T) \amp \amp  \text{(defn van }\chi_T)</mrow>
           <mrow>\amp = \det \left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) \amp \amp  \text{(defn van }\det)</mrow>
           <mrow>\amp = \det \left( [\lambda \id]_{\basis{B} \leftarrow \basis{B}} - [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
-          <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9\\ 0 \amp  \lambda - 2 \amp  -12\\ 0 \amp  0 \amp  4}} \right)</mrow>
+          <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9\\ 0 \amp  \lambda - 2 \amp  -12\\ 0 \amp  0 \amp  \lambda - 4}} \right)</mrow>
           <mrow>\amp = (\lambda - 1)(\lambda - 2)(\lambda - 4)</mrow>
         </md>.
       </p>
@@ -319,7 +313,7 @@
   <p>
     As ons van die eiewaardes en eievektore van 'n <m>n\times n</m> <em>matriks</em>
     <m>\mat{A}</m> praat, verwys ons na die eiewaardes en eievektore van die
-    geassosieerde line&#xea;re operator
+    geassosieerde lineêre operator
     <md>
       <mrow>T_{\mat{A}} : \Col_n \amp \rightarrow \Col_n</mrow>
       <mrow>\ve{v} \amp  \mapsto \mat{A} \ve{v} </mrow>
@@ -359,7 +353,7 @@
     klaskode <c>RGJ93S</c>.
     In die Desmos-werkblad kry jy die eiewaardes grafies, deur inspeksie.
     Werk eers deur daardie werkblad, en doen daarna die volgende
-    algebra&#xef;ese metode soos hieronder aangetoon.
+    algebraïese metode soos hieronder aangetoon.
   </p>
 
   <example xml:id="desmos_matrix">
@@ -417,7 +411,7 @@
         <me>
           \lambda^2 - 3\lambda + 8 = 0
         </me>
-        wat geen re&#xeb;le wortels het nie.
+        wat geen reële wortels het nie.
         So <m>A</m> het geen eiewaardes nie.
         Dit kan visueel op Desmos gesien word:
         rofweg, <m>A\ve{v}</m> roteer die

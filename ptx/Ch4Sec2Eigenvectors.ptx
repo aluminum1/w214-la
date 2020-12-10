@@ -25,7 +25,7 @@
     <em>every</em> operator <m>T</m>
     (with eigenvalue <m>0</m>),
     since we always have <m>T(\ve{0}) = 0 \ve{0}</m>.
-    In that case <sq>being an eigenvector</sq> wouldn't be a very special property of <m>T</m>.
+    In that case <q>being an eigenvector</q> wouldn't be a very special property of <m>T</m>.
   </p>
 
   <note>
@@ -55,15 +55,17 @@
     </statement>
   </definition>
 
-  <insight>
+  <note>
     <p>
       Note that if <m>\lambda</m> is an eigenvalue of <m>T</m>,
       then the zero vector <m>\ve{0}</m> <em>is</em>
       in the <em>eigenspace</em> <m>E_\lambda</m> of <m>T</m> associated to <m>\lambda</m>.
       But it is not an <em>eigenvector</em> of <m>T</m>.
-      That is just terminology.
+      The reason, as we will see shortly, is that this
+      way, <m>E_\lambda</m> turns out to be a vector space.
+      Without the zero vector it wouldn't be a vector space. (Why not?)
     </p>
-  </insight>
+  </note>
 
   <p>
     Note that we can also express <m>E_\lambda</m> as
@@ -450,7 +452,7 @@
   </example>
 
   <p>
-    Note that the <sq>kernel of a matrix</sq> method we used to compute the eigenspaces in <xref ref="eigvectors_desmos_matrix">Example</xref>
+    Note that the <q>kernel of a matrix</q> method we used to compute the eigenspaces in <xref ref="eigvectors_desmos_matrix">Example</xref>
     can be used to find the eigenvectors of
     <em>any</em> linear operator.
   </p>
@@ -459,7 +461,7 @@
     <statement>
       <p>
         Determine the eigenspaces of the linear operator <m>T</m> from <xref ref="eigenspaces-lin-op-T">Example</xref>
-        using the <sq>kernel-of-a-matrix</sq> method.
+        using the <q>kernel-of-a-matrix</q> method.
       </p>
     </statement>
     <solution>

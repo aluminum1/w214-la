@@ -10,9 +10,9 @@
     in gemeen het.
     In elke versamiling is daar 'n optellingsbewerking, 'n
     nulvektor en 'n skalaarvermenigvuldigingbewerking.
-    Verder geld dieselfde re&#xeb;ls vir hierdie bewerkings.
+    Verder geld dieselfde reëls vir hierdie bewerkings.
     Kom ons noteer hierdie patroon deur dit 'n naam te gee
-    en die re&#xeb;ls eksplisiet neer te skryf.
+    en die reëls eksplisiet neer te skryf.
   </p>
 
   <definition xml:id="real_vec_space">
@@ -45,7 +45,7 @@
             <title>D3</title>
             <p>
               'n <em>Skalaarvermenigvuldigingsbewerking</em>.
-               (M.a.w., vir elke re&#xeb;le getal <m>k</m>
+               (M.a.w., vir elke reële getal <m>k</m>
               en elke element <m>\ve{v} \in V</m>
               word 'n nuwe element <m>k \cdot \ve{v} \in V</m> definieer.)
             </p>
@@ -57,8 +57,8 @@
       <p>
         Hierdie data moet  vir alle
         <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>
-        en vir alle re&#xeb;le getalle <m>k</m> en <m>l</m>
-        aan die volgende re&#xeb;ls voldoen:
+        en vir alle reële getalle <m>k</m> en <m>l</m>
+        aan die volgende reëls voldoen:
       </p>
 
       <p>
@@ -133,7 +133,7 @@
     Ons noem elemente van 'n vektorruimte <term>vektore</term>
     en ons skryf hulle in vetdruk, bv.
     <m>\ve{v} \in V</m>.
-    Dit is om vektore te ondrskei van re&#xeb;le getalle,
+    Dit is om vektore te ondrskei van reële getalle,
     wat ons <em>skalare</em> noem
     en wat nie in vetdruk geskryf word nie.
     Dit is moeilik om vetdruk met handskrif uit te druk,
@@ -180,7 +180,7 @@
 
       <li>
         <p>
-          Gaan na dat hierdie data aan re&#xeb;ls (R1) <ndash /> (R8) voldoen.
+          Gaan na dat hierdie data aan reëls (R1) <ndash /> (R8) voldoen.
         </p>
       </li>
     </ol>

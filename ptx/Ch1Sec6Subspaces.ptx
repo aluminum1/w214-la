@@ -124,23 +124,21 @@
       A line <m>L</m> through the origin in
       <m>\mathbb{R}^2</m> is a subspace of <m>\mathbb{R}^2</m>:
     </p>
-    <sidebyside>
-      <figure xml:id="line-through-origin-R2-example">
+    <figure xml:id="line-through-origin-R2-example">
       <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
       <image width="50%">
-      <latex-image>
-        <![CDATA[\begin{tikzpicture}
-        \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
-        \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-        \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
-      </latex-image>
+        <latex-image>
+          <![CDATA[\begin{tikzpicture}
+          \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+          \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+          \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+        </latex-image>
       </image>
-      </figure>
-  </sidebyside>
+    </figure>
 
     <p>
       Indeed, recall that <m>L</m> can be specified by
-      a homogenous linear equation of the form:
+      a homogeneous linear equation of the form:
       <men xml:id="eqn_of_L">
         L = \{ (x,y) \in \mathbb{R}^2 : ax + by = 0 \}
       </men>
@@ -262,12 +260,11 @@
       <p>
         Another reason that <m>L</m> is not a subspace is
         that it is not closed under addition:
-        when we add two nonzero vectors <m>\ve{v}</m> and
+        when we add two non-zero vectors <m>\ve{v}</m> and
         <m>\ve{v}'</m> on <m>L</m>,
         we end up with a vector <m>\ve{v} + \ve{v}'</m>
         which does not lie on <m>L</m>:
       </p>
-        <sidebyside>
           <figure xml:id="line-not-through-origin-non-example">
             <caption>A line which does not pass through the origin is not closed under addition.</caption>
             <image>
@@ -285,14 +282,13 @@
             </latex-image>
             </image>
         </figure>
-      </sidebyside>
     </statement>
   </example>
 
   <example xml:id="hyperplanes_example_subspace">
     <title>Hyperplanes orthogonal to a fixed vector</title>
     <statement>
-      <p>This example generalizes <xref ref="lines_planes_R3" text="type-global"/> to higher dimensions. Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. The <em>hyperplane orthogonal to <m>\ve{v}</m></em> is the set <m>W</m> of all vectors orthogonal to <m>\ve{v}</m>, that is,
+      <p>This example generalizes <xref ref="lines_planes_R3" text="type-global"/> to higher dimensions. Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed non-zero vector. The <em>hyperplane orthogonal to <m>\ve{v}</m></em> is the set <m>W</m> of all vectors orthogonal to <m>\ve{v}</m>, that is,
       <men>
       W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
       </men>
@@ -313,7 +309,7 @@
     <exercise xml:id="prove_hyperplane_subspace">
       <statement>
         <p>
-          Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. Show that
+          Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed non-zero vector. Show that
           <me>
             W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
           </me>
@@ -472,7 +468,7 @@
     <title>Polynomials in many variables</title>
     <statement>
     <p>
-      A <em>monomial</em> in two variables <m>x</m> and <m>y</m> is an expression of the form <m>x^m y^n</m> for some nonnegative integers <m>m,n</m>. The <em>degree</em> of the monomial is <m>m+n</m>. For example,
+      A <em>monomial</em> in two variables <m>x</m> and <m>y</m> is an expression of the form <m>x^m y^n</m> for some non-negative integers <m>m,n</m>. The <em>degree</em> of the monomial is <m>m+n</m>. For example,
       <me>
         \underbrace{x^3 y^2}_{\text{degree 5}}, \quad \underbrace{y^7}_{\text{degree 7}}.
       </me>
@@ -511,7 +507,7 @@
   </example>
 
   <aside>
-    <p>When we say simply <sq><m>p</m> is a polynomial</sq> we will mean that <m>p</m> is a polynomial in a single variable, i.e. <m>p \in \Poly</m>. Note that <m>\Poly = \Poly[x]</m>. </p>
+    <p>When we say simply <q><m>p</m> is a polynomial</q> we will mean that <m>p</m> is a polynomial in a single variable, i.e. <m>p \in \Poly</m>. Note that <m>\Poly = \Poly[x]</m>. </p>
   </aside>
 
 <example xml:id="poly_vector_fields_example">
@@ -627,7 +623,7 @@
       </men>
       is also a solution to <xref ref="first_example_2nd_order_ode_eqn"/>.
       </p>
-      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button <mdash /> it should output <sq>True</sq>, indicating that <m>y_1</m> is indeed a solution to the differential equation.
+      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button <mdash /> it should output <q>True</q>, indicating that <m>y_1</m> is indeed a solution to the differential equation.
       </p>
       <sage>
 
@@ -720,10 +716,10 @@
     </example>
 
         <example xml:id="non_example_nonlinear_ode">
-        <title>A non-example: Solutions to a nonlinear ODE</title>
+        <title>A non-example: Solutions to a non-linear ODE</title>
         <statement>
           <p>
-            We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
+            We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the non-linear case. For example, consider the non-linear ODE
             <men xml:id="explicit_nonlinear_ode">
             y^\prime = y^2.
             </men>
@@ -753,7 +749,7 @@
         </input>
         </sage>
         <p>
-        The answer is <c>False!</c> So linear combinations of solutions to the nonlinear differential equation <xref ref="explicit_nonlinear_ode"/> are no longer solutions, in general.
+        The answer is <c>False!</c> So linear combinations of solutions to the non-linear differential equation <xref ref="explicit_nonlinear_ode"/> are no longer solutions, in general.
           </p>
         </statement>
     </example>
@@ -897,7 +893,7 @@
   <exercise>
     <statement>
       <p>
-        Give an example of a nonempty subset <m>U</m> of
+        Give an example of a non-empty subset <m>U</m> of
         <m>\mathbb{R}^2</m> which is closed under addition and under taking additive inverses (i.e. if <m>\ve{u}</m> is in <m>U</m> then <m>-\ve{u}</m> is in <m>V</m>),
         but <m>U</m> is not a subspace of <m>\mathbb{R}^2</m>.
       </p>
@@ -907,7 +903,7 @@
   <exercise>
     <statement>
       <p>
-        Give an example of a nonempty subset <m>V</m> of
+        Give an example of a non-empty subset <m>V</m> of
         <m>\mathbb{R}^2</m> which is closed under scalar multiplication,
         but <m>V</m> is not a subspace of <m>\mathbb{R}^2</m>.
       </p>
@@ -967,7 +963,6 @@
 </exercisegroup>
 </exercises>
 
-<solutions divisional="solution answer" />
 
 
 </section>

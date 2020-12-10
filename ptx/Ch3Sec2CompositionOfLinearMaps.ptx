@@ -16,10 +16,6 @@
     </statement>
   </definition>
 
-  <p>
-    See <xref ref="composition_of_linear_maps_fig">Figure</xref>.
-  </p>
-
   <figure xml:id="composition_of_linear_maps_fig">
     <caption>Composition of linear maps.</caption>
     <image>
@@ -178,7 +174,7 @@
   <exercise>
     <statement>
       <p>
-        Let <m>R_\theta</m>  be the <sq>rotation by <m>\theta</m></sq> map from <xref ref="rotation-map-example-complete">Example</xref>,
+        Let <m>R_\theta</m>  be the <q>rotation by <m>\theta</m></q> map from <xref ref="rotation-map-example-complete">Example</xref>,
         <md>
           <mrow> R_\theta : \Col_2 \amp \rightarrow Col_2 </mrow>
           <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} \cos \theta \amp \sin \theta \\ -\sin\theta \amp \cos \theta \end{bmatrix}</mrow>
@@ -205,7 +201,7 @@
   <exercise>
     <statement>
       <p>
-        Let <m>M : \Poly_3 \rightarrow \Poly_4</m> be the <sq>multiplication by <m>x</m></sq> map,
+        Let <m>M : \Poly_3 \rightarrow \Poly_4</m> be the <q>multiplication by <m>x</m></q> map,
         <m>M(p)(x) = x p(x)</m>.
         Let <m>S : \Poly_4 \rightarrow \Poly_4</m> be the map <m>S(p)(x) = p(x-1)</m>.
         Similarly let <m>T : \Poly_3 \rightarrow \Poly_3</m> be the map <m>T(p)(x) = p(x-1)</m>.

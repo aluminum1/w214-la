@@ -18,20 +18,20 @@
       \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nm}
       \end{bmatrix}
     </me>
-    Elke <m> A_{ij} </m> dui hier 'n re&#xeb;le getal aan.
+    Elke <m> A_{ij} </m> dui hier 'n reële getal aan.
   </p>
 
-  <assemblage>
+  <convention>
     <p>
-      Ek sal altyd matrikse in <em><sq>sans serif</sq></em>-lettertipe skryf, bv.
+      Ek sal altyd matrikse in <em><q>sans serif</q></em>-lettertipe skryf, bv.
       <m>\mat{A}</m>.
-      Dit is moeilik om in handgeskrewe teks <sq>van lettertipe te
-      verander,</sq> maar ek moedig jou aan om ten minste die letters <m>\mat{A}</m>,
+      Dit is moeilik om in handgeskrewe teks <q>van lettertipe te
+      verander,</q> maar ek moedig jou aan om ten minste die letters <m>\mat{A}</m>,
       <m>\mat{B}</m>, <m>\mat{C}</m>,
       ens. vir matrikse te reserveer, en <m>S</m>, <m>T</m>,
-      ens. vir line&#xea;re afbeeldings!
+      ens. vir lineêre afbeeldings!
     </p>
-  </assemblage>
+  </convention>
 
   <p>
     Twee <m>n \times m</m> matrikse <m>\mat{A}</m> en <m>\mat{B}</m> kan bymekaargetel word,
@@ -102,20 +102,16 @@
       <p>
         <m>\Mat_{2,2}</m> het basis
         <me>
-          \mat{E}_{11} = \left[ \begin{array}{cc} 1 \amp  0 \\ 0 \amp  0
-          \end{array}  \right], \,
-          \mat{E}_{12} = \left[ \begin{array}{cc} 0 \amp  1 \\ 0 \amp  0
-          \end{array}  \right],
-          \mat{E}_{21} = \left[ \begin{array}{cc} 0 \amp  0 \\ 1 \amp  0
-          \end{array}  \right],
-          \mat{E}_{22} = \left[ \begin{array}{cc} 0 \amp  0 \\ 0 \amp  1
-          \end{array}  \right]
+          \mat{E}_{11} = \begin{bmatrix} 1 \amp  0 \\ 0 \amp  0 \end{bmatrix}, \,
+          \mat{E}_{12} = \begin{bmatrix} 0 \amp  1 \\ 0 \amp  0 \end{bmatrix}, \,
+          \mat{E}_{21} = \begin{bmatrix} 0 \amp  0 \\ 1 \amp  0 \end{bmatrix}, \,
+          \mat{E}_{22} = \begin{bmatrix} 0 \amp  0 \\ 0 \amp  1 \end{bmatrix}
         </me>.
       </p>
     </statement>
   </example>
 
-  <assemblage>
+  <convention>
     <p>
       Gewoonlik is <m>\mat{A}</m> 'n matriks, en is
       <m>\mat{A}_{ij}</m> die element van die matriks by posisie <m>(i,j)</m>.
@@ -129,7 +125,7 @@
         (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
       </men>
     </p>
-  </assemblage>
+  </convention>
 
   <exercise>
     <statement>
@@ -149,13 +145,10 @@
         <m>{\mathbf \mat{E}}_{i1}</m> van <m>\Col_n</m>
         op eenvoudiger wyse as <m>\col{e}_i</m> skryf:
         <me>
-          \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
-          \end{array}  \right], \,
-          \col{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
-          \end{array}  \right], \,
+          \col{e}_1 := \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}, \,
+          \col{e}_2 := \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix} \,
           \ldots, \,
-          \col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
-          \end{array}  \right]
+          \col{e}_n := \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}
         </me>.
       </p>
 
@@ -183,22 +176,24 @@
     <m>n \times k</m>-matriks <m>\mat{A}</m> kan van regs met 'n
     <m>k \times m</m>-matriks <m>\mat{B}</m> vermenigvuldig word
     om 'n <m>n \times m</m>-matriks <m>\mat{AB}</m> te kry,
-    <me>
-      \left[ \begin{array}{cccc} \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1k} \\
-      \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2k} \\
-      \vdots \amp  \amp  \ddots \amp  \vdots \\
-      \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nk}
-      \end{array}  \right] \left[ \begin{array}{cccc} \mat{B}_{11} \amp  \mat{B}_{12} \amp  \cdots \amp  \mat{B}_{1m} \\
-      \mat{B}_{21} \amp  \mat{B}_{22} \amp  \cdots \amp  \mat{B}_{2m} \\
-      \vdots \amp  \amp  \ddots \amp  \vdots \\
-      \mat{B}_{k1} \amp  \mat{B}_{k2} \amp  \cdots \amp  \mat{B}_{km}
-      \end{array}  \right] \, = \\
-      \left[ \begin{array}{cccc} (\mat{AB})_{11} \amp  (\mat{AB})_{12} \amp  \cdots \amp  (\mat{AB}_{1m} \\
-      (\mat{AB})_{21} \amp  (\mat{AB})_{22} \amp  \cdots \amp  (\mat{AB})_{2m} \\
-      \vdots \amp  \amp  \ddots \amp  \vdots \\
-      (\mat{AB})_{k1} \amp  (\mat{AB})_{k2} \amp  \cdots \amp  (\mat{AB})_{nm}
-      \end{array}  \right]
-    </me>
+    <md>
+      <mrow>
+        \begin{bmatrix} \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1k} \\
+        \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2k} \\
+        \vdots \amp  \amp  \ddots \amp  \vdots \\
+        \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nk} \end{bmatrix}
+        \begin{bmatrix} \mat{B}_{11} \amp  \mat{B}_{12} \amp  \cdots \amp  \mat{B}_{1m} \\
+        \mat{B}_{21} \amp  \mat{B}_{22} \amp  \cdots \amp  \mat{B}_{2m} \\
+        \vdots \amp  \amp  \ddots \amp  \vdots \\
+        \mat{B}_{k1} \amp  \mat{B}_{k2} \amp  \cdots \amp  \mat{B}_{km} \end{bmatrix} \, =
+      </mrow>
+      <mrow>
+        \begin{bmatrix} (\mat{AB})_{11} \amp  (\mat{AB})_{12} \amp  \cdots \amp  (\mat{AB}_{1m} \\
+        (\mat{AB})_{21} \amp  (\mat{AB})_{22} \amp  \cdots \amp  (\mat{AB})_{2m} \\
+        \vdots \amp  \amp  \ddots \amp  \vdots \\
+        (\mat{AB})_{k1} \amp  (\mat{AB})_{k2} \amp  \cdots \amp  (\mat{AB})_{nm} \end{bmatrix}
+      </mrow>
+    </md>
     deur die inskrywings van <m>\mat{AB}</m> as
     <me>
       (\mat{AB})_{ij} := \mat{A}_{i1} \mat{B}_{1j} + \mat{A}_{i2} \mat{B}_{2j} + \cdots + \mat{A}_{ik} \mat{B}_{kj}
@@ -209,7 +204,7 @@
     <statement>
       <p>
         Die bostaande bewerkings op matrikse bevredig die volgende
-        re&#xeb;ls wanneer ook al die somme en produkte gedefinieer is:
+        reëls wanneer ook al die somme en produkte gedefinieer is:
         <ol>
           <li>
             <p>
@@ -259,7 +254,7 @@
     </p>
   </proof>
 
-  <assemblage>
+  <remark>
     <p>
       Ek hoop nie die <m>\Sigma</m>-notasie in die bostaande bewys is te verwarrend nie!
       Kom ek skryf presies dieselfde bewys uit
@@ -284,7 +279,7 @@
       (om van die tweede tot die vierde lyn te gaan)
       word <em>omruil van die optellingsvolgorde</em> genoem.
     </p>
-  </assemblage>
+  </remark>
 
   <p>
     Die <em>transponent</em> van 'n

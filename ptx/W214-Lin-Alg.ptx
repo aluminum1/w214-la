@@ -39,7 +39,8 @@
 \newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
 \newcommand{\bopen}{\{\llap{-}}
 \newcommand{\bclose}{\rlap{-}\}}
-\newcommand{\mamp}{&amp;}
+\newcommand{\mamp}{\amp}
+% The \amp command changes correctly whether html or latex is used. This used to be &amp; which works correctly only in html. I didn't want to search for all occurrences of \mamp.
 \newcommand{\R}{\mathbb{R}}
 
 

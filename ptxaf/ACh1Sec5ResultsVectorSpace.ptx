@@ -3,22 +3,20 @@
 <section xml:id="ACh1Sec5ResultsVectorSpace">
   <title>'n Paar resultate rakende abstrakte vektorruimtes</title>
   <p>
-    Dit is tyd om die re&#xeb;ls van vektorruimtes te gebruik
+    Dit is tyd om die reëls van vektorruimtes te gebruik
     om 'n paar algemene resultate te bewys.
   </p>
 
-  <assemblage>
     <p>
-      Ons is op die punt om on eerste formele bewys in die kursus te doen!
+      <alert>Ons is op die punt om on eerste formele bewys in die kursus te doen!</alert>
     </p>
-  </assemblage>
 
   <p> Ons eerste hulpstelling wys dat die nulvektor <m>\ve{0} </m> die <em>unieke</em> vektor in <m>V</m> is wat soos'n nulvektor werk. Meer presies:</p>
   <lemma>
     <statement>
       <p>
         Veronderstel <m>V</m> is 'n vektor-ruimte met nul-vektor <m>\ve{0}</m>.
-        As <m>\ve{0}'</m> 'n ander vektor is wat re&#xeb;l R3(a) bevredig,
+        As <m>\ve{0}'</m> 'n ander vektor is wat reël R3(a) bevredig,
         <men xml:id="uniqueness_zero">
           \ve{0}' + \ve{v} = \ve{v}\text{ vir alle }\ve{v} \in V
         </men>
@@ -141,8 +139,8 @@
 
   <proof>
     <p>
-      <alert>Bewys van <m>\Leftarrow</m></alert>.
-      Veronderstel <m>k=0</m>.
+      Eers bewys ons dat as <m>k=0</m> of <m>\ve{v}=\ve{0}</m>, dan is <m>k.\ve{0}=\ve{0}</m>.
+      Veronderstel dat <m>k=0</m>.
       Dan <m>k \smul \ve{v} = 0 \smul \ve{v} = \ve{0}</m> deur R8 van 'n vektor-ruimte.
       Aan die ander kant, veronderstel <m>\ve{v} = \ve{0}</m>.
       Dan <m>k \smul \ve{v} = k \smul \ve{0} = \ve{0}</m> deur <xref ref="mult_by_zero_ex" text="type-global">Oefening</xref>.
@@ -184,7 +182,7 @@
       </p>
 
       <p>
-        Ons gaan as volg te werk met die re&#xeb;ls:
+        Ons gaan as volg te werk met die reëls:
         <md>
           <mrow>\ve{v} + 7 \smul \ve{x} \amp  = \ve{w}</mrow>
           <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \cdot \ve{x}) \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(tel } -\ve{v} \text{ links aan beide kante by)}</mrow>
@@ -296,7 +294,7 @@
         <m>\ve{w}</m> in 'n vektorruimte die vergelyking
         <m>2 \ve{x} + 6 \ve{w} = \ve{0}</m> bevredig.
         Los op vir <m>\ve{x}</m> en wys eksplisiet
-        hoe jy die re&#xeb;ls van 'n vektorruimte gebruik,
+        hoe jy die reëls van 'n vektorruimte gebruik,
         soos byvoorbeeld in <xref ref="explicit_solve_x" text="global">Voorbeeld</xref>.
       </p>
     </statement>
@@ -358,7 +356,7 @@
     <title>Waar of Onwaar</title>
     <introduction>
       <p>
-        Vir elkeen van die volgende bewerings, besluit of dit waar of onwaar is en bewys dat jou keuse korrek is. (Met ander woorde, as jy s&#xea; dat dit waar is moet jy bewys dat dit waar is en as jy s&#xea; dat dit onwaar is, moet jy bewys dat dit onwaar is deur 'n  <em>eksplisiete teenvoorbeeld</em> te gee.)
+        Vir elkeen van die volgende bewerings, besluit of dit waar of onwaar is en bewys dat jou keuse korrek is. (Met ander woorde, as jy sê dat dit waar is moet jy bewys dat dit waar is en as jy sê dat dit onwaar is, moet jy bewys dat dit onwaar is deur 'n  <em>eksplisiete teenvoorbeeld</em> te gee.)
       </p>
     </introduction>
     <exercise xml:id="is_k_equal_to_zero">
@@ -385,7 +383,7 @@
     <exercise xml:id="empty_vector_space">
       <statement>
       <p>
-        Die le&#xea; versameling kan met die data <xref ref="D1" text="title" />, <xref ref="D2" text="title" />, <xref ref="D3" text="title" /> toegerus word wat aan die re&#xeb;ls vir 'n vektorruimte voldoen.
+        Die leê versameling kan met die data <xref ref="D1" text="title" />, <xref ref="D2" text="title" />, <xref ref="D3" text="title" /> toegerus word wat aan die reëls vir 'n vektorruimte voldoen.
       </p>
     </statement>
      <solution>
@@ -428,8 +426,6 @@
 
 
 </exercises>
-
-<solutions divisional="solution answer" />
 
 
 </section>

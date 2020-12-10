@@ -1,11 +1,11 @@
 
 
 <section xml:id="ACh3Sec2CompositionOfLinearMaps">
-  <title>Samestelling van line&#xea;re afbeeldings</title>
+  <title>Samestelling van lineêre afbeeldings</title>
   <definition>
     <statement>
       <p>
-        As <m>S : U \rightarrow V</m> en <m>T : V \rightarrow W</m> line&#xea;re afbeeldings is,
+        As <m>S : U \rightarrow V</m> en <m>T : V \rightarrow W</m> lineêre afbeeldings is,
         dan word die <term>samestelling van <m>T</m> met <m>S</m></term> die
         afbeelding <m>T \circ S : U \rightarrow W</m> gedefinieer as
         <me>
@@ -16,12 +16,8 @@
     </statement>
   </definition>
 
-  <p>
-    Sien <xref ref="composition_of_linear_maps_fig">Figuur</xref>.
-  </p>
-
   <figure xml:id="composition_of_linear_maps_fig">
-    <caption>Samestelling van line&#xea;re afbeeldings.</caption>
+    <caption>Samestelling van lineêre afbeeldings.</caption>
     <image>
       <latex-image>
         <![CDATA[\begin{tikzpicture}[xscale=1.2]
@@ -57,7 +53,7 @@
     <statement>
       <p>
         Laat <m>S : \mathbb{R}^3 \rightarrow \Poly_2</m> en
-        <m>T : \Poly_2 \rightarrow \Poly_4</m> line&#xea;re afbeeldings wees wat as volg gedefinieer word:
+        <m>T : \Poly_2 \rightarrow \Poly_4</m> lineêre afbeeldings wees wat as volg gedefinieer word:
         <me>
           S( (a,b,c) ) := ax^2 + (a-b)x + c,  T(p(x)) = x^2 p(x)
         </me>.
@@ -79,7 +75,7 @@
     <statement>
       <p>
         As <m>S : U \rightarrow V</m> en <m>T : V \rightarrow W</m>
-        line&#xea;re afbeeldings is, dan is <m>T \circ S : U \rightarrow W</m> ook 'n line&#xea;re afbeelding.
+        lineêre afbeeldings is, dan is <m>T \circ S : U \rightarrow W</m> ook 'n lineêre afbeelding.
       </p>
     </statement>
   </proposition>
@@ -90,8 +86,8 @@
       Dan:
       <md>
         <mrow>(T \circ S) (\ve{u}_1 + \ve{u}_2)   \amp = T(S(\ve{u}_1 + \ve{u}_2)) \amp \text{(defn van } T \circ S)</mrow>
-        <mrow>\amp = T(S(\ve{u}_1) + S(\ve{u}_2)) \amp  (S \text{ is line&#xea;r })</mrow>
-        <mrow>\amp = T(S(\ve{u}_1)) + T(S(\ve{u}_2)) \amp (T \text{ is line&#xea;r }) </mrow>
+        <mrow>\amp = T(S(\ve{u}_1) + S(\ve{u}_2)) \amp  (S \text{ is lineêr })</mrow>
+        <mrow>\amp = T(S(\ve{u}_1)) + T(S(\ve{u}_2)) \amp (T \text{ is lineêr }) </mrow>
         <mrow>\amp = (T \circ S) (\ve{u}_1) + (T \circ S)(\ve{u}_2) \amp  \text{(defn van } T \circ S)</mrow>
       </md>
     </p>
@@ -100,8 +96,8 @@
       Op soortgelyke wyse het ons
       <md>
         <mrow>(T \circ S) (k \ve{u}) \amp = T(S(k \ve{u})) \amp  \text{(defn van } T \circ S)</mrow>
-        <mrow>\amp = T(kS(\ve{u})) \amp  (S \text{ is line&#xea;r })</mrow>
-        <mrow>\amp = k T(S(\ve{u})) \amp  (T \text{ is line&#xea;r })</mrow>
+        <mrow>\amp = T(kS(\ve{u})) \amp  (S \text{ is lineêr })</mrow>
+        <mrow>\amp = k T(S(\ve{u})) \amp  (T \text{ is lineêr })</mrow>
         <mrow>\amp = k (T \circ S) (\ve{u}) \amp  \text{(defn van } T \circ S)</mrow>
       </md>
     </p>
@@ -110,7 +106,7 @@
   <example>
     <statement>
       <p>
-        Oorweeg as line&#xea;re afbeeldings die anti-afgeleide (<m>A</m>) en die afgeleide (<m>D</m>)
+        Oorweeg as lineêre afbeeldings die anti-afgeleide (<m>A</m>) en die afgeleide (<m>D</m>)
         <md>
           <mrow>A : \Poly_n \amp  \rightarrow \Poly_{n+1}</mrow>
           <mrow>D : \Poly_{n+1} \amp  \rightarrow \Poly_n</mrow>
@@ -146,7 +142,7 @@
       </p>
 
       <p>
-        Om die waarheid te s&#xea;, die stelling dat
+        Om die waarheid te sê, die stelling dat
         <m>D \circ A = \id_{\Poly_n}</m> is presies Deel I van die
         Fundamentele Stelling van Calculus, toegepas op die spesiale geval van polinome!
       </p>
@@ -178,7 +174,7 @@
   <exercise>
     <statement>
       <p>
-        Laat <m>R_\theta</m>  die <sq>rotasie deur <m>\theta</m></sq> afbeelding uit <xref ref="rotation-map-example-complete">Example</xref> wees:
+        Laat <m>R_\theta</m>  die <q>rotasie deur <m>\theta</m></q> afbeelding uit <xref ref="rotation-map-example-complete">Example</xref> wees:
         <md>
           <mrow> R_\theta : \Col_2 \amp \rightarrow Col_2 </mrow>
           <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} \cos \theta \amp \sin \theta \\ -\sin\theta \amp \cos \theta \end{bmatrix}</mrow>
@@ -186,7 +182,7 @@
       </p>
 
       <p>
-        Gaan algebra&#xef;es na dat <m>R_\phi \circ R_\theta = R_{\phi + \theta}</m> deur die aksie van die line&#xea;re afbeeldings op beide kante van die vergelyking op 'n arbitr&#xea;re vektor <m>\mat{v} \in \Col_2</m> te bereken.
+        Gaan algebraïes na dat <m>R_\phi \circ R_\theta = R_{\phi + \theta}</m> deur die aksie van die lineêre afbeeldings op beide kante van die vergelyking op 'n arbitrêre vektor <m>\mat{v} \in \Col_2</m> te bereken.
       </p>
     </statement>
     <solution>
@@ -205,8 +201,8 @@
   <exercise>
     <statement>
       <p>
-        Laat <m>M : \Poly_3 \rightarrow \Poly_4</m> die <sq>vermenigvuldig
-        met <m>x</m></sq>-afbeelding wees, <m>M(p)(x) = x p(x)</m>.
+        Laat <m>M : \Poly_3 \rightarrow \Poly_4</m> die <q>vermenigvuldig
+        met <m>x</m></q>-afbeelding wees, <m>M(p)(x) = x p(x)</m>.
         Laat <m>S : \Poly_4 \rightarrow \Poly_4</m> die afbeelding <m>S(p)(x) = p(x-1)</m> wees.
         Net so, laat <m>T : \Poly_3 \rightarrow \Poly_3</m> die afbeelding <m>T(p)(x) = p(x-1)</m> wees.
         Bereken <m>S \circ M</m> en <m>M \circ T</m>.

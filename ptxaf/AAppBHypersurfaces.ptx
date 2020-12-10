@@ -17,7 +17,7 @@
   <definition>
     <statement>
       <p>
-        Ons s&#xea; 'n deelversameling
+        Ons sê 'n deelversameling
         <m>M \subset \mathbb{R}^{n+1}</m> is 'n
         <term><m>n</m>-dimensionele hiper-oppervlakte</term>
         as daar 'n funksie
@@ -70,14 +70,14 @@
 
       <p>
         Om te wys dat <m>M</m> 'n hiper-oppervlakte is, bereken ons eers die
-        gradi&#xeb;nt van <m>f</m> by 'n algemene punt <m>\ve{r} = (x,y) \in \mathbb{R}^2</m>:
+        gradiënt van <m>f</m> by 'n algemene punt <m>\ve{r} = (x,y) \in \mathbb{R}^2</m>:
         <me>
           \nabla_\ve{r} f = (2y, -2x)
         </me>
       </p>
 
       <p>
-        Die gradi&#xeb;nt bestaan duidelik oral.
+        Die gradiënt bestaan duidelik oral.
         Verder, vir 'n punt <m>\ve{p} = (a,b)</m> op <m>M</m>, het ons
         <me>
           \nabla_\ve{p} f = (2b, -2a)  \text{ waar }  b^2 = 1 + a^2
@@ -225,7 +225,7 @@
         </me>,
         met ander woord, <m>c^2 = -3</m>, wat onmoontlik is.
         So <m>\nabla_\ve{p} f</m> bestaan oral op <m>M</m>.
-        Verder, veronderstel <m>\nabla_\ve{p} f = (0,0,0)</m> en <m>\ve{p}</m> l&#xea; op <m>M</m>.
+        Verder, veronderstel <m>\nabla_\ve{p} f = (0,0,0)</m> en <m>\ve{p}</m> lê op <m>M</m>.
         In besonder het ons dan <m>2c = 0</m>
         so <m>c=0</m>, en daarom, volgens die vergelyking vir <m>M</m>,
         <me>
@@ -282,7 +282,7 @@
     </statement>
     <solution>
       <p>
-        Ons het reeds die gradi(&#xeb;)nt van <m>f</m> by 'n punt <m>\ve{p} = (a,b) \in M</m> bereken:
+        Ons het reeds die gradi(ë)nt van <m>f</m> by 'n punt <m>\ve{p} = (a,b) \in M</m> bereken:
         <me>
           \nabla_\ve{p} = (2b, -2a)  \text{ waar }b^2 = 1 + a^2
         </me>.

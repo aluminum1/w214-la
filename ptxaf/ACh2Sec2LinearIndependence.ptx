@@ -1,17 +1,17 @@
 
 
 <section xml:id="ACh2Sec2LinearIndependence">
-  <title>Line&#xea;re onafhanklikheid</title>
+  <title>Lineêre onafhanklikheid</title>
   <definition xml:id="defn_of_linear_ind">
     <statement>
       <p>
         'n Lys vektore <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n \bclose</m> in 'n vektorruimte <m>V</m> is
-        <term>line&#xea;r onafhanklik</term> as die vergelyking
+        <term>lineêr onafhanklik</term> as die vergelyking
         <men xml:id="lin_independence_eqn">
           k_1 \ve{v}_1 + k_2 \ve{e}_2 + \cdots k_n \ve{v}_n = \ve{0}
         </men>
         slegs die triviale oplossing <m>k_1 = k_2 = \cdots = k_n = 0</m> het.
-        Andersins word die lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> <term>line&#xea;r afhanklik</term> genoem.
+        Andersins word die lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> <term>lineêr afhanklik</term> genoem.
       </p>
     </statement>
   </definition>
@@ -36,7 +36,7 @@
       <p>
         Die lys van vektore <m>\ve{f}_1 = (-1, \, 2)</m> en
         <m>\ve{f}_2 = (1, \,1)</m> uit <xref ref="three_vectors_spanning_R2_example">Voorbeeld</xref> is
-        line&#xea;r onafhanklik, omdat die vergelyking
+        lineêr onafhanklik, omdat die vergelyking
         <me>
           k_1 (-1, \, 2) + k_2 (1, \, 1) = (0, \, 0)
         </me>
@@ -70,7 +70,7 @@
         Die lys van vektore <m>\ve{f}_1 =
         (-1, \, 2)</m>, <m>\ve{f}_2 = (1, \,1)</m>,
         <m>\ve{f}_3 = (2, \, -1)</m> uit
-        <xref ref="three_vectors_spanning_R2_example">Voorbeeld</xref> is line&#xea;r afhanklik, want die vergelyking
+        <xref ref="three_vectors_spanning_R2_example">Voorbeeld</xref> is lineêr afhanklik, want die vergelyking
         <men xml:id="eqn_to_check_lin_ind">
           k_1 (-1, \, 2) + k_2 (1, \, 1) + k_3 (2, \, -1) = (0, \, 0)
         </men>
@@ -121,7 +121,7 @@
           \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x) := x, \,\, \ve{q}_2 (x) :=  2x^2 - 1, \,\, \ve{q}_3 (x) := 4x^3 - 3x
         </me>
         uit <xref ref="chebyshev_example">Voorbeeld</xref>
-        is line&#xea;r onafhanklik in <m>\Poly_3</m>.
+        is lineêr onafhanklik in <m>\Poly_3</m>.
         Dit is omdat die vergelyking
         <me>
           k_0 \ve{q}_0 + k_1 \ve{q}_1 + k_2 \ve{q}_2 + k_3 \ve{q}_3 = \ve{0}
@@ -264,7 +264,7 @@
         gesien dat die lys vektore
         <m>\ve{f}_1 = (-1, \, 2)</m>, <m>\ve{f}_2 = (1, \,1)</m>,
         <m>\ve{f}_3 = (2, \, -1)</m> in
-        <m>\mathbb{R}^3</m> line&#xea;r afhanklik is. Gee twee alternatiewe bewyse hiervan, deur gebruik te maak van <xref ref="lin_dependence_prop" />.
+        <m>\mathbb{R}^3</m> lineêr afhanklik is. Gee twee alternatiewe bewyse hiervan, deur gebruik te maak van <xref ref="lin_dependence_prop" />.
       </p>
     </statement>
 
@@ -296,7 +296,7 @@
           <li>
             <p>
               Is
-              <m>\ve{f}_3</m> 'n line&#xea;re kombinasie van
+              <m>\ve{f}_3</m> 'n lineêre kombinasie van
               <m>\ve{f}_1</m> en <m>\ve{f}_2</m>? Ja, want
               <me>
                 \ve{f}_3 = - \ve{f}_1 + \ve{f}_2
@@ -309,12 +309,12 @@
     </solution>
   </example>
 
-  <proposition xml:id="bumping_off_lemma">
-    <title>Steinitz Omruil Lemma</title>
+  <proposition xml:id="Steinitz-exchange-lemma">
+    <title>Die Steinitz Omruil Lemma</title>
 
     <statement>
       <p>
-        Veronderstel <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2,  \ldots, \ve{l}_m \bclose</m> is 'n line&#xea;r onafhanklike lys vektore in 'n
+        Veronderstel <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2,  \ldots, \ve{l}_m \bclose</m> is 'n lineêr onafhanklike lys vektore in 'n
         vektorruimte <m>V</m>
         en dat <m>\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose</m> vir <m>V</m> onderspan.
         Dan is <m>m \leq n</m>.
@@ -328,7 +328,7 @@
       <men>
         \basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose
       </men>
-      wat <m>V</m> span en oorweeg die <sq>opgeblase</sq> lys
+      wat <m>V</m> span en oorweeg die <q>aangevulde</q> lys
       <men xml:id="bloated_list">
         \basis{S^{\prime}} = \bopen \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \ve{s}_n \bclose
       </men>
@@ -340,7 +340,7 @@
     <p>
       <ul>
         <li> <m>\ve{l}_1 = \ve{0}</m>. Dit kan nie waar wees nie, want dan sou <m>\basis{L}</m> lineêr afhanklik wees weens <xref ref="remark_about_lin_dependence"/>, wat in teenstryding is met ons oorspronklike aanname. </li>
-        <li> een van die <m>\ve{s}</m>-vectore, noem dit <m>\ve{s}_r</m>, kan uitgedruk word as 'n lineêre kombinasie van die voorafgaande vektore. Ons kan dan <m>\ve{s}_r</m> uit die lys <m>\basis{S}'</m> verwyder (<sq>afstamp</sq>), en die resulterende lys
+        <li> een van die <m>\ve{s}</m>-vectore, noem dit <m>\ve{s}_r</m>, kan uitgedruk word as 'n lineêre kombinasie van die voorafgaande vektore. Ons kan dan <m>\ve{s}_r</m> uit die lys <m>\basis{S}'</m> verwyder (<q>omruil met <m>\ve{l}_1</m></q>), en die resulterende lys
         <men>
           \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad (\ve{s}_r \text{ omitted)}
         </men>
@@ -371,7 +371,7 @@
       <p>
         Wys dat die lys vektore
         <m>(2,\, 3, \, 1)</m>, <m>(1, \, -1, \, 2)</m>,
-        <m>(7, \, 3, \, c)</m> line&#xea;r afhanklik in
+        <m>(7, \, 3, \, c)</m> lineêr afhanklik in
         <m>\mathbb{R}^3</m> is as en slegs as <m>c=8</m>.
       </p>
     </statement>
@@ -425,31 +425,31 @@
         Die lys vektore in <m>\Mat_{2,2}</m> gegee deur
         <me>
           \ve{v}_1 = \begin{bmatrix}
-            1 &amp; 2 \\
-            1 &amp; 1
+            1 \amp 2 \\
+            1 \amp 1
           \end{bmatrix},\,
           \ve{v}_2 = \begin{bmatrix}
-            1 &amp; 0 \\
-            -2 &amp; 1
+            1 \amp 0 \\
+            -2 \amp 1
           \end{bmatrix},\,
           \ve{v}_3 = \begin{bmatrix}
-            1 &amp; 0 \\
-            2 &amp; 3
+            1 \amp 0 \\
+            2 \amp 3
           \end{bmatrix},\,
           \ve{v}_4 = \begin{bmatrix}
-            0 &amp; 3 \\
-            1 &amp; -1
+            0 \amp 3 \\
+            1 \amp -1
           \end{bmatrix},\,
           \ve{v}_5 = \begin{bmatrix}
-            1 &amp; 0 \\
-            0 &amp; 1
+            1 \amp 0 \\
+            0 \amp 1
           \end{bmatrix}
         </me>
-        is line&#xea;r onafhanklik
+        is lineêr onafhanklik
         (ons sal dit in <xref ref="checking_matrices_lin_dep">Oefening</xref> bewys,
         maar ter wille van hierdie vraag kan jy aanvaar dat dit waar is).
         Herhaal dieselfde stappe as in <xref ref="app_of_prop_preceding">Voorbeeld</xref>
-        om die eerste vektor in die lys te vind wat of die nulvektor of 'n line&#xea;re kombinasie van die voorafgaande vektore is.
+        om die eerste vektor in die lys te vind wat of die nulvektor of 'n lineêre kombinasie van die voorafgaande vektore is.
       </p>
     </statement>
     <solution>
@@ -457,14 +457,14 @@
       Let eerstens op dat <m> \ve v_1  </m> nie die nulvektor is nie. Kom ons kyk dus na <m> \ve v_2 </m>. Dit kan nie 'n skalaarveelvoud van <m> \ve v_1</m> wees nie, deur byvoorbeeld na die matriksinskrywing in posisie (1,2) te kyk. Kom ons kyk nou na <m> \ve v_3 </m>. Veronderstel dat
       <me>
         a\begin{bmatrix}
-          1 &amp; 2 \\
-          1 &amp; 1
+          1 \amp 2 \\
+          1 \amp 1
         \end{bmatrix} + b \begin{bmatrix}
-          1 &amp; 0 \\
-          -2 &amp; 1
+          1 \amp 0 \\
+          -2 \amp 1
         \end{bmatrix} = \begin{bmatrix}
-          1 &amp; 0 \\
-          2 &amp; 3
+          1 \amp 0 \\
+          2 \amp 3
         \end{bmatrix}
       </me>
       Dit gee aanleiding tot 'n stelsel van vier lineêre vergelykings. In besonder het ons 'n vergelyking vir die matriksinskrywing in posisie (1,2):
@@ -474,30 +474,30 @@
       Dus is <m> a = 0 </m>. Maar duidelik is
       <me>
         b \begin{bmatrix}
-          1 &amp; 0 \\
-          -2 &amp; 1
+          1 \amp 0 \\
+          -2 \amp 1
         \end{bmatrix} \neq \begin{bmatrix}
-          1 &amp; 0 \\
-          2 &amp; 3
+          1 \amp 0 \\
+          2 \amp 3
         \end{bmatrix}
       </me>
       vir enige keuse van <m> b</m>. Dus is <m> \ve v_3 </m> nie 'n lineêre kombinasie van <m> \ve v_1 </m> en <m> \ve v_2</m> nie. We consider <m> \ve v_4 </m> next. Suppose
       <me>
         a\begin{bmatrix}
-          1 &amp; 2 \\
-          1 &amp; 1
+          1 \amp 2 \\
+          1 \amp 1
         \end{bmatrix} +
         b \begin{bmatrix}
-          1 &amp; 0 \\
-          -2 &amp; 1
+          1 \amp 0 \\
+          -2 \amp 1
         \end{bmatrix} +
         c \begin{bmatrix}
-          1 &amp; 0 \\
-          2 &amp; 3
+          1 \amp 0 \\
+          2 \amp 3
         \end{bmatrix} =
         \begin{bmatrix}
-          0 &amp; 3 \\
-          1 &amp; -1
+          0 \amp 3 \\
+          1 \amp -1
         \end{bmatrix}
       </me>
       Die vergelyking vir die inskrywing in posisie (1,2) is nou gewoon
@@ -546,14 +546,14 @@
   <exercise>
     <statement>
       <p>
-        Laat <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> 'n line&#xea;r onafhanklike lys vektore in 'n vektorruimte <m>V</m> wees.
-        Veronderstel dat <m>\ve{v}</m> 'n vektor in <m>V</m> is wat nie as 'n line&#xea;re kombinasie van die vektore uit <m>\basis{B}</m> geskryf kan word nie.
-        Toon aan dat die lys <m>\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> line&#xea;r onafhanklik is.
+        Laat <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> 'n lineêr onafhanklike lys vektore in 'n vektorruimte <m>V</m> wees.
+        Veronderstel dat <m>\ve{v}</m> 'n vektor in <m>V</m> is wat nie as 'n lineêre kombinasie van die vektore uit <m>\basis{B}</m> geskryf kan word nie.
+        Toon aan dat die lys <m>\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> lineêr onafhanklik is.
       </p>
     </statement>
     <hint>
       <p>
-        Gebruik die Line&#xea;re Kombinasie van Voorafgaande Vektore Proposisie.
+        Gebruik <xref ref="lin_dependence_prop"/>.
       </p>
     </hint>
       <!--
@@ -601,7 +601,6 @@ and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-
 
 </exercises>
 
-<solutions divisional="solution answer" />
 
 
 </section>

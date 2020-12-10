@@ -101,7 +101,7 @@
       <p>
         Ons definieer skalaarvermenigvuldiging op <m>B</m>
         soos volg:
-        Laat <m>k</m> 'n re&#xeb;le getal
+        Laat <m>k</m> 'n reële getal
         en <m>\ve{u} = (u_1, \, u_2, \, u_3)</m>
         'n element van <m>B</m> wees.
         Ons definieer
@@ -118,7 +118,7 @@
         'n element van <m>B</m> wees.
         Behoort <m>(ku_1, \, ku_2, \, ku_3)</m>
         werklik aan <m>B</m>?
-        Kom ons kyk of dit die defini&#xeb;rende vergelyking
+        Kom ons kyk of dit die definiërende vergelyking
         <xref ref="def_of_b" /> bevredig:
         <md>
           <mrow>\amp  ku_1 - ku_2 + ku_3</mrow>
@@ -346,7 +346,6 @@
     </exercise>
   </exercises>
 
-<solutions divisional="solution answer" />
 
 
 </section>

@@ -70,7 +70,7 @@
     You see the need for the English-to-Chinese map <m>S</m>,
     but not the need for a Chinese-to-English map <m>T</m>.
     After all, you say,
-    since no two different English symbols in <m>A</m> get mapped to the same Chinese symbol in <m>B</m> (<sq><m>S</m> is one-to-one</sq>) and every Chinese symbol <m>y \in B</m> is equal to <m>S(x)</m> for some <m>x \in A</m> (<sq><m>S</m> is onto</sq>),
+    since no two different English symbols in <m>A</m> get mapped to the same Chinese symbol in <m>B</m> (<q><m>S</m> is one-to-one</q>) and every Chinese symbol <m>y \in B</m> is equal to <m>S(x)</m> for some <m>x \in A</m> (<q><m>S</m> is onto</q>),
     we have no need for <m>T</m>.
     It is an extravagance!
   </p>
@@ -102,7 +102,7 @@
     </statement>
   </definition>
 
-  <lemma>
+  <lemma xml:id="lemma-inverse-unique">
     <title>Uniqueness of Inverses</title>
     <statement>
       <p>
@@ -124,6 +124,7 @@
   </convention>
 
   <proof>
+    <title>Proof of <xref ref="lemma-inverse-unique" /></title>
     <p>
       To show that <m>S = S'</m>,
       we must show that for all <m>\ve{w} \in W</m>,
@@ -148,6 +149,14 @@
       </p>
     </statement>
   </definition>
+
+  <remark>
+    <p>
+      If two vector spaces of positive dimension are
+      isomorphic, there will be many isomorphisms between
+      them <mdash /> not just one.
+    </p>
+  </remark>
 
   <example>
     <statement>
@@ -321,16 +330,14 @@
       <p>
         Show that:
 
-        <ol>
+        <ol label="a">
           <li>
-            <title>(a)</title>
             <p>
               <m>\ve{vec}_{V, \basis{B}} (\mat{c} + \mat{c}') = \ve{vec}_{V, \basis{B}} (\mat{c}) + \ve{vec}_{V, \basis{B}} (\mat{c}')</m>
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               <m>\ve{vec}_{V, \basis{B}} (k\mat{c}) = k \, \ve{vec}_{V, \basis{B}} (\mat{c})</m>.
             </p>

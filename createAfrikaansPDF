@@ -4,4 +4,4 @@ echo "PreTeXt to LaTeX complete. Now compiling LaTeX to pdf"
 
 cd /c/pretext/w214-la/ptxaf/latex
 
-pdflatex W214-Lin-Alg-Af.tex
+pdflatex -quiet W214-Lin-Alg-Af.tex

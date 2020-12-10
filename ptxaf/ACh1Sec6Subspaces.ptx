@@ -124,19 +124,17 @@
         'n Lyn <m>L</m> deur die oorsprong in
         <m>\mathbb{R}^2</m> is 'n deelruimte van <m>\mathbb{R}^2</m>:
       </p>
-    <sidebyside>
-      <figure xml:id="line-through-origin-R2-example">
+    <figure xml:id="line-through-origin-R2-example">
       <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
       <image width="50%">
-      <latex-image>
-        <![CDATA[\begin{tikzpicture}
-        \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
-        \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-        \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
-      </latex-image>
+        <latex-image>
+          <![CDATA[\begin{tikzpicture}
+          \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+          \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+          \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+        </latex-image>
       </image>
-      </figure>
-  </sidebyside>
+    </figure>
 
       <p>
         Onthou dat lyn <m>L</m> gespesifiseer kan word
@@ -166,7 +164,7 @@
         kyk, sal jy sien dat die som van twee vektore
         <m>\ve{v}, \ve{v}'</m> op <m>L</m> met die
         kop-op-stert-metode 'n verdere vektor op <m>L</m>
-        tot gevolg sal h&#xea;.
+        tot gevolg sal hê.
       </p>
     </statement>
   </example>
@@ -265,9 +263,8 @@
         twee nie-nul vektore <m>\ve{v}</m> en
         <m>\ve{v}'</m> op <m>L</m> bymekaar tel,
         kry ons 'n vektor <m>\ve{v} + \ve{v}'</m> wat
-        nie op <m>L</m> l&#xea; nie:
+        nie op <m>L</m> lê nie:
       </p>
-        <sidebyside>
           <figure xml:id="line-not-through-origin-non-example">
             <caption>'n Lyn wat nie deur die oorsprong gaan nie, is nie geslote onder optelling nie.</caption>
             <image>
@@ -285,12 +282,11 @@
             </latex-image>
             </image>
         </figure>
-      </sidebyside>
     </statement>
   </example>
 
   <example xml:id="hyperplanes_example_subspace">
-    <title>Hipervlakke ortognaal tot 'n vaste vektor</title>
+    <title>Hipervlakke ortogonaal tot 'n vaste vektor</title>
     <statement>
       <p>Hierdie voorbeeld veralgemeen <xref ref="lines_planes_R3" text="type-global"/> na hoër dimensies. Laat <m>\ve{v} \in \mathbb{R}^n </m> 'n vaste nie-nul vektor wees. Die <em>hipervlak ortogonaal tot <m>\ve{v}</m></em> is die versameling <m>W</m> van alle vektore ortogonaal tot <m>\ve{v}</m>, met ander woorde,
       <men>
@@ -438,7 +434,7 @@
         <men xml:id="formula_poly">
           \ve{p}(x) = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0
         </men>.
-        vir onveranderlike re&#xeb;le ko&#xeb;ffisi&#xeb;nte <m>a_0, \ldots, a_n</m>.
+        vir onveranderlike reële koëffisiënte <m>a_0, \ldots, a_n</m>.
         Twee polinome <m>\ve{p}</m> en <m>\ve{q}</m> is
         <em>gelyk</em> as hulle <em>as funksies</em> gelyk is,
         m.a.w. as <m>\ve{p}(x) = \ve{q} (x)</m> vir alle
@@ -511,7 +507,7 @@
   </example>
 
   <aside>
-    <p>As ons net <sq><m>p</m> is 'n polinoom</sq> sê, bedoel ons dat <m>p</m> 'n polinoom in 'n enkele veranderlike <m>x</m> is, met ander woorde <m>p \in \Poly</m>. Let up dat <m>\Poly = \Poly[x]</m>. </p>
+    <p>As ons net <q><m>p</m> is 'n polinoom</q> sê, bedoel ons dat <m>p</m> 'n polinoom in 'n enkele veranderlike <m>x</m> is, met ander woorde <m>p \in \Poly</m>. Let up dat <m>\Poly = \Poly[x]</m>. </p>
   </aside>
 
 <example xml:id="poly_vector_fields_example">
@@ -627,7 +623,7 @@
       </men>
       is 'n tweede oplossing vir <xref ref="first_example_2nd_order_ode_eqn" />.
       </p>
-      <p>Ons kan SageMath gebruik om te kyk dat hulle inderdaad oplossing vir <xref ref="first_example_2nd_order_ode_eqn" /> is. Kliek die <c>Evaluate (Sage)</c> knoppie <mdash /> die behoort die uitset <sq>True</sq> te gee wat aandui dat <m>y_1</m> werklik 'n oplossing vir die differensiaalvergelyking is.
+      <p>Ons kan SageMath gebruik om te kyk dat hulle inderdaad oplossing vir <xref ref="first_example_2nd_order_ode_eqn" /> is. Kliek die <c>Evaluate (Sage)</c> knoppie <mdash /> die behoort die uitset <q>True</q> te gee wat aandui dat <m>y_1</m> werklik 'n oplossing vir die differensiaalvergelyking is.
       </p>
       <sage>
 
@@ -897,9 +893,9 @@
   <exercise>
     <statement>
       <p>
-        Gee 'n voorbeeld van 'n nie-le&#xeb; deelversameling <m>U</m>
+        Gee 'n voorbeeld van 'n nie-leë deelversameling <m>U</m>
         van <m>\mathbb{R}^2</m> wat geslote is onder optelling en die vind van optellingsinverses (i.e. as <m>\ve{u}</m> in <m>U</m> is, dan is <m>-\ve{u}</m> in
-        <m>V</m>), maar ni&#xe9; 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
+        <m>V</m>), maar nié 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
       </p>
     </statement>
   </exercise>
@@ -907,9 +903,9 @@
   <exercise>
     <statement>
       <p>
-        Gee 'n voorbeeld van 'n nie-le&#xeb; deelversameling <m>V</m>
+        Gee 'n voorbeeld van 'n nie-leë deelversameling <m>V</m>
         van <m>\mathbb{R}^2</m> wat geslote onder skalaarvermenigvuldiging is, maar
-        ni&#xe9; 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
+        nié 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
       </p>
     </statement>
   </exercise>
@@ -967,7 +963,6 @@
 </exercisegroup>
 </exercises>
 
-<solutions divisional="solution answer" />
 
 
 </section>

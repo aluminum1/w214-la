@@ -1,7 +1,7 @@
 
 
 <section xml:id="ACh3Sec6InjectiveSurjective">
-  <title>Injektiewe en surjektiewe line&#xea;re afbeeldings</title>
+  <title>Injektiewe en surjektiewe lineêre afbeeldings</title>
   <definition>
     <statement>
       <p>
@@ -17,8 +17,8 @@
   </definition>
 
   <p>
-    As <m>f</m> 'n <em>line&#xea;re afbeelding</em> tussen vektorruimtes is
-    (en nie net enige arbitr&#xea;re funksie tussen versamelings is nie),
+    As <m>f</m> 'n <em>lineêre afbeelding</em> tussen vektorruimtes is
+    (en nie net enige arbitrêre funksie tussen versamelings is nie),
     dan is daar 'n eenvoudige manier om te toets of <m>f</m> injektief is.
   </p>
 
@@ -37,7 +37,7 @@
       <m>\Rightarrow</m>.
       Veronderstel dat <m>T : V \rightarrow W</m> een-tot-een is.
       Ons weet reeds van een element in <m>\Ker(T)</m>, naamlik
-      <m>\ve{0}_V</m>, aangesien <m>T(\ve{0}_V) = \ve{0}_W</m>, want <m>T</m> is line&#xea;r.
+      <m>\ve{0}_V</m>, aangesien <m>T(\ve{0}_V) = \ve{0}_W</m>, want <m>T</m> is lineêr.
       Aangesien <m>T</m> een-tot-een is,
       moet dit die enigste element in <m>\Ker(T)</m>  wees.
     </p>
@@ -50,7 +50,7 @@
       </me>
       vir vektore <m>\ve{v}, \ve{v}' \in V</m>.
       Dan het ons <m>T(\ve{v}) - T(\ve{v}') = \ve{0}_W</m>,
-      en aangesien <m>T</m> line&#xea;r is,
+      en aangesien <m>T</m> lineêr is,
       beteken dit dat <m>T(\ve{v} - \ve{v}') = \ve{0}_W</m>.
       Gevolglik <m>\ve{v} - \ve{v}' \in \Ker(T)</m>,
       en so <m>\ve{v} - \ve{v}' = \ve{0}_V</m>,
@@ -61,15 +61,15 @@
 </lemma>
 
   <p>
-    'n Verdere vereenvoudiging kom voor as <m>T</m> 'n line&#xea;re afbeelding vanaf 'n vektorruimte <m>V</m> na ditself is (i.e.
-    <m>T</m> is 'n line&#xea;re operator op
+    'n Verdere vereenvoudiging kom voor as <m>T</m> 'n lineêre afbeelding vanaf 'n vektorruimte <m>V</m> na ditself is (i.e.
+    <m>T</m> is 'n lineêre operator op
     <m>V</m>), en <m>V</m> eindig-dimensioneel is.
   </p>
 
   <lemma xml:id="inj-surj">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re operator op 'n eindigdimensionele vektorruimte <m>V</m> wees.
+        Laat <m>T : V \rightarrow V</m> 'n lineêre operator op 'n eindigdimensionele vektorruimte <m>V</m> wees.
         Dan:
         <me>
           T \text{ is injektief}  \Longleftrightarrow T \text{ is surjektief}
@@ -109,14 +109,14 @@
   <proposition xml:id="iso-inj-surj">
     <statement>
       <p>
-        'n Line&#xea;re afbeelding <m>T : V \rightarrow W</m> is 'n isomorfisme as en slegs as <m>T</m> injektief en surjektief is.
+        'n Lineêre afbeelding <m>T : V \rightarrow W</m> is 'n isomorfisme as en slegs as <m>T</m> injektief en surjektief is.
       </p>
     </statement>
   <proof>
     <p>
       <m>\Rightarrow</m>.
       Veronderstel dat <m>V</m> en <m>W</m> isomorf is.
-      Dan bestaan daar 'n paar line&#xea;re afbeeldings <m>T : V\rightleftarrows W : S</m> sodat
+      Dan bestaan daar 'n paar lineêre afbeeldings <m>T : V\rightleftarrows W : S</m> sodat
       <m>T\circ S = \id_W</m> en <m>S \circ T = \id_C</m>.
       Ons sal wys dat <m>T</m> injektief en surjektief is.
       <md>
@@ -140,9 +140,9 @@
 
     <p>
       <m>\Leftarrow</m>.
-      Veronderstel dat daar 'n line&#xea;re afbeelding
+      Veronderstel dat daar 'n lineêre afbeelding
       <m>T : V\rightarrow W</m> bestaan wat injektief en surjektief is.
-      Ons wil wys dat daar 'n line&#xea;re afbeelding <m>S : W \rightarrow V</m> bestaan sodat
+      Ons wil wys dat daar 'n lineêre afbeelding <m>S : W \rightarrow V</m> bestaan sodat
       <m>S \circ T = \id_V</m> en <m>T \circ S = \id_W</m>,
       wat sal bewys dat <m>V</m> en <m>W</m> isomorf is.
     </p>
@@ -170,7 +170,7 @@
       Nou het ons 'n wel-gedefinieerde <em>funksie</em>
       <m>S : W \rightarrow V</m>
       wat <m>T \circ S = \id_W</m> en <m>S \circ T = \id_V</m> bevredig.
-      Ons moet slegs nagaan dat <m>S</m> line&#xea;r is.
+      Ons moet slegs nagaan dat <m>S</m> lineêr is.
     </p>
 
     <p>
@@ -186,7 +186,7 @@
     </p>
 
     <p>
-      Gevolglik is <m>S</m> line&#xea;r, wat die bewys voltooi.
+      Gevolglik is <m>S</m> lineêr, wat die bewys voltooi.
     </p>
   </proof>
 </proposition>
@@ -194,37 +194,34 @@
   <proposition xml:id="equiv-inj-sur-iso">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re bewerking op 'n eindig-dimensionele vektorruimte <m>V</m> wees.
+        Laat <m>T : V \rightarrow V</m> 'n lineêre bewerking op 'n eindig-dimensionele vektorruimte <m>V</m> wees.
         Die volgende stellings is ekwivalent:
 
-        <ul>
+        <ol label="a">
           <li>
-            <title>1.</title>
             <p>
               <m>T</m> is injektief.
             </p>
           </li>
 
           <li>
-            <title>2.</title>
             <p>
               <m>T</m> is surjektief.
             </p>
           </li>
 
           <li>
-            <title>3.</title>
             <p>
               <m>T</m> is 'n isomorfisme.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
   <proof>
     <p>
-      (1) is ekwivalent aan (2) deur <xref ref="inj-surj">Lemma</xref>.
-      Aan die ander kant is (1) en (2) ekwivalent aan (3) volgens <xref ref="iso-inj-surj">Proposisie</xref>.
+      (a) is ekwivalent aan (b) deur <xref ref="inj-surj">Lemma</xref>.
+      Aan die ander kant is <q>(a) en (b)</q> ekwivalent aan (c) volgens <xref ref="iso-inj-surj"></xref>.
     </p>
   </proof>
 </proposition>

@@ -71,7 +71,7 @@
       </p>
 
       <p>
-        Definieer skalaarvermenigvuldiging met 'n re&#xeb;le getal <m>k \in
+        Definieer skalaarvermenigvuldiging met 'n reële getal <m>k \in
         \mathbb{R}</m> as
         <men xml:id="ne_14">
           k \cdot \ve{a} := \ve{a}  \text{ en }   k \cdot \ve{b} := \ve{b}
@@ -175,7 +175,7 @@
   <exercise>
     <statement>
       <p>
-        Wys dat hierdie data re&#xeb;ls R1 tot R8 bevredig.
+        Wys dat hierdie data reëls R1 tot R8 bevredig.
       </p>
     </statement>
   </exercise>
@@ -216,7 +216,7 @@
   <exercise>
     <statement>
       <p>
-        Wys dat hierdie data re&#xeb;ls R1 tot R8 bevredig.
+        Wys dat hierdie data reëls R1 tot R8 bevredig.
       </p>
     </statement>
   </exercise>
@@ -232,7 +232,7 @@
       </p>
 
       <p>
-        So 'n element <m>\ve{x} \in \mathbb{R}^\infty</m> is 'n oneindige ry re&#xeb;le getalle.
+        So 'n element <m>\ve{x} \in \mathbb{R}^\infty</m> is 'n oneindige ry reële getalle.
         Definieer die optellingsbewerking komponentgewys:
         <men>
           (x_1, \, x_2, \, x_3, \, \ldots) + (y_1, \, y_2, \, y_3, \, \ldots) := (x_1 + y_1, \, x_2 + y_2, \, x_3 + y_3, \, \ldots)
@@ -299,20 +299,20 @@
       <p>
         Laat <m>X</m> enige versameling wees.
         Definieer die versameling <m>\Fun(X)</m> van <em>
-        funksies vanaf <m>X</m> na die re&#xeb;le getalle</em> as
+        funksies vanaf <m>X</m> na die reële getalle</em> as
         <men>
           \Fun(X) := \{ \mathbf{f} : X \rightarrow \mathbb{R} \}
         </men>.
       </p>
 
       <p>
-        Let op dat die funksies arbitr&#xea;r kan wees;
+        Let op dat die funksies arbitrêr kan wees;
         daar is geen vereiste dat hulle kontinu of differensieerbaar moet wees nie.
         So 'n vereiste maak nie sin nie,
-        aangesien <m>X</m> 'n arbitr&#xea;re versameling kan wees.
+        aangesien <m>X</m> 'n arbitrêre versameling kan wees.
         Byvoorbeeld, <m>X</m> kan die versameling
         <m>\{a, b, c\}</m> wees <mdash /> sonder
-        enige verdere inligting maak dit nie sin om te s&#xea;dat die funksie
+        enige verdere inligting maak dit nie sin om te sêdat die funksie
         <m>\ve{f} : X \rightarrow \mathbb{R}</m> kontinu is nie.
       </p>
 
@@ -324,7 +324,7 @@
       </p>
 
       <p>
-        Maak seker dat jy verstaan wat hierdie formule s&#xea;!
+        Maak seker dat jy verstaan wat hierdie formule sê!
         Ons begin met twee funksies
         <m>\mathbf{f}</m> en <m>\mathbf{g}</m>,
         en ons definieer hul som as <m>\mathbf{f} + \mathbf{g}</m>.
@@ -332,7 +332,7 @@
         Om 'n funksie op <m>X</m> te definieer,
         moet ons vir elke <m>x \in X</m>
         neerskryf watter waarde die funksie lewer.
-        En dit is wat die formule s&#xea;:
+        En dit is wat die formule sê:
         die waarde wat die funksie
         <m>\mathbf{f} + \mathbf{g}</m> aan die
         element <m>x \in X</m> toeken,
@@ -514,7 +514,7 @@
       </p>
 
       <p>
-        So, <m>\Col_n</m> <sq>is</sq> net <m>\mathbb{R}^n</m>,
+        So, <m>\Col_n</m> <q>is</q> net <m>\mathbb{R}^n</m>,
         maar ons beklemtoon die feit dat die
         komponente van die vektore in kolomme gerangskik word.
       </p>
@@ -607,7 +607,7 @@
         Defineer <m> x\boxplus y = | x - y | </m>.
         Dan word R1 bevredig, omdat
         <m> x \boxplus y = | x - y | = | y -x | = y \boxplus x</m>.
-        Re&#xeb;l R2 word egter nie bevredig nie, omdat
+        Reël R2 word egter nie bevredig nie, omdat
         <m> (1 \boxplus 2) \boxplus 3 = | |1-2| -3| = 2  </m> but <m> 1 \boxplus ( 2 \boxplus 3) = | 1 - |2-3| = 0 </m>
       </p>
     </solution>
@@ -639,7 +639,7 @@
 
           <li>
             <p>
-              Gaan na dat hierdie data die re&#xeb;ls
+              Gaan na dat hierdie data die reëls
               R1 tot R8 bevredig.
             </p>
           </li>
@@ -651,11 +651,11 @@
       <ol>
         <li>
           <p>
-            Laat <m>x,y</m> twee positiewe re&#xeb;le getalle wees. Dan is
+            Laat <m>x,y</m> twee positiewe reële getalle wees. Dan is
             <md>
             <mrow>x \oplus y \amp := xy</mrow>
           </md>
-          beslis ook 'n positiewe re&#xeb;le getal.
+          beslis ook 'n positiewe reële getal.
           Soortgelyk, vir enige <m>k \in R</m> en enige
           <m> x \in \mathbb{R}^+</m>, is
           <md>
@@ -664,7 +664,7 @@
           ook positief. Om dit te sien, let op vir enige
           vaste <m>k</m>, dat die grafiek van die funksie
           <m>f(x) = x^k</m> beperk tot <m>x \ge 0 </m>
-          bo die <m>x</m>-as l&#xea;.
+          bo die <m>x</m>-as lê.
           </p>
         </li>
 
@@ -724,8 +724,6 @@
 </solution>
   </exercise>
 </exercises>
-
-<solutions divisional="solution answer" />
 
 
 </section>

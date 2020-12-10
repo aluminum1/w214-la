@@ -21,17 +21,17 @@
     Here, each <m> A_{ij}</m> denotes a real number.
   </p>
 
-  <assemblage>
+  <convention>
     <p>
-      I will always write matrices in <sq>sans serif</sq> font, e.g.
+      I will always write matrices in <q>sans serif</q> font, e.g.
       <m>\mat{A}</m>.
-      It is difficult to <sq>change fonts</sq> in handwritten text,
+      It is difficult to <q>change fonts</q> in handwritten text,
       but I encourage you to at least reserve the letters <m>\mat{A}</m>,
       <m>\mat{B}</m>, <m>\mat{C}</m>,
       etc. for matrices, and <m>S</m>,
       <m>T</m>, etc. for linear maps!
     </p>
-  </assemblage>
+  </convention>
 
   <p>
     Two <m>n \times m</m> matrices <m>\mat{A}</m> and <m>\mat{B}</m> can be added,
@@ -102,20 +102,16 @@
       <p>
         <m>\Mat_{2,2}</m> has basis
         <me>
-          \mat{E}_{11} = \left[ \begin{array}{cc} 1 \amp  0 \\ 0 \amp  0
-          \end{array}  \right], \,
-          \mat{E}_{12} = \left[ \begin{array}{cc} 0 \amp  1 \\ 0 \amp  0
-          \end{array}  \right],
-          \mat{E}_{21} = \left[ \begin{array}{cc} 0 \amp  0 \\ 1 \amp  0
-          \end{array}  \right],
-          \mat{E}_{22} = \left[ \begin{array}{cc} 0 \amp  0 \\ 0 \amp  1
-          \end{array}  \right]
+          \mat{E}_{11} = \begin{bmatrix} 1 \amp  0 \\ 0 \amp  0 \end{bmatrix}, \,
+          \mat{E}_{12} = \begin{bmatrix} 0 \amp  1 \\ 0 \amp  0 \end{bmatrix}, \,
+          \mat{E}_{21} = \begin{bmatrix} 0 \amp  0 \\ 1 \amp  0 \end{bmatrix}, \,
+          \mat{E}_{22} = \begin{bmatrix} 0 \amp  0 \\ 0 \amp  1 \end{bmatrix}
         </me>.
       </p>
     </statement>
   </example>
 
-  <assemblage>
+  <convention>
     <p>
       Usually <m>\mat{A}</m> is a matrix,
       and <m>\mat{A}_{ij}</m> is the element of the matrix at position <m>(i,j)</m>.
@@ -129,7 +125,7 @@
         (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
       </men>
     </p>
-  </assemblage>
+  </convention>
 
   <exercise>
     <statement>
@@ -149,13 +145,10 @@
         <m>{\mathbf \mat{E}}_{i1}</m> of <m>\Col_n</m>
         more simply as <m>\col{e}_i</m>:
         <me>
-          \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
-          \end{array}  \right], \,
-          \col{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
-          \end{array}  \right], \,
+          \col{e}_1 := \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}, \,
+          \col{e}_2 := \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix} \,
           \ldots, \,
-          \col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
-          \end{array}  \right]
+          \col{e}_n := \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}
         </me>.
       </p>
 
@@ -183,22 +176,24 @@
     An <m>n \times k</m> matrix <m>\mat{A}</m> can be multiplied from the right with a
     <m>k \times m</m> matrix <m>\mat{B}</m> to get a
     <m>n \times m</m> matrix <m>\mat{AB}</m>,
-    <me>
-      \left[ \begin{array}{cccc} \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1k} \\
-      \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2k} \\
-      \vdots \amp  \amp  \ddots \amp  \vdots \\
-      \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nk}
-      \end{array}  \right] \left[ \begin{array}{cccc} \mat{B}_{11} \amp  \mat{B}_{12} \amp  \cdots \amp  \mat{B}_{1m} \\
-      \mat{B}_{21} \amp  \mat{B}_{22} \amp  \cdots \amp  \mat{B}_{2m} \\
-      \vdots \amp  \amp  \ddots \amp  \vdots \\
-      \mat{B}_{k1} \amp  \mat{B}_{k2} \amp  \cdots \amp  \mat{B}_{km}
-      \end{array}  \right] \, = \\
-      \left[ \begin{array}{cccc} (\mat{AB})_{11} \amp  (\mat{AB})_{12} \amp  \cdots \amp  (\mat{AB}_{1m} \\
-      (\mat{AB})_{21} \amp  (\mat{AB})_{22} \amp  \cdots \amp  (\mat{AB})_{2m} \\
-      \vdots \amp  \amp  \ddots \amp  \vdots \\
-      (\mat{AB})_{k1} \amp  (\mat{AB})_{k2} \amp  \cdots \amp  (\mat{AB})_{nm}
-      \end{array}  \right]
-    </me>
+    <md>
+      <mrow>
+        \begin{bmatrix} \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1k} \\
+        \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2k} \\
+        \vdots \amp  \amp  \ddots \amp  \vdots \\
+        \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nk} \end{bmatrix}
+        \begin{bmatrix} \mat{B}_{11} \amp  \mat{B}_{12} \amp  \cdots \amp  \mat{B}_{1m} \\
+        \mat{B}_{21} \amp  \mat{B}_{22} \amp  \cdots \amp  \mat{B}_{2m} \\
+        \vdots \amp  \amp  \ddots \amp  \vdots \\
+        \mat{B}_{k1} \amp  \mat{B}_{k2} \amp  \cdots \amp  \mat{B}_{km} \end{bmatrix} \, =
+      </mrow>
+      <mrow>
+        \begin{bmatrix} (\mat{AB})_{11} \amp  (\mat{AB})_{12} \amp  \cdots \amp  (\mat{AB}_{1m} \\
+        (\mat{AB})_{21} \amp  (\mat{AB})_{22} \amp  \cdots \amp  (\mat{AB})_{2m} \\
+        \vdots \amp  \amp  \ddots \amp  \vdots \\
+        (\mat{AB})_{k1} \amp  (\mat{AB})_{k2} \amp  \cdots \amp  (\mat{AB})_{nm} \end{bmatrix}
+      </mrow>
+    </md>
     by defining the entries of <m>\mat{AB}</m> to be
     <me>
       (\mat{AB})_{ij} := \mat{A}_{i1} \mat{B}_{1j} + \mat{A}_{i2} \mat{B}_{2j} + \cdots + \mat{A}_{ik} \mat{B}_{kj}
@@ -259,7 +254,7 @@
     </p>
   </proof>
 
-  <assemblage>
+  <remark>
     <p>
       I hope the <m>\Sigma</m>-notation does not confuse you in the above proof!
       Let me write out the exact same proof
@@ -284,7 +279,7 @@
       (going from the second to the fourth lines)
       is called <em>exchanging the order of summation</em>.
     </p>
-  </assemblage>
+  </remark>
 
   <p>
     The <em>transpose</em> of an

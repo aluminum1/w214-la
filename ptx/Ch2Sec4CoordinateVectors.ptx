@@ -16,7 +16,7 @@
           Let <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2,\ldots,\ve{e}_n\right\}</m> be a list of vectors in a vector space <m>V</m>. Then the following statements are equivalent:
         </p>
         <p>
-          <ol>
+          <ol label="(a)">
             <li> <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
             </li>
             <li> <p> Every vector
@@ -50,10 +50,10 @@
 
     <proof>
       <p>
-        First we prove that 1 implies 2.
+        First we prove that (a) implies (b).
       </p>
       <p>
-        Suppose that the list of vectors<m>\basis{B} = \left\{ \ve{e}_1,
+        Suppose that the list of vectors <m>\basis{B} = \left\{ \ve{e}_1,
           \ve{e}_2,\ldots,
          \ve{e}_n\right\}</m>  is a basis for <m>V</m>.
         Suppose <m>\ve{v} \in V</m>.
@@ -96,7 +96,7 @@
       </p>
 
         <p>
-          Conversely, we prove that <m>2 \Leftarrow 1</m>.
+          Conversely, we prove that (b) implies (a).
         </p>
         <p>
           Conversely, suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
@@ -147,8 +147,8 @@
         The scalars <m>a_i</m> appearing in the above expansion are called the <term>coordinates of the vector <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m></term>.
         The column vector
         <me>
-          [\ve{v}]_\basis{B} := \left[ \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n
-          \end{array}  \right] \in \Col_n
+          [\ve{v}]_\basis{B} := \begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n
+          \end{bmatrix} \in \Col_n
         </me>
         is called the <term>coordinate vector of <m>\ve{v}</m> with respect to
         the basis <m>\basis{B}</m></term>.
@@ -210,8 +210,8 @@
         By inspection,
         we see that <m>\ve{v} = 2 \ve{b}_1 - \ve{b}_2</m>, so that
         <me>
-           [\ve{v}]_\basis{B} := \left[ \begin{array}{c} 2 \\  -1
-          \end{array}  \right]
+          [\ve{v}]_\basis{B} := \begin{bmatrix} 2 \\  -1
+          \end{bmatrix}
         </me>
       </p>
 
@@ -219,8 +219,8 @@
         Also by inspection,
         we see that <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>, so that
         <me>
-          [\ve{v}]_\basis{B} = \left[ \begin{array}{c} -3 \\  2
-          \end{array}  \right]
+          [\ve{v}]_\basis{B} = \begin{bmatrix} -3 \\  2
+          \end{bmatrix}
         </me>
       </p>
     </solution>
@@ -288,7 +288,7 @@
         </me>
         Therefore,
         <me>
-          [\ve{p}]_\basis{B} := \left[ \begin{array}{c} -4 \\ -\frac{5}{2}\\  \frac{9}{2} \end{array}  \right]
+          [\ve{p}]_\basis{B} := \begin{bmatrix} -4 \\ -\frac{5}{2}\\  \frac{9}{2} \end{bmatrix}
         </me>
       </p>
     </solution>
@@ -337,8 +337,8 @@
       <p>
         Hence <!-- FIX THIS first entry is looking a little wonky-->
         <me>
-          [\ve{f}]_\basis{S} = \left[ \begin{array}{c} \frac{1}{2} \\  -\frac{3}{4} \\ 0 \\ -\frac{1}{2} \\ 0 \\ -\frac{1}{4} \\ 0
-          \end{array}  \right]
+          [\ve{f}]_\basis{S} = \begin{bmatrix} \frac{1}{2} \\  -\frac{3}{4} \\ 0 \\ -\frac{1}{2} \\ 0 \\ -\frac{1}{4} \\ 0
+          \end{bmatrix}
         </me>
       </p>
     </solution>
@@ -380,7 +380,7 @@
         Let <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \right\}</m> be a basis for a vector space <m>V</m>.
         Then for all vectors <m>\ve{v}, \ve{w} \in V</m> and all scalars <m>k</m> we have
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>[\ve{v} + \ve{w}]_\basis{B} = [\ve{v}]_\basis{B} + [\ve{w}]_\basis{B}</m>
@@ -412,8 +412,8 @@
     <p>
       From this we read off that
       <me>
-        [\ve{v} + \ve{w}]_\basis{B} = \left[ \begin{array}{c} a_1 + b_1 \\  a_2 + b_2 \\ \vdots \\ a_n + b_n
-        \end{array}  \right]
+        [\ve{v} + \ve{w}]_\basis{B} = \begin{bmatrix} a_1 + b_1 \\  a_2 + b_2 \\ \vdots \\ a_n + b_n
+        \end{bmatrix}
       </me>.
     </p>
 
@@ -439,8 +439,8 @@
         </md>,
         which gives
         <me>
-        [\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
-        </me>
+          [\ve v]_{\basis B} =\begin{bmatrix} a_1  \\  a_2 \end{bmatrix}
+        </me>.
         Then
         <md>
           <mrow> k\ve v \amp = k(a_1 \ve e_1 + a_2 \ve e_2) </mrow>
@@ -449,8 +449,8 @@
         </md>
         Reading off the coefficients, we obtain
         <me>
-          k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c} ka_1  \\  ka_2 \end{array}\right],
-        </me>
+          k\begin{bmatrix} a_1  \\  a_2 \end{bmatrix} = \begin{bmatrix} ka_1  \\  ka_2 \end{bmatrix}
+        </me>,
         as desired.
       </p>
     </solution>
@@ -462,20 +462,20 @@
         Let <m>\basis{B} = \bopen \mat{B}_1, \mat{B}_2, \mat{B}_3, \mat{B}_4 \bclose </m> be the basis of <m>\Mat_{2,2}</m> given by
         <me>
           \mat{B}_1 = \begin{bmatrix}
-            1 &amp; 0 \\
-            0 &amp; 1
+            1 \amp 0 \\
+            0 \amp 1
           \end{bmatrix}, \mat{B}_2 =
           \begin{bmatrix}
-            1 &amp; 0\\
-            0&amp; -1
+            1 \amp 0\\
+            0\amp -1
           \end{bmatrix},
           \mat{B}_3 = \begin{bmatrix}
-            1 &amp; 1\\
-            1 &amp; 1
+            1 \amp 1\\
+            1 \amp 1
           \end{bmatrix},
           \mat{B}_4 = \begin{bmatrix}
-            0 &amp; 1\\
-            -1 &amp; 0
+            0 \amp 1\\
+            -1 \amp 0
           \end{bmatrix}
         </me>.
       </p>
@@ -484,8 +484,8 @@
         Determine <m>[\mat{A}]_\basis{B}</m>, where
         <me>
           \mat{A} =  \begin{bmatrix}
-            1 &amp; 2\\
-            3 &amp; 4
+            1 \amp 2\\
+            3 \amp 4
           \end{bmatrix}.
         </me>
       </p>

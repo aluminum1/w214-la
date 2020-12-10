@@ -15,8 +15,8 @@
           a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_b \ve{v}_n
         </men>
         waar <m>a_1, a_2, \ldots, a_n</m> skalare is.
-        As al die skalare <m>a_i</m> gelyk aan nul is, dan s&#xea; ons dat dit die
-        <term>triviale line&#xea;re kombinasie</term> is.
+        As al die skalare <m>a_i</m> gelyk aan nul is, dan sê ons dat dit die
+        <term>triviale lineêre kombinasie</term> is.
       </p>
     </statement>
   </definition>
@@ -25,7 +25,7 @@
     <title>Eerste voorbeeld van 'n lineêre kombinasie </title>
     <statement>
       <p>
-        In <m>\mathbb{R}^3</m> is <m>(6, 2, -14)</m> 'n line&#xea;re
+        In <m>\mathbb{R}^3</m> is <m>(6, 2, -14)</m> 'n lineêre
         kombinasie van <m>(-3, 1, 2)</m> en <m>(-2, 0, 3)</m>, want
         <me>
           (6, 2, -14) = 2 (-3, 1, 2) -6 (-2, 0, 3)
@@ -124,9 +124,9 @@
     <p>
       Op my rekenaar is die uitset:
     </p>
-    <sidebyside>
+
     <p> <c> [[a1 == 2*r1 + 2/3, a2 == (2/3), a3 == -r1 + 1/3, a4 == r1]] </c> </p>
-    </sidebyside>
+
     <p>
       Hier moet <c>r1</c> en <c>r2</c> as vrye parameters interpreteer word. Ek gaan hulle <m>s</m> en <m>t</m> noem, want dis wat ons gewoonlik gebruik! Dus het die stelsel <xref first="sim_lin_eqns_second_span_1ex" last="sim_lin_eqns_second_span_4ex"/>  <em>oneindig</em> baie oplossings, geparametriseer deur twee vrye veranderlikes <m>s</m> en <m>t</m>. In besonder bestaan daar <em>ten minste een</em> oplossing. Byvoorbeeld, as ons <m>s=2</m> en <m>t = 1</m> neem (heeltemal lukrake keuse!), kry ons die volgende oplossing:
       <mdn>
@@ -154,8 +154,8 @@
       </p>
 
       <p>
-        Dan is <m>\ve{f}</m> 'n line&#xea;re kombinasie van <m>\ve{f}_1</m> en
-        <m>\ve{f}_2</m>, vanwe&#xeb; die identiteit <m>\cos(3x) = \frac{1}{4} (3 \cos x + \cos(3x))</m>.
+        Dan is <m>\ve{f}</m> 'n lineêre kombinasie van <m>\ve{f}_1</m> en
+        <m>\ve{f}_2</m>, vanweë die identiteit <m>\cos(3x) = \frac{1}{4} (3 \cos x + \cos(3x))</m>.
         Sien <xref ref="trig_poly_example">Voorbeeld</xref>.
         Met ander woorde,
         <me>
@@ -174,9 +174,9 @@
   <definition>
     <statement>
       <p>
-        Ons s&#xea; dat die lys vektore
-        <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2,\ldots, \ve{v}_n \bclose</m> in 'n vektorruimte <m>V</m> <m>V</m> <term>span</term> as elke
-        vektor <m>\ve{v} \in V</m> 'n line&#xea;re kombinasie van die vektore uit <m>\basis{B}</m>.
+        Ons sê dat die lys vektore
+        <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2,\ldots, \ve{v}_n \bclose</m> in 'n vektorruimte <m>V</m> vir <term><m>V</m> onderspan</term> as elke
+        vektor <m>\ve{v} \in V</m> 'n lineêre kombinasie van die vektore uit <m>\basis{B}</m>.
       </p>
     </statement>
   </definition>
@@ -188,7 +188,7 @@
         <me>
           \ve{e}_1 := (1, \, 0), \, \, \ve{e}_2 := (0, 1)
         </me>
-        gespan, want elke vektor <m>\ve{v} = (a_1, \, a_2)</m> kan as 'n line&#xea;re kombinasie
+        gespan, want elke vektor <m>\ve{v} = (a_1, \, a_2)</m> kan as 'n lineêre kombinasie
         <me>
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2
         </me>
@@ -297,11 +297,11 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
   <p>
     Let op dat ek eers vir SageMath moet sê dat <c>v1</c> en <c>v2</c> veranderlikes is, en dat ek vra dat dit vir <c>a1</c>, <c>a2</c> en <c>a3</c> moet oplos. Op my rekenaar is die uitset:
   </p>
-  <sidebyside>
+
     <p>
       <c> [[a1 == r1 - 1/3*v1 + 1/3*v2, a2 == -r1 + 2/3*v1 + 1/3*v2, a3 == r1]] </c>
     </p>
-  </sidebyside>
+
   <p>
     Hier moet <c>r1</c> interpreteer word as ons vrye parameter, wat ons vroeër <m>t</m> genoem het. Dus gee SageMath dieselfde oplossing  <xref first="span_ex_aa1" last="span_ex_aa2"/> as wat ons met die hand gekry het.
   </p>
@@ -315,7 +315,7 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
         <men xml:id="defn_of_e_i">
           \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots, 0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
         </men>
-        onderspan, want elke vektor <m>\ve{v} = (a_1, \,a_2, \, \ldots, \, a_n)</m> kan as 'n line&#xea;re kombinasie
+        onderspan, want elke vektor <m>\ve{v} = (a_1, \,a_2, \, \ldots, \, a_n)</m> kan as 'n lineêre kombinasie
         <men xml:id="standard_basis_R_n">
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
         </men>.
@@ -553,7 +553,6 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
 
 </exercises>
 
-<solutions divisional="solution answer" />
 
 
 </section>

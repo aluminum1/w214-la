@@ -24,7 +24,7 @@
       <m>x</m> and <m>y</m> are real numbers.
     </p>
 
-    <remark>
+    <convention>
       <p>
         Let us pause for a second and translate this
         definition from English into mathematical symbols.
@@ -35,20 +35,20 @@
       </p>
 
       <p>
-        The <m>:=</m> stands for <sq>is defined to be</sq>.
+        The <m>:=</m> stands for <q>is defined to be</q>.
         The <m>\{</m> and <m>\}</m> symbols stand
-        for <sq>the set of all</sq>.
+        for <q>the set of all</q>.
         The lone colon <m>:</m> stands for
-        <sq>where</sq> or <sq>such that</sq>.
-        The comma in between <m>a</m> and <m>b</m> stands for <sq>and</sq>.
-        The <m>\in</m> stands for <sq>an element of</sq>.
+        <q>where</q> or <q>such that</q>.
+        The comma in between <m>a</m> and <m>b</m> stands for <q>and</q>.
+        The <m>\in</m> stands for <q>an element of</q>.
         And <m>\mathbb{R}</m> stands for the set of all real numbers.
       </p>
 
       <p>
         Well done <mdash /> you are learning the language of mathematics!
       </p>
-    </remark>
+    </convention>
 
     <p>
       An element of <m>A</m> is an arbitrary pair of real numbers
@@ -282,7 +282,7 @@
         How do we know that the expression on the right hand side
         really is an element of <m>B</m>?
         We need to check that it satisfies the equation
-        <sq>the first component minus the second component plus the third component equals zero</sq>.
+        <q>the first component minus the second component plus the third component equals zero</q>.
         Let us check that formally:
         <md>
           <mrow>(\ve{b} + \ve{b}')_1 - (\ve{b}+\ve{b}')_2 + (\ve{b}+\ve{b}')_3 \amp = (b_1 + b'_1) - (b_2 + b'_2) + (b_3 + b'_3)</mrow>
@@ -340,7 +340,6 @@
         <m>\ve{c} + \ve{d}</m> as the sum of the graphs of
         <m>\ve{c}</m> and <m>\ve{d}</m>:
       </p>
-        <sidebyside>
               <image>
               <latex-image>
               <![CDATA[
@@ -375,7 +374,6 @@
 ]]>
               </latex-image>
               </image>
-        </sidebyside>
     </subsubsection>
 
     <subsubsection>
@@ -524,7 +522,7 @@
       <ul>
         <li>
           <p>
-            Set <m>A = \mathbb{R}^2</m> has a
+            The set <m>A = \mathbb{R}^2</m> has a
             <em>multiplication operation</em>.
             Because we can think of <m>\mathbb{R}^2</m> as the complex plane <m>\mathbb{C}</m>,
             and we know how to multiply complex numbers.
@@ -538,7 +536,7 @@
 
         <li>
           <p>
-            There is a <em><sq>take the derivative</sq></em> operation on <m>C</m>,
+            There is a <em><q>take the derivative</q></em> operation on <m>C</m>,
             <me>
               \ve{c} \mapsto \frac{d}{dx} \ve{c}
             </me>

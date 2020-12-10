@@ -514,7 +514,7 @@
       </p>
 
       <p>
-        So, <m>\Col_n</m> <sq>is</sq> just <m>\mathbb{R}^n</m>,
+        So, <m>\Col_n</m> <q>is</q> just <m>\mathbb{R}^n</m>,
         but we make explicit the fact that the
         components of the vectors are arranged in a column.
       </p>
@@ -724,8 +724,6 @@
 </solution>
   </exercise>
 </exercises>
-
-<solutions divisional="solution answer" />
 
 
 </section>

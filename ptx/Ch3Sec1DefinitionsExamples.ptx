@@ -126,15 +126,15 @@
 <title>A non-linear map</title>
   <statement>
     <p>
-      The following interactive JSXGraph applet illustrates the <sq>polar coordinates</sq> map
+      The following interactive JSXGraph applet illustrates the <q>polar coordinates</q> map
       <md>
         <mrow> T : \mathbb{R}^2 \amp \rightarrow \mathbb{R}^2 </mrow>
         <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} v_1 \cos(\pi v_2) \\ v_1 \sin(\pi v_2)  \end{bmatrix} </mrow>
       </md>
-      Note that <m>T</m> is a nonlinear map, since, for most points <m>\ve{v}, \ve{v}' \in \mathbb{R}^2</m>, we have <m>T(\ve{v} + \ve{v}') \neq T(\ve{v}) + T(\ve{v}')</m>.
+      Note that <m>T</m> is a non-linear map, since, for most points <m>\ve{v}, \ve{v}' \in \mathbb{R}^2</m>, we have <m>T(\ve{v} + \ve{v}') \neq T(\ve{v}) + T(\ve{v}')</m>.
     </p>
     <figure>
-      <caption>Polar coordinates as a nonlinear map.</caption>
+      <caption>Polar coordinates as a non-linear map.</caption>
       <interactive xml:id="interactive-polar-map" platform="jsxgraph" source="code/jsxgraph/PolarCoordMap.js" aspect="10:4">
         <sidebyside widths="40% 5% 40%" valign="middle">
           <slate xml:id="jsxgraph-polar-1" surface="jsxboard"/>
@@ -235,7 +235,8 @@
     </statement>
     <solution>
       <p>
-        <me> T(k \ve v) = T(k(x,y)) = T(kx,ky) = kx = kT((x,y)) = kT(\ve v)  </me>
+        We only need to do the following computation:
+        <me> T(k \ve v) = T(k(x,y)) = T(kx,ky) = kx = kT((x,y)) = kT(\ve v)  </me>.
       </p>
     </solution>
   </exercise>
@@ -334,7 +335,7 @@
     </figure>
 -->
     <p>
-      The operation <sq>take the derivative</sq> can be interpreted as a linear map
+      The operation <q>take the derivative</q> can be interpreted as a linear map
       <md>
         <mrow>D : \Poly_n \amp  \rightarrow \Poly_{n-1}</mrow>
         <mrow>p \amp  \mapsto p' \, </mrow>
@@ -353,7 +354,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="a">
           <li>
             <p>
               As you know from calculus, taking the derivative of a polynomial decreases every power of <m> x </m> by 1. So if <m> p </m> is in <m>\Poly_n </m>, then <m> p </m> has degree at most <m> n </m> . Therefore, its image under <m> D </m> has degree at most <m> n - 1</m>. Thus <m> p' </m> is in <m>\Poly_{n-1} </m>.
@@ -395,7 +396,7 @@
       </figure>
 -->
     <p>
-      The operation <sq>find the unique anti-derivative with zero constant term</sq> can be interpreted as a linear map
+      The operation <q>find the unique anti-derivative with zero constant term</q> can be interpreted as a linear map
       <md>
         <mrow>A : \Poly_n \amp  \rightarrow \Poly_{n+1}</mrow>
         <mrow>\ve{p} \amp  \mapsto \int_0^x \ve{p}(t) \, dt</mrow>
@@ -407,7 +408,7 @@
 
   <exercise>
       <statement>
-        <ol>
+        <ol label="a">
           <li><p>
             Why is <m>A</m> a map from <m>\Poly_n</m> to <m>\Poly_{n+1}</m>?
           </p></li>
@@ -418,7 +419,7 @@
       </statement>
       <solution>
         <p>
-          <ol>
+          <ol label="a">
             <li>
               <p>
               You know from calculus that the antiderivative of a polynomial <m> \ve p </m> must always have degree one greater than <m> \ve p </m>. Hence <m> A </m> maps <m>\Poly_n</m> to <m> \Poly_{n+1}</m>.
@@ -446,7 +447,7 @@
     <title>Shift map</title>
     <statement>
     <p>
-      Define the <sq>shift forward by 1</sq> map
+      Define the <q>shift forward by 1</q> map
       <md>
         <mrow>S : \Poly_n \amp  \rightarrow \Poly_n</mrow>
         <mrow>\ve{p} \amp  \mapsto S( \ve{p})</mrow>
@@ -480,17 +481,21 @@
       <solution>
         <p>
           Let
+          <md>
+            <mrow>
+            \ve p \amp = \sum_{j=0}^n a_j x^j \amp
+            \ve q \amp= \sum_{j=0}^n b_j x^j
+            </mrow>
+          </md>
+          We have to check
           <me>
-            \ve p = \sum_{j=0}^n a_j x^j \\
-            \ve q = \sum_{j=0}^n b_j x^j
+            S(k \ve p ) = S\left( \sum_{j=0}^n ka_j x^j\right) = \sum_{j=0}^n ka_j (x-1)^j =  k \sum_{j=0}^n a_j (x-1)^j = kS(\ve p)
           </me>
-          <me>
-            S(k \ve p ) = S\left( \sum_{j=0}^n ka_j x^j\right) = \sum_{j=0}^n ka_j (x-1)^j =  k \sum_{j=0}^n a_j (x-1)^j = kS(\ve p).
-          </me>
+          and
           <me>
             S(\ve p + \ve q) = S\left(\sum_{j=0}^n (a_j + b_j) x^j\right) = \sum_{j=0}^n (a_j + b_j) (x-1)^j \\
-            = \sum_{j=0}^n a_j (x-1)^j + \sum_{j=0}^n  b_j (x-1)^j = S(\ve p) + S(\ve q).
-          </me>
+            = \sum_{j=0}^n a_j (x-1)^j + \sum_{j=0}^n  b_j (x-1)^j = S(\ve p) + S(\ve q)
+          </me>.
         </p>
       </solution>
     </exercise>
@@ -504,10 +509,11 @@
       <solution>
         <p>
           <m> S(\ve p_0) = \ve p_0 </m> is trivial.
+          Then we have
           <md>
-            <mrow> S(\ve p_1) = x-1 = \ve p_1 - \ve p_0 </mrow>
-            <mrow> S(\ve p_2) = (x-1)^2 = x^2 - 2x + 1 = \ve p_2 - 2\ve p_1 + \ve p_0 </mrow>
-            <mrow>S(\ve p_3) = (x-1)^3 = x^3 - 3x^2 + 3x - 1 = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0</mrow>
+            <mrow> S(\ve p_1) \amp = x-1 = \ve p_1 - \ve p_0 </mrow>
+            <mrow> S(\ve p_2) \amp = (x-1)^2 = x^2 - 2x + 1 = \ve p_2 - 2\ve p_1 + \ve p_0 </mrow>
+            <mrow>S(\ve p_3) \amp = (x-1)^3 = x^3 - 3x^2 + 3x - 1 = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0</mrow>
           </md>.
         </p>
       </solution>
@@ -521,7 +527,7 @@
       </p>
 
       <p>
-        The operation <sq>take the gradient</sq> can be thought of as a linear map
+        The operation <q>take the gradient</q> can be thought of as a linear map
         <md>
           <mrow> \nabla : \Poly_n[x,y] \amp \rightarrow \Vect_{n-1} (\mathbb{R}^2) </mrow>
           <mrow> f \amp \mapsto \nabla f </mrow>
@@ -606,10 +612,10 @@
         Suppose <m>T : V \rightarrow W</m> is a linear map.
         Then
 
-        <ol>
+        <ol label="a">
           <li>
             <p>
-              <m>T(\ve{0}_V) = \ve{0}_W</m>.
+              <m>T(\ve{0}_V) = \ve{0}_W</m>;
             </p>
           </li>
 
@@ -627,7 +633,7 @@
     <p>
       We go to work as follows:
 
-    <ol>
+    <ol label="a">
         <li>
           <p>
             <md>
@@ -655,10 +661,10 @@
     The next result is very important.
     It tells us that if we know how a linear map <m>T</m> acts on a basis,
     then we know how it acts on the whole vector space
-    (this is the <sq>uniqueness</sq> part).
+    (this is the <q>uniqueness</q> part).
     Moreover, we are free to write down any willy-nilly formula for what <m>T</m> does on the basis vectors,
     and we are guaranteed that this will always extend to a linear map defined on the whole vector space
-    (this is the <sq>existence</sq> part).
+    (this is the <q>existence</q> part).
   </p>
 
   <proposition xml:id="defining_linear_map_on_basis">
@@ -677,7 +683,7 @@
 
   <proof>
     <p>
-      <em>Proof of existence</em>.
+      First we show the <em>existence</em> of such a linear map.
       To define a linear map <m>T</m>,
       we must define <m>T(\ve{v})</m> for each vector <m>\ve{v}</m>.
       We can write any <m>\ve{v}</m> uniquely as a linear combination of the vectors in the basis <m>\basis{B}</m>:
@@ -708,7 +714,7 @@
     </p>
 
     <p>
-      <em>Proof of uniqueness</em>.
+      Now we prove the <em>uniqueness</em> of such a linear map.
       Suppose that <m>S, T  : V \rightarrow W</m> are linear maps with
       <men xml:id="thing_to_satisfy">
         S(\ve{e}_i) = \ve{w}_i,  \text{ and }   T(\ve{e}_i) = \ve{w}_i,  i = 1 \ldots m
@@ -719,10 +725,10 @@
       Then,
       <md>
         <mrow>S (\ve{v}) \amp = S\big(a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m\big)</mrow>
-        <mrow>\amp = a_1 S(\ve{e}_1) + \cdots + a_m S(\ve{e}_m) \amp (S \text{ is line{\^e}r)}</mrow>
+        <mrow>\amp = a_1 S(\ve{e}_1) + \cdots + a_m S(\ve{e}_m) \amp (S \text{ is lineêr)}</mrow>
         <mrow>\amp = a_1 \ve{w}_1 + \cdots + a_m \ve{w}_m \amp  \text{(want } S(\ve{e}_i) = \ve{w}_i)</mrow>
         <mrow>\amp = a_1 T(\ve{e}_1) + \cdots + a_m T(\ve{e}_m) \amp  \text{(want } T(\ve{e}_i) = \ve{w}_i)</mrow>
-        <mrow>\amp = T(a_1 \ve{e}_1 +  \cdots + a_m \ve{e}_m) \amp  (T \text{ is line{\^e}r)}</mrow>
+        <mrow>\amp = T(a_1 \ve{e}_1 +  \cdots + a_m \ve{e}_m) \amp  (T \text{ is lineêr)}</mrow>
         <mrow>\amp = T(\ve{v})</mrow>
       </md>.
     </p>
@@ -765,7 +771,7 @@
     <title>Rotation map on standard basis</title>
     <statement>
       <p>
-        Let us compute the action of the <sq>counterclockwise rotation by <m>\theta</m></sq> map <m>R</m> from <xref ref="rotation_as_linear_map">Example</xref>
+        Let us compute the action of the <q>counterclockwise rotation by <m>\theta</m></q> map <m>R</m> from <xref ref="rotation_as_linear_map">Example</xref>
         with respect to the standard basis <m>\ve{e}_1, \ve{e}_2</m> of <m>\mathbb{R}^2</m>.
       </p>
       <sidebyside>
@@ -828,14 +834,12 @@
         </md>
         <ol>
           <li>
-            <title>(a)</title>
             <p>
               Is <m>T</m> a linear map? (Yes or no)
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               Prove your assertion from (a).
             </p>
@@ -872,14 +876,12 @@
 
         <ol>
           <li>
-            <title>(a)</title>
             <p>
               Is <m>T</m> a linear map? (Yes or no)
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               Prove your assertion from (a).
             </p>
@@ -914,7 +916,7 @@
   <exercise>
     <statement>
       <p>
-        Define the <sq>multiplication by <m>x^2</m></sq> map
+        Define the <q>multiplication by <m>x^2</m></q> map
         <md>
           <mrow>M : \Poly_n \amp  \rightarrow \Poly_{n+2}</mrow>
           <mrow>\ve{p} \amp  \mapsto M(\ve{p})</mrow>
@@ -923,21 +925,18 @@
 
         <ol>
           <li>
-            <title>(a)</title>
             <p>
               Why does <m>M</m> map from <m>\Poly_n</m> to <m>\Poly_{n+2}</m>?
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               Prove that <m>M</m> is linear.
             </p>
           </li>
 
           <li>
-            <title>(c)</title>
             <p>
               Compute the action of <m>M</m> in the standard basis for <m>\Poly_3</m>,
               as in <xref ref="shift_example">Example</xref>.
@@ -1063,7 +1062,7 @@
       <me>
         y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y' + a_0(x) = 0
       </me>.
-      Consider the <sq>evaluate at <m>x=1</m></sq> map
+      Consider the <q>evaluate at <m>x=1</m></q> map
       <md>
         <mrow>T : V \amp \rightarrow \mathbb{R} </mrow>
         <mrow>y \amp \mapsto y(1)</mrow>
@@ -1075,29 +1074,26 @@
   <exercise>
     <statement>
       <p>
-        Define the <sq>integrate over the interval
-        <m>[-1,1]</m></sq> map
+        Define the <q>integrate over the interval
+        <m>[-1,1]</m></q> map
         <md>
           <mrow>I : \Poly_n \amp  \rightarrow \mathbb{R}</mrow>
           <mrow>\ve{p} \amp  \mapsto \int_{-1}^{1} \ve{p}(x) \, dx</mrow>
         </md>
         <ol>
           <li>
-            <title>(a)</title>
             <p>
               Prove that <m>I</m> is linear.
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               Compute the action of <m>I</m> with respect to the standard basis <m>\ve{p}_0, \ldots, \ve{p}_3</m> for <m>\Poly_3</m>.
             </p>
           </li>
 
           <li>
-            <title>(c)</title>
             <p>
               Compute the action of <m>I</m> with respect to the basis
               <m>\ve{q}_0, \ldots, \ve{q}_3</m> for <m>\Poly_3</m> from <xref ref="new_basis_for_poly_3">Example</xref>.

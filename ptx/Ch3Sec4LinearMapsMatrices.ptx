@@ -14,7 +14,7 @@
         <m>T(\ve{b}_i)</m> with respect to the basis <m>\basis{C}</m>:
         <me>
           [T]_{\basis{C} \leftarrow \basis{B}} :=
-          \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
+          \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} \amp \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} \amp \ldots \amp \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
         </me>
       </p>
     </statement>
@@ -114,7 +114,7 @@
           [T(\ve{v})]_\basis{C} = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B}
         </men>
         where the right hand side is the product of the matrix
-        <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> with the coordinate vector <m>\ve{v}]_\basis{B}</m>.
+        <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> with the coordinate vector <m>[\ve{v}]_\basis{B}</m>.
       </p>
     </statement>
 
@@ -135,7 +135,7 @@
           <mrow>[\ve{v}]_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
           <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  (T \text{ is linear)}</mrow>
           <mrow>\amp = a_1 [T(\ve{b}_1)]_\basis{C} + \cdots + a_n [T(\ve{b}_m)]_\basis{C}  \amp \amp  (<xref ref = "lin_of_coord_vectors" />)</mrow>
-         <mrow> \amp =  \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
+         <mrow> \amp =  \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} \amp \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} \amp \ldots \amp \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
           <mrow>\amp =    [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
         </md>.
       </p>
@@ -317,8 +317,8 @@
         and <m>\basis{C}</m> is a basis for <m>W</m>.
         Then
         <me>
-          (T \text{ is an isomorphism}  \Longleftrightarrow [T]_{\basis{C} \leftarrow \basis{B}} \text{ is invertible.}
-        </me>
+          (T \text{ is an isomorphism})  \Longleftrightarrow [T]_{\basis{C} \leftarrow \basis{B}} \text{ is invertible}
+        </me>.
       </p>
     </statement>
   </corollary>
@@ -390,7 +390,7 @@
 
   <p>
     We can refine this a bit further.
-    Explicitly, <sq>the inverse of the matrix of a linear map equals the matrix of the inverse of the linear map</sq>.
+    Explicitly, <q>the inverse of the matrix of a linear map equals the matrix of the inverse of the linear map</q>.
   </p>
 
   <corollary xml:id="inverse-of-map-via-matrices">
@@ -489,7 +489,7 @@
         <me>
           T : \Trig_1 \rightarrow \Trig_2
         </me>
-        be the <sq>multiply with <m>\sin x</m></sq> linear map,
+        be the <q>multiply with <m>\sin x</m></q> linear map,
         <m>T(f)(x) = \sin x f(x)</m>.
         Compute <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> with respect to the standard basis
         <m>\basis{B}</m> of <m>\Trig_1</m> and <m>\basis{C}</m> of <m>\Trig_2</m>.
@@ -523,7 +523,7 @@
         <me>
           S : \Trig_2 \rightarrow \Trig_2
         </me>
-        be the <sq>shift by <m>\frac{\pi}{6}</m></sq> map,
+        be the <q>shift by <m>\frac{\pi}{6}</m></q> map,
         <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
         <ol>
           <li>
@@ -627,7 +627,7 @@
   <exercise>
     <statement>
       <p>
-        Verify <xref ref="functoriality_of_matrix"/> for the <sq>gradient</sq> and <sq>divergence</sq> linear maps
+        Verify <xref ref="functoriality_of_matrix"/> for the <q>gradient</q> and <q>divergence</q> linear maps
         <md>
          <mrow> G : \Poly_3[x,y] \amp \rightarrow \Vect_2(\mathbb{R}^2) </mrow>
          <mrow> G(p) := \nabla p</mrow>

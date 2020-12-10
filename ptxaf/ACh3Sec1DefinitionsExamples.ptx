@@ -15,7 +15,7 @@
     Herinner jouself daaraan dat 'n <em>funksie</em>
     (of 'n <em>afbeelding</em>)
     <m>f : X \rightarrow Y</m> van 'n versameling <m>X</m> na 'n versameling <m>Y</m>
-    'n re&#xeb;l is wat aan elke element <m>x\in X</m> 'n element <m>f(x)</m> van <m>Y</m> toeken.
+    'n reël is wat aan elke element <m>x\in X</m> 'n element <m>f(x)</m> van <m>Y</m> toeken.
     Ons skryf <m>x \mapsto f(x)</m> om aan te dui dat 'n element <m>x \in X</m>
     op <m>f(x) \in Y</m> afbeeld deur die funksie <m>f</m>.
     Sien <xref ref="explanation_of_mapsto">Figuur</xref>.
@@ -43,7 +43,7 @@
     <statement>
       <p>
         Laat <m>V</m> en <m>W</m> vektorruimtes wees.
-        'n <term>line&#xea;re afbeelding</term> van <m>V</m> na <m>W</m> is 'n funksie <m>T : V \rightarrow W</m> wat die volgende bevredig:
+        'n <term>lineêre afbeelding</term> van <m>V</m> na <m>W</m> is 'n funksie <m>T : V \rightarrow W</m> wat die volgende bevredig:
 
         <ul>
           <li>
@@ -65,8 +65,8 @@
 
   <note>
     <p>
-      'n Ander naam vir 'n line&#xea;re afbeelding is 'n
-      <em>line&#xea;re transformasie</em>.
+      'n Ander naam vir 'n lineêre afbeelding is 'n
+      <em>lineêre transformasie</em>.
     </p>
   </note>
 
@@ -76,7 +76,7 @@
   <title>Voorbeelde van lineêre afbleedings</title>
 
   <example>
-    <title>Matrikse gee aanleiding tot line&#xea;re afbeeldings</title>
+    <title>Matrikse gee aanleiding tot lineêre afbeeldings</title>
     <statement>
 <!--
       <figure>
@@ -85,7 +85,7 @@
       </figure>
 -->
       <p>
-        Elke <m>n \times m</m>-matriks <m>\mat{A}</m> gee aanleiding tot 'n <em>line&#xea;re afbeelding</em>
+        Elke <m>n \times m</m>-matriks <m>\mat{A}</m> gee aanleiding tot 'n <em>lineêre afbeelding</em>
         <md>
           <mrow>T_{\mat{A}} : \Col_m \amp  \rightarrow \Col_n</mrow>
           <mrow>\col{v} \amp  \mapsto \mat{A} \col{v} \, </mrow>
@@ -94,12 +94,12 @@
 
       <p>
         Dit is, <m>T_{\mat{A}} (\col{v}) := \mat{A} \col{v}</m> is die matriksproduk van <m>\mat{A}</m> met die kolomvektor <m>\col{v}</m>.
-        Die feit dat <m>T_\mat{A}</m> wel 'n line&#xea;re afbeelding is volg vanuit die lineariteit van matriksvermenigvuldiging
+        Die feit dat <m>T_\mat{A}</m> wel 'n lineêre afbeelding is volg vanuit die lineariteit van matriksvermenigvuldiging
         (<xref ref="props_of_matrix_ops">Proposisien</xref> dele 2 en 3).
       </p>
 
       <p>
-        Let daarop dat 'n <m>n \times m</m>-matriks 'n line&#xea;re afbeelding vanaf <m>\Col_m</m> na <m>\Col_n</m> definieer!
+        Let daarop dat 'n <m>n \times m</m>-matriks 'n lineêre afbeelding vanaf <m>\Col_m</m> na <m>\Col_n</m> definieer!
       </p>
 
       <p>
@@ -126,7 +126,7 @@
 <title>'n Nie-lineêre afbeelding</title>
   <statement>
     <p>
-      Die volgende app illustreer die <sq>poolkoördinate</sq> afbeelding
+      Die volgende app illustreer die <q>poolkoördinaat</q> afbeelding
       <md>
         <mrow> T : \mathbb{R}^2 \amp \rightarrow \mathbb{R}^2 </mrow>
         <mrow> \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} \amp \mapsto \begin{bmatrix} v_1 \cos(\pi v_2) \\ v_1 \sin(\pi v_2)  \end{bmatrix} </mrow>
@@ -163,7 +163,7 @@
           <mrow>\ve{v} \amp  \mapsto \ve{v}</mrow>
         </md>
         word die <em>identiteitsafbeelding</em> op <m>V</m> genoem.
-        Die is duidelik 'n line&#xea;re afbeelding, omdat
+        Die is duidelik 'n lineêre afbeelding, omdat
         <md>
           <mrow>\id_V (\ve{v} + \ve{w}) \amp = \ve{v} + \ve{w}</mrow>
           <mrow>\amp = \id_V (\ve{v}) + \id_V (\ve{w})</mrow>
@@ -186,11 +186,11 @@
           <mrow>T : \mathbb{R}^2 \amp \rightarrow \mathbb{R}</mrow>
           <mrow>(x, y) \amp \mapsto x</mrow>
         </md>
-        wat vektore op die <m>x</m>-as projekteer is 'n line&#xea;re afbeelding.
+        wat vektore op die <m>x</m>-as projekteer is 'n lineêre afbeelding.
       </p>
 
       <p>
-        Kom ons bevestig optelling algebra&#xef;es:
+        Kom ons bevestig optelling algebraïes:
         <me>
           T \left ( (x_1, y_1 \right)) + \left((x_2, y_2) \right) \stackrel{\text{?} }{=} T\left((x_1, y_1) \right) + T\left((x_2, y_2)\right)
         </me>
@@ -229,13 +229,14 @@
   <exercise>
     <statement>
       <p>
-        Bewys algebra&#xef;es dat <m>T(k \ve{v}) = k T(\ve{v})</m>,
-        sodat <m>T</m> 'n line&#xea;re afbeelding is.
+        Bewys algebraïes dat <m>T(k \ve{v}) = k T(\ve{v})</m>,
+        sodat <m>T</m> 'n lineêre afbeelding is.
       </p>
     </statement>
     <solution>
         <p>
-          <me> T(k \ve v) = T(k(x,y)) = T(kx,ky) = kx = kT((x,y)) = kT(\ve v)  </me>
+          Ons moet net die volgende berekening doen:
+          <me> T(k \ve v) = T(k(x,y)) = T(kx,ky) = kx = kT((x,y)) = kT(\ve v)  </me>.
         </p>
       </solution>
   </exercise>
@@ -250,7 +251,7 @@
           <mrow>R_\theta : \mathbb{R}^2 \amp  \rightarrow \mathbb{R}^2</mrow>
           <mrow>\ve{v} \amp  \mapsto \text{rotasie van } \ve{v} \text{ anti-kloksgewys met 'n hoek } \theta</mrow>
         </md>
-        is 'n line&#xea;re afbeelding,
+        is 'n lineêre afbeelding,
         met 'n soortgelyke grafiese argument as in <xref ref="projection_map_example">Voorbeeld</xref>.
       </p>
 
@@ -287,7 +288,7 @@
           <mrow>C : \mathbb{R}^3 \amp \rightarrow \mathbb{R}^3</mrow>
           <mrow>\ve{v} \amp  \mapsto \ve{w} \times \ve{v}</mrow>
         </md>
-        is 'n line&#xea;re afbeelding as gevolg van die eienskappe van die kruisproduk,
+        is 'n lineêre afbeelding as gevolg van die eienskappe van die kruisproduk,
         <md>
           <mrow>\ve{w} \times (\ve{v}_1 + \ve{v}_2) \amp = \ve{w} \times \ve{v}_1 + \ve{w} \times \ve{v}_2</mrow>
           <mrow>\ve{w} \times (k \ve{v}) \amp = k \ve{w} \times \ve{v}</mrow>
@@ -307,7 +308,7 @@
           <mrow>\ve{v} \amp  \mapsto \ve{u} \cdot \ve{v}</mrow>
         </md>
         (hier is <m>\cdot</m> die dotproduk van vektore, nie
-        skalaarvermenigvuldiging nie!) is 'n line&#xea;re afbeelding, vanwe&#xeb; die eienskappe
+        skalaarvermenigvuldiging nie!) is 'n lineêre afbeelding, vanweë die eienskappe
         <md>
           <mrow>\ve{u} \cdot (\ve{v}_1 + \ve{v}_2) \amp = \ve{u} \cdot \ve{v}_1 + \ve{u} \times \ve{v}_2</mrow>
           <mrow>\ve{u} \cdot (k \ve{v}) \amp = k \ve{u} \cdot \ve{v}</mrow>
@@ -315,9 +316,9 @@
       </p>
 
         <p>
-          Ons sal binnekort sien dat <em>alle</em> line&#xea;re afbeeldings
+          Ons sal binnekort sien dat <em>alle</em> lineêre afbeeldings
           <m>\mathbb{R}^3 \rightarrow \mathbb{R}</m>
-          (inderwaarheid alle line&#xea;re afbeeldings <m>\mathbb{R}^n \rightarrow \mathbb{R}</m>)
+          (inderwaarheid alle lineêre afbeeldings <m>\mathbb{R}^n \rightarrow \mathbb{R}</m>)
           van hierdie vorm is.
         </p>
 
@@ -334,7 +335,7 @@
     </figure>
 -->
       <p>
-        Die bewerking <sq>neem die afgeleide</sq> kan as 'n line&#xea;re afbeelding
+        Die bewerking <q>neem die afgeleide</q> kan as 'n lineêre afbeelding
         <md>
           <mrow>D : \Poly_n \amp  \rightarrow \Poly_{n-1}</mrow>
           <mrow>p \amp  \mapsto p' </mrow>
@@ -348,12 +349,12 @@
     <statement>
       <ol label="a">
         <li><p> Hoekom is <m>D</m> 'n afbeelding van <m>\Poly_n</m> na <m>\Poly_{n-1}</m>?</p></li>
-        <li><p> Bevestig dat <m>D</m> line&#xea;r is. </p></li>
+        <li><p> Bevestig dat <m>D</m> lineêr is. </p></li>
       </ol>
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="a">
           <li>
             <p>
               Soos jy uit Kalkulus weet, verminder elke mag van <m> x </m> met 1 wanneer ons die afgeleide neem. So as <m> p </m> in <m>\Poly_n </m> is, dan het <m> p </m> 'n graad van hoogstens <m> n </m>. Daarom het sy beeld onder <m> D </m> 'n graad van hoogstens <m> n - 1</m>. Dus is <m> p' </m> in <m>\Poly_{n-1} </m>.
@@ -395,7 +396,7 @@
       </figure>
 -->
       <p>
-        Die bewerking <sq>find die unieke anti-afgeleide met nul as konstante term</sq> kan as 'n line&#xea;re  afbeelding
+        Die bewerking <q>vind die unieke anti-afgeleide met nul as konstante term</q> kan as 'n lineêre  afbeelding
         <md>
           <mrow>A : \Poly_n \amp  \rightarrow \Poly_{n+1}</mrow>
           <mrow>\ve{p} \amp  \mapsto \int_0^x \ve{p}(t) \, dt</mrow>
@@ -407,18 +408,18 @@
 
   <exercise>
     <statement>
-      <ol>
+      <ol label="a">
         <li><p>
           Waarom is <m>A</m> 'n afbeelding vanaf <m>\Poly_n</m> na <m>\Poly_{n+1}</m>?
         </p></li>
         <li><p>
-          Bevestig dat <m>A</m> line&#xea;r is.
+          Bevestig dat <m>A</m> lineêr is.
         </p></li>
       </ol>
     </statement>
     <solution>
         <p>
-          <ol>
+          <ol label="a">
             <li>
               <p>
                 Jy weet uit Kalkulus dat die anti-afgeleide van 'n nie-nul polinoom <m> \ve p </m> altyd 'n graad van een meer as <m> \ve p </m> het. Dus sal <m> A </m> die vektorruimte <m>\Poly_n</m> op <m> \Poly_{n+1}</m> afbeeld.
@@ -446,7 +447,7 @@
     <title>Skuifafbeelding</title>
     <statement>
       <p>
-        Definieer die <sq>skuif aan met 1</sq>-afbeelding
+        Definieer die <q>skuif aan met 1</q>-afbeelding
         <md>
           <mrow>S : \Poly_n \amp  \rightarrow \Poly_n</mrow>
           <mrow>\ve{p} \amp  \mapsto S( \ve{p})</mrow>
@@ -474,23 +475,27 @@
   <exercise>
     <statement>
       <p>
-        Gaan na dat <m>S</m> 'n line&#xea;re afbeelding is.
+        Gaan na dat <m>S</m> 'n lineêre afbeelding is.
       </p>
     </statement>
     <solution>
         <p>
           Laat
+          <md>
+            <mrow>
+            \ve p \amp = \sum_{j=0}^n a_j x^j \amp
+            \ve q \amp= \sum_{j=0}^n b_j x^j
+            </mrow>
+          </md>
+          Ons moet bevestig dat
           <me>
-            \ve p = \sum_{j=0}^n a_j x^j \\
-            \ve q = \sum_{j=0}^n b_j x^j
+            S(k \ve p ) = S\left( \sum_{j=0}^n ka_j x^j\right) = \sum_{j=0}^n ka_j (x-1)^j =  k \sum_{j=0}^n a_j (x-1)^j = kS(\ve p)
           </me>
-          <me>
-            S(k \ve p ) = S\left( \sum_{j=0}^n ka_j x^j\right) = \sum_{j=0}^n ka_j (x-1)^j =  k \sum_{j=0}^n a_j (x-1)^j = kS(\ve p).
-          </me>
+          en dat
           <me>
             S(\ve p + \ve q) = S\left(\sum_{j=0}^n (a_j + b_j) x^j\right) = \sum_{j=0}^n (a_j + b_j) (x-1)^j \\
-            = \sum_{j=0}^n a_j (x-1)^j + \sum_{j=0}^n  b_j (x-1)^j = S(\ve p) + S(\ve q).
-          </me>
+            = \sum_{j=0}^n a_j (x-1)^j + \sum_{j=0}^n  b_j (x-1)^j = S(\ve p) + S(\ve q)
+          </me>.
         </p>
       </solution>
     </exercise>
@@ -503,11 +508,12 @@
     </statement>
     <solution>
       <p>
-        <m> S(\ve p_0) = \ve p_0 </m> is trivial.
+        <m> S(\ve p_0) = \ve p_0 </m> is triviaal.
+        Dan het ons
         <md>
-          <mrow> S(\ve p_1) = x-1 = \ve p_1 - \ve p_0 </mrow>
-          <mrow> S(\ve p_2) = (x-1)^2 = x^2 - 2x + 1 = \ve p_2 - 2\ve p_1 + \ve p_0 </mrow>
-          <mrow>S(\ve p_3) = (x-1)^3 = x^3 - 3x^2 + 3x - 1 = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0</mrow>
+          <mrow> S(\ve p_1) \amp = x-1 = \ve p_1 - \ve p_0 </mrow>
+          <mrow> S(\ve p_2) \amp = (x-1)^2 = x^2 - 2x + 1 = \ve p_2 - 2\ve p_1 + \ve p_0 </mrow>
+          <mrow>S(\ve p_3) \amp = (x-1)^3 = x^3 - 3x^2 + 3x - 1 = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0</mrow>
         </md>.
       </p>
     </solution>
@@ -521,7 +527,7 @@
       </p>
 
       <p>
-        Die bewerking <sq>neem die gradiënt</sq> kan as 'n lineêr afbeelding
+        Die bewerking <q>neem die gradiënt</q> kan as 'n lineêr afbeelding
         <md>
           <mrow> \nabla : \Poly_n[x,y] \amp \rightarrow \Vect_{n-1} (\mathbb{R}^2) </mrow>
           <mrow> f \amp \mapsto \nabla f </mrow>
@@ -603,13 +609,13 @@
   <lemma xml:id="lin_map_zero_to_zero">
     <statement>
       <p>
-        Veronderstel <m>T : V \rightarrow W</m> is 'n line&#xea;re afbeelding.
+        Veronderstel <m>T : V \rightarrow W</m> is 'n lineêre afbeelding.
         Dan volg dit dat
 
-        <ol>
+        <ol label="a">
           <li>
             <p>
-              <m>T(\ve{0}_V) = \ve{0}_W</m>
+              <m>T(\ve{0}_V) = \ve{0}_W</m>;
             </p>
           </li>
 
@@ -627,7 +633,7 @@
     <p>
       Ons werk soos volg:
 
-      <ol>
+      <ol label="a">
         <li>
           <p>
             <md>
@@ -653,21 +659,21 @@
 
   <p>
     Die volgende resultaat is baie belangrik.
-    Dit wys dat as ons weet hoe 'n line&#xea;re afbeelding op 'n basis werk,
+    Dit wys dat as ons weet hoe 'n lineêre afbeelding op 'n basis werk,
     dan weet ons hoe dit op die hele vektorruimte werk
-    (hierdie is die <sq>uniekheid</sq> deel).
+    (hierdie is die <q>uniekheid</q> deel).
     Verder kan ons enige willekeurige formule opmaak vir wat <m>T</m> met die basisvektore doen en ons
-    is gewaarborg dat ons dit sal kan uitbrei tot 'n line&#xea;re afbeelding wat op die hele vektorruimte gedefinieer is
-    (dit is waarna die <sq>bestaan</sq> deel verwys).
+    is gewaarborg dat ons dit sal kan uitbrei tot 'n lineêre afbeelding wat op die hele vektorruimte gedefinieer is
+    (dit is waarna die <q>bestaan</q> deel verwys).
   </p>
 
   <proposition xml:id="defining_linear_map_on_basis">
-    <title>Voldoende om 'n line&#xea;re afbeelding op 'n basis te definieer</title>
+    <title>Voldoende om 'n lineêre afbeelding op 'n basis te definieer</title>
     <statement>
       <p>
         Veronderstel <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m>
         is 'n basis vir <m>V</m> en <m>\ve{w}_1, \ldots, \ve{w}_m</m> is vektore in <m>W</m>.
-        Dan bestaan daar 'n unieke line&#xea;re afbeelding <m>T : V \rightarrow W</m> sodat
+        Dan bestaan daar 'n unieke lineêre afbeelding <m>T : V \rightarrow W</m> sodat
         <me>
           T(\ve{e}_i) = \ve{w}_i,  i = 1 \ldots m
         </me>.
@@ -677,8 +683,8 @@
 
   <proof>
     <p>
-      <em>Bestaansbewys</em>.
-      Om 'n line&#xea;re afbeelding <m>T</m> te definieer,
+      Ons bewys eers dat so 'n lineêre afbeelding <em>bestaan</em>.
+      Om 'n lineêre afbeelding <m>T</m> te definieer,
       moet ons <m>T(\ve{v})</m> vir elke vektor <m>\ve{v}</m> definieer.
       Ons kan enige <m>\ve{v}</m> op 'n unieke wyse as 'n lineêre kombinasie van die vektore in die basis <m>\basis{B}</m> skryf:
       <men xml:id="expansion_of_v_in_coords">
@@ -693,7 +699,7 @@
     <p>
       Duidelik het ons <m>T(\ve{e}_i) = \ve{w}_i</m>.
       Om die bestaansbewys te
-      voltooi, moet ons wys dat <m>T</m> line&#xea;r is.
+      voltooi, moet ons wys dat <m>T</m> lineêr is.
       Laat ook <m>\ve{v}' = b_1\ve{e}_1+\cdots+b_m\ve{e}_m</m>. Dan is
       <md>
         <mrow>T(\ve{v} + \ve{v}') \amp = (a_1 + b_1) \ve{w}_1 + \cdots + (a_m + b_m) \ve{w}_m</mrow>
@@ -708,8 +714,8 @@
     </p>
 
     <p>
-      <em>Uniekheidsbewys</em>.
-      Veronderstel dat <m>S, T  : V \rightarrow W</m> line&#xea;re afbeeldings is met
+      Nou bewys ons die <em>uniekheid</em> van so 'n lineêre afbeelding.
+      Veronderstel dat <m>S, T  : V \rightarrow W</m> lineêre afbeeldings is met
       <men xml:id="thing_to_satisfy">
         S(\ve{e}_i) = \ve{w}_i,  \text{ en }   T(\ve{e}_i) =  \ve{w}_i,  i = 1 \ldots m
       </men>.
@@ -729,7 +735,7 @@
 
     <p>
       Gevolglik <m>S = T</m>, met ander woorde,
-      die line&#xea;re afbeelding wat <xref ref="thing_to_satisfy" /> bevredig is uniek.
+      die lineêre afbeelding wat <xref ref="thing_to_satisfy" /> bevredig is uniek.
     </p>
   </proof>
 
@@ -737,7 +743,7 @@
     <statement>
       <p>
         As 'n voorbeeld van <xref ref="defining_linear_map_on_basis">Proposisie</xref>,
-        definieer ons die 'n line&#xea;re afbeelding
+        definieer ons die 'n lineêre afbeelding
         <md>
           <mrow>T \amp  \Col_2 \amp  \rightarrow \Fun(\mathbb{R})</mrow>
           <intertext>bloot deur die werking op die standaard basis van <m>\Col_2</m> te definieer. Byvoorbeeld, ons bepaal</intertext>
@@ -751,7 +757,7 @@
         <m>\mat{e}_1</m> en <m>\mat{e}_2</m> na <em>enige
         funksies</em> <m>f_1</m> en <m>f_2</m> wat ons wil te stuur,
         en ons is gewaarborg dat
-        dit 'n wel-gedefinieerde line&#xea;re afbeelding <m>T : \Col_2 \rightarrow \Fun(\mathbb{R})</m> sal gee.
+        dit 'n wel-gedefinieerde lineêre afbeelding <m>T : \Col_2 \rightarrow \Fun(\mathbb{R})</m> sal gee.
         Byvoorbeeld, ons stel <m>f_1 (x) = \sin x</m> en <m>f_2 (x) = |x|</m>.
         Dan is die algemene formule vir <m>T</m>
         <me>
@@ -765,7 +771,7 @@
     <title>Rotasie-afbeelding op die standaard basis</title>
     <statement>
       <p>
-        Kom ons bereken die aksie van die <sq>anti-kloksgewyse rotasie met <m>\theta</m></sq>-afbeelding <m>R</m> van <xref ref="rotation_as_linear_map">Voorbeeld</xref> met betrekking tot die
+        Kom ons bereken die aksie van die <q>anti-kloksgewyse rotasie met <m>\theta</m></q>-afbeelding <m>R</m> van <xref ref="rotation_as_linear_map">Voorbeeld</xref> met betrekking tot die
         standaard basis <m>\ve{e}_1, \ve{e}_2</m> van <m>\mathbb{R}^2</m>.
       </p>
       <sidebyside>
@@ -802,7 +808,7 @@
 
       <p>
         Nou wat ons die aksie van <m>R</m> op die standaard basisvektore verstaan,
-        kan ons die aksie op 'n arbitr&#xea;re vektor <m>(x, y) \in \mathbb{R}^2</m> bereken:
+        kan ons die aksie op 'n arbitrêre vektor <m>(x, y) \in \mathbb{R}^2</m> bereken:
         <md>
           <mrow>R\left( (x,y)\right) \amp = R( x \ve{e}_1 + y \ve{e}_2 )</mrow>
           <mrow>\amp = x R(\ve{e}_1) + y R(\ve{e}_2)</mrow>
@@ -828,14 +834,12 @@
         </md>
         <ul>
           <li>
-            <title>(a)</title>
             <p>
-              Is <m>T</m> 'n line&#xea;re afbeelding? (Ja of nee)
+              Is <m>T</m> 'n lineêre afbeelding? (Ja of nee)
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               Bewys jou antwoord vir (a).
             </p>
@@ -872,14 +876,12 @@
 
         <ol>
           <li>
-            <title>(a)</title>
             <p>
-              Is <m>T</m> 'n line&#xea;re afbeelding? (Ja of nee)
+              Is <m>T</m> 'n lineêre afbeelding? (Ja of nee)
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               Bewys jou antwoord vir (a).
             </p>
@@ -914,7 +916,7 @@
   <exercise>
     <statement>
       <p>
-        Definieer die <sq>vermenigvuldig met <m>x^2</m></sq>-afbeelding
+        Definieer die <q>vermenigvuldig met <m>x^2</m></q>-afbeelding
         <md>
           <mrow>M : \Poly_n \amp  \rightarrow \Poly_{n+2}</mrow>
           <mrow>\ve{p} \amp  \mapsto M(\ve{p})</mrow>
@@ -923,21 +925,18 @@
 
         <ol>
           <li>
-            <title>(a)</title>
             <p>
               Hoekom beeld <m>M</m> <m>\Poly_n</m> op <m>\Poly_{n+2}</m> af?
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
-              Bewys dat <m>M</m> line&#xea;r is.
+              Bewys dat <m>M</m> lineêr is.
             </p>
           </li>
 
           <li>
-            <title>(c)</title>
             <p>
               Bereken die aksie van <m>M</m> op die standaard basis vir <m>\Poly_3</m>,
               soos in <xref ref="shift_example">Voorbeeld</xref>.
@@ -1063,7 +1062,7 @@
       <me>
         y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y' + a_0(x) = 0
       </me> wees.
-      Beskou die <sq>werk by <m>x=1</m> uit</sq> afbeelding
+      Beskou die <q>werk by <m>x=1</m> uit</q> afbeelding
       <md>
         <mrow>T : V \amp \rightarrow \mathbb{R} </mrow>
         <mrow>y \amp \mapsto y(1)</mrow>
@@ -1075,29 +1074,26 @@
   <exercise>
     <statement>
       <p>
-        Definieer die <sq>integreer oor die interval
-        <m>[-1,1]</m></sq>-afbeelding
+        Definieer die <q>integreer oor die interval
+        <m>[-1,1]</m></q>-afbeelding
         <md>
           <mrow>I : \Poly_n \amp  \rightarrow \mathbb{R}</mrow>
           <mrow>\ve{p} \amp  \mapsto \int_{-1}^{1} \ve{p}(x) \, dx</mrow>
         </md>
         <ol>
           <li>
-            <title>(a)</title>
             <p>
-              Bewys dat <m>I</m> line&#xea;r is.
+              Bewys dat <m>I</m> lineêr is.
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               Bereken die aksie van <m>I</m> met betrekking tot die standaard basis <m>\ve{p}_0, \ldots, \ve{p}_3</m> vir <m>\Poly_3</m>.
             </p>
           </li>
 
           <li>
-            <title>(c)</title>
             <p>
               Bereken die aksie van <m>I</m> met betrekking tot die basis
               <m>\ve{q}_0, \ldots, \ve{q}_3</m> vir <m>\Poly_3</m> uit <xref ref="new_basis_for_poly_3">Voorbeeld</xref>.
@@ -1175,7 +1171,7 @@
   <exercise>
     <statement>
       <p>
-        Beskou die kruisproduk-line&#xea;re afbeelding
+        Beskou die kruisproduk-lineêre afbeelding
         <m>C : \mathbb{R}^3 \rightarrow \mathbb{R}^3</m> uit <xref ref="cross_prod_as_linear_map">Voorbeeld</xref>
         in die geval <m>\ve{w} = (1, 2, 3)</m>.
         Bereken die aksie van <m>C</m> met betrekking tot die standaard basis van <m>\mathbb{R}^3</m>.

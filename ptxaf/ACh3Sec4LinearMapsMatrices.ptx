@@ -1,20 +1,20 @@
 
 
 <section xml:id="ACh3Sec4LinearMapsMatrices">
-  <title>Line&#xea;re afbeeldings en matrikse</title>
+  <title>Lineêre afbeeldings en matrikse</title>
   <definition xml:id="matrix_of_linear_map_defn">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding vanaf 'n vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding vanaf 'n vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
         Laat <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m> 'n basis vir <m>V</m> en
         <m>\basis{C} = \bopen \ve{c}_1, \ldots, \ve{c}_n \bclose</m> 'n basis vir <m>W</m> wees.
         Die <term>matriks van <m>T</m> relatief tot die basisse
         <m>\basis{B}</m> en <m>\basis{C}</m></term>
-        word gedefinieer as die <m>n \times m</m>-matriks  waarvan die kolomme die ko&#xf6;rdinaatvektore van <m>T(\ve{b}_i)</m>
+        word gedefinieer as die <m>n \times m</m>-matriks  waarvan die kolomme die koördinaatvektore van <m>T(\ve{b}_i)</m>
         relatief tot die basis <m>\basis{C}</m> is:
         <me>
           [T]_{\basis{C} \leftarrow \basis{B}} :=
-          \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
+          \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} \amp \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} \amp \ldots \amp \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
         </me>
       </p>
     </statement>
@@ -106,7 +106,7 @@
     <title>Lineêre afbeeldings en matriksvermenigvulding van koördinaatvektore</title>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding vanaf 'n vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding vanaf 'n vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
         Laat <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m> 'n basis vir <m>V</m> en
         <m>\basis{C}</m> 'n basis vir <m>W</m> wees.
         Dan vir alle vektore <m>\ve{v}</m> in <m>V</m> geld dat
@@ -114,7 +114,7 @@
           [T(\ve{v})]_\basis{C} = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B}
         </men>,
         waar die regterkant die produk van die matriks
-        <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> met die koörindaatvektor  <m>\ve{v}]_\basis{B}</m> is.
+        <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> met die koörindaatvektor  <m>[\ve{v}]_\basis{B}</m> is.
       </p>
     </statement>
 
@@ -133,9 +133,9 @@
         Dan,
          <md>
           <mrow>[\ve{v}]_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
-          <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  (T \text{ is line&#xea;r)}</mrow>
+          <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  (T \text{ is lineêr)}</mrow>
           <mrow>\amp = a_1 [T(\ve{b}_1)]_\basis{C} + \cdots + a_n [T(\ve{b}_m)]_\basis{C}  \amp \amp  (<xref ref = "lin_of_coord_vectors" />)</mrow>
-         <mrow> \amp =  \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
+         <mrow> \amp =  \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} \amp \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} \amp \ldots \amp \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
           <mrow>\amp =    [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
         </md>.
       </p>
@@ -177,7 +177,7 @@
   <p>
     Ons kan <xref ref="lin-map-in-matrix-theorem">Stelling</xref> as volg in 'n meer abstrakte manier interpreteer.
     Ons het die volgende diagram van
-    line&#xea;re afbeeldings van vektorruimtes:
+    lineêre afbeeldings van vektorruimtes:
   </p>
 
   <figure>
@@ -205,11 +205,11 @@
   </figure>
 
   <p>
-    Die boonste afbeelding is die line&#xea;re afbeelding <m>T : V \rightarrow W</m>.
+    Die boonste afbeelding is die lineêre afbeelding <m>T : V \rightarrow W</m>.
     Die afbeelding links van <m>V</m> na <m>\Col_m</m> is die
-    ko&#xf6;rdinaatvektorafbeelding <m>[ \cdot ]_\basis{B}</m> geassosieer met die basis <m>\basis{B}</m>.
+    koördinaatvektorafbeelding <m>[ \cdot ]_\basis{B}</m> geassosieer met die basis <m>\basis{B}</m>.
     Sy inverse afbeelding <m>\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V</m> word ook geteken.
-    Die afbeelding aan die regterkant is die ko&#xf6;rdinaatvektorafbeedling <m>[ \cdot]_\basis{C}</m> vanaf <m>W</m> na
+    Die afbeelding aan die regterkant is die koördinaatvektorafbeedling <m>[ \cdot]_\basis{C}</m> vanaf <m>W</m> na
     <m>\Col_n</m> wat met basis <m>C</m> assosieer word.
     Die stippelpyl heel onder is die
     saamgestelse afbeelding, en kan soos volg eksplisiet bereken word.
@@ -235,7 +235,7 @@
     <p>
       Laat <m>\mat{u}</m> 'n kolomvektor in <m>\Col_m</m> wees.
       Definieer <m>\ve{v} := \ve{vec}_{V, \basis{B}} (\mat{u})</m>.
-      Dan is <m>\ve{v}</m> die vektor in <m>V</m> waarvan die ko&#xf6;rdinaatvektor met betrekking tot basis <m>\basis{B}</m> gelyk aan <m>\mat{u}</m> is.
+      Dan is <m>\ve{v}</m> die vektor in <m>V</m> waarvan die koördinaatvektor met betrekking tot basis <m>\basis{B}</m> gelyk aan <m>\mat{u}</m> is.
       Dit is, <m>\mat{u} = [\ve{v}]_\basis{B}</m>.
       So,
       <md>
@@ -274,11 +274,11 @@
   </p>
 
   <theorem xml:id="functoriality_of_matrix">
-    <title>Funktorialiteit van die Matriks-Line&#xea;re Afbeelding</title>
+    <title>Funktorialiteit van die Matriks-Lineêre Afbeelding</title>
     <statement>
       <p>
         Laat <m>S : U \rightarrow V</m> en
-        <m>T : V \rightarrow W</m> line&#xea;re afbeeldings tussen eindig-dimensionele vektorruimtes wees.
+        <m>T : V \rightarrow W</m> lineêre afbeeldings tussen eindig-dimensionele vektorruimtes wees.
         Laat <m>\basis{B}</m>, <m>\basis{C}</m> en <m>\basis{D}</m>
         basisse vir <m>U</m>, <m>V</m> en <m>W</m>
         onderskeidelik wees.
@@ -312,13 +312,13 @@
   <corollary xml:id="map-iso-matrix-iso">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding wees,
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding wees,
         en veronderstel <m>\basis{B}</m> is 'n basis
         vir <m>V</m>, en <m>\basis{C}</m> is 'n basis vir <m>W</m>.
         Dan
         <me>
-          (T \text{ is 'n isomorfisme}  \Longleftrightarrow [T]_{\basis{C} \leftarrow \basis{B}} \text{ is inverteerbaar.}
-        </me>
+          (T \text{ is 'n isomorfisme})  \Longleftrightarrow [T]_{\basis{C} \leftarrow \basis{B}} \text{ is inverteerbaar}
+        </me>.
       </p>
     </statement>
   </corollary>
@@ -326,8 +326,8 @@
   <proof>
     <p>
       <m>\Rightarrow</m>.
-      Veronderstel die line&#xea;re afbeelding <m>T</m> is 'n isomorfisme.
-      Dit beteken dat bestaan 'n line&#xea;re afbeelding <m>S :  W \rightarrow V</m> bestaan sodat
+      Veronderstel die lineêre afbeelding <m>T</m> is 'n isomorfisme.
+      Dit beteken dat bestaan 'n lineêre afbeelding <m>S :  W \rightarrow V</m> bestaan sodat
       <me>
         S \circ T = \id_V  \text{ en }   T \circ S = \id_W/
       </me>
@@ -341,7 +341,7 @@
     </p>
 
     <p>
-      Daarom, volgens die Funktorialiteit van die Matriks van 'n Line&#xea;re Afbeelding (<xref ref="functoriality_of_matrix">Stelling</xref>),
+      Daarom, volgens die Funktorialiteit van die Matriks van 'n Lineêre Afbeelding (<xref ref="functoriality_of_matrix">Stelling</xref>),
       <me>
         [S]_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} = I  \text{ en }   [T]_{\basis{C} \leftarrow \basis{B}} [S]_{\basis{B} \leftarrow \basis{C}} = I
       </me>
@@ -358,7 +358,7 @@
     <p>
       <m>\Leftarrow</m>.
       Veronderstel die matriks <m>[T] \equiv [T]_{\basis{C} \leftarrow \basis{B}}</m> is inverteerbaar.
-      Definieer die line&#xea;re afbeelding
+      Definieer die lineêre afbeelding
       <me>
         S : W \rightarrow V
       </me>
@@ -383,14 +383,14 @@
     <p>
       Daarom, <m>T \circ S = \id_W</m>.
       Op 'n soortgelyke manier kan ons bewys dat <m>S \circ T = \id_V</m>.
-      Daarom is die line&#xea;re afbeelding <m>T</m> 'n
+      Daarom is die lineêre afbeelding <m>T</m> 'n
       isomorfisme, met inverse <m>T^{-1} = S</m>.
     </p>
   </proof>
 
   <p>
     Ons kan dit nog verder verfyn,
-    naamlik, <sq>die inverse van die matriks van 'n line&#xea;re afbeelding is gelyk aan die matriks van die inverse van die line&#xea;re afbeelding</sq>.
+    naamlik, <q>die inverse van die matriks van 'n lineêre afbeelding is gelyk aan die matriks van die inverse van die lineêre afbeelding</q>.
   </p>
 
   <corollary xml:id="inverse-of-map-via-matrices">
@@ -398,7 +398,7 @@
       <p>
         Veronderstel <m>\basis{B}</m> en <m>\basis{C}</m>
         is basisse vir vektorruimtes <m>V</m> en <m>W</m>onderskeidelik.
-        Veronderstel 'n line&#xea;re afbeelding <m>T : V \rightarrow W</m> het inverse <m>T^{-1} : W \rightarrow V</m>.
+        Veronderstel 'n lineêre afbeelding <m>T : V \rightarrow W</m> het inverse <m>T^{-1} : W \rightarrow V</m>.
         Dan
         <me>
           [T]_{\basis{C} \leftarrow \basis{B}}^{-1} = [T^{-1}]_{\basis{B} \leftarrow \basis{C}}
@@ -425,7 +425,7 @@
   </proof>
 
   <p>
-    Die volgende Lemma s&#xea; dat die basisomskakelingsmatriks in <xref ref="ACh2Sec5ChangeOfBasis">Afdeling</xref>
+    Die volgende Lemma sê dat die basisomskakelingsmatriks in <xref ref="ACh2Sec5ChangeOfBasis">Afdeling</xref>
     gewoon die matriks van die identiteitsafbeelding met betrekking tot die betrokke basisse is.
   </p>
 
@@ -452,14 +452,14 @@
 </lemma>
 
   <p>
-    Die volgende Stelling s&#xea; vir ons hoe die matriks van 'n line&#xea;re bewerking verander as ons die basis verander waarmee ons die matriks bereken.
+    Die volgende Stelling sê vir ons hoe die matriks van 'n lineêre bewerking verander as ons die basis verander waarmee ons die matriks bereken.
   </p>
 
   <theorem xml:id="matrix-in-different-basis">
     <statement>
       <p>
         Laat <m>\basis{B}</m> en <m>\basis{C}</m> basisse vir 'n vektorruimte <m>V</m> wees, en laat
-        <m>T : V \rightarrow V</m> 'n line&#xea;re operator op <m>V</m> wees.
+        <m>T : V \rightarrow V</m> 'n lineêre operator op <m>V</m> wees.
         Dan
         <me>
           [T]_{\basis{C} \leftarrow \basis{C}} = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P
@@ -489,7 +489,7 @@
         <me>
           T : \Trig_1 \rightarrow \Trig_2
         </me>
-        die <sq>vermenigvuldig met <m>\sin x</m></sq> lineêre afbeelding
+        die <q>vermenigvuldig met <m>\sin x</m></q> lineêre afbeelding
         <m>T(f)(x) = \sin x f(x)</m> wees.
         Bereken <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> met betrekking tot die standaardbasis
         <m>\basis{B}</m> van <m>\Trig_1</m> en <m>\basis{C}</m> van <m>\Trig_2</m>.
@@ -523,7 +523,7 @@
         <me>
           S : \Trig_2 \rightarrow \Trig_2
         </me>
-        die <sq>skuif met <m>\frac{\pi}{6}</m></sq>-afbeelding wees,
+        die <q>skuif met <m>\frac{\pi}{6}</m></q>-afbeelding wees,
         <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
         <ol>
           <li>
@@ -585,7 +585,7 @@
     <statement>
       <p>
         Bevestig <xref ref="lin-map-in-matrix-theorem">Stelling</xref> vir die
-        line&#xea;re afbeelding <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> gegee deur <m>S(\mat{M}) = \mat{M}^T</m>,
+        lineêre afbeelding <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> gegee deur <m>S(\mat{M}) = \mat{M}^T</m>,
         vir die vektor gegee deur
         <md>
           <mrow> \mat{A} = \begin{bmatrix} 0 \mamp  1 \\ 0 \mamp  0 \end{bmatrix}</mrow>
@@ -617,7 +617,7 @@
   <exercise>
     <statement>
       <p>
-        Maak seker dat die line&#xea;re afbeeldings <m>T</m> en <m>S</m> van <xref ref="trig_ex_1">Oefeninge</xref>
+        Maak seker dat die lineêre afbeeldings <m>T</m> en <m>S</m> van <xref ref="trig_ex_1">Oefeninge</xref>
         <xref ref="trig_ex_2">en</xref>
         die vergelyking <m>[S \circ T]_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{B}} [T]_{\basis{C} \leftarrow \basis{B}}</m> bevredig.
       </p>
@@ -627,7 +627,7 @@
   <exercise>
     <statement>
       <p>
-        Bevestig <xref ref="functoriality_of_matrix"/> vir die <sq>gradiënt</sq> and <sq>divergensie</sq> lineêre afbeeldings
+        Bevestig <xref ref="functoriality_of_matrix"/> vir die <q>gradiënt</q> and <q>divergensie</q> lineêre afbeeldings
         <md>
          <mrow> G : \Poly_3[x,y] \amp \rightarrow \Vect_2(\mathbb{R}^2) </mrow>
          <mrow> G(p) := \nabla p</mrow>

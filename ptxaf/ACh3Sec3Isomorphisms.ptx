@@ -27,7 +27,7 @@
     <!-- For now images aren't allowed in text mode, so rework this:
     <md>
       <mrow>S: A \amp \rightarrow B</mrow>
-      <mrow>\mbox{vo&#xea;l}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" />
+      <mrow>\mbox{voêl}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" />
       \end{aligned}</mrow>
       <mrow>\mbox{oog}  \amp \mapsto \begin{aligned}<image width="100%" source="images/eye.png" />
       \end{aligned}</mrow>
@@ -36,7 +36,7 @@
       <intertext>en</intertext>
       <mrow>T : B \amp \rightarrow A</mrow>
       <mrow>\begin{aligned}<image width="100%" source="images/bird.png" />
-      \end{aligned}  \amp  \mapsto \mbox{vo&#xea;l}</mrow>
+      \end{aligned}  \amp  \mapsto \mbox{voêl}</mrow>
       <mrow>\begin{aligned}<image width="100%" source="images/eye.png" />
       \end{aligned}  \amp  \mapsto \mbox{oog}</mrow>
       <mrow>\begin{aligned}<image width="100%" source="images/person.png" />
@@ -70,7 +70,7 @@
     Jy sien die nut van die Afrikaans-na-Sjinese afbeelding <m>S</m>, maar nie die nut van die
     Sjinees-na-Afrikaanse afbeelding <m>T</m> nie.
     Buitendien, aangesien geen twee
-    verskillende Afrikaanse woorde in <m>A</m> na dieselfde Sjinese simbool in <m>B</m> afgebeeld word nie (<sq><m>S</m> is een-tot-een</sq>) en elke Sjinese simbool <m>y \in B</m> is gelyk aan <m>S(x)</m> vir een of ander <m>x \in A</m> (<sq><m>S</m> is <em>op</em></sq>), het
+    verskillende Afrikaanse woorde in <m>A</m> na dieselfde Sjinese simbool in <m>B</m> afgebeeld word nie (<q><m>S</m> is een-tot-een</q>) en elke Sjinese simbool <m>y \in B</m> is gelyk aan <m>S(x)</m> vir een of ander <m>x \in A</m> (<q><m>S</m> is <em>op</em></q>), het
     ons nie <m>T</m> nodig nie.
     Dit is oorbodig!
   </p>
@@ -78,7 +78,7 @@
   <p>
     Hierop sou ek as volg reageer:
     jy is reg, maar is dit nie nuttig om 'n
-    eksplisiete Sjinees-na-Afrikaanse afbeelding <m>T</m> te h&#xea; nie?
+    eksplisiete Sjinees-na-Afrikaanse afbeelding <m>T</m> te hê nie?
     In boekwinkels word woordeboeke in pare geskep, in 'n enkele volume.
     Buitendien, as mens die Afrikaanse woord vir <c>BIRD</c>
     wil opsoek, sal dit lastig wees
@@ -102,7 +102,7 @@
     </statement>
   </definition>
 
-  <lemma>
+  <lemma xml:id="lemma-inverse-unique">
     <title>Inverse is Uniek</title>
     <statement>
       <p>
@@ -124,6 +124,7 @@
   </convention>
 
   <proof>
+    <title>Bewys van <xref ref="lemma-inverse-unique" /></title>
     <p>
       Om te wys dat <m>S = S'</m>, moet ons wys dat vir alle
       <m>\ve{w} \in W</m> geld
@@ -143,11 +144,19 @@
   <definition>
     <statement>
       <p>
-        Ons s&#xea; twee vektorruimtes <m>V</m> en <m>W</m> is
+        Ons sê twee vektorruimtes <m>V</m> en <m>W</m> is
         <term>isomorf</term> as daar 'n isomorfisme tussen hulle bestaan.
       </p>
     </statement>
   </definition>
+
+  <remark>
+    <p>
+      Indien twee vektorruimtes van positiewe dimensie
+      isomorf is, dan sal daar baie isomorfismes tussen
+      hulle wees  <mdash /> nie net een nie.
+    </p>
+  </remark>
 
   <example>
     <statement>
@@ -174,7 +183,7 @@
   <exercise>
     <statement>
       <p>
-        Maak seker dat hierdie afbeeldings line&#xea;r is.
+        Maak seker dat hierdie afbeeldings lineêr is.
       </p>
     </statement>
   </exercise>
@@ -196,22 +205,22 @@
     <p>
       <m>\Rightarrow</m>.
       Veronderstel <m>V</m> en <m>W</m> is isomorf, d.m.v.
-      'n paar line&#xea;re afbeeldings <m>S : V \rightleftarrows W : T</m>.
+      'n paar lineêre afbeeldings <m>S : V \rightleftarrows W : T</m>.
       Laat <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m> 'n basis vir <m>V</m> wees.
       Dan beweer ek dat <m>\basis{C} = \bopen S(\ve{e}_1), \ldots, S(\ve{e}_m) \bclose</m> 'n basis vir <m>W</m> is.
       Dit is omdat die lys vektore
-      <m>\basis{C}</m> line&#xea;r onafhanklik is, want as
+      <m>\basis{C}</m> lineêr onafhanklik is, want as
       <me>
         a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) = \ve{0}_W
       </me>,
       dan lewer die toepassing van <m>T</m> aan beide kante
       <md>
         <mrow>T(a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m)) \amp  = T(\ve{0}_W)</mrow>
-        <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  (T \text{ is line&#xea;r)}</mrow>
+        <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  (T \text{ is lineêr)}</mrow>
         <mrow>\therefore a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m \amp = \ve{0}_V \amp \amp  (T\circ S = \id_V)</mrow>
       </md>
       wat impliseer dat <m>a_1 = a_2 = \cdots = a_m = 0</m>,
-      aangesien <m>\basis{B}</m> line&#xea;r onafhanklik is.
+      aangesien <m>\basis{B}</m> lineêr onafhanklik is.
       Verder onderspan die lys vektore <m>\basis{C}</m> vir
       <m>W</m>, want as <m>\ve{w} \in W</m>, dan kan ons
       <me>
@@ -222,7 +231,7 @@
       <md>
         <mrow>\ve{w} \amp = S(T(\ve{w})) \amp \amp  \text{(since } S \circ T = \id_W)</mrow>
         <mrow>\amp = S(a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m)</mrow>
-        <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp (S \text{ is line&#xea;r)}</mrow>
+        <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp (S \text{ is lineêr)}</mrow>
       </md>
       sodat <m>\basis{C}</m> <m>W</m> span.
       Daarom is <m>\basis{C}</m> 'n basis vir <m>V</m>, so
@@ -239,7 +248,7 @@
     </p>
 
     <p>
-      Om line&#xea;re afbeeldings te definieer
+      Om lineêre afbeeldings te definieer
       <md>
         <mrow>S : V \amp \rightleftarrows W : T</mrow>
         <intertext>is dit voldoende, volgens <xref ref="defining_linear_map_on_basis">Proposisie</xref> (Voldoende om 'n Line{\^e}re Afbeelding te Definieer op 'n Basis), om die aksie van <m>S</m> en <m>T</m> op die basisvektore te definieer. Ons pen neer:</intertext>
@@ -278,9 +287,9 @@
       <mrow>\ve{v} \amp  \mapsto [\ve{v}]_\basis{B}</mrow>
     </md>,
     wat 'n vektor <m>\ve{v} \in V</m> na sy ooreenstemmende
-    ko&#xf6;rdinaatvektor <m>[\ve{v}]_\basis{B} \in \Col_m</m> stuur.
-    <xref ref="lin_of_coord_vectors">Lemma</xref> s&#xea;
-    presies dat <m>[ \cdot ]_\basis{B}</m> 'n line&#xea;re afbeelding is.
+    koördinaatvektor <m>[\ve{v}]_\basis{B} \in \Col_m</m> stuur.
+    <xref ref="lin_of_coord_vectors">Lemma</xref> sê
+    presies dat <m>[ \cdot ]_\basis{B}</m> 'n lineêre afbeelding is.
     Ons gaan nou die inverse beskryf.
   </p>
 
@@ -321,25 +330,23 @@
       <p>
         Wys dat:
 
-        <ul>
+        <ol label="a">
           <li>
-            <title>(a)</title>
             <p>
               <m>\ve{vec}_{V, \basis{B}} (\mat{c} + \mat{c}') = \ve{vec}_{V, \basis{B}} (\mat{c}) + \ve{vec}_{V, \basis{B}} (\mat{c}')</m>
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
               <m>\ve{vec}_{V, \basis{B}} (k\mat{c}) = k \, \ve{vec}_{V, \basis{B}} (\mat{c})</m>.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
 
       <p>
-        Dit beteken dat <m>\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V</m> 'n line&#xea;re afbeelding is.
+        Dit beteken dat <m>\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V</m> 'n lineêre afbeelding is.
       </p>
     </statement>
     <solution>
@@ -434,15 +441,15 @@
         <mrow>\amp = \mat{c}</mrow>
       </md>
       waar die tweede laaste stap die <em>definisie</em> van die
-      ko&#xf6;rdinaatvektor van <m>\ve{v} = \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m</m> gebruik.
+      koördinaatvektor van <m>\ve{v} = \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m</m> gebruik.
       Gevolglik is <m>[\cdot]_\basis{B} \circ \ve{vec}_{V, \basis{B}} = \id_{\Col_m}</m>.
     </p>
   </proof>
 
   <insight>
     <p>
-      Die bostaande resultaat is baie belangrik in line&#xea;re algebra.
-      Dit s&#xea; dat, sodra ons 'n basis vir 'n abstrakte
+      Die bostaande resultaat is baie belangrik in lineêre algebra.
+      Dit sê dat, sodra ons 'n basis vir 'n abstrakte
       eindig dimensionele vektorruimte <m>V</m> gekies het, dan kan ons die
       elemente van <m>V</m> behandel asof hulle kolomvektore is!
     </p>

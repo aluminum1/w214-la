@@ -14,7 +14,7 @@
         <p>
           'n Lys vektore <m>\basis{B} = \bopen \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \bclose </m> in 'n vektorruimte <m>V</m> word 'n
           <term>basis</term> van <m>V</m> genoem
-          as dit line&#xea;r onafhanklik is en <m>V</m> span.
+          as dit lineêr onafhanklik is en <m>V</m> span.
         </p>
       </statement>
     </definition>
@@ -32,13 +32,12 @@
 
     <proof>
       <p>
-        Dit is 'n gevolg van <xref ref="bumping_off_lemma">Proposisie</xref>
-        (die afstampproposisie).
-        Aangesien die <m>\ve{e}</m>-vectore <m>V</m> line&#xea;r onfafhanklik is en die <m>\ve{f}</m>-vektore <m>V</m> span,
+        Dit is 'n gevolg van <xref ref="Steinitz-exchange-lemma" text="title"></xref>.
+        Aangesien die <m>\ve{e}</m>-vektore <m>V</m> lineêr onafhanklik is en die <m>\ve{f}</m>-vektore <m>V</m> span,
         het ons <m>m \leq n</m>.
         Aan die ander kant,
-        omdat die <m>\ve{f}</m>-vektore lin&#xea;r onfahanklik is
-        en die <m>\ve{e}</m>-vektore <m>V</m> span, het ons <m>n \leq m</m>.
+        omdat die <m>\ve{f}</m>-vektore lineêr onfahanklik is
+        en die <m>\ve{e}</m>-vektore <m>V</m> onderspan, het ons <m>n \leq m</m>.
         Daarom is <m>m=n</m>.
       </p>
     </proof>
@@ -50,14 +49,14 @@
           In daardie geval is die <term>dimensie</term> van <m>V</m>
           die aantal elemente in 'n basis vir <m>V</m>. 'n Vektorruimte is
           <term>oneindig dimensioneel</term>
-          as dit nie eindigdimensioneel is nie.
+          as dit nie eindig dimensioneel is nie.
         </p>
       </statement>
     </definition>
 
     <remark>
       <p>
-        Let op dat die konsep van die <sq>dimensie van </sq> 'n vektorruimte slegs wel-gedefinieerd is as gevolg van <xref ref="inv_dim">Stelling</xref>.
+        Let op dat die konsep van die <q>dimensie van </q> 'n vektorruimte slegs wel-gedefinieerd is as gevolg van <xref ref="inv_dim">Stelling</xref>.
       </p>
     </remark>
 
@@ -82,7 +81,7 @@
           is 'n basis vir <m>\mathbb{R}^n</m>.
           Ons het reeds in <xref ref="Rn_spanning_set">Voorbeeld</xref>
           gesien dat die lys <m>\mathbb{R}^n</m> span.
-          Ons moet seker maak dat die lys line&#xea;r onafhanklik is.
+          Ons moet seker maak dat die lys lineêr onafhanklik is.
           So, veronderstel dat
           <me>
             a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}
@@ -106,7 +105,7 @@
           wat beteken dat <m>a_1 = a_2 = a_3 = \cdots = a_n = 0</m>,
           presies wat ons moes bewys.
           Gevolglik is die lys vektore
-          <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m> line&#xea;r onafhanklik en daarom is dit 'n basis vir <m>\mathbb{R}^n</m>.
+          <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m> lineêr onafhanklik en daarom is dit 'n basis vir <m>\mathbb{R}^n</m>.
           So <m>\mathbb{R}^n</m> het dimensie <m>n</m>.
         </p>
       </statement>
@@ -154,9 +153,9 @@
           </input>
         </sage>
       <p> SageMath se antwoord is:</p>
-      <sidebyside>
-       <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
-      </sidebyside>
+
+      <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
+
       <p>
       So inderdaad het die vergelykings <xref first="R4-example-eqn1" last="R4-example-eqn4"/> slegs die triviale oplossing. Dus is die lys vektore lineêr onafhanklik. </p>
 
@@ -191,11 +190,11 @@
           Dit is eintlik iets belangrik om te besef in die skryf van bewyse. Die <m>w_i</m> is willekeurig, maar word aan die begin van die bewys vasgemaak en die argument word dan op die vaste vektore <m>w_i</m> toegepas. Selfs al kan ons na die tyd verskillende waardes vir die <m>w_i</m> kies, geld die <em>argument</em> nogsteeds vir daardie waardes en weet ons dat die stelsel 'n oplossing het vir enige vaste waardes wat ons kan kies.
         </p>
       </aside>
-      <sidebyside>
+
         <p>
           <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </c>
         </p>
-      </sidebyside>
+
       <p>Met ander woorde, daar bestaan wel 'n oplossing, maak nie saak wat <m>(w_1, w_2, w_3, w_4)</m> is nie. Byyvoorbeeld, as  <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, dan is die oplossing
       <me>
          a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{36}.
@@ -222,7 +221,7 @@
           is 'n basis vir <m>\Poly_n</m>,
           so <m>\dim \Poly_n = n+1</m>.
           Duidelik sal hierdie lys <m>\Poly_n</m> onderspan (per definisie),
-          so ons moet net seker maak dat hulle line{&#xea;r} onafhanklik is.
+          so ons moet net seker maak dat hulle line{êr} onafhanklik is.
           Veronderstel dat
           <me>
             a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n = \ve{0}
@@ -255,9 +254,9 @@
         <p>
           Maar, ons weet uit algebra dat 'n
           polinoom van die vorm <xref ref="root_of_poly" /> met nie-nul
-          ko&#xeb;ffisi&#xeb;nte <em>meestens</em>
+          koëffisiënte <em>meestens</em>
           <m>n</m> wortels <m>x_1, x_2, \ldots,
-          x_n</m> het . So, die ko&#xeb;ffisi&#xeb;nte moet nul wees, i.e.
+          x_n</m> het . So, die koëffisiënte moet nul wees, i.e.
           <m>a_0 = a_1 = a_2 = \cdots = a_n = 0</m>,
           wat is wat ons moes bewys.
         </p>
@@ -342,7 +341,7 @@
           <xref ref="defn_of_basis_of_functions" /> kom so gereeld in
           wiskunde voor dat ons dit 'n spesiale simbool gee,
           naamlik <m>\delta_{ab}</m>
-          (die <sq>Kronecker-delta</sq>).
+          (die <q>Kronecker-delta</q>).
           Hierdie simbool staan vir die formule: <q>As
           <m>a=b</m>, gee die waarde 1.
           As <m>a \neq b</m>, gee die waarde <m>0</m></q>.
@@ -403,7 +402,7 @@
 
         <p>
           Hierdie funksies span <m>\Trig_n</m> per definisie.
-          Hulle is ook line&#xea;r
+          Hulle is ook lineêr
           onafhanklik, alhoewel ons dit nie sal bewys nie.
         </p>
       </statement>
@@ -450,26 +449,26 @@
         <p>
           Die standaard basis van <m>\Mat_{2,2}</m> is
           <me>
-            \mat{E}_{11} = \left[
-            \begin{array}{cc}
+            \mat{E}_{11} =
+            \begin{bmatrix}
               1 \amp  0 \\
               0 \amp  0
-            \end{array}
-            \right], \, \mat{E}_{12} = \left[
-            \begin{array}{cc}
+            \end{bmatrix}, \,
+            \mat{E}_{12} =
+            \begin{bmatrix}
               0 \amp  1 \\
               0 \amp  0
-            \end{array}
-            \right], \mat{E}_{21} = \left[
-            \begin{array}{cc}
+            \end{bmatrix}, \,
+            \mat{E}_{21} =
+            \begin{bmatrix}
               0 \amp  0 \\
               1 \amp  0
-            \end{array}  \right], \mat{E}_{22} = \left[
-            \begin{array}{cc}
+            \end{bmatrix}, \,
+            \mat{E}_{22} =
+            \begin{bmatrix}
               0 \amp  0 \\
               0 \amp  1
-            \end{array}
-            \right]
+            \end{bmatrix}
           </me>.
         </p>
       </statement>
@@ -480,13 +479,13 @@
         <p>
           Die standaard basis van <m>\Col_n</m> is
           <me>
-            \ve{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
-            \end{array}  \right], \,
-            \ve{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
-            \end{array}  \right], \,
+            \col{e}_1 := \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0
+            \end{bmatrix}, \,
+            \col{e}_2 := \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0
+            \end{bmatrix}, \,
             \ldots, \,
-            \ve{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
-            \end{array}  \right]
+            \col{e}_n := \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1
+            \end{bmatrix}
           </me>.
         </p>
       </statement>
@@ -504,7 +503,7 @@
           <men xml:id="eqn_for_W_1">
             W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.
           </men>
-          Daar is geen <sq>standaard basis</sq> vir <m>W</m> nie. Maar, hier is een basis (net so goed as enige ander basis):
+          Daar is geen <q>standaardbasis</q> vir <m>W</m> nie. Maar, hier is een basis (net so goed as enige ander basis):
           <men xml:id="ab_basis_orth_plane">
             \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{2}{3}).
           </men>
@@ -634,7 +633,7 @@
         </p>
 
     <p>
-      <alert>Stap 1. <m> \bopen y_0, \ldots, y_{n-1} \bclose </m> is lineêr onafhanklik.</alert>
+      Stap 1: Ons wys dat <m> \bopen y_0, \ldots, y_{n-1} \bclose </m> lineêr onafhanklik is.
     </p>
       <p>
         Veronderstel
@@ -662,7 +661,7 @@
       </p>
 
     <p>
-    <alert>Stap 2. <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> span vir <m>V</m>.</alert>
+    Stap 2: Ons wys dat <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> vir <m>V</m> onderspan.
     </p>
       <p>
         Laat <m>y</m> 'n willekeurige oplossing van die differensiaalvergelyking <xref ref="diff_eqn_in_thm"/> wees. Ons moet aantoon dat  <m>y</m> uitgedruk kan word as 'n lineêre kombinasie van <m>y_0, \ldots, y_{n-1}</m>.
@@ -807,7 +806,7 @@
 
     <proof>
       <p>
-        <alert>Bewys dat <m>\Dim(W) \leq \Dim(V)</m></alert>
+        Ons bewys eers dat <m>\Dim(W) \leq \Dim(V)</m>.
       </p>
       <p> Laat
         <me>
@@ -817,7 +816,7 @@
         <me>
           \basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_k \bclose
         </me>
-        vir <m>W</m> bestaan. As ons dit kan doen, dan sal <m>\basis{B}</m> 'n lys van <m>k</m> lineêr onafhanklike vektore in <m>W</m> (en dus ook in <m>V</m>) wees en dus moet  <m>k \leq n</m> uit <xref ref="bumping_off_lemma"/>, omdat <m>\basis{C}</m> vir <m>V</m> onderspan.
+        vir <m>W</m> bestaan. As ons dit kan doen, dan sal <m>\basis{B}</m> 'n lys van <m>k</m> lineêr onafhanklike vektore in <m>W</m> (en dus ook in <m>V</m>) wees en dus moet  <m>k \leq n</m> uit <xref ref="Steinitz-exchange-lemma" text="title"/>, omdat <m>\basis{C}</m> vir <m>V</m> onderspan.
       </p>
 
       <p>
@@ -844,23 +843,34 @@
       </p>
 
        <p>
-        So gaan ons aan, maar hierdie proses moet stop vir een of ander <m>k \leq n</m>. As dit nie die geval is nie, sou dit 'n lys <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m> tot gevolg hê wat uit <m>n+1</m> lineêr onafhanklike vektore uit <m>V</m> bestaan. Maar <m>\Dim V = n</m>, so dit is uit <xref ref="bumping_off_lemma"/> onmoontlik. Dus moet die versameling <m>\basis{B}_k</m> vir een of ander <m>k \leq n</m> 'n basis vir <m>W</m> wees.
+        So gaan ons aan, maar hierdie proses moet stop vir een of ander <m>k \leq n</m>. As dit nie die geval is nie, sou dit 'n lys <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m> tot gevolg hê wat uit <m>n+1</m> lineêr onafhanklike vektore uit <m>V</m> bestaan. Maar <m>\Dim V = n</m>, so dit is uit <xref ref="Steinitz-exchange-lemma" text="title"/> onmoontlik. Dus moet die versameling <m>\basis{B}_k</m> vir een of ander <m>k \leq n</m> 'n basis vir <m>W</m> wees.
       </p>
       <p>
-        <alert>Bewys dat <m>\Dim(V) = \Dim(W) \Rightarrow W = V</m></alert>
+        Nou bewys ons dat as <m>\Dim(V) = \Dim(W)</m>, dan volg <m>W = V</m>.
       </p>
       <p>
         Veronderstel dat <m>\Dim(W) = \Dim(V)</m> maar dat <m>W \neq V</m>. Aangesien <m>W \neq V</m>, moet daar 'n vektor <m>\ve{v}</m> bestaan wat 'n element van <m>V</m> is, maar nie 'n element van <m>W</m> is nie. Laat <m>\basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_n \bclose</m> 'n basis vir <m>W</m> wees. Ons kan nou <m>\ve{v}</m> by <m>\basis{B}</m> voeg om die volgende lys vektore in <m>V</m> te kry:
         <me>
           \basis{B}' = \bopen \ve{w}_1, \ldots, \ve{w}_n, \ve{v} \bclose.
         </me>
-        Aangesien <m>\ve{v}</m> nie as 'n lineêre kombinasie van <m>\ve{w}_1, \ldots, \ve{w}_n</m> geskryf kan word nie, lei ons af dat <m>\basis{B}'</m> uit <xref ref="lin_comb_prec_vec"/> ook lineêr onafhanklik is. Maar dan is <m>\basis{B}'</m> 'n lys van <m>n+1</m> lineêr onafhanklike vektore in 'n <m>n</m>-dimensionele vektorruimte <m>V</m>. Uit <xref ref="bumping_off_lemma"/> is dit onmoontlik. Daarom was ons aanname onwaar en dit volg dat <m>W = V</m>.
+        Aangesien <m>\ve{v}</m> nie as 'n lineêre kombinasie van <m>\ve{w}_1, \ldots, \ve{w}_n</m> geskryf kan word nie, lei ons af dat <m>\basis{B}'</m> uit <xref ref="lin_comb_prec_vec"/> ook lineêr onafhanklik is. Maar dan is <m>\basis{B}'</m> 'n lys van <m>n+1</m> lineêr onafhanklike vektore in 'n <m>n</m>-dimensionele vektorruimte <m>V</m>. Uit <xref ref="Steinitz-exchange-lemma" text="title"/> is dit onmoontlik. Daarom was ons aanname onwaar en dit volg dat <m>W = V</m>.
       </p>
     </proof>
   </subsection>
 
   <subsection>
     <title>Oneindig-dimensionele vektorruimtes</title>
+
+    <definition>
+      <statement>
+        <p>
+          'n Vektorruimte <m>V</m> word
+          <term>oneindig-dimensioneel</term> genoem
+          as dit nie eindig-dimensioneel is nie.
+        </p>
+      </statement>
+    </definition>
+
     <p>
       Dit is goed om 'n paar voorbeelde van oneindig-dimensionele vektorruimte te hê.
     </p>
@@ -868,7 +878,7 @@
     <proposition>
       <statement>
         <p>
-          <m>\Poly</m> is oneindigdimensioneel.
+          <m>\Poly</m> is oneindig-dimensioneel.
         </p>
       </statement>
     </proposition>
@@ -909,7 +919,7 @@
 
             <li>
               <p>
-                <m>\Cont(I)</m> vir enige nie-le&#xeb; interval <m>I</m>,
+                <m>\Cont(I)</m> vir enige nie-leë interval <m>I</m>,
               </p>
             </li>
 
@@ -933,13 +943,13 @@
   <subsection xml:id="sifting_subsection">
     <title>Die sifalgoritme en die gebruike daarvan</title>
     <p>
-      As ons die bewys van <xref ref="bumping_off_lemma">Proposisie</xref> (die
-      <sq>Afstampproposisie</sq>) noukeurig bestudeer, vind ons dat dit van 'n
+      As ons die bewys van <xref ref="Steinitz-exchange-lemma" text="title"></xref>
+      noukeurig bestudeer, vind ons dat dit van 'n
       <em>sif-algoritme</em> gebruik maak.
       Hierdie algoritme kan op <em>enige</em>
       lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> in 'n vektorruimte toegepas word.
       Beskou elke vektor <m>\ve{v}_i</m> in so 'n lys opeenvolgend.
-      As <m>\ve{v}_i</m> die nul-vektor is, of as dit 'n line&#xea;re
+      As <m>\ve{v}_i</m> die nul-vektor is, of as dit 'n lineêre
       kombinasie van die voorafgaande vektore
       <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_{n-1}</m> is, verwyder dit van die lys.
     </p>
@@ -957,7 +967,7 @@
         <p>
           Ons begin met <m>\ve{v}_1</m>.
           Aangesien dit nie die nul-vektor is nie en
-          nie 'n line&#xea;re kombinasie van enige voorafgaande vektore is nie,
+          nie 'n lineêre kombinasie van enige voorafgaande vektore is nie,
           bly dit in die lys.
           Nou beweeg ons aan na <m>\ve{v}_2</m>, wat nul is, so
           ons verwyder dit.
@@ -968,7 +978,7 @@
           veelvoud van <m>\ve{v}_1</m> uitgedruk word nie (bevestig dit self),
           so dit bly in die lys.
           Ons beweeg aan na <m>\ve{v}_5</m>.
-          Ons kyk of dit as die line&#xea;re kombinasie
+          Ons kyk of dit as die lineêre kombinasie
           <me>
             \ve{v}_5 = a\ve{v}_1 + b \ve{v}_4
           </me>
@@ -976,7 +986,7 @@
           (bevestig self),
           so ons verwyder dit.
           Laastens kom ons by <m>\ve{v}_6</m>.
-          Ons ondersoek of dit as 'n line&#xea;re kombinasie
+          Ons ondersoek of dit as 'n lineêre kombinasie
           <me>
             \ve{v}_6 = a\ve{v}_1 + b \ve{v}_4
           </me>
@@ -994,7 +1004,7 @@
     <exercise>
       <statement>
         <p>
-          Doen die drie <sq>bevestig self</sq>-bewerkings hierbo.
+          Doen die drie <q>bevestig self</q>-bewerkings hierbo.
         </p>
       </statement>
       <solution>
@@ -1051,28 +1061,28 @@
     <proof>
       <p>
         By elke stap vind ons dat 'n vektor wat uit die lys verwyder word
-        &#xf3;f die nul-vektor is, &#xf3;f 'n line&#xea;re kombinasie van die
-        voorafgaande vektore is wat ni&#xe9; uit die lys verwyder word nie.
+        òf die nul-vektor is, òf 'n lineêre kombinasie van die
+        voorafgaande vektore is wat nié uit die lys verwyder word nie.
         So as ons die vektor uit die lys verwyder,
         sal die oorblywende vektore steeds <m>V</m> span.
         Daarom span die vektore in die finale lys steeds <m>V</m>.
       </p>
 
       <p>
-        Om te sien dat die finale gesifte lys line&#xea;r onafhanklik is, pas
+        Om te sien dat die finale gesifte lys lineêr onafhanklik is, pas
         ons <xref ref="lin_dependence_prop">Proposisie</xref> toe.
         Deur konstruksie is geen
-        vektor in die finale lys 'n line&#xea;re kombinasie van die voorafgaande vektore nie
+        vektor in die finale lys 'n lineêre kombinasie van die voorafgaande vektore nie
         (anders sou dit verwyder gewees het!).
-        Daarom is die finale lys nie line&#xea;r afhanklik nie,
-        so dit moet line&#xea;r onafhanklik wees!
+        Daarom is die finale lys nie lineêr afhanklik nie,
+        so dit moet lineêr onafhanklik wees!
       </p>
     </proof>
 
     <corollary xml:id="first_corollary_please">
       <statement>
         <p>
-          Enige line&#xea;r onafhanklike lys vektore
+          Enige lineêr onafhanklike lys vektore
           <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k</m> in 'n eindig-dimensionele vektorruimte <m>V</m>
           kan uitgebrei word tot 'n basis van <m>V</m>.
         </p>
@@ -1093,10 +1103,10 @@
         Sommige van die <m>\ve{e}</m>-vektore mag dalk verwyder wees in die proses.
         Maar geeneen van die <m>\ve{v}</m>-vektore sal verwyder word nie,
         aangesien dit sou beteken dat sommige vektore
-        <m>\ve{v}_i</m> 'n line&#xea;re kombinasie van die
+        <m>\ve{v}_i</m> 'n lineêre kombinasie van die
         voorafgaande vektore <m>\ve{v}_1, \ldots, \ve{v}_{i-1}</m> is, wat onmoontlik is,
-        omdat <m>\ve{v}_1, \ldots, \ve{v}_k</m> 'n line&#xea;r onafhanklike lys is.
-        Dus n&#xe1; sifting van die lys <m>L</m> brei ons ons die oorspronklike lys
+        omdat <m>\ve{v}_1, \ldots, \ve{v}_k</m> 'n lineêr onafhanklike lys is.
+        Dus ná sifting van die lys <m>L</m> brei ons ons die oorspronklike lys
         <m>\ve{v}_1, \ldots, \ve{v}_k</m> uit na 'n basis van <m>V</m>.
       </p>
     </proof>
@@ -1104,7 +1114,7 @@
     <corollary xml:id="lin-ind-implies-basis">
       <statement>
         <p>
-          As <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> 'n line&#xea;r
+          As <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> 'n lineêr
           onafhanklike lys van <m>n</m> vektore in 'n <m>n</m>-dimensionele
           vektorruimte <m>V</m> is, dan is dit 'n basis.
         </p>
@@ -1131,7 +1141,7 @@
           <me>
             \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
           </me>
-          line&#xea;r onafhanklik in <m>\Poly_3</m> is.
+          lineêr onafhanklik in <m>\Poly_3</m> is.
           Aangesien <m>\dim \Poly_3 = 4</m>,
           sien ons dat dit 'n basis vir <m>\Poly_3</m> is.
         </p>
@@ -1167,21 +1177,19 @@
           As dit waar is, bewys dit.
           Indien nie, gee 'n teenvoorbeeld.
 
-          <ul>
+          <ol label="a">
             <li>
-              <title>(a)</title>
               <p>
-                Enige line&#xea;r onafhanklike lys vektore in <m>V</m> bevat hoogstens <m>n</m> vektore.
+                Enige lineêr onafhanklike lys vektore in <m>V</m> bevat hoogstens <m>n</m> vektore.
               </p>
             </li>
 
             <li>
-              <title>(b)</title>
               <p>
                 Enige lys vektore wat <m>V</m> span bevat ten minste <m>n</m> vektore.
               </p>
             </li>
-          </ul>
+          </ol>
         </p>
       </statement>
 
@@ -1218,11 +1226,11 @@
 
         <p>
           <em>Lemma.</em> Veronderstel dat <m>V</m> 'n vektorruimte van dimensie <m>n</m> is.
-          Dan is enige line&#xea;r onafhanklike lys van <m>n</m> vektore in <m>V</m> 'n basis vir <m>V</m>.
+          Dan is enige lineêr onafhanklike lys van <m>n</m> vektore in <m>V</m> 'n basis vir <m>V</m>.
         </p>
 
         <p>
-          <em>Bewys.</em> Laat <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> 'n line&#xea;r onafhanklike lys vektore in <m>V</m> wees.
+          <em>Bewys.</em> Laat <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> 'n lineêr onafhanklike lys vektore in <m>V</m> wees.
         </p>
 
         <p>
@@ -1243,7 +1251,7 @@
         </p>
 
         <p>
-          Die nuwe lys <m>\basis{B}'</m> is line&#xea;r onafhanklik omdat <ellipsis /> (d)
+          Die nuwe lys <m>\basis{B}'</m> is lineêr onafhanklik omdat <ellipsis /> (d)
         </p>
 
         <p>
@@ -1295,7 +1303,7 @@
       <statement>
         <p>
           Gebruik <xref ref="true_false_span_lin_ind">Oefening</xref>(a) om aan te toon dat die lys matrikse in
-          <m>\Mat_{2,2}</m> vanaf <xref ref="x2_by_2_matrices_lin_dep">Oefening</xref> line&#xea;r onafhanklik is.
+          <m>\Mat_{2,2}</m> vanaf <xref ref="x2_by_2_matrices_lin_dep">Oefening</xref> lineêr onafhanklik is.
         </p>
       </statement>
       <solution>
@@ -1314,9 +1322,8 @@
           <xref ref="n_lin_ind_is_basis">en</xref> om te bepaal
           of <m>\basis{B}</m> 'n basis vir <m>V</m> is:
 
-          <ol>
+          <ol label="a">
             <li>
-              <title>(a)</title>
               <p>
                 <m>V = \Poly_2</m>, <m>\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1
                 + x - 3x^2, \, x-x^2 \right\}</m>
@@ -1324,21 +1331,20 @@
             </li>
 
             <li>
-              <title>(b)</title>
               <p>
                 <m>V = \Mat_{2,2}</m>,
                 <me>\basis{B} = \left\{
                    \begin{bmatrix}
-                    1 &amp; 2 \\
-                    -1 &amp; 3
+                    1 \amp 2 \\
+                    -1 \amp 3
                   \end{bmatrix},\,
                    \begin{bmatrix}
-                    0 &amp; 1\\
-                    3 &amp; -1
+                    0 \amp 1\\
+                    3 \amp -1
                   \end{bmatrix},\,
                   \begin{bmatrix}
-                    1 &amp; 2\\
-                    3 &amp; 4
+                    1 \amp 2\\
+                    3 \amp 4
                   \end{bmatrix}
                        \right\}
                 </me>
@@ -1346,7 +1352,6 @@
             </li>
 
             <li>
-              <title>(c)</title>
               <p>
                 <m>V = \Trig_2</m>,
                 <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
@@ -1378,28 +1383,26 @@
     <exercise>
       <statement>
         <p>
-          Laat <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> 'n line&#xea;r
+          Laat <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> 'n lineêr
           onafhanklike lys vektore in 'n vektorruimte <m>V</m> wees.
           Skryf neer of die volgende bewerings waar of onwaar is.
           As dit waar is, bewys dit.
           As dit onwaar is, gee 'n teenvoorbeeld.
-          (Wenk: Gebruik die definisie van line&#xea;re onafhanklikheid.)
+          (Wenk: Gebruik die definisie van lineêre onafhanklikheid.)
 
-          <ul>
+          <ol label="a">
             <li>
-              <title>(a)</title>
               <p>
-                Die lys <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is line&#xea;r onafhanklik.
+                Die lys <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is lineêr onafhanklik.
               </p>
             </li>
 
             <li>
-              <title>(b)</title>
               <p>
-                Die lys <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is line&#xea;r onafhanklik.
+                Die lys <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is lineêr onafhanklik.
               </p>
             </li>
-          </ul>
+          </ol>
         </p>
       </statement>
       <solution>
@@ -1464,16 +1467,14 @@
           deelruimte van <m>\Poly_2</m> is,
           vind 'n basis vir <m>V</m>, en bereken <m>\dim V</m>.
 
-          <ol>
+          <ol label="a">
             <li>
-              <title>(a)</title>
               <p>
                 <m>V = \{ p \in \Poly_2 : p(2) = 0 \}</m>
               </p>
             </li>
 
             <li>
-              <title>(b)</title>
               <p>
                 <m>V = \{ p \in \Poly_2 : xp'(x) = p(x) \}</m>
               </p>
@@ -1579,8 +1580,7 @@
 
   </exercises>
 
- <solutions divisional="solution answer"  xml:id="my_solutions"/>
-<!-- Originally this had a scope attribute, but the code didn't validate with it -->
+
 
 </section>
 

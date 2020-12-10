@@ -49,7 +49,7 @@
   </note>
 
   <figure xml:id = "ker_fig">
-    <caption><m>\Ker(T)</m> </caption>
+    <caption>An illustration of <m>\Ker(T)</m>, the kernel of <m>T</m> </caption>
     <image>
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -68,7 +68,7 @@
   </figure>
 
   <figure xml:id = "im_fig">
-    <caption > <m>\Im(T)</m></caption>
+    <caption > An illustration of <m>\Im(T)</m>, the image of <m>T</m></caption>
     <image>
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -82,7 +82,6 @@
         \node at (3, -0.5) {\(\Im(T)\)};\end{tikzpicture}]]>
       </latex-image>
     </image>
-
   </figure>
 
   <lemma xml:id="ker-im-subspace">
@@ -91,16 +90,14 @@
         Let <m>T : V \rightarrow W</m> be a linear map.
         Then:
 
-        <ol>
+        <ol label="a">
           <li>
-
             <p>
               <m>\Ker(T)</m> is a subspace of <m>V</m>
             </p>
           </li>
 
           <li>
-
             <p>
               <m>\Im(T)</m> is a subspace of <m>W</m>
             </p>
@@ -112,7 +109,7 @@
 
   <proof>
     <p>
-      (i) We must check the three requirements for being a subspace.
+      In both cases, we must check the three requirements for being a subspace.
 
       <ol>
         <li>
@@ -164,7 +161,7 @@
     </p>
 
     <p>
-      (ii) Again, we must check the three requirements for being a subspace.
+      Now we check the three requirements for <m>\Im(t)</m>.
 
       <ol>
         <li>
@@ -201,7 +198,6 @@
         </li>
 
         <li>
-          <title>c.</title>
           <p>
             <m>\Im(T)</m> is closed under scalar multiplication.
           </p>
@@ -236,7 +232,7 @@
         and the <term>rank</term> of <m>T</m> is the dimension of <m>\Im(T)</m>:
         <md>
           <mrow>\Nullity(T) \amp := \Dim (\Ker(T))</mrow>
-          <mrow>\Rank(T) \amp = \Dim (\Im(T))</mrow>
+          <mrow>\Rank(T) \amp := \Dim (\Im(T))</mrow>
         </md>
       </p>
     </statement>
@@ -244,7 +240,7 @@
 
   <insight>
     <p>
-      The <sq>dimension of <m>\Ker(T)</m></sq> makes sense because <m>\Ker(T)</m> is a subspace of a finite-dimensional vector space <m>V</m>,
+      The <q>dimension of <m>\Ker(T)</m></q> makes sense because <m>\Ker(T)</m> is a subspace of a finite-dimensional vector space <m>V</m>,
       and hence is finite-dimensional by <xref ref="dim-of-subspace-prop">Proposition</xref>.
       We do not yet know that <m>\Im(T)</m> is finite-dimensional,
       but this will follow from the Rank-Nullity Theorem
@@ -256,7 +252,7 @@
     <statement>
       <p>
         Let <m>\ve{a} \in \mathbb{R}^3</m> be a fixed nonzero vector.
-        Consider the <sq>cross product with <m>\ve{a}</m></sq> linear map from
+        Consider the <q>cross product with <m>\ve{a}</m></q> linear map from
         <xref ref="cross_prod_as_linear_map">Example</xref>,
         <md>
           <mrow>C : \mathbb{R}^3 \amp  \rightarrow \mathbb{R}^3</mrow>
@@ -325,8 +321,8 @@
         <m>\mathbb{R}^3</m> consisting of all vectors <m>\ve{w}</m> of the form
         <m>\ve{w} = \ve{a} \times \ve{v}</m> for some <m>\ve{v} \in \mathbb{R}^3</m>.
         This implies that <m>\ve{w}</m> is perpendicular to <m>\ve{a}</m>.
-        This was the <sq>easy</sq> part.
-        The <sq>harder</sq> part is to show the converse.
+        This was the <q>easy</q> part.
+        The <q>harder</q> part is to show the converse.
         That is, we need to show that if <m>\ve{u}</m> is perpendicular to <m>\ve{a}</m>,
         then <m>\ve{u}</m> is in the image of <m>C</m>,
         i.e. there exists a vector <m>\ve{v}</m> such that <m>C(\ve{v}) = \ve{u}</m>.
@@ -918,7 +914,7 @@
 
           <li>
             <p>
-              The <sq>curl</sq> map
+              The <q>curl</q> map
               <md>
                 <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
                 <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>

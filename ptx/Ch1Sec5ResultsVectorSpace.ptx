@@ -7,11 +7,9 @@
     prove some general results.
   </p>
 
-  <assemblage>
     <p>
-      We are about to do our first formal proof in the course!
+      <alert>We are about to do our first formal proof in the course!</alert>
     </p>
-  </assemblage>
 
   <p>Our first lemma shows that the zero vector <m>\ve{0}</m> is the <em>unique</em> vector in <m>V</m> which 'behaves like a zero vector'. More precisely:</p>
   <lemma>
@@ -141,7 +139,7 @@
 
   <proof>
     <p>
-      <alert>(Proof of <m>\Leftarrow</m>)</alert>.
+      First we show that if either <m>k=0</m> or <m>\ve{v}=\ve{0}</m>, then <m>k.\ve{0}=\ve{0}</m>.
       Suppose <m>k=0</m>.
       Then <m>k \smul\ve{v} = 0 \smul\ve{v} = \ve{0}</m> by R8 of a vector space.
       On the other hand, suppose <m>\ve{v} = \ve{0}</m>.
@@ -428,8 +426,6 @@
 
 
 </exercises>
-
-<solutions divisional="solution answer" />
 
 
 </section>

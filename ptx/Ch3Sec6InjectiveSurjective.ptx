@@ -197,34 +197,31 @@
         Let <m>T : V \rightarrow V</m> be a linear operator on a finite-dimensional vector space <m>V</m>.
         The following statements are equivalent:
 
-        <ul>
+        <ol label="a">
           <li>
-            <title>1.</title>
             <p>
               <m>T</m> is injective.
             </p>
           </li>
 
           <li>
-            <title>2.</title>
             <p>
               <m>T</m> is surjective.
             </p>
           </li>
 
           <li>
-            <title>3.</title>
             <p>
               <m>T</m> is an isomorphism.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
   <proof>
     <p>
-      (1) is equivalent to (2) by <xref ref="inj-surj">Lemma</xref>.
-      On the other hand, (1) and (2) is equivalent to (3) by <xref ref="iso-inj-surj">Proposition</xref>.
+      (a) is equivalent to (b) by <xref ref="inj-surj">Lemma</xref>.
+      On the other hand, <q>(a) and (b)</q>  is equivalent to (c) by <xref ref="iso-inj-surj"></xref>.
     </p>
   </proof>
 </proposition>
