@@ -286,7 +286,7 @@
           <mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
           <mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
           <mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
-          <mrow> \amp = k.\ve{v} + k.\ve={w} </mrow>
+          <mrow> \amp = k.\ve{v} + k.\ve{w} </mrow>
           <mrow> \amp = \text{RK} </mrow>
         </md>
       </p>

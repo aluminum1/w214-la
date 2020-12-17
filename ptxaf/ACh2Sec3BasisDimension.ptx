@@ -127,11 +127,11 @@
       <solution>
         <p>
           Ons kyk eers of die lys vektore <xref ref="defn_of_linear_ind" >lineêr onafhanklik</xref> is. Beskou die vergelyking
-          <mdn>
-            <mrow> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{0} </mrow>
-            <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (0, 0, 0, 0) </mrow>
-            <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (0,0,0,0) </mrow>
-        </mdn>
+          <md>
+            <mrow> \ve{0} \amp = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 </mrow>
+            <mrow> \amp = a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4)  </mrow>
+            <mrow> \amp = (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) </mrow>
+        </md>.
         Die lys vektore is lineêr onafhanklik as en slegs as die volgende vergelykings slegs die triviale oplossing <m>a_1 = 0, a_2 = 0, a_3 = 0, a_4 = 0</m> het:
         <mdn>
           <mrow xml:id="R4-example-eqn1"> a_1 - a_2 + a_4 \amp = 0 </mrow>
@@ -192,7 +192,11 @@
       </aside>
 
         <p>
-          <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </c>
+          <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4,
+            a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4,
+            a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4,
+            a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]]
+          </c>
         </p>
 
       <p>Met ander woorde, daar bestaan wel 'n oplossing, maak nie saak wat <m>(w_1, w_2, w_3, w_4)</m> is nie. Byyvoorbeeld, as  <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, dan is die oplossing
@@ -205,7 +209,7 @@
       </me>
       Aangesien daar vir elke vektor <m>\ve{w} \in \mathbb{R}^4</m> 'n oplossing vir die vergelyking <xref ref="fund_eqn_span_r4_ex"/> is, lei ons af dat <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m> vir <m>\mathbb{R}^4</m> onderspan. </p>
 
-      <p>Hence <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m>  is a basis for <m>\mathbb{R}^4</m>, since it is linearly independent and spans <m>\mathbb{R}^4</m>.</p>
+      <p>Dus is <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m>  'n basis vir <m>\mathbb{R}^4</m>, omdat dit lineêr onafhanklik is en vir <m>\mathbb{R}^4</m> onderspan.</p>
       </solution>
 
     </example>
@@ -219,7 +223,7 @@
             \ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \, \ldots, \, \ve{p}_n (x) := x^n
           </me>
           is 'n basis vir <m>\Poly_n</m>,
-          so <m>\dim \Poly_n = n+1</m>.
+          so <m>\Dim \Poly_n = n+1</m>.
           Duidelik sal hierdie lys <m>\Poly_n</m> onderspan (per definisie),
           so ons moet net seker maak dat hulle line{êr} onafhanklik is.
           Veronderstel dat
@@ -1142,7 +1146,7 @@
             \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
           </me>
           lineêr onafhanklik in <m>\Poly_3</m> is.
-          Aangesien <m>\dim \Poly_3 = 4</m>,
+          Aangesien <m>\Dim \Poly_3 = 4</m>,
           sien ons dat dit 'n basis vir <m>\Poly_3</m> is.
         </p>
 
@@ -1201,7 +1205,7 @@
               Waar
             </p>
             <p>
-              Veonderstel ons het 'n lys van <m>n+1</m> lineêr onafhanklike vektore gehad. Uit <xref ref = "first_corollary_please">Gevolgtrekking </xref>, kan ons die lys uitbrei tot 'n basis vir <m>V</m>. Dus sou ons 'n basis vir <m>V</m> met ten minste <m> n + 1</m> hê. Ons lei af dat <m>\dim V \geq n+1 </m> wat teenstrydig is met die feit dat <m> \dim V = n</m>.
+              Veonderstel ons het 'n lys van <m>n+1</m> lineêr onafhanklike vektore gehad. Uit <xref ref = "first_corollary_please">Gevolgtrekking </xref>, kan ons die lys uitbrei tot 'n basis vir <m>V</m>. Dus sou ons 'n basis vir <m>V</m> met ten minste <m> n + 1</m> hê. Ons lei af dat <m>\Dim V \geq n+1 </m> wat teenstrydig is met die feit dat <m> \Dim V = n</m>.
            </p>
           </li>
 
@@ -1291,7 +1295,7 @@
 
         <li>
           <p>
-            Die deelruimte <m> W </m> van <m> V </m> wat onderspan word deur die vektore in <m> \basis B' </m> het dimensie <m> n + 1</m> en dus is <m> \dim(W) > \dim(V)</m> wat teenstrydig is met <xref ref = "dim-of-subspace-prop" />.
+            Die deelruimte <m> W </m> van <m> V </m> wat onderspan word deur die vektore in <m> \basis B' </m> het dimensie <m> n + 1</m> en dus is <m> \Dim(W) > \Dim(V)</m> wat teenstrydig is met <xref ref = "dim-of-subspace-prop" />.
           </p>
         </li>
       </ol>
@@ -1465,7 +1469,7 @@
         <p>
           Vir elkeen van die volgende, toon aan dat <m>V</m> 'n
           deelruimte van <m>\Poly_2</m> is,
-          vind 'n basis vir <m>V</m>, en bereken <m>\dim V</m>.
+          vind 'n basis vir <m>V</m>, en bereken <m>\Dim V</m>.
 
           <ol label="a">
             <li>
@@ -1485,7 +1489,7 @@
     <solution><p>
       <ol>
         <li>
-          Ons los die toets dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is uit, omdat dit eencoudig is. Kom ons konstrueer nou 'n basis vir <m> V </m>. Begin met 'n nie-nul vektor <m> \ve v_1 </m>  in <m> V </m>. Ons maak die vanselfsprekende keuse <m> \ve v_1 = x -2 </m>. Kies volgende enige vektor <m> \ve v_2 </m> in <m> V </m> wat nie in die span van <m> \left \{ \ve v_1 \right\} </m> is nie. Een keuse daarvoor is <m> \ve v_2 = x(x-2) </m>. Aangesien <m> V </m> nie die hele vektorruimte <m>\Poly_2 </m>, is nie, weet ons dat <m> \dim V \lt 3 </m>. Dus is <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> 'n basis vir <m> V </m> en dus is <m> \dim V = 2 </m>.
+          Ons los die toets dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is uit, omdat dit eencoudig is. Kom ons konstrueer nou 'n basis vir <m> V </m>. Begin met 'n nie-nul vektor <m> \ve v_1 </m>  in <m> V </m>. Ons maak die vanselfsprekende keuse <m> \ve v_1 = x -2 </m>. Kies volgende enige vektor <m> \ve v_2 </m> in <m> V </m> wat nie in die span van <m> \left \{ \ve v_1 \right\} </m> is nie. Een keuse daarvoor is <m> \ve v_2 = x(x-2) </m>. Aangesien <m> V </m> nie die hele vektorruimte <m>\Poly_2 </m>, is nie, weet ons dat <m> \Dim V \lt 3 </m>. Dus is <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> 'n basis vir <m> V </m> en dus is <m> \Dim V = 2 </m>.
         </li>
 
         <li>
@@ -1494,7 +1498,7 @@
             <mrow> x(2ax + b) = ax^2 + bx + c </mrow>
             <mrow> \implies 2ax^2 + bx = ax^2 + bx + c </mrow>
           </md> bevredig.
-          Dus is <m> a  = c = 0 </m>. Dus is alle vektore in <m> V </m> inderdaad skalaarveelvoude van <m> \ve v_1 = x </m>. Dus is <m> \bopen \ve v_1 \bclose </m> 'n basis vir <m> V </m> en gevolglik is <m> \dim V = 1</m>.
+          Dus is <m> a  = c = 0 </m>. Dus is alle vektore in <m> V </m> inderdaad skalaarveelvoude van <m> \ve v_1 = x </m>. Dus is <m> \bopen \ve v_1 \bclose </m> 'n basis vir <m> V </m> en gevolglik is <m> \Dim V = 1</m>.
         </li>
       </ol>
     </p></solution>
@@ -1516,12 +1520,12 @@
   <exercise>
     <statement>
       <p>
-        Bewys of bewys verkeerd: Laat <m>U</m> en <m> W </m> verskillende deelruimtes van <m>V</m> met <m>U \neq V</m>, en <m> W \neq V</m> wees. Dan is <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Hersien die <xref ref="def_sum_subspace" text="custom">definisie van die som van twee deelruimtes</xref> van <xref ref="sum_of_subspaces_is_subspace"/>.)
+        Bewys of bewys verkeerd: Laat <m>U</m> en <m> W </m> verskillende deelruimtes van <m>V</m> met <m>U \neq V</m>, en <m> W \neq V</m> wees. Dan is <m>\Dim(U + V) = \Dim(U) + \Dim(V)</m>. (Hersien die <xref ref="def_sum_subspace" text="custom">definisie van die som van twee deelruimtes</xref> van <xref ref="sum_of_subspaces_is_subspace"/>.)
       </p>
     </statement>
    <solution>
       <p>
-        Ons gee 'n teenvoorbeeld wat die bewering verkeerd bewys. Laat <m> V = \mathbb{R}^3 </m>, laat <m>U</m> die vektorruimte met basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> en laat <m>W</m> die vektorruimte met basis <m>\bopen (0,0,1), (0,1,0) \bclose</m> wees. Duidelik is <m>\dim U = \dim W = 2 </m> en dus <m> \dim(U) + \dim(V) = 4</m>. Maar <m>U + W =  \mathbb{R}^3</m> en dus is <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
+        Ons gee 'n teenvoorbeeld wat die bewering verkeerd bewys. Laat <m> V = \mathbb{R}^3 </m>, laat <m>U</m> die vektorruimte met basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> en laat <m>W</m> die vektorruimte met basis <m>\bopen (0,0,1), (0,1,0) \bclose</m> wees. Duidelik is <m>\Dim U = \Dim W = 2 </m> en dus <m> \Dim(U) + \Dim(V) = 4</m>. Maar <m>U + W =  \mathbb{R}^3</m> en dus is <m> \Dim (U+V) = \Dim \mathbb{R}^3 = 3 </m>.
       </p>
     </solution>
   </exercise>

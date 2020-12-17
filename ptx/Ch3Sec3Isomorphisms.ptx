@@ -585,13 +585,15 @@
     <statement>
       <p>
         Are the following vector spaces isomorphic?
-        <me>
-          V = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \} \\
+        <md>
+          <mrow> V_1 = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \}, \text{ where} </mrow>
+          <mrow>
           D = \{ (x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \}
-        </me>
+          </mrow>
+        </md>;
         <me>
-          \Vect_2 (\mathbb{R}^2)
-        </me>
+          V_2 = \Vect_2 (\mathbb{R}^2)
+        </me>.
       </p>
     </statement>
   </exercise>

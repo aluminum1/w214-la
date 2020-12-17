@@ -1027,9 +1027,13 @@
                 <mrow> \int_0^\pi f(x)\sin(x) \, dx = c\frac{\pi}{2} - d\frac{2}{3} = 0</mrow>
               </mdn>.
               Conversely, any <m> f </m> satisfying the linear equations above is certainly in <m> \Ker(S)</m>. Hence
-              <me>
-              \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: \\ b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \}
-              </me>. We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by (1) above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by (2).
+              <md>
+                <mrow>
+                \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: </mrow>
+                <mrow>
+                 b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \} </mrow>
+              </md>.
+              We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by (1) above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by (2).
               Hence <me>
               \Nullity(S) = 3.
               </me>

@@ -1027,9 +1027,13 @@
                 <mrow> \int_0^\pi f(x)\sin(x) \, dx = c\frac{\pi}{2} - d\frac{2}{3} = 0</mrow>
               </mdn>.
               Omgekeerd, is enige <m> f </m> wat die lineêre vergelykings hierbo bevredig, definitied in <m> \Ker(S)</m>. Dus is
-              <me>
-              \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: \\ b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ en }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \}
-              </me>. Ons is vry om  <m> a </m> op enige manier te kies, want die konstante sal nie enige van die integrale beïnvloed nie. Ons kan ook <m> b </m> vryelik kies, maar dan word <m> e </m> uit (1) bepaal. Soortgelyk kan ons <m> c </m> kies, maar dan word <m> d </m> uit (2) bepaal.
+              <md>
+                <mrow>
+                \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: </mrow>
+                <mrow>
+                 b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \} </mrow>
+              </md>.
+              Ons is vry om  <m> a </m> op enige manier te kies, want die konstante sal nie enige van die integrale beïnvloed nie. Ons kan ook <m> b </m> vryelik kies, maar dan word <m> e </m> uit (1) bepaal. Soortgelyk kan ons <m> c </m> kies, maar dan word <m> d </m> uit (2) bepaal.
               Dus is <me>
               \Nullity(S) = 3.
               </me>

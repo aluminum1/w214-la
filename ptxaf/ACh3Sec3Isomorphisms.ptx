@@ -235,16 +235,16 @@
       </md>
       sodat <m>\basis{C}</m> <m>W</m> span.
       Daarom is <m>\basis{C}</m> 'n basis vir <m>V</m>, so
-      <m>\dim V = \text{aantal vektore in }\basis{B}</m> = <m>n</m>, terwyl <m>\dim W =
+      <m>\Dim V = \text{aantal vektore in }\basis{B}</m> = <m>n</m>, terwyl <m>\Dim W =
       \text{aantal vektore in }\basis{C}  = m</m>.
     </p>
 
     <p>
       <m>\Leftarrow</m>.
-      Veronderstel <m>\dim V = \dim W</m>.
+      Veronderstel <m>\Dim V = \Dim W</m>.
       Laat <m>\ve{e}_1, \ldots, \ve{e}_m</m> 'n basis vir <m>V</m> wees,
       en laat <m>\ve{f}_1, \ldots, \ve{f}_m</m> 'n basis vir <m>W</m> wees.
-      (Ons weet dat die aantal basisvektore dieselfde is, want <m>\dim V = \dim W</m>.)
+      (Ons weet dat die aantal basisvektore dieselfde is, want <m>\Dim V = \Dim W</m>.)
     </p>
 
     <p>
@@ -271,9 +271,9 @@
     <solution>
       <p>
         Ons let op volgens <xref ref="dimension_of_matrix_space_example">Voorbeeld</xref>,
-        <m>\dim \Mat_{n,m} = mn</m>,
+        <m>\Dim \Mat_{n,m} = mn</m>,
         terwyl uit <xref ref="standard_basis_R_n_ex">Voorbeeld</xref>, is
-        <m>\dim \mathbb{R}^{mn}</m> ook gelyk aan <m>mn</m>.
+        <m>\Dim \mathbb{R}^{mn}</m> ook gelyk aan <m>mn</m>.
       </p>
     </solution>
   </example>
@@ -586,13 +586,14 @@
       <p>
         Is die volgende vektorruimtes isomorf?
         <md>
+          <mrow> V_1 = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \}, \text{ waar} </mrow>
           <mrow>
-          V = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \} </mrow>
-          <mrow>D = \{ (x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \}</mrow>
-        </md>
+          D = \{ (x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \}
+          </mrow>
+        </md>;
         <me>
-          \Vect_2 (\mathbb{R}^2)
-        </me>
+          V_2 = \Vect_2 (\mathbb{R}^2)
+        </me>.
       </p>
     </statement>
   </exercise>

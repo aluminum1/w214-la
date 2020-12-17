@@ -127,11 +127,11 @@
       <solution>
         <p>
           First we check if the list of vectors is <xref ref="defn_of_linear_ind" text="custom">linearly independent</xref>. Consider the equation
-          <mdn>
-            <mrow> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{0} </mrow>
-            <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (0, 0, 0, 0) </mrow>
-            <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (0,0,0,0) </mrow>
-        </mdn>
+          <md>
+            <mrow> \ve{0} \amp = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 </mrow>
+            <mrow> \amp = a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4)  </mrow>
+            <mrow> \amp = (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) </mrow>
+        </md>.
         The list of vectors is linearly indepedent if and only if the following equations have only the trivial solution <m>a_1 = 0, a_2 = 0, a_3 = 0, a_4 = 0</m>:
         <mdn>
           <mrow xml:id="R4-example-eqn1"> a_1 - a_2 + a_4 \amp = 0 </mrow>
@@ -192,7 +192,11 @@
       </aside>
 
         <p>
-          <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </c>
+          <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4,
+            a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4,
+            a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4,
+            a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]]
+          </c>
         </p>
 
       <p>In other words, there does indeed exist a solution, no matter what <m>(w_1, w_2, w_3, w_4)</m> is. For instance, if <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, then the solution is
@@ -1201,7 +1205,7 @@
               True
             </p>
             <p>
-              Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\dim V \geq n+1 </m> contradicting, the fact that <m> \dim V = n</m>.
+              Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\Dim V \geq n+1 </m> contradicting, the fact that <m> \Dim V = n</m>.
            </p>
           </li>
 
@@ -1291,7 +1295,7 @@
 
         <li>
           <p>
-            The vector subspace <m> W </m> of <m> V </m> spanned by the vectors in <m> \basis B' </m> has dimension <m> n + 1</m> and so <m> \dim(W) > \dim(V)</m> which contradicts <xref ref = "dim-of-subspace-prop" />.
+            The vector subspace <m> W </m> of <m> V </m> spanned by the vectors in <m> \basis B' </m> has dimension <m> n + 1</m> and so <m> \Dim(W) > \Dim(V)</m> which contradicts <xref ref = "dim-of-subspace-prop" />.
           </p>
         </li>
       </ol>
@@ -1485,7 +1489,7 @@
     <solution><p>
       <ol>
         <li>
-          We omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m> since it is routine. Let us now construct a basis for <m> V </m>. Begin with a non-zero vector <m> \ve v_1 </m>  in <m> V </m>. We make the most obvious choice, let <m> \ve v_1 = x -2 </m>. Next pick any vector  <m> \ve v_2 </m> in <m> V </m> not in the span of <m> \left \{ \ve v_1 \right\} </m>. An obvious choice is <m> \ve v_2 = x(x-2) </m>. Since <m> V </m> is not all of <m>\Poly_2 </m>, we know that <m> \dim V \lt 3 </m>. Thus <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> is a basis for <m> V </m> and so <m> \dim V = 2 </m>.
+          We omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m> since it is routine. Let us now construct a basis for <m> V </m>. Begin with a non-zero vector <m> \ve v_1 </m>  in <m> V </m>. We make the most obvious choice, let <m> \ve v_1 = x -2 </m>. Next pick any vector  <m> \ve v_2 </m> in <m> V </m> not in the span of <m> \left \{ \ve v_1 \right\} </m>. An obvious choice is <m> \ve v_2 = x(x-2) </m>. Since <m> V </m> is not all of <m>\Poly_2 </m>, we know that <m> \Dim V \lt 3 </m>. Thus <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> is a basis for <m> V </m> and so <m> \Dim V = 2 </m>.
         </li>
 
         <li>
@@ -1494,7 +1498,7 @@
             <mrow> x(2ax + b) = ax^2 + bx + c </mrow>
             <mrow> \implies 2ax^2 + bx = ax^2 + bx + c </mrow>
           </md>.
-          Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples of <m> \ve v_1 = x </m>. Hence <m> \bopen \ve v_1 \bclose </m> is a basis for <m> V </m> and so <m> \dim V = 1</m>.
+          Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples of <m> \ve v_1 = x </m>. Hence <m> \bopen \ve v_1 \bclose </m> is a basis for <m> V </m> and so <m> \Dim V = 1</m>.
         </li>
       </ol>
     </p></solution>
@@ -1516,12 +1520,12 @@
   <exercise>
     <statement>
       <p>
-        Prove or disprove: Let <m>U</m> and <m> W </m> be different subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>.  Then <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="custom">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.)
+        Prove or disprove: Let <m>U</m> and <m> W </m> be different subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>.  Then <m>\Dim(U + V) = \Dim(U) + \Dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="custom">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.)
       </p>
     </statement>
     <solution>
       <p>
-        We can disprove the statement with the following counterexample. Let <m> V = \mathbb{R}^3 </m>. Let <m>U</m> be the vector subspace with basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> and let <m>W</m> be the vector subspace with basis <m>\bopen (0,0,1), (0,1,0) \bclose</m>. Clearly <m>\dim U = \dim W = 2 </m> and thus <m> \dim(U) + \dim(V) = 4</m>. But since <m>U + W =  \mathbb{R}^3</m>, <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
+        We can disprove the statement with the following counterexample. Let <m> V = \mathbb{R}^3 </m>. Let <m>U</m> be the vector subspace with basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> and let <m>W</m> be the vector subspace with basis <m>\bopen (0,0,1), (0,1,0) \bclose</m>. Clearly <m>\Dim U = \Dim W = 2 </m> and thus <m> \Dim(U) + \Dim(V) = 4</m>. But since <m>U + W =  \mathbb{R}^3</m>, <m> \Dim (U+V) = \Dim \mathbb{R}^3 = 3 </m>.
       </p>
     </solution>
   </exercise>

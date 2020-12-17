@@ -90,7 +90,7 @@
       (2) <m>\Rightarrow</m> (1).
       Suppose <m>\lambda \id_V - T</m> is not injective.
       <md>
-        <mrow>\amp  \therefore \Ker(\lambda \id_V - T) \neq \{\ve{0} \} \amp \amp  \text{(by <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
+        <mrow>\amp  \therefore \Ker(\lambda \id_V - T) \neq \{\ve{0} \} \amp \amp  (\text{by }<xref ref="injective-kernel-lemma">Lemma</xref>)</mrow>
         <mrow>\amp  \therefore \text{there exists a nonzero }\ve{v} \in V\text{ such that}</mrow>
         <mrow>\amp   (\lambda \id_V - T)(\ve{v}) = \ve{0}.</mrow>
         <mrow>\amp  \text{That is, } T(\ve{v}) = \lambda \ve{v},\text{ so }\lambda\text{ is an eigenvalue of }T.</mrow>
@@ -231,7 +231,7 @@
       Indeed, if <m>\basis{B}</m> is a basis for <m>V</m>, then
       <md>
         <mrow>\amp \lambda \id - T \text{ is not invertible}</mrow>
-        <mrow>\amp  \Leftrightarrow \text{the matrix } [\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \text{ is not invertible}  \amp \amp  \text{(<xref ref="map-iso-matrix-iso"></xref>)}</mrow>
+        <mrow>\amp  \Leftrightarrow \text{the matrix } [\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \text{ is not invertible}  \amp \amp  (<xref ref="map-iso-matrix-iso"></xref>)</mrow>
         <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) = 0 \amp \amp  \text{(Property of }\det)</mrow>
         <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \text{(Defn of } \chi_T(\lambda))</mrow>
       </md>

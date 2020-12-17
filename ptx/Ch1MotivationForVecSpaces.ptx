@@ -37,7 +37,7 @@
     <p>
       The covariance defined in the previous paragraph can be extended to cases where we have an infinite number of
       <!--
-       ... again - what? Read up!
+       ... again - what? Read up on this!
        If the ?? is an infinite number, corresponding to one for each positive integer, then we can define the covariance as an infinite sum
        <me> w_1x_1y_1+w_2x_2y_2+\cdots <me>
        in cases where this sum converges. But if the possible states (?) are continuous, say all real numbers between 0 and 1, then we need a continuous analogue of a sum <mdash/> an integral!

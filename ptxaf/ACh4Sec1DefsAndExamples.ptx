@@ -90,7 +90,7 @@
       (2) <m>\Rightarrow</m> (1).
       Veronderstel <m>T - \lambda \id_V</m> is nie injektief nie.
       <md>
-        <mrow>\amp  \therefore \Ker(T - \lambda \id_V) \neq \{\ve{0} \} \amp \amp \text{(deur <xref ref="injective-kernel-lemma"></xref>)}</mrow>
+        <mrow>\amp  \therefore \Ker(T - \lambda \id_V) \neq \{\ve{0} \} \amp \amp (\text{deur }<xref ref="injective-kernel-lemma"></xref>)</mrow>
         <mrow>\amp  \therefore \text{daar bestaan 'n nie-nul } (\ve{v} \in V, \text{ sodat }</mrow>
         <mrow>\amp   (T - \lambda \id_V)(\ve{v}) = \ve{0}.</mrow>
         <mrow>\amp  \text{Dit is, } T(\ve{v}) = \lambda \ve{v},\text{ so }\lambda\text{ is 'n eiewaarde van } T.</mrow>
@@ -231,7 +231,7 @@
       Inderdaad, as <m>\basis{B}</m> 'n basis vir <m>V</m> is, dan
       <md>
         <mrow>\amp \lambda \id - T \text{ is nie inverteerbaar nie}</mrow>
-        <mrow>\amp \Leftrightarrow \text{die matriks }[\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \text{ is nie inverteerbaar nie}  \amp \amp  \text{(<xref ref="map-iso-matrix-iso"></xref>)}</mrow>
+        <mrow>\amp \Leftrightarrow \text{die matriks }[\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \text{ is nie inverteerbaar nie}  \amp \amp  (<xref ref="map-iso-matrix-iso"></xref>)</mrow>
         <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) = 0 \amp \amp  \text{(Eienskap van }\det)</mrow>
         <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \text{(Defn van } \chi_T(\lambda))</mrow>
       </md>

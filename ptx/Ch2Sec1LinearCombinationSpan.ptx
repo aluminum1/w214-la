@@ -332,9 +332,14 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
       </statement>
       <solution>
         <p>
-          <me>
-            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = a_1(1, \ldots, 0) + \cdots a_n(0,\ldots,1) \\ = (a_1 , \ldots , 0 ) + \cdots + (0 ,\ldots, a_n) = (a_1, \ldots, a_n )
-        </me>
+          <md>
+            <mrow>
+              \ve{v} \amp = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = a_1(1, \ldots, 0) + \cdots a_n(0,\ldots,1)
+            </mrow>
+            <mrow>
+              \amp = (a_1 , \ldots , 0 ) + \cdots + (0 ,\ldots, a_n) = (a_1, \ldots, a_n )
+            </mrow>
+        </md>
         </p>
       </solution>
     </exercise>

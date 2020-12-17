@@ -1,2 +1,2 @@
 cd /c/pretext/w214-la/ptxaf/html
-/c/xsltproc/xsltproc --xinclude /c/pretext/mathbook/xsl/pretext-html.xsl /c/pretext/w214-la/ptxaf/W214-Lin-Alg-Af.ptx
+/c/xsltproc/xsltproc -stringparam html.css.stylefile style_oscarlevin.css -stringparam html.css.colorfile colors_orange_navy.css --xinclude /c/pretext/mathbook/xsl/pretext-html.xsl /c/pretext/w214-la/ptxaf/W214-Lin-Alg-Af.ptx

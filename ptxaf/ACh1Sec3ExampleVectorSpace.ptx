@@ -28,7 +28,7 @@
     <p>
       Dan definieer ons optelling, die nul-vektor en skalaarvermenigvuldiging
     </p>
-    <p><dl>
+    <p><dl width="narrow">
      <li>
       <title>D1. Optelling</title>
       <p>
@@ -97,7 +97,7 @@
     </li>
 
     <li>
-      <title>D3. Skalaarvermenigvuldiging</title>
+      <title>D3. Skalaar-vermenig-vuldiging</title>
       <p>
         Ons definieer skalaarvermenigvuldiging op <m>B</m>
         soos volg:
@@ -123,8 +123,7 @@
         <md>
           <mrow>\amp  ku_1 - ku_2 + ku_3</mrow>
           <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp
-          \text{(
-          waar vir gewone getalle)}</mrow>
+          \text{(waar vir getalle)}</mrow>
           <mrow>\amp = k 0 \amp \amp  (\text{want } \ve{u} \text{ is in } B)</mrow>
           <mrow>\amp = 0</mrow>
         </md>.
@@ -152,19 +151,19 @@
     en dat <m>k</m> en <m>l</m> reële getalle is.
   </p>
 
-  <p><dl>
+  <p><dl width="narrow">
     <li><title>R1</title>
     <p>
       Ons gaan na:
       <md>
-        <mrow>\amp  \ve{v} + \ve{w}\tag{R1.}</mrow>
+        <mrow>\amp  \ve{v} + \ve{w}</mrow>
         <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3)
-        \amp \amp  (\text{definisie van optelling in } B)</mrow>
+        \amp \amp  (\text{Def. van optelling in } B)</mrow>
         <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp
-        (\text{want  } x + y = y + x \text{ is waar vir
-        re{\"e}le getalle})</mrow>
+        (x + y = y + x \text{ vir
+        reële getalle})</mrow>
         <mrow>\amp = \ve{w} + \ve{v}. \amp \amp
-        (\text{definisie van optelling in } B)</mrow>
+        (\text{Def. van optelling in } B)</mrow>
       </md>
     </p>
     </li>
@@ -176,15 +175,15 @@
       <md>
         <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
         <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} \amp \amp
-        \text{(definisie van optelling in }B)</mrow>
+        \text{(Def. van optelling in }B)</mrow>
         <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp
-        \text{(definisie van optelling in }B)</mrow>
+        \text{(Def. van optelling in }B)</mrow>
         <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp
-        ((x + y) + z = x + (y + z) \text is waar
-        vir re{\"e}le getalle)</mrow>
+        ((x + y) + z = x + (y + z) (\text{
+        vir reële getalle})</mrow>
         <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp
-        \text{(definisie van optelling in }B)</mrow>
-        <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \text{(definisie van optelling in }B) </mrow>
+        \text{(Def. van optelling in }B)</mrow>
+        <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \text{(Def. van optelling in }B) </mrow>
       </md>.
     </p>
     </li>
@@ -196,11 +195,11 @@
       <md>
         <mrow>\amp \ve{0} + \ve{v}</mrow>
         <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp
-        \text{(definisie van die nul-vektor in }B)</mrow>
+        \text{(Def. van die nul-vektor in }B)</mrow>
         <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp
-        \text{(definisie van optelling in }B)</mrow>
+        \text{(Def. van optelling in }B)</mrow>
         <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp
-        (x + 0 = x \text{ is waar vir re{\"e}le getalle)}</mrow>
+        (x + 0 = x \text{ vir reële getalle)}</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>.
     </p>
@@ -216,11 +215,11 @@
       Ons gaan na:
       <md>
         <mrow>\amp  k \smul ( \ve{v + w} )</mrow>
-        <mrow>\amp = k \smul (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \text{(definisie van optelling in }B)</mrow>
-        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp \text{(definisie van skalaarvermenigvuldiging in }B)</mrow>
-        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  (k(x+y) = kx + ky \text{ vir re{\"e}le getalle }x,y)</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp \text{(definisie van optelling in }B)</mrow>
-        <mrow>\amp = k \cdot \ve{v} + k \cdot \ve{w} \amp \amp  \text{(definisie van skalaarvermenigvuldiging in }B)</mrow>
+        <mrow>\amp = k \smul (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \text{(Def. van optelling in }B)</mrow>
+        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp \text{(Def. van skalaarvermenigvuldiging in }B)</mrow>
+        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  (k(x+y) = kx + ky \text{ vir reële getalle }x,y)</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp \text{(Def. van optelling in }B)</mrow>
+        <mrow>\amp = k \cdot \ve{v} + k \cdot \ve{w} \amp \amp  \text{(Def. van skalaarvermenigvuldiging in }B)</mrow>
       </md>
     </p>
     </li>
@@ -231,10 +230,10 @@
       Ons gaan na:
       <md>
         <mrow>\amp  (k + l) \smul \ve{v}</mrow>
-        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \text{(definisie van skalaarvermenigvuldiging in }B)</mrow>
-        <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  ((k+l)x = kx + lx \text{ vir re{\"e}le getalle)}</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp \text{(definisie van optelling in } B)</mrow>
-        <mrow>\amp = k \cdot \ve{v} + l \cdot \ve{v} \amp \amp  \text{(definisie van skalaarvermenigvuldiging in } B)</mrow>
+        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in }B)</mrow>
+        <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  ((k+l)x = kx + lx \text{ vir reële getalle)}</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp \text{(Def. van optelling in } B)</mrow>
+        <mrow>\amp = k \cdot \ve{v} + l \cdot \ve{v} \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B)</mrow>
       </md>
     </p>
     </li>
@@ -245,10 +244,10 @@
       Ons gaan na:
       <md>
         <mrow>\amp  k \cdot (l \cdot \ve{v})</mrow>
-        <mrow>\amp = k \cdot (l v_1, \, l v_2, \, lv_3) \amp \amp  \text{(definisie van skalaarvermenigvuldiging in } B)</mrow>
-        <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \text{(definisie van skalaarvermenigvuldiging in } B)</mrow>
-        <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  (k(lx) = (kl)x \text{ vir re{\"e}le getalle)}</mrow>
-        <mrow>\amp = (kl) \cdot \ve{v} \amp \amp  \text{(definisie van skalaarvermenigvuldiging in } B) </mrow>
+        <mrow>\amp = k \cdot (l v_1, \, l v_2, \, lv_3) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B)</mrow>
+        <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B)</mrow>
+        <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  (k(lx) = (kl)x \text{ vir reële getalle)}</mrow>
+        <mrow>\amp = (kl) \cdot \ve{v} \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B) </mrow>
       </md>.
     </p>
     </li>
@@ -258,8 +257,8 @@
     <p>
       Ons gaan na:
       <md>
-        <mrow>1 \cdot \ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \text{(definisie van skalaarvermenigvuldiging in }B)</mrow>
-        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  (1 x = x \text{ vir re{\"e}le getalle }x)</mrow>
+        <mrow>1 \cdot \ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in }B)</mrow>
+        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  (1 x = x \text{ vir reële getalle }x)</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>.
     </p>
@@ -270,9 +269,9 @@
     <p>
       Ons gaan na:
       <md>
-        <mrow>0 \cdot \ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \text{(definisie van skalaarvermenigvuldiging in } B)</mrow>
-        <mrow>\amp = (0, \, 0, \, 0) \amp \amp  (0 x = 0 \text{ vir re{\"e}le getalle})</mrow>
-        <mrow>\amp = \ve{0} \amp \amp  \text{(definisie van die nul-vektor in }B) </mrow>
+        <mrow>0 \cdot \ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B)</mrow>
+        <mrow>\amp = (0, \, 0, \, 0) \amp \amp  (0 x = 0 \text{ vir reële getalle})</mrow>
+        <mrow>\amp = \ve{0} \amp \amp  \text{(Def. van die nul-vektor in }B) </mrow>
       </md>.
     </p>
     </li>

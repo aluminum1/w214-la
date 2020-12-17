@@ -90,7 +90,7 @@
       <p>
         <md>
           <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \text{(R3b)}</mrow>
-          <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv" text="global"/></mrow>
+          <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv"/></mrow>
           <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \text{(R2)}</mrow>
           <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \text{(volgens aanname)}</mrow>
           <mrow>\amp = -\ve{v} \amp \amp  \text{(R3a)} </mrow>
@@ -187,7 +187,7 @@
           <mrow>\ve{v} + 7 \smul \ve{x} \amp  = \ve{w}</mrow>
           <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \cdot \ve{x}) \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(tel } -\ve{v} \text{ links aan beide kante by)}</mrow>
           <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(gebruik R2 aan LK)}</mrow>
-          <mrow>\therefore  \ve{0} + 7 \smul \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp <xref ref="add_inv" text="global">Lemma</xref> \text{ aan LK)}</mrow>
+          <mrow>\therefore  \ve{0} + 7 \smul \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp (<xref ref="add_inv" text="global">Lemma</xref> \text{ aan LK)}</mrow>
           <mrow>\therefore  7 \smul \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \text{(R3a aan LK)}</mrow>
           <mrow>\therefore  \frac{1}{7} \smul (7 \cdot \ve{x}) \amp  = \frac{1}{7} \smul (-\ve{v} + \ve{w}) \amp \amp  \text{(skalaarvermenigvuldig aan beide kante met }\frac{1}{7})</mrow>
           <mrow>\therefore  (\frac{1}{7} 7) \cdot   \ve{x} \amp  = \frac{1}{7} \smul (-\ve{v} + \ve{w}) \amp \amp  \text{(gebruik R6 aan LK)}</mrow>

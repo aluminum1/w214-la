@@ -355,21 +355,27 @@
             <me>
               \cos 2x = 1 - 2\sin^2x \implies \sin^2x = \frac{1}{2} - \frac{1}{2}\cos 2x
             </me>
-            <me>
-              \cos^3 x = \cos x \cos^2 x = \cos x (1 - \sin^2 x) = \cos x(\frac{1}{2} + \frac{1}{2}\cos 2x) \\
-              = \frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x
-            </me>
-            <me>
-              \cos x \cos 2x = \cos 3x + \sin x \sin 2x = \cos 3x + 2 \sin^2 x \cos x \\
-              = \cos 3x + (1 - \cos 2x) \cos x = \cos 3x + \cos x - \cos 2x \cos x \\
-              \implies \cos x \cos 2x = \frac{1}{2}\cos 3x + \frac{1}{2}\cos x
-            </me>
+            <md>
+              <mrow> \cos^3 x \amp = \cos x \cos^2 x = \cos x (1 - \sin^2 x) = \cos x(\frac{1}{2} + \frac{1}{2}\cos 2x) </mrow>
+              <mrow> \amp = \frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x</mrow>
+            </md>
+            <md>
+              <mrow>
+              \cos x \cos 2x \amp = \cos 3x + \sin x \sin 2x = \cos 3x + 2 \sin^2 x \cos x </mrow>
+              <mrow>
+              \amp = \cos 3x + (1 - \cos 2x) \cos x = \cos 3x + \cos x - \cos 2x \cos x </mrow>
+              <mrow>
+              \implies \cos x \cos 2x \amp = \frac{1}{2}\cos 3x + \frac{1}{2}\cos x
+              </mrow>
+            </md>.
             Thus
-            <me>
-              \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{1}{2}\cos 2x - (\frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x) \\
-              = \frac{1}{2} - \frac{1}{2}\cos 2x - \frac{1}{2}\cos x -  \frac{1}{2}(\frac{1}{2}\cos 3x + \frac{1}{2}\cos x) \\
-              = \frac{1}{2} -\frac{3}{4}\cos x - \frac{1}{2}\cos 2x - \frac{1}{4}\cos 3x.
-            </me>
+            <md>
+              <mrow>
+              \sin^2 x - \cos^3 x \amp = \frac{1}{2} - \frac{1}{2}\cos 2x - (\frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x) </mrow>
+              <mrow>
+              \amp = \frac{1}{2} - \frac{1}{2}\cos 2x - \frac{1}{2}\cos x -  \frac{1}{2}(\frac{1}{2}\cos 3x + \frac{1}{2}\cos x) </mrow>
+              <mrow> \amp = \frac{1}{2} -\frac{3}{4}\cos x - \frac{1}{2}\cos 2x - \frac{1}{4}\cos 3x</mrow>
+            </md>.
           </p>
         </solution>
       </exercise>

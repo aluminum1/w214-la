@@ -189,8 +189,10 @@
       <p>
         <md>
           <mrow>R_\phi R_\theta (x,y) \amp = R_\phi (x\cos\theta - y\sin\theta, x\sin\theta + y\cos\theta)</mrow>
-          <mrow>\amp =  \left((x\cos\theta-y\sin\theta)\cos\phi - (x\sin\theta + y \cos\theta)\sin\phi ,\, (x\cos\theta - y\sin\theta)\sin\phi + (x\sin\theta + y\cos\theta)\cos \phi\right) </mrow>
-          <mrow> \amp = \left(x(\cos\theta\cos\phi - \sin\theta\sin\phi) - y(\sin\theta\cos\phi + \cos\theta\sin\phi),\, x(\cos\theta\sin\phi + \sin\theta\cos\phi) + y(\cos\theta\cos\phi - \sin\theta\sin\phi)\right) </mrow>
+          <mrow>\amp =  \big((x\cos\theta-y\sin\theta)\cos\phi - (x\sin\theta + y \cos\theta)\sin\phi ,</mrow>
+          <mrow> \amp\qquad (x\cos\theta - y\sin\theta)\sin\phi + (x\sin\theta + y\cos\theta)\cos \phi\big) </mrow>
+          <mrow> \amp = \big(x(\cos\theta\cos\phi - \sin\theta\sin\phi) - y(\sin\theta\cos\phi + \cos\theta\sin\phi),\, </mrow>
+          <mrow> \amp \qquad x(\cos\theta\sin\phi + \sin\theta\cos\phi) + y(\cos\theta\cos\phi - \sin\theta\sin\phi)\big) </mrow>
           <mrow> \amp = \left(x\cos(\theta + \phi) - y\sin(\theta + \phi), \,x\sin(\theta+\phi) + y\cos(\theta + \phi_)\right) </mrow>
           <mrow> \amp = R_{\phi + \theta}(x,y) </mrow>
         </md>

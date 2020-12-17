@@ -1,8 +1,8 @@
 To do list:
 
 - Image sizes are inconsistent.
-- Some images aren't showing. Make sure that they do after running the pretext script.
-- Parts in Theorems and Proofs to (a) etc instead 1. etc. using <ol label="(a)"> (?) Maybe this can be set in a publisher's file?
+- Decide on and implement better colors for tikz diagrams. Use latex macros like \primaryColor etc. to ensure uniformity.
+- Parts in Theorems and Proofs to (a) etc instead 1. etc. using <ol label="(a)"> (?)
 - It seems that <xref>s in displayed equations should not be placed inside \text{}.
 - Some exercises do not have solutions yet.
 - Titles for examples? and Exercises?
@@ -12,15 +12,12 @@ To do list:
 - Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
 - First person to first person plural? (I to we)
 - Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.
-- Rob Beezer says that CDATA should never be necessary - is it easier in a tikz picture, though? I guess you have to be careful of things like arrow heads -->
 - Create index? And index of notation?
 - Ch3Sec 3 line 6 & 25: images not allowed in text mode --- rework.
 - Ch2Sec4 (in a few places actually) I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
 
 Consistency and technique:
-- Consistency between \dim and \Dim?
 - Make sure all <proofs> are inside the <theorem> (etc.) tags and not outside (?) (low priority)
-- Make sure all LaTeX line breaks \\ are appropriate.
 - Full stops after </md>, not inside the equations. (low priority)
 - Decide on using => and <= in proofs.
 

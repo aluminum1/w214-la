@@ -104,11 +104,15 @@
     <solution>
       <p>
         Ons het 'n konsistente stelsel homogene lineêre vergelykings so ons weet daar bestaan ten minste een oplossing, naamlik die triviale oplossing. Aangesien ons drie onbekendes, maar slegs twee vergelykings het, het ons nie 'n unieke oplossing nie. Laat <m>k_1</m> vry wees, m.a.w. <m> k_1 = t, t \in \mathbb{R}</m>. Dan is
-        <me>
-          (-k_1 + k_2 + 2k_3) - (2k_1 + k_2 - k_3) = 0 = -3k_1 + 3k_3 \\
-          \implies -k_1 + k_3 = 0 \implies k_3 = t.
-          -t + k_2 + 2t = 0 \implies k_2 = -t
-        </me>
+        <md>
+          <mrow>
+            (-k_1 + k_2 + 2k_3) - (2k_1 + k_2 - k_3) = 0 = -3k_1 + 3k_3
+          </mrow>
+          <mrow>
+            \implies -k_1 + k_3 = 0 \implies k_3 = t.
+            -t + k_2 + 2t = 0 \implies k_2 = -t
+          </mrow>
+        </md>
       </p>
       </solution>
     </exercise>
@@ -382,11 +386,11 @@
           k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
         </me>
         This vector equation gives rise to a system of 3 linear equations:
-        <me>
-          2k_1 + k_2 + 7k_3 = 0,\\
-          3k_1 - k_2 + 3k_3 = 0,\\
-          k_1 + 2k_2 + ck_3 = 0.
-        </me>
+        <md>
+          <mrow> 2k_1 + k_2 + 7k_3 \amp = 0 </mrow>
+          <mrow> 3k_1 - k_2 + 3k_3 \amp = 0 </mrow>
+          <mrow> k_1 + 2k_2 + ck_3 \amp = 0 </mrow>
+        </md>.
         The corresponding matrix equation is
         <me>
           \begin{bmatrix}
@@ -509,12 +513,12 @@
         \frac{3}{2} + b + c = 0.
       </me>
       As ons hierdie waardes gebruik, en na die vergelyking vir die inskrywing in posisie (2,2) kyk, kan ons bereken dat:
-      <me>
-        \frac{3}{2} + b + 3c = -1 \\
-        \implies \frac{3}{2} + b + c + 2c = -1 \\
-        \implies 2c = -1
-        \implies c = -\frac{1}{2}
-      </me>
+      <md>
+        <mrow> \frac{3}{2} + b + 3c \amp = -1 </mrow>
+        <mrow> \implies \frac{3}{2} + b + c + 2c \amp = -1 </mrow>
+        <mrow> \implies 2c \amp = -1 </mrow>
+        <mrow> \implies c \amp = -\frac{1}{2}</mrow>
+      </md>
       en dus is <m> b = -1 </m>.
     </p>
     <p>

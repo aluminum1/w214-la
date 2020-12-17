@@ -429,9 +429,11 @@
             <li>
               <p>
                 Let <m> \ve p , \ve q </m> be in <m> \Poly_n </m>. Using the usual properties of the integral, we compute
-                <me>
-                  A(\ve p + \ve q) = \int_0^x \ve p(t) + \ve q(t) \, dt = \int_0^x \ve p(t) \, dt + \int_0^x \ve q(t) \, dt \\ = A(\ve p) + A(\ve q).
-                </me>
+                <md>
+                  <mrow>
+                  A(\ve p + \ve q) \amp = \int_0^x \ve p(t) + \ve q(t) \, dt = \int_0^x \ve p(t) \, dt + \int_0^x \ve q(t) \, dt </mrow>
+                  <mrow> \amp = A(\ve p) + A(\ve q)</mrow>
+                </md>.
                 Similarly,
                 <me>
                   A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
@@ -492,10 +494,10 @@
             S(k \ve p ) = S\left( \sum_{j=0}^n ka_j x^j\right) = \sum_{j=0}^n ka_j (x-1)^j =  k \sum_{j=0}^n a_j (x-1)^j = kS(\ve p)
           </me>
           and
-          <me>
-            S(\ve p + \ve q) = S\left(\sum_{j=0}^n (a_j + b_j) x^j\right) = \sum_{j=0}^n (a_j + b_j) (x-1)^j \\
-            = \sum_{j=0}^n a_j (x-1)^j + \sum_{j=0}^n  b_j (x-1)^j = S(\ve p) + S(\ve q)
-          </me>.
+          <md>
+            <mrow> S(\ve p + \ve q) \amp = S\left(\sum_{j=0}^n (a_j + b_j) x^j\right) = \sum_{j=0}^n (a_j + b_j) (x-1)^j </mrow>
+            <mrow> \amp = \sum_{j=0}^n a_j (x-1)^j + \sum_{j=0}^n  b_j (x-1)^j = S(\ve p) + S(\ve q)</mrow>
+          </md>.
         </p>
       </solution>
     </exercise>
@@ -899,10 +901,11 @@
           </li>
           <li>
             <p>
-              <me>
-                T\left((x,y,z) + (a,b,c)\right) = T\left( (x+a,y+b , z + c) \right) = (z+c,x+a,y+b) \\
-                = (z,x,y) + (c,a,b)= T\left((x,y,z)\right) +  T\left((a,b,c)\right)
-              </me>
+              <md>
+                <mrow> T\left((x,y,z) + (a,b,c)\right) \amp = T\left( (x+a,y+b , z + c) \right) = (z+c,x+a,y+b) </mrow>
+                <mrow> \amp = (z,x,y) + (c,a,b)= T\left((x,y,z)\right) +  T\left((a,b,c)\right)
+                </mrow>
+              </md>
               <me>
                 T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
               </me>
@@ -1109,10 +1112,12 @@
           <li>
             <p>
             We use the properties of the integral.
-            <me>
-              I(\ve p + \ve q) = \int_{-1}^1 \left( \ve p(x) + \ve q(x)\right) \, dx \\ =  \int_{-1}^1 \ve p(x) \, dx +
-              \int_{-1}^1 \ve q(x) \, dx = I(\ve p) + I(\ve q).
-            </me>
+            <md>
+              <mrow>
+              I(\ve p + \ve q) \amp = \int_{-1}^1 \left( \ve p(x) + \ve q(x)\right) \, dx</mrow>
+              <mrow> =  \int_{-1}^1 \ve p(x) \, dx +
+              \int_{-1}^1 \ve q(x) \, dx = I(\ve p) + I(\ve q)</mrow>
+            </md>.
             <me>
               I(k\ve p )  = \int_{-1}^1 k\ve p(x) \, dx = k\int_{-1}^1 \ve p(x) \, dx = kI(\ve p)
             </me>
@@ -1121,24 +1126,25 @@
 
           <li>
             <p>
-            <me>
-              I(\ve p_0) = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2 \\
-              I(\ve p_1) = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0\\
-              I(\ve p_2) = \int_{-1}^1 x^2 dx = \frac{1}{3}x^3 \rvert^1_{-1} = \frac{2}{3} \\
-              I(\ve p_3) = \int_{-1}^1 x^3 dx = \frac{1}{4}x^4 \rvert^1_{-1} = 0
-            </me>
+            <md>
+              <mrow>I(\ve p_0) \amp = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2 </mrow>
+              <mrow> I(\ve p_1) \amp = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0</mrow>
+              <mrow> I(\ve p_2) \amp = \int_{-1}^1 x^2 dx = \frac{1}{3}x^3 \rvert^1_{-1} = \frac{2}{3} </mrow>
+              <mrow> I(\ve p_3) \amp = \int_{-1}^1 x^3 dx = \frac{1}{4}x^4 \rvert^1_{-1} = 0</mrow>
+            </md>.
             </p>
           </li>
 
           <li>
             <p>
               We use the results above:
-              <me>
-                I(\ve q_0) = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2\\
-                I(\ve q_1) = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0\\
-                I(\ve q_2) = \int_{-1}^1 2x^2 - 1 dx = 2\int_{-1}^1 x^2 dx - \int_{-1}^1 1 =  \frac{4}{3} - 2 = -\frac{2}{3} \\
-                I(\ve q_3) = \int_{-1}^1 4x^3 - 3x dx = 4\int_{-1}^1 x^3 dx - 3\int_{-1}^1 x dx = 4.0 - 3.0 = 0
-              </me>
+              <md>
+                <mrow>
+                I(\ve q_0) \amp = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2</mrow>
+                <mrow> I(\ve q_1) \amp = \int_{-1}^1 x dx = \frac{1}{2}x^2 \rvert^1_{-1} = 0</mrow>
+                <mrow> I(\ve q_2) \amp = \int_{-1}^1 2x^2 - 1 dx = 2\int_{-1}^1 x^2 dx - \int_{-1}^1 1 =  \frac{4}{3} - 2 = -\frac{2}{3} </mrow>
+                <mrow> I(\ve q_3) \amp = \int_{-1}^1 4x^3 - 3x dx = 4\int_{-1}^1 x^3 dx - 3\int_{-1}^1 x dx = 4.0 - 3.0 = 0</mrow>
+              </md>.
             </p>
           </li>
 
@@ -1157,13 +1163,14 @@
     </statement>
     <solution>
       <p>
-        <me>
-          D(\ve p_0) = D(1) = 0  \\
-          D(\ve p_1) = D(x)= 1 = \ve p_0 \\
-          D(\ve p_2) = D(x^2) = 2x = 2\ve p_1 \\
-          D(\ve p_3) = D(x^3) = 3x^2 = 3\ve p_2 \\
-          D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
-        </me>
+        <md>
+          <mrow>
+          D(\ve p_0) \amp = D(1) = 0  </mrow>
+          <mrow> D(\ve p_1) \amp = D(x)= 1 = \ve p_0 </mrow>
+          <mrow> D(\ve p_2) \amp = D(x^2) = 2x = 2\ve p_1 </mrow>
+          <mrow> D(\ve p_3) \amp = D(x^3) = 3x^2 = 3\ve p_2 </mrow>
+          <mrow> D(\ve p_4) \amp = D(x^4) = 4x^3 = 4 \ve p_3</mrow>
+        </md>.
       </p>
     </solution>
   </exercise>

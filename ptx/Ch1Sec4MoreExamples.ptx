@@ -114,7 +114,7 @@
           <mrow>\text{RHS} \amp = \ve{a} +(\ve{b} + \ve{b})</mrow>
           <mrow> \amp = \ve{a} + \ve{a}</mrow>
           <mrow> \amp = \ve{a}</mrow>
-          <mrow> \therefore LK \amp = RK </mrow>
+          <mrow> \therefore LHS \amp = RHS </mrow>
         </md>.
       </p>
       <p>
@@ -286,8 +286,8 @@
             <mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
             <mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
             <mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
-            <mrow> \amp = k.\ve{v} + k.\ve={w} </mrow>
-            <mrow> \amp = \text{LHS} </mrow>
+            <mrow> \amp = k.\ve{v} + k.\ve{w} </mrow>
+            <mrow> \amp = \text{RHS} </mrow>
           </md>
         </p>
       </solution>

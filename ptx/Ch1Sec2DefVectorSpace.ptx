@@ -21,7 +21,7 @@
         A <term>vector space</term> is a set <m>V</m>
         equipped with the following data:
 
-        <dl>
+        <dl width="narrow">
           <li xml:id="D1">
             <title>D1</title>
             <p>
@@ -62,7 +62,7 @@
       </p>
 
       <p>
-        <dl>
+        <dl width="narrow">
           <li xml:id="R1">
             <title>R1</title>
             <p>

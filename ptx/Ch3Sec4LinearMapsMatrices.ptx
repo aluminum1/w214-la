@@ -364,18 +364,18 @@
       </me>
       by firstly defining it on the basis vectors in <m>\basis{C}</m> by
       <me>
-        S(\ve{c}_i) := \sum_{p=1}^{\dim V} [T]^{-1}_{pi} \ve{b}_p
+        S(\ve{c}_i) := \sum_{p=1}^{\Dim V} [T]^{-1}_{pi} \ve{b}_p
       </me>
       and then extending to all of <m>W</m> by linearity.
       Then we have
       <md>
         <mrow>(T \circ S)(\ve{c}_i) \amp = T(S(\ve{c}_i))</mrow>
-        <mrow>\amp = T\left( \sum_{p=1}^{\dim V} [T]_{pi}^{-1} \ve{b}_p \right)</mrow>
-        <mrow>\amp = \sum_{p=1}^{\dim V} \sum_{q=1}^{\dim W} [T]^{-1}_{pi} [T]_{qp} \ve{c}_q</mrow>
-        <mrow>\amp = \sum_{q=1}^{\dim W} \left( \sum_{p=1}^{\dim V} [T]_{qp} [T]^{-1}_{pi} \right) \ve{c}_q</mrow>
-        <mrow>\amp = \sum_{q=1}^{\dim W} \left( [T] [T]^{-1} \right)_{qi} \ve{c}_q</mrow>
-        <mrow>\amp = \sum_{q=1}^{\dim W} I_{qi} \ve{c}_q</mrow>
-        <mrow>\amp = \sum_{q=1}^{\dim W} \delta_{qi} \ve{c}_q</mrow>
+        <mrow>\amp = T\left( \sum_{p=1}^{\Dim V} [T]_{pi}^{-1} \ve{b}_p \right)</mrow>
+        <mrow>\amp = \sum_{p=1}^{\Dim V} \sum_{q=1}^{\Dim W} [T]^{-1}_{pi} [T]_{qp} \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{q=1}^{\Dim W} \left( \sum_{p=1}^{\Dim V} [T]_{qp} [T]^{-1}_{pi} \right) \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{q=1}^{\Dim W} \left( [T] [T]^{-1} \right)_{qi} \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{q=1}^{\Dim W} I_{qi} \ve{c}_q</mrow>
+        <mrow>\amp = \sum_{q=1}^{\Dim W} \delta_{qi} \ve{c}_q</mrow>
         <mrow>\amp = \ve{c_i}</mrow>
       </md>.
     </p>
@@ -638,10 +638,11 @@
         <me>
           \basis{B} = \bopen 1, x, y, x^2, xy, y^2, x^3, x^2y, xy^2, y^3 \bclose
         </me>
-        <me>
-          \basis{C} = \bopen (1, 0), (x, 0), (y, 0), (x^2, 0), (xy, 0), (y^2, 0), \\
-           (0, 1), (0, x), (0, y), (0, x^2), (0, xy), (0, y^2) \bclose
-        </me>
+        <md>
+          <mrow>
+          \basis{C} = \bopen (1, 0), (x, 0), (y, 0), (x^2, 0), (xy, 0), (y^2, 0), </mrow>
+          <mrow>(0, 1), (0, x), (0, y), (0, x^2), (0, xy), (0, y^2) \bclose </mrow>
+        </md>
         <me>
           \basis{D} = \bopen 1, x, y \bclose
         </me>
