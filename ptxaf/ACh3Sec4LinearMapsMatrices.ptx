@@ -452,7 +452,7 @@
 </lemma>
 
   <p>
-    Die volgende Stelling sê vir ons hoe die matriks van 'n lineêre bewerking verander as ons die basis verander waarmee ons die matriks bereken.
+    Die volgende Stelling sê vir ons hoe die matriks van 'n lineêre operator verander as ons die basis verander waarmee ons die matriks bereken.
   </p>
 
   <theorem xml:id="matrix-in-different-basis">
@@ -508,7 +508,7 @@
           <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
           <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>
         </md>.
-        DDus i
+        Dus is
         <me>
           [T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
         </me>
@@ -627,7 +627,7 @@
   <exercise>
     <statement>
       <p>
-        Bevestig <xref ref="functoriality_of_matrix"/> vir die <q>gradiënt</q> and <q>divergensie</q> lineêre afbeeldings
+        Bevestig <xref ref="functoriality_of_matrix"/> vir die <q>gradiënt</q> en <q>divergensie</q> lineêre afbeeldings
         <md>
          <mrow> G : \Poly_3[x,y] \amp \rightarrow \Vect_2(\mathbb{R}^2) </mrow>
          <mrow> G(p) := \nabla p</mrow>
@@ -687,15 +687,12 @@
         <me>
           [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
         </me>
-        and bevestig dat hulle gelyk aan mekaar is.
+        en bevestig dat hulle gelyk aan mekaar is.
       </p>
     </statement>
   </exercise>
 
-
 </exercises>
-
-<!-- <solutions divisional="solution answer" />  -->
 
 </section>
 

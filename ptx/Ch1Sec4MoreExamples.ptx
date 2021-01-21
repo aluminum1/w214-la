@@ -89,7 +89,7 @@
   <exercise>
     <statement>
       <p>
-        Show that these operations satisfy rules R1, R2, R3, R4, R6 and R7, but not R5 and R8.
+        Show that these operations satisfy rules <xref ref="R1" text="title" />, <xref ref="R2" text="title" />, <xref ref="R3a" text="title" />, <xref ref="R4" text="title" />, <xref ref="R6" text="title" /> and <xref ref="R7" text="title" />, but not <xref ref="R5" text="title" /> and <xref ref="R8" text="title" />.
       </p>
     </statement>
     <solution>
@@ -247,7 +247,7 @@
       the infinite sequence whose components are all zero.
       Finally, define scalar multiplication componentwise:
       <men>
-        k \smul(x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)
+        k \smul (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)
       </men>
     </p>
 
@@ -277,16 +277,16 @@
             <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
             <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>
           </md>.
-          We must check whether <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
+          We must check whether <m>k.(\ve{v} + \ve{w}) = k\smul\ve{v} + k\smul \ve{w}</m>.
           <md>
             <mrow>\text{LHS} \amp = k.(\ve{v} + \ve{w})</mrow>
-            <mrow>\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>
-            <mrow> \amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
+            <mrow>\amp = k\smul\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>
+            <mrow> \amp = k\smul\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
             <mrow> \amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)</mrow>
             <mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
             <mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
-            <mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
-            <mrow> \amp = k.\ve{v} + k.\ve{w} </mrow>
+            <mrow> \amp = k\smul(v_1,v_2,v_3,\ldots) +  k\smul(w_1,w_2,w_3,\ldots) </mrow>
+            <mrow> \amp = k\smul\ve{v} + k\smul\ve{w} </mrow>
             <mrow> \amp = \text{RHS} </mrow>
           </md>
         </p>
@@ -313,48 +313,48 @@
       For instance <m>X</m> could be the set
       <m>\{a, b, c\}</m> <mdash />without any further information,
       it does not make sense to say that a function
-      <m>f : X \rightarrow \mathbb{R}</m> is continuous.
+      <m>\ve f : X \rightarrow \mathbb{R}</m> is continuous.
     </p>
 
     <p>
       Define the addition operation by
       <men xml:id="add_op_functions">
-        (f + g) (x) := f(x) + g(x),  x \in X
+        (\ve f + \ve g) (x) := \ve f(x) + \ve g(x),  x \in X
       </men>
     </p>
 
     <p>
       Make sure you understand what this formula is saying!
       We start with two functions
-      <m>f</m> and <m>g</m>,
-      and we are defining their sum <m>f + g</m>.
+      <m>\ve f</m> and <m>\ve  g</m>,
+      and we are defining their sum <m>\ve f + \ve g</m>.
       This is supposed to be another function on <m>X</m>.
       To define a function on <m>X</m>,
       we need to write down what value
       it assigns to each <m>x \in X</m>.
       And that is what the formula says:
       the value that the function
-      <m>\mathbf{f} + \mathbf{g}</m> assigns to
+      <m>\ve{f} + \ve{g}</m> assigns to
       an element <m>x \in X</m>
       is defined to be the number
-      <m>f(x)</m> plus the number <m>g(x)</m>.
-      Remember: <m>f</m> is a function,
-      while <m>f(x)</m> is a number!
+      <m>\ve f(x)</m> plus the number <m>\ve g(x)</m>.
+      Remember: <m>\ve f</m> is a function,
+      while <m>\ve f(x)</m> is a number!
     </p>
 
     <p>
-      Define the zero vector (which we will call <m>z</m> in this example),
+      Define the zero vector (which we will call <m>\ve z</m> in this example),
       to be the function which outputs the number <m>0</m>
       for every input value of <m>x \in X</m>:
       <men xml:id="zero_vec_functions">
-        z (x) := 0  \text{ for all } x \in X.
+        \ve z (x) := 0  \text{ for all } x \in X.
       </men>
     </p>
 
     <p>
       Define scalar multiplication by
       <men xml:id="smul_functions">
-        (k \smul f)(x) := k f(x)
+        (k \smul \ve f)(x) := k \ve f(x)
       </men>.
     </p>
     </statement>
@@ -441,28 +441,28 @@
         <ol>
           <li>
             <md>
-            <mrow> f(a)= 4 </mrow>
-            <mrow> f(b) = 0 </mrow>
-            <mrow> f(c) = 2 </mrow>
+            <mrow> \ve f(a)= 4 </mrow>
+            <mrow> \ve f(b) = 0 </mrow>
+            <mrow> \ve f(c) = 2 </mrow>
             <mrow></mrow>
-            <mrow> g(a)= 1 </mrow>
-            <mrow> g(b) = 1 </mrow>
-            <mrow> g(c) = 1 </mrow>
+            <mrow> \ve g(a)= 1 </mrow>
+            <mrow> \ve g(b) = 1 </mrow>
+            <mrow> \ve g(c) = 1 </mrow>
             <mrow></mrow>
-            <mrow> h(a)= 0 </mrow>
-            <mrow> h(b) = 3</mrow>
-            <mrow> h(c) = 0 </mrow>
+            <mrow> \ve h(a)= 0 </mrow>
+            <mrow> \ve h(b) = 3</mrow>
+            <mrow> \ve h(c) = 0 </mrow>
           </md>
           </li>
           <li>
           <md>
-          <mrow> (f+g)(a) =5</mrow>
-          <mrow> (f+g)(b) =1 </mrow>
-          <mrow> (f+g)(c) = 3</mrow>
+          <mrow> (\ve f+\ve g)(a) =5</mrow>
+          <mrow> (\ve f+\ve g)(b) =1 </mrow>
+          <mrow> (\ve f+\ve g)(c) = 3</mrow>
           <mrow></mrow>
-          <mrow>( 3 \smul h)(a) = 0 </mrow>
-          <mrow>( 3 \smul h)(b) = 9 </mrow>
-          <mrow>( 3 \smul h)(c) = 0 </mrow>
+          <mrow>( 3 \smul \ve h)(a) = 0 </mrow>
+          <mrow>( 3 \smul \ve h)(b) = 9 </mrow>
+          <mrow>( 3 \smul \ve h)(c) = 0 </mrow>
           </md>
           </li>
         </ol>
@@ -550,7 +550,7 @@
       </p>
 
       <p>
-        Prove that this addition operation satisfies R1.
+        Prove that this addition operation satisfies <xref ref="R1" text="title" />.
       </p>
     </statement>
   </exercise>
@@ -559,7 +559,7 @@
     <statement>
       <p>
         Prove that the addition operation from
-        <xref ref="non_ass_ex">Exercise</xref> does not satisfy R2.
+        <xref ref="non_ass_ex">Exercise</xref> does not satisfy <xref ref="R2" text="title" />.
       </p>
     </statement>
   </exercise>
@@ -575,7 +575,7 @@
       </p>
 
       <p>
-        Does <m>\hat{+}</m> satisfy R2?
+        Does <m>\hat{+}</m> satisfy <xref ref="R2" text="title" />?
         If it does, prove it.
         If it does not, give a counterexample.
       </p>
@@ -594,7 +594,7 @@
     <statement>
       <p>
         Construct an operation <m>\boxplus</m> on
-        <m>\mathbb{R}</m> satisfying R1 but not R2.
+        <m>\mathbb{R}</m> satisfying <xref ref="R1" text="title" /> but not <xref ref="R2" text="title" />.
       </p>
     </statement>
     <hint>
@@ -632,7 +632,7 @@
           <li>
             <p>
               Check that these operations are well-defined.
-              For instance, is <m>x+ y \in \mathbb{R}^+</m>,
+              For instance, is <m>x \oplus y \in \mathbb{R}^+</m>,
               as it should be?
             </p>
           </li>

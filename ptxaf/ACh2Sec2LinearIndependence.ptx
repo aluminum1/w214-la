@@ -332,7 +332,7 @@
       <men>
         \basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose
       </men>
-      wat <m>V</m> span en oorweeg die <q>aangevulde</q> lys
+      wat <m>V</m> onderspan en beskou die <q>aangevulde</q> lys
       <men xml:id="bloated_list">
         \basis{S^{\prime}} = \bopen \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \ve{s}_n \bclose
       </men>
@@ -348,11 +348,11 @@
         <men>
           \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad (\ve{s}_r \text{ omitted)}
         </men>
-        sal nog steeds vir <m>V</m> span, deur <xref ref="exercise-span-omission"/>. </li>
+        sal uit <xref ref="exercise-span-omission"/> nog steeds vir <m>V</m> onderspan. </li>
       </ul>
     </p>
     <p>
-      In hierdie manier kan ons aangaan: elke keer 'n <m>\ve{l}</m>-vektor oor te dra en 'n <m>\ve{s}</m>-vektor te verwyder, en die resulterende lys sal nog steeds vir  <m>V</m> span:
+      In hierdie manier kan ons aangaan: elke keer 'n <m>\ve{l}</m>-vektor oor te dra en 'n <m>\ve{s}</m>-vektor te verwyder, en die resulterende lys sal nogsteeds vir  <m>V</m> onderspan:
       <md>
         <mrow>
         \basis{L} \amp = \bopen \ve{l}_1, \ldots, \ve{l}_m \bclose \amp \basis{S} \amp = \bopen \ve{s}_1, \ldots, \ve{s}_n \bclose
@@ -365,7 +365,7 @@
       </md>
     </p>
     <p>
-      Nou, veronderstel dat <m>m > n</m>. Wanneer ons die <m>n</m>ste stadium van hierdie proses bereik, sal <m>\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose</m>, en dit sal vir <m>V</m> span. Dus, in besonder, <m>\ve{l}_{n+1}</m> (let op dat hierdie vektore wel bestaan, want <m>m > n </m>) sal 'n lineêre kombinasie van <m>\ve{l}_1, \ldots, \ve{l}_n</m> wees. Maar dan, deur <xref ref="lin_comb_other_vec"/> van <xref ref="lin_dependence_prop"/>, lei ons af dat <m>\basis{L}</m> lineêr afhanklik is. Maar ons het aangeneem van die begin af dat  <m>\basis{L}</m>  lineêr <em>on</em>afhanklik is. So ons het 'n teenstryding. Dus, ons aanname dat  <m>m > n</m> moet vals wees. Dus, dit moet waar wees dat <m>m \leq n</m>.
+      Nou, veronderstel dat <m>m > n</m>. Wanneer ons die <m>n</m>ste stadium van hierdie proses bereik, sal <m>\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose</m>, en dit sal vir <m>V</m> onderspan. Dus, in besonder, <m>\ve{l}_{n+1}</m> (let op dat hierdie vektore wel bestaan, want <m>m > n </m>) sal 'n lineêre kombinasie van <m>\ve{l}_1, \ldots, \ve{l}_n</m> wees. Maar dan, deur <xref ref="lin_comb_other_vec"/> van <xref ref="lin_dependence_prop"/>, lei ons af dat <m>\basis{L}</m> lineêr afhanklik is. Maar ons het aangeneem van die begin af dat  <m>\basis{L}</m>  lineêr <em>on</em>afhanklik is. So ons het 'n teenstryding. Dus, ons aanname dat  <m>m > n</m> moet vals wees. Dus, dit moet waar wees dat <m>m \leq n</m>.
     </p>
   </proof>
 
@@ -381,17 +381,17 @@
     </statement>
     <solution>
       <p>
-        We set up a linear equation and find the necessary conditions on <m>c</m>. Suppose some linear combination of the vectors equals 0:
+        Ons stel 'n lineêre vergelyking op en vind die nodige voorwaardes wat  <m>c</m> moet bevredig. Veronderstel dat daar 'n lineêre kombinasie van die vektore is wat gelyk aan <m>\ve{0}</m> is:
         <me>
           k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
-        </me>
-        This vector equation gives rise to a system of 3 linear equations:
+        </me>.
+        Hierdie vektorvergelyking is ekwivalent aan die volgende stelsel van 3 lineêre vergelykings:
         <md>
           <mrow> 2k_1 + k_2 + 7k_3 \amp = 0 </mrow>
           <mrow> 3k_1 - k_2 + 3k_3 \amp = 0 </mrow>
           <mrow> k_1 + 2k_2 + ck_3 \amp = 0 </mrow>
         </md>.
-        The corresponding matrix equation is
+        Die ooreenkomstige matriksvergelyking is
         <me>
           \begin{bmatrix}
             2 \mamp 1 \mamp 7 \\
@@ -410,7 +410,12 @@
             0
           \end{bmatrix}
         </me>
-        This matrix is non-invertible if and only if its determinant is 0. Furthermore, the matrix being non-invertible will mean we can find a non-trivial solution to the intial equation. We compute the determinant:s
+        Hierdie matriks is nie-inverteerbaar as en slegs
+        as sy determinant gelyk aan 0 is.
+        Verder sal nie-inverteerbaarheid van die matriks
+        beteken  dat ons 'n nie-triviale oplossing vir
+        die oorspronklike vergelyking sal kan kry.
+        Ons bereken die determinant:
         <me>
           \det\begin{bmatrix}
             2 \mamp 1 \mamp 7 \\
@@ -418,7 +423,7 @@
             1 \mamp 2 \mamp c
           \end{bmatrix} = -5c + 40
         </me>
-        which is 0 if and only if <m> c =8 </m>.
+        wat gelyk aan 0 is as en slegs as  <m> c =8 </m>.
       </p>
     </solution>
   </exercise>
@@ -535,14 +540,14 @@
     </statement>
     <solution>
       <p>
-        To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <m> \ve v \in V </m> there exist scalars <m> (a_i^{\ve v}) </m> depending on <m>\ve v</m> such that
+        Om te sê dat <m> \basis S </m> vir <m> V </m> onderspan is dieselfde as om te sê dat vir elke vektor <m> \ve v \in V </m> skalare <m> (a_i^{\ve v}) </m> bestaan wat afhang van  <m>\ve v</m> sodat
         <me>
           \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v
         </me>.
-        But of course, it is also true that
+        Maar dis natuurlik ook waar dat
         <me>
           0 \ve w + \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v
-        </me> because <m> 0 \ve w = 0 </m> and so has no effect on the sum. Hence any vector in <m> V </m> is a linear combination of <m>\ve{w}, \ve{v}_1, \ldots, \ve{v}_n </m> which is to say that the set <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m>  spans <m>V</m>.
+        </me> omdat <m> 0 \ve w = 0 </m> en dit het dus geen effek op die som nie. Dus is elke vektor in <m> V </m> 'n lineêre kombinasie van <m>\ve{w}, \ve{v}_1, \ldots, \ve{v}_n </m>; met ander woorde die versameling <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m>  onderspan vir <m>V</m>.
       </p>
     </solution>
   </exercise>
@@ -560,14 +565,23 @@
         Gebruik <xref ref="lin_dependence_prop"/>.
       </p>
     </hint>
-      <!--
-      <solution>
+    <solution>
       <p>
-        If we use the Linear Combination of Preceding Vectors Proposition, the proof is very slick! <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>) cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m> or else we would contradict the Linear Combination of Preceding Vectors Proposition. It is given that <m> \ve v </m> is not a linear combination of  <m> \ve v_1 \ldots \ve v_{n} </m>. Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is a linear combination of the previous vectors. Thus by the Linear Combination of Preceding Vectors Proposition, <m> {B}' </m> must be linearly independent.
+        As ons die Lineêre Kombinasie van Voorafgaande Vektore Proposisie gebruik,
+        is die bewys baie elegant!
+        Die vektor <m> \ve v_i </m> (vir enige <m>i \in \left\{1,\ldots n\right\}</m>)
+        kan nie 'n lineêre kombinasie van <m> \ve v_1 \ldots \ve v_{i-1} </m>
+        wees nie; anders is dit teenstrydig met die
+        Lineêre Kombinasie van Voorafgaande Vektore Proposisie.
+        Dit word gegee dat <m> \ve v </m> nie 'n lineêre kombinasie van  <m> \ve v_1 \ldots \ve v_{n} </m> is nie.
+        Dus is geen vektor in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m>
+        'n lineêre kombinasie van die voorafgaande vektore nie.
+        Dus, uit die Lineêre Kombinasie van Voorafgaande
+        Vektore Proposisie, moet <m> {B}' </m>
+        lineêr onafhanklik wees.
       </p>
     </solution>
-   -->
-    </exercise>
+  </exercise>
 
   <exercise>
     <statement>
@@ -575,24 +589,33 @@
         Beskou die vektorruimte van funksies op die geslote interval <m>\Fun ([0,1])</m>. Wys dat ons vir enige  <m> n \in \mathbb N </m>, kan ons <m>n</m> lineêr onafhanklike vektore in <m>\Fun ([0,1])</m> kry.
       </p>
     </statement>
-<!--    <solution>
-<p>
-Given <m> n \in \mathbb N </m>, consider the set of <m> n </m> functions
-<me>
-X = \left \{ f_m \, : \, f_m\left(\frac{1}{m}\right) = 1, f_m(x) = 0 \text{ otherwise} \right\}.
-</me>
-We shall show that this collections is linearly independent. Suppose there is a linear relation on <m>X</m>. In other words, suppose
-<men xml:id="func_01_lin_rel">
-a_1 f_1(x) + a_2 f_2(x) + \cdots + a_n f_n(x) = 0
-</men>
-for all <m> x \in [0,1] </m>. Plug <m>\frac{1}{n}</m> into <xref ref = "func_01_lin_rel"/>. We obtain
-<me>
-\frac{a_n}{n} = 0
-</me>
-and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-1}</m> into <xref ref = "func_01_lin_rel"/> to conclude <m> a_{n-1} = 0</m> and so forth. Hence all <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> must be 0. Thus <m>X</m> is linearly independent.
-</p>
-  </solution>
--->
+    <solution>
+      <p>
+        Gegee <m> n \in \mathbb N </m>, beskou die
+        versameling van <m> n </m> funksies
+      <me>
+        X = \left \{ f_m \, : \, f_m\left(\frac{1}{m}\right) = 1, f_m(x) = 0 \text{ andersins.} \right\}
+      </me>
+      Ons sal wys dat hierdie lys lineêr onafhanklik is.
+      Veronderstel dat daar 'n lineêre verband op <m>X</m> was.
+      Met ander woorde, neem aan dat
+      <men xml:id="func_01_lin_rel">
+        a_1 f_1(x) + a_2 f_2(x) + \cdots + a_n f_n(x) = 0
+      </men>
+      vir alle <m> x \in [0,1] </m>.
+      Vervang <m>x = \frac{1}{n}</m> in <xref ref = "func_01_lin_rel"/>. Ons kry
+      <me>
+        \frac{a_n}{n} = 0
+      </me>
+      en dus moet <m> a_n </m> gelyk aan 0 wees.
+      Ons hou so aan en vervang <m>x = \frac{1}{n-1}</m>
+      in <xref ref = "func_01_lin_rel"/> en lei af dat
+      <m> a_{n-1} = 0</m> ensovoorts.
+      Dus is al die <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> gelyk aan 0.
+      Dus is <m>X</m> lineêr onafhanklik.
+      </p>
+    </solution>
+
   </exercise>
 
 <exercise>

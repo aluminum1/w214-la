@@ -14,7 +14,7 @@
         <p>
           'n Lys vektore <m>\basis{B} = \bopen \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \bclose </m> in 'n vektorruimte <m>V</m> word 'n
           <term>basis</term> van <m>V</m> genoem
-          as dit lineêr onafhanklik is en <m>V</m> span.
+          as dit lineêr onafhanklik is en vir <m>V</m> onderspan.
         </p>
       </statement>
     </definition>
@@ -33,7 +33,7 @@
     <proof>
       <p>
         Dit is 'n gevolg van <xref ref="Steinitz-exchange-lemma" text="title"></xref>.
-        Aangesien die <m>\ve{e}</m>-vektore <m>V</m> lineêr onafhanklik is en die <m>\ve{f}</m>-vektore <m>V</m> span,
+        Aangesien die <m>\ve{e}</m>-vektore <m>V</m> lineêr onafhanklik is en die <m>\ve{f}</m>-vektore vir <m>V</m> onderspan,
         het ons <m>m \leq n</m>.
         Aan die ander kant,
         omdat die <m>\ve{f}</m>-vektore lineêr onfahanklik is
@@ -80,8 +80,8 @@
           </me>
           is 'n basis vir <m>\mathbb{R}^n</m>.
           Ons het reeds in <xref ref="Rn_spanning_set">Voorbeeld</xref>
-          gesien dat die lys <m>\mathbb{R}^n</m> span.
-          Ons moet seker maak dat die lys lineêr onafhanklik is.
+          gesien dat die lys vir <m>\mathbb{R}^n</m> onderspan.
+          Ons moet seker maak dat die lys lineêr onafanklik is.
           So, veronderstel dat
           <me>
             a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}
@@ -405,9 +405,9 @@
         </p>
 
         <p>
-          Hierdie funksies span <m>\Trig_n</m> per definisie.
+          Hierdie funksies onderspan per definisie vir <m>\Trig_n</m>.
           Hulle is ook lineêr
-          onafhanklik, alhoewel ons dit nie sal bewys nie.
+          onafhanklik, alhoewel ons dit nie in die notas sal bewys nie.
         </p>
       </statement>
     </example>
@@ -1008,7 +1008,7 @@
     <exercise>
       <statement>
         <p>
-          Doen die drie <q>bevestig self</q>-bewerkings hierbo.
+          Doen die drie <q>bevestig self</q>-berekeninge hierbo.
         </p>
       </statement>
       <solution>
@@ -1056,7 +1056,7 @@
     <lemma xml:id="sift_lemma_basis">
       <statement>
         <p>
-          As 'n lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> 'n vektorruimte <m>V</m> span,
+          As 'n lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> 'n vektorruimte <m>V</m> onderspan,
           dan sal sifting van die lys in 'n basis vir <m>V</m> resulteer.
         </p>
       </statement>
@@ -1068,8 +1068,8 @@
         òf die nul-vektor is, òf 'n lineêre kombinasie van die
         voorafgaande vektore is wat nié uit die lys verwyder word nie.
         So as ons die vektor uit die lys verwyder,
-        sal die oorblywende vektore steeds <m>V</m> span.
-        Daarom span die vektore in die finale lys steeds <m>V</m>.
+        sal die oorblywende vektore steeds vir <m>V</m> onderspan.
+        Daarom onderspan die vektore in die finale lys steeds <m>V</m>.
       </p>
 
       <p>
@@ -1190,7 +1190,7 @@
 
             <li>
               <p>
-                Enige lys vektore wat <m>V</m> span bevat ten minste <m>n</m> vektore.
+                Enige lys vektore wat vir <m>V</m> onderspan bevat ten minste <m>n</m> vektore.
               </p>
             </li>
           </ol>
@@ -1205,7 +1205,7 @@
               Waar
             </p>
             <p>
-              Veonderstel ons het 'n lys van <m>n+1</m> lineêr onafhanklike vektore gehad. Uit <xref ref = "first_corollary_please">Gevolgtrekking </xref>, kan ons die lys uitbrei tot 'n basis vir <m>V</m>. Dus sou ons 'n basis vir <m>V</m> met ten minste <m> n + 1</m> hê. Ons lei af dat <m>\Dim V \geq n+1 </m> wat teenstrydig is met die feit dat <m> \Dim V = n</m>.
+              Veronderstel ons het 'n lys van <m>n+1</m> lineêr onafhanklike vektore gehad. Uit <xref ref = "first_corollary_please">Gevolgtrekking </xref>, kan ons die lys uitbrei tot 'n basis vir <m>V</m>. Dus sou ons 'n basis vir <m>V</m> met ten minste <m> n + 1</m> hê. Ons lei af dat <m>\Dim V \geq n+1 </m> wat teenstrydig is met die feit dat <m> \Dim V = n</m>.
            </p>
           </li>
 

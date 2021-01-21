@@ -89,7 +89,7 @@
   <exercise>
     <statement>
       <p>
-        Wys dat hierdie bewerkings R1, R2, R3, R4, R6 en R7 bevredig, maar nie R5 en R8 nie.
+        Wys dat hierdie bewerkings <xref ref="R1" text="title"/>, <xref ref="R2" text="title" />, <xref ref="R3a" text="title" />, <xref ref="R4" text="title" />, <xref ref="R6" text="title" /> en <xref ref="R7" text="title" /> bevredig, maar nie <xref ref="R5" text="title" /> en <xref ref="R8" text="title" /> nie.
       </p>
     </statement>
     <solution>
@@ -247,7 +247,7 @@
         die oneindige reeks waarvan alle komponente nul is.
         Laastens, definieer skalaarvermenigvuldiging komponentgewys:
         <men>
-          k \cdot (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)
+          k \smul (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)
         </men>
       </p>
 
@@ -277,16 +277,16 @@
           <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
           <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>
         </md>.
-        Ons moet kontrolleer of <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
+        Ons moet kontrolleer of <m>k\smul(\ve{v} + \ve{w}) = k\smul\ve{v} + k\smul \ve{w}</m>.
         <md>
           <mrow>\text{LK} \amp = k.(\ve{v} + \ve{w})</mrow>
           <mrow>\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>
-          <mrow> \amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
+          <mrow> \amp = k\smul\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
           <mrow> \amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)</mrow>
           <mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
           <mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
-          <mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
-          <mrow> \amp = k.\ve{v} + k.\ve{w} </mrow>
+          <mrow> \amp = k\smul(v_1,v_2,v_3,\ldots) +  k\smul(w_1,w_2,w_3,\ldots) </mrow>
+          <mrow> \amp = k\smul\ve{v} + k\smul\ve{w} </mrow>
           <mrow> \amp = \text{RK} </mrow>
         </md>
       </p>
@@ -301,7 +301,7 @@
         Definieer die versameling <m>\Fun(X)</m> van <em>
         funksies vanaf <m>X</m> na die reële getalle</em> as
         <men>
-          \Fun(X) := \{ \mathbf{f} : X \rightarrow \mathbb{R} \}
+          \Fun(X) := \{ \ve{f} : X \rightarrow \mathbb{R} \}
         </men>.
       </p>
 
@@ -312,38 +312,38 @@
         aangesien <m>X</m> 'n arbitrêre versameling kan wees.
         Byvoorbeeld, <m>X</m> kan die versameling
         <m>\{a, b, c\}</m> wees <mdash /> sonder
-        enige verdere inligting maak dit nie sin om te sêdat die funksie
+        enige verdere inligting maak dit nie sin om te sê dat die funksie
         <m>\ve{f} : X \rightarrow \mathbb{R}</m> kontinu is nie.
       </p>
 
       <p>
         Definieer die optellingsbewerking as
         <men xml:id="add_op_functions">
-          (f + g) (x) := f(x) + g(x),  x \in X
+          (\ve f + \ve g) (x) := \ve f(x) + \ve g(x),  x \in X
         </men>
       </p>
 
       <p>
         Maak seker dat jy verstaan wat hierdie formule sê!
         Ons begin met twee funksies
-        <m>\mathbf{f}</m> en <m>\mathbf{g}</m>,
-        en ons definieer hul som as <m>\mathbf{f} + \mathbf{g}</m>.
+        <m>\ve{f}</m> en <m>\ve{g}</m>,
+        en ons definieer hul som as <m>\ve{f} + \ve{g}</m>.
         Dit is veronderstel om self 'n funksie op <m>X</m> te wees.
         Om 'n funksie op <m>X</m> te definieer,
         moet ons vir elke <m>x \in X</m>
         neerskryf watter waarde die funksie lewer.
         En dit is wat die formule sê:
         die waarde wat die funksie
-        <m>\mathbf{f} + \mathbf{g}</m> aan die
+        <m>\ve{f} + \ve{g}</m> aan die
         element <m>x \in X</m> toeken,
-        word gedefinieer as die getal <m>\mathbf{f}(x)</m>
-        plus die getal <m>\mathbf{g}(x)</m>.
-        Onthou: <m>\mathbf{f}</m> is 'n funksie,
-        terwyl <m>\mathbf{f}(x)</m> 'n getal is!
+        word gedefinieer as die getal <m>\ve{f}(x)</m>
+        plus die getal <m>\ve{g}(x)</m>.
+        Onthou: <m>\ve{f}</m> is 'n funksie,
+        terwyl <m>\ve{f}(x)</m> 'n getal is!
       </p>
 
       <p>
-        Definieer die nul-vektor (wat ons hier as <m>z</m> gaan aandui)
+        Definieer die nul-vektor (wat ons hier as <m>\ve z</m> gaan aandui)
         as die funksie wat die getal <m>0</m>
         lewer vir elke insetwaarde <m>x \in X</m>:
         <men xml:id="zero_vec_functions">
@@ -354,7 +354,7 @@
       <p>
         Definieer skalaarvermenigvuldiging as
         <men xml:id="smul_functions">
-          (k \smul \mathbf{f})(x) := k \mathbf{f}(x)
+          (k \smul \ve{f})(x) := k \ve{f}(x)
         </men>.
       </p>
     </statement>
@@ -441,28 +441,28 @@
         <ol>
           <li>
             <md>
-            <mrow> f(a)= 4 </mrow>
-            <mrow> f(b) = 0 </mrow>
-            <mrow> f(c) = 2 </mrow>
+            <mrow> \ve f(a)= 4 </mrow>
+            <mrow> \ve f(b) = 0 </mrow>
+            <mrow> \ve f(c) = 2 </mrow>
             <mrow></mrow>
-            <mrow> g(a)= 1 </mrow>
-            <mrow> g(b) = 1 </mrow>
-            <mrow> g(c) = 1 </mrow>
+            <mrow> \ve g(a)= 1 </mrow>
+            <mrow> \ve g(b) = 1 </mrow>
+            <mrow> \ve g(c) = 1 </mrow>
             <mrow></mrow>
-            <mrow> h(a)= 0 </mrow>
-            <mrow> h(b) = 3</mrow>
-            <mrow> h(c) = 0 </mrow>
+            <mrow> \ve h(a)= 0 </mrow>
+            <mrow> \ve h(b) = 3</mrow>
+            <mrow> \ve h(c) = 0 </mrow>
           </md>
           </li>
           <li>
           <md>
-          <mrow> (f+g)(a) =5</mrow>
-          <mrow> (f+g)(b) =1 </mrow>
-          <mrow> (f+g)(c) = 3</mrow>
+          <mrow> (\ve f+\ve g)(a) =5</mrow>
+          <mrow> (\ve f+\ve g)(b) =1 </mrow>
+          <mrow> (\ve f+\ve g)(c) = 3</mrow>
           <mrow></mrow>
-          <mrow>( 3 \smul h)(a) = 0 </mrow>
-          <mrow>( 3 \smul h)(b) = 9 </mrow>
-          <mrow>( 3 \smul h)(c) = 0 </mrow>
+          <mrow>( 3 \smul \ve h)(a) = 0 </mrow>
+          <mrow>( 3 \smul \ve h)(b) = 9 </mrow>
+          <mrow>( 3 \smul \ve h)(c) = 0 </mrow>
           </md>
           </li>
         </ol>
@@ -550,7 +550,7 @@
       </p>
 
       <p>
-        Bewys dat hierdie optellingsbewerking R1 bevredig.
+        Bewys dat hierdie optellingsbewerking <xref ref="R1" text="title" /> bevredig.
       </p>
     </statement>
   </exercise>
@@ -559,7 +559,7 @@
     <statement>
       <p>
         Bewys dat die optellingsbewering van
-        <xref ref="non_ass_ex" text="global">Oefening</xref> nie R2 bevredig nie.
+        <xref ref="non_ass_ex" text="global">Oefening</xref> nie <xref ref="R2" text="title" /> bevredig nie.
       </p>
     </statement>
   </exercise>
@@ -575,7 +575,7 @@
       </p>
 
       <p>
-        Bevredig <m>\hat{+}</m> R2?
+        Bevredig <m>\hat{+}</m> vir <xref ref="R2" text="title" />?
         Indien wel, bewys dit.
         Indien nie, gee 'n teenvoorbeeld.
       </p>
@@ -594,7 +594,7 @@
     <statement>
       <p>
         Konstrueer 'n bewerking <m>\boxplus</m>
-        op <m>\mathbb{R}</m> wat R1 bevredig maar nie R2 nie.
+        op <m>\mathbb{R}</m> wat <xref ref="R1" text="title" /> bevredig maar nie <xref ref="R2" text="title" /> nie.
       </p>
     </statement>
     <hint>
@@ -621,7 +621,7 @@
         'n nul-vektor <m>z</m> en 'n
         skalaarvermenigvuldigingsbewerking <m>\smul</m> op <m>\mathbb{R}^+</m> as volg:
         <md>
-          <mrow>x + y \amp := \ve{x} \ve{y}</mrow>
+          <mrow>x \oplus y \amp := \ve{x} \ve{y}</mrow>
           <mrow>z \amp  := 1</mrow>
           <mrow>k \smul x \amp := x^k</mrow>
         </md>
@@ -632,7 +632,7 @@
           <li>
             <p>
               Gaan na dat hierdie bewerkings wel-gedefinieerd is.
-              Byvoorbeeld, is <m>x + y \in \mathbb{R}^+</m>,
+              Byvoorbeeld, is <m>x \oplus y \in \mathbb{R}^+</m>,
               soos dit hoort?
             </p>
           </li>

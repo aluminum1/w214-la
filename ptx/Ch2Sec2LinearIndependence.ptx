@@ -381,10 +381,10 @@
     </statement>
     <solution>
       <p>
-        We set up a linear equation and find the necessary conditions on <m>c</m>. Suppose some linear combination of the vectors equals 0:
+        We set up a linear equation and find the necessary conditions on <m>c</m>. Suppose some linear combination of the vectors equals <m>\ve{0}</m>:
         <me>
           k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
-        </me>
+        </me>.
         This vector equation gives rise to a system of 3 linear equations:
         <md>
           <mrow> 2k_1 + k_2 + 7k_3 \amp = 0 </mrow>
@@ -410,7 +410,12 @@
             0
           \end{bmatrix}
         </me>
-        This matrix is non-invertible if and only if its determinant is 0. Furthermore, the matrix being non-invertible will mean we can find a non-trivial solution to the intial equation. We compute the determinant:s
+        This matrix is non-invertible if and only if
+        its determinant is 0.
+        Furthermore, the matrix being non-invertible
+        will mean we can find a non-trivial solution
+        to the intial equation.
+        We compute the determinant:
         <me>
           \det\begin{bmatrix}
             2 \mamp 1 \mamp 7 \\
@@ -560,13 +565,23 @@
         Use <xref ref="lin_dependence_prop"/>.
       </p>
     </hint>
-    <!--
     <solution>
       <p>
-        If we use the Linear Combination of Preceding Vectors Proposition, the proof is very slick! <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>) cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m> or else we would contradict the Linear Combination of Preceding Vectors Proposition. It is given that <m> \ve v </m> is not a linear combination of  <m> \ve v_1 \ldots \ve v_{n} </m>. Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is a linear combination of the previous vectors. Thus by the Linear Combination of Preceding Vectors Proposition, <m> {B}' </m> must be linearly independent.
+        If we use the Linear Combination of Preceding Vectors Proposition,
+        the proof is very slick!
+        The vector <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>)
+        cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m>
+        or else we would contradict the Linear
+        Combination of Preceding Vectors Proposition.
+        It is given that <m> \ve v </m> is not a linear
+        combination of  <m> \ve v_1 \ldots \ve v_{n} </m>.
+        Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m>
+        is a linear combination of the previous vectors.
+        Thus by the Linear Combination of Preceding
+        Vectors Proposition, <m> {B}' </m> must be
+        linearly independent.
       </p>
     </solution>
-  -->
   </exercise>
 
   <exercise>
@@ -575,24 +590,33 @@
         Consider the vector space of functions on the closed interval, <m>\Fun ([0,1])</m>. Show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m>\Fun ([0,1])</m>.
       </p>
     </statement>
-<!--  	<solution>
-<p>
-Given <m> n \in \mathbb N </m>, consider the set of <m> n </m> functions
-<me>
-X = \left \{ f_m \, : \, f_m\left(\frac{1}{m}\right) = 1, f_m(x) = 0 \text{ otherwise} \right\}.
-</me>
-We shall show that this collections is linearly independent. Suppose there is a linear relation on <m>X</m>. In other words, suppose
-<men xml:id="func_01_lin_rel">
-a_1 f_1(x) + a_2 f_2(x) + \cdots + a_n f_n(x) = 0
-</men>
-for all <m> x \in [0,1] </m>. Plug <m>\frac{1}{n}</m> into <xref ref = "func_01_lin_rel"/>. We obtain
-<me>
-\frac{a_n}{n} = 0
-</me>
-and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-1}</m> into <xref ref = "func_01_lin_rel"/> to conclude <m> a_{n-1} = 0</m> and so forth. Hence all <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> must be 0. Thus <m>X</m> is linearly independent.
-</p>
-  </solution>
--->
+    <solution>
+      <p>
+        Given <m> n \in \mathbb N </m>, consider the set of
+        <m> n </m> functions
+      <me>
+        X = \left \{ f_m \, : \, f_m\left(\frac{1}{m}\right) = 1, f_m(x) = 0 \text{ otherwise.} \right\}
+      </me>
+      We shall show that this collections is linearly independent.
+      Suppose there is a linear relation on <m>X</m>.
+      In other words, suppose
+      <men xml:id="func_01_lin_rel">
+        a_1 f_1(x) + a_2 f_2(x) + \cdots + a_n f_n(x) = 0
+      </men>
+      for all <m> x \in [0,1] </m>.
+      Substitute <m>x = \frac{1}{n}</m> into <xref ref = "func_01_lin_rel"/>. We obtain
+      <me>
+        \frac{a_n}{n} = 0
+      </me>
+      and so <m> a_n </m> must be 0.
+      Continue in this fashion, plugging <m>x = \frac{1}{n-1}</m>
+      into <xref ref = "func_01_lin_rel"/> to conclude
+      <m> a_{n-1} = 0</m> and so forth.
+      Hence all <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> must be 0.
+      Thus <m>X</m> is linearly independent.
+      </p>
+    </solution>
+
   </exercise>
 
 <exercise>

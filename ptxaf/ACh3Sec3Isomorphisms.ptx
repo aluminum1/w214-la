@@ -233,7 +233,7 @@
         <mrow>\amp = S(a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m)</mrow>
         <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp (S \text{ is lineêr)}</mrow>
       </md>
-      sodat <m>\basis{C}</m> <m>W</m> span.
+      sodat <m>\basis{C}</m> vir <m>W</m> onderspan.
       Daarom is <m>\basis{C}</m> 'n basis vir <m>V</m>, so
       <m>\Dim V = \text{aantal vektore in }\basis{B}</m> = <m>n</m>, terwyl <m>\Dim W =
       \text{aantal vektore in }\basis{C}  = m</m>.
@@ -477,7 +477,7 @@
     </statement>
     <solution>
       <p>
-        <m>V</m> bestaan uit alle vektore <m>(x,y,z,w)</m> wat di lineêre vergelykings
+        <m>V</m> bestaan uit alle vektore <m>(x,y,z,w)</m> wat die lineêre vergelykings
         <md>
 
          <mrow> x + 2y - w = 0 </mrow>
@@ -601,7 +601,6 @@
 
 </exercises>
 
-<!-- <solutions divisional="solution answer" />  -->
 
 </section>
 

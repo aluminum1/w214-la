@@ -176,7 +176,7 @@
       <p>
         Ons sê dat die lys vektore
         <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2,\ldots, \ve{v}_n \bclose</m> in 'n vektorruimte <m>V</m> vir <term><m>V</m> onderspan</term> as elke
-        vektor <m>\ve{v} \in V</m> 'n lineêre kombinasie van die vektore uit <m>\basis{B}</m>.
+        vektor <m>\ve{v} \in V</m> 'n lineêre kombinasie van die vektore uit <m>\basis{B}</m> is.
       </p>
     </statement>
   </definition>
@@ -188,7 +188,7 @@
         <me>
           \ve{e}_1 := (1, \, 0), \, \, \ve{e}_2 := (0, 1)
         </me>
-        gespan, want elke vektor <m>\ve{v} = (a_1, \, a_2)</m> kan as 'n lineêre kombinasie
+        onderspan, want elke vektor <m>\ve{v} = (a_1, \, a_2)</m> kan as 'n lineêre kombinasie
         <me>
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2
         </me>
@@ -223,7 +223,7 @@
    </statement>
    <solution>
     <p>
-    Om dit te toets, moet ons kyk of elke vektor <m>\ve{v} \in V</m> as 'n lineêre kombinasie van <m>\ve{f}_1, \ve{f}_2</m> and <m> \ve{f}_3</m> geskryf kan word.</p>
+    Om dit te toets, moet ons kyk of elke vektor <m>\ve{v} \in V</m> as 'n lineêre kombinasie van <m>\ve{f}_1, \ve{f}_2</m> en <m> \ve{f}_3</m> geskryf kan word.</p>
 
     <p> So, laat <m>\ve{v} = (v_1,v_2) </m> 'n vaste, maar willekeurige vektor in <m>\mathbb{R}^2</m> wees. Ons moet kyk of die volgende vergelyking 'n oplossing vir <m>a_1, a_2, a_3</m> het:
     <men xml:id="eqn_for_R2_span">
@@ -351,7 +351,7 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
 <lemma xml:id ="spanning_check_thm">
   <statement>
     <p>
-      Veronderstel dat <m>\basis{B}= \{\ve b_1,\ldots,\ve b_m\} </m> 'n vektorruimte <m>V</m> span. Verder, veronderstel dat elke vektor in <m>\basis{B}</m> is 'n lineêre kombinasie van die vektore uit 'n ander lys <m>\basis{C} = \{\ve c_1,\ldots,\ve c_n\}</m>. Dan span <m>\basis{C}</m> ook vir <m>V</m>.
+      Veronderstel dat <m>\basis{B}= \{\ve b_1,\ldots,\ve b_m\} </m> 'n vektorruimte <m>V</m> onderspan. Verder, veronderstel dat elke vektor in <m>\basis{B}</m> 'n lineêre kombinasie van die vektore uit 'n ander lys <m>\basis{C} = \{\ve c_1,\ldots,\ve c_n\}</m> is. Dan sal <m>\basis{C}</m> ook vir <m>V</m> onderspan.
     </p>
   </statement>
 </lemma>

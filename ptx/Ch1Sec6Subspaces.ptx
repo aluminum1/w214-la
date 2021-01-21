@@ -915,14 +915,14 @@
 <exercisegroup>
   <introduction>
     <p>
-      The next 4 exercises will help acquaint the reader with the concept of the <em>sum of two subspaces</em>. First, we'll need to define what that is.
+      The next four exercises will help acquaint you with the concept of the <em>sum of two subspaces</em>. First, we'll need to define what that is.
     </p>
 
     <p>
       Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
       <men xml:id="def_sum_subspace">
-        U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
-      </men>
+        U + W  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
+      </men>.
     </p>
 
     <p>
@@ -932,7 +932,7 @@
   <exercise xml:id="sum_of_subspaces_is_subspace">
     <statement>
       <p>
-        Show that <m>U + V</m> is a subspace of <m>V</m>.
+        Show that <m>U + W</m> is a subspace of <m>V</m>.
       </p>
     </statement>
   </exercise>
@@ -940,7 +940,7 @@
   <exercise>
     <statement>
       <p>
-      Show that  <m>U + V</m> is, in fact, the smallest subspace of <m>V</m> containing both <m>U</m> and <m>V</m>.
+      Show that  <m>U + V</m> is, in fact, the smallest subspace of <m>V</m> containing both <m>U</m> and <m>V</m> (as subsets).
     </p>
     </statement>
   </exercise>

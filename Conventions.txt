@@ -5,12 +5,7 @@ Read this page (https://pretextbook.org/doc/guide/html/advice-math-textbook.html
 
 ** PreTeXt THINGS:
 *** XREFS
-- xrefs need to specify text="global" or "type-global" or "title" or "custom"
-  - If "custom", it uses the text <xref>HERE</xref>
-  - If "title", ot uses the title specified, e.g. Bumping-Off Proposition instead of Proposition 2.1.8
-  - If "type-global" is uses Proposition 2.1.8
-  - If "global", I think it uses just 2.1.8
-  - See Table 4.6.5 on https://pretextbook.org/doc/guide/html/topic-cross-referencing.html for more
+- See Table 4.6.5 on https://pretextbook.org/doc/guide/html/topic-cross-referencing.html for more
 - Rob Beezer suggest that xrefs's are written in kebab case or snake case like this: isom_iff_inj_and_surj. I don't think all our xref's are like that, but I don't suggest we go and change them all unless we get into trouble when compiling.
 
 *** OTHER
@@ -48,7 +43,7 @@ Read this page (https://pretextbook.org/doc/guide/html/advice-math-textbook.html
 
 
 ** NOTATIONS:
-vectors:				\ve{v}
+vectors:				    \ve{v}
 scalar product:			\smul
 
 

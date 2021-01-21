@@ -164,8 +164,8 @@
     vorm die versameling <m>\Mat_{n, m}</m> van
     alle <m>n \times m</m> matrikse 'n vektorruimte
     (sien <xref ref="matrices_example_vec_space">Voorbeeld</xref>),
-    met dimensie<m>nm</m>
-    <!--(sien <xref ref="dimension_of_matrix_space_example">Voorbeeld</xref>). -->
+    met dimensie <m>nm</m>
+    (sien <xref ref="dimension_of_matrix_space_example">Voorbeeld</xref>).
     Ons skryf <m>\Col_n</m> vir die
     vektorruimte <m>\Mat_{n,1}</m> van <m>n</m>-dimensionele
     <em>kolomvektore</em>.

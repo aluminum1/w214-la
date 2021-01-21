@@ -586,7 +586,7 @@
         <me>
           \begin{bmatrix} a + b + c \\ b + 2c \\ a + 2b + 3c  \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
         </me>
-        Hierdie vergelyking tussen kolomvektore is bevredig as en slegs as die volgende stelsel van gelyktydige line\^{e}re vergelykings is bevredig:
+        Hierdie vergelyking tussen kolomvektore is bevredig as en slegs as die volgende stelsel van gelyktydige lineêre vergelykings is bevredig:
         <md>
           <mrow> a + b + c \amp = 0 </mrow>
           <mrow> b + 2c \amp = 0</mrow>
@@ -669,17 +669,17 @@
         </md>
       </p>
       <p>
-        So: daar bestaan <em>geen</em> oplossing vir <m>a,b,c</m> tensy <m>w_3 - w_1 - w_2 = 0</m>, want andersins sal ons 'n vergelyking van die vorm 'nul is gelyk aan 'n nie nul waarde' h\^{e}. Bovendien, <em>as</em> <m>w_3 - w_1 - w_2</m>, dan <em>kan</em> di\'{e} vergelykings opgelos word vir <m>a,b,c</m>, want hulle is in toegevoegde ry-trap vorm met geen ongeldige rye. Dus,
+        So: daar bestaan <em>geen</em> oplossing vir <m>a,b,c</m> tensy <m>w_3 - w_1 - w_2 = 0</m>, want andersins sal ons 'n vergelyking van die vorm 'nul is gelyk aan 'n nie nul waarde' hê. Bovendien, <em>as</em> <m>w_3 - w_1 - w_2</m>, dan <em>kan</em> dié vergelykings opgelos word vir <m>a,b,c</m>, want hulle is in toegevoegde ry-trap vorm met geen ongeldige rye. Dus,
         <me>
           \Be(T) = \left\{ \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} : -w_1 -w_2 + w_3 = 0 \right\}.
         </me>
       </p>
       <p>
-        So, 'n basis vir <m>\Be(T)</m> is gegee deur:
+        So, 'n basis vir <m>\Be(T)</m> is gegee deur
         <me>
           \bopen \begin{bmatrix}  1 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \bclose
         </me>
-        and hence
+        en dus is
         <me>
           \Rang(T) = 2.
         </me>
@@ -757,7 +757,7 @@
     </p>
 
     <p>
-      <em><m>\basis{D}</m> span <m>W</m></em>.
+      <em><m>\basis{D}</m> onderspan vir <m>W</m></em>.
       Veronderstel <m>\ve{w} \in\Be(T)</m>.
       Ons moet wys dat <m>\ve{w}</m> 'n lineêre kombinasie van vektore in <m>\basis{D}</m> is.
       Aangesien <m>\ve{w}</m> in die beeld van <m>T</m> is,
@@ -850,7 +850,7 @@
     </title>
     <statement>
       <p>
-        Kom ons verifieer dat die line\^{e}re afbeelding <m>T</m> uit <xref ref="modification_r_n_ex"/> die <xref ref="rank-nullity-theorem"/> bevredig. In <xref ref="modification_r_n_ex"/>, het ons bereken dat
+        Kom ons verifieer dat die lineêre afbeelding <m>T</m> uit <xref ref="modification_r_n_ex"/> die <xref ref="rank-nullity-theorem"/> bevredig. In <xref ref="modification_r_n_ex"/>, het ons bereken dat
         <me>
           \Nhg(T) = 1, \quad \Rang(T) = 2.
         </me>
@@ -1052,7 +1052,7 @@
               <me>
                 S(T) = \begin{bmatrix} s \\ t \end{bmatrix} .
               </me>
-              Hence <me>
+              Dus is <me>
               \Rank(T) = 2
               </me>.
             </p>
@@ -1126,7 +1126,7 @@
         <ol>
           <li>
             <p>
-              Hierdie bewerking is onwaar. Om dit te sien, let op dat as so 'n afbeelding bestaan het, dan sou sy kern 2-dimensioneel wees, want enige keuse van <m> x_1</m> en <m>x_3 </m> bepaal 'n element in <m>\Ker(T)</m> uniek. Maar dan sê die Rang-Nulheidsgraadstelling dat <m> \Rang(T) = 3 </m>, want <m> \mathbb R^5 </m> is 5 dimensioneel. Maar <m>\Be(T)</m> is 'n deelruimte van <m>\mathbb R^2</m> <mdash/> dit is belaglik, want <m> \mathbb R^2 </m> is self  2-dimensioneel.
+              Hierdie bewering is onwaar. Om dit te sien, let op dat as so 'n afbeelding bestaan het, dan sou sy kern 2-dimensioneel wees, want enige keuse van <m> x_1</m> en <m>x_3 </m> bepaal 'n element in <m>\Ker(T)</m> uniek. Maar dan sê die Rang-Nulheidsgraadstelling dat <m> \Rang(T) = 3 </m>, want <m> \mathbb R^5 </m> is 5 dimensioneel. Maar <m>\Be(T)</m> is 'n deelruimte van <m>\mathbb R^2</m> <mdash/> dit is belaglik, want <m> \mathbb R^2 </m> is self  2-dimensioneel.
             </p>
           </li>
 
@@ -1345,7 +1345,7 @@
         <me>
           F(x,y,z)=(x^2 + y^2, xy).
         </me>
-        Beskou nou <m>DF_p</m>, die Jakobiaan matriks van <m>F</m> by die punt <m>p = (1,2)</m>. Bepaal <m>\Ker (DF_p)</m> en <m>\Be (DF_p)</m> en dus bepaal ook <m>\Nhg(DF_p)</m> and <m>\Rang(DF_p)</m>.
+        Beskou nou <m>DF_p</m>, die Jakobiaan matriks van <m>F</m> by die punt <m>p = (1,2)</m>. Bepaal <m>\Ker (DF_p)</m> en <m>\Be (DF_p)</m> en dus bepaal ook <m>\Nhg(DF_p)</m> en <m>\Rang(DF_p)</m>.
       </p>
     </statement>
     <solution>
@@ -1355,8 +1355,6 @@
   </exercise>
 
 </exercises>
-
-<!-- <solutions divisional="solution answer" />  -->
 
 </section>
 

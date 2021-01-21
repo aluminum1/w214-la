@@ -1111,7 +1111,7 @@
 
           <li>
             <p>
-            We use the properties of the integral.
+            Ons gebruik die eienskappe van die integraal.
             <md>
               <mrow>
               I(\ve p + \ve q) \amp = \int_{-1}^1 \left( \ve p(x) + \ve q(x)\right) \, dx</mrow>
@@ -1137,7 +1137,7 @@
 
           <li>
             <p>
-              We use the results above:
+              Ons gebruik die resultate van hier bo:
               <md>
                 <mrow>
                 I(\ve q_0) \amp = \int_{-1}^1 1 dx = x\rvert^1_{-1} = 2</mrow>
@@ -1221,7 +1221,7 @@
               <mrow>(a S)(\ve v + \ve W) = a(S (\ve v + \ve w )) = a(S \ve v+ S\ve w) = (a S)\ve v + (a S) \ve w</mrow>
               <mrow>(a S)(b \ve v) = (ab) S \ve v = b( a S \ve v) </mrow>
             </md>
-            and hence <m> a S \in \mathcal L (V,\mathbb R)</m>.
+            en dus is <m> a S \in \mathcal L (V,\mathbb R)</m>.
           </p>
         </li>
 
@@ -1252,7 +1252,6 @@
 
 </exercises>
 
- <!-- <solutions divisional="solution answer" />  -->
 
 
 </section>

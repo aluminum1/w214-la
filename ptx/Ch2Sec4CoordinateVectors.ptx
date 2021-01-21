@@ -335,11 +335,11 @@
 
 
       <p>
-        Hence <!-- FIX THIS first entry is looking a little wonky-->
+        Hence
         <me>
           [\ve{f}]_\basis{S} = \begin{bmatrix} \frac{1}{2} \\  -\frac{3}{4} \\ 0 \\ -\frac{1}{2} \\ 0 \\ -\frac{1}{4} \\ 0
           \end{bmatrix}
-        </me>
+        </me>.
       </p>
     </solution>
   </example>
@@ -622,38 +622,46 @@
       </ol>
     </p>
   </statement>
-<!--
-<solution>
-<p>
-  <ol>
-  <li> The equation <m>-2 + 2(4) - 3(2) = 0</m> holds and so <m> \ve w \in W</m>. </li>
-  <li> Since only <m>\ve b</m> has non-zero second coordinate, we see that the coefficient of <m>\ve b</m> term must be <m>4</m>. That is
-<me>
-(2,4,2) = s\ve a + 4\ve b
-</me>
-for some <m>s \in \mathbb R</m>. By considering only the first coordinate of <m>s\ve a + 2\ve b</m>, we find that <m>s = -2 </m>. Thus
-<me>
-[\ve{w}]_{\basis{B}} = \begin{bmatrix} 2\\ 4 \end{bmatrix}.
-</me>
-</li>
-  <li>We use a similar approach to the previous question. Since only the thirds coordinate of <m>\ve u</m> is non-zero, the coefficeint of the <m> \ve u </m> term must be <m>\frac{6}{5}</m>. That is
-  <me>
-(2,4,2) = \frac{6}{5}\ve u + t\ve v
-</me> for some <m>t \in \mathbb R</m>. By looking at the second coordinate, we must have that
-<me>
-2s + \frac{12}{5} = 4.
-</me> Solving for <m> s</m> we find that <m>s \frac{4}{5}.</m>. Hence
-<me>
-[\ve{w}]_{\basis{C}} = \begin{bmatrix} \frac{6}{5}\\ \frac{4}{5} \end{bmatrix}.
-</me>
-</li>
-</ol>
-</p>
-</solution>
--->
+  <solution>
+    <p>
+      <ol>
+        <li>
+          The equation <m>-2 + 2(4) - 3(2) = 0</m> holds and so <m> \ve w \in W</m>.
+        </li>
+        <li>
+          Since only <m>\ve b</m> has non-zero second coordinate, we see that the coefficient of <m>\ve b</m> term must be <m>4</m>. That is
+          <me>
+            (2,4,2) = s\ve a + 4\ve b
+          </me>
+          for some <m>s \in \mathbb R</m>. By considering only the first coordinate of <m>s\ve a + 2\ve b</m>, we find that <m>s = -2 </m>. Thus
+          <me>
+            [\ve{w}]_{\basis{B}} = \begin{bmatrix} 2\\ 4 \end{bmatrix}
+          </me>.
+        </li>
+        <li>
+          We use a similar approach to the previous question.
+          Since only the thirds coordinate of <m>\ve u</m>
+          is non-zero, the coefficient of the
+          <m> \ve u </m> term must be <m>\frac{6}{5}</m>.
+          That is
+          <me>
+            (2,4,2) = \frac{6}{5}\ve u + t\ve v
+          </me>
+          for some <m>t \in \mathbb R</m>. By looking at the second coordinate, we must have that
+          <me>
+            2s + \frac{12}{5} = 4
+          </me>.
+          Solving for <m> s</m> we find that <m>s = \frac{4}{5}</m>. Hence
+          <me>
+            [\ve{w}]_{\basis{C}} = \begin{bmatrix} \frac{6}{5}\\ \frac{4}{5} \end{bmatrix}.
+          </me>
+        </li>
+      </ol>
+    </p>
+  </solution>
 </exercise>
 
-    <exercise>
+  <exercise>
     <statement>
       <p>
         Let <m>V</m> be the vector space of solutions to the differential equation
@@ -689,63 +697,80 @@ for some <m>s \in \mathbb R</m>. By considering only the first coordinate of <m>
         </li>
       </ol>
     </statement>
-<!--
-     <solution>
-<p>
-  <ol>
-<li>We must first show that <m>\cos x</m> and <m> \sin x</m> are indeed solutions to the ODE. This follows simply from the fact that <m>(\sin x)'' = -\sin x</m> and  <m>(\cos x)'' = -\cos x</m>. <xref ref="diff_eqn_exist_unique"/> tells us that any solution to the ODE is fully determined by 2 constants, namely <m>y(x_0)</m> and <m>y^{(1)}(x_0)</m>. Thus the space of solutions to the ODE is 2 dimensional. It follows that if we show that the functions <m>\sin x</m> and <m> \cos x</m> are linearly independent, then they necessarily constitute a basis. To that end, suppose for some constants <m> a,b \in \mathbb R</m>
-<me>
-a\cos x + c\sin x = 0.
-</me>
-Evaluating the above equation at <m> x = 0</m>, we find
-<me>
-a = 0.
-</me>
-Evaluating the equation at <me>x = \frac{\pi}{2}</me>, we find
-<me>
-b=0.
-</me>
-Thus <m>\sin x</m> and <m>\cos x</m> are linearly independent and so constitute a basis for the place of all solutions to <xref ref = "diff_eqn_exerc_1"/>.
-</li>
 
+    <solution>
+    <p>
+    <ol>
+      <li>
+        We must first show that <m>\cos x</m> and <m> \sin x</m>
+        are indeed solutions to the ODE.
+        This follows simply from the fact that
+        <m>(\sin x)'' = -\sin x</m> and
+        <m>(\cos x)'' = -\cos x</m>.
+        <xref ref="diff_eqn_exist_unique"/> tells us that
+        any solution to the ODE is fully determined by two
+        constants, namely <m>y(x_0)</m> and <m>y^{(1)}(x_0)</m>.
+        Thus the space of solutions to the ODE is 2 dimensional.
+        It follows that if we show that the functions
+        <m>\sin x</m> and <m> \cos x</m> are linearly independent,
+        then they necessarily constitute a basis.
+        To that end, suppose for some constants
+        <m> a,b \in \mathbb R</m>
+        <me>
+          a\cos x + b\sin x = 0.
+        </me>
+        Evaluating the above equation at <m> x = 0</m>, we find
+        <me> a = 0 </me>.
+        Evaluating the equation at
+        <me>
+          x = \frac{\pi}{2}
+        </me>,
+        we find
+        <me> b = 0 </me>.
+        Thus <m>\sin x</m> and <m>\cos x</m> are linearly
+        independent and so constitute a basis for the
+        space of all solutions to <xref ref = "diff_eqn_exerc_1"/>.
+      </li>
 
+      <li>
+        By the previous question, <m> y \in V</m> is necessarily of the form
+        <me>
+        y = a\cos x + b\sin x.
+        </me>.
+        The conditions
+        <me>
+          y(\frac{\pi}{6}) = 1, \quad y'(\frac{\pi}{6}) = 0
+        </me>
+        yield the linear equations
+        <md>
+          <mrow> 1 \amp = a\frac{\sqrt 3 }{2} + b\frac{1}{2}</mrow>
+          <mrow> 0 \amp -a\frac{1}{2} + b\frac{\sqrt 3}{2} </mrow>
+        </md>.
+        Solving this equation yields
+        <me>
+          a = \frac{\sqrt 3}{2} \\
+          b = \frac{1}{2}
+        </me>.
+        Thus
+        <me>
+          [y]_\basis{B} = \begin{bmatrix} \frac{\sqrt 3}{2} \\ \frac{1}{2}\end{bmatrix}
+        </me>.
+      </li>
 
-<li>By the previos question, <m> y \in V</m> is necessarily of the form
-<me>
-y = a\cos x + b\sin x.
-</me>. The conditions
- <me>
-y(\frac{\pi}{6}) = 1, \quad y'(\frac{\pi}{6}) = 0
-</me> yield the linear equations
-<md>
- <mrow> 1 \amp = a\frac{\sqrt 3 }{2} + b\frac{1}{2}</mrow>
- <mrow> 0 \amp -a\frac{1}{2} + b\frac{\sqrt 3}{2} </mrow>
-</md>. Solving this equation yields
-<me>
-a = \frac{\sqrt 3}{2} \\
-b = \frac{1}{2}
-</me>. Thus <me>
-[y]_\basis{B} = \begin{bmatrix} \frac{\sqrt 3}{2} \\ \frac{1}{2}\end{bmatrix}.
-</me></li>
+      <li>
+        <me>
+          \frac{d^2}{dx^2}\cos(x - \frac{\pi}{3}) = \frac{d}{dx}\left(-\sin(x -\frac{\pi}{3})\right) = -\cos(x - \pi)
+        </me>.
+        <m>z</m> satisfies <m>z'' = -z</m> and so solves <xref ref="diff_eqn_exerc_1"/>.
+      </li>
 
-<li>
-
-
-  <ol>
-    <li><me>\frac{d^2}{dx^2}\cos(x - \frac{\pi}{3}) = \frac{d}{dx}\left(-\sin(x -\frac{\pi}{3})\right) = -\cos(x - \pi).</me> <m>z</m> satisfies <m>z'' = -z</m> and so solves <xref ref="diff_eqn_exerc_1"/>. </li>
-
-    <li></li>
-
-  </ol>
-
-</li>
-
-</p>
+    </ol>
+    </p>
     </solution>
-  -->
-    </exercise>
 
-    <exercise>
+  </exercise>
+
+  <exercise>
     <statement>
       <p>
         Let <m>V</m> be the vector space of solutions to the differential equation
@@ -834,7 +859,6 @@ b = \frac{1}{2}
 
   </exercises>
 
- <!--<solutions divisional="solution answer" />  -->
 
 </section>
 

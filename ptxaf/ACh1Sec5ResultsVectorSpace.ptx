@@ -60,17 +60,17 @@
     <proof>
       <p>
         <md>
-          <mrow>-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \text{(Definisie \(- \ve{v}\))}</mrow>
-          <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \text{}</mrow>
-          <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \text{(R5)}</mrow>
+          <mrow>-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \text{(Def. van }- \ve{v}{)}</mrow>
+          <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  (<xref ref="R7" text="title" />)</mrow>
+          <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  (<xref ref="R5" text="title" />)</mrow>
           <mrow>\amp = 0 \smul\ve{v}</mrow>
-          <mrow>\amp = \ve{0} \amp \amp  \text{(R8)}</mrow>
+          <mrow>\amp = \ve{0} \amp \amp  (<xref ref="R8" text="title" />)</mrow>
         </md>
       </p>
       <p>
         Verder,
         <md>
-          <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \text{(R1)}</mrow>
+          <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  (<xref ref="R1" text="title" />)</mrow>
           <mrow>\amp  = \ve{0} \amp \amp  \text{(deur vorige bewys)}</mrow>
         </md>
       </p>
@@ -89,11 +89,11 @@
     <proof>
       <p>
         <md>
-          <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \text{(R3b)}</mrow>
+          <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  (<xref ref="R3b" text="title" />)</mrow>
           <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv"/></mrow>
-          <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \text{(R2)}</mrow>
+          <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  (<xref ref="R2" text="title" />)</mrow>
           <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \text{(volgens aanname)}</mrow>
-          <mrow>\amp = -\ve{v} \amp \amp  \text{(R3a)} </mrow>
+          <mrow>\amp = -\ve{v} \amp \amp  (<xref ref="R3a" text="title" />) </mrow>
         </md>.
       </p>
     </proof>
@@ -115,10 +115,10 @@
     <proof>
       <p>
         <md>
-          <mrow> k \smul\ve{0} \amp = k \smul(0 \smul\ve{0}) \amp \text{(R8 vir } \ve{v}=\ve{0}\text{)} </mrow>
-          <mrow> \amp = ((k)(0))\smul\ve{0} \amp \text{(R6)} </mrow>
+          <mrow> k \smul\ve{0} \amp = k \smul(0 \smul\ve{0}) \amp (<xref ref="R8" text="title" />\text{ vir } \ve{v}=\ve{0}) </mrow>
+          <mrow> \amp = ((k)(0))\smul\ve{0} \amp (<xref ref="R6" text="title" />) </mrow>
           <mrow> \amp = 0 \smul\ve{0} \amp \text{(} (k)(0)=0 \text{ vir enige reële getal }  k \text{)} </mrow>
-          <mrow> \amp = \ve{0} \amp \text{(R8 vir } \ve{v}=\ve{0}\text{)} </mrow>
+          <mrow> \amp = \ve{0} \amp (<xref ref="R8" text="title" />\text{ vir } \ve{v}=\ve{0}) </mrow>
         </md>
       </p>
     </proof>
@@ -157,9 +157,9 @@
       <md>
         <mrow>k \smul \ve{v} \amp  = \ve{0}</mrow>
         <mrow>\therefore  \frac{1}{k} \smul (k \smul \ve{v})  \amp  = \frac{1}{k} \smul \ve{0} \amp \amp  \text{(Vermenigvuldig beide kante met \(\frac{1}{k}\))}</mrow>
-        <mrow>\therefore \left(\frac{1}{k} k\right) \smul \ve{v} \amp = \ve{0} \amp \amp \text{(R6 aan LK. Gebruik } <xref ref="mult_by_zero_ex" text="global">Oefening</xref> \text{ aan die RK.)}</mrow>
+        <mrow>\therefore \left(\frac{1}{k} k\right) \smul \ve{v} \amp = \ve{0} \amp \amp (<xref ref="R6" text="title" />\text{ aan LK. Gebruik } <xref ref="mult_by_zero_ex" text="global">Oefening</xref> \text{ aan RK.)}</mrow>
         <mrow>\therefore 1 \smul \ve{v} \amp = \ve{0} \amp \amp  \text{(gebruik \(\frac{1}{k} k = 1\))}</mrow>
-        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \text{(R7)}</mrow>
+        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  (<xref ref="R7" text="title" />)</mrow>
       </md>
     </p>
 

@@ -16,12 +16,12 @@
     </p>
 
   <example xml:id="B_is_vs">
-    <title>Die versameling <m>B</m> is 'n vektorruimte.</title>
+    <title>Die versameling <m>B</m> is 'n vektorruimte</title>
     <p>
       Eers definieer ons die versameling <m>B</m>.
       Ons definieer
       <men xml:id="def_of_b">
-        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \text{ and }  u_1 - u_2 + u_3 = 0\}
+        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \text{ en }  u_1 - u_2 + u_3 = 0\}
       </men>.
     </p>
 
@@ -114,7 +114,7 @@
         Ons moet seker maak dat dit sin maak.
         As ek 'n vektor <m>\ve{v}</m> in <m>B</m>
         met 'n skalaar <m>k</m> vermenigvuldig,
-        dan moet die resultaat <m>k \cdot \ve{u}</m>
+        dan moet die resultaat <m>k \smul \ve{u}</m>
         'n element van <m>B</m> wees.
         Behoort <m>(ku_1, \, ku_2, \, ku_3)</m>
         werklik aan <m>B</m>?
@@ -130,7 +130,7 @@
       </p>
 
       <p>
-        Daarom is <m>k \cdot \ve{u}</m> wel
+        Daarom is <m>k \smul \ve{u}</m> wel
         'n element van <m>B</m>,
         so ons het 'n wel-gedefinieerde
         skalaarvermenigvuldigingsbewerking op <m>B</m> gevind.
@@ -216,10 +216,10 @@
       <md>
         <mrow>\amp  k \smul ( \ve{v + w} )</mrow>
         <mrow>\amp = k \smul (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \text{(Def. van optelling in }B)</mrow>
-        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp \text{(Def. van skalaarvermenigvuldiging in }B)</mrow>
+        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp \text{(Def. van skal.verm. in }B)</mrow>
         <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  (k(x+y) = kx + ky \text{ vir reële getalle }x,y)</mrow>
         <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp \text{(Def. van optelling in }B)</mrow>
-        <mrow>\amp = k \cdot \ve{v} + k \cdot \ve{w} \amp \amp  \text{(Def. van skalaarvermenigvuldiging in }B)</mrow>
+        <mrow>\amp = k \smul \ve{v} + k \smul \ve{w} \amp \amp  \text{(Def. van skal.verm. in }B)</mrow>
       </md>
     </p>
     </li>
@@ -230,10 +230,10 @@
       Ons gaan na:
       <md>
         <mrow>\amp  (k + l) \smul \ve{v}</mrow>
-        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in }B)</mrow>
+        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \text{(Def. van skal.verm. in }B)</mrow>
         <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  ((k+l)x = kx + lx \text{ vir reële getalle)}</mrow>
         <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp \text{(Def. van optelling in } B)</mrow>
-        <mrow>\amp = k \cdot \ve{v} + l \cdot \ve{v} \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B)</mrow>
+        <mrow>\amp = k \smul \ve{v} + l \smul \ve{v} \amp \amp  \text{(Def. van skal.verm. in } B)</mrow>
       </md>
     </p>
     </li>
@@ -243,11 +243,11 @@
     <p>
       Ons gaan na:
       <md>
-        <mrow>\amp  k \cdot (l \cdot \ve{v})</mrow>
-        <mrow>\amp = k \cdot (l v_1, \, l v_2, \, lv_3) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B)</mrow>
-        <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B)</mrow>
+        <mrow>\amp  k \smul (l \smul \ve{v})</mrow>
+        <mrow>\amp = k \smul (l v_1, \, l v_2, \, lv_3) \amp \amp  \text{(Def. van skal.verm. in } B)</mrow>
+        <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \text{(Def. van skal.verm. in } B)</mrow>
         <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  (k(lx) = (kl)x \text{ vir reële getalle)}</mrow>
-        <mrow>\amp = (kl) \cdot \ve{v} \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B) </mrow>
+        <mrow>\amp = (kl) \smul \ve{v} \amp \amp  \text{(Def. van skal.verm. in } B) </mrow>
       </md>.
     </p>
     </li>
@@ -257,7 +257,7 @@
     <p>
       Ons gaan na:
       <md>
-        <mrow>1 \cdot \ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in }B)</mrow>
+        <mrow>1 \smul \ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \text{(Def. van skal.verm. in }B)</mrow>
         <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  (1 x = x \text{ vir reële getalle }x)</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>.
@@ -269,7 +269,7 @@
     <p>
       Ons gaan na:
       <md>
-        <mrow>0 \cdot \ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \text{(Def. van skalaarvermenigvuldiging in } B)</mrow>
+        <mrow>0 \smul \ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \text{(Def. van skal.verm. in } B)</mrow>
         <mrow>\amp = (0, \, 0, \, 0) \amp \amp  (0 x = 0 \text{ vir reële getalle})</mrow>
         <mrow>\amp = \ve{0} \amp \amp  \text{(Def. van die nul-vektor in }B) </mrow>
       </md>.
@@ -339,7 +339,7 @@
       </statement>
       <solution>
         <p>
-          <m> X </m> is not a vector space since the additive inverse of an element in <m>X</m> may fail to be in <m>X</m>. For example, consider <m>(1,0)</m>. The additive inverse of <m>(1,0)</m> would have to be <m>(-1,0)</m>. However, <m>(-1,0)</m> is certainly <em>not</em> in <m>X</m>. Hence <m>X</m> is not a vector space.
+          <m> X </m> is nie 'n vektorruimte nie, want die inverse van 'n element in <m>X</m> mag dalk nie in <m>X</m> wees nie. Neem byvoorbeeld <m>(1,0)</m>. Die optellingsinverse van <m>(1,0)</m> sou <m>(-1,0)</m> moes wees. Maar <m>(-1,0)</m> is egter <em>nie</em> in <m>X</m> nie. Dus is <m>X</m> nie 'n vektorruimte nie.
         </p>
       </solution>
     </exercise>

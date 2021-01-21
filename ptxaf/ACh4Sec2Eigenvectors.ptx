@@ -223,7 +223,7 @@
         Aangesien die eiewaardes almal verskillend is,
         dan as ons eievektore <m>q_1</m>,
         <m>q_2</m> en <m>q_3</m> met eiewaardes
-        <m>\lambda_1</m>, <m>\lambda_2</m> and
+        <m>\lambda_1</m>, <m>\lambda_2</m> en
         <m>\lambda_3</m> onderskeidelik vind,
         dan sal <m>\basis{Q} = \bopen q_1, q_2, q_3 \bclose</m> lineêr onafhanklik wees volgens <xref ref="lin_ind_eig_distinct">Proposisie</xref>.
         Dit beteken dat die eieruimtes <m>E_1</m>,

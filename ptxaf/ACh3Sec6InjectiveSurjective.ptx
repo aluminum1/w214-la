@@ -194,8 +194,8 @@
   <proposition xml:id="equiv-inj-sur-iso">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n lineêre bewerking op 'n eindig-dimensionele vektorruimte <m>V</m> wees.
-        Die volgende stellings is ekwivalent:
+        Laat <m>T : V \rightarrow V</m> 'n lineêre operator op 'n eindig-dimensionele vektorruimte <m>V</m> wees.
+        Die volgende bewerings is ekwivalent:
 
         <ol label="a">
           <li>
