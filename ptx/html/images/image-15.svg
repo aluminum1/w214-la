@@ -20,20 +20,20 @@
 </g>
 </defs>
 <g id="surface1">
-<path style="fill:none;stroke-width:1.19553;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.00096875 0.00146875 L 10.383781 0.00146875 " transform="matrix(1,0,0,-1,23.042,23.146)"/>
-<path style="fill:none;stroke-width:0.9564;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M -1.912411 2.55225 C -1.752255 1.595219 0.00165125 0.157719 0.478214 0.00146875 C 0.00165125 -0.158687 -1.752255 -1.592281 -1.912411 -2.549312 " transform="matrix(1,0,0,-1,33.42413,23.146)"/>
-<g style="fill:rgb(0%,0%,100%);fill-opacity:1;">
+<path style="fill:none;stroke-width:1.19553;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,19.599915%,41.999817%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.00096875 0.00146875 L 10.383781 0.00146875 " transform="matrix(1,0,0,-1,23.042,23.146)"/>
+<path style="fill:none;stroke-width:0.9564;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,19.599915%,41.999817%);stroke-opacity:1;stroke-miterlimit:10;" d="M -1.912411 2.55225 C -1.752255 1.595219 0.00165125 0.157719 0.478214 0.00146875 C 0.00165125 -0.158687 -1.752255 -1.592281 -1.912411 -2.549312 " transform="matrix(1,0,0,-1,33.42413,23.146)"/>
+<g style="fill:rgb(0%,19.607544%,41.96167%);fill-opacity:1;">
   <use xlink:href="#glyph0-1" x="34.695" y="24.906"/>
 </g>
-<g style="fill:rgb(0%,0%,100%);fill-opacity:1;">
+<g style="fill:rgb(0%,19.607544%,41.96167%);fill-opacity:1;">
   <use xlink:href="#glyph1-1" x="40.673" y="26.699"/>
 </g>
-<path style="fill:none;stroke-width:1.19553;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.00096875 0.00146875 L -10.663094 10.661625 " transform="matrix(1,0,0,-1,23.042,23.146)"/>
-<path style="fill:none;stroke-width:0.9564;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M -1.913876 2.550518 C -1.753702 1.594832 0.000180451 0.161261 0.478016 -0.00171585 C 0.000171388 -0.159141 -1.753793 -1.592613 -1.911259 -2.551052 " transform="matrix(-0.70714,-0.7071,-0.7071,0.70714,12.37978,12.48375)"/>
-<g style="fill:rgb(0%,0%,100%);fill-opacity:1;">
+<path style="fill:none;stroke-width:1.19553;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,19.599915%,41.999817%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.00096875 0.00146875 L -10.663094 10.661625 " transform="matrix(1,0,0,-1,23.042,23.146)"/>
+<path style="fill:none;stroke-width:0.9564;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,19.599915%,41.999817%);stroke-opacity:1;stroke-miterlimit:10;" d="M -1.913876 2.550518 C -1.753702 1.594832 0.000180451 0.161261 0.478016 -0.00171585 C 0.000171388 -0.159141 -1.753793 -1.592613 -1.911259 -2.551052 " transform="matrix(-0.70714,-0.7071,-0.7071,0.70714,12.37978,12.48375)"/>
+<g style="fill:rgb(0%,19.607544%,41.96167%);fill-opacity:1;">
   <use xlink:href="#glyph0-1" x="0.679" y="7.898"/>
 </g>
-<g style="fill:rgb(0%,0%,100%);fill-opacity:1;">
+<g style="fill:rgb(0%,19.607544%,41.96167%);fill-opacity:1;">
   <use xlink:href="#glyph1-2" x="6.657" y="9.691"/>
 </g>
 </g>

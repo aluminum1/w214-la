@@ -16,6 +16,9 @@
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes}
 \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\definecolor{primaryColor}{RGB}{214,64,0}
+\definecolor{secondaryColor}{RGB}{0,50,107}
+\definecolor{ternaryColor}{RGB}{0,109,235}
 
 \usepackage{pgfplots}
 
@@ -78,6 +81,9 @@
         <author>
           <personname>Bruce Bartlett</personname>
         </author>
+        <author>
+          <personname>Dirk Basson</personname>
+        </author>
       </titlepage>
 
       <xi:include href="./ACh0NoteForStudent.ptx" />
@@ -110,11 +116,14 @@
 -->
 
       <appendix>
-        <title> Solutions to exercises</title>
+        <title> Oplossings vir Oefeninge</title>
         <section>
           <title>Wenke en antwoorde vir Oefeninge</title>
           <p></p>
-          <solutions divisional = "hint answer" reading = "hint answer" worksheet = "hint answer" project = "hint answer" scope="W214-Lin-Alg-Af" >
+          <solutions
+            divisional = "hint answer"
+            project = "hint answer"
+            scope="W214-Lin-Alg-Af">
             <title>Wenke en antwoorde</title>
           </solutions>
         </section>
@@ -122,7 +131,10 @@
         <section>
           <title>Oplossings vir Oefeninge</title>
           <p></p>
-          <solutions divisional = "solution" reading = "solution" worksheet = "solution" project = "solution" scope="W214-Lin-Alg-Af" >
+          <solutions
+            divisional = "solution"
+            project = "solution"
+            scope="W214-Lin-Alg-Af">
             <title>
               Oplossings
             </title>

@@ -441,7 +441,7 @@
               <me>
                 E_{\frac{3}{2}} = \left\{ t \cmatrix{-2 \\ 1}, \, t \in \mathbb{R} \right\}
               </me>.
-              Jy kan op die Desmos-werkblad visueel verifieer dat hierdie lyn wel 'n eieruimte van <m>\mat{A}</m> met ooreenstemmende eiewaarde <m>3</m> is.
+              Jy kan op die Desmos-werkblad visueel bevestig dat hierdie lyn wel 'n eieruimte van <m>\mat{A}</m> met ooreenstemmende eiewaarde <m>3</m> is.
               As jy vektore op hierdie lyn met <m>\mat{A}</m> vermenigvuldig,
               word hulle met 'n faktor <m>3</m> vergroot.
             </p>

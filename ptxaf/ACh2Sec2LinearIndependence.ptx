@@ -274,7 +274,7 @@
 
     <solution>
       <p>
-        Ons kontrolleer <xref ref="lin_comb_other_vec"/> uit <xref ref="lin_dependence_prop"/>. Dit wil sê, ons kontrolleer of een van die vektore in die lys 'n lineêre kombinasie van die ander vektore is. Inderdaad, ons sien deur inspeksie dat
+        Ons toets of <xref ref="lin_comb_other_vec"/> van <xref ref="lin_dependence_prop"/> geld. Dit wil sê, ons toets of een van die vektore in die lys 'n lineêre kombinasie van die ander vektore is. Inderdaad, ons sien deur inspeksie dat
         <men>
          \ve{f}_2 = \ve{f}_1 + \ve{f}_3.
         </men>
@@ -283,7 +283,7 @@
     </solution>
 
     <solution>
-      <p>Ons kontrolleer <xref ref="lin_comb_prec_vec"/> uit <xref ref="lin_dependence_prop"/>. Dit wil sê, ons kontrolleer:
+      <p>Ons toets of <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/> geld. Dit wil sê, ons bevestig:
         <ul>
           <li>
             <p>

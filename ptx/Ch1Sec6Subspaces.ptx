@@ -131,7 +131,7 @@
           <![CDATA[\begin{tikzpicture}
           \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
           \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-          \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+          \draw[thick, primaryColor] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
         </latex-image>
       </image>
     </figure>
@@ -197,7 +197,7 @@
             \draw[->] (0, 0) -- (2,0) node[right] {$y$};
             \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
             \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-            \draw[thick, red] (-2, 1) node[above] {$L$} -- (2, -1);
+            \draw[thick, primaryColor] (-2, 1) node[above] {$L$} -- (2, -1);
           \end{tikzpicture}
           ]]>
           </latex-image>
@@ -213,10 +213,10 @@
             \draw[->] (0, 0) -- (2,0) node[right] {$y$};
             \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
             \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-            \draw[thick, red] (-0.1, -1) -- (-1, 0.4);
-            \draw[thick, red] (-1, 0.4) -- (0.3, 1.5);
-            \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
-            \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);
+            \draw[thick, primaryColor] (-0.1, -1) -- (-1, 0.4);
+            \draw[thick, primaryColor] (-1, 0.4) -- (0.3, 1.5);
+            \draw[thick, primaryColor] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
+            \draw[thick, primaryColor] (1.5, 0.4) -- (-0.1, -1);
           \end{tikzpicture}
           ]]>
           </latex-image>
@@ -273,10 +273,10 @@
               \begin{tikzpicture}
                 \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
                 \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-                \draw[thick, red] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
-                \draw[very thick, blue, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
-                \draw[very thick, blue, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
-                \draw[very thick, blue, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};
+                \draw[thick, primaryColor] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
+                \draw[very thick, secondaryColor, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
+                \draw[very thick, secondaryColor, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
+                \draw[very thick, secondaryColor, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};
               \end{tikzpicture}
               ]]>
             </latex-image>

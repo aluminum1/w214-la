@@ -35,16 +35,16 @@
   </example>
 
 
-    <example> <title>Toets of 'n vektor 'n lineêre kombinasie van ander vektore is</title>
+    <example> <title>Stel vas of 'n vektor 'n lineêre kombinasie van ander vektore is</title>
     <statement>
       <p>
         In <m>\mathbb{R}^4</m>, is <m>\ve{v}=(2, -1, 3, 0)</m> 'n lineêre kombinasie van
         <me>
-        \ve{v}_1 = (1, 3, 2, 0), \ve{v}_2=(5, 1, 2, 4), \text{ en } \ve{v}_3 = (-1, 0, 2, 1) \text{?}
-      </me>
+        \ve{v}_1 = (1, 3, 2, 0), \ve{v}_2=(5, 1, 2, 4), \text{ en } \ve{v}_3 = (-1, 0, 2, 1)
+      </me>?
     </p>
     <p>
-      Om dit te toets, moet ons vasstel of die vergelyking
+      Om dit te weet, moet ons vasstel of die vergelyking
       <men xml:id="first_span_ex_eqn">
       \ve{v} = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3,
       </men>
@@ -81,7 +81,7 @@
       </statement>
   </example>
 
-<example xml:id="poly_example_lin_comb"><title>Toets of 'n polinoom 'n lineêre kombinasie van ander polinome is</title>
+<example xml:id="poly_example_lin_comb"><title>Stel vas of 'n polinoom 'n lineêre kombinasie van ander polinome is</title>
     <statement>
       <p>
         In <m>\Poly_2</m>, is dit moontlik om <m>p=x^2 - 1</m> as 'n lineêre kombinasie van
@@ -90,7 +90,7 @@
       </me> uit te druk?
     </p>
     <p>
-    Om dit vas te stel, moet ons toets of die vergelyking
+    Om dit te beantwoord, moet ons vasstel of die vergelyking
     <men xml:id="second_span_ex_eqn">
     p = a_1 p_1 + a_2 p_2 + a_3 p_3 + a_4 p_4,
     </men>
@@ -199,7 +199,7 @@
 
 
   <example xml:id="three_vectors_spanning_R2_example">
-    <title>Toets of 'n lys vektore 'n vektorruimte onderspan</title>
+    <title>Stel vas of 'n lys vektore 'n vektorruimte onderspan</title>
     <statement>
     <p>
       Word <m>\mathbb{R}^2</m> onderspan deur die volgende lys vektore?
@@ -214,16 +214,16 @@
       <![CDATA[
       \begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
       \draw[<->] (0, -2.5) -- (0, 2.5) node[right] {\(y\)};
-      \draw[very thick, red, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
-      \draw[very thick, red, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
-      \draw[very thick, red, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
+      \draw[very thick, primaryColor, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
+      \draw[very thick, primaryColor, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
+      \draw[very thick, primaryColor, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
     </latex-image>
     </image>
     </figure>
    </statement>
    <solution>
     <p>
-    Om dit te toets, moet ons kyk of elke vektor <m>\ve{v} \in V</m> as 'n lineêre kombinasie van <m>\ve{f}_1, \ve{f}_2</m> en <m> \ve{f}_3</m> geskryf kan word.</p>
+    Om dit vas te stel, moet ons kyk of elke vektor <m>\ve{v} \in V</m> as 'n lineêre kombinasie van <m>\ve{f}_1, \ve{f}_2</m> en <m> \ve{f}_3</m> geskryf kan word.</p>
 
     <p> So, laat <m>\ve{v} = (v_1,v_2) </m> 'n vaste, maar willekeurige vektor in <m>\mathbb{R}^2</m> wees. Ons moet kyk of die volgende vergelyking 'n oplossing vir <m>a_1, a_2, a_3</m> het:
     <men xml:id="eqn_for_R2_span">

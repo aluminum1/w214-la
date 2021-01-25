@@ -192,7 +192,7 @@
     <p>
       Let us check additivity algebraically:
       <me>
-        T \left ( (x_1, y_1 \right)) + \left((x_2, y_2) \right) \stackrel{\text{?} }{=} T\left((x_1, y_1) \right) + T\left((x_2, y_2)\right)
+        T \left ( (x_1, y_1 ) + (x_2, y_2) \right) \stackrel{\text{?} }{=} T\left((x_1, y_1) \right) + T\left((x_2, y_2)\right)
       </me>
       <md>
         <mrow>\text{LHS}  \amp = T \left( (x_1 + x_2, y_1 + y_2) \right) \amp  \text{RHS}  \amp = x_1 + x_2</mrow>
@@ -212,14 +212,14 @@
           <![CDATA[\begin{tikzpicture}[xscale=1.5]
           \draw[<->] (-1, 0) -- (3, 0);
           \draw[<->] (0, -1) -- (0, 3);
-          \draw[very thick, red, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
-          \draw[very thick, red, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
+          \draw[very thick, primaryColor, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
+          \draw[very thick, primaryColor, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
           \draw[dotted] (0.5, 1) -- (0.5, 0);
           \draw[dotted] (1.5, 1.5) -- (1.5, 0);
-          \draw[very thick, red, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
-          \draw[very thick, red, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
-          \node[red] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
-          \node[red] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
+          \draw[very thick, primaryColor, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
+          \draw[very thick, primaryColor, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
+          \node[primaryColor] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
+          \node[primaryColor] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
         </latex-image>
       </image>
     </figure>
@@ -262,8 +262,8 @@
           <latex-image>
             <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
             \draw[<->] (0, -1) -- (0, 2);
-            \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(\ve{v}\)} ;
-            \draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {\(R (\ve{v})\)};
+            \draw[very thick, primaryColor, ->] (0,0) -- (30:1.5) node[right] {\(\ve{v}\)} ;
+            \draw[very thick, primaryColor, ->] (0,0) --  (70:1.5) node[above] {\(R (\ve{v})\)};
             \draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {\(\theta\)} ;\end{tikzpicture}]]>
           </latex-image>
         </image>
@@ -781,8 +781,8 @@
           <latex-image>
             <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
             \draw[<->] (0, -1) -- (0, 2);
-            \draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
-            \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
+            \draw[very thick, primaryColor, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
+            \draw[very thick, primaryColor, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
             \draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};\end{tikzpicture}]]>
           </latex-image>
         </image>
@@ -790,8 +790,8 @@
           <latex-image>
                     <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
           \draw[<->] (0, -1) -- (0, 2);
-          \draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
-          \draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
+          \draw[very thick, primaryColor, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
+          \draw[very thick, primaryColor, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
           \draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;\end{tikzpicture}]]>
           </latex-image>
         </image>

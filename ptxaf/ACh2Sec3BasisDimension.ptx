@@ -116,7 +116,7 @@
       <title>'n Basis vir <m>\mathbb{R}^4</m></title>
       <statement>
         <p>
-          Toets of die volgende lys vektore
+          Stel vas of die volgende lys vektore
           <men>
           \ve{v}_1 = (1, 0, 2, -3), \, \ve{v}_2 = (1, 3, -1, 2), \, \ve{v}_3 = (0, 1, 2, -1), \ve{v}_4 = (1, 2, 3, 4)
           </men>
@@ -160,12 +160,17 @@
       So inderdaad het die vergelykings <xref first="R4-example-eqn1" last="R4-example-eqn4"/> slegs die triviale oplossing. Dus is die lys vektore lineêr onafhanklik. </p>
 
       <p> Volgende moet ons kyk of die lys vekore vir <m>\mathbb{R}^4</m> onderspan. (Daar is 'n vinniger manier om dit te doen, deur <xref ref="lin-ind-implies-basis"/> hier onder te gebruik, maar ons gaan dit hier uit eerste beginsels bewys.) Laat dus <m>\ve{w} = (w_1, w_2, w_3, w_4)</m> 'n willekeurige vektor in <m>\mathbb{R}^4</m> wees. Ons moet wys dat daar ten minste een manier bestaan om <m>\ve{w}</m> as 'n lineêre kombinasie van die vektore <m>\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4</m> uit te druk. Met ander woorde, ons moet kyk of daar ten minste een oplossing vir die volgende vergelyking bestaan:
-         <mdn>
-            <mrow xml:id="fund_eqn_span_r4_ex"> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{w} </mrow>
-            <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (w_1, w_2, w_3, w_4) </mrow>
-            <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (w_1, w_2, w_3, w_4) </mrow>
-        </mdn>
-        So die lys vektore onderspan vir <m>\mathbb{R}^4</m> as en slegs as die volgende stelsel vergelykings vir <m>a_1, a_2, a_3, a_4</m> altyd 'n oplossing het, maak nie saak wat die waardes van <m>w_1, w_2, w_3, w_4</m> is nie:
+      <mdn>
+        <mrow xml:id="fund_eqn_span_r4_ex"> \ve{w} \amp = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4   </mrow>
+      </mdn>
+      Ons ontbind die twee kante van die vergelyking as volg:
+      <md>
+        <mrow number="no"> \therefore (w_1, w_2, w_3, w_4) \amp = a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + </mrow>
+        <mrow number="no"> \amp \qquad\quad + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) </mrow>
+        <mrow number="no"> \amp = (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4,  </mrow>
+        <mrow number="no">  \amp \qquad\quad\phantom{+} 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) </mrow>
+      </md>
+      So die lys vektore onderspan vir <m>\mathbb{R}^4</m> as en slegs as die volgende stelsel vergelykings vir <m>a_1, a_2, a_3, a_4</m> altyd 'n oplossing het, maak nie saak wat die waardes van <m>w_1, w_2, w_3, w_4</m> is nie:
      <mdn>
        <mrow xml:id="R4-example-span-eqn1"> a_1 - a_2 + a_4 \amp = w_1 </mrow>
        <mrow> 3a_1 + a_3 + 2a_4 \amp = w_2 </mrow>
@@ -441,7 +446,7 @@
     <exercise>
       <statement>
         <p>
-          Kontroleer dat <xref ref="kronecker_for_matrix_basis" />
+          Bevestig dat <xref ref="kronecker_for_matrix_basis" />
           wel die korrekte formule vir die matrikselemente van
           <m>\mat{E}_{ij}</m> gee.
         </p>
@@ -499,7 +504,7 @@
       <title>Dimensie van 'n hipervlak</title>
       <statement>
         <p>
-          Laat <m>\ve{v} \in \mathbb{R}^n</m> 'n vaste vektor wees, en beskou die hipervlak <m>W \subset \mathbb{R}^n</m> ortogonaal aan <m>\ve{v}</m> soos in <xref ref="hyperplanes_example_subspace"/>. Jy in Oefening  <xref ref="dimension_of_hyperplane_exercise"/> bewys dat  <m>\Dim(W) = n-1</m>.
+          Laat <m>\ve{v} \in \mathbb{R}^n</m> 'n vaste vektor wees, en beskou die hipervlak <m>W \subset \mathbb{R}^n</m> ortogonaal aan <m>\ve{v}</m> soos in <xref ref="hyperplanes_example_subspace"/>. Jy in   <xref ref="dimension_of_hyperplane_exercise"/> bewys dat  <m>\Dim(W) = n-1</m>.
         </p>
 
         <p>
@@ -567,27 +572,27 @@
             <men xml:id="diff_eqn_in_thm">
               y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y == 0
             </men>
-            'n lineêre homogene differensiaalvergelyking wees op 'n interval <m>I</m>, waar <m>a_0(x), \cdots, a_{n-1}(x)</m> kontinu op <m>I</m> is. Verdonderstel dat ons beginwaardes gegee word,
+            'n lineêre homogene differensiaalvergelyking wees op 'n interval <m>I</m>, waar <m>a_0(x), \ldots</m>, <m>a_{n-1}(x)</m> kontinu op <m>I</m> is. Verdonderstel dat ons beginwaardes gegee word,
             <mdn>
               <mrow xml:id="diff_eqn_thm_ic1"> y(x_0) \amp = c_0 </mrow>
               <mrow> y^{(1)}(x_0) \amp = c_1 </mrow>
               <mrow> \vdots  \amp </mrow>
               <mrow xml:id="diff_eqn_thm_iclast"> y^{(n-1)}(x_0) \amp = c_{n-1} </mrow>
             </mdn>
-            waar <m>x_0 \in I</m> en <m>c_0, \ldots, c_{n-1}</m> willekeurige konstantes is. Dan bestaan daar 'n unieke funksie <m>y(x)</m> op <m>I</m> wat die differensiaalvergelyingsaisfying <xref ref="diff_eqn_in_thm"/> bevredig asook die beginwaardes  <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
+            waar <m>x_0 \in I</m> en <m>c_0, \ldots, c_{n-1}</m> willekeurige konstantes is. Dan bestaan daar 'n unieke funksie <m>y(x)</m> op <m>I</m> wat die differensiaalvergelying  <xref ref="diff_eqn_in_thm"/> bevredig asook die beginwaardes  <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
           </p>
         </statement>
       </theorem>
 
       <p>
-        Ons gaan nie <xref ref="diff_eqn_exist_unique"/> bewys nie --- jy kan die bewys in 'n kursus oor Differensiaalvergelykings vind. Ons is eerder geinteresseerd in die Lineêre Algebra <em>gevolgtrekkings</em> van <xref ref="diff_eqn_exist_unique"/>. Maar eerstens, 'n voorbeeld om die Stelling te illustreer.
+        Ons gaan nie <xref ref="diff_eqn_exist_unique"/> bewys nie --- jy kan die bewys in 'n kursus oor Differensiaalvergelykings vind. Ons is eerder geïnteresseerd in die Lineêre Algebra <em>gevolgtrekkings</em> van <xref ref="diff_eqn_exist_unique"/>. Maar eerstens, 'n voorbeeld om die Stelling te illustreer.
       </p>
 
       <example xml:id="geogebra_diff_eqn_1">
         <title>Visualisering van <xref ref="diff_eqn_exist_unique"/></title>
         <statement>
         <p>
-          Die volgende app illustreer <xref ref="diff_eqn_exist_unique"/>. Sleep die rooi en groen slepers om die koëffisiente van die differensiaal vergelyking te verander (in hierdie voordbeeld, die koëffisiënte is net getalle, maar in algemeen hulle is funksies van <m>x</m>). Sleep die rooi punte om die beginwaardes te verander.
+          Die volgende app illustreer <xref ref="diff_eqn_exist_unique"/>. Sleep die rooi en groen slepers om die koëffisiënte van die differensiaal vergelyking te verander (in hierdie voordbeeld, die koëffisiënte is net getalle, maar in algemeen hulle is funksies van <m>x</m>). Sleep die rooi punte om die beginwaardes te verander.
         </p>
           <figure>
             <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%"/>
@@ -706,7 +711,7 @@
   </proof>
 
   <p>
-    Laat ons nou 'n paar voorbeelde doen wat die ideë hierbô illustreer.
+    Kom ons doen nou 'n paar voorbeelde  wat die idees hierbo illustreer.
   </p>
 
   <example>
@@ -726,7 +731,7 @@
           <mrow xml:id="ic1_diff_eqn_ex"> y(1) \amp = c_0 </mrow>
           <mrow xml:id="ic2_diff_eqn_ex"> y'(1) \amp = c_1 </mrow>
         </mdn>
-        Laat ons die verifeer  in SageMath. Eerstens, ons vra SageMath om die algemene oplossing van differensiaalvergelyking <xref ref="diff_eqn_example_thm"/> te bereken:
+        Kom ons bevestig dit in SageMath. Eerstens, ons vra SageMath om die algemene oplossing van differensiaalvergelyking <xref ref="diff_eqn_example_thm"/> te bereken:
       </p>
         <sage>
           <input>
@@ -743,7 +748,7 @@
         <men xml:id="gen_soln_formula_ode">
           y = K_1 x^2 \sin(\log(x)) + K_2 x^2 \cos(\log(x)).
         </men>
-        Kom ons pas nou die beginwaardes <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> toe. Ons kan <m>y(1)</m> en <m>y'(1)</m> bereken deur die formule vir <m>y</m> uit <xref ref="gen_soln_formula_ode"/> te gebruik. So <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> word (kontrolleer!):
+        Kom ons pas nou die beginwaardes <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> toe. Ons kan <m>y(1)</m> en <m>y'(1)</m> bereken deur die formule vir <m>y</m> uit <xref ref="gen_soln_formula_ode"/> te gebruik. So <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> word (bevestig dit!):
         <mdn>
           <mrow xml:id="first_eqn_ks"> K_2 \amp = c_0 </mrow>
           <mrow xml:id="second_eqn_ks"> K_1 + 2K_2 \amp = c_1 </mrow>
@@ -1152,7 +1157,7 @@
 
         <p>
           In <xref ref="chebyshev_example">Oefening</xref> het jy gewys
-          dat <m>\ve{q}_0, \ldots, \ve{q}_3</m> 'n basis vir <m>\Poly_3</m> is deur dit direk teen die definisie te toets.
+          dat <m>\ve{q}_0, \ldots, \ve{q}_3</m> 'n basis vir <m>\Poly_3</m> is deur dit direk teen die definisie te bevestig.
           Hierdie nuwe metode is <em>verskillend</em>!
         </p>
       </statement>
@@ -1489,11 +1494,11 @@
     <solution><p>
       <ol>
         <li>
-          Ons los die toets dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is uit, omdat dit eencoudig is. Kom ons konstrueer nou 'n basis vir <m> V </m>. Begin met 'n nie-nul vektor <m> \ve v_1 </m>  in <m> V </m>. Ons maak die vanselfsprekende keuse <m> \ve v_1 = x -2 </m>. Kies volgende enige vektor <m> \ve v_2 </m> in <m> V </m> wat nie in die span van <m> \left \{ \ve v_1 \right\} </m> is nie. Een keuse daarvoor is <m> \ve v_2 = x(x-2) </m>. Aangesien <m> V </m> nie die hele vektorruimte <m>\Poly_2 </m>, is nie, weet ons dat <m> \Dim V \lt 3 </m>. Dus is <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> 'n basis vir <m> V </m> en dus is <m> \Dim V = 2 </m>.
+          Ons los die bevestiging uit dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is, omdat dit eenvoudig is. Kom ons konstrueer nou 'n basis vir <m> V </m>. Begin met 'n nie-nul vektor <m> \ve v_1 </m>  in <m> V </m>. Ons maak die vanselfsprekende keuse <m> \ve v_1 = x -2 </m>. Kies volgende enige vektor <m> \ve v_2 </m> in <m> V </m> wat nie in die span van <m> \left \{ \ve v_1 \right\} </m> is nie. Een keuse daarvoor is <m> \ve v_2 = x(x-2) </m>. Aangesien <m> V </m> nie die hele vektorruimte <m>\Poly_2 </m>, is nie, weet ons dat <m> \Dim V \lt 3 </m>. Dus is <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> 'n basis vir <m> V </m> en dus is <m> \Dim V = 2 </m>.
         </li>
 
         <li>
-          Weereens laat ons die toets uit dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is. Kies enige nie-nul vektor <m>\ve v_1 </m> in <m> V </m>. Kom ons kies <m> \ve v_1 = x </m>. Hierdie keer is dit nie so duidelik dat daar enige vektore in <m> V </m> is wat nie in die span van <m> \left\{ \ve v_1 \right\} </m> is nie, en dus moet ons 'n paar berekeninge doen. As <m> p(x) = ax^2 + bx + c</m> in <m> V </m> is, moet <m> p(x)</m> die vergelykings
+          Weereens laat ons die bevestiging uit dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is. Kies enige nie-nul vektor <m>\ve v_1 </m> in <m> V </m>. Kom ons kies <m> \ve v_1 = x </m>. Hierdie keer is dit nie so duidelik dat daar enige vektore in <m> V </m> is wat nie in die span van <m> \left\{ \ve v_1 \right\} </m> is nie, en dus moet ons 'n paar berekeninge doen. As <m> p(x) = ax^2 + bx + c</m> in <m> V </m> is, moet <m> p(x)</m> die vergelykings
           <md>
             <mrow> x(2ax + b) = ax^2 + bx + c </mrow>
             <mrow> \implies 2ax^2 + bx = ax^2 + bx + c </mrow>
@@ -1512,7 +1517,7 @@
     </statement>
     <solution>
       <p>
-        Die basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> werk. Dit is vinnig om te toets.
+        Die basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> werk. Dit is vinnig om te bevestig.
       </p>
     </solution>
   </exercise>

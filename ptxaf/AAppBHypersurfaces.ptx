@@ -282,7 +282,7 @@
     </statement>
     <solution>
       <p>
-        Ons het reeds die gradi(ë)nt van <m>f</m> by 'n punt <m>\ve{p} = (a,b) \in M</m> bereken:
+        Ons het reeds die gradiënt van <m>f</m> by 'n punt <m>\ve{p} = (a,b) \in M</m> bereken:
         <me>
           \nabla_\ve{p} = (2b, -2a)  \text{ waar }b^2 = 1 + a^2
         </me>.
@@ -317,10 +317,10 @@
             \draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
             \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
             \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
-            \draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x) + (sqrt(2)-1/sqrt(2))});
+            \draw[very thick, primaryColor ] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x) + (sqrt(2)-1/sqrt(2))});
             \draw[very thick, fill] (1, 1.414) circle (1pt) node[below right] {\(\ve{p}\)};
             \node at (-1.5, 1.4) {\(M\)};
-            \draw[line width=0.5mm, blue, ->] (1, 1.414) -- (1.5, 1.414 + 0.5*0.707) node[below right] {\(\ve{u}\)};\end{tikzpicture}]]>
+            \draw[line width=0.5mm, secondaryColor, ->] (1, 1.414) -- (1.5, 1.414 + 0.5*0.707) node[below right] {\(\ve{u}\)};\end{tikzpicture}]]>
           </latex-image>
         </image>
       </figure>
@@ -332,15 +332,15 @@
             <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
             \draw[<->] (-2,0) -- (2,0) node[below] {\(v_1\)};
             \draw[<->] (0, -2) -- (0,2) node[right] {\(v_2\)};
-            \draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x)});
-            \node[red] at (2, 1.8) {\(T_\ve{p} M\)};
-            \draw[line width=0.5mm, blue, ->] (0,0) -- (0.5, 0.5*0.707) node[right, yshift=-2pt] {\(\ve{u}\)};\end{tikzpicture}]]>
+            \draw[very thick, primaryColor] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x)});
+            \node[primaryColor] at (2, 1.8) {\(T_\ve{p} M\)};
+            \draw[line width=0.5mm, secondaryColor, ->] (0,0) -- (0.5, 0.5*0.707) node[right, yshift=-2pt] {\(\ve{u}\)};\end{tikzpicture}]]>
           </latex-image>
         </image>
       </figure>
 
       <p>
-        Die rooi lyn in die eerste beeld, wat vir
+        Die oranje lyn in die eerste beeld, wat vir
         illustrasie doeleindes geteken is, is die raakruimte wat
         geskuif is sodat dit deur <m>\ve{p}</m> loop.
         Die ware raakruimte <m>T_\ve{p} M</m> loop deur die oorsprong soos in die tweede beeld.

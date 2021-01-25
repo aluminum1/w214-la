@@ -197,7 +197,7 @@
         Let <m>T : V \rightarrow V</m> be a linear operator on a finite-dimensional vector space <m>V</m>.
         The following statements are equivalent:
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>T</m> is injective.

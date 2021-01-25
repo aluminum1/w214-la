@@ -94,12 +94,12 @@
     </statement>
     <solution>
       <p>
-        R1: Ons moet kontrolleer of <m>\ve{v} + \ve{w} = \ve{w} + \ve{v} \text{ vir alle } \ve{v}, \ve{w} \in \{\ve{a},\ve{b}\}</m>.
+        R1: Ons moet vasstel of <m>\ve{v} + \ve{w} = \ve{w} + \ve{v} \text{ vir alle } \ve{v}, \ve{w} \in \{\ve{a},\ve{b}\}</m>.
         Duidelik is <m> \ve{a} + \ve{a} = \ve{a} + \ve{a}</m> en soortgelyk vir <m>\ve{b}</m>. Finaalweg <m>\ve{b} = \ve{a} +\ve{b} = \ve{b} + \ve{a}</m>.
       </p>
 
       <p>
-        R2: Ons moet kontrolleer of <m> (\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})  \text{ vir alle } \ve{u} , \ve{v},\ve{w} \in \{\ve{a},\ve{b}\}</m>. Dit vereis dat ons 8 vergelykings in totaal kontrolleer. Ons sal net die oplossing vir een van hulle aandui, die res is soortgelyk. Ons kontrolleer of
+        R2: Ons moet vasstel of <m> (\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})  \text{ vir alle } \ve{u} , \ve{v},\ve{w} \in \{\ve{a},\ve{b}\}</m>. Dit vereis dat ons 8 vergelykings in totaal bevestig. Ons sal net die oplossing vir een van hulle aandui, die res is soortgelyk. Ons stel vas of
         <md>
           <mrow>(\ve{a} + \ve{b}) + \ve{b} = \ve{a} +(\ve{b} + \ve{b}</mrow>
         </md>
@@ -270,14 +270,14 @@
     </statement>
     <solution>
       <p>
-        Ons sal net R4 kontrolleer, die res is soortgelyk.
+        Ons sal net R4 bevestig, die res is soortgelyk.
       </p>
       <p>R4: Laat
         <md>
           <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
           <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>
         </md>.
-        Ons moet kontrolleer of <m>k\smul(\ve{v} + \ve{w}) = k\smul\ve{v} + k\smul \ve{w}</m>.
+        Ons moet vasstel of <m>k\smul(\ve{v} + \ve{w}) = k\smul\ve{v} + k\smul \ve{w}</m>.
         <md>
           <mrow>\text{LK} \amp = k.(\ve{v} + \ve{w})</mrow>
           <mrow>\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>

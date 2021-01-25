@@ -19,7 +19,7 @@
   <p>
     As <m>f</m> 'n <em>lineêre afbeelding</em> tussen vektorruimtes is
     (en nie net enige arbitrêre funksie tussen versamelings is nie),
-    dan is daar 'n eenvoudige manier om te toets of <m>f</m> injektief is.
+    dan is daar 'n eenvoudige manier om vas te stel of <m>f</m> injektief is.
   </p>
 
   <lemma xml:id="injective-kernel-lemma">
@@ -197,7 +197,7 @@
         Laat <m>T : V \rightarrow V</m> 'n lineêre operator op 'n eindig-dimensionele vektorruimte <m>V</m> wees.
         Die volgende bewerings is ekwivalent:
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>T</m> is injektief.

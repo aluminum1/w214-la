@@ -310,7 +310,7 @@
             \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
             \draw (1.5, -0.1) -- (1.5, -2);
             \node at (3.3, 1) {\(\Im(C)\)};
-            \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
+            \draw[very thick, primaryColor, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
           </latex-image>
         </image>
       </figure>
@@ -338,9 +338,9 @@
         <image>
           <latex-image>
             <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-            \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
-            \draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
-            \draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
+            \draw[very thick, primaryColor, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
+            \draw[very thick, secondaryColor, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
+            \draw[very thick, ternaryColor, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
             </latex-image>
         </image>
       </figure>
@@ -846,11 +846,11 @@
 
   <example>
     <title>
-      Verifieering dat <xref ref="modification_r_n_ex"/> die Rang-Nulheidsgraad Stelling bevredig
+      Bevestiging dat <xref ref="modification_r_n_ex"/> die Rang-Nulheidsgraad Stelling bevredig
     </title>
     <statement>
       <p>
-        Kom ons verifieer dat die lineêre afbeelding <m>T</m> uit <xref ref="modification_r_n_ex"/> die <xref ref="rank-nullity-theorem"/> bevredig. In <xref ref="modification_r_n_ex"/>, het ons bereken dat
+        Kom ons bevestig dat die lineêre afbeelding <m>T</m> uit <xref ref="modification_r_n_ex"/> die <xref ref="rank-nullity-theorem"/> bevredig. In <xref ref="modification_r_n_ex"/>, het ons bereken dat
         <me>
           \Nhg(T) = 1, \quad \Rang(T) = 2.
         </me>
@@ -867,7 +867,7 @@
   <exercise>
     <statement>
       <p>
-        Verifieer die Rang-Nulheidgraad-stelling vir die volgende lineêre afbeeldings.
+        Bevestig die Rang-Nulheidgraad-stelling vir die volgende lineêre afbeeldings.
         D.w.s., vir elke afbeelding <m>T</m>,
         (a) bepaal <m>\Ker(T)</m> en <m>\Be(T)</m> eksplisiet,
         (b) bepaal die dimensie van <m>\Ker(T)</m> en <m>\Be(T)</m>,

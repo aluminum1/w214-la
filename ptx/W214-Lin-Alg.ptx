@@ -16,6 +16,9 @@
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes}
 \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\definecolor{primaryColor}{RGB}{214,64,0}
+\definecolor{secondaryColor}{RGB}{0,50,107}
+\definecolor{ternaryColor}{RGB}{0,109,235}
 
 \usepackage{pgfplots}
 
@@ -78,6 +81,9 @@
         <author>
           <personname> Bruce Bartlett</personname>
         </author>
+        <author>
+          <personname>Dirk Basson</personname>
+        </author>
       </titlepage>
 
       <xi:include href="./Ch0NoteForStudent.ptx" />
@@ -114,7 +120,10 @@
         <section>
           <title>Hints and Answers to Exercises</title>
           <p></p>
-          <solutions divisional = "hint answer" reading = "hint answer" worksheet = "hint answer" project = "hint answer" scope="w214-lin-alg" >
+          <solutions
+            project = "hint answer"
+            divisional = "hint answer"
+            scope="w214-lin-alg">
             <title>Hints and answers</title>
           </solutions>
         </section>
@@ -122,7 +131,10 @@
         <section>
           <title>Solutions to exercises</title>
           <p></p>
-          <solutions divisional = "solution" reading = "solution" worksheet = "solution" project = "solution" scope="w214-lin-alg" >
+          <solutions
+            project = "solution"
+            divisional = "solution"
+            scope="w214-lin-alg">
             <title>
               Solutions
             </title>

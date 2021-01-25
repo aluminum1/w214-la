@@ -317,7 +317,7 @@
 
         <mrow> \implies  (\frac{1}{2})\smul (2 \smul \ve x) \amp = \frac{1}{2} \smul (-(6 \smul \ve{w}))  </mrow>
 
-        <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6" text="title"></xref> \text{ on LHS, definition of inverse on RHS}) </mrow>
+        <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6" text="title"></xref> \text{ on LHS, def. of inverse on RHS}) </mrow>
 
 
         <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6" text="title" /> \text{ on RHS}) </mrow>

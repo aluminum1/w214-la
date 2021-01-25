@@ -6,7 +6,6 @@ To do list:
 - Some exercises do not have solutions yet.
 - Titles for examples? and Exercises?
 
-- In 1.4 the English denotes functions f while Afrikaans does \mathbf{f}. Perhaps use a macro \funcVec{} that can be changed in one place?
 - Can the first two lemmas in 1.5 be written using more words? And many others...
 - Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
 - First person to first person plural? (I to we)
@@ -26,7 +25,7 @@ Add solutions:
 
 Afrikaans:
 - Check that all of the following translations are consistent:
-  - verify -> bevestig, nagaan?, toets?
+  - verify -> bevestig, nagaan?
 
 
 I would like to add
@@ -61,3 +60,18 @@ Use??
 
 
 - Throughout there are some figures with <caption> tags, but no text. But I think this is ok.
+
+This can be used at the start of a section of exercises:
+  <introduction>
+    <p>
+      Some text
+    </p>
+    <assemblage>
+      <title>Outcomes of the exercises</title>
+      <p>
+      <dl>
+        <li> <title>Title1</title> <p>List Item 1</p> </li>
+      </dl>
+      </p>
+    </assemblage>
+  </introduction>

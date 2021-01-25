@@ -40,8 +40,8 @@
       <p>
         In <m>\mathbb{R}^4</m>, is <m>\ve{v}=(2, -1, 3, 0)</m> a linear combination of
         <me>
-        \ve{v}_1 = (1, 3, 2, 0), \ve{v}_2=(5, 1, 2, 4), \text{ and } \ve{v}_3 = (-1, 0, 2, 1) \text{?}
-      </me>
+        \ve{v}_1 = (1, 3, 2, 0), \ve{v}_2=(5, 1, 2, 4), \text{ and } \ve{v}_3 = (-1, 0, 2, 1)
+      </me>?
     </p>
     <p>
       To check this, we need to check if the equation
@@ -214,9 +214,9 @@
       <![CDATA[
       \begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
       \draw[<->] (0, -2.5) -- (0, 2.5) node[right] {\(y\)};
-      \draw[very thick, red, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
-      \draw[very thick, red, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
-      \draw[very thick, red, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
+      \draw[very thick, primaryColor, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
+      \draw[very thick, primaryColor, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
+      \draw[very thick, primaryColor, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
     </latex-image>
     </image>
     </figure>

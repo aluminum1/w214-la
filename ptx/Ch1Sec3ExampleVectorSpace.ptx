@@ -159,12 +159,12 @@
         <md>
           <mrow>\amp  \ve{v} + \ve{w}</mrow>
           <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3)
-          \amp \amp  (\text{Def. of addition in } B)</mrow>
+          \amp \amp  (\text{Def. of + in } B)</mrow>
           <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp
           (x + y = y + x \text{ for
           real numbers})</mrow>
           <mrow>\amp = \ve{w} + \ve{v}. \amp \amp
-          (\text{Def. of addition in } B)</mrow>
+          (\text{Def. of + in } B)</mrow>
         </md>
       </p>
       </li>
@@ -176,14 +176,16 @@
         <md>
           <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
           <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w}
-          \amp \amp  \text{(Def. of addition in } B)</mrow>
-          <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp
-          \text{(Def. addition in } B)</mrow>
-          <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp
-          (x + y) + z = x + (y + z) \text{ for real numbers)}</mrow>
+          \amp \amp  \text{(Def. of + in } B)</mrow>
+          <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, </mrow>
+          <mrow>\amp \qquad \qquad (u_3 + v_3) + w_3) \amp \amp
+          \text{(Def. of + in } B)</mrow>
+          <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, \amp \amp (x + y) + z = x + (y + z)</mrow>
+          <mrow> \amp \qquad u_3 + (v_3 + w_3)) \amp \amp
+           \quad \text{ for real numbers)}</mrow>
           <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp
-          \text{(Def. of addition in }B)</mrow>
-          <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \text{(Def. of addition in }B) </mrow>
+          \text{(Def. of + in }B)</mrow>
+          <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \text{(Def. of + in }B) </mrow>
         </md>.
       </p>
       </li>
@@ -195,9 +197,9 @@
         <md>
           <mrow>\amp \ve{0} + \ve{v}</mrow>
           <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp
-          \text{(Def. of the zero vector in } B</mrow>
+          \text{(Def. of zero vector in } B</mrow>
           <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp
-          \text{(Def. of addition in } B)</mrow>
+          \text{(Def. of + in } B)</mrow>
           <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp
           x + 0 = x \text{ for real numbers)}</mrow>
           <mrow>\amp = \ve{v}</mrow>
@@ -215,10 +217,11 @@
       We check:
       <md>
         <mrow>\amp  k \smul( \ve{v + w} )</mrow>
-        <mrow>\amp = k \smul(v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \text{(Def. of addition in } B)</mrow>
+        <mrow>\amp = k \smul(v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \text{(Def. of + in } B)</mrow>
         <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp  \text{(Def. of scalar mult. in }B)</mrow>
-        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  (k(x+y) = kx + ky \text{ for real numbers } x,y)</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp  \text{(Def. of addition in } B)</mrow>
+        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  (k(x+y) = kx + ky \text{ for}</mrow>
+        <mrow>\amp \amp \amp \quad\text{ real numbers } x,y)</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp  \text{(Def. of + in } B)</mrow>
         <mrow>\amp = k \smul\ve{v} + k \smul\ve{w} \amp \amp  \text{(Def. of scalar mult. in }B)</mrow>
       </md>
       </p>
@@ -232,7 +235,7 @@
         <mrow>\amp  (k + l) \smul\ve{v}</mrow>
         <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \text{(Def. of scalar mult. in } B)</mrow>
         <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  ((k+l)x = kx + lx \text{ for real numbers)}</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp  \text{(Def. of addition in }B)</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp  \text{(Def. of + in }B)</mrow>
         <mrow>\amp = k \smul\ve{v} + l \smul\ve{v} \amp \amp  \text{(Def. of scalar mult. in } B)</mrow>
       </md>
       </p>

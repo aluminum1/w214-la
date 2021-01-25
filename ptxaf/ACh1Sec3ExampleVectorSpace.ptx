@@ -7,11 +7,11 @@
       deur die eienskappe van versamelings
       <m>A</m>, <m>B</m> en <m>C</m> in
       <xref ref="ACh1Sec1Intro">Afdeling</xref> te bestudeer.
-      Kom ons toets byvoorbeeld
+      Kom ons bevestig byvoorbeeld
       dat <m>B</m> wel 'n abstrakte vektorruimte is
-      deur te toets dat dit die voorwaardes van
+      deur te bevestig dat dit die voorwaardes van
       <xref ref="real_vec_space">Definisie</xref> bevredig.
-      Om te toets dat die ander twee versamelings
+      Om te bevestig dat die ander twee versamelings
       vektorruimtes is, sal as oefeninge aan jou oorgelaat word.
     </p>
 
@@ -48,14 +48,14 @@
       </p>
 
       <p>
-        Ons moet nagaan dat dit sin maak.
-        Die eerste ding wat ons moet toets is dat
+        Ons moet bevestig dat dit sin maak.
+        Die eerste ding wat ons moet bevestig, is dat
         <m>\ve{u} + \ve{v}</m> ook 'n element van
         <m>B</m> is.
         Ons kan nie net enige definisie neerskryf nie!
-        Om na te gaan of <m>\ve{u} + \ve{v}</m> 'n
+        Om bevestig dat <m>\ve{u} + \ve{v}</m> 'n
         element van <m>B</m> is,
-        moet ons nagaan of dit vergelyking
+        moet ons kyk of dit die vergelyking
         <xref ref="def_of_b" /> bevredig.
         Kom ons kyk:
         <md>
@@ -158,12 +158,12 @@
       <md>
         <mrow>\amp  \ve{v} + \ve{w}</mrow>
         <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3)
-        \amp \amp  (\text{Def. van optelling in } B)</mrow>
+        \amp \amp  (\text{Def. van + in } B)</mrow>
         <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp
         (x + y = y + x \text{ vir
         reële getalle})</mrow>
         <mrow>\amp = \ve{w} + \ve{v}. \amp \amp
-        (\text{Def. van optelling in } B)</mrow>
+        (\text{Def. van + in } B)</mrow>
       </md>
     </p>
     </li>
@@ -175,15 +175,17 @@
       <md>
         <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
         <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} \amp \amp
-        \text{(Def. van optelling in }B)</mrow>
-        <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp
-        \text{(Def. van optelling in }B)</mrow>
-        <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp
-        ((x + y) + z = x + (y + z) (\text{
+        \text{(Def. van + in }B)</mrow>
+        <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, </mrow>
+        <mrow>\amp \qquad \qquad(u_3 + v_3) + w_3) \amp \amp
+        \text{(Def. van + in }B)</mrow>
+        <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, \amp\amp ((x + y) + z = x + (y + z)</mrow>
+        <mrow> \amp \qquad \qquad u_3 + (v_3 + w_3)) \amp \amp
+         \quad \text{
         vir reële getalle})</mrow>
         <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp
-        \text{(Def. van optelling in }B)</mrow>
-        <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \text{(Def. van optelling in }B) </mrow>
+        \text{(Def. van + in }B)</mrow>
+        <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \text{(Def. van + in }B) </mrow>
       </md>.
     </p>
     </li>
@@ -195,9 +197,9 @@
       <md>
         <mrow>\amp \ve{0} + \ve{v}</mrow>
         <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp
-        \text{(Def. van die nul-vektor in }B)</mrow>
+        \text{(Def. van nul-vektor in }B)</mrow>
         <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp
-        \text{(Def. van optelling in }B)</mrow>
+        \text{(Def. van + in }B)</mrow>
         <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp
         (x + 0 = x \text{ vir reële getalle)}</mrow>
         <mrow>\amp = \ve{v}</mrow>
@@ -215,10 +217,11 @@
       Ons gaan na:
       <md>
         <mrow>\amp  k \smul ( \ve{v + w} )</mrow>
-        <mrow>\amp = k \smul (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \text{(Def. van optelling in }B)</mrow>
+        <mrow>\amp = k \smul (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \text{(Def. van + in }B)</mrow>
         <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp \text{(Def. van skal.verm. in }B)</mrow>
-        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  (k(x+y) = kx + ky \text{ vir reële getalle }x,y)</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp \text{(Def. van optelling in }B)</mrow>
+        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  (k(x+y) = kx + ky \text{ vir reële} </mrow>
+        <mrow>\amp \amp \amp \quad\text{ getalle }x,y)</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp \text{(Def. van + in }B)</mrow>
         <mrow>\amp = k \smul \ve{v} + k \smul \ve{w} \amp \amp  \text{(Def. van skal.verm. in }B)</mrow>
       </md>
     </p>
@@ -232,7 +235,7 @@
         <mrow>\amp  (k + l) \smul \ve{v}</mrow>
         <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \text{(Def. van skal.verm. in }B)</mrow>
         <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  ((k+l)x = kx + lx \text{ vir reële getalle)}</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp \text{(Def. van optelling in } B)</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp \text{(Def. van + in } B)</mrow>
         <mrow>\amp = k \smul \ve{v} + l \smul \ve{v} \amp \amp  \text{(Def. van skal.verm. in } B)</mrow>
       </md>
     </p>

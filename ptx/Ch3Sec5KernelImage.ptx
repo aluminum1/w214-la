@@ -310,7 +310,7 @@
             \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
             \draw (1.5, -0.1) -- (1.5, -2);
             \node at (3.3, 1) {\(\Im(C)\)};
-            \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
+            \draw[very thick, primaryColor, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
           </latex-image>
         </image>
       </figure>
@@ -338,9 +338,9 @@
         <image>
           <latex-image>
             <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-            \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
-            \draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
-            \draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
+            \draw[very thick, primaryColor, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
+            \draw[very thick, secondaryColor, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
+            \draw[very thick, ternaryColor, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
             </latex-image>
         </image>
       </figure>
