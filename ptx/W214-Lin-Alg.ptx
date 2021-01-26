@@ -137,6 +137,8 @@
         <list-of elements="theorem proposition lemma corollary" />
       </appendix>
 
+      <xi:include href="./ListOfOutcomes.ptx" />
+
     </backmatter>
 
   </book>

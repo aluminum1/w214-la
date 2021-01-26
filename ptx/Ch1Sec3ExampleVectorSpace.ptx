@@ -314,7 +314,7 @@
       <assemblage>
         <title>Learning outcomes addressed by these exercises</title>
         <p>
-          <dl>
+          <dl width="narrow">
             <li><title>VS1</title>
               <p>
                 I can check whether a given definition of addition or scalar multiplication is closed.
