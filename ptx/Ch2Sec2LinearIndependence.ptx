@@ -16,17 +16,18 @@
     </statement>
   </definition>
 
-  <remark xml:id="remark_about_lin_dependence"> <title>Zero vector implies linear dependence</title>
+  <remark xml:id="remark_about_lin_dependence">
+    <title>Zero vector implies linear dependence</title>
     <p>
-      Suppose one of the vectors <m>\ve{v}_i</m> in the list <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> is the zero vector <m>\ve{0}</m>. Then <m>\basis{B}</m> is linearly dependent, since the equation <xref ref="lin_independence_eqn" /> has the nontrivial solution
+      Suppose one of the vectors <m>\ve{v}_i</m> in the list <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> is the zero vector <m>\ve{0}</m>. Then <m>\basis{B}</m> is linearly dependent, since the equation <xref ref="lin_independence_eqn" /> has the non-trivial solution
       <me>
         0 \ve{v}_1 + \cdots + 0 \ve{v}_{i-1} + 1 \ve{v}_i + 0 \ve{v}_{i+1} + \cdots + 0 \ve{v}_n = \ve{0},
       </me>
-      in other words, 
+      in other words,
       <me>
        k_1 = 0, \ldots, k_{i-1} = 0, k_i = 1, k_{i+1} = 0, \ldots, k_n = 0.
       </me>
-      So: <em>a linearly independent list ofvectors never contains the zero vector!</em>
+      So: <em>a linearly independent list of vectors never contains the zero vector!</em>
     </p>
   </remark>
 
@@ -41,12 +42,10 @@
       </me>
       is equivalent to the system of equations
       <men xml:id="system_from_r2_example">
-       -k_1 + k_2 = 0, \quad 2k_1 + k_2 = 0
+        -k_1 + k_2 = 0, \quad 2k_1 + k_2 = 0
       </men>
       which has only the trivial solution <m>k_1 = 0</m> and <m>k_2 = 0</m>.
     </p>
-
-
     </statement>
   </example>
 
@@ -58,9 +57,9 @@
       </statement>
       <solution>
         <p>
-<me>
-(2k_1 + k_2) - (-k_1 + k_2) = 0 = 3k_2 \implies k_2 = 0 \implies k_1 = 0 \text{ too}.
-</me>
+          <me>
+            (2k_1 + k_2) - (-k_1 + k_2) = 0 = 3k_2 \implies k_2 = 0 \implies k_1 = 0 \text{ too}.
+          </me>
         </p>
       </solution>
     </exercise>
@@ -77,7 +76,7 @@
       </men>
       is equivalent to the system of equations
       <men xml:id="system_from_r2_example_new">
-       -k_1 + k_2 + 2k_3 = 0, \quad 2k_1 + k_2 - k_3 = 0
+        -k_1 + k_2 + 2k_3 = 0, \quad 2k_1 + k_2 - k_3 = 0
       </men>
       which has a one-dimensional vector space of solutions parameterized by <m>t</m>,
       <men xml:id="supposed_soln">
@@ -90,26 +89,31 @@
       <me>
         2 (-1, \, 2) - 2 (1, \, 1) + 2 (2, \, -1) = (0, \, 0)
       </me>
-      so that <xref ref="eqn_to_check_lin_ind" /> has nontrivial solutions.
+      so that <xref ref="eqn_to_check_lin_ind" /> has non-trivial solutions.
     </p>
     </statement>
   </example>
 
-    <exercise>
-      <statement>
-        <p>
-          Check that <xref ref="system_from_r2_example_new" /> has the solution set <xref ref="supposed_soln" />.
-        </p>
-      </statement>
-      <solution>
-<p>
-We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have 3 unknowns but only 2 equations, we do not have a unique solution. Let <m>k_1</m> be free, i.e. <m> k_1 = t, t \in \mathbb{R}</m>. Then
-<me>
-(-k_1 + k_2 + 2k_3) - (2k_1 + k_2 - k_3) = 0 = -3k_1 + 3k_3 \\
-\implies -k_1 + k_3 = 0 \implies k_3 = t.
--t + k_2 + 2t = 0 \implies k_2 = -t
-</me>
-</p>
+  <exercise>
+    <statement>
+      <p>
+        Check that <xref ref="system_from_r2_example_new" />
+        has the solution set <xref ref="supposed_soln" />.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have three unknowns but only two equations, we do not have a unique solution. Let <m>k_1</m> be free, i.e. <m> k_1 = t, t \in \mathbb{R}</m>. Then
+        <md>
+          <mrow>
+            (-k_1 + k_2 + 2k_3) - (2k_1 + k_2 - k_3) = 0 = -3k_1 + 3k_3
+          </mrow>
+          <mrow>
+            \implies -k_1 + k_3 = 0 \implies k_3 = t.
+            -t + k_2 + 2t = 0 \implies k_2 = -t
+          </mrow>
+        </md>
+      </p>
       </solution>
     </exercise>
 
@@ -143,7 +147,7 @@ We have a system of consistent homogenous linear equations so we know there exis
   </example>
 
   <p>
-    Here are two more ways to think about linearly dependent lists of vectors. 
+    Here are two more ways to think about linearly dependent lists of vectors.
   </p>
 
   <proposition xml:id="lin_dependence_prop">
@@ -153,17 +157,18 @@ We have a system of consistent homogenous linear equations so we know there exis
         Let <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> be a list of vectors in a vector space <m>V</m>.
         The following statements are equivalent:
         <ol>
-          <li xml:id="defn_lin_dep"> The list of vectors <m>\basis{B}</m> is linearly dependent. 
+          <li xml:id="defn_lin_dep"> The list of vectors <m>\basis{B}</m> is linearly dependent.
           </li>
 
-          <li xml:id="lin_comb_other_vec"> 
-            <emph>(Linear Combination of Other Vectors)</emph>
-            <p> One of the vectors in the list <m>\basis{B}</m> is a linear combination of the other vectors in <m>\basis{B}</m>.
-            </p>
+          <li xml:id="lin_comb_other_vec">
+            <em>(Linear Combination of Other Vectors)</em>
+            One of the vectors in the list <m>\basis{B}</m> is a linear combination of the other vectors in <m>\basis{B}</m>.
           </li>
 
-          <li xml:id="lin_comb_prec_vec"> <emph>(Linear Combination of Preceding Vectors)</emph><title>Linear Combination of Preceding Vectors</title>
+          <li xml:id="lin_comb_prec_vec">
+            <title>Linear Combination of Preceding Vectors</title>
             <p>
+              <em>(Linear Combination of Preceding Vectors)</em>
               Either <m>\ve{v}_1 = \ve{0}</m>,
               or for some <m>r \in \{2, 3, \ldots,
               n\}</m>, <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1</m>,
@@ -175,34 +180,40 @@ We have a system of consistent homogenous linear equations so we know there exis
     </statement>
   </proposition>
 
-  <proof> <p>We will show that (1) <m>\Leftrightarrow</m> (2), (1) <m>\Rightarrow</m> (3) and (3) <m>\Rightarrow</m> (2), and conclude that each statement implies the others.</p>
+  <proof>
+    <p>
+      We will show that (1) <m>\Leftrightarrow</m> (2), (1) <m>\Rightarrow</m> (3) and (3) <m>\Rightarrow</m> (2), and conclude that each statement implies the others.
+    </p>
 
-      <p> (1) <m>\Rightarrow</m> (2). Suppose that <m>\basis{B}</m> is linearly dependent. This means that there are scalars <m>k_1</m>,
+    <p>
+      (1) <m>\Rightarrow</m> (2). Suppose that <m>\basis{B}</m> is linearly dependent. This means that there are scalars <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, not all zero, such that
       <men xml:id="lin_dep_lem_another_eqn">
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
       </men>.
-      Let <m>k_s</m> be one of the nonzero coefficients. Then, by taking the other vectors to the other side of the equation, and multuplying by <m>\frac{1}{k_s}</m> we can solve for <m>\ve{v}_s</m> in terms of the other vectors:
+      Let <m>k_s</m> be one of the non-zero coefficients. Then, by taking the other vectors to the other side of the equation, and multiplying by <m>\frac{1}{k_s}</m> we can solve for <m>\ve{v}_s</m> in terms of the other vectors:
       <md>
         <mrow>
-        \ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \mbox{(No } \ve{v}_i \mbox{ terms on RHS)}
-      </mrow>
-    </md>
-    Therefore, (2) is true.
+          \ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \text{(No } \ve{v}_i \text{ terms on RHS)}
+        </mrow>
+      </md>
+      Therefore, (2) is true.
     </p>
 
-    <p> (2) <m>\Rightarrow</m> (1). Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is, 
-    <md>
-      <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \mbox{(No }<m>\ve{v}_s</m> \mbox{term on RHS.)} </mrow>
-    </md>
-    Rearranging this equation gives:
-    <men xml:id="rearranged_lin_dep">
-      k_1 \ve{v}_1 + \ldots + (-1)\ve{v}_s + \ldots + k_n \ve{v}_n = \ve{0}.
-    </men>
-    Not all the coefficients on the LHS of <xref ref="rearranged_lin_dep"/> are zero, since the coefficient of <m>\ve{v}_s</m> is equal to <m>-1</m>. Therefore, <m>\basis{B}</m> is linearly dependent.
-  </p>
+    <p>
+      (2) <m>\Rightarrow</m> (1). Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is,
+      <md>
+        <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \text{(No } \ve{v}_s  \text{term on RHS.)} </mrow>
+      </md>
+      Rearranging this equation gives:
+      <men xml:id="rearranged_lin_dep">
+        k_1 \ve{v}_1 + \ldots + (-1)\ve{v}_s + \ldots + k_n \ve{v}_n = \ve{0}.
+      </men>
+      Not all the coefficients on the left hand-side of <xref ref="rearranged_lin_dep"/> are zero, since the coefficient of <m>\ve{v}_s</m> is equal to <m>-1</m>. Therefore, <m>\basis{B}</m> is linearly dependent.
+    </p>
 
-      <p> (1) <m>\Rightarrow</m> (3).
+    <p>
+      (1) <m>\Rightarrow</m> (3).
       Suppose that the list <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> is linearly dependent.
       This means that there are scalars <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, not all zero, such that
@@ -217,23 +228,23 @@ We have a system of consistent homogenous linear equations so we know there exis
       If <m>r=1</m>,
       then <xref ref="lin_dep_lem_first_eqn" /> is simply the equation
       <me>
-        k_1 \ve{v}_1 = \ve{0},  \mbox{where }  k_1 \neq 0
+        k_1 \ve{v}_1 = \ve{0},  \text{ where }  k_1 \neq 0
       </me>.
     </p>
 
     <p>
       Therefore <m>\ve{v}_1 = \ve{0}</m> by <xref ref="dichotomy_lem">Lemma</xref>,
       and we are done.
-      On the other hand, suppose <m>r \neq 1</m>.
-      Then <xref ref="lin_dep_lem_first_eqn" /> becomes the equation
+      Otherwise we must have <m>r \neq 1</m>.
+      In that case <xref ref="lin_dep_lem_first_eqn" /> becomes the equation
       <me>
-        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_r \neq 0
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \text{ where }  k_r \neq 0
       </me>.
     </p>
 
     <p>
-      By dividing by <m>k_r</m>,
-      we can now solve for <m>\ve{v}_r</m> in terms of the preceding vectors <m>\ve{v}_1</m>,
+      Then we can multiply by the scalar <m>\frac{1}{k_r}</m>,
+      and solve for <m>\ve{v}_r</m> in terms of the preceding vectors <m>\ve{v}_1</m>,
       <m>\ve{v}_2</m>, <m>\ldots</m>, <m>\ve{v}_{r-1}</m>:
       <me>
         \therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r} \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \,
@@ -241,10 +252,10 @@ We have a system of consistent homogenous linear equations so we know there exis
       Therefore, (3) is true.
     </p>
 
-     <p> (3) <m>\Rightarrow</m> (2) Suppose that (3) is true. In other words, either:
+     <p> (3) <m>\Rightarrow</m> (2) Suppose that (3) is true. In other words, either of the following two holds:
         <ul>
           <li> <m>\ve{v}_1 = \ve{0}</m>. Therefore, <m>\basis{B}</m> is linearly dependent, by <xref ref="remark_about_lin_dependence"/>. In other words, (1) is true. Therefore, since we have already proved that (1) <m>\Rightarrow </m> (2), we conclude that (2) is true. </li>
-          <li> For some <m>r \in \{2, \ldots, n\}</m>, <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m>. In this case, clearly <m>\ve{v}_r</m> is a linear combination of the other vectors in <m>\basis{B}</m>, so (2) is true.</li>
+          <li> For some <m>r \in \{2, \ldots, n\}</m>, the vector <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m>. In this case, clearly <m>\ve{v}_r</m> is a linear combination of the other vectors in <m>\basis{B}</m>, so (2) is true.</li>
         </ul>
         In both cases, (2) is true. So, (3) <m>\Rightarrow</m> (2).
     </p>
@@ -262,14 +273,14 @@ We have a system of consistent homogenous linear equations so we know there exis
     </statement>
 
     <solution>
-      <p>We check <xref ref="lin_comb_other_vec"/> of <xref ref="lin_dependence_prop"/>. That is, we check if one of the vectors in the list is a linear combination of the other vectors. Indeed, we observe by inspection that
-      <men>
-       \ve{f}_2 = \ve{f}_1 + \ve{f}_3.
-     </men>
-     Hence, <m>\basis{B}</m> is linearly dependent.
-   </p>
+      <p>
+        We check <xref ref="lin_comb_other_vec"/> of <xref ref="lin_dependence_prop"/>. That is, we check if one of the vectors in the list is a linear combination of the other vectors. Indeed, we observe by inspection that
+        <men>
+         \ve{f}_2 = \ve{f}_1 + \ve{f}_3.
+        </men>
+        Hence, <m>\basis{B}</m> is linearly dependent.
+      </p>
     </solution>
-
 
     <solution>
       <p>We check <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. That is, we check:
@@ -281,17 +292,19 @@ We have a system of consistent homogenous linear equations so we know there exis
           </li>
 
           <li>
-            <p>Is <m>\ve{f}_2</m> is a scalar multiple of <m>\ve{f}_1</m>? No.
+            <p>
+              Is <m>\ve{f}_2</m> is a scalar multiple of <m>\ve{f}_1</m>? No.
             </p>
           </li>
 
           <li>
-            <p>Is
+            <p>
+              Is
               <m>\ve{f}_3</m> is a linear combination of
               <m>\ve{f}_1</m> and <m>\ve{f}_2</m>? Yes, since
               <me>
-                \ve{f}_3 = - \ve{f}_1 + \ve{f}_2.
-              </me>
+                \ve{f}_3 = - \ve{f}_1 + \ve{f}_2
+              </me>.
               Hence, <m>\basis{B}</m> is linearly dependent.
             </p>
           </li>
@@ -300,11 +313,13 @@ We have a system of consistent homogenous linear equations so we know there exis
     </solution>
   </example>
 
-  <proposition xml:id="bumping_off_lemma">
-    <title>Bumping Off Proposition</title>
+  <proposition xml:id="Steinitz-exchange-lemma">
+    <title>The Steinitz Exchange Lemma</title>
+
     <statement>
       <p>
-        Suppose <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose</m> is a linearly independent list of vectors in a vector space <m>V</m>,
+        Suppose <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose</m> is a linearly independent list of vectors
+        in a vector space <m>V</m>,
         and that <m>\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose</m> spans <m>V</m>.
         Then <m>m \leq n</m>.
       </p>
@@ -317,28 +332,30 @@ We have a system of consistent homogenous linear equations so we know there exis
       <men>
         \basis{S} = \left\{ \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \right\}
       </men>
-      and consider the <sq>bloated</sq> list
+      and consider the <q>bloated</q> list
       <men xml:id="bloated_list">
         \basis{S}' = \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \ve{s}_n \right\}
       </men>
     </p>
 
     <p>
-      Now, since <m>\basis{S}</m> spans <m>V</m>, we know that <m>\ve{l}_1</m> can be written as a linear combination of the vectors <m>\ve{s}_1, \ldots, \ve{s}_n</m>. Therefore, by <xref ref="lin_comb_other_vec"/> of <xref ref="lin_dependence_prop"/>, we know that <m>\basis{S}'</m> is linearly dependent. Thus, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>, either:</p>
+      Now, since <m>\basis{S}</m> spans <m>V</m>, we know that <m>\ve{l}_1</m> can be written as a linear combination of the vectors <m>\ve{s}_1, \ldots, \ve{s}_n</m>. Therefore, by <xref ref="lin_comb_other_vec"/> of <xref ref="lin_dependence_prop"/>, we know that <m>\basis{S}'</m> is linearly dependent. Thus, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>, either:
+    </p>
+    <p>
       <ul>
         <li> <m>\ve{l}_1 = \ve{0}</m>. This cannot be true, since then <m>\basis{L}</m> would be linearly dependent by <xref ref="remark_about_lin_dependence"/>, contradicting our initial assumption. </li>
-        <li> or one of the <m>\ve{s}</m>-vectors, say <m>\ve{s}_r</m>, can be expressed as a linear combination of the preceding vectors. We can then remove <m>\ve{s}_r</m> from the list <m>\basis{S}'</m> (<sq>bump it off</sq>), and the resulting list
-      <men>
-        \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}
-      </men>
-      will still span <m>V</m>, by <xref ref="exercise-span-omission"/>. </li>
-    </ul>
-    <p> We can go on in this way,
-      each time transferring another one of the <m>\ve{l}</m>-vectors into the list,
-      and removing another one of the <m>\ve{s}</m>-vectors, and still have a list which spans <m>V</m>:
+        <li> or one of the <m>\ve{s}</m>-vectors, say <m>\ve{s}_r</m>, can be expressed as a linear combination of the preceding vectors. We can then remove <m>\ve{s}_r</m> from the list <m>\basis{S}'</m> (<q>exchange it with <m>\ve{l}_1</m></q>), and the resulting list
+        <men>
+          \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad (\ve{s}_r \text{ omitted)}
+        </men>
+        will still span <m>V</m>, by <xref ref="exercise-span-omission"/>. </li>
+      </ul>
+    </p>
+    <p>
+      We can go on in this way, each time transferring another one of the <m>\ve{l}</m>-vectors into the list, and removing another one of the <m>\ve{s}</m>-vectors, and still have a list which spans <m>V</m>:
       <md>
-        <mrow> 
-        \basis{L} \amp = \bopen \ve{l}_1, \ldots, \ve{l}_m \bclose \amp \basis{S} \amp = \bopen \ve{s}_1, \ldots, \ve{s}_n \bclose 
+        <mrow>
+        \basis{L} \amp = \bopen \ve{l}_1, \ldots, \ve{l}_m \bclose \amp \basis{S} \amp = \bopen \ve{s}_1, \ldots, \ve{s}_n \bclose
       </mrow>
       <mrow>
         \basis{L}_1 \amp = \bopen \ve{l}_2, \ldots, \ve{l}_m \bclose \amp \basis{S}_1 \amp = \bopen \ve{l}_1, \underbrace{\ve{s}_1, \ldots, \ve{s}_n}_{n-1} \bclose </mrow>
@@ -348,13 +365,11 @@ We have a system of consistent homogenous linear equations so we know there exis
       </md>
     </p>
     <p>
-      Now, suppose that <m>m > n</m>. When we reach the <m>n</m>th stage of this process, we will have <m>\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose</m>, and it will span <m>V</m>. Therefore, in particular, <m>\ve{l}_{n+1}</m> (which we know exists, since <m>m > n </m>) will be a linear combination of <m>\ve{l}_1, \ldots, \ve{l}_n</m>. But then, by <xref ref="lin_comb_other_vec"/> of <xref ref="lin_dependence_prop"/>, we conclude that <m>\basis{L}</m> is linearly dependent. But we were told in the beginning that <m>\basis{L}</m> is linearly <em>in</em>dependent, so we have a contradiction. Hence, our assumption that <m>m > n</m> must be false. Therefore, we must have <m>m \leq n</m>. 
+      Now, suppose that <m>m > n</m>. When we reach the <m>n</m>th stage of this process, we will have <m>\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose</m>, and it will span <m>V</m>. Therefore, in particular, <m>\ve{l}_{n+1}</m> (which we know exists, since <m>m > n </m>) will be a linear combination of <m>\ve{l}_1, \ldots, \ve{l}_n</m>. But then, by <xref ref="lin_comb_other_vec"/> of <xref ref="lin_dependence_prop"/>, we conclude that <m>\basis{L}</m> is linearly dependent. But we were told in the beginning that <m>\basis{L}</m> is linearly <em>in</em>dependent, so we have a contradiction. Hence, our assumption that <m>m > n</m> must be false. Therefore, we must have <m>m \leq n</m>.
    </p>
   </proof>
 
-
-
-  <exercises xml:id="ch2sec2exercises"> 
+  <exercises xml:id="ch2sec2exercises">
   <exercise>
     <statement>
       <p>
@@ -366,45 +381,50 @@ We have a system of consistent homogenous linear equations so we know there exis
     </statement>
     <solution>
       <p>
-We set up a linear equation and find the necessary conditions on <m>c</m>. Suppose some linear combination of the vectors equals 0:
-<me>
-k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
-</me>
-This vector equation gives rise to a system of 3 linear equations:
-<me>
-2k_1 + k_2 + 7k_3 = 0,\\
-3k_1 - k_2 + 3k_3 = 0,\\
-k_1 + 2k_2 + ck_3 = 0.
-</me>
-The corresponding matrix equation is 
-<me>
-\begin{bmatrix}
-2 \mamp 1 \mamp 7 \\
-3 \mamp -1 \mamp 3\\
-1 \mamp 2 \mamp c
-\end{bmatrix} 
-\begin{bmatrix}
-k_1 \\
-k_2 \\
-k_3\\
-\end{bmatrix} 
-=
-\begin{bmatrix}
-0 \\ 
-0 \\
-0
-\end{bmatrix} 
-</me>
-This matrix is non-invertible if and only if its determinant is 0. Furthermore, the matrix being non-invertible will mean we can find a non-trivial solution to the intial equation. We compute the determinant:s
-<me>
-\det\begin{bmatrix}
-2 \mamp 1 \mamp 7 \\
-3 \mamp -1 \mamp 3\\
-1 \mamp 2 \mamp c
-\end{bmatrix} = -5c + 40
-</me>
-which is 0 if and only if <m> c =8 </m>.
-</p>
+        We set up a linear equation and find the necessary conditions on <m>c</m>. Suppose some linear combination of the vectors equals <m>\ve{0}</m>:
+        <me>
+          k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
+        </me>.
+        This vector equation gives rise to a system of 3 linear equations:
+        <md>
+          <mrow> 2k_1 + k_2 + 7k_3 \amp = 0 </mrow>
+          <mrow> 3k_1 - k_2 + 3k_3 \amp = 0 </mrow>
+          <mrow> k_1 + 2k_2 + ck_3 \amp = 0 </mrow>
+        </md>.
+        The corresponding matrix equation is
+        <me>
+          \begin{bmatrix}
+            2 \mamp 1 \mamp 7 \\
+            3 \mamp -1 \mamp 3\\
+            1 \mamp 2 \mamp c
+          \end{bmatrix}
+          \begin{bmatrix}
+            k_1 \\
+            k_2 \\
+            k_3\\
+          \end{bmatrix}
+            =
+          \begin{bmatrix}
+            0 \\
+            0 \\
+            0
+          \end{bmatrix}
+        </me>
+        This matrix is non-invertible if and only if
+        its determinant is 0.
+        Furthermore, the matrix being non-invertible
+        will mean we can find a non-trivial solution
+        to the intial equation.
+        We compute the determinant:
+        <me>
+          \det\begin{bmatrix}
+            2 \mamp 1 \mamp 7 \\
+            3 \mamp -1 \mamp 3\\
+            1 \mamp 2 \mamp c
+          \end{bmatrix} = -5c + 40
+        </me>
+        which is 0 if and only if <m> c =8 </m>.
+      </p>
     </solution>
   </exercise>
 
@@ -412,28 +432,28 @@ which is 0 if and only if <m> c =8 </m>.
     <statement>
       <p>
         The list of vectors in <m>\Mat_{2,2}</m> given by
-         <me>
-\ve{v}_1 = \begin{bmatrix}
-1 &amp; 2 \\
-1 &amp; 1
-\end{bmatrix},\,
-\ve{v}_2 = \begin{bmatrix}
-1 &amp; 0 \\
--2 &amp; 1
-\end{bmatrix},\,
-\ve{v}_3 = \begin{bmatrix}
-1 &amp; 0 \\
-2 &amp; 3
-\end{bmatrix},\,
-\ve{v}_4 = \begin{bmatrix}
-0 &amp; 3 \\
-1 &amp; -1
-\end{bmatrix},\,
-\ve{v}_5 = \begin{bmatrix}
-1 &amp; 0 \\
-0 &amp; 1
-\end{bmatrix}
-      </me>
+        <me>
+          \ve{v}_1 = \begin{bmatrix}
+            1 \amp 2 \\
+            1 \amp 1
+          \end{bmatrix},\,
+          \ve{v}_2 = \begin{bmatrix}
+            1 \amp 0 \\
+            -2 \amp 1
+          \end{bmatrix},\,
+          \ve{v}_3 = \begin{bmatrix}
+            1 \amp 0 \\
+            2 \amp 3
+          \end{bmatrix},\,
+          \ve{v}_4 = \begin{bmatrix}
+            0 \amp 3 \\
+            1 \amp -1
+          \end{bmatrix},\,
+          \ve{v}_5 = \begin{bmatrix}
+            1 \amp 0 \\
+            0 \amp 1
+          \end{bmatrix}
+        </me>
         is linearly dependent
         (you will prove this in <xref ref="checking_matrices_lin_dep">Exercise</xref>,
         but for the sake of this question you may assume it to be true).
@@ -442,89 +462,95 @@ which is 0 if and only if <m> c =8 </m>.
       </p>
     </statement>
     <solution>
-<p>
-Firstly note that <m> \ve v_1  </m> is non-zero, so we consider <m> \ve v_2 </m>. <m> \ve v_2 </m> cannnot be a scalar multiple of <m> \ve v_1</m> by considering the matrix entry in position (1,2). We now consider <m> \ve v_3 </m>. Suppose
-<me>
-a\begin{bmatrix}
-1 &amp; 2 \\
-1 &amp; 1
-\end{bmatrix} + b \begin{bmatrix}
-1 &amp; 0 \\
--2 &amp; 1
-\end{bmatrix} = \begin{bmatrix}
-1 &amp; 0 \\
-2 &amp; 3
-\end{bmatrix}
-</me>
-This gives rise to a system of four linear equations. In particular, we have the equation for the matrix entry in position (1,2):
-<me>
-2a + 0b = 0
-</me>
-And hence <m> a = 0 </m>. But clearly
-<me>
-b \begin{bmatrix}
-1 &amp; 0 \\
--2 &amp; 1
-\end{bmatrix} \neq \begin{bmatrix}
-1 &amp; 0 \\
-2 &amp; 3
-\end{bmatrix}
-</me>
-for any choice of <m> b</m>. Hence <m> \ve v_3 </m> is not a scalar multiple of <m> \ve v_1 </m> and <m> \ve v_2</m>. We consider <m> \ve v_4 </m> next. Suppose
-<me>
-a\begin{bmatrix}
-1 &amp; 2 \\
-1 &amp; 1
-\end{bmatrix} +
-b \begin{bmatrix}
-1 &amp; 0 \\
--2 &amp; 1
-\end{bmatrix} +
-c \begin{bmatrix}
-1 &amp; 0 \\
-2 &amp; 3
-\end{bmatrix} = 
-\begin{bmatrix}
-0 &amp; 3 \\
-1 &amp; -1
-\end{bmatrix}
-</me>
-The equation for the entry in position (1,2) is simply 
-<me>
-2a = 3
-</me>
-and so <m> a = \frac{3}{2}</m>. The corresponding equation for the entry in position (1,1) is thus
-<me>
-\frac{3}{2} + b + c = 0.
-</me>
-Using this result, we consider the equation for the entry in position (2,2) and compute:
-<me>
-\frac{3}{2} + b + 3c = -1 \\
-\implies \frac{3}{2} + b + c + 2c = -1 \\
-\implies 2c = -1
-\implies c = -\frac{1}{2}
-</me>
-and so <m> b = -1 </m>. SHOW THAT THIS IS INCONSISTENT WITH (2,1).
-</p>
+    <p>
+      Firstly note that <m> \ve v_1  </m> is non-zero, so we consider <m> \ve v_2 </m>. <m> \ve v_2 </m> cannnot be a scalar multiple of <m> \ve v_1</m> by considering the matrix entry in position (1,2). We now consider <m> \ve v_3 </m>. Suppose
+      <me>
+        a\begin{bmatrix}
+          1 \amp 2 \\
+          1 \amp 1
+        \end{bmatrix} + b \begin{bmatrix}
+          1 \amp 0 \\
+          -2 \amp 1
+        \end{bmatrix} = \begin{bmatrix}
+          1 \amp 0 \\
+          2 \amp 3
+        \end{bmatrix}
+      </me>
+      This gives rise to a system of four linear equations. In particular, we have the equation for the matrix entry in position (1,2):
+      <me>
+        2a + 0b = 0
+      </me>
+      And hence <m> a = 0 </m>. But clearly
+      <me>
+        b \begin{bmatrix}
+          1 \amp 0 \\
+          -2 \amp 1
+        \end{bmatrix} \neq \begin{bmatrix}
+          1 \amp 0 \\
+          2 \amp 3
+        \end{bmatrix}
+      </me>
+      for any choice of <m> b</m>. Hence <m> \ve v_3 </m> is not a linear combination of <m> \ve v_1 </m> and <m> \ve v_2</m>. We consider <m> \ve v_4 </m> next. Suppose
+      <me>
+        a\begin{bmatrix}
+          1 \amp 2 \\
+          1 \amp 1
+        \end{bmatrix} +
+        b \begin{bmatrix}
+          1 \amp 0 \\
+          -2 \amp 1
+        \end{bmatrix} +
+        c \begin{bmatrix}
+          1 \amp 0 \\
+          2 \amp 3
+        \end{bmatrix} =
+        \begin{bmatrix}
+          0 \amp 3 \\
+          1 \amp -1
+        \end{bmatrix}
+      </me>
+      The equation for the entry in position (1,2) is simply
+      <me>
+        2a = 3
+      </me>
+      and so <m> a = \frac{3}{2}</m>. The corresponding equation for the entry in position (1,1) is thus
+      <me>
+        \frac{3}{2} + b + c = 0.
+      </me>
+      Using this result, we consider the equation for the entry in position (2,2) and compute:
+      <md>
+        <mrow> \frac{3}{2} + b + 3c \amp = -1 </mrow>
+        <mrow> \implies \frac{3}{2} + b + c + 2c \amp = -1 </mrow>
+        <mrow> \implies 2c \amp = -1 </mrow>
+        <mrow> \implies c \amp = -\frac{1}{2}</mrow>
+      </md>
+      and so <m> b = -1 </m>.
+    </p>
+    <p>
+      But these values are onconsistent with the entries in position (2,1). Can you see why?
+    </p>
     </solution>
   </exercise>
 
   <exercise xml:id="exercise-span-omission">
-    <statement> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
+    <statement>
+      <p>
+        Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
+      </p>
     </statement>
     <solution>
-<p>
-To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <m> \ve v \in V </m> there exist scalars <m> (a_i^{\ve v}) </m> depending on <m>\ve v</m> such that
-<me>
-\sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v
-</me>. But of course, it is also true that 
-<me>
-0 \ve w + \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v 
-</me> because <m> 0 \ve w = 0 </m> and so has no effect on the sum. Hence any vector in <m> V </m> is a linear combination of <m>\ve{w}, \ve{v}_1, \ldots, \ve{v}_n </m> which is to say that the set <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m>  spans <m>V</m>.
-</p>
+      <p>
+        To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <m> \ve v \in V </m> there exist scalars <m> (a_i^{\ve v}) </m> depending on <m>\ve v</m> such that
+        <me>
+          \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v
+        </me>.
+        But of course, it is also true that
+        <me>
+          0 \ve w + \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v
+        </me> because <m> 0 \ve w = 0 </m> and so has no effect on the sum. Hence any vector in <m> V </m> is a linear combination of <m>\ve{w}, \ve{v}_1, \ldots, \ve{v}_n </m> which is to say that the set <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m>  spans <m>V</m>.
+      </p>
     </solution>
   </exercise>
-
 
   <exercise>
     <statement>
@@ -532,55 +558,77 @@ To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <
         Let <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> be a linearly independent list of vectors in a vector space <m>V</m>.
         Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors in <m>\basis{B}</m>.
         Show that the list <m>\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is still linearly independent.
-        (Hint: Use the Linear Combination of Preceding Vectors Proposition.)
       </p>
     </statement>
-    <!--
+    <hint>
+      <p>
+        Use <xref ref="lin_dependence_prop"/>.
+      </p>
+    </hint>
     <solution>
       <p>
-        If we use the Linear Combination of Preceding Vectors Proposition, the proof is very slick! <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>) cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m> or else we would contradict the Linear Combination of Preceding Vectors Proposition. It is given that <m> \ve v </m> is not a linear combination of  <m> \ve v_1 \ldots \ve v_{n} </m>. Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is a linear combination of the previous vectors. Thus by the Linear Combination of Preceding Vectors Proposition, <m> {B}' </m> must be linearly independent.
+        If we use the Linear Combination of Preceding Vectors Proposition,
+        the proof is very slick!
+        The vector <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>)
+        cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m>
+        or else we would contradict the Linear
+        Combination of Preceding Vectors Proposition.
+        It is given that <m> \ve v </m> is not a linear
+        combination of  <m> \ve v_1 \ldots \ve v_{n} </m>.
+        Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m>
+        is a linear combination of the previous vectors.
+        Thus by the Linear Combination of Preceding
+        Vectors Proposition, <m> {B}' </m> must be
+        linearly independent.
       </p>
     </solution>
-  -->
   </exercise>
 
   <exercise>
-  	<statement>
-  		<p>
-Consider the vector space of functions on the closed unit interval, <m>\Fun ([0,1])</m>. Show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m>\Fun ([0,1])</m>.
-  		</p>
-  	</statement>
-<!--  	<solution>
-<p>
-Given <m> n \in \mathbb N </m>, consider the set of <m> n </m> functions
-<me>
-X = \left \{ f_m \, : \, f_m\left(\frac{1}{m}\right) = 1, f_m(x) = 0 \text{ otherwise} \right\}.
-</me>
-We shall show that this collections is linearly independent. Suppose there is a linear relation on <m>X</m>. In other words, suppose
-<men xml:id="func_01_lin_rel">
-a_1 f_1(x) + a_2 f_2(x) + \cdots + a_n f_n(x) = 0
-</men>
-for all <m> x \in [0,1] </m>. Plug <m>\frac{1}{n}</m> into <xref ref = "func_01_lin_rel"/>. We obtain
-<me>
-\frac{a_n}{n} = 0
-</me>
-and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-1}</m> into <xref ref = "func_01_lin_rel"/> to conclude <m> a_{n-1} = 0</m> and so forth. Hence all <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> must be 0. Thus <m>X</m> is linearly independent.
-</p>
-  </solution>
--->
+    <statement>
+      <p>
+        Consider the vector space of functions on the closed interval, <m>\Fun ([0,1])</m>. Show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m>\Fun ([0,1])</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Given <m> n \in \mathbb N </m>, consider the set of
+        <m> n </m> functions
+      <me>
+        X = \left \{ f_m \, : \, f_m\left(\frac{1}{m}\right) = 1, f_m(x) = 0 \text{ otherwise.} \right\}
+      </me>
+      We shall show that this collections is linearly independent.
+      Suppose there is a linear relation on <m>X</m>.
+      In other words, suppose
+      <men xml:id="func_01_lin_rel">
+        a_1 f_1(x) + a_2 f_2(x) + \cdots + a_n f_n(x) = 0
+      </men>
+      for all <m> x \in [0,1] </m>.
+      Substitute <m>x = \frac{1}{n}</m> into <xref ref = "func_01_lin_rel"/>. We obtain
+      <me>
+        \frac{a_n}{n} = 0
+      </me>
+      and so <m> a_n </m> must be 0.
+      Continue in this fashion, plugging <m>x = \frac{1}{n-1}</m>
+      into <xref ref = "func_01_lin_rel"/> to conclude
+      <m> a_{n-1} = 0</m> and so forth.
+      Hence all <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> must be 0.
+      Thus <m>X</m> is linearly independent.
+      </p>
+    </solution>
+
   </exercise>
 
 <exercise>
-	<statement>
-<p>
-	(Bonus) Try adapt the argument in the question above to show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m> \Cont([0,1])</m>, the vector space of all <emph>continuous</emph> real valued functions on <m>[0,1]</m>.
-</p>
-</statement>
+  <statement>
+    <p>
+      (Bonus) Try adapt the argument in the question above to show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m> \Cont([0,1])</m>, the vector space of all <em>continuous</em> real valued functions on <m>[0,1]</m>.
+    </p>
+  </statement>
 </exercise>
 
-  </exercises>
+</exercises>
 
-<solutions divisional="solution answer" />
 
 
 </section>

@@ -10,24 +10,22 @@
     <statement>
       <p>
         'n <term>Lineêre kombinasie</term> van 'n eindige
-        kolleksie vektore <m>\ve{v}_1, \ldots, \ve{v}_n</m> in 'n vektorruimte <m>V</m>
-        is 'n vektor van die vorm
+        kolleksie vektore <m>\ve{v}_1, \ldots, \ve{v}_n</m> in 'n vektorruimte <m>V</m> is 'n vektor van die vorm
         <men>
           a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_b \ve{v}_n
         </men>
         waar <m>a_1, a_2, \ldots, a_n</m> skalare is.
-        As al die skalare <m>a_i</m> gelyk
-        aan nul is, dan s&#xea; ons dat dit die
-        <term>triviale line&#xea;re
-        kombinasie</term> is.
+        As al die skalare <m>a_i</m> gelyk aan nul is, dan sê ons dat dit die
+        <term>triviale lineêre kombinasie</term> is.
       </p>
     </statement>
   </definition>
 
   <example>
+    <title>Eerste voorbeeld van 'n lineêre kombinasie </title>
     <statement>
       <p>
-        In <m>\mathbb{R}^3</m> is <m>(6, 2, -14)</m> 'n line&#xea;re
+        In <m>\mathbb{R}^3</m> is <m>(6, 2, -14)</m> 'n lineêre
         kombinasie van <m>(-3, 1, 2)</m> en <m>(-2, 0, 3)</m>, want
         <me>
           (6, 2, -14) = 2 (-3, 1, 2) -6 (-2, 0, 3)
@@ -36,27 +34,27 @@
     </statement>
   </example>
 
-<!-- TO DO: Translate to Afrikaaans, beginning here-->
-    <example> <title>Checking if a vector is a linear combination of other vectors</title>
+
+    <example> <title>Stel vas of 'n vektor 'n lineêre kombinasie van ander vektore is</title>
     <statement>
       <p>
-        In <m>\mathbb{R}^4</m>, is <m>\ve{v}=(2, -1, 3, 0)</m> a linear combination of
+        In <m>\mathbb{R}^4</m>, is <m>\ve{v}=(2, -1, 3, 0)</m> 'n lineêre kombinasie van
         <me>
-        \ve{v}_1 = (1, 3, 2, 0), \ve{v}_2=(5, 1, 2, 4), \text{ and } \ve{v}_3 = (-1, 0, 2, 1) \text{?}
-      </me>
+        \ve{v}_1 = (1, 3, 2, 0), \ve{v}_2=(5, 1, 2, 4), \text{ en } \ve{v}_3 = (-1, 0, 2, 1)
+      </me>?
     </p>
     <p>
-    To check this, we need to check if the equation
-    <men xml:id="first_span_ex_eqn">
-    \ve{v} = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3,
-    </men>
-    which is an equation in the unknowns <m>a_1, a_2, a_3</m>, has any solutions. Let us write out <xref ref="first_span_ex_eqn"/> explicitly:
-    <mdn>
-    <mrow> (2, -1, 3, 0) \amp = a_1 (1, 3, 2, 0) + a_2 (5, 1, 2, 4) + a_3 (-1, 0, 2, 1)     </mrow>
-    <mrow xml:id="last_eqn_in_lin_comb_ex"> \therefore (2, -1, 3, 0) \amp = (a_1 + 5a_2 -a_3, 3a_1 + a_2, 2a_1 + 2a_2 + 2a_3, 4a_2 + a_3) </mrow>
-    </mdn>
-    <xref ref="last_eqn_in_lin_comb_ex"/> is an equation between two vectors in <m>\mathbb{R}^4</m>. Two vectors in <m>\mathbb{R}^4</m> are equal if and only if their corresponding coefficients are equal. 
-     So, <xref ref="first_span_ex_eqn"/> is equivalent to the following system of simultaneous linear equations:
+      Om dit te weet, moet ons vasstel of die vergelyking
+      <men xml:id="first_span_ex_eqn">
+      \ve{v} = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3,
+      </men>
+      in die onbekendes <m>a_1, a_2, a_3</m> enige oplossings het. Kom ons skryf <xref ref="first_span_ex_eqn"/> eksplisiet uit:
+      <mdn>
+        <mrow> (2, -1, 3, 0) \amp = a_1 (1, 3, 2, 0) + a_2 (5, 1, 2, 4) + a_3 (-1, 0, 2, 1)     </mrow>
+        <mrow xml:id="last_eqn_in_lin_comb_ex"> \therefore (2, -1, 3, 0) \amp = (a_1 + 5a_2 -a_3, 3a_1 + a_2, 2a_1 + 2a_2 + 2a_3, 4a_2 + a_3) </mrow>
+      </mdn>
+      Die vergelyking <xref ref="last_eqn_in_lin_comb_ex"/> is 'n vergelyking tussen twee vektore in <m>\mathbb{R}^4</m>. Twee vektore in <m>\mathbb{R}^4</m> is gelyk as en slegs as hul ooreenstemmende koëffisiënte gelyk is.
+      So, <xref ref="first_span_ex_eqn"/> is ekwivalent aan die stelsel gelyktydige lineêre vergelykings:
       <mdn>
         <mrow  xml:id="sim_lin_eqns_first_span_1ex">a_1 + 5a_2 -a_3 \amp = -2 </mrow>
         <mrow>3a_1 + a_2 \amp = -1 </mrow>
@@ -64,111 +62,111 @@
         <mrow xml:id="sim_lin_eqns_first_span_4ex">4a_2 + a_3 \amp = 0 </mrow>
       </mdn>
     </p>
-    <p>In other words, our question becomes: do equations <xref first="sim_lin_eqns_first_span_1ex" last="sim_lin_eqns_first_span_4ex"/> have a solution?</p>
+    <p>Met ander woorde, ons vraag is nou: het die stelsel <xref first="sim_lin_eqns_first_span_1ex" last="sim_lin_eqns_first_span_4ex"/> 'n oplossing?</p>
 
-    <p>This is the kind of problem you already know how to solve by hand, from first year. We can also use SageMath to do it for us. We simply tell it what our unknown variables are, and then ask it to solve the equation. Press <c>Evaluate (Sage)</c> to see the result.</p>
+    <p>Jy behoort reeds uit jou eerstejaarkennis te weet hoe om hierdie tipe probleem met die hand op te los. Ons kan egter ook SageMath gebruik om dit namens ons te doen. Ons sê gewoon wat ons onbekende veranderlikes en vra dit dan om die stelsel op te los. Druk <c>Evaluate (Sage)</c> om die uitslag te sien.</p>
     <sage>
       <input>
       var('a1, a2, a3')
 
-      solve([a1 + 5*a2 - a3 == 2, 
-            3*a1 + a2 == -1, 
+      solve([a1 + 5*a2 - a3 == 2,
+            3*a1 + a2 == -1,
             2*a1 + 2*a2 + 2*a3 ==3,
-            4*a2 + a3 == 0], 
+            4*a2 + a3 == 0],
             [a1, a2, a3])
       </input>
     </sage>
     <p>
-    SageMath returns an empty list <c>[]</c>. In other words, there are no solutions to equations <xref first="sim_lin_eqns_first_span_1ex" last="sim_lin_eqns_first_span_4ex"/>. Therefore <m>\ve{v}</m> cannot be expressed as a linear combination of <m>\ve{v}_1, \ve{v}_2, \ve{v}_3</m>.</p>
+    SageMath gee 'n leë lys <c>[]</c> as uitset. Met ander woorde, daar is geen oplossing vir die stelsel <xref first="sim_lin_eqns_first_span_1ex" last="sim_lin_eqns_first_span_4ex"/> nie. Daarom kan <m>\ve{v}</m> nie as 'n lineêre kombinasie van <m>\ve{v}_1, \ve{v}_2, \ve{v}_3</m> uitgedruk word nie.</p>
       </statement>
   </example>
 
-<example xml:id="poly_example_lin_comb"><title>Checking if a polynomial is a linear combination of other polynomials</title>
+<example xml:id="poly_example_lin_comb"><title>Stel vas of 'n polinoom 'n lineêre kombinasie van ander polinome is</title>
     <statement>
       <p>
-        In <m>\Poly_2</m>, can <m>p=x^2 - 1</m> be expressed as a linear combination of
+        In <m>\Poly_2</m>, is dit moontlik om <m>p=x^2 - 1</m> as 'n lineêre kombinasie van
         <me>
-        p_1 = 1+x^2, \, p_2 = x-3, \, p_3 = x^2+x+1, \, p_4 = x^2 + x - 1 \text{?}
-      </me>
+        p_1 = 1+x^2, \, p_2 = x-3, \, p_3 = x^2+x+1, \, p_4 = x^2 + x - 1
+      </me> uit te druk?
     </p>
     <p>
-    To check this, we need to check if the equation
+    Om dit te beantwoord, moet ons vasstel of die vergelyking
     <men xml:id="second_span_ex_eqn">
     p = a_1 p_1 + a_2 p_2 + a_3 p_3 + a_4 p_4,
     </men>
-    which is an equation in the unknowns <m>a_1, a_2, a_3, a_4</m>, has any solutions. Let us write out <xref ref="second_span_ex_eqn"/> explicitly, grouping together powers of <m>x</m>:
+    in die onbekendes <m>a_1, a_2, a_3, a_4</m> enige oplossings het. Kom ons skryf <xref ref="second_span_ex_eqn"/> eksplisiet uit, deur magte van <m>x</m> saam te groepeer:
     <md>
     <mrow> p \amp = a_1 p_1 + a_2 p_2 + a_3 p_3 + a_4 p_4     </mrow>
-    <mrow> \therefore x^2 - 1 \amp = 
+    <mrow> \therefore x^2 - 1 \amp =
     a_1 (1+x^2) + a_2 (x-3) + a_3 (x^2 + x + 1) + a_4 (x^2 + x - 1) </mrow>
-    <mrow xml:id="last_eqn_pol_lin_comb"> \therefore -1 + x^2 \amp = (a_1 -3a_2 + a_3 - a_4) + (a_2 + a_3 + a_4) x + (a_1 + a_3 + a_4)x^2 
+    <mrow xml:id="last_eqn_pol_lin_comb"> \therefore -1 + x^2 \amp = (a_1 -3a_2 + a_3 - a_4) + (a_2 + a_3 + a_4) x + (a_1 + a_3 + a_4)x^2
   </mrow>
     </md>
-    Now, two polynomials are equal if and only if all their coefficients are equal. So, <xref ref="second_span_ex_eqn"/> is equivalent to the following system of simultaneous linear equations:
+    Twee polinome is gelyk as en slegs as elkeen van hul koëffisiënte gelyk is. So, <xref ref="second_span_ex_eqn"/> is ekwivalent aan die volgende stelsel gelyktydige lineêre vergelykings:
       <mdn>
         <mrow  xml:id="sim_lin_eqns_second_span_1ex">a_1 - 3a_2 + a_3 - a_4 \amp = -1 </mrow>
         <mrow> a_2 + a_3 + a_4 \amp = 0</mrow>
         <mrow xml:id="sim_lin_eqns_second_span_4ex" > a_1 + a_3 + a_4 \amp = 1 </mrow>
       </mdn>
     </p>
-    <p>In other words, our question becomes: do equations <xref first="sim_lin_eqns_second_span_1ex" last="sim_lin_eqns_second_span_4ex"/> have a solution? We ask SageMath.</p>
+    <p>Ons vraag word dus: het ie stelsel <xref first="sim_lin_eqns_second_span_1ex" last="sim_lin_eqns_second_span_4ex"/> 'n oplossing? Ons gebruik weer SageMath om ons te help:</p>
     <sage>
       <input>
       var('a1, a2, a3, a4')
 
-      solve([a1 - 3*a2 + a3 - a4 == -1, 
-            a2 + a3 + a4 == 0, 
-            a1 + a3 - a4 == 1], 
-            [a1, a2, a3, a4])  
+      solve([a1 - 3*a2 + a3 - a4 == -1,
+            a2 + a3 + a4 == 0,
+            a1 + a3 - a4 == 1],
+            [a1, a2, a3, a4])
       </input>
 
     </sage>
-    On my computer, Sage returns:
-    <sidebyside>
-    <p> <c> [[a1 == 2*r1 + 2/3, a2 == (2/3), a3 == -r1 + 1/3, a4 == r1]] </c> </p>
-    </sidebyside>
-   <p>Here, <c>r1</c> and <c>r2</c> are to be interpreted as free paramters. I'm going to call them  <m>s</m> and <m>t</m> instead, because that's what we usually call our free parameters! So, equations <xref first="sim_lin_eqns_second_span_1ex" last="sim_lin_eqns_second_span_4ex"/> have <em>infinitely</em> many solutions, parameterized by two free parameters <m>s</m> and <m>t</m>. In particular, there exists <em>at least one</em> solution. For instance, if we take <m>s=2</m> and <m>t = 1</m> (a totally arbitrary choice!), we get the following solution:</p>
-   <mdn>
- <mrow> a_1 = \frac{8}{3}, \, a_2 = \frac{2}{3}, a_3 = -\frac{5}{3}, a_4 = 1 </mrow>
- <mrow xml:id="soln_poly_span_prob"> \text{i.e. } p = \frac{8}{3} p_1 + \frac{2}{3} p_2 - \frac{5}{3} p_3 + p_4 </mrow>
-   </mdn>
-   <p>
-   You should expand out the right hand side of <xref ref="soln_poly_span_prob"/> by hand and check that it indeed is equal to <m>p</m>. </p>
+    <p>
+      Op my rekenaar is die uitset:
+    </p>
 
-   <p> We conclude that <m>p</m> can indeed be expressed as a linear combination of <m>p_1</m>, <m>p_2</m>, <m>p_3</m> and <m>p_4</m>. </p>
+    <p> <c> [[a1 == 2*r1 + 2/3, a2 == (2/3), a3 == -r1 + 1/3, a4 == r1]] </c> </p>
+
+    <p>
+      Hier moet <c>r1</c> en <c>r2</c> as vrye parameters interpreteer word. Ek gaan hulle <m>s</m> en <m>t</m> noem, want dis wat ons gewoonlik gebruik! Dus het die stelsel <xref first="sim_lin_eqns_second_span_1ex" last="sim_lin_eqns_second_span_4ex"/>  <em>oneindig</em> baie oplossings, geparametriseer deur twee vrye veranderlikes <m>s</m> en <m>t</m>. In besonder bestaan daar <em>ten minste een</em> oplossing. Byvoorbeeld, as ons <m>s=2</m> en <m>t = 1</m> neem (heeltemal lukrake keuse!), kry ons die volgende oplossing:
+      <mdn>
+       <mrow> a_1 = \frac{8}{3}, \, a_2 = \frac{2}{3}, a_3 = -\frac{5}{3}, a_4 = 1 </mrow>
+       <mrow xml:id="soln_poly_span_prob"> \text{i.e. } p = \frac{8}{3} p_1 + \frac{2}{3} p_2 - \frac{5}{3} p_3 + p_4 </mrow>
+     </mdn>
+   </p>
+
+   <p>
+   Jy moet die regterkant van <xref ref="soln_poly_span_prob"/> met die hand uitbrei en kyk dat dit inderdaad gelyk aan <m>p</m> is. </p>
+
+   <p> Ons lei af dat <m>p</m> wel as 'n lineêre kombinasie van <m>p_1</m>, <m>p_2</m>, <m>p_3</m> en <m>p_4</m> geskryf kan word. </p>
 
       </statement>
   </example>
-<!-- Translation job ends here. -->
 
 
   <example>
     <statement>
       <p>
-        Definieer die funksies <m>\ve{f}, \ve{f}_1, \ve{f}_2 \in
-        \Diff</m> as
+        Definieer die funksies <m>\ve{f}, \ve{f}_1, \ve{f}_2 \in \Diff</m> as
         <me>
-          \ve{f}(x) = \cos^3 x,  \ve{f}_1 (x) = \cos (x),  \ve{f}_2
-          (x) = \cos (3x)
+          \ve{f}(x) = \cos^3 x,  \ve{f}_1 (x) = \cos (x),  \ve{f}_2 (x) = \cos (3x)
         </me>.
       </p>
 
       <p>
-        Dan is <m>\ve{f}</m> 'n line&#xea;re kombinasie van <m>\ve{f}_1</m> en
-        <m>\ve{f}_2</m>, vanwe&#xeb;
-        die identiteit <m>\cos(3x) = \frac{1}{4} (3 \cos x
-        + \cos(3x))</m>.
+        Dan is <m>\ve{f}</m> 'n lineêre kombinasie van <m>\ve{f}_1</m> en
+        <m>\ve{f}_2</m>, vanweë die identiteit <m>\cos(3x) = \frac{1}{4} (3 \cos x + \cos(3x))</m>.
         Sien <xref ref="trig_poly_example">Voorbeeld</xref>.
         Met ander woorde,
         <me>
-          \ve{f} = \frac{3}{4} \ve{f}_1 + \frac{1}{4} \ve{f}_2 
+          \ve{f} = \frac{3}{4} \ve{f}_1 + \frac{1}{4} \ve{f}_2
         </me>.
       </p>
 
       <p>
         Hierdie voorbeeld wys dat <m>\ve{f}</m> ook 'n trigonometriese polinoom
-        is,selfs al is die oorspronklike formule <m>\ve{f}(x) = cos(3x)</m> nie van
-        die form <xref ref="formula_for_trig_poly" /> nie.
+        is, selfs al is die oorspronklike formule <m>\ve{f}(x) = \cos(3x)</m> nie van
+        die form <xref ref="formula_for_trig_poly" text="global"/> nie.
       </p>
     </statement>
   </example>
@@ -176,10 +174,9 @@
   <definition>
     <statement>
       <p>
-        Ons s&#xea; dat die lys vektore
-        <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2,
-        \ldots, \ve{v}_n \bclose</m> in 'n vektorruimte <m>V</m> <m>V</m> <term>span</term> as elke
-        vektor <m>\ve{v} \in V</m> 'n line&#xea;re kombinasie van die vektore uit <m>\basis{B}</m>.
+        Ons sê dat die lys vektore
+        <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2,\ldots, \ve{v}_n \bclose</m> in 'n vektorruimte <m>V</m> vir <term><m>V</m> onderspan</term> as elke
+        vektor <m>\ve{v} \in V</m> 'n lineêre kombinasie van die vektore uit <m>\basis{B}</m> is.
       </p>
     </statement>
   </definition>
@@ -191,8 +188,7 @@
         <me>
           \ve{e}_1 := (1, \, 0), \, \, \ve{e}_2 := (0, 1)
         </me>
-        gespan, want elke vektor <m>\ve{v} = (a_1, \, a_2)</m> kan as 'n line&#xea;re
-        kombinasie
+        onderspan, want elke vektor <m>\ve{v} = (a_1, \, a_2)</m> kan as 'n lineêre kombinasie
         <me>
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2
         </me>
@@ -202,94 +198,93 @@
   </example>
 
 
-<!-- TO DO: Translate to Afrikaans -->
   <example xml:id="three_vectors_spanning_R2_example">
-    <title>Checking if a list of vectors space the vector space</title>
+    <title>Stel vas of 'n lys vektore 'n vektorruimte onderspan</title>
     <statement>
     <p>
-      Is <m>\mathbb{R}^2</m> spanned by the following list of vectors?
+      Word <m>\mathbb{R}^2</m> onderspan deur die volgende lys vektore?
       <me>
-        \ve{f}_1 := (-1, 2), \, \ve{f}_2 := (1, 1), \, \ve{f}_3 := (2, -1) 
+        \ve{f}_1 := (-1, 2), \, \ve{f}_2 := (1, 1), \, \ve{f}_3 := (2, -1)
       </me>
     </p>
-    <p>
     <figure xml:id="spanning_set_R2">
-    <caption>A list of vectors which spans <m>\mathbb{R}^2</m>.</caption>
+    <caption>'n Lys vektore wat <m>\mathbb{R}^2</m> onderspan.</caption>
     <image width="70%">
     <latex-image>
-          <![CDATA[
-          \begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
+      <![CDATA[
+      \begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
       \draw[<->] (0, -2.5) -- (0, 2.5) node[right] {\(y\)};
-      \draw[very thick, red, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
-      \draw[very thick, red, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
-      \draw[very thick, red, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
+      \draw[very thick, primaryColor, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
+      \draw[very thick, primaryColor, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
+      \draw[very thick, primaryColor, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
     </latex-image>
     </image>
     </figure>
-    </p>
    </statement>
    <solution>
     <p>
-    To check this, we need check if every vector <m>\ve{v} \in V</m> can be written as a linear combination of <m>\ve{f}_1, \ve{f}_2</m> and <m> \ve{f}_3</m>.</p>
+    Om dit vas te stel, moet ons kyk of elke vektor <m>\ve{v} \in V</m> as 'n lineêre kombinasie van <m>\ve{f}_1, \ve{f}_2</m> en <m> \ve{f}_3</m> geskryf kan word.</p>
 
-    <p> So, let <m>\ve{v} = (v_1,v_2) </m> be a fixed, but arbitrary, vector in <m>\mathbb{R}^2</m>. We need to check if the following equation has a solution for <m>a_1, a_2, a_3</m>:
+    <p> So, laat <m>\ve{v} = (v_1,v_2) </m> 'n vaste, maar willekeurige vektor in <m>\mathbb{R}^2</m> wees. Ons moet kyk of die volgende vergelyking 'n oplossing vir <m>a_1, a_2, a_3</m> het:
     <men xml:id="eqn_for_R2_span">
     \ve{v} = a_1 \ve{f}_1 + a_2 \ve{f}_2 + a_3 \ve{f}_3
   </men>
-   Let us write this equation out explicitly:
+    Kom ons skryf hierdie vergelyking eksplisiet uit:
        <mdn>
     <mrow> \ve{v} \amp = a_1 \ve{f}_1 + a_2 \ve{f}_2 + a_3 \ve{f}_3     </mrow>
-    <mrow> \therefore (v_1, v_2) \amp = 
+    <mrow> \therefore (v_1, v_2) \amp =
     a_1 (-1, 2) + a_2 (1, 1) + a_3 (2, -1) </mrow>
-    <mrow xml:id="last_eqn_span_example"> \therefore (v_1, v_2) \amp = (-a_1 + a_2 + 2a_3, 2a_1 + a_2 - a_3) 
+    <mrow xml:id="last_eqn_span_example"> \therefore (v_1, v_2) \amp = (-a_1 + a_2 + 2a_3, 2a_1 + a_2 - a_3)
   </mrow>
     </mdn>
-    <xref ref="last_eqn_span_example"/> is an equation between two vectors in <m>\mathbb{R}^2</m>. Two vectors in <m>\mathbb{R}^2</m> are equal if and only if their corresponding coefficients are equal. So, <xref ref="last_eqn_span_example"/> is equivalent to the following system of simultaneous linear equations:
+    Die vergelyking <xref ref="last_eqn_span_example"/> is 'n vergelyking tussen twee vektore in  <m>\mathbb{R}^2</m>. Twee vektore in <m>\mathbb{R}^2</m> is gelyk as en slegs as hul ooreenstemmende koëffisiënte gelyk is. So, <xref ref="last_eqn_span_example"/> is ekwivalent aan die volgende stelsel gelyktydige vergelykings:
       <mdn>
         <mrow xml:id="sim_lin_eqns_3ex"> -a_1 + a_2 + 2a_3 \amp = v_1 </mrow>
         <mrow xml:id="sim_lin_eqns_3ex2"> 2a_1 + a_2 - a_3 \amp = v_2</mrow>
       </mdn>
     </p>
-    <p>In other words, the original question</p>
-    <assemblage>
-    <p> Is <m>\mathbb{R}^2</m> spanned by <m>\ve{f}_1, \ve{f}_2, \ve{f}_3 </m> ? </p>
-  </assemblage>
-   <p>is equivalent to the question</p>
-   <assemblage>
-    <p>Can we always solve <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/> for <m>a_1, a_2, a_3</m>, no matter what the fixed constants <m>\ve{v}_1, \ve{v}_2</m> are? </p>
-  </assemblage>
-  <p>You already know how to solve simultaneous linear equations such as <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/> by hand:
+    <p>Met ander woorde, die oorspronklike vraag</p>
+    <blockquote>
+      <p> Word <m>\mathbb{R}^2</m> deur <m>\ve{f}_1, \ve{f}_2, \ve{f}_3 </m> onderspan? </p>
+    </blockquote>
+    <p>is ekwivalent aan die vraag</p>
+    <blockquote>
+      <p>Kan ons altyd die stelsel  <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/> vir <m>a_1, a_2, a_3</m> oplos, maak nie saak wat die vaste konstantes <m>\ve{v}_1, \ve{v}_2</m> is nie? </p>
+    </blockquote>
+    <p>Jy weet reeds hoe om gelyktydige lineêre vergelykings soos <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/> met die hand op te los:
     <mdn>
         <mrow> -a_1 + a_2 + 2a_3 \amp = v_1 </mrow>
-        <mrow> 2a_1 + a_2 - a_3 \amp = v_2</mrow> 
+        <mrow> 2a_1 + a_2 - a_3 \amp = v_2</mrow>
         <mrow> </mrow>
         <mrow> \therefore -a_1 + a_2 + 2a_3 \amp = v_1 </mrow>
-        <mrow>  3a_2 + 3a_3 \amp = 2v_1 + v_2 \amp \amp R2 \rightarrow R2 + 2R1 
-      </mrow> 
+        <mrow>  3a_2 + 3a_3 \amp = 2v_1 + v_2 \amp \amp R2 \rightarrow R2 + 2R1
+      </mrow>
       <mrow> </mrow>
-      <mrow xml:id="span_ex_aa1"> \text{Let } a_3 \amp = t </mrow> 
+      <mrow xml:id="span_ex_aa1"> \text{Let } a_3 \amp = t </mrow>
         <mrow> \therefore a_2 \amp = \frac{1}{3}(2v_1 + v_2) - t </mrow>
         <mrow xml:id="span_ex_aa2"> \therefore a_1 \amp = -\frac{1}{3} (-v_1 + v_2) + t </mrow>
     </mdn>
   </p>
   <p>
-    In other words, no matter what <m>v_1, v_2</m> are, there are always infinitely many solutions (they are parameterized a free parameter <m>t</m>) to <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/>, and hence to our original equation <xref ref="eqn_for_R2_span"/>. That is, we can express <em>any</em> <m>\ve{v} \in \mathbb{R}^2</m> as a linear combination of the vectors <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m>... and in fact there are <em>infinitely</em> many ways to do it, parameterized by a free parameter <m>t</m>! </p>
+    Met ander woorde, maak nie saak wat  <m>v_1, v_2</m> is nie, daar is altyd oneindig baie oplossings (geparametriseer deur die vrye veranderlike <m>t</m>) vir  <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/>, en dus vir ons oorspronklike vergelyking  <xref ref="eqn_for_R2_span"/>. Ons kan dus <em>enige</em> <m>\ve{v} \in \mathbb{R}^2</m> as 'n lineêre kombinasie van die vektore <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m> uitdruk <ellipsis /> en daar is selfs <em>oneindig</em> baie maniere om dit te doen! </p>
 
     <p>
-    For instance, suppose we try to write <m>\ve{v} = (2,3)</m> as a linear combination of <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m>. If we take our general solution (<xref first="span_ex_aa1" last="span_ex_aa2"/>), and set <m>t=0</m>, then we get
+    Kom ons probeer byvoorbeeld die vektor <m>\ve{v} = (2,3)</m> as 'n lineêre kombinasie van <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m> skryf. As ons ons algemene oplossing <xref first="span_ex_aa1" last="span_ex_aa2"/> neem, en  <m>t=0</m>, neem, dan kry ons
     <md>
  <mrow> a_1 = \frac{1}{3}, \, a_2 = \frac{7}{3}, \, a_3 = 0 </mrow>
  <mrow> \text{i.e. } \ve{v} = \frac{1}{3} \ve{f}_1 + \frac{7}{3} \ve{f}_2 </mrow>
     </md>
-Or we could take, say, <m>t = 1</m>. Then our solution will be
+Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
     <md>
  <mrow> a_1 = \frac{4}{3}, \, a_2 = \frac{4}{3}, \, a_3 = 1 </mrow>
  <mrow> \text{i.e. } \ve{v} = \frac{4}{3} \ve{f}_1 + \frac{4}{3} \ve{f}_2 + \ve{f}_3 </mrow>
-    </md>
+    </md> wees.
   </p>
-  <p>There are infinitely many solutions. But the important point is that <em>there is always a solution to <xref ref="eqn_for_R2_span"/> </em>, no matter what <m>\ve{v}</m> is. Therefore, the vectors <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m> indeed span <m>\mathbb{R}^2</m>.  </p>
+  <p>Daar is oneindig baie oplossings, maar die belangrike punt is dat daar <em>altyd 'n oplossing vir <xref ref="eqn_for_R2_span"/> is</em>, maak nie saak wat <m>\ve{v}</m> is nie. Daarom sal die vektore <m>\ve{f}_1, \ve{f}_2, \ve{f}_3</m> die vektorruimte <m>\mathbb{R}^2</m> onderspan.  </p>
 
-  <p>Finally, let us solve this problem using SageMath. Working by hand, we arrive at the simultanous linear equations <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/>, and then put it into a Sage cell:
+  <p>
+    Kom ons los laastens ook die probleem met SageMath op. Deur met die hand te werk, kom ons by die stelsel lineêre vergelykings <xref first="sim_lin_eqns_3ex" last="sim_lin_eqns_3ex2"/>, en dit is wat ons as invoer in SageMath gebruik:
+  </p>
   <sage>
     <input>
       var('a1, a2, a3, v1, v2')
@@ -299,13 +294,18 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
              [a1, a2, a3])
     </input>
   </sage>
-  Note that I needed to tell Sage that <c>v1</c> and <c>v2</c> are variables, and that I am asking it to solve for <c>a1</c>, <c>a2</c> and <c>a3</c>. On my computer, Sage outputs:
-  <sidebyside>
+  <p>
+    Let op dat ek eers vir SageMath moet sê dat <c>v1</c> en <c>v2</c> veranderlikes is, en dat ek vra dat dit vir <c>a1</c>, <c>a2</c> en <c>a3</c> moet oplos. Op my rekenaar is die uitset:
+  </p>
+
     <p>
-  <c> [[a1 == r1 - 1/3*v1 + 1/3*v2, a2 == -r1 + 2/3*v1 + 1/3*v2, a3 == r1]] </c> </p>
-  </sidebyside>
- Here, <c>r1</c> is to be interpreted as our free parameter <m>t</m>. So Sage is giving us the same solution as we found by hand, <xref first="span_ex_aa1" last="span_ex_aa2"/>.</p>
-</solution>>
+      <c> [[a1 == r1 - 1/3*v1 + 1/3*v2, a2 == -r1 + 2/3*v1 + 1/3*v2, a3 == r1]] </c>
+    </p>
+
+  <p>
+    Hier moet <c>r1</c> interpreteer word as ons vrye parameter, wat ons vroeër <m>t</m> genoem het. Dus gee SageMath dieselfde oplossing  <xref first="span_ex_aa1" last="span_ex_aa2"/> as wat ons met die hand gekry het.
+  </p>
+</solution>
 </example>
 
   <example xml:id="Rn_spanning_set">
@@ -313,11 +313,9 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
       <p>
         <m>\mathbb{R}^n</m> word deur
         <men xml:id="defn_of_e_i">
-          \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots,
-          0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
+          \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots, 0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
         </men>
-        gespan, want elke vektor <m>\ve{v} = (a_1, \,a_2, \, \ldots, \, a_n)</m>
-        kan as 'n line&#xea;re kombinasie
+        onderspan, want elke vektor <m>\ve{v} = (a_1, \,a_2, \, \ldots, \, a_n)</m> kan as 'n lineêre kombinasie
         <men xml:id="standard_basis_R_n">
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
         </men>.
@@ -329,218 +327,237 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
   <exercise>
     <statement>
       <p>
-        Bevestig die korrektheid van <xref ref="standard_basis_R_n" />.
+        Bevestig die korrektheid van <xref ref="standard_basis_R_n" text="global" />.
       </p>
     </statement>
+      <solution>
+        <p>
+          <md>
+            <mrow>
+              \ve{v} \amp = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = a_1(1, \ldots, 0) + \cdots a_n(0,\ldots,1)
+            </mrow>
+            <mrow>
+              \amp = (a_1 , \ldots , 0 ) + \cdots + (0 ,\ldots, a_n) = (a_1, \ldots, a_n )
+            </mrow>
+        </md>
+        </p>
+      </solution>
   </exercise>
 
 <p>
-  Die volgende Lemma gee 'n gerieflike metode om te kontrolleer of 'n gegewe lys vektore <m>\basis{C}</m> 'n vektorruimte <m>V</m> span, as jy alreeds weet dat 'n sekere ander lys <m>\basis{B}</m> vir <m>V</m> span.
+  Die volgende Lemma gee 'n gerieflike metode om te kontrolleer of 'n gegewe lys vektore <m>\basis{C}</m> 'n vektorruimte <m>V</m> onderspan, as jy alreeds weet dat 'n sekere ander lys <m>\basis{B}</m> vir <m>V</m> onderspan.
 </p>
 
 <lemma xml:id ="spanning_check_thm">
   <statement>
     <p>
-    Veronderstel dat <m>\basis{B}= \{\ve b_1,\ldots,\ve b_m\} </m> 'n vektorruimte <m>V</m> span. Verder, veronderstel dat elke vektor in <m>\basis{B}</m> is 'n lineêre kombinasie van die vektore uit 'n ander lys <m>\basis{C} = \{\ve c_1,\ldots,\ve c_n\}</m>. Dan span <m>\basis{C}</m> ook vir <m>V</m>.
-</p>
-</statement>
+      Veronderstel dat <m>\basis{B}= \{\ve b_1,\ldots,\ve b_m\} </m> 'n vektorruimte <m>V</m> onderspan. Verder, veronderstel dat elke vektor in <m>\basis{B}</m> 'n lineêre kombinasie van die vektore uit 'n ander lys <m>\basis{C} = \{\ve c_1,\ldots,\ve c_n\}</m> is. Dan sal <m>\basis{C}</m> ook vir <m>V</m> onderspan.
+    </p>
+  </statement>
 </lemma>
 <proof>
   <p>
-    Let <m>\ve{v}</m> be an arbitrary vector in <m>V</m>. Since <m>\basis{B}</m> spans <m>V</m>, we can write <m>\ve{v}</m> as a linear combination of the <m>\basis{B}</m> vectors:
+    Laat <m>\ve{v}</m> 'n willekeurige vektor in <m>V</m> wees. Aangesien <m>\basis{B}</m> vir <m>V</m> onderspan, kan ons <m>\ve{v}</m> as 'n lineêre kombinasie van die vektore in <m>\basis{B}</m> skryf:
     <men xml:id="sub_into_span_span">
       \ve{v} = \sum_{i=1}^m a_i \ve{b}_i
     </men>
-    But each <m>\basis{B}</m> vector can be written as a linear combination of the <m>\basis{C}</m> vectors:
+    Maar elke vektor in <m>\basis{B}</m> kan as 'n lineêre kombinasie van die vektor in <m>\basis{C}</m> geskryf word:
     <me>
       \ve{b}_i = \sum_{j=1}^n \lambda_{i, j} \ve{c}_j
     </me>
-    Subsituting into Equation <xref ref="sub_into_span_span"/> gives
+    Deur dit in vergelyking <xref ref="sub_into_span_span"/> in te vervang, kry ons
     <md>
       <mrow> \ve{v} \amp = \sum_{i=1}^m a_i \left( \sum_{j=1}^n \lambda_{i,j} \ve{c}_j \right) </mrow>
       <mrow> \amp = \sum_{j=1}^n \left(\sum_{i=1}^m a_i \lambda_{i,j} \right) \ve{c}_j </mrow>
     </md>
-    So we have expressed <m>\ve{v}</m> as a linear combination of the <m>\basis{C}</m> vectors. Hence <m>\basis{C}</m> spans <m>V</m>.
-</p>
-  </proof>
+    Dus het ons <m>\ve{v}</m> as 'n lineêre kombinasie van die vektore in <m>\basis{C}</m> uitgebeeld. Dus sal <m>\basis{C}</m> vir <m>V</m> onderspan.
+  </p>
+</proof>
 
   <exercises>
   <exercise>
     <statement>
     <p>
-      Recall from <m>1^\text{st}</m> year that a function <m>f: \mathbb R \to \mathbb R </m> is <emp>even</emp> if <m> f(-x) = f(x) </m> and <emp> odd </emp> if  <m> f(-x) = -f(x) </m>. Show that every vector in the vector space <m>\Fun(\mathbb R)</m> is a linear combination of an even function and an odd function.
+      Onthou uit eerste-jaar dat ons 'n funksie <m>f: \mathbb R \to \mathbb R </m> <em>ewe</em> noem as <m> f(-x) = f(x) </m> en <em>onewe</em> noem as  <m> f(-x) = -f(x) </m>. Wys dat vir elke vektor in die vektorruimte <m>\Fun(\mathbb R)</m> geskryf kan word as 'n lineêre kombinasie van 'n ewe funksie en 'n onewe funksie.
     </p>
   </statement>
     <solution>
-      <p>The solution is relatively straightforward. Define the following two functions:
-<me>
-f_{\text{even}} (x)= \frac{1}{2}\left(f(x) + f(-x) \right), \quad f_{\text{odd}} (x)= \frac{1}{2}\left( f(x) - f(-x) \right)
-</me>
-It is easy to see that, as the names suggest, <m>f_{\text{even}} </m> is an even function and <m>f_{\text{odd}} (x) </m> is an odd function. We simply sum <m> f_{\text{even}} </m> and <m>f_{\text{odd}}  </m>:
-<me>
-f_{\text{even}} (x) +  f_{\text{odd}} (x) = \frac{1}{2}\left(f(x) + f(-x) \right) + \frac{1}{2}\left( f(x) - f(-x) \right) = f(x).
-</me>
-</p>
+      <p>Die oplossing bevat 'n konstruksie wat dalk nie maklik is om te sien nie, maar is redelik eenvoudig daarna. Definieer die volgende twee funksies:
+        <me>
+          f_{\text{ewe}} (x)= \frac{1}{2}\left(f(x) + f(-x) \right), \quad f_{\text{onewe}} (x)= \frac{1}{2}\left( f(x) - f(-x) \right)
+        </me>
+        Dit is redelik maklik om te sien dat <m>f_{\text{ewe}} </m> (soos die naam voorstel) 'n ewe funksie is en dat <m>f_{\text{onewe}} (x) </m> 'n onewe funksie is. Ons kan eenvoudig <m> f_{\text{ewe}} </m> en <m>f_{\text{onewe}}  </m> by mekaar tel:
+        <me>
+          f_{\text{ewe}} (x) +  f_{\text{onewe}} (x) = \frac{1}{2}\left(f(x) + f(-x) \right) + \frac{1}{2}\left( f(x) - f(-x) \right) = f(x).
+        </me>
+      </p>
   </solution>
   </exercise>
-
 
 <exercise>
   <statement>
     <p>
-      Suppose <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m>. Prove that <m> \ve v_1 - \ve v_2, \ve v_2 - \ve v_3, \ve v_3 - \ve v_4 , \ve v_4</m> also spans <m>V</m>.
-</p>
-</statement>
-<solution>
-<p>
-If we are given that <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m> then to show that any other collection of vectors in <m>V</m> spans <m>V</m> it suffices to show that each of <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> can be written has a linear combination of the new collection - you should try prove this yourself! <p>With this observation in hand, the exercise has an easy solution.</p>
-<md>
-<mrow> \ve v_1 \amp = (\ve v_1 - \ve v_2)  + (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
-<mrow> \ve v_2 \amp= (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
-<mrow> \ve v_3 \amp= (\ve v_3 - \ve v_4) + \ve v_4  </mrow>
-<mrow> \ve v_4 \amp= \ve v_4 </mrow>
-</md>
-</p>
-</solution>
+      Veronderstel dat <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> vir <m>V</m> onderspan. Bewys dat <m> \ve v_1 - \ve v_2, \ve v_2 - \ve v_3, \ve v_3 - \ve v_4 , \ve v_4</m> ook vir <m>V</m> onderspan.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Indien <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> vir <m>V</m> onderspan, en ons moet wys dat 'n ander lys vektore vir <m>V</m> onderspan, is dit uit <xref ref="spanning_check_thm"/> genoeg om te wys dat elkeen van die vektore <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> geskryf kan word as 'n lineêre kombinasie van die vektore in die nuwe lys.
+    </p>
+    <p>
+      Met hierdie waarneming het die oefening 'n redelik maklike oplossing.
+      <md>
+        <mrow> \ve v_1 \amp = (\ve v_1 - \ve v_2)  + (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
+        <mrow> \ve v_2 \amp= (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
+        <mrow> \ve v_3 \amp= (\ve v_3 - \ve v_4) + \ve v_4  </mrow>
+        <mrow> \ve v_4 \amp= \ve v_4 </mrow>
+      </md>
+    </p>
+  </solution>
 </exercise>
 
  <exercise>
     <statement>
       <p>
-        Consider the following polynomials in <m>\Poly_2</m>:
+        Beskou die volgende polinome in <m>\Poly_2</m>:
         <me>
           \ve{r}_1 (x) := 3x^2 - 2, \, \ve{r}_2 (x) := x^2 + x, \, \ve{r}_3 (x) := x + 1, \, \ve{r}_4 (x) := x-1
         </me>
         <ol>
           <li>
             <p>
-              Can the polynomial <m>\ve{p}</m> with
-              <m>\ve{p}(x) = x^2 + 1</m> be written as a linear combination of <m>\ve{r}_1</m>,
+              Kan die polinoom <m>\ve{p}</m> met
+              <m>\ve{p}(x) = x^2 + 1</m> as 'n lineêre kombinasie van <m>\ve{r}_1</m>,
               <m>\ve{r}_2</m>,
-              <m>\ve{r}_3</m>, <m>\ve{r}_4</m>?
+              <m>\ve{r}_3</m>, <m>\ve{r}_4</m> geskryf word?
             </p>
           </li>
 
           <li>
             <p>
-              If so, in <em>how many ways</em> can this be done?
+              Indien wel, in <em>hoeveel maniere</em> kan ons dit doen?
             </p>
           </li>
         </ol>
       </p>
     </statement>
     <solution>
-<p>
-<ol>
-<li>
-We must set up the appropriate system of linear equations:
-<md>
-<mrow> \amp a\ve r_1(x) + b \ve r_2(x) + c \ve r_3(x) + d \ve r_4(x) \amp = \amp\ve p(x)</mrow>
-<mrow> \implies \amp a(3x^2 - 2) + b(x^2 + x) + c(x+1) + d(x-1) \amp  = \amp x^2 + 1 </mrow>
-</md>
-After grouping like powers of <m>x</m> we obtain
-<me>
-x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
-</me>
-We equate coefficients on both sides of the equation to obtain the following system of linear equations:
-<md>
-<mrow> 3a +  b +  0c +  0d  = 1,</mrow>
-<mrow>0a +  1b +  1c +  1d  = 0, </mrow>
-<mrow>-2a + 0b + 1c +  -1d  = 1 .</mrow>
-</md>
-Using your preferred method for solving a system of linear equations (such as Gauss reduction), we obtain a solution set of the form:
-<md>
-<mrow>\amp d \text{ is free},</mrow>
-<mrow>\amp  a = 2 + 2d, </mrow>
-<mrow>\amp  b = -5 - 6d, </mrow>
-<mrow>\amp  c = 5 + 5d. </mrow>
-</md>
-And so <m>\ve p (x)</m> is indeed a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m>.
- </li>
- <li>
-Since <m>d</m> is free in the above solution set, we can write <m>\ve p (x)</m> as a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m> in an uncountably infinite number of ways (one for each real number!).
- </li>
-</ol>
-</p>
+      <p>
+        <ol>
+          <li>
+          Ons moet die regte stelsel lineêre vergelykings opstel:
+          <md>
+            <mrow> \amp a\ve r_1(x) + b \ve r_2(x) + c \ve r_3(x) + d \ve r_4(x) \amp = \amp\ve p(x)</mrow>
+            <mrow> \implies \amp a(3x^2 - 2) + b(x^2 + x) + c(x+1) + d(x-1) \amp  = \amp x^2 + 1 </mrow>
+          </md>
+          Nadat ons dieselfde magte van <m>x</m> saam groepeer, kry ons
+          <me>
+            x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
+          </me>
+          Ons stel die koëffisiënte aan beide kante gelyk aan mekaar en verkry die volgende stelsel lineêre vergelykings:
+          <md>
+            <mrow> 3a +  b +  0c +  0d  = 1,</mrow>
+            <mrow> 0a + 1b +  1c +  1d  = 0, </mrow>
+            <mrow>-2a + 0b + 1c +  -1d  = 1 .</mrow>
+          </md>
+          Nou kan jy jou gunsteling metode gebruik om so 'n stelsel lineêre vergelykings op te los (soos bv. Gauss reduksie), kry ons 'n oplossing van die volgende vorm:
+          <md>
+            <mrow>\amp d \text{ is free},</mrow>
+            <mrow>\amp  a = 2 + 2d, </mrow>
+            <mrow>\amp  b = -5 - 6d, </mrow>
+            <mrow>\amp  c = 5 + 5d. </mrow>
+          </md>
+          En dus is <m>\ve p (x)</m> inderdaad 'n lineêre kombinasie van <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m>.
+          </li>
+          <li>
+            Aangesien <m>d</m> 'n vrye veranderlike in die bostaande oplossing is, kan ons <m>\ve p (x)</m> in oneindig baie maniere as 'n lineêre kombinasie van <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m> skryf.
+          </li>
+        </ol>
+      </p>
     </solution>
   </exercise>
-
 
   <exercise>
     <statement>
       <p>
-        Suppose that the vectors <m>\ve{e}_1</m>, <m>\ve{e}_2</m>,
-        <m>\ve{e}_3</m> and <m>\ve{e}_4</m> span a vector space <m>V</m>.
-        Show that the vectors <m>\ve{f}_1 := \ve{e}_2 - \ve{e}_1</m>,
+        Veronderstel dat die vektore <m>\ve{e}_1</m>, <m>\ve{e}_2</m>,
+        <m>\ve{e}_3</m> en <m>\ve{e}_4</m> die vektorruimte <m>V</m> onderspan.
+        Wys dat die vektore <m>\ve{f}_1 := \ve{e}_2 - \ve{e}_1</m>,
         <m>\ve{f}_2 := \ve{e}_3 - \ve{e}_2</m>,
         <m>\ve{f}_3 := \ve{e}_4 - \ve{e}_3</m>,
-        <m>\ve{f}_4 := \ve{e}_4</m> also span <m>V</m>.
+        <m>\ve{f}_4 := \ve{e}_4</m> ook vir <m>V</m> onderspan.
       </p>
     </statement>
     <solution>
       <p>
-You could choose to show this directly or we could use a clever approach based on <m>\mathbf 2 </m>. From <m>\mathbf 2  </m>, we know that <m> \ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4</m> must span <m> V </m>. But if these vectors span <m> V </m>, then non-zero multiples of the vectors also span <m>V</m>. Thus <m> \ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 </m> must span <m> V</m>.
-</p>
+        Jy kan kies of jy dit direk wil wys of 'n slim metode wil gebruik gebaseer op  <m>\mathbf 2 </m> en <xref ref ="spanning_check_thm"/>. Uit <m>\mathbf 2  </m> weet ons dat <m> \ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4</m> vir <m> V </m> moet onderspan. Maar as hierdie vektore vir  <m> V </m> onderspan, dan sal nie-nul skalaarveelvoude van hulle ook vir <m>V</m> onderspan. Dus moet <m> \ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 </m> vir <m> V</m> onderspan.
+      </p>
     </solution>
   </exercise>
 
   <exercise xml:id="chebyshev_example">
     <statement>
       <p>
-        Show that the polynomials
+        Wys dat die polinome
         <me>
           \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
         </me>
-        span <m>\Poly_3</m>.
+        vir <m>\Poly_3</m> onderspan.
       </p>
     </statement>
     <solution>
       <p>
-      Once again we base our strategy on <m>2</m>. Pick a spanning set for <m>\Poly_3</m>. We'll use <m>1, x , x^2 , x^3</m>, since it's the simplest. <m> 1, x</m> are certainly spanned by <m>\ve q_0x), \ve q_1, \ve q_2, \ve q_3</m> since <m>1 = \ve q_0(x)</m> and <m>x = \ve q_1(x)</m>. It can easily be seen that <me>
-x^2 = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) \\
-x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
-    </me>
-    .completing the proof.
+        Weereens baseer ons ons stretegie op  <m>2</m>. Kies 'n versameling wat vir <m>\Poly_3</m> onderspan. Ons sal sommer  <m>1, x , x^2 , x^3</m> gebruik, want dis die eenvoudigste. Die vektore <m> 1, x</m> word duidelik deur <m>\ve q_0, \ve q_1, \ve q_2, \ve q_3</m> onderspan, want <m>1 = \ve q_0(x)</m> en <m>x = \ve q_1(x)</m>. Dit kan ook maklik gesien word dat
+        <md>
+          <mrow>
+          x^2 \amp = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) </mrow>
+          <mrow> x^3 \amp = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x)</mrow>
+        </md>,
+        en dit voltooi die bewys.
       </p>
     </solution>
   </exercise>
 
   <exercise>
-    <statement> <p> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.</p>
+    <statement>
+      <p>
+        Laat <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> 'n lys vektore in 'n vektorruimte <m>V</m> wees. Veronderstel dat <m>\basis{S}</m> vir <m>V</m> onderspan en veronderstel dat <m>w</m> 'n ander vektor in <m>V</m> is. Bewys dat die lys vektore <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> ook vir <m>V</m> onderspan.
+      </p>
     </statement>
   </exercise>
 
-
   <exercise xml:id="exercise-span-omission">
-    <statement> <p> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that one of the vectors in the list, say <m>\ve{v}_r</m>, can be expressed as a linear combination of the preceding vectors:
-    <men xml:id="exercise-span-omission-1">
-   \ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}
-  </men>
-  Suppose that we remove <m>\ve{v}_r</m> from <m>\basis{S}</m>, to arrive at a new list
-  <me>
-   \basis{T} = \bopen \ve{v}_1, \ldots, \hat{\ve{v}_r}, \ldots, \ve{s}_n \bclose 
-</me>
-Prove that <m>\basis{T}</m> also spans <m>V</m>. </p>
-</statement>
-<solution><p> We must show that every vector <m>\ve{v} \in V</m> can be written as a linear combination of the vectors from <m>\basis{T}</m>. So let <m>\ve{v} \in V</m>. Since <m>\basis{S}</m> spans <m>V</m>, we know we can write <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{S}</m>:
-<men xml:id="exercise-span-omission-2">
-  \ve{v} = b_1 \ve{v}_1 + \cdots + b_r \ve{v}_r + \cdots + b_{n} \ve{v}_n
-</men>
-Substituting <xref ref="exercise-span-omission-1"/> into <xref ref="exercise-span-omission-2"/> gives
-<mdn> 
-<mrow> \ve{v} \amp = b_1 \ve{v}_1 + \cdots + b_r (a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}) + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
-<mrow xml:id="exercise-span-omission-3"> \amp = (b_1 + b_r a_1) \ve{v}_1 + \cdots + (b_r + b_r a_{r-1}) \ve{v}_{r-1} + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
-</mdn>
-Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{T}</m>. Hence <m>\basis{T}</m> spans V. </p>
-</solution>
-
+    <statement>
+      <p>
+        Laat <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> 'n lys vektore in 'n vektorruimte <m>V</m> wees. Veronderstel dat <m>\basis{S}</m> vir <m>V</m> onderspan. Veronderstel dat een van die vektore, sê  <m>\ve{v}_r</m> uitgedruk kan word as 'n lineêre kombinasie van die voorafgaande vektore:
+        <men xml:id="exercise-span-omission-1">
+          \ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}
+        </men>
+        As ons <m>\ve{v}_r</m> uit <m>\basis{S}</m> verwyder om die nuwe lys
+        <me>
+          \basis{T} = \bopen \ve{v}_1, \ldots, \hat{\ve{v}_r}, \ldots, \ve{s}_n \bclose
+        </me> te kry,
+        bewys dat <m>\basis{T}</m> ook vir <m>V</m> onderspan.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Ons moet wys dat elke vektor <m>\ve{v} \in V</m> uitgedruk kan word as 'n lineêre kombinasie van vektore in <m>\basis{T}</m>. Laat dus <m>\ve{v} \in V</m>. Aangesien <m>\basis{S}</m> vir <m>V</m> onderspan, weet ons dat ons <m>\ve{v}</m> as 'n lineêre kombinasie van die vektore in <m>\basis{S}</m> kan skryf:
+        <men xml:id="exercise-span-omission-2">
+          \ve{v} = b_1 \ve{v}_1 + \cdots + b_r \ve{v}_r + \cdots + b_{n} \ve{v}_n
+        </men>
+        Deur nou <xref ref="exercise-span-omission-1"/> in <xref ref="exercise-span-omission-2"/> te vervang gee
+        <mdn>
+          <mrow> \ve{v} \amp = b_1 \ve{v}_1 + \cdots + b_r (a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}) + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
+          <mrow xml:id="exercise-span-omission-3"> \amp = (b_1 + b_r a_1) \ve{v}_1 + \cdots + (b_r + b_r a_{r-1}) \ve{v}_{r-1} + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
+        </mdn>
+        Vergelyking <xref ref="exercise-span-omission-3"/> wys dat ons <m>\ve{v}</m> as 'n lineêre kombninasie van die vektore uit <m>\basis{T}</m> kan skryf. Dus sal <m>\basis{T}</m> vir <m>V</m> onderspan.
+      </p>
+    </solution>
   </exercise>
-
-<!-- Translation job ends here -->
 
 </exercises>
 
-<solutions divisional="solution answer" />
 
 
 </section>

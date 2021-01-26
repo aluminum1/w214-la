@@ -2,12 +2,17 @@
 
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch1AbstractVectorSpaces">
   <title>Abstract vector spaces</title>
- 
+
   <xi:include  href="Ch1Sec1Intro.ptx" />
+
   <xi:include  href="Ch1Sec2DefVectorSpace.ptx" />
+
   <xi:include  href="Ch1Sec3ExampleVectorSpace.ptx" />
+
   <xi:include  href="Ch1Sec4MoreExamples.ptx" />
+
   <xi:include  href="Ch1Sec5ResultsVectorSpace.ptx" />
+
   <xi:include  href="Ch1Sec6Subspaces.ptx" />
 
 </chapter>

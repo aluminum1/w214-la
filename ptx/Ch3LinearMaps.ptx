@@ -3,15 +3,16 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch3LinearMaps">
   <title>Linear maps</title>
   <xi:include  href="Ch3Sec1DefinitionsExamples.ptx" />
+
   <xi:include  href="Ch3Sec2CompositionOfLinearMaps.ptx" />
 
   <xi:include  href="Ch3Sec3Isomorphisms.ptx" />
 
   <xi:include  href="Ch3Sec4LinearMapsMatrices.ptx" />
 
+  <xi:include  href="Ch3Sec5KernelImage.ptx" />
 
-  <xi:include  href="Ch3Sec5KernelImage.ptx" /> 
+  <xi:include  href="Ch3Sec6InjectiveSurjective.ptx" />
 
-  <xi:include  href="Ch3Sec6InjectiveSurjective.ptx" /> 
 </chapter>
 

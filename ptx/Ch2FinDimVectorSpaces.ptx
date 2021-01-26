@@ -9,20 +9,18 @@
       which we will define in this chapter.
     </p>
 
-    <assemblage>
+    <warning>
       <p>
-        <em>Warning</em>: From now on, I will use shorthand and write scalar multiplication
+         From now on, I will use shorthand and write scalar multiplication
         <m>k \smul\ve{v}</m> simply as <m>k \ve{v}</m>!
       </p>
-    </assemblage>
+    </warning>
   </introduction>
-
 
   <xi:include  href="Ch2Sec1LinearCombinationSpan.ptx" />
   <xi:include  href="Ch2Sec2LinearIndependence.ptx" />
   <xi:include  href="Ch2Sec3BasisDimension.ptx" />
   <xi:include  href="Ch2Sec4CoordinateVectors.ptx" />
   <xi:include  href="Ch2Sec5ChangeOfBasis.ptx" />
-
 </chapter>
 

@@ -16,6 +16,9 @@
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes}
 \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\definecolor{primaryColor}{RGB}{214,64,0}
+\definecolor{secondaryColor}{RGB}{0,50,107}
+\definecolor{ternaryColor}{RGB}{0,109,235}
 
 \usepackage{pgfplots}
 
@@ -32,16 +35,16 @@
 \newcommand{\mat}[1]{\mathsf{#1}}
 \newcommand{\col}[1]{\boldsymbol{\mat{#1}}}
 \newcommand{\basis}[1]{{\mathcal #1}}
-\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
-\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\cvector}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\cmatrix}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 \newcommand{\dotp}{\boldsymbol{\cdot}}
 \newcommand{\smul}{.}
 \newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
 \newcommand{\bopen}{\{\llap{-}}
 \newcommand{\bclose}{\rlap{-}\}}
-\newcommand{\mamp}{&amp;}
+\newcommand{\mamp}{\amp}
+% The \amp command changes correctly whether html or latex is used. This used to be &amp; which works correctly only in html. I didn't want to search for all occurrences of \mamp.
 \newcommand{\R}{\mathbb{R}}
-
 
 
 \DeclareMathOperator{\Fun}{Fun}
@@ -59,10 +62,12 @@
 \DeclareMathOperator{\Rank}{Rank}
 \DeclareMathOperator{\Vect}{Vect}
 \DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Nhg}{Nhg}
+\DeclareMathOperator{\Rang}{Rang}
+\DeclareMathOperator{\Be}{Be}
 %% Override standard "calligraphic" imaginary macro in TeX
 \let \Im \relax
 \DeclareMathOperator{\Im}{Im}
-
 
 </macros>
 
@@ -72,48 +77,68 @@
   <book xml:id="w214-lin-alg">
     <title>W214 Linear Algebra</title>
     <frontmatter>
-
       <titlepage>
-
         <author>
           <personname> Bruce Bartlett</personname>
         </author>
-
+        <author>
+          <personname>Dirk Basson</personname>
+        </author>
       </titlepage>
 
- <xi:include href="./Ch0NoteForStudent.ptx" />
-
+      <xi:include href="./Ch0NoteForStudent.ptx" />
 
     </frontmatter>
 
+    <xi:include href="./Ch1AbstractVectorSpaces.ptx" />
 
+    <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
 
-  <xi:include href="./Ch1AbstractVectorSpaces.ptx" /> 
-  <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
-
-
-
-   
-
-  
     <xi:include href="./Ch3LinearMaps.ptx" />
-      <xi:include href="./ChTutorials.ptx"/>
-<!--
+
     <xi:include href="./Ch4EigenvaluesEigenvectors.ptx" />
 
 
-  -->
+<!--
+    <xi:include href="./ChTutorials.ptx"/>
+-->
 
     <backmatter>
-      <xi:include href="./Videos.ptx" />
       <xi:include href="./AppAReminderAboutMatrices.ptx" />
-      <!--<xi:include href="./SageExamples.ptx" />-->
+
+      <xi:include href="./AppBHypersurfaces.ptx" />
+<!--
+      <xi:include href="./Videos.ptx" />
+
+      <xi:include href="./SageExamples.ptx" />
+
       <xi:include href="./bibliography.ptx" />
+-->
+
+
+      <solutions
+        project = "hint answer"
+        divisional = "hint answer"
+        scope="w214-lin-alg">
+        <title>Hints and answers to exercises</title>
+      </solutions>
+
+      <solutions
+        project = "solution"
+        divisional = "solution"
+        scope="w214-lin-alg">
+        <title>
+          Solutions to exercises
+        </title>
+      </solutions>
+
+      <appendix>
+        <title>List of theorems and theorem-like statements</title>
+        <list-of elements="theorem proposition lemma corollary" />
+      </appendix>
+
     </backmatter>
 
-
-
   </book>
-
 </pretext>
 

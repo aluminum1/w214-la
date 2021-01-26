@@ -4,62 +4,50 @@
   <title>Eievektore</title>
   <p>
     In die vorige afdeling het ons opp eiewaardes gefokus.
-    Nou gaan ons
-    eievektore bestudeer.
+    Nou gaan ons eievektore bestudeer.
   </p>
 
   <definition>
     <statement>
       <p>
-        'n <term>Eievektor</term> van 'n line&#xea;re bewerking
-        <m>T : V
-        \rightarrow V</m> is 'n nie-nul vektor <m>\ve{v} \in V</m>, sodat
-        <m>T(\ve{v}) =
-        \lambda \ve{v}</m> vir een of ander skalaar <m>\lambda \in \mathbb{R}</m>
-        (die
-        gepaardgaande eiewaarde).
+        'n <term>Eievektor</term> van 'n lineêre operator
+        <m>T : V \rightarrow V</m> is 'n nie-nul vektor <m>\ve{v} \in V</m>, sodat
+        <m>T(\ve{v}) = \lambda \ve{v}</m> vir een of ander skalaar <m>\lambda \in \mathbb{R}</m>
+        (die gepaardgaande eiewaarde).
       </p>
     </statement>
   </definition>
 
   <p>
-    Let daarop dat ons daarop aandring dat <m>\ve{v}</m> nie-nul moet wees om 'n
-    eievektor van <m>T</m> genoem te word.
+    Let dat ons daarop aandring dat <m>\ve{v}</m> nie-nul moet wees om 'n eievektor van <m>T</m> genoem te word.
     Die rede hiervoor is dat, andersins sal
     die nulvektor vir <em>elke</em>
-    bewerking <m>T</m> 'n eievektor
-    (met eiewaarde
-    <m>0</m>)
+    operator <m>T</m> 'n eievektor
+    (met eiewaarde <m>0</m>)
     wees, aangesien <m>T(\ve{0}) = 0 \ve{0}</m> altyd waar is.
-    In daardie geval
-    sal dit minder betekenis dra om 'n eievektor van <m>T</m> te wees.
+    In daardie geval sal dit minder betekenis dra om 'n eievektor van <m>T</m> te wees.
   </p>
 
-  <assemblage>
+  <note>
     <p>
-      Dit is geen probleem vir nul om 'n emphP{eiewaarde}
-      van <m>T</m> te wees nie.
-      Maar die konvensie is dat 'n <em>eievektor</em> nie
-      die nulvektor kan wees nie.
+      Dit is nogsteeds moontlik vir nul om 'n <em>eiewaarde</em> van <m>T</m> te wees nie.
+      Maar die konvensie is dat 'n <em>eievektor</em> nie  die nulvektor kan wees nie.
     </p>
-  </assemblage>
+  </note>
 
   <p>
     In plaas daarvan om 'n <em>enkele</em>
-    vektor <m>\ve{v} \in V</m> waarvoor
-    <m>T(\ve{v}) = \lambda \ve{v}</m> te oorweeg,
-    maak dit meer sin om <em>alle</em>
-    sodanige vektore te bestudeer.
+    vektor <m>\ve{v} \in V</m> waarvoor <m>T(\ve{v}) = \lambda \ve{v}</m> te oorweeg,
+    maak dit meer sin om die versameling van <em>al</em>
+    sulke vektore te bestudeer.
   </p>
 
   <definition>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re bewerking op
-        'n vektorruimte <m>V</m> wees,
+        Laat <m>T : V \rightarrow V</m> 'n lineêre operator op 'n vektorruimte <m>V</m> wees,
         en laat <m>\lambda</m> 'n eiewaarde van <m>T</m> wees.
-        Die <term>eieruimte van <m>T</m> wat ooreenstem met <m>\lambda</m></term> is die
-        versameling
+        Die <term>eieruimte van <m>T</m> wat ooreenstem met <m>\lambda</m></term> is die versameling
         <me>
           E_\lambda := \{ \ve{v} \in V : T(\ve{v}) = \lambda \ve{v}. \}
         </me>
@@ -67,59 +55,50 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <note>
     <p>
       Let daarop dat as<m>\lambda</m> 'n eiewaarde van <m>T</m> is,
       dan is die nulvektor <m>\ve{0}</m> <em>wel</em>
-      in die eieruimte <m>E_\lambda</m>
-      van <m>T</m> wat met <m>\lambda</m> gepaardgaan.
-      Maar dit is nie 'n
-      <em>eievektor</em> van <m>T</m> nie.
-      Dit is hoe die terminologie gedefinieer
-      is.
+      in die <em>eieruimte</em> <m>E_\lambda</m> van <m>T</m> wat met <m>\lambda</m> gepaardgaan.
+      Maar dit is nie 'n <em>eievektor</em> van <m>T</m> nie.
+      Die rede, soos ons binnekort sal sien, is dat
+      <m>E_\lambda</m> sodoende 'n vektorruimte is.
+      Sonder die nulvektor sou dit nie 'n vektorruimte wees nie. (Waarom nie?
     </p>
-  </assemblage>
+  </note>
 
   <p>
     Let daarop dat ons <m>E_\lambda</m> as
     <men xml:id="eigenspace_as_kernel">
       E_\lambda = \Ker(\lambda \id - T)
     </men>
-    kan uitdruk,
-    want <m>T(\ve{v}) = \lambda \ve{v}</m> is ekwivalent daaraan om te
-    s&#xea; dat <m>(\lambda \id - T)(\ve{v}) = \ve{0}</m>.
+    kan uitdruk, want <m>T(\ve{v}) = \lambda \ve{v}</m> is ekwivalent daaraan om te sê dat <m>(\lambda \id - T)(\ve{v}) = \ve{0}</m>.
   </p>
 
   <proposition xml:id="eigenspace-is-subspace">
     <statement>
       <p>
-        <m>E_\lambda</m> is 'n
-        deelruimte van <m>V</m>.
+        <m>E_\lambda</m> is 'n deelruimte van <m>V</m>.
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
       Dit volg direk uit die feit (vergelyking
       <xref ref="eigenspace_as_kernel" />) dat ons <m>E_\lambda</m> as 'n kern van 'n
-      line&#xea;re bewerking kan skryf.
-      Die kern van enige line&#xea;re
-      bewerking op <m>V</m> is 'n deelruimte van <m>V</m>,
+      lineêre operator kan skryf.
+      Die kern van enige lineêre operator op <m>V</m> is 'n deelruimte van <m>V</m>,
       volgens <xref ref="ker-im-subspace">Lemma</xref>.
     </p>
   </proof>
+</proposition>
 
   <proposition xml:id="lin_ind_eig_distinct">
+    <title>Eievektore uit verskillende eieruimtes is lineêr onafhanklik</title>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m>
-        'n line&#xea;re bewerking van 'n eindig-dimensionele vektorruimte <m>V</m>
-        wees, en veronderstel dat <m>\ve{v}_1, \ldots, \ve{v}_k</m> eievektore van
-        <m>T</m> met verskillende eiewaardes <m>\lambda_1, \ldots, \lambda_k</m>
-        onderskeidelik is.
-        Dan is <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m>
-        line&#xea;r onafahanklik.
+        Laat <m>T : V \rightarrow V</m> 'n lineêre operator van 'n eindig-dimensionele vektorruimte <m>V</m>
+        wees, en veronderstel dat <m>\ve{v}_1, \ldots, \ve{v}_k</m> eievektore van <m>T</m> met verskillende eiewaardes <m>\lambda_1, \ldots, \lambda_k</m>  onderskeidelik is.
+        Dan is <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> lineêr onafahanklik.
       </p>
     </statement>
   </proposition>
@@ -127,89 +106,65 @@
   <proof>
     <p>
       Veronderstel <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> is <em>nie</em>
-      line&#xea;r onafhanklik nie, met andewr woorde, dit is line&#xea;r
-      afhanklik.
-      Dan, volgens die Line&#xea;re Kombinasie van Voorafgaande
+      lineêr onafhanklik nie, met andewr woorde, dit is lineêr afhanklik.
+      Dan, volgens die Lineêre Kombinasie van Voorafgaande
       Vektore-stelling
       (<xref ref="lin_dependence_prop">Stelling</xref>),
-      is &#xf3;f
-      <m>\ve{v}_1 = \ve{0}</m> (onmoontlik,
-      want eievektore kan nie die nul-vektor
-      wees nie), &#xf3;f een van die
-      <m>\ve{v}_i</m> is 'n line&#xea;re kombinasie
-      van die voorafgaande vektore.
+      is òf <m>\ve{v}_1 = \ve{0}</m> (onmoontlik,
+      want eievektore kan nie die nul-vektor wees nie), òf een van die
+      <m>\ve{v}_i</m> is 'n lineêre kombinasie van die voorafgaande vektore.
       Laat <m>i</m> die <em>kleinste</em> indeks wees
       waarvoor dit waar is.
       So, vir 'n <m>i</m> met <m>2 \leq i \leq k</m>, het ons
       <men xml:id="eigenvalue-1st-eqn">
-        \ve{v}_i = a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1}
-        \ve{v}_{i-1}
+        \ve{v}_i = a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}
       </men>
       vir skalare <m>a_1, \ldots, a_{i-1}</m>,
-      nie almal nul nie, en verder is die
-      lys vektore
+      nie almal nul nie, en verder is die lys vektore
       <me>
         \bopen \ve{v}_1, \ldots, \ve{v}_{i-1} \bclose
       </me>
-      line&#xea;r onafhanklik
+      lineêr onafhanklik
       (andersins sou <m>i</m> nie die <em>kleinste</em>
-      indeks wees waarvoor <m>\ve{v}_i</m> 'n line&#xea;re kombinasie van die
-      voorafgaande vektore is nie).
-      Deur <m>T</m> aan beide kante van
-      <xref ref="eigenvalue-1st-eqn" /> toe te pas, kry ons 'n nuwe
-      vergelyking:
-      <md>
-        <mrow>T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1}
-        \ve{v}_{i-1}) \nonumber</mrow>
-        <mrow>\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1}
-        T(\ve{v}_{i-1}) \amp \amp  \mbox{(\(T\) is line{\^e}r)} \nonumber</mrow>
-        <mrow>\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2
-        \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp 
-        \mbox{(<m>T(\ve{v}_r) = \lambda_r \ve{v}_r</m>)}</mrow>
-      </md>
+      indeks wees waarvoor <m>\ve{v}_i</m> 'n lineêre kombinasie van die voorafgaande vektore is nie).
+      Deur <m>T</m> aan beide kante van <xref ref="eigenvalue-1st-eqn" /> toe te pas, kry ons 'n nuwe vergelyking:
+      <mdn>
+        <mrow number="no">T(\ve{v}_i) \amp = T(  a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{i-1} \ve{v}_{i-1}) </mrow>
+        <mrow number="no">\amp = a_1 T(\ve{v}_1) + a_2 T(\ve{v}_2) + \cdots + a_{i-1} T(\ve{v}_{i-1}) \amp \amp  (T \text{ is line{\^e}r)} </mrow>
+        <mrow xml:id="eigenvalue-2nd-eqn">\therefore \lambda_i \ve{v}_i \amp = a_1 \lambda_1 \ve{v}_1 + a_2  \lambda_2 \ve{v}_2 + \cdots + a_{i-1} \lambda_{i-1} \ve{v}_{i-1} \amp \amp (T(\ve{v}_r) = \lambda_r \ve{v}_r)</mrow>
+      </mdn>
     </p>
 
     <p>
       Deur vergelyking <xref ref="eigenvalue-1st-eqn" /> met <m>\lambda_i</m> te
       vermenigvuldig en <xref ref="eigenvalue-2nd-eqn" /> af te trek, kry ons:
       <me>
-        \ve{0} = (\lambda_i - \lambda_1) a_1 \ve{v}_1 + (\lambda_i -
-        \lambda_2) a_2 \ve{v}_2 + \cdots + (\lambda_i - \lambda_{i-1})
-        a_{i-1} \ve{v}_{i-1}
+        \ve{0} = (\lambda_i - \lambda_1) a_1 \ve{v}_1 + (\lambda_i - \lambda_2) a_2 \ve{v}_2 + \cdots + (\lambda_i - \lambda_{i-1}) a_{i-1} \ve{v}_{i-1}
       </me>.
     </p>
 
     <p>
-      Aangesien die lys vektore <m>\bopen \ve{v}_1, \ldots, \ve{v}_{i-1}
-      \bclose</m> line&#xea;r afhanklik is, het ons
+      Aangesien die lys vektore <m>\bopen \ve{v}_1, \ldots, \ve{v}_{i-1} \bclose</m> lineêr afhanklik is, het ons
       <me>
-        (\lambda_i - \lambda_1) a_1 =0, \, (\lambda_i - \lambda_2) a_2 =0\,
-        \, \ldots, \,  (\lambda_i - \lambda_{i-1}) a_{i-1}=0
+        (\lambda_i - \lambda_1) a_1 =0, \, (\lambda_i - \lambda_2) a_2 =0\, \, \ldots, \,  (\lambda_i - \lambda_{i-1}) a_{i-1}=0
       </me>.
     </p>
 
     <p>
-      Alle eiewaardes is verskillend
-      (volgens aanname),
-      so dit kan nie wees
-      dat <m>\lambda_i - \lambda_r = 0</m> vir <m>r \neq i</m> nie.
+      Alle eiewaardes is verskillend (volgens aanname),
+      so dit kan nie wees dat <m>\lambda_i - \lambda_r = 0</m> vir <m>r \neq i</m> nie.
       Daarom <m>a_1 = 0</m>,
       <m>a_2 = 0</m>, <m>\ldots</m>, <m>a_{i-1} = 0</m>.
-      Maar dit is in teenstelling met
-      <xref ref="eigenvalue-1st-eqn" /> wat impliseer het dat die skalare
-      <em>nie</em> almal nul is nie.
-      So ons oorpronklike aanname moes vals
-      wees.
-      Daarom is <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> line&#xea;r
-      afhanklik.
+      Maar dit is in teenstelling met <xref ref="eigenvalue-1st-eqn" /> wat impliseer het dat die skalare <em>nie</em> almal nul is nie.
+      So ons oorpronklike aanname moes verkeerd wees.
+      Daarom is <m>\bopen \ve{v}_1, \ldots, \ve{v}_k \bclose</m> lineêr afhanklik.
     </p>
   </proof>
 
   <example>
     <statement>
       <p>
-        Bepaal die eiewaardes en ooreenstemmende eieruimtes vir dei
-        line&#xea;re bewerking
+        Bepaal die eiewaardes en ooreenstemmende eieruimtes vir die lineêre operator
         <md>
           <mrow>T : \Poly_4 \amp  \rightarrow \Poly_4</mrow>
           <mrow>T(p)(x) \amp = x^2 \frac{d^2}{dx^2} (p)</mrow>
@@ -220,8 +175,7 @@
       <p>
         Ons bereken die aksie van <m>T</m> op die standaard basis van <m>\Poly_2</m>,
         <me>
-          p_0(x) = 1, \, p_1 (x) = x, \, p_2(x) = x^2, \, p_3(x) = x^3,
-          \, p_4(x) = x^4
+          p_0(x) = 1, \, p_1 (x) = x, \, p_2(x) = x^2, \, p_3(x) = x^3, \, p_4(x) = x^4
         </me>
         soos volg:
         <md>
@@ -235,18 +189,13 @@
 
       <p>
         Deur inspeksie,
-        sien ons dat <m>p_0</m> en <m>p_1</m> eievektore is met
-        eiewaarde <m>0</m>,
+        sien ons dat <m>p_0</m> en <m>p_1</m> eievektore is met eiewaarde <m>0</m>,
         <m>p_1</m> 'n eievektore met eiewaarde <m>2</m> is,
-        <m>p_3</m> 'n
-        eievektor met eiewaarde <m>6</m> is,
-        en <m>p_4</m> 'n eievektor is met
-        eiewaarde <m>12</m>.
-        So die eiewaardes en geassosieerde eieruimtes van
-        <m>T</m> is:
+        <m>p_3</m> 'n eievektor met eiewaarde <m>6</m> is,
+        en <m>p_4</m> 'n eievektor is met eiewaarde <m>12</m>.
+        So die eiewaardes en geassosieerde eieruimtes van <m>T</m> is:
         <md>
-          <mrow>\lambda = 0, \amp  \qquad E_0 = \{s p_0 + t p_1, \, s,t \in
-          \mathbb{R} \}</mrow>
+          <mrow>\lambda = 0, \amp  \qquad E_0 = \{s p_0 + t p_1, \, s,t \in \mathbb{R} \}</mrow>
           <mrow>\lambda = 2, \amp  \qquad E_1 = \{t p_2, \, t \in \mathbb{R} \}</mrow>
           <mrow>\lambda = 6, \amp  \qquad E_2 = \{t p_3, \, t \in \mathbb{R} \}</mrow>
           <mrow>\lambda = 12, \amp  \qquad E_12 = \{t p_4, \, t \in \mathbb{R} \}</mrow>
@@ -258,8 +207,7 @@
   <example xml:id="eigenspaces-lin-op-T">
     <statement>
       <p>
-        Bepaal die eieruimtes van die
-        line&#xea;re bewerking
+        Bepaal die eieruimtes van die lineêre operator
         <md>
           <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
           <mrow>T(p(x)) \amp = p(2x + 3)</mrow>
@@ -270,39 +218,33 @@
     <solution>
       <p>
         Die eiewaardes van <m>T</m> is <m>\lambda_1 = 1</m>,
-        <m>\lambda_2
-        = 2</m> en <m>\lambda_3 = 4</m>.
+        <m>\lambda_2 = 2</m> en <m>\lambda_3 = 4</m>.
         Kom ons dink na vir 'n oomblik.
-        Aangesien
-        die eiewaardes almal verskillend is,
+        Aangesien die eiewaardes almal verskillend is,
         dan as ons eievektore <m>q_1</m>,
         <m>q_2</m> en <m>q_3</m> met eiewaardes
-        <m>\lambda_1</m>, <m>\lambda_2</m> and
+        <m>\lambda_1</m>, <m>\lambda_2</m> en
         <m>\lambda_3</m> onderskeidelik vind,
-        dan sal <m>\basis{Q} = \bopen q_1,
-        q_2, q_3 \bclose</m> line&#xea;r onafhanklik wees volgens <xref ref="lin_ind_eig_distinct">Proposisie</xref>.
+        dan sal <m>\basis{Q} = \bopen q_1, q_2, q_3 \bclose</m> lineêr onafhanklik wees volgens <xref ref="lin_ind_eig_distinct">Proposisie</xref>.
         Dit beteken dat die eieruimtes <m>E_1</m>,
-        <m>E_2</m> en <m>E_4</m> wat met die eiewaardes gepaardgaan 1-dimensioneel
-        sal wees.
+        <m>E_2</m> en <m>E_4</m> wat met die eiewaardes gepaard gaan 1-dimensioneel sal wees.
         Dit is nuttige inligting.
-        Ok, nou is ons gereed om
-        eieruimtes te bereken.
+        Ok, nou is ons gereed om eieruimtes te bereken.
 
         <ul>
           <li>
             <p>
-              <m>\lambda = 1</m>: 
+              <m>\lambda = 1</m>:
 
               Ons soek polinome <m>q</m> sodat
               <me>
                 T(q) = 1 q
               </me>
-              Deur inspeksie van die formules <xref ref="Tp0" />-<xref ref="Tp1" /> vir
+              Deur inspeksie van die formules <xref ref="poly-example-eigenvalue-Tp0" />, <xref ref="poly-example-eigenvalue-Tp1" /> en <xref ref="poly-example-eigenvalue-Tp2" /> vir
               hoe <m>T</m> werk, sien ons reeds ons eerste polinoom, naamlik
               <m>q = p_0</m>, aangesien <m>T(p_0) = p_0</m>.
-              Aangesien <m>E_1</m>
-              een-dimensioneel is, kom ons tot die gevolgtrekking dat
-              <m>p_0</m> 'nn basis vir <m>E_1</m> is, so
+              Aangesien <m>E_1</m> een-dimensioneel is,
+              kan ons aflei dat <m>p_0</m> 'nn basis vir <m>E_1</m> is, so
               <me>
                 E_1 = \{ t p_0, \, t \in \mathbb{R}\}
               </me>.
@@ -323,19 +265,20 @@
               </me>.
               So ons soek skalare <m>a_0, a_1, a_2</m> sodat
               <men xml:id="Tq-2nd-eig">
-                T(a_0 p_0 + a_1 p_1 + a_2 p_2) = 2 (a_0 p_0 + a_1 p_1 +
-                a_2 p_2)
+                T(a_0 p_0 + a_1 p_1 + a_2 p_2) = 2 (a_0 p_0 + a_1 p_1 + a_2 p_2)
               </men>.
               Met die formules <xref ref="eigenspace_as_kernel" /> vir hoe <m>T</m>
               op die standaard basis werk, word <xref ref="Tq-2nd-eig" />
               <me>
                 (-a_0 + 3a_1 + 9a_2) p_0 + 12a_2 p_1 + 2 a_2 p_2 = 0
               </me>.
-              Aangesien <m>\bopen p_0, p_1, p_2 \bclose</m> line&#xea;r
+              Aangesien <m>\bopen p_0, p_1, p_2 \bclose</m> lineêr
               onafhanklik is, word dit die volgende stel vergelykings:
-              <men xml:id="eqns-eig-T-internal">
-                \systeme{-a_0 + 3a_1 + 9a_2 = 0, 12 a_2 = 0, 2a_2 = 0}
-              </men>
+              <mdn>
+                <mrow> \amp -a_0 \amp + 3a_1 \amp + 9a_2 \amp = \amp 0 </mrow>
+                <mrow> \amp\amp\amp 12a_2 \amp = \amp 0</mrow>
+                <mrow xml:id="eqns-eig-T-internal"> \amp\amp\amp 2a_2 \amp = \amp 0</mrow>
+              </mdn>
               Die algemene oplossing vir hierdie vergelykings is
               <me>
                 \cmatrix{a_0 \\ a_1 \\ a_2} = t \cmatrix{3 \\ 1 \\ 0},
@@ -346,23 +289,21 @@
                 q_2(x) = 3 + x
               </me>,
               en die hele eieruimte wat met die eiewaarde <m>2</m>
-              gepaardgaan, is
+              gepaard gaan, is
               <me>
                 E_2 = \{ t q_2, \, t \in \mathbb{R} \}
               </me>.
               Kom ons gaan dit na.
-              Oorweeg die berekening van <m>T(q_2)</m>
-              met behulp van die <em>definisie</em> van <m>T</m>, naamlik
+              Oorweeg die berekening van <m>T(q_2)</m> met behulp van die <em>definisie</em> van <m>T</m>, naamlik
               <m>T(p)(x) = p(2x + 3)</m> vir enige polinoom <m>p</m>.
-              Dit gee vir
-              ons:
+              Dit gee vir ons:
               <md>
                 <mrow>T(q_2)(x) \amp = q_1(2x+3)</mrow>
                 <mrow>\amp = 3 + 3(2x + 3)</mrow>
                 <mrow>\amp = 6 + 6x</mrow>
                 <mrow>\amp = 2(3 + 3x)</mrow>
                 <mrow>\amp = (2q_2)(x)</mrow>
-                <mrow>\therefore T(q_2) \amp = 2q_1 \mbox{ (soos verwag!)}</mrow>
+                <mrow>\therefore T(q_2) \amp = 2q_1 \text{ (soos verwag!)}</mrow>
               </md>
             </p>
           </li>
@@ -380,41 +321,36 @@
                 q = a_0 p_0 + a_1 p_1 + a_2 p_2
               </me>.
               So ons benodig skalare <m>a_0, a_1, a_2</m> sodat
-              <men xml:id="Tq-2nd-eig">
-                T(a_0 p_0 + a_1 p_1 + a_2 p_2) = 4 (a_0 p_0 + a_1 p_1 +
-                a_2 p_2). 
+              <men xml:id="Tq-3rd-eig">
+                T(a_0 p_0 + a_1 p_1 + a_2 p_2) = 4 (a_0 p_0 + a_1 p_1 + a_2 p_2).
               </men>.
-              Met behulp van die formules <xref ref="eigenspace_as_kernel" />
-              vir hoe <m>T</m> op die standaard basis tewerk gaan, word
-              <xref ref="Tq-2nd-eig" />
+              Met behulp van die formules <xref ref="eigenspace_as_kernel" /> vir hoe <m>T</m> op die standaard basis tewerk gaan, word
+              <xref ref="Tq-3rd-eig" />
               <me>
-                (-3a_0 + 3a_1 + 9a_2) p_0 + (-2 a_1 + 12 a_2) p_1 + 0
-                p_2 = 0
+                (-3a_0 + 3a_1 + 9a_2) p_0 + (-2 a_1 + 12 a_2) p_1 + 0 p_2 = 0
               </me>.
-              Aangesien <m>\bopen p_0, p_1, p_2 \bclose</m> line&#xea;r
+              Aangesien <m>\bopen p_0, p_1, p_2 \bclose</m> lineêr
               onafhanklik is, word dit die volgende stel vergelykings:
-              <men xml:id="eqns-eig-T-internal">
-                \systeme{-3a_0 + 3a_1 + 9a_2 = 0, -2a_1 + 12 a_2 = 0}
-              </men>
+              <mdn>
+                <mrow> \amp -3a_0 \amp + 3a_1 \amp + 9a_2 \amp = \amp 0</mrow>
+                <mrow xml:id="eqns-eig-T-internal-2"> \amp \amp -2a_1 \amp + 12a_2 \amp = \amp 0</mrow>
+              </mdn>
               Die algemene oplossing vir hierdie vergelykings is
               <me>
-                \cmatrix{a_0 \\ a_1 \\ a_2} = t \cmatrix{9 \\ 6 \\ 1},
-                \, t \in \mathbb{R}
+                \cmatrix{a_0 \\ a_1 \\ a_2} = t \cmatrix{9 \\ 6 \\ 1}, \, t \in \mathbb{R}
               </me>.
               Met ander woorde, 'n eievektor van <m>T</m> met eiewaarde <m>4</m> is
               <me>
                 q_4(x) = 9 + 6x + x^2
               </me>,
-              en die hele eieruimte wat met die eiewaarde <m>4</m>
-              gepaardgaan, is
+              en die hele eieruimte wat met die eiewaarde <m>4</m> gepaardgaan, is
               <me>
                 E_2 = \{ t q_4, \, t \in \mathbb{R} \}
               </me>.
               Kom ons gaan dit na.
               Oorweeg die berekening van <m>T(q_4)</m>
               met die <em>definisie</em> van <m>T</m>,
-              naamlik <m>T(p)(x) = p(2x +
-              3)</m> vir enige polinoom <m>p</m>.
+              naamlik <m>T(p)(x) = p(2x + 3)</m> vir enige polinoom <m>p</m>.
               Dit lewer:
               <md>
                 <mrow>T(q_4)(x) \amp = q_4(2x+3)</mrow>
@@ -422,7 +358,7 @@
                 <mrow>\amp = 36 + 24x + 4x^2</mrow>
                 <mrow>\amp = 4(9 + 6x + x^2)</mrow>
                 <mrow>\amp = (4q_4)(x)</mrow>
-                <mrow>\therefore T(q_4) \amp = 4q_4 \mbox{ (soos verwag!)}</mrow>
+                <mrow>\therefore T(q_4) \amp = 4q_4 \text{ (soos verwag!)}</mrow>
               </md>
             </p>
           </li>
@@ -434,22 +370,19 @@
   <example xml:id="eigvectors_desmos_matrix">
     <statement>
       <p>
-        Bepaal die eieruimtes van
-        die matriks
-        <md>
+        Bepaal die eieruimtes van die matriks
+        <me>
           \mat{A} = \cmatrix{2 \amp  1 \\ \frac{1}{2} \amp  \frac{5}{2}}
-        </md>
+        </me>
         vanuit <xref ref="desmos_matrix">Voorbeeld</xref>.
       </p>
     </statement>
     <solution>
       <p>
-        Vanuit <xref ref="eigenspace_as_kernel" />, het ons dat die eieruimte
-        <m>E_\lambda</m> as volg bereken kan word
-        <md>
-          E_\lambda = \Ker (\mat{A} - \lambda I) = \Ker \left( \cmatrix{2
-          - \lambda \amp  1 \\ \frac{1}{2} \amp  \frac{5}{2} - \lambda} \right)
-        </md>
+        Vanuit <xref ref="eigenspace_as_kernel" />, het ons dat die eieruimte <m>E_\lambda</m> as volg bereken kan word
+        <me>
+          E_\lambda = \Ker (\mat{A} - \lambda I) = \Ker \left( \cmatrix{2 - \lambda \amp  1 \\ \frac{1}{2} \amp  \frac{5}{2} - \lambda} \right)
+        </me>
       </p>
 
       <p>
@@ -461,32 +394,27 @@
             <p>
               <m>\lambda = \frac{3}{2}</m>:
               Ons moet soos volg bereken
-              <md>
-                E_{\frac{3}{2}} = \Ker \left( \cmatrix{\frac{1}{2} \amp  1
-                \\ \frac{1}{2} \amp  1} \right).
-              </md>
-              Met ander woorde, ons moet die kolomvektore <m>\cmatrix{v_1
-              \\ v_2}</m>  vind waarvoor
-              <md>
+              <me>
+                E_{\frac{3}{2}} = \Ker \left( \cmatrix{\frac{1}{2} \amp  1 \\ \frac{1}{2} \amp  1} \right).
+              </me>
+              Met ander woorde,
+              ons moet die kolomvektore <m>\cmatrix{v_1 \\ v_2}</m>  vind waarvoor
+              <me>
                 \cmatrix{\frac{1}{2} \amp  1 \\ \frac{1}{2} \amp  1} \cmatrix{v_1 \\ v_2} = \cmatrix{ 0 \\ 0}.
-              </md>
+              </me>
               Dit kom neer op die enkele vergelyking
               <me>
                 \frac{1}{2}v_1 + v_2 = 0
               </me>
               wat die algemene oplossing <m>v_2 = t</m>,
-              <m>v_1 = -2t</m>, <m>t \in
-              \mathbb{R}</m> het.
+              <m>v_1 = -2t</m>, <m>t \in \mathbb{R}</m> het.
               Daarom,
               <me>
-                E_{\frac{3}{2}} = \left\{ t \cmatrix{-2 \\ 1}, \, t \in
-                \mathbb{R} \right\}
+                E_{\frac{3}{2}} = \left\{ t \cmatrix{-2 \\ 1}, \, t \in \mathbb{R} \right\}
               </me>.
-              Jy kan visueel verifieer dat hierdie lyn wel 'n eieruimte
-              van <m>\mat{A}</m> met gepaardgaande eiewaarde <m>\frac{3}{2}</m> is
-              deur inspeksie van die Desmos-werkblad.
-              Wanneer jy vektore
-              op hierdie lyn met <m>\mat{A}</m> vermenigvuldig, word hulle met
+              Jy kan visueel bevestig dat hierdie lyn wel 'n eieruimte
+              van <m>\mat{A}</m> met gepaardgaande eiewaarde <m>\frac{3}{2}</m> is deur inspeksie van die Desmos-werkblad.
+              Wanneer jy vektore op hierdie lyn met <m>\mat{A}</m> vermenigvuldig, word hulle met
               'n faktor <m>\frac{3}{2}</m> skaleer.
             </p>
           </li>
@@ -495,17 +423,15 @@
             <p>
               <m>\lambda = 3</m>:
               Ons moet bereken
-              <md>
-                E_3 = \Ker \left( \cmatrix{-1 \amp  1 \\ \frac{1}{2} \amp 
-                -\frac{1}{2}} \right).
-              </md>
-              Met ander woorde, ons moet die kolomvektore <m>\cmatrix{v_1
-              \\ v_2}</m> vind waarvoor
-              <md>
+              <me>
+                E_3 = \Ker \left( \cmatrix{-1 \amp  1 \\ \frac{1}{2} \amp -\frac{1}{2}} \right).
+              </me>
+              Met ander woorde, ons moet die kolomvektore <m>\cmatrix{v_1 \\ v_2}</m> vind waarvoor
+              <me>
                 \cmatrix{-1 \amp  1 \\ \frac{1}{2} \amp  - \frac{1}{2}}
                 \cmatrix{v_1 \\ v_2} = \cmatrix{ 0 \\ 0}.
-              </md>
-              Dit kom opp die enkele vergelyking
+              </me>
+              Dit kom op die enkele vergelyking
               <me>
                 -v_1 + v_2 = 0
               </me>
@@ -513,16 +439,11 @@
               \in \mathbb{R}</m> het.
               Daarom,
               <me>
-                E_{\frac{3}{2}} = \left\{ t \cmatrix{-2 \\ 1}, \, t \in
-                \mathbb{R} \right\}
+                E_{\frac{3}{2}} = \left\{ t \cmatrix{-2 \\ 1}, \, t \in \mathbb{R} \right\}
               </me>.
-              Jy kan op die Desmos-werkblad visueel verifieer dat hierdie
-              lyn wel 'n eieruimte van <m>\mat{A}</m> met ooreenstemmende
-              eiewaarde <m>3</m> is.
-              As jy vektore op hierdie lyn met
-              <m>\mat{A}</m> vermenigvuldig,
-              word hulle met 'n fatkor <m>3</m>
-              vermenigvuldig.
+              Jy kan op die Desmos-werkblad visueel bevestig dat hierdie lyn wel 'n eieruimte van <m>\mat{A}</m> met ooreenstemmende eiewaarde <m>3</m> is.
+              As jy vektore op hierdie lyn met <m>\mat{A}</m> vermenigvuldig,
+              word hulle met 'n faktor <m>3</m> vergroot.
             </p>
           </li>
         </ul>
@@ -531,27 +452,22 @@
   </example>
 
   <p>
-    Let daarop dat die <sq>kern van </sq>n matriks'-metode wat ons gebruik het om die
+    Let daarop dat die <q>kern van 'n matriks</q>-metode wat ons gebruik het om die
     eieruimtes in <xref ref="eigvectors_desmos_matrix">Voorbeeld</xref> te bereken, gebruik
-    kan word om die eievektore van <em>enige</em> line&#xea;re operator te
-    bereken.
+    kan word om die eievektore van <em>enige</em> lineêre operator te bereken.
   </p>
 
   <example>
     <statement>
       <p>
-        Bepaal die eieruimtes van die line&#xea;re bewerking <m>T</m> uit
-        <xref ref="eigenspaces-lin-op-T">Voorbeeld</xref> met die
-        <sq>kern-van-</sq>n-matriks'-metode.
+        Bepaal die eieruimtes van die lineêre operator <m>T</m> uit
+        <xref ref="eigenspaces-lin-op-T">Voorbeeld</xref> met die <q>kern van 'n matriks</q>-metode.
       </p>
     </statement>
     <solution>
       <p>
-        Die eieruimte <m>E_\lambda</m> wat met die eiewaarde
-        <m>\lambda</m> ooreenstem is die kern van die line&#xea;re operator <m>T -
-        \lambda \id</m>.
-        Dit wil s&#xea;, ons benodig die polinome <m>q \in
-        \Poly_2</m> sodat
+        Die eieruimte <m>E_\lambda</m> wat met die eiewaarde <m>\lambda</m> ooreenstem is die kern van die lineêre operator <m>T - \lambda \id</m>.
+        Dit wil sê, ons benodig die polinome <m>q \in \Poly_2</m> sodat
         <men xml:id="kernel-operator-this-ex">
           (T - \lambda \id) (q) = 0
         </men>.
@@ -566,50 +482,43 @@
 
       <p>
         Ons bereken die matriks van <m>T</m> relatief tot die basis <m>\basis{B}</m>:
-        <md>
-          [T]_{\basis{B} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  3 \amp  9 \\ 0
-          \amp  2 \amp  12 \\ 0 \amp  0 \amp  4}.
-        </md>
+        <me>
+          [T]_{\basis{B} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  3 \amp  9 \\ 0 \amp  2 \amp  12 \\ 0 \amp  0 \amp  4}.
+        </me>
       </p>
 
       <p>
-        Dan kan vergelyking <xref ref="kernel-operator-this-ex" /> in matriksvorm
-        geskryf word:
+        Dan kan vergelyking <xref ref="kernel-operator-this-ex" /> in matriksvorm geskryf word:
         <me>
-          [T - \lambda \id]_{\basis{B} \leftarrow \basis{B}} \cmatrix{a_0
-          \\ a_1 \\ a_2} = \cmatrix{0 \\ 0 \\ 0}
+          [T - \lambda \id]_{\basis{B} \leftarrow \basis{B}} \cmatrix{a_0 \\ a_1 \\ a_2} = \cmatrix{0 \\ 0 \\ 0}
         </me>.
       </p>
 
       <p>
-        Met ander woorde,
-        vir elke eiewaarde <m>\lambda</m>, verg die berekening
+        Met ander woorde,  vir elke eiewaarde <m>\lambda</m>, verg die berekening
         van <m>E_\lambda</m> dat ons die kern van die <em>matriks</em>
-        <md>
+        <me>
           \cmatrix{ 1 - \lambda \amp  3 \amp  9 \\
           0 \amp  2 - \lambda \amp  12 \\
           0 \amp  0 \amp  4-\lambda}
-        </md>
+        </me>
         moet bereken en dan dat ons die resulterende kolomvektore as
-        polinome herskryf, in die vorm <xref ref="q-stand-basis-ex1" />.
+        polinome in die vorm <xref ref="q-stand-basis-ex1" /> herskryf.
 
         <ul>
           <li>
             <p>
               <m>\lambda = 1</m>:
 
-              Ons benodig skalare <m>a_0</m>,
-              <m>a_1</m>, <m>a_2</m> sodat
-              <md>
+              Ons benodig skalare <m>a_0</m>, <m>a_1</m>, <m>a_2</m> sodat
+              <me>
                 \cmatrix{ 0 \amp  3 \amp  9 \\
                 0 \amp  1  \amp  12 \\
-                0 \amp  0 \amp  3} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\
-                0 \\ 0}.
-              </md>
+                0 \amp  0 \amp  3} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\ 0 \\ 0}.
+              </me>
               Die vergelyking het die algemene oplossing
               <me>
-                \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{1 \\ 0 \\ 0},
-                \, t \in \mathbb{R}
+                \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{1 \\ 0 \\ 0}, \, t \in \mathbb{R}
               </me>.
               So,
               <me>
@@ -622,18 +531,15 @@
             <p>
               <m>\lambda = 2</m>:
 
-              Ons benodig skalare <m>a_0</m>,
-              <m>a_1</m>, <m>a_2</m> sodat
-              <md>
+              Ons benodig skalare <m>a_0</m>, <m>a_1</m>, <m>a_2</m> sodat
+              <me>
                 \cmatrix{ -1 \amp  3 \amp  9 \\
                 0 \amp  0  \amp  12 \\
-                0 \amp  0 \amp  2} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\
-                0 \\ 0}.
-              </md>
+                0 \amp  0 \amp  2} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\ 0 \\ 0}.
+              </me>
               Hierdie vergelyking het die algemene oplossing
               <me>
-                \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{3 \\ 1 \\ 0},
-                \, t \in \mathbb{R}
+                \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{3 \\ 1 \\ 0}, \, t \in \mathbb{R}
               </me>.
               So,
               <me>
@@ -647,18 +553,15 @@
             <p>
               <m>\lambda = 4</m>:
 
-              Ons benodig skalare <m>a_0</m>,
-              <m>a_1</m>, <m>a_2</m> sodat
-              <md>
+              Ons benodig skalare <m>a_0</m>, <m>a_1</m>, <m>a_2</m> sodat
+              <me>
                 \cmatrix{ -3 \amp  3 \amp  9 \\
                 0 \amp  -2  \amp  12 \\
-                0 \amp  0 \amp  0} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\
-                0 \\ 0}.
-              </md>
+                0 \amp  0 \amp  0} \cvector{a_0 \\ a_1 \\ a_2} = \cvector{0 \\ 0 \\ 0}.
+              </me>
               Hierdie vergelyking het die algemene oplossing
               <me>
-                \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{9 \\ 6 \\ 1},
-                \, t \in \mathbb{R}
+                \cvector{a_0 \\ a_1 \\ a_2} = t \cvector{9 \\ 6 \\ 1}, \, t \in \mathbb{R}
               </me>.
               So,
               <me>
@@ -672,15 +575,11 @@
     </solution>
   </example>
 
-  <p>
-    \furtherexercises
-  </p>
-
+<exercises>
   <exercise>
     <statement>
       <p>
-        Bepaal die eiewaardes en eieruimtes van die line&#xea;re
-        bewerking
+        Bepaal die eiewaardes en eieruimtes van die lineêre operator
         <md>
           <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
           <mrow>T(p)(x) \amp  := \frac{d^2}{dx^2} p(x^2 + x - 2)</mrow>
@@ -692,8 +591,7 @@
   <exercise>
     <statement>
       <p>
-        Bepaal die eiewaardes en eieruimtes van die line&#xea;re
-        bewerking
+        Bepaal die eiewaardes en eieruimtes van die lineêre operator
         <md>
           <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
           <mrow>T(p)(x) \amp  := x^2 p\left(\frac{1}{x}\right)</mrow>
@@ -701,5 +599,7 @@
       </p>
     </statement>
   </exercise>
+</exercises>
+
 </section>
 

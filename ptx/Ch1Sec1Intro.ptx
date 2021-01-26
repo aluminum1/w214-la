@@ -6,57 +6,68 @@
     <title>Three different sets</title>
     <p>
       We start by playing a game.
-      Recall that in mathematics,
-      a <em>set</em> <m>X</m> is just a collection of distinct objects.
+      Recall that in mathematics, a <em>set</em> <m>X</m> is a
+      collection of distinct objects.
       We call these objects the <em>elements</em> of <m>X</m>.
     </p>
 
     <p>
       I am going to show you three different sets,
-      and you need to tell me the properties that they all have in common.
+      and you need to tell me the properties
+      that they all have in common.
     </p>
 
     <p>
       The first set, <m>A</m>,
-      is defined to be the set of all ordered pairs <m>(x,y)</m> where <m>x</m> and <m>y</m> are real numbers.
+      is defined to be the set of all
+      ordered pairs <m>(x,y)</m> where
+      <m>x</m> and <m>y</m> are real numbers.
     </p>
 
-    <assemblage>
+    <convention>
       <p>
-        Let us pause for a second and translate this definition from English into mathematical symbols.
+        Let us pause for a second and translate this
+        definition from English into mathematical symbols.
         The translation is:
         <men>
-          A := \{ (a_1,\, a_2) : a_1,a_2 \in \mathbb{R}  \} 
+          A := \{ (a_1,\, a_2) : a_1,a_2 \in \mathbb{R}  \}
         </men>.
       </p>
 
       <p>
-        The <m>:=</m> stands for <sq>is defined to be</sq>.
-        The <m>\{</m> and <m>\}</m> symbols stand for <sq>the set of all</sq>.
-        The lone colon <m>:</m> stands for <sq>where</sq> or <sq>such that</sq>.
-        The comma in between <m>a</m> and <m>b</m> stands for <sq>and</sq>.
-        The <m>\in</m> stands for <sq>an element of</sq>.
+        The <m>:=</m> stands for <q>is defined to be</q>.
+        The <m>\{</m> and <m>\}</m> symbols stand
+        for <q>the set of all</q>.
+        The lone colon <m>:</m> stands for
+        <q>where</q> or <q>such that</q>.
+        The comma in between <m>a</m> and <m>b</m> stands for <q>and</q>.
+        The <m>\in</m> stands for <q>an element of</q>.
         And <m>\mathbb{R}</m> stands for the set of all real numbers.
       </p>
 
       <p>
         Well done <mdash /> you are learning the language of mathematics!
       </p>
-    </assemblage>
+    </convention>
 
     <p>
-      An element of <m>A</m> is an arbitrary pair of real numbers <m>\ve{a} = (a_1, \, a_2)</m>.
+      An element of <m>A</m> is an arbitrary pair of real numbers
+      <m>\ve{a} = (a_1, \, a_2)</m>.
       For instance, <m>(1, \, 2) \in A</m> and
       <m>(3.891, \, e^\pi)</m> are elements of <m>A</m>.
-      Note also that I am using a boldface <m>\ve{a}</m> to refer to an element of <m>A</m>.
-      This is so that we can distinguish <m>\ve{a}</m> from its <em>components</em>
-      <m>a_1</m> and <m>a_2</m>,
+      Note also that I am using a boldface <m>\ve{a}</m>
+      to refer to an element of <m>A</m>.
+      This is so that we can distinguish <m>\ve{a}</m>
+      from its <em>components</em> <m>a_1</m> and <m>a_2</m>,
       which are just ordinary numbers
       (not elements of <m>A</m>).
     </p>
 
     <p>
-      We can visualize an element <m>\ve{a}</m> of <m>A</m> as a point in the Cartesian plane whose <m>x</m>-coordinate is <m>a_1</m> and whose <m>y</m>-coordinate is <m>a_2</m>:
+      We can visualize an element <m>\ve{a}</m> of <m>A</m> as a point in the
+      Cartesian plane whose <m>x</m>-coordinate is <m>a_1</m> and whose
+      <m>y</m>-coordinate is <m>a_2</m>:
+    </p>
       <sidebyside valign="middle" margins="20% 40%">
         <p> <m> \ve{a} \xmapsto{\text{visualize as}} </m> </p>
         <image>
@@ -65,31 +76,34 @@
             \begin{tikzpicture}
               \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
               \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=primaryColor] (P) at (1.3, 1) {};
               % \draw[->, thick] (0,0) -- (1.3, 1);
               \draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
               \draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
-              \node[color=red] at (1.6,1) {$\ve{a}$};
+              \node[color=primaryColor] at (1.6,1) {$\ve{a}$};
             \end{tikzpicture}
           ]]>
         </latex-image>
         </image>
       </sidebyside>
-    </p>
 
     <p>
       The second set, <m>B</m>,
-      is defined to be the set of all ordered real triples
+      is defined to be the set of all
+      ordered real triples
       <m>(b_1, \, b_2, \, b_3)</m> satisfying <m>b_1 - b_2 + b_3 = 0</m>.
       Translated into mathematical symbols,
       <men>
-        B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \mbox{ and }  b_1 - b_2 + b_3 = 0\} 
+        B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \text{ and }  b_1 - b_2 + b_3 = 0\}
       </men>.
     </p>
 
     <p>
       For instance, <m>(2,3, 1) \in B</m> but <m>(1,1,1) \notin B</m>.
-      We can visualize an element <m>\ve{b}</m> of <m>B</m> as a point in the plane in 3-dimensional space carved out by the equation <m>x-y+z = 0</m>:
+      We can visualize an element <m>\ve{b}</m> of <m>B</m>
+      as a point in the plane in 3-dimensional
+      space carved out by the equation <m>x-y+z = 0</m>:
+    </p>
       <sidebyside valign="middle" margins="20% 40%">
         <p> <m> \ve{b} \xmapsto{\text{visualize as}} </m> </p>
         <image width="30%">
@@ -99,8 +113,8 @@
             \draw[->] (0, 0) -- (2,0) node[right] {$y$};
             \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
             \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-            \node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) {};
-            \node[color=red] at (0.5, 0.9) {$\ve{b}$};
+            \node [circle, fill=primaryColor, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) {};
+            \node[color=primaryColor] at (0.5, 0.9) {$\ve{b}$};
             \draw[thick] (-0.1, -1) -- (-1, 0.4);
             \draw[thick] (-1, 0.4) -- (0.3, 1.5);
             \draw[thick] (0.3, 1.5) -- (1.5, 0.4);
@@ -111,22 +125,21 @@
         </image>
       </sidebyside>
 
-    </p>
-
     <p>
-      The third set,
-      <m>C</m>, is the set of all polynomials of degree 4.
+      The third set, <m>C</m>,
+      is the set of all polynomials of degree less than or equal to 4.
       Translated into mathematical symbols,
       <men>
-        C := \{ \mbox{polynomials of degree \(\leq 4\)} \}
+        C := \{ \text{polynomials of degree } \leq 4 \}
       </men>.
     </p>
 
     <p>
-      Recall that the <em>degree</em>
-      of a polynomial is the highest power of <m>x</m> which occurs.
+      Recall that the <em>degree</em> of a polynomial
+      is the highest power of <m>x</m> which occurs (with a non-zero coefficient).
       For instance,
-      <m>\ve{c} = x^4 - 3 x^3 + 2x^2</m> is a polynomial of degree 4, and so is <m>\ve{p} = 2x^3 + \pi x</m>.
+      <m>\ve{c} = x^4 - 3 x^3 + 2x^2</m> is a polynomial of degree 4 and
+      the polynomial <m>\ve{p} = 2x^3 + \pi x</m> has degree 3.
       So <m>\ve{c}</m> and <m>\ve{p}</m> are elements of <m>C</m>.
       But <m>\ve{r} = 8x^5 - 7</m> and
       <m>\ve{s} = \sin(x)</m> are not elements of <m>C</m>.
@@ -134,6 +147,7 @@
       <m>\ve{c} \in C</m> (i.e. a polynomial of degree 4) via its <em>graph</em>.
       For instance, the polynomial
       <m>\ve{c} = x^4 - 3x^3 + 2x^2 \in C</m> can be visualized as:
+    </p>
       <sidebyside valign="middle" margins="20% 40%">
         <p> <m> \ve{c} \xmapsto{\text{visualize as}} </m> </p>
         <image>
@@ -141,15 +155,15 @@
           <![CDATA[
             \begin{tikzpicture}[domain=-0.5:2.2]
             \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-            \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-            \draw[color=red, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)}) 
+            \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};
+            \draw[color=primaryColor, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)})
             node[right] {$\ve{c}$};
             \end{tikzpicture}
           ]]>
         </latex-image>
         </image>
       </sidebyside>
-    </p>
+
     <p>
       There you have it.
       I have defined three different sets:
@@ -185,18 +199,19 @@
       </p>
 
       <p>
-        In set <m>A</m>,
-        we can add two elements <m>\ve{a} = (a_1, \, a_2)</m> and
+        In set <m>A</m>, we can add two elements <m>\ve{a} = (a_1, \, a_2)</m> and
         <m>\ve{a}' = (a_1', \, a_2')</m> together by adding their components together,
         to form a new element <m>\ve{a} + \ve{a}' \in A</m>:
         <men xml:id="add_in_A">
-          \underbrace{(a_1, \, a_2)}_{\ve{a}} + \underbrace{(a'_1, \,a'_2)}_{\ve{a}'} := \underbrace{(a_1 + a_1', \, a_2 + a_2')}_{\ve{a} + \ve{a}'}
+          \underbrace{(a_1, \, a_2)}_{\ve{a}} + \underbrace{(a'_1, \,a'_2)}_{\ve{a}'} :=
+          \underbrace{(a_1 + a_1', \, a_2 + a_2')}_{\ve{a} + \ve{a}'}
         </men>
       </p>
 
       <p>
         For instance, <m>(1, \,3) + (2, \,-1.6) = (3, \,1.4)</m>.
         We can visualize this addition operation as follows:
+      </p>
       <sidebyside valign="middle" widths="20% 5% 20% 5% 20%">
         <image>
         <latex-image>
@@ -204,10 +219,10 @@
             \begin{tikzpicture}
               \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
               \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {} ;
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=primaryColor] (P) at (1.3, 1) {} ;
               \draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
               \draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
-              \node[color=red] at (1.6,1) {$\ve{a}$};
+              \node[color=primaryColor] at (1.6,1) {$\ve{a}$};
             \end{tikzpicture}
           ]]>
         </latex-image>
@@ -219,10 +234,10 @@
             \begin{tikzpicture}
               \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
               \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (0.5, 0.3) {} ;
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=primaryColor] (P) at (0.5, 0.3) {} ;
               \draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
               \draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
-              \node[color=red] at (0.9,0.4) {$\ve{a}'$};
+              \node[color=primaryColor] at (0.9,0.4) {$\ve{a}'$};
             \end{tikzpicture}
           ]]>
         </latex-image>
@@ -234,25 +249,28 @@
             \begin{tikzpicture}
               \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
               \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.8, 1.3) {} ;
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=primaryColor] (P) at (1.8, 1.3) {} ;
               \draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
               \draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
-              \node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};
+              \node[color=primaryColor] at (1.8,1.7) {$\ve{a} + \ve{a}'$};
             \end{tikzpicture}
           ]]>
         </latex-image>
         </image>
       </sidebyside>
-      </p>
 
       <p>
         We can do a similar thing in set <m>B</m>.
         Suppose we have two elements of <m>B</m>,
-        <m>\ve{b} = (b_1, \,b_2, \,b_3)</m> and <m>\ve{b}' = (b_1', \, b_2', \, b_3')</m>.
+        <m>\ve{b} = (b_1, \,b_2, \,b_3)</m> and
+        <m>\ve{b}' = (b_1', \, b_2', \, b_3')</m>.
         Note that, since <m>\ve{b}\in B</m>,
-        its components satisfy <m>b_1 - b_2 + b_3 = 0</m>.
-        Similarly the components of <m>b'</m> satisfy and <m>b_1 - b_2 + b_3 = 0</m>.
-        We can add <m>\ve{b}</m> and <m>\ve{b}'</m> together to get a new element <m>\ve{b} + \ve{b}'</m> of <m>B</m>,
+        its components satisfy the equation
+        <m>b_1 - b_2 + b_3 = 0</m>.
+        Similarly the components of <m>b'</m> satisfy
+        <m>b'_1 - b'_2 + b'_3 = 0</m>.
+        We can add <m>\ve{b}</m> and <m>\ve{b}'</m> together
+        to get a new element <m>\ve{b} + \ve{b}'</m> of <m>B</m>,
         by adding their components together as before:
         <men xml:id="new_add_in_B">
           \underbrace{(b_1, \, b_2, \, b_3)}_{\ve{b}} + \underbrace{(b'_1, \,b'_2, \, b'_3)}_{\ve{b}'} := \underbrace{(b_1 + b_1', \, b_2 + b_2', \, b_3 + b'_3)}_{\ve{b} + \ve{b}'}
@@ -261,8 +279,10 @@
 
       <p>
         We should be careful here.
-        How do we know that the expression on the right hand side is really an element of <m>B</m>?
-        We need to check that it satisfies the equation <sq>the first component minus the second component plus the third component equals zero</sq>.
+        How do we know that the expression on the right hand side
+        really is an element of <m>B</m>?
+        We need to check that it satisfies the equation
+        <q>the first component minus the second component plus the third component equals zero</q>.
         Let us check that formally:
         <md>
           <mrow>(\ve{b} + \ve{b}')_1 - (\ve{b}+\ve{b}')_2 + (\ve{b}+\ve{b}')_3 \amp = (b_1 + b'_1) - (b_2 + b'_2) + (b_3 + b'_3)</mrow>
@@ -273,12 +293,14 @@
       </p>
 
       <p>
-        We can visualize this addition operation in <m>B</m> in the same way as we did for <m>A</m>.
+        We can visualize this addition operation in <m>B</m>
+        in the same way as we did for <m>A</m>.
       </p>
 
       <p>
         There is also an addition operation in set <m>C</m>.
-        We can add two polynomials together algebraically by adding their corresponding coefficients:
+        We can add two polynomials together algebraically by
+        adding their corresponding coefficients:
         <mdn>
          <mrow number="no">[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
           <mrow xml:id="add_in_C">:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
@@ -288,7 +310,7 @@
       <p>
         For instance,
         <me>
-          [2x^4  + x^2 - 3x + 2] + [2x^3 - 7x^2 + x] 
+          [2x^4  + x^2 - 3x + 2] + [2x^3 - 7x^2 + x]
           = 2x^4 + 2x^3 - 6x^2 -2x + 2
         </me>.
       </p>
@@ -296,12 +318,15 @@
       <p>
         There is another way to think about the addition of polynomials.
         Each polynomial <m>\ve{c}</m> can be thought of as a <em>function</em>,
-        in the sense that we can substitute an arbitrary value of <m>x</m> into the polynomial <m>\ve{c}</m>,
+        in the sense that we can substitute <m>x</m> with
+        an arbitrary real value in the polynomial <m>\ve{c}</m>
+        (called <em>evaluating the polynomial</em> at this value) ,
         and it will output a number <m>\ve{c}(x)</m>.
         For instance, if <m>\ve{c}(x) = 3x^2 - 1</m>,
         then <m>\ve{c}(2) = 11</m>.
         If we think of polynomials as functions in this way,
-        then the addition <m>\ve{c} + \ve{d}</m> of two polynomials can be thought of as the new function which,
+        then the sum <m>\ve{c} + \ve{d}</m> of two polynomials can be thought of
+        as the new function which,
         when you substitute some number <m>x</m> into it,
         outputs <m>\ve{c}(x) + \ve{d}(x)</m>.
         Written mathematically,
@@ -312,16 +337,17 @@
 
       <p>
         Thinking in this way, we can visualize the graph of
-        <m>\ve{c} + \ve{d}</m> as the graph of <m>\ve{c}</m> added to the graph of <m>\ve{d}</m>:
-        <sidebyside>
+        <m>\ve{c} + \ve{d}</m> as the sum of the graphs of
+        <m>\ve{c}</m> and <m>\ve{d}</m>:
+      </p>
               <image>
               <latex-image>
               <![CDATA[
               \begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
   circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
   \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-    \draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
+  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};
+    \draw[color=primaryColor, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
         node[right] {$\ve{c}$};
     \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
     \draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7, -0.6069);
@@ -330,8 +356,8 @@
 \begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
   circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
   \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-    \draw[color=red, thick] plot[id=p] (\x ,{-0.2*\x*\x})
+  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};
+    \draw[color=primaryColor, thick] plot[id=p] (\x ,{-0.2*\x*\x})
         node[right] {$\ve{d}$};
    \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
     \draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7, -0.578);
@@ -339,17 +365,15 @@
 \begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
   circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
   \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-  \draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};    
-    \draw[color=red, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
+  \draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};
+    \draw[color=primaryColor, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
         node[above right] {$\ve{c}+\ve{d}$};
    \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
-    \draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);       
+    \draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);
 \end{tikzpicture}
 ]]>
               </latex-image>
               </image>
-        </sidebyside>
-      </p>
     </subsubsection>
 
     <subsubsection>
@@ -378,14 +402,14 @@
       </p>
 
       <p>
-        Do not confuse the zero element
-        <m>\ve{0} \in A</m> with the real number zero, <m>0 \in \mathbb{R}</m>.
-        This is another reason why I am using boldface! (You should use underline to distinguish them.)
+        Do not confuse the zero element <m>\ve{0} \in A</m>
+        with the real number zero, <m>0 \in \mathbb{R}</m>.
+        This is another reason why I am using boldface!
+        (You could distinguish them by underlining the vector.)
       </p>
 
       <p>
-        In <m>B</m>,
-        the zero element <m>\ve{0}</m> is the point <m>(0,0,0) \in B</m>.
+        In <m>B</m>, the zero element <m>\ve{0}</m> is the point <m>(0,0,0) \in B</m>.
         When you add this point to another point <m>(u_1, u_2, u_3) \in B</m>,
         nothing happens!
         <me>
@@ -396,8 +420,8 @@
       <p>
         In <m>C</m>, the zero element <m>\ve{0}</m> is the
         <em>zero polynomial</em>.
-        If we think algebraically,
-        this is the degree polynomial whose coefficients are all zero:
+        If we think algebraically, this is the degree polynomial
+        whose coefficients are all zero:
         <men xml:id="zero_in_C">
           \ve{0} = 0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0
         </men>
@@ -405,11 +429,11 @@
 
       <p>
         If we think of the polynomial as a function,
-        then the zero polynomial <m>\ve{0}</m> is the function which returns zero for all values of <m>x</m>,
+        then the zero polynomial <m>\ve{0}</m> is the function
+        which returns zero for all values of <m>x</m>,
         that is <m>\ve{0} (x) = 0</m> for all <m>x</m>.
-        Whichever way we think of it,
-        when we add the zero polynomial to another polynomial,
-        nothing happens!
+        Whichever way we think of it, when we add the zero
+        polynomial to another polynomial, nothing happens!
         <md>
           <mrow> [0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0] + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
           <mrow>= [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
@@ -422,14 +446,16 @@
       <p>
         The last feature all the sets <m>A</m>,
         <m>B</m> and <m>C</m> have in common is that in each set,
-        you can <em>multiply</em> elements of the set by real numbers.
+        you can <em>multiply</em> elements of the set by any real number
+        and the result will also be an element in the set.
       </p>
 
       <p>
         For instance,
         if <m>\ve{a} = (a_1, a_2)</m> is an element of <m>A</m>,
         then we can multiply it by some arbitrary real number,
-        say <m>9</m>, to get a new element <m>9\smul \ve{a}</m> of <m>A</m>.
+        say <m>9</m>, to get a
+        new element <m>9\smul \ve{a}</m> of <m>A</m>.
         We do this multiplication component-wise:
         <men xml:id="sm_in_A">
           9 \smul(a_1, \,a_2) := (9 a_1, \, 9a_2)
@@ -438,32 +464,27 @@
 
       <p>
         In general, if <m>k \in \mathbb{R}</m> is an arbitrary real number,
-        then we can multiply elements
+        then we can multiply any element
         <m>\ve{a} \in A</m> by <m>k</m> to get a new element
-        <m>k \smul\ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
-      </p>
-
-      <p>
-        In general, if <m>k \in \mathbb{R}</m> is an arbitrary real number,
-        then we can multiply elements
-        <m>\ve{a} \in A</m> by <m>k</m> to get a new element
-        <m>k \smul\ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
+        <m>k \smul\ve{a} \in A</m> by multiplying
+        each component of <m>\ve{a}</m> by <m>k</m>:
         <me>
           \underbrace{k \smul(a_1, \, a_2)}_{\text{ Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\text{Multiplying two numbers together} }, \, \underbrace{k a_2})
         </me>
       </p>
 
       <p>
-        Just be careful to distinguish scalar multiplication <m>k \smul\ve{a}</m>
-        (written with a <m>\smul</m>)
-        from ordinary multiplication of real numbers <m>k a_1</m>
+        Just be careful to distinguish scalar multiplication
+        <m>k \smul\ve{a}</m> (written with a <m>\smul</m>) from
+        ordinary multiplication of real numbers <m>k a_1</m>
         (written with no symbol, just using juxtaposition).
-        Later on, because we are lazy,
-        we will stop writing the <m>\cdot</m> explicitly <mdash /> you have been warned!
+        Later on, we follow the accepted convention of mathematicians and
+        we will stop writing the <m>\cdot</m> explicitly
+        <mdash /> you have been warned!
       </p>
 
       <p>
-        Visually, this multiplcation operation <em>scales</em>
+         Visually, this multiplcation operation <em>scales</em>
         <m>\ve{a}</m> by a factor of <m>k</m>.
         That is why we call it <em>scalar multiplication</em>.
       </p>
@@ -501,7 +522,7 @@
       <ul>
         <li>
           <p>
-            Set <m>A = \mathbb{R}^2</m> has a
+            The set <m>A = \mathbb{R}^2</m> has a
             <em>multiplication operation</em>.
             Because we can think of <m>\mathbb{R}^2</m> as the complex plane <m>\mathbb{C}</m>,
             and we know how to multiply complex numbers.
@@ -515,7 +536,7 @@
 
         <li>
           <p>
-            There is a <em><sq>take the derivative</sq></em> operation on <m>C</m>,
+            There is a <em><q>take the derivative</q></em> operation on <m>C</m>,
             <me>
               \ve{c} \mapsto \frac{d}{dx} \ve{c}
             </me>
@@ -523,29 +544,30 @@
             Note that taking the derivative decreases the degree of a polynomial by 1, so the result remains in <m>C</m>,
             and so this is a well defined map from <m>C</m> to <m>C</m>.
             There is no analogue of this operation in <m>A</m> and <m>B</m>.
-
-            <assemblage>
-              <p>
-                Note that there is no <em>integration</em>
-                map from <m>C</m> to <m>C</m>,
-                because integrating a polynomial
-                <em>increases</em> the degree by <m>1</m>,
-                so the result might be a polynomial of degree <m>5</m>,
-                which does not live in <m>C</m>!
-              </p>
-            </assemblage>
-
           </p>
+
         </li>
       </ul>
     </p>
+
+      <warning>
+        <p>
+          Note that there is no <em>integration</em>
+          map from <m>C</m> to <m>C</m>,
+          because integrating a polynomial
+          <em>increases</em> the degree by <m>1</m>,
+          so the result might be a polynomial of degree <m>5</m>,
+          which does not live in <m>C</m>!
+        </p>
+      </warning>
   </subsection>
 
   <subsection>
     <title>Rules</title>
     <p>
       We have found that each of our three sets <m>A</m>,
-      <m>B</m> and <m>C</m> have an <em>addition operation</em> <m>+</m>,
+      <m>B</m> and <m>C</m> have an
+      <em>addition operation</em> <m>+</m>,
       a <em>zero vector</em> <m>\ve{0}</m>,
       and a <em>scalar multiplication</em> operation <m>\cdot</m>.
       Do these operations satisfy any rules, common to all three sets?
@@ -553,7 +575,8 @@
 
     <p>
       For instance,
-      we can think of the addition operation in <m>A</m> as a function which assigns to each pair of elements <m>\ve{a}</m> and <m>\ve{a}'</m> in <m>A</m> a new element <m>\ve{a} + \ve{a}'</m> in <m>A</m>.
+      we can think of the addition operation in <m>A</m> as a function which assigns to each pair of elements <m>\ve{a}</m> and <m>\ve{a}'</m> in <m>A</m>
+      a new element <m>\ve{a} + \ve{a}'</m> in <m>A</m>.
       Does this operation satisfy any rules?
     </p>
 
@@ -567,7 +590,7 @@
       </me>
       and
       <me>
-        \ve{a}' + \ve{a} = (a'_1 + a_1, \, a'_2 + a_2) 
+        \ve{a}' + \ve{a} = (a'_1 + a_1, \, a'_2 + a_2)
       </me>.
     </p>
 
@@ -584,20 +607,21 @@
       The first component of <m>\ve{a} + \ve{a}'</m> is <m>a_1 + a'_1</m>.
       The first component of <m>\ve{a}' + \ve{a}</m> is <m>a'_1 + a_1</m>.
       Is <m>a_1 + a'_1 = a'_1 + a_1</m>?
-      Yes <mdash /> because these are just ordinary real numbers
+      Yes <mdash /> because these are ordinary real numbers
       (not elements of <m>A</m> anymore),
       and we know that for ordinary real numbers,
       you can add them together in either order and get the same result.
-      So the first component of <m>\ve{a} + \ve{a}'</m> is equal to the first component of <m>a'+ a</m>.
+      So the first component of <m>\ve{a} + \ve{a}'</m> is equal to the first component of <m>\ve{a}'+ \ve{a}</m>.
       Similarly, we can check that the second component of
       <m>\ve{a} + \ve{a}'</m> is equal to the second component of <m>\ve{a}' + \ve{a}</m>.
-      So all the components of <m>\ve{a} + \ve{a}'</m> are equal to all the components of <m>\ve{a}' + \ve{a}</m>.
+      So all the components of <m>\ve{a} + \ve{a}'</m> are equal to
+      the corresponding components of <m>\ve{a}' + \ve{a}</m>.
       So, finally,
       we conclude that <m>\ve{a} + \ve{a}' = \ve{a}' + \ve{a}</m>.
     </p>
 
     <p>
-      Does this rule <xref ref="comm_in_A" /> also hold for the addition operations in <m>B</m> and <m>C</m>?
+      Does the rule in <xref ref="comm_in_A">equation</xref> also hold for the addition operations in <m>B</m> and <m>C</m>?
       Yes.
       For instance, let us check that it holds in <m>C</m>.
       Suppose that <m>\ve{c}</m> and <m>\ve{d}</m> are polynomials in <m>C</m>.
@@ -609,7 +633,7 @@
     </p>
 
     <p>
-      The left and right hand sides of <xref ref="must_check" /> are elements of <m>C</m>.
+      The left and right hand sides of <xref ref="must_check">equation</xref> are elements of <m>C</m>.
       And elements of <m>C</m> are polynomials.
       To check if two polynomials are equal,
       we need to check if they are equal
@@ -629,7 +653,8 @@
       because this is true for ordinary numbers.
       So for each input value <m>x</m>,
       <m>(\ve{c} + \ve{d}) (x) = (\ve{d} + \ve{c})(x)</m>.
-      Therefore the polynomials <m>\ve{c} + \ve{d}</m> and <m>\ve{d} + \ve{c}</m> are equal,
+      Therefore the polynomials <m>\ve{c} + \ve{d}</m> and
+      <m>\ve{d} + \ve{c}</m> are equal,
       because they output the same values for all numbers <m>x</m>.
     </p>
 

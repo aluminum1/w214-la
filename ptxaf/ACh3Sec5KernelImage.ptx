@@ -5,12 +5,9 @@
   <definition>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding
-        tussen vektorruimtes <m>V</m> en <m>W</m> wees.
-        Die <term>kern</term> van <m>T</m>, geskryf
-        <m>\Ker(T)</m>,
-        is die versameling van alle vektore <m>\ve{v} \in V</m> wat deur
-        <m>T</m> op <m>\ve{0}_W</m> afgebeeld word.
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding tussen vektorruimtes <m>V</m> en <m>W</m> wees.
+        Die <term>kern</term> van <m>T</m>, geskryf <m>\Ker(T)</m>,
+        is die versameling van alle vektore <m>\ve{v} \in V</m> wat deur <m>T</m> op <m>\ve{0}_W</m> afgebeeld word.
         Dit is,
         <me>
           \Ker(T) := \{ \ve{v} \in V : T(\ve{v}) = \ve{0}_W \}
@@ -18,14 +15,12 @@
       </p>
 
       <p>
-        Die <term>beeld</term> van <m>T</m>,
-        geskryf <m>\Be(T)</m>, is die versameling van alle
-        vektore <m>\ve{w} \in W</m> sodat <m>\ve{w} = T(\ve{v})</m> vir een of ander
+        Die <term>beeld</term> van <m>T</m>, geskryf <m>\Be(T)</m>, is die versameling van alle
+        vektore <m>\ve{w} \in W</m> sodat <m>\ve{w} = T(\ve{v})</m> vir ten minste een
         <m>\ve{v} \in V</m>.
         Dit is,
         <me>
-          \Be(T) := \{ \ve{w} \in W : \ve{w} = T(\ve{v}) \mbox{ vir 'n 
-          \(\ve{v} \in V\)}  \}
+          \Be(T) := \{ \ve{w} \in W : \ve{w} = T(\ve{v}) \text{ vir 'n } \ve{v} \in V   \}
         </me>
       </p>
     </statement>
@@ -36,82 +31,73 @@
     vir 'n skematiese voorstelling.
   </p>
 
-  <assemblage>
+  <convention>
     <p>
-      Soms, om absoluut duidelik te wees, sal ek 'n
-      onderskrif op die nul-vektor sit om aan te dui aan watter vektorruimte
-      dit behoort, bv.
+      Soms, om absoluut duidelik te wees, sal ek 'n onderskrif op die nul-vektor sit om aan te dui aan watter vektorruimte dit behoort, bv.
       <m>\ve{0}_W</m> verwys na die nulvektor in <m>W</m>, terwyl
       <m>\ve{0}_V</m> na die nulvektor in <m>V</m> verwys.
     </p>
-  </assemblage>
+  </convention>
 
-  <assemblage>
+  <note>
     <p>
       Nog 'n naam vir die kern van <m>T</m> is die
       <em>nulruimte</em> van <m>T</m>,
       en nog 'n naam vir die beeld van <m>T</m> is die
       <em>waardeversameling</em> van <m>T</m>.
     </p>
-  </assemblage>
+  </note>
 
   <figure xml:id = "ker_fig">
-
+    <caption>'n Uitbeelding van <m>\Ker(T)</m>, die kern van <m>T</m> </caption>
     <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=1.1]
- \draw (0,0) circle (1);
- \draw (0,0) circle (0.3);
- \draw (3,0) circle (1);
- \node at (0, -1.2) {\(V\)};
- \node at (3, -1.2) {\(W\)};
- \draw (0.083*0.6, 0.493*0.6) -- (3,0);
- \draw (0.083*0.6, -0.493*0.6) -- (3,0);
- \fill[fill=black] (3,0) circle (0.05);
- \node at (3.4, 0) {\(\ve{0}_W\)};
- \node at (0, -0.5) {\(\Ker(T)\)};\end{tikzpicture}]]>
-</latex-image>
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}[scale=1.1]
+        \draw (0,0) circle (1);
+        \draw (0,0) circle (0.3);
+        \draw (3,0) circle (1);
+        \node at (0, -1.2) {\(V\)};
+        \node at (3, -1.2) {\(W\)};
+        \draw (0.083*0.6, 0.493*0.6) -- (3,0);
+        \draw (0.083*0.6, -0.493*0.6) -- (3,0);
+        \fill[fill=black] (3,0) circle (0.05);
+        \node at (3.4, 0) {\(\ve{0}_W\)};
+        \node at (0, -0.5) {\(\Ker(T)\)};\end{tikzpicture}]]>
+      </latex-image>
     </image>
-    <caption><m>\Ker(T)</m> </caption>
   </figure>
 
 <figure xml:id = "im_fig">
+  <caption > 'n Uitbeelding van <m>\Be(T)</m>, die beeld van <m>T</m></caption>
     <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=1.1]
- \draw (0,0) circle (1);
- \draw (3,0) circle (0.3);
- \draw (3,0) circle (1);
- \node at (0, -1.2) {\(V\)};
- \node at (3, -1.2) {\(W\)};
- \draw (0.15, 0.987) -- (3.03,0.3);
- \draw (0.15, -0.987) -- (3.03,-0.3);
- \node at (3, -0.5) {\(\Be(T)\)};\end{tikzpicture}]]>
-</latex-image>
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}[scale=1.1]
+        \draw (0,0) circle (1);
+        \draw (3,0) circle (0.3);
+        \draw (3,0) circle (1);
+        \node at (0, -1.2) {\(V\)};
+        \node at (3, -1.2) {\(W\)};
+        \draw (0.15, 0.987) -- (3.03,0.3);
+        \draw (0.15, -0.987) -- (3.03,-0.3);
+        \node at (3, -0.5) {\(\Im(T)\)};\end{tikzpicture}]]>
+      </latex-image>
     </image>
-
-   <caption > <m>\Be(T)</m></caption>
   </figure>
 
   <lemma xml:id="ker-im-subspace">
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n
-        line&#xea;re afbeelding wees..
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding wees.
         Dan:
 
-        <ol>
+        <ol label="a">
           <li>
-           
             <p>
               <m>\Ker(T)</m> is 'n deelruimte van <m>V</m>
             </p>
           </li>
 
           <li>
-          
             <p>
               <m>\Be(T)</m> is 'n deelruimte van <m>W</m>
             </p>
@@ -123,122 +109,109 @@
 
   <proof>
     <p>
-      (i) Ons moet seker maak dat die drie vereistes van 'n
-      deelruimte bevredig word.
+      In albei gevalle moet ons seker maak dat die drie vereistes van 'n  deelruimte bevredig word.
 
       <ol>
         <li>
-         
+
           <p>
-            <m>\Ker(T)</m> is geslote onder sommering.
-
-            <p>
-              Veronderstel <m>\ve{v}</m> en <m>\ve{v}'</m> is in
-              <m>\Ker(T)</m>. Met ander woorde, <m>T(\ve{v}) = \ve{0}</m> en
-              <m>T(\ve{v}') = \ve{0}</m>. Ons moet wys dat <m>\ve{v} + \ve{v}'</m>
-              in <m>\Ker(T)</m> is, met ander woorde, dat<m>T(\ve{v} + \ve{v}')
-              = \ve{0}</m>. Inderdaad,
-              <me>
-                T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}') = \ve{0} +
-                \ve{0} = \ve{0}
-              </me>.
-            </p>
-
+            <m>\Ker(T)</m> is geslote onder optelling.
           </p>
+
+          <p>
+            Veronderstel <m>\ve{v}</m> en <m>\ve{v}'</m> is in
+            <m>\Ker(T)</m>. Met ander woorde, <m>T(\ve{v}) = \ve{0}</m> en
+            <m>T(\ve{v}') = \ve{0}</m>. Ons moet wys dat <m>\ve{v} + \ve{v}'</m>
+            in <m>\Ker(T)</m> is, met ander woorde, dat<m>T(\ve{v} + \ve{v}') = \ve{0}</m>. Inderdaad,
+            <me>
+              T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}') = \ve{0} + \ve{0} = \ve{0}
+            </me>.
+          </p>
+
         </li>
 
         <li>
           <p>
             <m>\ve{0}_V \in \Ker(T)</m>.
+          </p>
 
-            <p>
-              Om te wys dat <m>\ve{0}_V</m> in <m>\Ker(T)</m> is, moet ons wys dat
-              <m>T(\ve{0}_V) = \ve{0}_W</m>. Inderdaad, dit is waar want <m>T</m>
-              is 'n line&#xea;re afbeelding, volgens <xref ref="lin_map_zero_to_zero">Lemma</xref>.
-            </p>
-
+          <p>
+            Om te wys dat <m>\ve{0}_V</m> in <m>\Ker(T)</m> is, moet ons wys dat
+            <m>T(\ve{0}_V) = \ve{0}_W</m>. Inderdaad, dit is waar want <m>T</m>
+            is 'n lineêre afbeelding, volgens <xref ref="lin_map_zero_to_zero">Lemma</xref>.
           </p>
         </li>
 
         <li>
-          
+
           <p>
             <m>\Ker(T)</m> is geslote onder skalaarvermenigvuldiging.
+          </p>
 
-            <p>
-              Veronderstel <m>\ve{v} \in \Ker(T)</m> en <m>k \in
-              \mathbb{R}</m> is 'n skalaar. Ons moet wys dat <m>k \ve{v} \in
-              \Ker(T)</m>, dit is, ons moet wys dat <m>T(k \ve{v}) = \ve{0}</m>.
-              Inderdaad,
-              <me>
-                T(k \ve{v}) = k T(\ve{v}) = k \ve{0} = \ve{0}
-              </me>.
-            </p>
-
+          <p>
+            Veronderstel <m>\ve{v} \in \Ker(T)</m> en <m>k \in \mathbb{R}</m> is 'n skalaar.
+            Ons moet wys dat <m>k \ve{v} \in \Ker(T)</m>, dit is, ons moet wys dat <m>T(k \ve{v}) = \ve{0}</m>.
+            Inderdaad,
+            <me>
+              T(k \ve{v}) = k T(\ve{v}) = k \ve{0} = \ve{0}
+            </me>.
           </p>
         </li>
       </ol>
     </p>
 
     <p>
-      (ii) Weereens moet ons die drie vereistes van 'n deelruimte
-      nagaan.
+      Nou bevestig ons dat <m>\Be(T)</m> die drie vereistes bevredig.
 
       <ol>
         <li>
-        
+
           <p>
-            <m>\Be(T)</m> is geslote onder sommering.
+            <m>\Be(T)</m> is geslote onder optelling.
+          </p>
 
-            <p>
-              Veronderstel <m>\ve{w}</m> en <m>\ve{w}'</m> is in <m>\Be(T)</m>. Met
-              ander woorde, daar bestaan vektore <m>\ve{v}</m> en <m>\ve{v}'</m> in
-              <m>V</m> sodat <m>T(\ve{v}) = \ve{w}</m> en <m>T(\ve{v}') = \ve{w}'</m>.
-              Ons moet wys dat <m>\ve{w} + \ve{w}'</m> ook in <m>\Be(T)</m> is, met
-              ander woorde, dat daar 'n vekor <m>\ve{u}</m> in <m>V</m> bestaan,
-              sodat <m>T(\ve{u}) = \ve{w} + \ve{w}'</m>. Inderdaad, stel
-              <m>\ve{u} := \ve{v} + \ve{v}'</m>. Dan,
-              <me>
-                T(\ve{u}) = T(\ve{v} + \ve{v}') = T(\ve{v}) +
-                T(\ve{v}') = \ve{w} + \ve{w}'
-              </me>.
-            </p>
-
+          <p>
+            Veronderstel <m>\ve{w}</m> en <m>\ve{w}'</m> is in <m>\Be(T)</m>. Met
+            ander woorde, daar bestaan vektore <m>\ve{v}</m> en <m>\ve{v}'</m> in
+            <m>V</m> sodat <m>T(\ve{v}) = \ve{w}</m> en <m>T(\ve{v}') = \ve{w}'</m>.
+            Ons moet wys dat <m>\ve{w} + \ve{w}'</m> ook in <m>\Be(T)</m> is, met
+            ander woorde, dat daar 'n vekor <m>\ve{u}</m> in <m>V</m> bestaan,
+            sodat <m>T(\ve{u}) = \ve{w} + \ve{w}'</m>. Inderdaad, stel
+            <m>\ve{u} := \ve{v} + \ve{v}'</m>. Dan,
+            <me>
+              T(\ve{u}) = T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}') = \ve{w} + \ve{w}'
+            </me>.
           </p>
         </li>
 
         <li>
-        
+
           <p>
             <m>\ve{0}_W \in \Be(T)</m>.
+          </p>
 
-            <p>
-              Om te wys dat <m>\ve{0}_W \in \Be(T)</m>, moet ons wys dat daar
-              'n <m>\ve{v} \in V</m> bestaan, sodat <m>T(\ve{v}) = \ve{0}_W</m>.
-              Inderdaad, kies <m>\ve{v} = \ve{0}_V</m>. Dan is <m>T(\ve{v}) =
-              T(\ve{0}_V) = \ve{0}_W</m> volgens <xref ref="lin_map_zero_to_zero">Lemma</xref>.
-            </p>
-
+          <p>
+            Om te wys dat <m>\ve{0}_W \in \Be(T)</m>, moet ons wys dat daar
+            'n <m>\ve{v} \in V</m> bestaan, sodat <m>T(\ve{v}) = \ve{0}_W</m>.
+            Inderdaad, kies <m>\ve{v} = \ve{0}_V</m>. Dan is <m>T(\ve{v}) = T(\ve{0}_V) = \ve{0}_W</m> volgens <xref ref="lin_map_zero_to_zero">Lemma</xref>.
           </p>
         </li>
 
         <li>
-        
           <p>
             <m>\Be(T)</m> is geslote onder skalaarvermenigvuldiging.
+          </p>
 
-            <p>
-              Veronderstel <m>\ve{w} \in \Be(T)</m> en <m>k</m> is 'n
-              skalaar. Ons moet wys dat <m>k \ve{w} \in \Be(T)</m>. Die feit
-              dat <m>\ve{w}</m> in <m>\Be(T)</m> is, beteken dat daar 'n <m>\ve{v}</m>
-              in <m>V</m> bestaan, sodat <m>T(\ve{v}) = \ve{w}</m>. Ons moet wys
-              dat daar 'n <m>\ve{u} \in V</m> bestaan, sodat <m>T(\ve{u}) = k
-              \ve{w}</m>. Inderdaad, stel <m>\ve{u} := k \ve{v}</m>. Dan
-              <me>
-                T(\ve{u}) = T(k \ve{v}) = k T(\ve{v}) = k \ve{w}
-              </me>.
-            </p>
-
+          <p>
+            Veronderstel <m>\ve{w} \in \Be(T)</m> en <m>k</m> is 'n
+            skalaar. Ons moet wys dat <m>k \ve{w} \in \Be(T)</m>. Die feit
+            dat <m>\ve{w}</m> in <m>\Be(T)</m> is, beteken dat daar 'n <m>\ve{v}</m>
+            in <m>V</m> bestaan, sodat <m>T(\ve{v}) = \ve{w}</m>. Ons moet wys
+            dat daar 'n <m>\ve{u} \in V</m> bestaan, sodat <m>T(\ve{u}) = k \ve{w}</m>.
+            Inderdaad, stel <m>\ve{u} := k \ve{v}</m>. Dan
+            <me>
+              T(\ve{u}) = T(k \ve{v}) = k T(\ve{v}) = k \ve{w}
+            </me>.
           </p>
         </li>
       </ol>
@@ -246,47 +219,40 @@
   </proof>
 
   <p>
-    Nou dat ons weet dat die kern en beeld van 'n line&#xea;re afbeelding
-    deelruimtes is en dus vektorruimtes in eie reg, kan ons die volgende
-    definisie gee.
+    Nou dat ons weet dat die kern en beeld van 'n lineêre afbeelding
+    deelruimtes is en dus vektorruimtes in eie reg,
+    kan ons die volgende definisie gee.
   </p>
 
   <definition>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding
-        vanaf 'n eindig-dimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m>
-        wees.
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding vanaf 'n eindig-dimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
         Die <term>nulheidsgraad</term> van <m>T</m> is die dimensie van <m>\Ker(T)</m>,
         en die <term>rang</term> van <m>T</m> is die dimensie van <m>\Be(T)</m>:
         <md>
           <mrow>\Nhg(T) \amp := \Dim (\Ker(T))</mrow>
-          <mrow>\Rang(T) \amp = \Dim (\Be(T))</mrow>
+          <mrow>\Rang(T) \amp := \Dim (\Be(T))</mrow>
         </md>
       </p>
     </statement>
   </definition>
 
-  <assemblage>
+  <insight>
     <p>
-      Die <sq>dimensie van <m>\Ker(T)</m></sq> maak sin, want <m>\Ker(T)</m>
-      is 'n deelruimte van 'n eindig-dimensionele vektorruimte <m>V</m>,
-      en daarom
-      is dit eindig-dimensioneel volgens <xref ref="dim-of-subspace-prop">Proposisie</xref>.
+      Die <q>dimensie van <m>\Ker(T)</m></q> maak sin, want <m>\Ker(T)</m> is 'n deelruimte van 'n eindig-dimensionele vektorruimte <m>V</m>,
+      en daarom is dit eindig-dimensioneel volgens <xref ref="dim-of-subspace-prop">Proposisie</xref>.
       Ons weet nog nie dat <m>\Be(T)</m>
-      eindig-dimensioneel is nie, maar dit sal volg uit die
-      Rang-Nulheidgraad-stelling
+      eindig-dimensioneel is nie, maar dit sal volg uit die  Rang-Nulheidgraad-stelling
       (<xref ref="rank-nullity-theorem">Stelling</xref>).
     </p>
-  </assemblage>
+  </insight>
 
   <example xml:id="cross-product-example">
     <statement>
       <p>
-        Laat <m>\ve{a} \in
-        \mathbb{R}^3</m> 'n konstante nie-nul vektor
-        wees.
-        Oorweeg die <sq>kruisproduk met <m>\ve{a}</m></sq>-line&#xea;re afbeelding van
+        Laat <m>\ve{a} \in \mathbb{R}^3</m> 'n konstante nie-nul vektor wees.
+        Oorweeg die <q>kruisproduk met <m>\ve{a}</m></q>-lineêre afbeelding van
         <xref ref="cross_prod_as_linear_map">Voorbeeld</xref>,
         <md>
           <mrow>C : \mathbb{R}^3 \amp  \rightarrow \mathbb{R}^3</mrow>
@@ -307,19 +273,17 @@
         <me>
           |\ve{a} \times \ve{v}| = |\ve{a}| |\ve{v}| \sin \theta
         </me>
-        waar <m>\theta</m> die hoek van <m>\ve{a}</m> tot <m>\ve{v}</m> is,
+        waar <m>\theta</m> die hoek tussen <m>\ve{a}</m> en <m>\ve{v}</m> is,
         sien ons dat
         <me>
-          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow 
-          \mbox{\(\ve{v}=\ve{0}\) of \(\theta = 0\) of \(\theta= \pi\)} 
+          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow \ve{v}=\ve{0} \text{ of }\theta = 0\text{ of }\theta= \pi
         </me>.
       </p>
 
       <p>
         Met ander woorde,
         <m>\ve{v}</m> moet 'n skalaarveelvoud van <m>\ve{a}</m>
-        wees.
-        So,
+        wees. So,
         <me>
           \Ker(C) = \{ k \ve{a}, k \in \mathbb{R} \}
         </me>.
@@ -330,8 +294,7 @@
         van <m>C</m> die deelruimte van
         <em>alle</em> vektore loodreg op <m>\ve{a}</m> is, i.e.
         <men xml:id="image-of-C">
-          \Be(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0
-          \}
+          \Be(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}
         </men>.
       </p>
 
@@ -339,55 +302,53 @@
         As jy my glo, dan is die prentjie soos volg:
       </p>
 
-      <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-    \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
-    \draw (1.5, -0.1) -- (1.5, -2);
-    \node at (3.3, 1) {\(\Be(C)\)};  
-    \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
-</latex-image>
-      </image>
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+            \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
+            \draw (1.5, -0.1) -- (1.5, -2);
+            \node at (3.3, 1) {\(\Im(C)\)};
+            \draw[very thick, primaryColor, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
 
       <p>
-        Laat ek vergelyking <xref ref="image-of-C" /> bewys.
-        Per definisie is die
-        beeld van <m>C</m> die deelruimte van <m>\mathbb{R}^3</m> bestaande uit alle
+        Kom ons bewys vergelyking <xref ref="image-of-C" />.
+        Per definisie is die beeld van <m>C</m> die deelruimte van <m>\mathbb{R}^3</m> wat bestaan uit alle
         vektore <m>\ve{w}</m> van die vorm <m>\ve{w} = \ve{a} \times \ve{v}</m> vir
         een of ander <m>\ve{v} \in \mathbb{R}^3</m>.
-        Dit impliseer dat <m>\ve{w}</m>
-        loodreg op <m>\ve{a}</m> is.
-        Dit was die <sq>maklike</sq> deel.
-        Die <sq>moeliker</sq>
-        deel is om die ander rigting te bewys.
-        Dit is, ons moet wys dat as
-        <m>\ve{u}</m> loodreg op <m>\ve{a}</m> is,
+        Dit impliseer dat <m>\ve{w}</m> loodreg op <m>\ve{a}</m> is.
+        Dit was die <q>maklike</q> deel.
+        Die <q>moeliker</q> deel is om die omgekeerde rigting te bewys.
+        Dit is, ons moet wys dat as <m>\ve{u}</m> loodreg op <m>\ve{a}</m> is,
         dan is <m>\ve{u}</m> in die beeld van
-        <m>C</m>, i.e. daar bestaan 'n vektor <m>\ve{v}</m> sodat <m>C(\ve{v}) =
-        \ve{u}</m>.
+        <m>C</m>, i.e. daar bestaan 'n vektor <m>\ve{v}</m> sodat <m>C(\ve{v}) = \ve{u}</m>.
       </p>
 
       <p>
-        Ons kan inderdaad <m>\ve{v}</m> kies om die vektor te wees wat verkry
-        word deur <m>\ve{u}</m> met 90 grade kloksgewys te roteer in die vlak
+        Ons kan inderdaad <m>\ve{v}</m> kies om die vektor te wees wat verkry word deur <m>\ve{u}</m> met 90 grade kloksgewys te roteer in die vlak
         <m>I</m>, en dit soos nodig te skaleer:
       </p>
 
-      <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-    \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
-    \draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
-    \draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
-</latex-image>
-      </image>
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+            \draw[very thick, primaryColor, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
+            \draw[very thick, secondaryColor, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
+            \draw[very thick, ternaryColor, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
+            </latex-image>
+        </image>
+      </figure>
 
       <p>
         In terme van 'n formule het ons
         <me>
-          \ve{v} = \frac{|\ve{u}|}{|\ve{a}|} \ve{u} \times \ve{a} 
+          \ve{v} = \frac{|\ve{u}|}{|\ve{a}|} \ve{u} \times \ve{a}
         </me>.
       </p>
 
@@ -395,18 +356,13 @@
         Let daarop dat dit nie die <em>enigste</em> vektor <m>\ve{v}</m> is
         waarvoor <m>C(\ve{v}) = \ve{u}</m> nie.
         Inderdaad, as ons by <m>\ve{v}</m>
-        enige vektor op die lyn deur<m>\ve{a}</m> tel, sal die resulterende
-        vektor
+        enige vektor op die lyn deur<m>\ve{a}</m> tel, sal die resulterende vektor
         <me>
           \tilde{\ve{v}} = \ve{v} + k \ve{a}
         </me>
-      </p>
-
-      <p>
         <em>ook</em> <m>C(\tilde{\ve{v}}) = \ve{u}</m> bevredig, want
         <me>
-          C(\tilde{\ve{v}}) = C(\ve{v} + k \ve{a}) = C(\ve{v}) + C(k
-          \ve{a}) = \ve{u} + \ve{0} = \ve{u}
+          C(\tilde{\ve{v}}) = C(\ve{v} + k \ve{a}) = C(\ve{v}) + C(k \ve{a}) = \ve{u} + \ve{0} = \ve{u}
         </me>.
       </p>
     </solution>
@@ -415,8 +371,7 @@
   <example>
     <statement>
       <p>
-        Bepaal die kern, beeld en nulheidsgraad van die line&#xea;re
-        afbeelding
+        Bepaal die kern, beeld en nulheidsgraad van die lineêre afbeelding
         <md>
           <mrow>I : \Trig_2 \amp  \rightarrow \mathbb{R}</mrow>
           <mrow>T \amp  \mapsto \int_0^\pi T(x) dx </mrow>
@@ -425,16 +380,13 @@
     </statement>
     <solution>
       <p>
-        Die kern van <m>I</m> bestaan uit alle tweede graadse
-        trigonometriese polinome
+        Die kern van <m>I</m> bestaan uit alle tweede graadse trigonometriese polinome
         <me>
-          T(x) = a_0 + a_1 \cos x + b_1 \sin x + a_2 \cos 2x + b_2 \sin
-          2x
+          T(x) = a_0 + a_1 \cos x + b_1 \sin x + a_2 \cos 2x + b_2 \sin 2x
         </me>
         sodat
         <me>
-          \int_0^\pi (a_0 + a_1 \cos x + b_1 \sin x + a_2 \cos 2x + b_2 \sin 2x) \,
-          dx = 0
+          \int_0^\pi (a_0 + a_1 \cos x + b_1 \sin x + a_2 \cos 2x + b_2 \sin 2x) \, dx = 0
         </me>.
       </p>
 
@@ -446,14 +398,7 @@
         met geen beperkings op die ander konstantes <m>a_1, a_2, b_2</m> nie.
         Met ander woorde,
         <me>
-          \Ker(I) = \left\{ \text{
-          alle
-          trigonometriese polinome van die vorm} \\ (a_0(1 -
-          \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2
-          \sin{2x}), \text{ waar } (a_0, a_1, a_2, b_2 \in
-          \mathbb{R}).
-
-            \right\}
+          \Ker(I) = \left\{ \text{alle trigonometriese polinome van die vorm} \\ (a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}), \text{ waar } (a_0, a_1, a_2, b_2 \in\mathbb{R}). \right\}
         </me>
       </p>
 
@@ -462,20 +407,18 @@
       </p>
 
       <p>
-        Die beeld van <m>I</m> bestaan uit alle re&#xeb;le getalle
-        <m>p \in
-        \mathbb{R}</m>, sodat daar 'n
-        <m>T \in \Trig_2</m> bestaan waarvoor <m>I(T) =
-        p</m>.
-        Ek beweer dat
+        Die beeld van <m>I</m> bestaan uit alle reële getalle
+        <m>p \in \mathbb{R}</m>, sodat daar 'n
+        <m>T \in \Trig_2</m> bestaan waarvoor <m>I(T) = p</m>.
+        Ek beweer nou dat
         <me>
           \Be(I) = \mathbb{R}
         </me>.
       </p>
 
       <p>
-        Inderdaad, gegee <m>p \in \mathbb{R}</m>, dan kies ons <m>T(x) =
-        \frac{p}{2} \sin{x}</m>, want
+        Inderdaad, gegee <m>p \in \mathbb{R}</m>,
+        dan kies ons <m>T(x) = \frac{p}{2} \sin{x}</m>, want
         <me>
           I(T) = \frac{p}{2} \int_0^\pi \sin{x} \, dx  = p
         </me>.
@@ -486,11 +429,8 @@
       </p>
 
       <p>
-        Let daarop dat die keuse van <m>T(x) = \frac{p}{2} \sin(x)</m> wat
-        <m>I(T)
-        = p</m> bevredig nie uniek is nie.
-        Ons kan s&#xea; <m>\tilde{T} = T + S</m>
-        waar <m>S \in \Ker(I)</m> en ons sal steeds h&#xea;
+        Let daarop dat die keuse van <m>T(x) = \frac{p}{2} \sin(x)</m> wat <m>I(T) = p</m> bevredig nie uniek is nie.
+        Ons kan sê <m>\tilde{T} = T + S</m> waar <m>S \in \Ker(I)</m> en ons sal steeds hê
         dat <m>I(\tilde{T})=p</m>:
         <me>
           I(\tilde{T}) = I(T + S) = I(T) + I(S) =  p + 0 = p
@@ -499,7 +439,7 @@
     </solution>
   </example>
 
-  <example>
+  <example xml:id="old_example_ker_range_poly">
     <statement>
       <p>
         Oorweeg die funksie
@@ -510,24 +450,21 @@
       </p>
 
       <p>
-        Wys dat <m>T</m> 'n line&#xea;re afbeelding is,
-        en bepaal <m>T</m> se kern, beeld,
-        rang en nulheidsgraad.
+        Wys dat <m>T</m> 'n lineêre afbeelding is,
+        en bepaal <m>T</m> se kern, beeld, rang en nulheidsgraad.
       </p>
     </statement>
     <solution>
       <p>
-        Ons wys eers dat <m>T</m> 'n line&#xea;re afbeelding is.
+        Ons wys eers dat <m>T</m> 'n lineêre afbeelding is.
         Laat <m>p,q \in \Poly_2</m>.
         Dan
         <md>
-          <mrow>T(p + q) \amp = ( (p+q)(1), \, (p+q)'(1) )  \amp \amp  \mbox{(Defn van
-          \(T\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, (p+q)'(1) ) \amp \amp  \mbox{(Defn van die funksie
-          \(p+q\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, (p'+q')(1) ) \amp \amp  \mbox{(\((p+q)' = p'+q'\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, p'(1) + q'(1)) \amp \amp  \mbox{(Defn van \(p' + q'\))}</mrow>
-          <mrow>\amp = (p(1), \, p'(1)) + (q(1), \, q'(1)) \amp \amp  \mbox{(Defn of \(+\) in \(\mathbb{R}^2\))}</mrow>
+          <mrow>T(p + q) \amp = ( (p+q)(1), \, (p+q)'(1) )  \amp \amp  \text{(Defn van } T)</mrow>
+          <mrow>\amp = (p(1) + q(1), \, (p+q)'(1) ) \amp \amp  \text{(Defn van die funksie } p+q )</mrow>
+          <mrow>\amp = (p(1) + q(1), \, (p'+q')(1) ) \amp \amp  ((p+q)' = p'+q')</mrow>
+          <mrow>\amp = (p(1) + q(1), \, p'(1) + q'(1)) \amp \amp  \text{(Defn van } p' + q' )</mrow>
+          <mrow>\amp = (p(1), \, p'(1)) + (q(1), \, q'(1)) \amp \amp  \text{(Defn van optelling in } \mathbb{R}^2)</mrow>
           <mrow>\amp = T(p) + T(q)</mrow>
         </md>.
       </p>
@@ -542,27 +479,24 @@
           p(x) = a_0 + a_1 x + a_2 x^2
         </me>
         sodat <m>T(p) = (0,0)</m>.
-        Dit vertaal in die vergelyking
+        Ons kan dit herskryf om die vergelyking
         <me>
           (a_0 + a_1 + a_2, \, a_1 + 2 a_2) = (0,0)
-        </me>.
+        </me> te kry.
       </p>
 
       <p>
-        Dit lei verder na die vergelykings:
-         <md>
-        <mrow>  a_0 + a_1 + a_2 \amp = 0 </mrow>
-        <mrow> a_0 + a_1 + a_2 \amp = 0 </mrow>
-        <mrow> a_1 + 2a_2 \amp = 0 </mrow>
+        Dit lei dan verder na die twee vergelykings:
+        <md>
+          <mrow> a_0 + a_1 + a_2 \amp = 0 </mrow>
+          <mrow> a_1 + 2a_2 \amp = 0 </mrow>
         </md>
         waarvan die vergelyking <m>a_2 = t</m>,
         <m>a_1 = - 2t</m>, <m>a_0 = -t</m> is,
         waar <m>t \in \mathbb{R}</m>.
         Daarom
         <me>
-          \Ker(T) =  \left\{ \mbox{polinome
-          van die vorm \( -t -2t x + t x^2\)  waar  \(t \in \mathbb{R}\)
-          }  \right\}
+          \Ker(T) =  \left\{ \text{polinome van die vorm }  -t -2t x + t x^2 \text{ waar } t \in \mathbb{R} \right\}
         </me>.
       </p>
 
@@ -572,12 +506,10 @@
 
       <p>
         Die beeld van <m>T</m> is die versameling van alle
-        <m>(v,w) \in
-        \mathbb{R}^2</m> sodat daar 'n polinoom <m>p = a_0 + a_1 x + a_2 x^2</m> in
+        <m>(v,w) \in \mathbb{R}^2</m> sodat daar 'n polinoom <m>p = a_0 + a_1 x + a_2 x^2</m> in
         <m>\Poly_2</m> bestaan waarvoor <m>T(p) = (v,w)</m>.
-        So, <m>(v,w)</m> is in die
-        beeld van <m>T</m> as en slegs as ons 'n polinoom <m>p = a_0 + a_1x + a_2
-        x^2</m> kan vind sodat
+        So, <m>(v,w)</m> is in die  beeld van <m>T</m>
+        as en slegs as ons 'n polinoom <m>p = a_0 + a_1x + a_2 x^2</m> kan vind sodat
         <me>
           (a_0 + a_1 + a_2, a_1 + 2a_2) = (v,w)
         </me>.
@@ -585,20 +517,14 @@
 
       <p>
         Met ander woorde,
-        <m>(v,w)</m> is in die beeld van <m>T</m> as en slegs as
-        die vergelykings
+        <m>(v,w)</m> is in die beeld van <m>T</m> as en slegs as die vergelykings
         <md>
           <mrow> a_0 + a_1 + a_2 \amp = v </mrow>
           <mrow> a_1 + 2a_2 \amp = w  </mrow>
         </md>
-      </p>
-
-      <p>
         'n oplossing het vir een of ander <m>a_0, a_1, a_2</m>.
-        Maar hierdie
-        vergelykings het <em>altyd</em> 'n oplossing,
-        vir <em>alle</em> <m>(v,w)
-        \in \mathbb{R}^2</m>.
+        Maar hierdie vergelykings het <em>altyd</em> 'n oplossing,
+        vir <em>alle</em> <m>(v,w) \in \mathbb{R}^2</m>.
         Byvoorbeeld, een oplossing is
         <me>
           a_2 = 0 ,  \, a_1 = w, \, a_0 = v - w
@@ -613,8 +539,7 @@
         Let daarop dat <m>T(p) = (v,w)</m>.
         Daarom,
         <me>
-          \Be(T) = \{\mbox{all }  (v,w) \in \mathbb{R}^2 \} =
-          \mathbb{R}^2
+          \Be(T) = \{\text{alle }  (v,w) \in \mathbb{R}^2 \} = \mathbb{R}^2
         </me>.
       </p>
 
@@ -626,8 +551,7 @@
         Let daarop dat die keuse van die polinoom <m>p(x) = v-w + w x</m> van
         <xref ref="one-soln-for-preimage" /> wat <m>T(p) = (v,w)</m> bevredig nie die
         <em>enigste</em> moontlike keuse is nie.
-        Inderdaad, enige polinoom
-        van die vorm <m>\tilde{p} = p + q</m> waar <m>q \in \Ker(T)</m> sal
+        Inderdaad, enige polinoom van die vorm <m>\tilde{p} = p + q</m> waar <m>q \in \Ker(T)</m> sal
         <m>T(\tilde{p}) = (v,w)</m> ook bevredig, want
         <me>
           T(\tilde{p}) = T(p + q) = T(p) + T(q) = (v,w) + (0,0) = (v,w)
@@ -662,29 +586,29 @@
         <me>
           \begin{bmatrix} a + b + c \\ b + 2c \\ a + 2b + 3c  \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}
         </me>
-        Hierdie vergelyking tussen kolomvektore is bevredig as en slegs as die volgende stelsel van gelyktydige line\^{e}re vergelykings is bevredig:
+        Hierdie vergelyking tussen kolomvektore is bevredig as en slegs as die volgende stelsel van gelyktydige lineêre vergelykings is bevredig:
         <md>
           <mrow> a + b + c \amp = 0 </mrow>
           <mrow> b + 2c \amp = 0</mrow>
           <mrow> a + 2b + 3c \amp = 0</mrow>
         </md>
-      </p>
-      <p>
-        Ons waarneem dat die derde vergelyking is gelyk aan die som van die eerste en tweede vergelykings. So wanneer ons hierdie vergelykings bewerk tot ry-echelon vorm toe, kry ons:
+        Ons neem waar dat die derde vergelyking gelyk is aan die som van die eerste en tweede vergelykings. So wanneer ons hierdie vergelykings bewerk tot hul rytrapvorm, kry ons:
         <md>
          <mrow> a + b + c \amp = 0 </mrow>
          <mrow> b + 2c \amp = 0 </mrow>
         </md>
+      </p>
+      <p>
         Die algemene oplossing is:
         <me>
           c = t, \, b = -2t, \, a = t, \quad t \in \mathbb{R}
         </me>
-      </p>
-      <p>
         Dus,
         <me>
           \Ker(T) = \{ t - 2t x + tx^2 : t \in \mathbb{R}\}
         </me>
+      </p>
+      <p>
         'n Basis vir <m>\Ker(T)</m> is gekry deur die waarde van die parameter <m>t</m> te kies as <m>t = 1</m>:
         <me>
           \text{Basis for } \Ker(T) = \bopen 1 - 2x + x^2 \bclose
@@ -695,7 +619,7 @@
         </me>
       </p>
       <p>
-        Nou kom ons bereken <m>\Be(T)</m>. Ons het
+        Kom ons bereken nou <m>\Be(T)</m>. Ons het
         <md>
           <mrow> \mat{w} \equiv \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} \in \Be(T)  </mrow>
           <mrow> \Leftrightarrow \text{there exists } p \in \Poly_2 \text{ such that } T(p) = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} </mrow>
@@ -721,39 +645,41 @@
       <p>
         Kom ons los hierdie vergelykings op deur ry reduksie te gebruik:
         <md>
-          <mrow>\left[ \begin{array}{ccc|c} 
-          1 \amp 1 \amp 1 \amp w_1 \\ 
-          0 \amp 1 \amp 2 \amp w_2 \\
-          1 \amp 2 \amp 3 \amp w_3
-          \end{array}\right]</mrow>
+          <mrow>\left[ \begin{array}{ccc|c}
+            1 \amp 1 \amp 1 \amp w_1 \\
+            0 \amp 1 \amp 2 \amp w_2 \\
+            1 \amp 2 \amp 3 \amp w_3
+            \end{array}\right]</mrow>
           <mrow>
-          \xrightarrow{R_3 - R_1}
-          \left[ \begin{array}{ccc|c} 
-          1 \amp 1 \amp 1 \amp w_1 \\ 
-          0 \amp 1 \amp 2 \amp w_2 \\
-          0 \amp 1 \amp 2 \amp w_3 - w_1
-          \end{array}\right]
-        </mrow>
+            \xrightarrow{R_3 - R_1}
+            \left[ \begin{array}{ccc|c}
+            1 \amp 1 \amp 1 \amp w_1 \\
+            0 \amp 1 \amp 2 \amp w_2 \\
+            0 \amp 1 \amp 2 \amp w_3 - w_1
+            \end{array}\right]
+          </mrow>
           <mrow>
-          \xrightarrow{R_3 - R_2}
-          \left[ \begin{array}{ccc|c} 
-          1 \amp 1 \amp 1 \amp w_1 \\ 
-          0 \amp 1 \amp 2 \amp w_2 \\
-          0 \amp 0 \amp 0 \amp w_3 - w_1 - w_2
-          \end{array}\right]
-        </mrow>
+            \xrightarrow{R_3 - R_2}
+            \left[ \begin{array}{ccc|c}
+            1 \amp 1 \amp 1 \amp w_1 \\
+            0 \amp 1 \amp 2 \amp w_2 \\
+            0 \amp 0 \amp 0 \amp w_3 - w_1 - w_2
+            \end{array}\right]
+          </mrow>
         </md>
       </p>
       <p>
-        So: daar bestaan <em>geen</em> oplossing vir <m>a,b,c</m> tensy <m>w_3 - w_1 - w_2 = 0</m>, want andersins sal ons 'n vergelyking van die vorm 'nul is gelyk aan 'n nie nul waarde' h\^{e}. Bovendien, <em>as</em> <m>w_3 - w_1 - w_2</m>, dan <em>kan</em> di\'{e} vergelykings opgelos word vir <m>a,b,c</m>, want hulle is in toegevoegde ry-trap vorm met geen ongeldige rye. Dus,
+        So: daar bestaan <em>geen</em> oplossing vir <m>a,b,c</m> tensy <m>w_3 - w_1 - w_2 = 0</m>, want andersins sal ons 'n vergelyking van die vorm 'nul is gelyk aan 'n nie nul waarde' hê. Bovendien, <em>as</em> <m>w_3 - w_1 - w_2</m>, dan <em>kan</em> dié vergelykings opgelos word vir <m>a,b,c</m>, want hulle is in toegevoegde ry-trap vorm met geen ongeldige rye. Dus,
         <me>
           \Be(T) = \left\{ \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} : -w_1 -w_2 + w_3 = 0 \right\}.
         </me>
-        So, 'n basis vir <m>\Be(T)</m> is gegee deur:
+      </p>
+      <p>
+        So, 'n basis vir <m>\Be(T)</m> is gegee deur
         <me>
           \bopen \begin{bmatrix}  1 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \bclose
         </me>
-        and hence 
+        en dus is
         <me>
           \Rang(T) = 2.
         </me>
@@ -765,35 +691,26 @@
     <title>Rang-Nulheidsgraadstelling</title>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow W</m> 'n line&#xea;re afbeelding vanaf 'n
-        eindigdimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
+        Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding vanaf 'n eindig dimensionele vektorruimte <m>V</m> na 'n vektorruimte <m>W</m> wees.
         Dan
         <me>
           \Nhg(T) + \Rang(T) = \Dim(V)
         </me>.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
-      Laat <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_k \bclose</m> 'n basis
-      vir <m>\Ker(T)</m> wees.
-      Omdat <m>\basis{B}</m> 'n lys onafhanklike vektore in
-      <m>V</m> is, kan ons dit uitbrei na 'n basis
-      <m>\basis{C} = \bopen \ve{e}_1,
-      \ldots, \ve{e}_k, \ve{f}_1, \ldots, \ve{f}_p \bclose</m> vir <m>V</m>, volgens
+      Laat <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_k \bclose</m> 'n basis vir <m>\Ker(T)</m> wees.
+      Omdat <m>\basis{B}</m> 'n lys onafhanklike vektore in <m>V</m> is, kan ons dit uitbrei na 'n basis
+      <m>\basis{C} = \bopen \ve{e}_1, \ldots, \ve{e}_k, \ve{f}_1, \ldots, \ve{f}_p \bclose</m> vir <m>V</m>, volgens
       <xref ref="first_corollary_please">Gevolgtrekking</xref>.
       Ek beweer dat
       <me>
         \basis{D} := \bopen T(\ve{f}_1), \ldots, T(\ve{f}_p) \bclose
       </me>
-    </p>
-
-    <p>
       'n basis vir <m>\Be(T)</m> is.
-      As ek dit kan bewys, sal ons klaar wees, want
-      dan het ons
+       As ek dit kan bewys, sal ons klaar wees, want dan het ons
       <md>
         <mrow>\Nhg(T) + \Rang(T) \amp = k + p</mrow>
         <mrow>\amp = \Dim(V)</mrow>
@@ -805,7 +722,7 @@
     </p>
 
     <p>
-      <em><m>\basis{D}</m> is line&#xea;r onafhanklik</em>.
+      <em><m>\basis{D}</m> is lineêr onafhanklik</em>.
       Veronderstel
       <me>
         b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p) = \ve{0}_W
@@ -818,60 +735,49 @@
       <me>
         b_1 \ve{f}_1 + \cdots + b_p \ve{f}_p \in \Ker(T)
       </me>
-      wat beteken ons kan dit as 'n line&#xea;re kombinasie van vektore in
-      <m>\basis{B}</m> skryf,
+      wat beteken ons kan dit as 'n lineêre kombinasie van vektore in <m>\basis{B}</m> skryf,
       <me>
-        b_1 \ve{f}_1 + \cdots + b_p \ve{f}_p = a_1 \ve{e}_1 + \cdots + a_k
-        \ve{e}_k
+        b_1 \ve{f}_1 + \cdots + b_p \ve{f}_p = a_1 \ve{e}_1 + \cdots + a_k \ve{e}_k
       </me>.
     </p>
 
     <p>
-      Deur al die terme aan eenkant te versamel, word dit die vergelyking
+      Deur al die terme aan een kant te versamel, word dit die vergelyking
       <me>
-        -a_1 \ve{e}_1 - \cdots -a_k \ve{e}_k + b_1 \ve{f}_1 + \cdots + b_p
-        \ve{f}_p = \ve{0}_V
+        -a_1 \ve{e}_1 - \cdots -a_k \ve{e}_k + b_1 \ve{f}_1 + \cdots + b_p \ve{f}_p = \ve{0}_V
       </me>.
     </p>
 
     <p>
-      Ons herken die linkerkant as 'n line&#xea;re kombinasie van die
-      <m>\basis{C}</m>-basisvektore.
-      Aangesien hulle line&#xea;r onafhanklik is,
+      Ons herken die linkerkant as 'n lineêre kombinasie van die <m>\basis{C}</m>-basisvektore.
+      Aangesien hulle lineêr onafhanklik is,
       moet al die skalare nul wees.
       Onder andere, <m>b_1 = \cdots = b_p = 0</m>,
       wat is wat ons wou bewys.
     </p>
 
     <p>
-      <em><m>\basis{D}</m> span <m>W</m></em>.
-      Veronderstel <m>\ve{w} \in
-      \Be(T)</m>.
-      Ons moet wys dat <m>\ve{w}</m> 'n line&#xea;re kombinasie van
-      vektore in <m>\basis{D}</m> is.
+      <em><m>\basis{D}</m> onderspan vir <m>W</m></em>.
+      Veronderstel <m>\ve{w} \in\Be(T)</m>.
+      Ons moet wys dat <m>\ve{w}</m> 'n lineêre kombinasie van vektore in <m>\basis{D}</m> is.
       Aangesien <m>\ve{w}</m> in die beeld van <m>T</m> is,
       bestaan daar 'n <m>\ve{v} \in V</m> sodat <m>T(\ve{v}) = \ve{w}</m>.
-      Omdat
-      <m>\basis{C}</m> 'n basis vir <m>V</m> is, kan ons skryf
+      Omdat <m>\basis{C}</m> 'n basis vir <m>V</m> is, kan ons
       <me>
-        \ve{v} = a_1 \ve{e}_1 + \cdots + a_k \ve{e}_k + b_1 \ve{f}_1 +
-        \cdots + b_p \ve{f}_p
+        \ve{v} = a_1 \ve{e}_1 + \cdots + a_k \ve{e}_k + b_1 \ve{f}_1 + \cdots + b_p \ve{f}_p
       </me>
-      vir skalare <m>a_1, \ldots, a_k, b_1, \ldots, b_p</m>.
+      skryf vir skalare <m>a_1, \ldots, a_k, b_1, \ldots, b_p</m>.
       Dan
       <md>
         <mrow>\ve{w} \amp =   T(\ve{v})</mrow>
-        <mrow>\amp = T(a_1 \ve{e}_1 + \cdots + a_k \ve{e}_k + b_1 \ve{f}_1 + \cdots +
-        b_p \ve{f}_p)</mrow>
-        <mrow>\amp = a_1 T(\ve{e}_1) + \cdots + a_k T(\ve{e}_k) + b_1 T(\ve{f}_1) +
-        \cdots + b_p T(\ve{f}_p)</mrow>
-        <mrow>\amp = b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p) \amp \amp  \mbox{(\(\ve{e}_i
-        \in \Ker(T)\))}</mrow>
+        <mrow>\amp = T(a_1 \ve{e}_1 + \cdots + a_k \ve{e}_k + b_1 \ve{f}_1 + \cdots +  b_p \ve{f}_p)</mrow>
+        <mrow>\amp = a_1 T(\ve{e}_1) + \cdots + a_k T(\ve{e}_k) + b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p)</mrow>
+        <mrow>\amp = b_1 T(\ve{f}_1) + \cdots + b_p T(\ve{f}_p) \amp \amp  (\ve{e}_i \in \Ker(T))</mrow>
       </md>
-      sodat <m>\ve{w}</m> wel 'n line&#xea;re kombinasie van die vektore in
-      <m>\basis{D}</m> is.
+      sodat <m>\ve{w}</m> wel 'n lineêre kombinasie van die vektore in <m>\basis{D}</m> is.
     </p>
   </proof>
+</theorem>
 
 <example>
     <title>Die identiteitsafbeelding op 'n vektorruimte</title>
@@ -893,13 +799,13 @@
         <me>
           \Be(\id_V) = V
         </me>
-        want <em>elke</em> vektor <m>\ve{v} \in V</m> is in die beeld van <m>\id_V</m>. Inderdaad, ons het <m>\id_V (\ve{v}) = \ve{v}</m>, wat bewys dat <m>\ve{v} \in \Be(\id_V)</m>. Dus, 
+        want <em>elke</em> vektor <m>\ve{v} \in V</m> is in die beeld van <m>\id_V</m>. Inderdaad, ons het <m>\id_V (\ve{v}) = \ve{v}</m>, wat bewys dat <m>\ve{v} \in \Be(\id_V)</m>. Dus,
         <me>
           \Rang(\id_V) = \Dim(V).
         </me>
         So inderdaad die Rang-Nulheidsgraad Stelling (<xref ref="rank-nullity-theorem"/>) is waar in hierdie geval, want
         <me>
-          \underbrace{\Rang(\id_V)}_{=\Dim(V)} + \underbrace{\Nhg(\id_V)}_{=0} = \Dim(V). 
+          \underbrace{\Rang(\id_V)}_{=\Dim(V)} + \underbrace{\Nhg(\id_V)}_{=0} = \Dim(V).
         </me>
       </p>
     </statement>
@@ -932,48 +838,45 @@
         </me>
         Dus is die Rang-Nulheidsgraad Stelling (<xref ref="rank-nullity-theorem"/>) waar in hierdie geval, want
         <me>
-          \underbrace{\Rang(Z)}_{=0} + \underbrace{\Ker(Z)}_{=\Dim(V)} = \Dim(V). 
+          \underbrace{\Rang(Z)}_{=0} + \underbrace{\Ker(Z)}_{=\Dim(V)} = \Dim(V).
         </me>
       </p>
     </statement>
   </example>
 
-  <example> 
+  <example>
     <title>
-      Verifieering dat <xref ref="modification_r_n_ex"/> die Rang-Nulheidsgraad Stelling bevredig
+      Bevestiging dat <xref ref="modification_r_n_ex"/> die Rang-Nulheidsgraad Stelling bevredig
     </title>
     <statement>
       <p>
-      Kom ons verifieer dat die line\^{e}re afbeelding <m>T</m> uit <xref ref="modification_r_n_ex"/> die <xref ref="rank-nullity-theorem"/> bevredig. In <xref ref="modification_r_n_ex"/>, het ons bereken dat
-      <me>
-        \Nhg(T) = 1, \quad \Rang(T) = 2. 
-      </me>
-      Dus,
-      <me>
-        \underbrace{\Rang(T)}_{=2} + \underbrace{\Nhg(T)}_{=1} = \underbrace{\Dim(\Poly_2)}_{=3}
-      </me>
-      so dit bevredig wel <xref ref="rank-nullity-theorem"/>. 
-    </p>
+        Kom ons bevestig dat die lineêre afbeelding <m>T</m> uit <xref ref="modification_r_n_ex"/> die <xref ref="rank-nullity-theorem"/> bevredig. In <xref ref="modification_r_n_ex"/>, het ons bereken dat
+        <me>
+          \Nhg(T) = 1, \quad \Rang(T) = 2.
+        </me>
+        Dus,
+        <me>
+          \underbrace{\Rang(T)}_{=2} + \underbrace{\Nhg(T)}_{=1} = \underbrace{\Dim(\Poly_2)}_{=3}
+        </me>
+        so dit bevredig wel <xref ref="rank-nullity-theorem"/>.
+      </p>
     </statement>
   </example>
-
 
 <exercises>
   <exercise>
     <statement>
       <p>
-        Verifieer die Rang-Nulheidgraad-stelling vir die volgende
-        line&#xea;re afbeeldings.
-        D.w.s., vir elke afbeelding <m>T</m>, (a) bepaal
-        <m>\Ker(T)</m> en <m>\Be(T)</m> eksplisiet, (b) bepaal die dimensie van <m>\Ker(T)</m>
-        en <m>\Be(T)</m>, (c) maak seker dat die getalle die
-        Rang-Nulheidsgraad-stelling bevredig.
+        Bevestig die Rang-Nulheidgraad-stelling vir die volgende lineêre afbeeldings.
+        D.w.s., vir elke afbeelding <m>T</m>,
+        (a) bepaal <m>\Ker(T)</m> en <m>\Be(T)</m> eksplisiet,
+        (b) bepaal die dimensie van <m>\Ker(T)</m> en <m>\Be(T)</m>,
+        (c) maak seker dat die getalle die Rang-Nulheidsgraad-stelling bevredig.
 
         <ol>
           <li>
             <p>
-              Die identiteitsafbeelding <m>\id_V : V \rightarrow V</m> op 'n
-              eindig-dimensionele vektorruimte <m>V</m>.
+              Die identiteitsafbeelding <m>\id_V : V \rightarrow V</m> op 'n eindig-dimensionele vektorruimte <m>V</m>.
             </p>
           </li>
 
@@ -1004,226 +907,240 @@
               <md>
                 <mrow>S : \Trig_2 \amp  \rightarrow \Col_2</mrow>
                 <mrow>f \amp  \mapsto \begin{bmatrix} \int_0^\pi f(x) \cos x
-                dx \\
-                 \int_0^\pi f(x) \sin x dx \end{bmatrix}</mrow>
+                dx \\ \int_0^\pi f(x) \sin x dx \end{bmatrix}</mrow>
               </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Die <q>krul</q> afbeelding
+              <md>
+                <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
+                <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
+              </md>
+              Bonus vraag: Watter soort vektorvelde is in die kern van <m>C</m>?
+            </p>
+          </li>
+
+          <li>
+            <p>(Poole 6.5.12) Die afbeelding
+              <md>
+                <mrow>T : \Mat_{2,2} \amp \rightarrow \Mat_{2,2} </mrow>
+                <mrow> \mat{A} \amp \mapsto \mat{A} \mat{B} - \mat{B} \mat{A}</mrow>
+              </md>
+              waar
+              <me>
+                \mat{B} = \begin{bmatrix} 1 \amp -1 \\ -1 \amp 1 \end{bmatrix}
+              </me>
             </p>
           </li>
         </ol>
       </p>
     </statement>
-     <solution> 
-
+    <solution>
       <p>
-
         <ol>
-<li>
-<p>
-<m>\id_V</m> sends only a single vector to <m>0</m>, namely the vector <m>\ve 0_v</m>. Thus <m>\Ker(\id_v) = \{\ve 0_v\}</m> and hence <m>\Nhg(\id_v) = 0</m>. <m>\Be(\id_V) = V</m>  and so <m>\Rang(\id_V) = \Dim(V) </m>. The equation
-<me>
-\Dim V + 0 = \Dim V .
-</me>
-verifies the Rank-Nullity Theorem for this example.
-</p>
-</li>
+          <li>
+            <p>
+              <m>\id_V</m> stuur slegs een vektor na <m>0</m>, naamlik die vektor <m>\ve 0_v</m>. Dus is <m>\Ker(\id_v) = \{\ve 0_v\}</m> en dus <m>\Nullity(\id_v) = 0</m>. Ons het ook <m>\Im(\id_V) = V</m> en dus <m>\Rank(\id_V) = \Dim(V) </m>. Die vergeyking
+              <me>
+                \Dim V + 0 = \Dim V .
+              </me>
+              bevestig dat die Rang-Nulheidsgraadstelling in hierdie voorbeeld geld.
+            </p>
+          </li>
 
+          <li>
+            <p>
+              Die nul-afbeelding stuur elke element in <m>V </m> na <m> \ve 0 </m>. Dus is <m>\Ker(Z) = V </m> en dus <m> \Nullity(Z) = \Dim V </m>. Vir dieselfde rede is <m>\Im(Z) = \{0\}</m> en dus <m>\Rank(Z) = 0 </m>. Die vergelyking
+              <me>
+                \Dim V + 0 = \Dim V .
+              </me>
+              wys nou dat die Rang-Nulheidsgraadstelling wel geld vir hierdie voorbeeld.
+            </p>
+          </li>
 
-<li>
-<p>
-The zero map spends every element in <m>V </m> to <m> \ve 0 </m>. Hence <m>\Ker(Z) = V </m> and so <m> \Nhg(Z) = \Dim V </m>. For the same reason <m>\Be(Z) = \{0\}</m> and thus <m>\Rang(Z) = 0 </m>. The equation
-<me>
-\Dim V + 0 = \Dim V .
-</me>
-verifies the Rank-Nullity Theorem for this example.
-</p>
-</li>
+          <li>
+            <p>
+              <m> \ve p(x) \in \Ker(T) </m> as en slegs as
+              <me>
+                p(1) = p(2) = p(3) = 0
+              </me>.
+              Maar enige derdegraadse polinoom met <m>1, 2</m> en <m> 3</m> as wortels, moet van die vorm
+              <me>
+                a(x-1)(x-2)(x-3)
+              </me> wees
+              waar <m> a \in \mathbb R </m>. Omgekeerd, is enige element van hierdie vorm wel in <m> \Ker T </m>. Dus is
+              <me>
+                \Ker(T) = \{a(x-1)(x-2)(x-3) \in \Poly_3 \, : \, a \in \mathbb R\}
+              </me>
+              en dus is <m> \Nullity(T)  = 1 </m>.
+            </p>
 
+            <p>
+              Ons beweer nou dat <m>\Im(T) = \Col_3</m>. Met ander woorde, vir enige
+              <me>
+                \begin{bmatrix} s \\ t \\u \end{bmatrix} \in \Col_3,
+              </me>
+              kan ons 'n polinoom <m>\ve p</m>, van graad 3 of minder vind, sodat <m> p(1) = s, p(2) = t, p(3) = u</m>. Om dit te wys, kan jy byvoorbeeld die stelsel lineêre vergelykings
+              <md>
+                <mrow> a + b + c +d = s </mrow>
+                <mrow> 8a + 4b + 2c + d = t</mrow>
+                <mrow> 27b + 9 b + 3c + d  = u</mrow>
+              </md> opstel
+              en oplos vir die koëffisiënte van <m> \ve p </m>. Dit is miskien meer elegant om die teorie van Lagrange interpolasie polinome <fn> https://en.wikipedia.org/wiki/Lagrange_polynomial</fn> te gebruik. Vir enige 3 verskillende punte in <m>\mathbb R^2 </m> (met geen twee van hulle op dieselfde vertikale lyn nie), kan ons altyd 'n tweedegraadse polinoom vind wat deur hierdie 3 punte gaan. In ons geval, laat one die punte <m>(1,s), (2,t), (3,u)</m> wees. Die graad twee Lagrange polinoom wat deur hierdie punte gaan is
+              <me>
+                \ve p(x) = u\left[ \frac{(x-2)(x-3)}{(1-2)(1-3)}\right] + s\left[ \frac{(x-1)(x-3)}{(2-1)(2-3)}\right] + t\left[ \frac{(x-1)(x-2)}{(3-1)(3-2)}\right].
+              </me>
+              Dit is maklik om te bevestig dat <m> p(1) = s, p(2) = t, p(3) = u</m>. Dus is <m>\Im(T) = \Col_3</m> en dus <m>\Rank(T) = 3</m>.
+              <me>
+                \Rank(T) + \Nullity(T) = 1 + 3 = 4 = \Dim(\Poly_3).
+              </me>
+            </p>
+          </li>
 
-<li>
-<p>
-  <m> \ve p(x) \in \Ker(T) </m> if and only if 
-  <me>
-p(1) = p(2) = p(3) = 0.
-</me>
-But any degree 3 polynomial with <m>1, 2</m> and <m> 3</m> as roots must be of the form
-<me>
-a(x-1)(x-2)(x-3)
-</me>
-where <m> a \in \mathbb R </m>. Conversely, any element of this form is in <m> \Ker T </m>. Hence
-<me>
-\Ker(T) = \{a(x-1)(x-2)(x-3) \in \Poly_3 \, : \, a \in \mathbb R\} 
-</me>
-and thus <m> \Nhg(T)  = 1 </m>.
-</p>
+          <li>
+            <p>
+              Dit sal handig wees om die volgende integrale byderhand te hê:
+              <md>
+                <mrow>\amp \int_0^\pi \cos(x) = 0 </mrow>
+                <mrow>\amp \int_0^\pi \sin(x) = 0 </mrow>
+                <mrow>\amp \int_0^\pi \cos^2(x) = \pi/2 </mrow>
+                <mrow>\amp \int_0^\pi \sin^2(x) = \pi/2 </mrow>
+                <mrow>\amp \int_0^\pi \sin(x)\cos(x) = 0</mrow>
+                <mrow>\amp \int_0^\pi \cos(2x)\cos(x) = 0</mrow>
+                <mrow>\amp \int_0^\pi \sin(2x)\cos(x) = \frac{4}{3}</mrow>
+                <mrow>\amp \int_0^\pi \cos(2x)\sin(x) = -\frac{2}{3}</mrow>
+                <mrow>\amp \int_0^\pi \sin(2x)\sin(x) = 0</mrow>
+              </md>
+            </p>
 
-<p>
-I claim that <m>\Be(T) = \Col_3</m>. That is, for any 
-<me>
-\begin{bmatrix} s \\ t \\u \end{bmatrix} \in \Col_3,
-</me>
-we can find a polynomial  <m>\ve p</m>, of degree 3 or less, such that <m> p(1) = s, p(2) = t, p(3) = u</m>. To show this, you could set up the system of linear equations <md>
-<mrow> a + b + c +d = s </mrow>
-<mrow> 8a + 4b + 2c + d = t</mrow>
-<mrow> 27b + 9 b + 3c + d  = u</mrow>
-</md>and solve for the coefficients of <m> \ve p </m>. What is perhaps more elegant is to use the theory of Lagrange interpolation polynomials <fn> https://en.wikipedia.org/wiki/Lagrange_polynomial</fn>. Given any 3 distinct points in <m>\mathbb R^2 </m>, we can always find a degree two polynomial going through these 3 points. In our case, let the points be <m>(1,s), (2,t), (3,u)</m>. The degree two Lagrange polynomial going through these points is
-<me>
-\ve p(x) = u\left[ \frac{(x-2)(x-3)}{(1-2)(1-3)}\right] + s\left[ \frac{(x-1)(x-3)}{(2-1)(2-3)}\right] + t\left[ \frac{(x-1)(x-2)}{(3-1)(3-2)}\right].
-</me>
-It is easy to check that <m> p(1) = s, p(2) = t, p(3) = u</m>. Hence <m>\Be(T) = \Col_3</m> and so <m>\Rang(T) = 3</m>.
-<me>
-\Rang(T) + \Nhg(T) = 1 + 3 = 4 = \Dim(\Poly_3).
-</me>
-</p>
-</li>
+            <p>
+              Veronderstel nou
+              <me>
+              \ve f(x) = a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \in \Ker(S).
+              </me>
+              Dan is
+              <mdn>
+                <mrow> \int_0^\pi f(x)\cos(x) \, dx = b\frac{\pi}{2} + e\frac{4}{3} = 0</mrow>
+                <mrow> \int_0^\pi f(x)\sin(x) \, dx = c\frac{\pi}{2} - d\frac{2}{3} = 0</mrow>
+              </mdn>.
+              Omgekeerd, is enige <m> f </m> wat die lineêre vergelykings hierbo bevredig, definitied in <m> \Ker(S)</m>. Dus is
+              <md>
+                <mrow>
+                \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: </mrow>
+                <mrow>
+                 b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \} </mrow>
+              </md>.
+              Ons is vry om  <m> a </m> op enige manier te kies, want die konstante sal nie enige van die integrale beïnvloed nie. Ons kan ook <m> b </m> vryelik kies, maar dan word <m> e </m> uit (1) bepaal. Soortgelyk kan ons <m> c </m> kies, maar dan word <m> d </m> uit (2) bepaal.
+              Dus is <me>
+              \Nullity(S) = 3.
+              </me>
+            </p>
 
+            <p>
+              Ons beweer dat <m> \Im(S) = \Col_2</m>. Om dit te sien, veronderstel dat
+              <me>
+                \begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2
+              </me>.
+              Beskou nou
+              <me>
+                f(x) = \frac{2s}{\pi}\cos(x) + \frac{2t}{\pi}\sin(x)
+              </me>.
+              Deur die tabel van integrale hier bo na te slaan, sien ons dat
+              <me>
+                S(T) = \begin{bmatrix} s \\ t \end{bmatrix} .
+              </me>
+              Dus is <me>
+              \Rank(T) = 2
+              </me>.
+            </p>
 
-<li>
-<p>
-It will be useful to have the following integrals at hand:
-<md>
-<mrow>\amp \int_0^\pi \cos(x) = 0 </mrow>
-<mrow>\amp \int_0^\pi \sin(x) = 0 </mrow>
-<mrow>\amp \int_0^\pi \cos^2(x) = \pi/2 </mrow>
-<mrow>\amp \int_0^\pi \sin^2(x) = \pi/2 </mrow>
-<mrow>\amp \int_0^\pi \sin(x)\cos(x) = 0</mrow>
-<mrow>\amp \int_0^\pi \cos(2x)\cos(x) = 0</mrow>
-<mrow>\amp \int_0^\pi \sin(2x)\cos(x) = \frac{4}{3}</mrow>
-<mrow>\amp \int_0^\pi \cos(2x)\sin(x) = -\frac{2}{3}</mrow>
-<mrow>\amp \int_0^\pi \sin(2x)\sin(x) = 0</mrow>
-</md>
-</p>
-
-<p>
-Now suppose
-<me>
-\ve f(x) = a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \in \Ker(S).
-</me>
-Then
-<mdn>
-  <mrow> \int_0^\pi f(x)\cos(x) \, dx = b\frac{\pi}{2} + e\frac{4}{3} = 0</mrow>
-  <mrow> \int_0^\pi f(x)\sin(x) \, dx = c\frac{\pi}{2} - d\frac{2}{3} = 0</mrow>
-</mdn>.
-Conversely, any <m> f </m> satisfying the linear equations above is certainly in <m> \Ker(S)</m>. Hence
-<me>
-\Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: \\ b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \}
-</me>We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by (1) above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by (2).
-Hence <me>
-\Nhg(S) = 3.
-</me>
-  </p>
-
-  <p>
-We claim that <m> \Be(S) = \Col_2</m>. To see this, suppose 
-<me>
-\begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2.
-</me>
-Now consider 
-<me>
-f(x) = \frac{2s}{\pi}\cos(x) + \frac{2t}{\pi}\sin(x).
-</me>
-Using the table of integrals above, we see that 
-<me>
-S(T) = \begin{bmatrix} s \\ t \end{bmatrix} .
-</me>
-Hence <me>
-\Rang(T) = 2.
-</me>
-  </p>
-
-  <p>
-    Since <m>\Dim(\Trig_2) = 5</m>, the Rank-Nullity theorem is verified for <m>S</m>.
-
-  </p>
-</li>
+            <p>
+              Aangesien <m>\Dim(\Trig_2) = 5</m>, geld die Rang-Nulheidsgraadstelling vir <m>S</m>.
+            </p>
+          </li>
         </ol>
       </p>
-
-
     </solution>
   </exercise>
 
   <exercise>
     <statement>
       <p>
-        Gee 'n voorbeeld van 'n line&#xea;re afbeelding
-        <m>T : \Col_4
-        \rightarrow \Col_4</m> sodat <m>\Rang(T) = \Nhg(T)</m>.
+        Gee 'n voorbeeld van 'n lineêre afbeelding
+        <m>T : \Col_4 \rightarrow \Col_4</m> sodat <m>\Rang(T) = \Nhg(T)</m>.
       </p>
     </statement>
-       <solution>
-<p>
-Define <m> T </m> by
-<me>
-T: \begin{bmatrix} x\\y\\z\\w\end{bmatrix} \mapsto \begin{bmatrix} x\\y\\0\\0\end{bmatrix}.
-</me>
-<me>
-\Ker(T) = \left\{\begin{bmatrix} 0\\0\\z\\w\end{bmatrix} \in \Col_4 \right\}.
-</me>
-and 
-<me>
-\Be(T) = \left\{\begin{bmatrix} x\\y\\0\\0\end{bmatrix} \in \Col_4 \right\}.
-</me>
-Both <m>\Ker(T)</m> and <m>\Be(T)</m> are isomorphic to <m>\Col_2</m> and hence <me>
-\Rang(T) = \Nhg(2) = 2.
-</me>
-</p>
+    <solution>
+      <p>
+        Defineer <m> T </m> deur
+        <me>
+          T: \begin{bmatrix} x\\y\\z\\w\end{bmatrix} \mapsto \begin{bmatrix} x\\y\\0\\0\end{bmatrix}
+        </me>
+        <me>
+          \Ker(T) = \left\{\begin{bmatrix} 0\\0\\z\\w\end{bmatrix} \in \Col_4 \right\}
+        </me>
+        en
+        <me>
+          \Im(T) = \left\{\begin{bmatrix} x\\y\\0\\0\end{bmatrix} \in \Col_4 \right\}
+        </me>.
+        Beide <m>\Ker(T)</m> en <m>\Im(T)</m> is nou isomorf aan <m>\Col_2</m> en dus is
+        <me>
+          \Rank(T) = \Nullity(2) = 2
+        </me>.
+      </p>
     </solution>
   </exercise>
 
   <exercise>
     <statement>
       <p>
-        Vir elk van die volgende bewerings, s&#xea; of dit
+        Vir elkeen van die volgende bewerings, sê of dit
         <em>waar</em> of <em>onwaar</em> is.
         As dit waar is, bewys dit.
-        Indien nie,
-        bewys dit.
+        Indien nie, bewys dit.
 
         <ol>
           <li>
             <p>
-              Daar bestaan 'n line&#xea;re afbeelding <m>T : \mathbb{R}^5
-              \rightarrow \mathbb{R}^2</m> sodat
+              Daar bestaan 'n lineêre afbeelding <m>T : \mathbb{R}^5 \rightarrow \mathbb{R}^2</m> sodat
               <me>
-                \Ker(T) = \{ (x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5 :
-                x_1 = 3x_2 \text{ en }  x_3 = x_4 = x_5\}
+                \Ker(T) = \{ (x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5 :  x_1 = 3x_2 \text{ en }  x_3 = x_4 = x_5\}
               </me>.
             </p>
           </li>
 
           <li>
             <p>
-              Daar bestaan 'n line&#xea;re afbeelding
-              <m>F : \Trig_3
-              \rightarrow \Trig_3</m> sodat <m>\Rang(T) = \Nhg(T)</m>.
+              Daar bestaan 'n lineêre afbeelding
+              <m>F : \Trig_3 \rightarrow \Trig_3</m> sodat <m>\Rang(T) = \Nhg(T)</m>.
             </p>
           </li>
         </ol>
       </p>
     </statement>
-   <solution>
-
- <p>
-
+    <solution>
+      <p>
         <ol>
           <li>
             <p>
-             The statement is false. To see this, notice that if such a map were to exist then its kernel would be 2-dimensional since any choice of <m> x_1</m> and <m>x_3 </m> uniquely determines an element in <m>\Ker(T)</m>. But then by the Rank-Nullity theorem, <m> \Rang(T) = 3 </m> since <m> \mathbb R^5 </m> is 5 dimensional. But <m>\Be(T)</m> is a subspace of <m>\mathbb R^2</m> - which is absurd, since <m> \mathbb R^2 </m> itself is 2-dimensional.
+              Hierdie bewering is onwaar. Om dit te sien, let op dat as so 'n afbeelding bestaan het, dan sou sy kern 2-dimensioneel wees, want enige keuse van <m> x_1</m> en <m>x_3 </m> bepaal 'n element in <m>\Ker(T)</m> uniek. Maar dan sê die Rang-Nulheidsgraadstelling dat <m> \Rang(T) = 3 </m>, want <m> \mathbb R^5 </m> is 5 dimensioneel. Maar <m>\Be(T)</m> is 'n deelruimte van <m>\mathbb R^2</m> <mdash/> dit is belaglik, want <m> \mathbb R^2 </m> is self  2-dimensioneel.
             </p>
           </li>
 
           <li>
             <p>
-              The statemnt is false. Suppose such a map were to exist. Recall that <m> \Dim(\Trig_3) = 7</m>. Then by the Rank-Nullity theorem,
+              Die bewering is onwaar. Veronderstel dat so 'n afbeelding bestaan het. Onthou dat <m> \Dim(\Trig_3) = 7</m>. Uit die Rang-Nulheidsgraadstelling volg dan dat
               <me>
               7 = \Rang(T) + \Nhg(T) = 2\Rang(T).
             </me>
-            But 7 is odd, so we have a contradiction! Thus no such map can exist.
+            Maar 7 is onewe, soons het 'n teenstrydigheid! Dus kan so 'n afbeelding nie bestaan nie.
             </p>
           </li>
         </ol>
       </p>
-
     </solution>
   </exercise>
 
@@ -1232,66 +1149,61 @@ Both <m>\Ker(T)</m> and <m>\Be(T)</m> are isomorphic to <m>\Col_2</m> and hence 
       <p>
         Laat <m>f(x,y,z)</m> 'n funksie op <m>\mathbb{R}^3</m> wees en laat
         <m>\ve{p} = (x_0, y_0, z_0) \in \mathbb{R}^3</m> 'n konstante punt wees.
-        Vir
-        elke vektor <m>\ve{u} \in \mathbb{R}^3</m>,
-        kan ons die afgeleide van <m>f</m>
-        in die rigting van <m>\ve{u}</m> by <m>\ve{p}</m> as 'n afbeelding
+        Vir elke vektor <m>\ve{u} \in \mathbb{R}^3</m>,
+        kan ons die afgeleide van <m>f</m> in die rigting van <m>\ve{u}</m> by <m>\ve{p}</m> as 'n afbeelding
         <md>
           <mrow>D_{\ve{p}} : \mathbb{R}^3 \amp \rightarrow \mathbb{R}</mrow>
           <mrow>\ve{u} \amp \mapsto (\nabla f)(\ve{p}) \cdot \ve{u}</mrow>
-        </md>.
-        sien.
+        </md> sien.
 
         <ol>
           <li>
             <p>
-              Wys dat <m>D_{\ve{p}}</m> soos hierbo gedefinieer 'n line&#xea;re
-              afbeelding is.
+              Wys dat <m>D_{\ve{p}}</m> soos hierbo gedefinieer 'n lineêre afbeelding is.
             </p>
           </li>
 
           <li>
             <p>
               Beskou die voorbeeld van <m>f(x,y,z) = x^2 + y^2 + z^2</m>.
-              Bepaal
-              <m>\Ker(D_\ve{p})</m> vir alle punte <m>\ve{p} \in \mathbb{R}^3</m>.
+              Bepaal <m>\Ker(D_\ve{p})</m> vir alle punte <m>\ve{p} \in \mathbb{R}^3</m>.
             </p>
           </li>
         </ol>
       </p>
     </statement>
-     <solution>
+    <solution>
       <p>
         <ol>
 
           <li>
             <p>
-              <m>D_\ve{p}</m> being a linear maps follows from the usual properties of the dot product:
+              Die feit dat <m>D_\ve{p}</m> 'n lineêre afbeelding is volg uit die gewone eienskappe van die dotproduk:
               <md>
                 <mrow> D_\ve{p}(\ve u + \ve v) \amp = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot (\ve u + \ve v) </mrow>
                 <mrow>\amp  = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u + \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve v  </mrow>
-                <mrow>\amp = D_\ve{p}(\ve u) + D_\ve{p}(\ve v) </mrow>.
-              </md>
-              Similarly,
+                <mrow>\amp = D_\ve{p}(\ve u) + D_\ve{p}(\ve v) </mrow>
+              </md>.
+              Soortgelyk is
               <md>
                 <mrow> D_\ve{p}(k\ve u) \amp = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve ku</mrow>
                 <mrow> \amp =\begin{bmatrix} k\frac{\partial f}{\partial x}(\ve p)\\ k\frac{\partial f}{\partial y}(\ve p) \\k \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u </mrow>
                 <mrow> \amp = k \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u</mrow>
-                <mrow> \amp = k D_\ve{p} \cdot \ve u</mrow>.
-              </md>
-              And so <m>D_\ve{p}</m> is linear.
+                <mrow> \amp = k D_\ve{p} \cdot \ve u</mrow>
+              </md>.
+              En dus is <m>D_\ve{p}</m> lineêr.
             </p>
           </li>
 
           <li>
             <p>
-              <m> \ve u = (x_1,y_1,z_1) \in \Ker(D_\ve{p}) </m> if and only if 
+              <m> \ve u = (x_1,y_1,z_1) \in \Ker(D_\ve{p}) </m> as en slegs as
               <mdn>
-            <mrow> \amp D_\ve{p}(\ve u ) = 0</mrow>
-<mrow>\iff \amp \left( \frac{\partial f}{\partial x}(\ve p) , \frac{\partial f}{\partial y}(\ve p) , \frac{\partial f}{\partial z}(\ve p)\right) \cdot (u_0,u_1,u_2) = 0 </mrow>
-<mrow>\iff \amp 2x_0x_1 + 2y_0y_1 + 2z_0z_1 = 0.</mrow>
-            </mdn>
-            Geometrically, <m>\Ker(D_\ve{p}</m> consists of all vectors <m>\ve v</m> that lie tangent to a circle of radius <m>|\ve p |</m> centred at the origin at the point <m>\ve p </m>.
+                <mrow> \amp D_\ve{p}(\ve u ) = 0</mrow>
+                <mrow>\iff \amp \left( \frac{\partial f}{\partial x}(\ve p) , \frac{\partial f}{\partial y}(\ve p) , \frac{\partial f}{\partial z}(\ve p)\right) \cdot (u_0,u_1,u_2) = 0 </mrow>
+                <mrow>\iff \amp 2x_0x_1 + 2y_0y_1 + 2z_0z_1 = 0</mrow>
+            </mdn>.
+            Meetkundig gesien, bestaan <m>\Ker(D_\ve{p}</m> uit alle vektore <m>\ve v</m> wat raak aan 'n sirkel van radius <m>|\ve p |</m> met middepunt by die punt <m>\ve p </m>.
             </p>
           </li>
         </ol>
@@ -1305,105 +1217,111 @@ Both <m>\Ker(T)</m> and <m>\Be(T)</m> are isomorphic to <m>\Col_2</m> and hence 
         Gee, met behulp van die Rang-Nulheidgraad-stelling, 'n
         ander bewys van die feit dat die beeld van die afbeelding <m>C</m> in
         <xref ref="cross-product-example">Voorbeeld</xref>
-        <m>\{ \ve{u} \in \mathbb{R}^3 :
-        \ve{u} \cdot \ve{a} = 0 \}</m> is.
+        <m>\{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}</m> is.
       </p>
     </statement>
+    <solution>
+      <p>
+        As verwysing herproduseer ons 'n gedeelte van die bewys in <xref ref="cross-product-example">Oefening</xref>:
+      </p>
 
-  <solution>
-    <p>
-    <p>
-For reference, we reproduce a portion of the proof in in <xref ref="cross-product-example">Example</xref>:
-  </p>  
-    <p>
-        "The kernel of <m>C</m> is the subspace of
-        <m>\mathbb{R}^3</m> consisting of all vectors
-        <m>\ve{v} \in V</m> such that <m>\ve{a} \times \ve{v} = \ve{0}</m>.
-        From the geometric formula for the cross-product,
+      <blockquote>
+      <p>
+        Die kern van <m>C</m> is die deelruimte van <m>\mathbb{R}^3</m>
+        wat uit al die vektore <m>\ve{v} \in V</m> bestaan, sodat <m>\ve{a} \times
+        \ve{v} = \ve{0}</m>.
+        Uit die meetkundige formule van die kruisproduk,
         <me>
           |\ve{a} \times \ve{v}| = |\ve{a}| |\ve{v}| \sin \theta
         </me>
-        where <m>\theta</m> is the angle from <m>\ve{a}</m> to <m>\ve{\theta}</m>,
-        we see that
+        waar <m>\theta</m> die hoek tussen <m>\ve{a}</m> en <m>\ve{v}</m> is,
+        sien ons dat
         <me>
-          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow  \mbox{\(\ve{v}=\ve{0}\) or \(\theta = 0\) or \(\theta= \pi\)} 
+          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow \ve{v}=\ve{0} \text{ of }\theta = 0\text{ of }\theta= \pi
         </me>.
       </p>
 
       <p>
-        In other words,
-        <m>\ve{v}</m> must be a scalar multiple of <m>\ve{a}</m>.
-        So,
+        Met ander woorde,
+        <m>\ve{v}</m> moet 'n skalaarveelvoud van <m>\ve{a}</m>
+        wees. So,
         <me>
           \Ker(C) = \{ k \ve{a}, k \in \mathbb{R} \}
         </me>.
       </p>
 
       <p>
-        I claim that the <em>image</em>
-        of <m>C</m> is the subspace of <em>all</em>
-        vectors perpendicular to <m>\ve{a}</m>, i.e.
+        Ek beweer dat die <em>beeld</em>
+        van <m>C</m> die deelruimte van
+        <em>alle</em> vektore loodreg op <m>\ve{a}</m> is, i.e.
         <men>
-          \Be(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+          \Be(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}
         </men>.
       </p>
 
       <p>
-        If you believe me, then the picture is as follows:
+        As jy my glo, dan is die prentjie soos volg:
       </p>
-
-      <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-  \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
-  \draw (1.5, -0.1) -- (1.5, -2);
-  \node at (3.3, 1) {\(\Be(C)\)};  
-  \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
-</latex-image>
-      </image>
-
+<!--  This image should already be elsewhere - maybe link to it to for a knowl? (Can't have an image inside a blockquote!)
+      <figure>
+        <caption></caption>
+        <image>
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}\draw (0,0) - - (1,2) - - (3,2) - - (2,0) - - (0,0);
+            \draw (1.5, 1) - - (1.5,3.5) node[right] {\(\Ker{C}\)};
+            \draw (1.5, -0.1) - - (1.5, -2);
+            \node at (3.3, 1) {\(\Im(C)\)};
+            \draw[very thick, red, ->] (1.5,1) - - (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
+-->
       <p>
-        Let me prove equation <xref ref="image-of-C" />.
-        By definition, the image of <m>C</m> is the subspace of
-        <m>\mathbb{R}^3</m> consisting of all vectors <m>\ve{w}</m> of the form
-        <m>\ve{w} = \ve{a} \times \ve{v}</m> for some <m>\ve{v} \in \mathbb{R}^3</m>.
-        This implies that <m>\ve{w}</m> is perpendicular to <m>\ve{a}</m>.""
+        Kom ons bewys vergelyking <xref ref="image-of-C" />.
+        Per definisie is die beeld van <m>C</m> die deelruimte van <m>\mathbb{R}^3</m> wat bestaan uit alle
+        vektore <m>\ve{w}</m> van die vorm <m>\ve{w} = \ve{a} \times \ve{v}</m> vir
+        een of ander <m>\ve{v} \in \mathbb{R}^3</m>.
+        Dit impliseer dat <m>\ve{w}</m> loodreg op <m>\ve{a}</m> is.
       </p>
+    </blockquote>
       <p>
-        And thus we know that 
+        En dus weet ons dat
         <me>
-\Be(C) \subset \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
-      </me>We shall use the Rank-Nullity theorem to show the converse in a fantastically succint way. By the Rank-Nullity theorem
+          \Im(C) \subset \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+        </me>.
+        Ons sal die Rang-Nulheidsgraad gebruik om die omgekeerde in 'n fantasties kompakte manier vas te stel. Uit die Rang-Nulheidsgraadstelling is
         <md>
-        <mrow> \amp \Dim(\mathbb R^3)  = \Nhg(C) + \Rang(C)</mrow>
-        <mrow>\implies \amp 3 = 1 + \Rang(C).</mrow>
-      </md>
-      And so we also know the <m> \Be(C) </m> is a 2-dimensional subspace of <m>\mathbb R^3 </m>. Of course, 
-      <me>
-       \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
-    </me>
-    is also 2-dimensional. But now, if one 2-dimensional subspace is contained in another 2-dimensional subspace then the two subspaces must necessarily be <emp>the same</emp>! Hence 
-    <me>
-\Be(C) = \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
-  </me>
+          <mrow> \amp \Dim(\mathbb R^3)  = \Nullity(C) + \Rank(C)</mrow>
+          <mrow>\implies \amp 3 = 1 + \Rank(C).</mrow>
+        </md>
+        En dus weet ons ook dat <m> \Im(C) </m> 'n 2-dimensionele deelruimte van <m>\mathbb R^3 </m> is. Natuurlik is
+        <me>
+         \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+        </me>
+        ook 2-dimensioneel. Maaras een 2-dimensionele vektorruimte bevat is in 'n ander 2-dimensionele vektorruimte, dan moet hierdie twee vektorruimts  <em>dieselfde</em> wees! Dus is
+        <me>
+          \Im(C) = \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+        </me>
       </p>
       <p>
-        (By using the Rank-Nullity theorem, we managed to bypass the trickest part of <xref ref="cross-product-example"/>!)
+        (Deur die Rang-Nulheidsgraadstelling te gebruik, kan ons die moeilikste deel van <xref ref="cross-product-example"/> vermy!)
       </p>
-    </p>
   </solution>
 </exercise>
 
   <exercise>
-    Determine the kernel and image of the linear map
-    <me>
-      T : \Poly_2[x,y,z] \rightarrow \Poly_2
-    </me>
-    defined by
-    <me>
-      T(p)(x) := p(x,x,x).
-    </me>
+    <statement>
+      <p>
+        Breken die kern en beeld van die lineêre afbeelding
+        <me>
+          T : \Poly_2[x,y,z] \rightarrow \Poly_2
+        </me>
+        gedefinieer deur
+        <me>
+          T(p)(x) := p(x,x,x)
+        </me>.
+      </p>
+    </statement>
   </exercise>
 
 
@@ -1415,30 +1333,28 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
     </statement>
     <solution>
       <p>
-       </p> 
+        To do.
+      </p>
     </solution>
   </exercise>
 
-    <exercise>
+  <exercise>
     <statement>
       <p>
         Beskou die funksie <m>F:\mathbb{R}^3 \to \mathbb{R}^2</m> gedefineer deur
         <me>
-        F(x,y,z)=(x^2 + y^2, xy).
-      </me>
-      Beskou nou <m>DF_p</m>, die Jakobiaan matriks van <m>F</m> by die punt <m>p = (1,2)</m>. Bepaal <m>\Ker (DF_p)</m> en <m>\Be (DF_p)</m> en dus bepaal ook <m>\Nhg(DF_p)</m> and <m>\Rang(DF_p)</m>.
+          F(x,y,z)=(x^2 + y^2, xy).
+        </me>
+        Beskou nou <m>DF_p</m>, die Jakobiaan matriks van <m>F</m> by die punt <m>p = (1,2)</m>. Bepaal <m>\Ker (DF_p)</m> en <m>\Be (DF_p)</m> en dus bepaal ook <m>\Nhg(DF_p)</m> en <m>\Rang(DF_p)</m>.
       </p>
     </statement>
     <solution>
       <p>
-       </p> 
+      </p>
     </solution>
   </exercise>
 
-
 </exercises>
-
-<!-- <solutions divisional="solution answer" />  -->
 
 </section>
 

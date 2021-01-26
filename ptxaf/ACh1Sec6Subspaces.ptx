@@ -1,9 +1,9 @@
 <section xml:id="ACh1Sec6Subspaces">
   <title>Deelruimtes</title>
   <introduction>
-    <p>In hierdie deel san ons die konsep van 'n <em>deelruimte</em> bekend stel. Dié konsep sal ons toelaat om vinnig nuwe voorbeelde van
-    vektorruimtes te vind.
-  </p>
+    <p>
+      In hierdie afdeling sal ons die konsep van 'n <em>deelruimte</em> bekend stel. Hierdie konsep sal ons toelaat om vinnig nuwe voorbeelde van vektorruimtes te vind.
+    </p>
   </introduction>
 
 <subsection>
@@ -12,8 +12,9 @@
   <definition xml:id="defn-subspace">
     <statement>
       <p>
-        'n deelversameling <m>U \subseteq V</m> van 'n vektor-ruimte
-        <m>V</m> is 'n <term>deelruimte van <m>V</m></term> as:
+        'n Deelversameling <m>U \subseteq V</m> van 'n
+        vektor-ruimte <m>V</m> word 'n <term>deelruimte</term>
+        van <m>V</m> genoem as:
 
         <ul>
           <li>
@@ -31,9 +32,9 @@
 
           <li>
             <p>
-              Vir alle skalare <m>k</m> en alle vektore <m>\ve{u} \in U</m>,
-              <m>k \cdot
-              \ve{u} \in U</m>
+              Vir alle skalare <m>k</m> en alle vektore
+              <m>\ve{u} \in U</m>,
+              <m>k \smul \ve{u} \in U</m>
             </p>
           </li>
         </ul>
@@ -41,13 +42,51 @@
     </statement>
   </definition>
 
+  <p>
+    Wanneer <m>U</m> 'n deelversameling van 'n vektorruimte
+    <m>V</m> is, dan kan ons elemente in <m>U</m> probeer
+    bymekaartel of een element in <m>U</m> met 'n skalaar
+    probeer vermenigvuldig asof dit elemente van <m>V</m>
+    is. Aangesien hierdie twee bewerkings bewerkings op
+    <m>V</m> is, sal dit altyd 'n element van <m>V</m>
+    gee. Maar selfs al is al jou insette elemente van
+    die deelversameling <m>U</m>, is die uitset van die
+    bewerking nie noodwendig in <m>U</m> nie (maar definitief
+    in <m>V</m>).
+  </p>
+  <p>
+    As <m>U</m> egter 'n deelruimte is, dan is hierdie uitsette
+    almal wel in <m>U</m> volgens
+    <xref ref="defn-subspace" text="type-global" />. In
+    hierdie geval sê ons dat die bewerkings op <m>V</m>
+    <term>beperk tot</term> bewerkings op <m>U</m>. In die
+    volgende hulpstelling sien ons dat as ons hierdie
+    beperkte bewerkings gebruik as die data vir <m>U</m>,
+    dan is <m>U</m> ook 'n vektorruimte.
+  </p>
+  <remark><p>
+    Party handboeke sal die eienskap in
+    <xref ref="subspace_lem" text="type-global" /> gebruik
+    as die definisie van 'n deelruimte en
+    <xref ref="defn-subspace" text="type-global" /> dan as
+    'n gevolg aflei.
+  </p></remark>
+  <remark><p>
+    Daar is baie min onderskeid tussen 'n bewerking op
+    <m>V</m> en sy beperking tot <m>U</m>. Party mense sal
+    hulle selfs dieselfde noem, want as jy die bewerking
+    op twee elemente uit <m>U</m> toepas, dan sal jy
+    diselfde antwoord in albei gevalle kry.
+  </p></remark>
+
   <lemma xml:id="subspace_lem">
     <statement>
       <p>
-        As <m>U</m> 'n deelruimte van 'n vektorruimte <m>V</m> is,
-        dan is <m>U</m>
-        ook 'n vektorruimte, toegerus met dieselfde sommeringsbewerking,
-        nul-vektor en skalaarvermenigvuldigingsbewerking as <m>V</m>.
+        Veronderstel dat <m>U</m> 'n deelruimte van 'n
+        vektorruimte <m>V</m> is. As ons <m>U</m> toerus
+        met die beperkte bewerkings van optelling en
+        skalaarvermenigvuldiging vanaf <m>V</m>, dan is
+        <m>U</m> 'n vektorruimte.
       </p>
     </statement>
   </lemma>
@@ -56,22 +95,21 @@
     <p>
       Aangesien <m>U</m> 'n deelruimte is,
       weet ons dat dit sin maak om
-      dit <q>toe te rus met dieselfde sommeringsbewerking, nul-vektor en
+      dit <q>toe te rus met dieselfde (beperkte) optellingsbewerking, nul-vektor en
       skalaarvermenigvuldigingsbewerking as <m>V</m></q>.
       (As <m>U</m> <em>nie</em> 'n
       deelruimte was nie, dan sou ons byvoorbeeld kon vind dat
-      <m>\ve{u},
-      \ve{u}' \in U</m> maar <m>\ve{u}+\ve{u}' \notin U</m>, So die
-      sommeringsbewerking sou nie sin maak nie.)
+      <m>\ve{u}, \ve{u}' \in U</m> maar <m>\ve{u}+\ve{u}' \notin U</m>,
+      so die optellingsbewerking sou nie sin maak nie.)
     </p>
 
     <p>
-      So ons moet net re&#xeb;ls R1 tot R8 nagaan.
-      Aangesien die re&#xeb;ls
-      geld vir alle vektore <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>, Sal hulle beslis
-      geld vir alle vektore <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m>.
-      So re&#xeb;ls R1
-      tot R8 word bevredig.
+      So ons moet net reëls R1 tot R8 nagaan.
+      Aangesien die reëls vir alle vektore
+      <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m> geld,
+      sal hulle beslis vir alle vektore
+      <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m> geld.
+      So reëls R1 tot R8 word bevredig.
     </p>
   </proof>
 </subsection>
@@ -86,71 +124,72 @@
         'n Lyn <m>L</m> deur die oorsprong in
         <m>\mathbb{R}^2</m> is 'n deelruimte van <m>\mathbb{R}^2</m>:
       </p>
-    <sidebyside>
-      <figure xml:id="line-through-origin-R2-example">
+    <figure xml:id="line-through-origin-R2-example">
       <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
       <image width="50%">
-      <latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
-  \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-  \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
-      </latex-image>
+        <latex-image>
+          <![CDATA[\begin{tikzpicture}
+          \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+          \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+          \draw[thick, primaryColor] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+        </latex-image>
       </image>
-      </figure>
-  </sidebyside>
-      
+    </figure>
 
       <p>
-        Onthou dat lyn <m>L</m> gespesifiseer kan word deur 'n homogene line&#xea;re
-        vergelyking van die form:
+        Onthou dat lyn <m>L</m> gespesifiseer kan word
+        deur 'n homogene lineêre vergelyking van die form:
         <men xml:id="eqn_of_L">
           L = \{ (x,y) \in \mathbb{R}^2 : ax + by = 0 \}
         </men>
         vir konstantes <m>a</m> en <m>b</m>.
         So, as <m>\ve{v} = (x, \, y)</m> en
-        <m>\ve{v}' =
-        (x', \, y')</m> op <m>L</m> l&#xea;, dan l&#xea;
-        hulle som <m>\ve{v} + \ve{v}' = (x
-        + x', \, y + y')</m> ook op <m>L</m>,
-        want hul komponente bevredig die
-        defini&#xeb;rende vergelyking <xref ref="eqn_of_L" />:
+        <m>\ve{v}' = (x', \, y')</m> op <m>L</m> lê,
+        dan lê hul som
+        <m>\ve{v} + \ve{v}' = (x + x', \, y + y')</m>
+        ook op <m>L</m>, want hul komponente bevredig die
+        definiërende vergelyking
+        <xref ref="eqn_of_L" text="global" />:
         <md>
           <mrow>\amp a(x + x') + b (y + y')</mrow>
           <mrow>\amp  = (ax + by) + (ax' + by')</mrow>
-          <mrow>\amp = 0 + 0 \amp \amp  \mbox{(want \(ax + by = 0\) en \(ax' + by' = 0\))}</mrow>
+          <mrow>\amp = 0 + 0 \amp \amp  \text{(want }ax + by = 0\text{ en }ax' + by' = 0)</mrow>
           <mrow>\amp = 0</mrow>
         </md>.
       </p>
 
       <p>
-        Dit maak ook meetkundig sin: As jy na beeld <xref ref="line-through-origin-R2-example" /> kyk, sal
-        jy sien dat die som van twee vektore <m>\ve{v}, \ve{v}'</m> op <m>L</m> met die
-        kop-op-stert-metode 'n verdere vektor op <m>L</m> tot gevolg sal h&#xea;.
+        Dit maak ook meetkundig sin: As jy na beeld
+        <xref ref="line-through-origin-R2-example" text="global" />
+        kyk, sal jy sien dat die som van twee vektore
+        <m>\ve{v}, \ve{v}'</m> op <m>L</m> met die
+        kop-op-stert-metode 'n verdere vektor op <m>L</m>
+        tot gevolg sal hê.
       </p>
     </statement>
   </example>
-
 
   <exercise>
     <statement>
       <p>
         Voltooi die bewys dat <m>L</m> 'n deelruimte van
         <m>\mathbb{R}^2</m> is deur na te gaan dat die nul-vektor op lyn <m>L</m> is
-        en dat die vermenigvuldiging van 'n vektor in <m>L</m> met 'n skalaar 'n
-        vektor op <m>L</m> lewer.
+        en dat die vermenigvuldiging van 'n vektor in <m>L</m> met 'n skalaar 'n vektor op <m>L</m> lewer.
       </p>
     </statement>
   </exercise>
 
   <example xml:id="lines_planes_R3">
     <title>Lyne en vlakke in <m>\mathbb{R}^3</m></title>
-    <statement>      <p>
+    <statement>
+      <p>
         'n Lyn <m>L</m> en 'n vlak <m>P</m>
-        deur die oorsprong in <m>\mathbb{R}^3</m> is ook 'n deelruimte van
-        <m>\mathbb{R}^3</m>:
-        <sidebyside width="40%">
+        deur die oorsprong in <m>\mathbb{R}^3</m> is ook 'n
+        deelruimte van <m>\mathbb{R}^3</m>:
+      </p>
+      <sidebyside width="40%">
         <figure xml:id="line-in-R3-example-subspace">
-          <caption>A line through the origin in <m>\mathbb{R}^3</m>.</caption>
+          <caption>'n Lyn deur die oorsprong in <m>\mathbb{R}^3</m>.</caption>
           <image>
           <latex-image>
           <![CDATA[
@@ -158,7 +197,7 @@
             \draw[->] (0, 0) -- (2,0) node[right] {$y$};
             \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
             \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-            \draw[thick, red] (-2, 1) node[above] {$L$} -- (2, -1);
+            \draw[thick, primaryColor] (-2, 1) node[above] {$L$} -- (2, -1);
           \end{tikzpicture}
           ]]>
           </latex-image>
@@ -166,7 +205,7 @@
         </figure>
 
         <figure xml:id="plane-in-R3-example-subspace">
-          <caption>A plane through the origin in <m>\mathbb{R}^3</m>.</caption>
+          <caption>'n Vlak deur die oorsprong in <m>\mathbb{R}^3</m>.</caption>
           <image>
           <latex-image>
           <![CDATA[
@@ -174,17 +213,16 @@
             \draw[->] (0, 0) -- (2,0) node[right] {$y$};
             \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
             \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-            \draw[thick, red] (-0.1, -1) -- (-1, 0.4);
-            \draw[thick, red] (-1, 0.4) -- (0.3, 1.5);
-            \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
-            \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);
+            \draw[thick, primaryColor] (-0.1, -1) -- (-1, 0.4);
+            \draw[thick, primaryColor] (-1, 0.4) -- (0.3, 1.5);
+            \draw[thick, primaryColor] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
+            \draw[thick, primaryColor] (1.5, 0.4) -- (-0.1, -1);
           \end{tikzpicture}
           ]]>
           </latex-image>
           </image>
         </figure>
-        </sidebyside>
-      </p>
+      </sidebyside>
     </statement>
   </example>
 
@@ -193,8 +231,8 @@
     <statement>
       <p>
         As <m>V</m> 'n vektorruimte is, dan is die
-        versameling <m>\{\ve{0}\} \subseteq V</m> wat slegs die nul-vektor <m>\ve{0}</m>
-        'n deelruimte van <m>V</m>.
+        versameling <m>\{\ve{0}\} \subseteq V</m> wat slegs
+        die nul-vektor <m>\ve{0}</m> 'n deelruimte van <m>V</m>.
       </p>
     </statement>
   </example>
@@ -202,7 +240,7 @@
   <exercise>
     <statement>
       <p>
-        Gaan na dat dit waar is.
+        Bevestig dat dit waar is.
       </p>
     </statement>
   </exercise>
@@ -211,114 +249,113 @@
     <title>Nie 'n vektorruimte nie: 'n Lyn nie deur die oorsprong nie</title>
     <statement>
       <p>
-        Wees versigtig <mdash /> nie <em>elke</em>
+        Wees egter versigtig <mdash /> nie <em>elke</em>
         lyn <m>L \subset \mathbb{R}^2</m> vorm 'n
         deelruimte van <m>\mathbb{R}^2</m> nie.
         As <m>L</m> nie deur die oorsprong loop
         nie, dan vind ons dat <m>\ve{0} \notin L</m>,
-        so <m>L</m> is nie 'n deelruimte
-        nie.
+        so <m>L</m> is nie 'n deelruimte nie.
       </p>
 
       <p>
-        Nog 'n rede dat <m>L</m> nie 'n deelruimte is nie is dat dit nie geslote
-        onder sommering is nie: As ons twee nie-nul vektore <m>\ve{v}</m> en
+        Nog 'n rede dat <m>L</m> nie 'n deelruimte is nie is
+        dat dit nie geslote onder optelling is nie: As ons
+        twee nie-nul vektore <m>\ve{v}</m> en
         <m>\ve{v}'</m> op <m>L</m> bymekaar tel,
         kry ons 'n vektor <m>\ve{v} + \ve{v}'</m> wat
-        nie op <m>L</m> l&#xea; nie:
-        <sidebyside>
+        nie op <m>L</m> lê nie:
+      </p>
           <figure xml:id="line-not-through-origin-non-example">
-            <caption>A line which does not pass through the origin is not closed under addition.</caption>
+            <caption>'n Lyn wat nie deur die oorsprong gaan nie, is nie geslote onder optelling nie.</caption>
             <image>
             <latex-image>
               <![CDATA[
               \begin{tikzpicture}
                 \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
                 \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-                \draw[thick, red] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
-                \draw[very thick, blue, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
-                \draw[very thick, blue, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
-                \draw[very thick, blue, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};
+                \draw[thick, primaryColor] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
+                \draw[very thick, secondaryColor, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
+                \draw[very thick, secondaryColor, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
+                \draw[very thick, secondaryColor, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};
               \end{tikzpicture}
               ]]>
             </latex-image>
             </image>
         </figure>
-      </sidebyside>
-      </p>
     </statement>
   </example>
 
   <example xml:id="hyperplanes_example_subspace">
-    <title>Hyperplanes orthogonal to a fixed vector</title>
-    <statement><p>This example generalizes <xref ref="lines_planes_R3"/> to higher dimensions. Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. The <em>hyperplane orthogonal to <m>\ve{v}</m></em> is the set <m>W</m> of all vectors orthogonal to <m>\ve{v}</m>, that is,
-    <men>
-    W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
-    </men>
-    You will prove in Exercise <xref ref="prove_hyperplane_subspace"/> that <m>W</m> is a subspace of <m>\mathbb{R}^n</m>.  </p>
+    <title>Hipervlakke ortogonaal tot 'n vaste vektor</title>
+    <statement>
+      <p>Hierdie voorbeeld veralgemeen <xref ref="lines_planes_R3" text="type-global"/> na hoër dimensies. Laat <m>\ve{v} \in \mathbb{R}^n </m> 'n vaste nie-nul vektor wees. Die <em>hipervlak ortogonaal tot <m>\ve{v}</m></em> is die versameling <m>W</m> van alle vektore ortogonaal tot <m>\ve{v}</m>, met ander woorde,
+      <men>
+      W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+      </men>
+      Jy sal in Oefening <xref ref="prove_hyperplane_subspace" text="type-global"/> bewys dat <m>W</m> 'n deelruimte van <m>\mathbb{R}^n</m> is.  </p>
 
-    <p>For example, consider the vector <m>\ve{v} = (1,2,3) \in \mathbb{R}^3</m>. Then the hyperplane orthogonal to <m>\ve{v}</m> is
-    <men>
-      W = \{ \ve{w} \in \mathbb{R}^3 : \ve{v} \dotp \ve{w} = 0 \}.
-  </men>
-    If we write <m>\ve{w} = (w_1, w_2, w_3)</m> then <m>\ve{v} \dotp \ve{w} = 0</m> translates into the equation
-    <men xml:id="explicit_eqn_hyperplane1">
-      w_1 + 2 w_2 + 3w_3 = 0.
-    </men>
-    So, <m>W</m> can be regarded as the set of vectors in <m>\mathbb{R}^3</m> whose components satisfy <xref ref="explicit_eqn_hyperplane1"/>.</p> 
-</statement>
-</example>
-
+      <p>Beskou byvoorbeeld die vektor  <m>\ve{v} = (1,2,3) \in \mathbb{R}^3</m>. Dan is die hipervlak ortogonaal tot <m>\ve{v}</m> die versameling
+      <men>
+        W = \{ \ve{w} \in \mathbb{R}^3 : \ve{v} \dotp \ve{w} = 0 \}.
+      </men>
+      As ons <m>\ve{w} = (w_1, w_2, w_3)</m> skryf, dan is <m>\ve{v} \dotp \ve{w} = 0</m> ekwivalent aan die vergelyking
+      <men xml:id="explicit_eqn_hyperplane1">
+        w_1 + 2 w_2 + 3w_3 = 0.
+      </men>
+      So, <m>W</m> kan gesien word as die versameling vektore in <m>\mathbb{R}^3</m> wie se komponente <xref ref="explicit_eqn_hyperplane1" text="global"/> bevredig.</p>
+    </statement>
+  </example>
 <!-- TO DO: translate hyperplane example below and also polynomials in many variables -->
-
     <exercise xml:id="prove_hyperplane_subspace">
       <statement>
-    Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. Show that 
-        <me>
-    W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
-    </me>
-    is a subspace of <m>\mathbb{R}^n</m>.
-    </statement>
+        <p>
+          Laat <m>\ve{v} \in \mathbb{R}^n </m> 'n vaste nie-nul vektor wees. Wys dat
+          <me>
+            W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+          </me>
+          'n deelruimte van <m>\mathbb{R}^n</m> is.
+        </p>
+      </statement>
     <solution>
-    <paragraphs>
-      <title>Closed under addition.</title>
-      <p> Suppose <m>\ve{w}, \ve{w}' \in W</m>. </p>
-      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m> and <m>\ve{v} \dotp \ve{w}' = 0 </m>.  </p>
-      <p> We must show that <m>\ve{w} + \ve{w}' \in W</m>. </p>
-      <p> That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>. </p>
-      <p> Indeed, 
+      <p>
+        Ons stel eers vas of dit geslote is onder optelling.
+      </p>
+      <p>
+        Veronderstel dat <m>\ve{w}, \ve{w}' \in W</m>.
+        Dus is, <m>\ve{v} \dotp \ve{w} = 0 </m> en <m>\ve{v} \dotp \ve{w}' = 0 </m>.
+        Ons moet wys dat <m>\ve{w} + \ve{w}' \in W</m>, met ander woorde dat <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>.
+        Dit geld inderdaad, omdat
         <md>
-      <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
-      <mrow> \amp = 0 + 0 </mrow>
-      <mrow> \amp = 0. </mrow>
-      </md>
+          <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
+          <mrow> \amp = 0 + 0 </mrow>
+          <mrow> \amp = 0 </mrow>
+        </md>.
       </p>
-    </paragraphs>
 
-    <paragraphs>
-      <title>Contains the zero vector.</title>
-      <p> Since <m>\ve{v} \dotp \ve{0} = 0</m>, we conclude that <m>\ve{0} \in W</m>.
+      <p>
+        Volgende kyk ons of dit die nul-vektor bevat.
       </p>
-    </paragraphs>
+      <p>
+        Aangesien <m>\ve{v} \dotp \ve{0} = 0</m>, lei ons af dat <m>\ve{0} \in W</m>.
+      </p>
 
-    <paragraphs>
-      <title>Closed under scalar multiplication.</title>
-      <p> Suppose <m>\ve{w} \in W</m> and <m>k</m> is a scalar. </p>
-      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m>.  </p>
-      <p> We must show that <m>k \smul \ve{w}  \in W</m>. </p>
-      <p> That is, we must show that <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>. </p>
-      <p> Indeed, 
+      <p>
+        Laastens moet ons kyk of dit geslote is onder skalaarvermenigvuldiging.
+      </p>
+      <p>
+        Veronderstel dat <m>\ve{w} \in W</m> en dat <m>k</m> 'n skalaar is.
+        Met ander woorde veronderstel dat, <m>\ve{v} \dotp \ve{w} = 0 </m>.
+        Ons moet wys dat <m>k \smul \ve{w}  \in W</m>,
+        of met ander woorde dat <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>.
+        Dit geld ook, omdat
         <md>
-      <mrow> \ve{v} \dotp (k \smul \ve{w}) \amp = k \smul (\ve{v} \dotp \ve{w}) </mrow>
-      <mrow> \amp = (k)(0) </mrow>
-      <mrow> \amp = 0. </mrow>
-      </md>
+          <mrow> \ve{v} \dotp (k \smul \ve{w}) \amp = k \smul (\ve{v} \dotp \ve{w}) </mrow>
+          <mrow> \amp = (k)(0) </mrow>
+          <mrow> \amp = 0 </mrow>
+        </md>.
       </p>
-    </paragraphs>
-  </solution>
-  
+    </solution>
   </exercise>
-
 
   <example>
     <title>Kontinue funksies as 'n deelruimte</title>
@@ -326,13 +363,12 @@
       <p>
         Die versameling
         <me>
-          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} 
-          \mbox{ kontinu}  \}
+          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \text{ kontinu}  \}
         </me>
-        van alle kontinue funksies op die interval <m>I</m> is 'n deelruimte van die
-        versameling <m>\Fun(I)</m> van <em>alle</em> funksies op <m>I</m>.
-        Kom ons bevestig
-        dat dit die definisie bevredig.
+        van alle kontinue funksies op die interval <m>I</m> is
+        'n deelruimte van die versameling <m>\Fun(I)</m> van
+        <em>alle</em> funksies op <m>I</m>.
+        Kom ons bevestig dat dit die definisie bevredig.
         Jy weet reeds van vorige kursusse dat:
 
         <ul>
@@ -360,9 +396,8 @@
       </p>
 
       <p>
-        Daarom, deur <xref ref="subspace_lem">Lemma</xref>,
-        is <m>\Cont(I)</m> 'n vektorruimte in
-        eie reg.
+        Daarom, deur <xref ref="subspace_lem" text="type-global"></xref>,
+        is <m>\Cont(I)</m> 'n vektorruimte in eie reg.
       </p>
     </statement>
   </example>
@@ -371,14 +406,11 @@
     <title>Differensieerbare funksies as 'n deelruimte</title>
     <statement>
       <p>
-        So ook is die
-        versameling
+        Op soortgelyke wyse is die versameling
         <me>
-          \Diff(I) := \{ \ve{f}: (0,1) \rightarrow \mathbb{R}, \, \ve{f}
-          \mbox{differensieerbaar}  \}
+          \Diff(I) := \{ \ve{f}: (0,1) \rightarrow \mathbb{R}, \, \ve{f} \text{differensieerbaar}  \}
         </me>
-        van differensieerbare fuksies op die oop interval <m>I</m> 'n deelruimte van
-        <m>\Fun (I)</m>.
+        van differensieerbare fuksies op die oop interval <m>I</m> 'n <xref ref="defn-subspace" text="custom">deelruimte</xref> van <m>\Fun (I)</m>.
       </p>
     </statement>
   </example>
@@ -396,44 +428,38 @@
     <title>Vektorruimtes van polinome</title>
     <statement>
       <p>
-        'n <em>Polinoom</em> is 'n funksie <m>\ve{p} : \mathbb{R}
-        \rightarrow \mathbb{R}</m> van die vorm
+        'n <em>Polinoom</em> is 'n funksie
+        <m>\ve{p} : \mathbb{R} \rightarrow \mathbb{R}</m>
+        van die vorm
         <men xml:id="formula_poly">
           \ve{p}(x) = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0
         </men>.
-        vir onveranderlike re&#xeb;le ko&#xeb;ffisi&#xeb;nte <m>a_0, \ldots, a_n</m>.
+        vir onveranderlike reële koëffisiënte <m>a_0, \ldots, a_n</m>.
         Twee polinome <m>\ve{p}</m> en <m>\ve{q}</m> is
-        <em>gelyk</em> as hulle <em>as
-        funksies</em> gelyk is,
-        m.a.w. as <m>\ve{p}(x) = \ve{q} (x)</m> vir alle <m>x \in
-        \mathbb{R}</m>.
-        Die <em>graad</em> van 'n polinoom is die hoogste mag van
-        <m>x</m> wat in die formule voorkom.
+        <em>gelyk</em> as hulle <em>as funksies</em> gelyk is,
+        m.a.w. as <m>\ve{p}(x) = \ve{q} (x)</m> vir alle
+        <m>x \in \mathbb{R}</m>.
+        Die <em>graad</em> van 'n polinoom is die hoogste mag
+        van <m>x</m> wat in die formule voorkom.
       </p>
 
       <p>
-        Byvoorbeeld,
-        <m>2x^3 - x + 7</m> is 'n polinoom van graad 3, terwyl
-        <m>x^5 -
-        2</m> 'n polinoom van graad 5 is.
+        Byvoorbeeld, <m>2x^3 - x + 7</m> is 'n polinoom van
+        graad 3, terwyl <m>x^5 - 2</m> 'n polinoom van graad 5 is.
       </p>
-
       <p>
         Die versameling van <em>alle</em>
-        polinome word as <m>\Poly</m>
-        geskryf en die versameling van alle polinome van 'n graad kleiner of
+        polinome word as <m>\Poly</m> geskryf en die
+        versameling van alle polinome van 'n graad kleiner of
         gelyk aan <m>n</m> word as <m>\Poly_n</m> geskryf.
       </p>
     </statement>
   </example>
 
- 
-
   <exercise>
     <statement>
       <p>
-        Gaan na dat <m>\Poly</m> en <m>\Poly_n</m> wel deelruimtes van <m>\Cont
-        (\mathbb{R})</m> is.
+        Gaan na dat <m>\Poly</m> en <m>\Poly_n</m> wel deelruimtes van <m>\Cont (\mathbb{R})</m> is.
       </p>
     </statement>
   </exercise>
@@ -442,39 +468,47 @@
     <title>Polinome in meer as een veranderlike</title>
     <statement>
     <p>
-       'n <em>monoom</em> in twee veranderlikes <m>x</m> en <m>y</m> is 'n uitdrukking van die vorm <m>x^m y^n</m> vir sekere nie-negatiewe heelgetalle <m>m,n</m>.  Die <em>graad</em> van die monoom is <m>m+n</m>. Byvoorbeeld,
-    <me>
-             \underbrace{x^3 y^2}_{\text{graad 5}}, \quad \underbrace{y^7}_{\text{graad 7}}.
-    </me>
-'n <em>Polinoom in twee veranderlikes <m>x</m> en <m>y</m></em> is lineêre kombinasie van monome. Die <em>graad</em> van die polinoom is die hoogste mag van die monome wat in die lineêre kombinasie verskyn. Byvoorbeeld,
+      'n <em>monoom</em> in twee veranderlikes <m>x</m> en <m>y</m> is 'n uitdrukking van die vorm <m>x^m y^n</m> vir sekere nie-negatiewe heelgetalle <m>m,n</m>.  Die <em>graad</em> van die monoom is <m>m+n</m>. Byvoorbeeld,
+      <me>
+        \underbrace{x^3 y^2}_{\text{graad 5}}, \quad \underbrace{y^7}_{\text{graad 7}}.
+      </me>
+      'n <em>Polinoom in twee veranderlikes <m>x</m> en <m>y</m></em> is lineêre kombinasie van monome. Die <em>graad</em> van die polinoom is die hoogste mag van die monome wat in die lineêre kombinasie verskyn. Byvoorbeeld,
       <men xml:id="two_var_poly_ex">
-             p = 5x^3 y^2 - 3xy^7
-    </men>
-  is 'n polinoom in <m>x</m> en <m>y</m> van graad <m>8</m>. </p>
+        p = 5x^3 y^2 - 3xy^7
+      </men>
+      is 'n polinoom in <m>x</m> en <m>y</m> van graad <m>8</m>.
+    </p>
 
-   <p>   Ons skryf <m>\Poly[x,y]</m> vir die versamleing van <em>alle</em> polinome in twee veranderlikes <m>x</m> en <m>y</m>, en <m>\Poly_n [x,y] </m> vir die versameling van alle polinome in <m>x</m> en <m>y</m> met graad minder of gelyk aan <m>n</m>. </p>
+    <p>
+      Ons skryf <m>\Poly[x,y]</m> vir die versamleing van <em>alle</em> polinome in twee veranderlikes <m>x</m> en <m>y</m>, en <m>\Poly_n [x,y] </m> vir die versameling van alle polinome in <m>x</m> en <m>y</m> met graad minder of gelyk aan <m>n</m>.
+    </p>
 
-
-  <p> Ons kan 'n polinoom <m>p</m> in twee veranderlikes beskou as 'n funksie
+  <p>
+    Ons kan 'n polinoom <m>p</m> in twee veranderlikes beskou as 'n funksie
     <md>
-   <mrow> p : \mathbb{R}^2 \amp \rightarrow \mathbb{R} </mrow>
-   <mrow> (x,y) \amp \mapsto p(x,y) </mrow>
-  </md>
-In hierdie manier kan ons <m>\Poly_n[x,y]</m> beskou as'n deelversameling van die vektorruimte <m>\Fun(\mathbb{R}^2)</m> van <em>alle</em> reëelwaardige funksies op <m>\mathbb{R}^2</m> (sien <xref ref="functions_on_set_vec_space"/> om ouself te herinner van die vektorruimte van reëelwaardige funksies op 'n versameling <m>X</m>). Inderdaad, <m>\Poly_n[x,y]</m> is 'n <em>deelruimte</em> van <m>\Fun(\mathbb{R}^2)</m>, en dus is dit 'n vektorruimte. </p>
+      <mrow> p : \mathbb{R}^2 \amp \rightarrow \mathbb{R} </mrow>
+      <mrow> (x,y) \amp \mapsto p(x,y) </mrow>
+    </md>
+    In hierdie manier kan ons <m>\Poly_n[x,y]</m> beskou as'n deelversameling van die vektorruimte <m>\Fun(\mathbb{R}^2)</m> van <em>alle</em> reëelwaardige funksies op <m>\mathbb{R}^2</m> (sien <xref ref="functions_on_set_vec_space" /> om ouself te herinner van die vektorruimte van reëelwaardige funksies op 'n versameling <m>X</m>). Inderdaad, <m>\Poly_n[x,y]</m> is 'n <em>deelruimte</em> van <m>\Fun(\mathbb{R}^2)</m>, en dus is dit 'n vektorruimte.
+  </p>
 
-  <p>Twee polinome <m>p</m> en <m>q</m> in veranderlikes <m>x</m> en <m>y</m> is gedefineer as <em>gelyk</em>as en slegs as al hulle ooreenstemmende koëffisiente gelyk aan mekaar is. Dit is ekwivalent aan die bewering dat <m>p(x,y)=q(x,y)</m> vir alle <m>(x,y) \in \mathbb{R}^2</m>. </p>
+  <p>
+    Twee polinome <m>p</m> en <m>q</m> in veranderlikes <m>x</m> en <m>y</m> is gedefineer as <em>gelyk</em>as en slegs as al hulle ooreenstemmende koëffisiente gelyk aan mekaar is. Dit is ekwivalent aan die bewering dat <m>p(x,y)=q(x,y)</m> vir alle <m>(x,y) \in \mathbb{R}^2</m>.
+  </p>
 
-<p>In dieselfde manier, kan ons praat van polinome in <m>x,y,z</m> ensovoorts, byvoorbeeld
- <me>
-   r = 5x^3y^2z + 3xy - 4xz^3 \in \Poly_6[x,y,z].
-</me></p>
-    </statement>
-
-  <assemblage>
-    <p>As ons net '<m>p</m> is 'n polinoom' sê, bedoel ons dat <m>p</m> 'n polinoom in 'n enkele veranderlike <m>x</m> is, met ander woorde <m>p \in \Poly</m>. Let up dat <m>\Poly = \Poly[x]</m>. </p>
-  </assemblage>
+  <p>
+    In dieselfde manier, kan ons praat van polinome in <m>x,y,z</m> ensovoorts, byvoorbeeld
+    <me>
+      r = 5x^3y^2z + 3xy - 4xz^3 \in \Poly_6[x,y,z].
+    </me>
+  </p>
+  </statement>
 
   </example>
+
+  <aside>
+    <p>As ons net <q><m>p</m> is 'n polinoom</q> sê, bedoel ons dat <m>p</m> 'n polinoom in 'n enkele veranderlike <m>x</m> is, met ander woorde <m>p \in \Poly</m>. Let up dat <m>\Poly = \Poly[x]</m>. </p>
+  </aside>
 
 <example xml:id="poly_vector_fields_example">
   <title>Polinomiaal vektorvelde</title>
@@ -482,60 +516,54 @@ In hierdie manier kan ons <m>\Poly_n[x,y]</m> beskou as'n deelversameling van di
     <p>
     Onthou dat 'n <em>vektorveld</em> op <m>\mathbb{R}^2</m> 'n vektor is wie se komponente funksies is van <m>x</m> en <m>y</m>. Byvoorbeeld,
     <me>
- \ve{V} = (x^2 y, x \cos(y)).
-  </me>
-    Ons skryf <m> \Vect_n (\mathbb{R}^2) </m> vir die versameling van alle vektorvelde 
+      \ve{V} = (x^2 y, x \cos(y)).
+    </me>
+    Ons skryf <m> \Vect_n (\mathbb{R}^2) </m> vir die versameling van alle vektorvelde
     <me>
-    \ve{V} = (P(x,y), Q(x,y))
+      \ve{V} = (P(x,y), Q(x,y))
     </me>
     op <m>\mathbb{R}^2</m> wie se komponentfunksies <m>P</m> en <m>Q</m> polinome in<m>x,y</m> met graad minder of gelyk aan <m>n</m> is. Byvoorbeeld,
     <me>
- \ve{V} = (xy, x^2y^3 - x) \in \Vect_5(\mathbb{R}^2).
-  </me>
-  Ons defineer addisie en skalaarvermenigvuldiging vir vektorvelde in dieselfde manier as vir gewone vektore. Dit wil sê, as <m>\ve{V} = (V_1, V_2) </m> en <m>\ve{W} = (W_1, W_2)</m> vektorvelde op <m>\mathbb{R}^2</m> is, dan defineer ons
-  <me>
- \ve{V} + \ve{W} := (V_1 + W_1, V_2 + W_2).
-</me>
-Soortgelyk, as <m>k \in \mathbb{R}</m>, defineer ons 
-<me>
- k \ve{V} = (k V_1, k V_2).
-</me>
-Die nulvektorveld is gedefineer as die vektorveld wie se komponente die nulfunksie is:
- <me>
- Z = (0, 0).
- </me>
-Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel die reëls van 'n vektorruimte bevredig.</p>
+      \ve{V} = (xy, x^2y^3 - x) \in \Vect_5(\mathbb{R}^2).
+    </me>
+    Ons defineer addisie en skalaarvermenigvuldiging vir vektorvelde in dieselfde manier as vir gewone vektore. Dit wil sê, as <m>\ve{V} = (V_1, V_2) </m> en <m>\ve{W} = (W_1, W_2)</m> vektorvelde op <m>\mathbb{R}^2</m> is, dan defineer ons
+    <me>
+      \ve{V} + \ve{W} := (V_1 + W_1, V_2 + W_2).
+    </me>
+    Soortgelyk, as <m>k \in \mathbb{R}</m>, defineer ons
+    <me>
+      k \ve{V} = (k V_1, k V_2).
+    </me>
+    Die nulvektorveld is gedefineer as die vektorveld wie se komponente die nulfunksie is:
+    <me>
+      Z = (0, 0).
+    </me>
+    Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel die reëls van 'n vektorruimte bevredig.
+  </p>
   </statement>
 </example>
-
-
 
   <example xml:id="trig_poly_example">
     <title>Trigonometriese polinome</title>
     <statement>
       <p>
-        'n
-        <em>Trigonometriese polinoom</em>
-        is 'n funksie <m>\ve{T} : \mathbb{R}
-        \rightarrow \mathbb{R}</m> van die vorm
+        'n <em>Trigonometriese polinoom</em> is 'n funksie
+        <m>\ve{T} : \mathbb{R} \rightarrow \mathbb{R}</m>
+        van die vorm
         <men xml:id="formula_for_trig_poly">
           \ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx).
         </men>
       </p>
 
       <p>
-        Die <em>graad</em> van 'n trigonometriese polinoom is die grootste
-        veelvoud van <m>x</m> wat binne een van die sinusse of kosinusse in die
-        formule voorkom.
+        Die <em>graad</em> van 'n trigonometriese polinoom is die grootste veelvoud van <m>x</m> wat binne een van die sinusse of kosinusse in die formule voorkom.
         Byvoorbeeld,
         <me>
           3 - \cos(x) + 6 \sin(3x)
         </me>
         is 'n trigonometriese polinoom van graad 3.
         Ons skryf die versameling
-        van <em>alle</em> trigonometriese polinome as <m>\Trig</m> en die versameling
-        van alle trigonometriese polinome van graad kleiner of gelyk aan <m>n</m> as
-        <m>\Trig_n</m>.
+        van <em>alle</em> trigonometriese polinome as <m>\Trig</m> en die versameling van alle trigonometriese polinome van graad kleiner of gelyk aan <m>n</m> as <m>\Trig_n</m>.
       </p>
     </statement>
   </example>
@@ -543,8 +571,7 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
   <exercise>
     <statement>
       <p>
-        Wys dat <m>\Trig</m> en <m>\Trig_n</m> deelruimtes van <m>\Cont (\mathbb{R})</m>
-        is.
+        Wys dat <m>\Trig</m> en <m>\Trig_n</m> deelruimtes van <m>\Cont (\mathbb{R})</m> is.
       </p>
     </statement>
   </exercise>
@@ -553,17 +580,15 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
     <statement>
       <p>
         Oorweeg die funksie <m>\ve{f} (x) = \sin^3(x)</m>.
-        Wys dat
-        <m>\ve{f} \in \Trig_3</m> deur dit in die vorm
-        <xref ref="formula_for_trig_poly" /> te skryf.
-        Wenk: gebruik die
-        identiteite
+        Wys dat <m>\ve{f} \in \Trig_3</m> deur dit in die vorm
+        <xref ref="formula_for_trig_poly" text="global" />
+        te skryf. Wenk: gebruik die identiteite
         <md>
           <mrow>\sin(A) \sin(B) \amp = \frac{1}{2}(\cos(A-B) - \cos(A+B))</mrow>
           <mrow>\sin(A) \cos(B) \amp = \frac{1}{2}(\sin(A-B) + \sin(A+B))</mrow>
           <mrow>\cos(A)\cos(B) \amp = \frac{1}{2}(\cos(A-B) + \cos(A+B))</mrow>
         </md>
-        wat maklik volg uit die sommeringsformules
+        wat maklik volg uit die optellingsformules
         <md>
           <mrow>\sin(A \pm B) \amp = \sin A \cos B \pm \cos A \sin B</mrow>
           <mrow>\cos(A \pm B) \amp = \cos A \cos B \mp \sin A \sin B</mrow>
@@ -571,41 +596,37 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
       </p>
     </statement>
   </exercise>
-
 </subsection>
 
-<!-- TO DO: Translate into Afrikaans, beginning here -->
-
   <subsection xml:id="soln-diff-eqns-sec">
-  <title>Solutions to homogenous linear differential equations</title>
+  <title>Oplossings van homogene lineêre differensiaalvergelykings</title>
 
-    <p> A homogenous <m>n</m>th order linear ordinary differential equation on an interval <m>I</m> is a differential equation of the form
+    <p> 'n Homogene <m>n</m>-de graadse lineêre gewone differensiaalvergelyking op 'n interval  <m>I</m> is 'n differentiaalvergelyking van die vorm
     <men xml:id="general_lin_diff_eqn">
         a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I
-    </men> 
-    where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn"/>.</p>
-
+    </men>
+    waar <m>y^{(k)}</m> die <m>k</m>-ste afgeleide van <m>y</m> aandui. 'n <em>Oplossing</em> vir die differensiaalvergelyking is 'n funksie <m>y(x)</m> gedefinieer op die interval <m>I</m>wat <xref ref="general_lin_diff_eqn" /> bevredig.</p>
 
     <example xml:id="first_example_2nd_order_ode">
-      <title>An example of a <m>2</m>nd order homogenous linear differential equation</title>
-      <statement> <p> For instance,
+      <title>Voorbeeld van 'n tweedegraadse homogene lineêre differensiaalvergelyking</title>
+      <statement> <p> Die differensiaalvergelyking
       <men xml:id="first_example_2nd_order_ode_eqn">
         x^2 y^{''} -3 x y' + 5 y = 0, \quad x \in (0, \infty)
       </men>
-      is a homogenous 2nd order linear differential equation on the interval <m>(0, \infty)</m>, and
+      is byvoorbeeld 'n 2de graadse lineêre differensiaalvergelyking op die interval <m>(0, \infty)</m> en
       <men xml:id="a_soln_to_my_ode">
         y_1(x) = x^2 \sin (\log x)
       </men>
-      is a solution to <xref ref="first_example_2nd_order_ode_eqn"/>. Similarly, 
+      is een oplossing vir <xref ref="first_example_2nd_order_ode_eqn" /> en die funksie
       <men xml:id="a_2nd_soln_to_my_ode">
         y_2(x) = x^2 \cos (\log x)
       </men>
-      is also a solution to <xref ref="first_example_2nd_order_ode_eqn"/>.
+      is 'n tweede oplossing vir <xref ref="first_example_2nd_order_ode_eqn" />.
       </p>
-      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation. 
+      <p>Ons kan SageMath gebruik om te kyk dat hulle inderdaad oplossing vir <xref ref="first_example_2nd_order_ode_eqn" /> is. Kliek die <c>Evaluate (Sage)</c> knoppie <mdash /> die behoort die uitset <q>True</q> te gee wat aandui dat <m>y_1</m> werklik 'n oplossing vir die differensiaalvergelyking is.
       </p>
       <sage>
-      
+
       <input>
         def solves_de(y):
          return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
@@ -616,12 +637,11 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
       </input>
       </sage>
 
-      <assemblage>
-         <p>
-         Edit the code above to check whether <m>y_2</m> is a solution of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.</p>
-      </assemblage>
+      <p>
+        Pas die kode hier bo aan om te bepaal of <m>y_2</m> 'n oplossing vir die differensiaalvergelyking <xref ref="first_example_2nd_order_ode_eqn"/> is.
+      </p>
 
-      <p>We can also plot the graphs of <m>y_1</m> and <m>y_2</m>. Again, click on <c>Evaluate (Sage)</c>. </p>
+      <p>Ons kan ook die grafieke van <m>y_1</m> en <m>y_2</m> met SageMath teken. Kliek weer op <c>Evaluate (Sage)</c>. </p>
       <sage>
       <input>
         y1 = x^2*sin(log(x))
@@ -630,10 +650,9 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
         plot([y1, y2], (x, 0, 1), legend_label=['y1', 'y2'])
       </input>
       </sage>
-      <assemblage>
-        <p>Play with the code above, and plot some different functions.
-        </p>
-      </assemblage>
+      <p>
+        Speel met die kode hier bo en teken nog 'n paar ander funksies.
+      </p>
 
       </statement>
 
@@ -642,17 +661,17 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
     <exercise>
       <statement>
         <p>
-          Check by hand that <xref ref="a_soln_to_my_ode"/> and <xref ref="a_2nd_soln_to_my_ode"/> are indeed  solutions of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.
+          Bevestig met berekeninge op pen en papier dat <xref ref="a_soln_to_my_ode" /> en <xref ref="a_2nd_soln_to_my_ode" /> werklik oplossings vir die differensiaalvergelyking <xref ref="first_example_2nd_order_ode_eqn" /> is.
         </p>
       </statement>
     </exercise>
 
-    <p> Suppose we are given an <m>n</m>th order homogenous linear differential equation of the form <xref ref="general_lin_diff_eqn"/> on some interval <m>I \subseteq \mathbb{R}</m>. Write <m>V</m> for the set of <em>all</em> solutions to the differential equation. That is,
+    <p> Veronderstel daar word aan ons 'n <m>n</m>-de graadse homogene differensiaalvergelyking van die vorm <xref ref="general_lin_diff_eqn" /> op 'n sekere interval <m>I \subseteq \mathbb{R}</m> gegee. Skryf <m>V</m> vir die versameling van <em>alle</em> oplossings vir die differensiaalvergelyking. Dit is,
     <men>
      V := \{ y : a_n(x) y^{(n)}(x) + \cdots + a_1(x) y'(x) + a_0(x) y(x) = 0 \}
     </men>
     </p>
-    <p> We can regard <m>V</m> as a subset of the set of <em>all</em> functions on the interval <m>I</m>:
+    <p> Ons kan <m>V</m> sien as 'n deelversameling van die versameling van <em>alle</em> funksies op die interval <m>I</m>:
     <me>
       V \subseteq \Fun(I)
     </me>
@@ -661,25 +680,25 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
     <exercise>
     <statement>
       <p>
-     Show that <m>V</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun(I)</m>.
+        Wys dat <m>V</m> 'n <xref ref="defn-subspace" >deelruimte</xref> van <m>\Fun(I)</m> is.
       </p>
-     </statement> 
+     </statement>
     </exercise>
 
-    <p>So, by <xref ref="subspace_lem"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
+    <p>So, by <xref ref="subspace_lem" text="type-global"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
 
     <example xml:id="first_example_2nd_order_ode_cont">
-      <title>Continuation of <xref ref="first_example_2nd_order_ode"/></title>
+      <title>Vervlging van <xref ref="first_example_2nd_order_ode" /></title>
       <statement>
-        <p> Consider the differential equation from <xref ref="first_example_2nd_order_ode"/>. We saw that
+        <p> Beskou weer die differensiaalvergelyking van  <xref ref="first_example_2nd_order_ode" />. Ons het gesien dat
         <me>
         y_1 = x^2 \sin (\log x), \quad y_2 = x^2 \cos (\log x)
         </me>
-      are solutions. So, any linear combination of <m>y_1</m> and <m>y_2</m> is <em>also</em> a solution. For instance,
+        oplosings hiervoor is. Dus is enige lineêre kombinasie van  <m>y_1</m> en <m>y_2</m>  <em>ook</em> 'n oplossing. Byvoorbeeld,
       <me>
        y = 2y_1 + 5 y_2
      </me>
-     is also a solution. Let us check this in SageMath. </p>
+     is ook 'n oplossing. Kom ons gebruik weer SageMath om dit na te gaan. </p>
 
     <sage>
       <input>
@@ -692,29 +711,29 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
         solves_de(2*y1 + 5*y2)
       </input>
     </sage>
-              
+
       </statement>
     </example>
 
         <example xml:id="non_example_nonlinear_ode">
-        <title>A non-example: Solutions to a nonlinear ODE</title>
+        <title>'n Nie-voorbeeld: Oplossings vir 'n nie-lineêre gewone differensiaalvergelyking</title>
         <statement>
           <p>
-            We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
+            Ons het in die vorige voorbeeld gesien dat lineêre gewone differensiaalvergelykings gemaklik 'n gemaklike teorie het, omdat lineêre kombinasies van oplossings weer oplossings is. Dit hoef nie noodwendig in die nie-lineêre geval te gebeur nie. Kyk byvoorbeeld na die nie-lineêre differensiaalvergelyking
             <men xml:id="explicit_nonlinear_ode">
             y^\prime = y^2.
             </men>
-            The general solution is given by
+            Die algemene oplossing word gegee deur
             <me>
             y_c = \frac{1}{c - x}
-            </me> where <m>c</m> is a constant. For instance,
+            </me> waar <m>c</m> 'n konstante is. Die funksies
             <me>
               y_1 = \frac{1}{1-x}, \quad y_2 =\frac{1}{2-x}
             </me>
-            are solutions.
+            is byvoorbeeld oplossings.
           </p>
           <p>
-            Use the SageMath script below to check whether the linear combination <m>y_1 + y_2</m> is also a solution. 
+            Gebruik die SageMath kode hier onder om vas te stel of die lineêre kombinasie <m>y_1 + y_2</m> ook 'n oplossing is.
             </p>
           <sage>
           <input>
@@ -730,20 +749,20 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
         </input>
         </sage>
         <p>
-        The answer is <c>False!</c> So linear combinations of solutions to the nonlinear differential equation <xref ref="explicit_nonlinear_ode"/> are no longer solutions, in general.
+        Die antwoord is <c>False!</c> So lineêre kombinasies van oplossings vir die nie-ilneêre differensiaalvergelyking <xref ref="explicit_nonlinear_ode" /> is nie noodwendig weer oplossings nie.
           </p>
         </statement>
     </example>
 
 
-    <example> <title>Finding the general solution to a differential equation in SageMath</title>
+    <example> <title>Uitwerk van die algemene oplossing van 'n differensiaalvergelyking m.b.v. SageMath</title>
       <statement>
       <p>
       Let us use SageMath to find the general solution of the following ordinary differential equation
       <men xml:id="explicit_diff_eq">
     y^{\prime \prime} + 2y^\prime + y = 0.
       </men>
-      We can do this as follows. Note that we need to be a bit more careful now, first defining our variable <m>x</m> and then declaring that <m>y</m> is a function of <m>x</m>.</p>
+      Ons kan die as volg doen. Let op dat ons nou 'n bietjie meer versigtig moet wees. Ons moet eers ons veranderlike <m>x</m> definieer en dan sê dat <m>y</m>  'n funksie van <m>x</m> is.</p>
       <sage>
         <input>
         var('x')
@@ -755,10 +774,10 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
         desolve(diff_eqn, y)
         </input>
       </sage>
-    <p>SageMath reports that the general solution is given in terms of two unspecified constants <c>_K1</c> and <c>_K2</c> as <c>(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</c>.
+    <p>SageMath rapporteer dat die algemene oplossing in terme van twee onbepaalde konstantes <c>_K1</c> en <c>_K2</c> gegee word as <c>(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</c>.
     </p>
     <p>
-    If we set <c>_K1</c> equal to 1 and <c>_K2</c> equal to 0 in the general solution, we will get a particular solution <m>y_1</m> of the differential equation. 
+    As ons <c>_K1</c> gelyk aan 1 stel en <c>_K2</c> gelyk aan 0 stel, dan kry ons 'n spesifieke oplossing <m>y_1</m> vir die differensiaalvergelyking.
   </p>
     <sage>
         <input>
@@ -774,22 +793,20 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
         y1
         </input>
       </sage>
-    <p>SageMath is telling us that <m>y_1 = e^{-x} \sin(2x)</m> is a particular solution. </p>
-    <assemblage>
-      <p>
-    Edit the code to set <c>_K2</c> equal to 0 and <c>_K1</c> equal to 1 in the general solution to get a different particular solution <m>y_2</m>. What is <m>y_2</m>? </p>
-  </assemblage>
+    <p>
+      SageMath sê dat <m>y_1 = e^{-x} \sin(2x)</m> 'n spesifieke olossing is.
+    </p>
+
+    <p>
+      Pas die kode aan om <c>_K2</c> gelyk aan 0 en <c>_K1</c> gelyk aan 1 te stel om 'n ander spesifieke oplossing  <m>y_2</m> te kry. Wat is <m>y_2</m>?
+    </p>
 
     </statement>
     </example>
 
-
 </subsection>
 
-<!-- Translation job ends here. -->
-
  <exercises>
-
   <exercise>
     <statement>
       <p>
@@ -797,9 +814,6 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
         <me>
           V := \{ (a, -a, b, -b) : a, b \in \mathbb{R} \}
         </me>
-      </p>
-
-      <p>
         'n deelruimte van <m>\mathbb{R}^4</m> is.
       </p>
     </statement>
@@ -810,12 +824,8 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
       <p>
         Wys dat die versameling
         <me>
-          V := \{ \mbox{polinome van die vorm }  \ve{p}(x) = ax^3 + bx^2 - cx
-          + a, \, a,b,c \in \mathbb{R}\}
+          V := \{ \text{polinome van die vorm }  \ve{p}(x) = ax^3 + bx^2 - cx + a, \, a,b,c \in \mathbb{R}\}
         </me>
-      </p>
-
-      <p>
         'n deelruimte van <m>\Poly_3</m> is.
       </p>
     </statement>
@@ -827,17 +837,11 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
         Laat <m>b \in \mathbb{R}</m>.
         Bewys dat
         <me>
-          V := \{ (x_1, \, x_2, \, x_3) \in \mathbb{R}^3 : 2x_1 - 3x_2 + 5x_3
-          = b \}
+          V := \{ (x_1, \, x_2, \, x_3) \in \mathbb{R}^3 : 2x_1 - 3x_2 + 5x_3 = b \}
         </me>
-      </p>
-
-      <p>
         'n deelruimte van <m>\mathbb{R}^3</m> is as en slegs as <m>b=0</m>.
-        (Onthou dat
-        as en slegs as beteken dat die vorentoe-
-        <em>en</em> die terug-implikasie
-        bewys moet word.)
+        (Onthou dat as en slegs as beteken dat die vorentoe-
+        <em>en</em> die terug-implikasie bewys moet word.)
       </p>
     </statement>
   </exercise>
@@ -853,10 +857,8 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
 
       <p>
         Is <m>V</m> 'n deelruimte van <m>\Diff((-1,1))</m>?
-        As jy dink dat dit is,
-        <em>bewys</em> dat dit so is.
-        As jy dink dit is nie, <em>bewys</em> dat dit
-        nie is nie!
+        As jy dink dat dit is, <em>bewys</em> dat dit so is.
+        As jy dink dit is nie, <em>bewys</em> dat dit nie is nie!
       </p>
     </statement>
   </exercise>
@@ -866,17 +868,14 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
       <p>
         Beskou die versameling
         <me>
-          V := \{ (x_1, \, x_2, \, x_3, \, \ldots) \in \mathbb{R}^\infty :
-          \lim_{n \rightarrow \infty} x_n = 0 \}
+          V := \{ (x_1, \, x_2, \, x_3, \, \ldots) \in \mathbb{R}^\infty : \lim_{n \rightarrow \infty} x_n = 0 \}
         </me>.
       </p>
 
       <p>
         Is <m>V</m> 'n deelruimte van <m>\mathbb{R}^\infty</m>?
-        As jy dink dit is wel,
-        <em>bewys</em> dat dit so is.
-        As jy dink dit is nie, <em>bewys</em> dat dit
-        nie is nie!
+        As jy dink dat dit is, <em>bewys</em> dat dit is.
+        As jy dink dit is nie, <em>bewys</em> dat dit nie is nie!
       </p>
     </statement>
   </exercise>
@@ -884,12 +883,9 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
   <exercise>
     <statement>
       <p>
-        Is <m>\mathbb{R}^+ := \{ \ve{x} \in \mathbb{R} : \ve{x} \geq
-        0 \}</m> 'n deelruimte van <m>\mathbb{R}</m>?
-        As jy dink dit is wel,
-        <em>bewys</em> dat dit so is.
-        As jy dink dit is nie, <em>bewys</em> dat dit
-        nie is nie!
+        Is <m>\mathbb{R}^+ := \{ \ve{x} \in \mathbb{R} : \ve{x} \geq 0 \}</m> 'n deelruimte van <m>\mathbb{R}</m>?
+        As jy dink dat dit is, <em>bewys</em> dat dit is.
+        As jy dink dit is nie, <em>bewys</em> dat dit nie is nie!
       </p>
     </statement>
   </exercise>
@@ -897,12 +893,9 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
   <exercise>
     <statement>
       <p>
-        Gee 'n voorbeeld van 'n nie-le&#xeb;
-        deelversameling <m>U</m>
-        van <m>\mathbb{R}^2</m> wat geslote is onder sommering en die vind van
-        sommeringsinverses (i.e. as <m>\ve{u}</m> in <m>U</m> is,
-        dan is <m>-\ve{u}</m> in
-        <m>V</m>), maar ni&#xe9; 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
+        Gee 'n voorbeeld van 'n nie-leë deelversameling <m>U</m>
+        van <m>\mathbb{R}^2</m> wat geslote is onder optelling en die vind van optellingsinverses (i.e. as <m>\ve{u}</m> in <m>U</m> is, dan is <m>-\ve{u}</m> in
+        <m>V</m>), maar nié 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
       </p>
     </statement>
   </exercise>
@@ -910,47 +903,44 @@ Met hierdie definisies kan ons bevestig dat <m>\Vect_n (\mathbb{R}^2)</m> wel di
   <exercise>
     <statement>
       <p>
-        Gee 'n voorbeeld van 'n nie-le&#xeb;
-        deelversameling <m>V</m>
+        Gee 'n voorbeeld van 'n nie-leë deelversameling <m>V</m>
         van <m>\mathbb{R}^2</m> wat geslote onder skalaarvermenigvuldiging is, maar
-        ni&#xe9; 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
+        nié 'n deelruimte van <m>\mathbb{R}^2</m> is nie.
       </p>
     </statement>
   </exercise>
-
 
 <!-- TO DO: Translate into Afrikaans, beginning here -->
 
 <exercisegroup>
   <introduction>
-<p>The next 4 exercises will help acquaint the reader with the concept of the <emp>sum of two subspaces</emp>. First, we'll need a definition.</p>
-
-<definition xml:id="def_sum_subspace">
-  <statement>
     <p>
-Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
-<me>
-U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
-</me>
-</p>
-</statement>
-</definition>
-<p>
-  In the exercises below, <m>V,U,W</m> will be as above.
-</p>
-</introduction>
-<exercise xml:id="sum_of_subspaces_is_subspace">
+      Die volgende vier oefeninge sal jou bekend stel aan die konsep van die <em>som van twee deelruimtes</em>. Ons moet eers definieer wat dit is:
+    </p>
+
+    <p>
+      Laat <m>V</m> 'n vektorruimte wees. Veronderstel dat <m>U</m> en <m>W</m> twee deelruimtes van <m>V</m> is. Die som <m>U + W</m> van <m>U</m> en <m>W</m> word gedefinieer deur
+      <men xml:id="def_sum_subspace">
+        U + W  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
+      </men>.
+    </p>
+
+    <p>
+      In die oefeninge hier onder sal <m>V,U,W</m> soos hierbo wees.
+    </p>
+  </introduction>
+  <exercise xml:id="sum_of_subspaces_is_subspace">
     <statement>
       <p>
-      Show that <m>U + V</m> is a subspace of <m>V</m>.
-    </p>
+        Wys dat <m>U + W</m> 'n deelruimte van <m>V</m> is.
+      </p>
     </statement>
   </exercise>
 
   <exercise>
     <statement>
       <p>
-      Show that  <m>U + V</m> is, in fact, the smallest subspace of <m>V</m> containing both <m>U</m> and <m>V</m>.
+      Wys dat  <m>U + W</m> die kleinste deelruimte van  <m>V</m> is wat beide <m>U</m> en <m>W</m> (as deelversamelings) bevat.
     </p>
     </statement>
   </exercise>
@@ -958,7 +948,7 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
    <exercise>
     <statement>
       <p>
-      If <m>W \subset U</m> what is <m>U + W</m>?
+      Indien <m>W \subset U</m> wat is <m>U + W</m>?
     </p>
     </statement>
   </exercise>
@@ -966,17 +956,13 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
    <exercise>
     <statement>
       <p>
-      Can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <m>\mathbb{R}^2</m>? Similarly, can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <emp>not</emp> all of <m>\mathbb{R}^2</m>?
-    </p>
+        Kan jy dink aan twee deelruimtes van <m>\mathbb{R}^2</m> wie se som <m>\mathbb{R}^2</m> is? Soortgelyk, kan jy dink aan twee deelruimtes van <m>\mathbb{R}^2</m> wie se som <em>nie</em> die hele <m>\mathbb{R}^2</m> is nie?
+      </p>
     </statement>
   </exercise>
 </exercisegroup>
-
-<!-- Translation job ends here -->
-
 </exercises>
 
-<solutions divisional="solution answer" />
 
 
 </section>

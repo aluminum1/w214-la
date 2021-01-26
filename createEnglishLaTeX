@@ -1,0 +1,1 @@
+/c/xsltproc/xsltproc --stringparam exercise.divisional.solution "no"  --xinclude /c/pretext/mathbook/xsl/pretext-latex.xsl /c/pretext/w214-la/ptx/W214-Lin-Alg.ptx  > /c/pretext/w214-la/ptx/latex/W214-Lin-Alg.tex

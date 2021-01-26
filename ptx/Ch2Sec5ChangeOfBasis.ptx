@@ -1,12 +1,12 @@
 <section xml:id="Ch2Sec5ChangeOfBasis">
   <title>Change of basis</title>
-  <introduction>
-
+  <introduction><p></p>
+<!--
     <figure>
         <caption>Video recording for <xref ref="Ch2Sec5ChangeOfBasis"/>.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec15ChangeOfBasis.mp4" width="70%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
     </figure>
-
+-->
 </introduction>
 
   <subsection>
@@ -16,47 +16,44 @@
       <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}</m> are two different bases for <m>\mathbb{R}^2</m>,
       shown below:
     </p>
+    <figure xml:id="w_in_different_bases">
+      <caption>Two different bases for <m>\mathbb{R}^2</m></caption>
 
-  <figure xml:id="w_in_different_bases">
-  <caption>Two different bases for <m>\mathbb{R}^2</m></caption>
-
-  <sidebyside width="30%">
-    <figure>
-<caption>The basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m></caption>
-    <image>
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.4]
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);\end{tikzpicture}]]>
-</latex-image>
-        </image> </figure>
+      <sidebyside width="30%">
+        <figure>
+          <caption>The basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m></caption>
+          <image>
+            <latex-image>
+              <![CDATA[\begin{tikzpicture}[scale=0.4]
+              \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1);
+              \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);\end{tikzpicture}]]>
+            </latex-image>
+          </image>
+        </figure>
 
         <figure>
           <caption>The basis <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}</m>.</caption>
-        <image>
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.4]
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.5] {\(\ve{c}_1\)} (1,0); 
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.5] {\(\ve{c}_2\)} (-1,1);\end{tikzpicture}]]>
-</latex-image>
-        </image></figure>
+          <image>
+            <latex-image>
+              <![CDATA[\begin{tikzpicture}[scale=0.4]
+              \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.5] {\(\ve{c}_1\)} (1,0);
+              \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.5] {\(\ve{c}_2\)} (-1,1);\end{tikzpicture}]]>
+            </latex-image>
+          </image>
+        </figure>
       </sidebyside>
     </figure>
 
     <p>
       Suppose we are given a vector <m>\ve{w} \in \mathbb{R}^2</m>:
-      <sidebyside width="30%">
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.4]
-   \draw[thick, ->] (0,0) -- node[pos=1.3] {\(\ve{w}\)} (-4, 1);\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-</sidebyside>
     </p>
+
+    <image width="30%">
+      <latex-image>
+        <![CDATA[\begin{tikzpicture}[scale=0.4]
+        \draw[thick, ->] (0,0) -- node[pos=1.3] {\(\ve{w}\)} (-4, 1);\end{tikzpicture}]]>
+      </latex-image>
+    </image>
 
     <p>
       We would like to compute the coordinate vector of the <em>same</em>
@@ -65,18 +62,17 @@
     </p>
 
     <p>
-      For this particular <m>\ve{w}</m>,
-      from <xref ref="w_in_b_basis"/>,
-      we see that in the basis <m>\basis{B}</m>, we have
+      For this particular <m>\ve{w}</m>, from <xref ref="w_in_b_basis"/>,
+      we see that in terms of the basis <m>\basis{B}</m>, we have
       <men>
-        \ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2 \qquad \therefore \, [\ve{w}]_\basis{B} = \left[\begin{array}{c} -3 \\ 2   \end{array}\right] \,
+        \ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2 \qquad \therefore \, [\ve{w}]_\basis{B} = \begin{bmatrix} -3 \\ 2   \end{bmatrix} \,
       </men>.
     </p>
 
     <p>
-      On the other hand, in the basis <m>\basis{C}</m>, we see from <xref ref="w_in_c_basis"/> that
+      On the other hand, in terms of the basis <m>\basis{C}</m>, we see from <xref ref="w_in_c_basis"/> that
       <men xml:id="correct_exp_w">
-        \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} = \left[\begin{array}{c} 1 \\ -3   \end{array}\right]
+        \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} = \begin{bmatrix} 1 \\ -3   \end{bmatrix}
       </men>.
     </p>
 
@@ -85,65 +81,63 @@
       <caption> <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m></caption>
 
       <image>
-
-<latex-image>
+        <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=0.5]
-  \draw[red, dotted] (-9, -9) -- (3, -3);
-  \draw[red, dotted] (-8, -7) -- (4, -1);
-  \draw[red, dotted] (-7, -5) -- (5, 1);
-  \draw[red, dotted] (-6, -3) -- (6, 3);
-  \draw[red, dotted] (-5, -1) -- (7, 5);
-  \draw[red, dotted] (-4, 1) -- (8, 7);
-  \draw[red, dotted] (-3, 3) -- (9, 9);
+          \draw[primaryColor, dotted] (-9, -9) -- (3, -3);
+          \draw[primaryColor, dotted] (-8, -7) -- (4, -1);
+          \draw[primaryColor, dotted] (-7, -5) -- (5, 1);
+          \draw[primaryColor, dotted] (-6, -3) -- (6, 3);
+          \draw[primaryColor, dotted] (-5, -1) -- (7, 5);
+          \draw[primaryColor, dotted] (-4, 1) -- (8, 7);
+          \draw[primaryColor, dotted] (-3, 3) -- (9, 9);
 
-  \draw[red, dotted] (-9, -9) -- (-3, 3);
-  \draw[red, dotted] (-7, -8) -- (-1, 4);
-  \draw[red, dotted] (-5, -7) -- (1, 5);
-  \draw[red, dotted] (-3, -6) -- (3, 6);
-  \draw[red, dotted] (-1, -5) -- (5, 7);
-  \draw[red, dotted] (1, -4) -- (7, 8);
-  \draw[red, dotted] (3, -3) -- (9, 9);
+          \draw[primaryColor, dotted] (-9, -9) -- (-3, 3);
+          \draw[primaryColor, dotted] (-7, -8) -- (-1, 4);
+          \draw[primaryColor, dotted] (-5, -7) -- (1, 5);
+          \draw[primaryColor, dotted] (-3, -6) -- (3, 6);
+          \draw[primaryColor, dotted] (-1, -5) -- (5, 7);
+          \draw[primaryColor, dotted] (1, -4) -- (7, 8);
+          \draw[primaryColor, dotted] (3, -3) -- (9, 9);
 
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);
-  \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
-</latex-image>
+          \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1);
+          \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);
+          \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
+        </latex-image>
       </image>
     </figure>
 
   <figure xml:id="w_in_c_basis">
     <caption> <m>\ve{w} = \ve{c}_1 - 3 \ve{c}_2</m> </caption>
       <image>
-
-<latex-image>
+        <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=0.5]
-  \draw[blue, dotted] (-6, 3) -- (0, -3);
-  \draw[blue, dotted] (-5, 3) -- (1, -3);
-  \draw[blue, dotted] (-4, 3) -- (2, -3);
-  \draw[blue, dotted] (-3, 3) -- (3, -3);
-  \draw[blue, dotted] (-2, 3) -- (4, -3);
-  \draw[blue, dotted] (-1, 3) -- (5, -3);
-  \draw[blue, dotted] (-0, 3) -- (6, -3);
+          \draw[secondaryColor, dotted] (-6, 3) -- (0, -3);
+          \draw[secondaryColor, dotted] (-5, 3) -- (1, -3);
+          \draw[secondaryColor, dotted] (-4, 3) -- (2, -3);
+          \draw[secondaryColor, dotted] (-3, 3) -- (3, -3);
+          \draw[secondaryColor, dotted] (-2, 3) -- (4, -3);
+          \draw[secondaryColor, dotted] (-1, 3) -- (5, -3);
+          \draw[secondaryColor, dotted] (-0, 3) -- (6, -3);
 
-  \draw[blue, dotted] (-6, 3) -- (0, 3);
-  \draw[blue, dotted] (-5, 2) -- (1, 2);
-  \draw[blue, dotted] (-4, 1) -- (2, 1);
-  \draw[blue, dotted] (-3, 0) -- (3, 0);
-  \draw[blue, dotted] (-2, -1) -- (4, -1);
-  \draw[blue, dotted] (-1, -2) -- (5, -2);
-  \draw[blue, dotted] (0, -3) -- (6, -3);
+          \draw[secondaryColor, dotted] (-6, 3) -- (0, 3);
+          \draw[secondaryColor, dotted] (-5, 2) -- (1, 2);
+          \draw[secondaryColor, dotted] (-4, 1) -- (2, 1);
+          \draw[secondaryColor, dotted] (-3, 0) -- (3, 0);
+          \draw[secondaryColor, dotted] (-2, -1) -- (4, -1);
+          \draw[secondaryColor, dotted] (-1, -2) -- (5, -2);
+          \draw[secondaryColor, dotted] (0, -3) -- (6, -3);
 
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (1,0); 
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (-1,1);
-  \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
-</latex-image>
+          \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (1,0);
+          \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (-1,1);
+          \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
+        </latex-image>
       </image>
-
     </figure>
   </sidebyside>
 
     <p>
-      So, the <em>same</em> vector <m>\ve{w}</m> has different coordinate vectors <m>[\ve{w}]_\basis{B}</m> and
+      So, the <em>same</em> vector <m>\ve{w}</m> has different coordinate vectors
+      <m>[\ve{w}]_\basis{B}</m> and
       <m>[\ve{w}]_\basis{C}</m> with respect to the bases
       <m>\basis{B}</m> and <m>\basis{C}</m>!
     </p>
@@ -154,7 +148,7 @@
     <p>
       Now, suppose we know the bases <m>\basis{B}</m> and <m>\basis{C}</m>, and we know the coordinate vector <m>[\ve{w}]_\basis{B}</m> of <m>\ve{w}</m> in the basis <m>\basis{B}</m>,
       <me>
-        [\ve{w}]_\basis{B} = \left[ \begin{array}{c} -3 \\ 2 \end{array}\right]
+        [\ve{w}]_\basis{B} = \begin{bmatrix} -3 \\ 2 \end{bmatrix}
       </me>,
       that is, <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>.
       How can we compute <m>[\ve{w}]_\basis{C}</m>,
@@ -168,35 +162,31 @@
       <m>\ve{b}_2</m> are displayed against the background of integral linear combinations of the basis <m>\basis{C}</m>:
     </p>
 
-    <sidebyside>
-    <image>
-
-<latex-image>
+      <image>
+        <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=0.5]
+          \draw[blue, dotted] (-6, 3) -- (0, -3);
+          \draw[blue, dotted] (-5, 3) -- (1, -3);
+          \draw[blue, dotted] (-4, 3) -- (2, -3);
+          \draw[blue, dotted] (-3, 3) -- (3, -3);
+          \draw[blue, dotted] (-2, 3) -- (4, -3);
+          \draw[blue, dotted] (-1, 3) -- (5, -3);
+          \draw[blue, dotted] (-0, 3) -- (6, -3);
 
-  \draw[blue, dotted] (-6, 3) -- (0, -3);
-  \draw[blue, dotted] (-5, 3) -- (1, -3);
-  \draw[blue, dotted] (-4, 3) -- (2, -3);
-  \draw[blue, dotted] (-3, 3) -- (3, -3);
-  \draw[blue, dotted] (-2, 3) -- (4, -3);
-  \draw[blue, dotted] (-1, 3) -- (5, -3);
-  \draw[blue, dotted] (-0, 3) -- (6, -3);
+          \draw[blue, dotted] (-6, 3) -- (0, 3);
+          \draw[blue, dotted] (-5, 2) -- (1, 2);
+          \draw[blue, dotted] (-4, 1) -- (2, 1);
+          \draw[blue, dotted] (-3, 0) -- (3, 0);
+          \draw[blue, dotted] (-2, -1) -- (4, -1);
+          \draw[blue, dotted] (-1, -2) -- (5, -2);
+          \draw[blue, dotted] (0, -3) -- (6, -3);
 
-  \draw[blue, dotted] (-6, 3) -- (0, 3);
-  \draw[blue, dotted] (-5, 2) -- (1, 2);
-  \draw[blue, dotted] (-4, 1) -- (2, 1);
-  \draw[blue, dotted] (-3, 0) -- (3, 0);
-  \draw[blue, dotted] (-2, -1) -- (4, -1);
-  \draw[blue, dotted] (-1, -2) -- (5, -2);
-  \draw[blue, dotted] (0, -3) -- (6, -3);
-
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (1,0); 
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (-1,1);
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);\end{tikzpicture}]]>
-</latex-image>
-    </image>
-  </sidebyside>
+          \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (1,0);
+          \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (-1,1);
+          \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1);
+          \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);\end{tikzpicture}]]>
+        </latex-image>
+      </image>
 
     <p>
       We read off that:
@@ -218,7 +208,7 @@
     <p>
       From this we read off that
       <men xml:id="w_in_basis_C">
-        [\ve{w}]_\basis{C} = \left[\begin{array}{c} 1 \\ -3 \end{array}\right]
+        [\ve{w}]_\basis{C} = \begin{bmatrix} 1 \\ -3 \end{bmatrix}
       </men>
       which is the right answer, as we know from <xref ref="correct_exp_w" />.
     </p>
@@ -231,12 +221,14 @@
       <statement>
         <p>
           Let <m>\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n \right\}</m> and
-          <m>\basis{C} = \left\{ \ve{c}_1, \ldots, \ve{c}_n \right\}</m> be bases for a vector space <m>V</m>.
+          <m>\basis{C} = \left\{ \ve{c}_1, \ldots, \ve{c}_n \right\}</m>
+          be bases for a vector space <m>V</m>.
           The <term>change-of-basis matrix from
           <m>\basis{B}</m> to <m>\basis{C}</m></term>
-          is the <m>n \times n</m> matrix <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> whose columns are the coordinate vectors <m>[\ve{b}_1]_\basis{C}, \ldots, [\ve{b}_n]_\basis{C}</m>:
+          is the <m>n \times n</m> matrix <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> whose columns are the coordinate vectors
+          <m>[\ve{b}_1]_\basis{C}, \ldots, [\ve{b}_n]_\basis{C}</m>:
           <me>
-            \mat{P}_{\basis{C} \leftarrow \basis{B}} := \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}\, 
+            \mat{P}_{\basis{C} \leftarrow \basis{B}} := \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right]_\basis{C} \amp \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right]_\basis{C} \amp \ldots \amp \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}\,
           </me>.
         </p>
       </statement>
@@ -245,10 +237,10 @@
     <example>
       <statement>
         <p>
-          In our running example,
-          we see from <xref ref="b_in_terms_of_c" /> and <xref ref="b_in_terms_of_c_2" /> that
+          In our running example, we see from
+          <xref ref="b_in_terms_of_c" /> and <xref ref="b_in_terms_of_c_2" /> that
           <me>
-            [\ve{b}_1]_\basis{C} = \left[ \begin{array}{c} 1 \\ 3 \end{array} \right], \quad [\ve{b}_2]_\basis{C} = \left[ \begin{array}{c} 2 \\ 3 \end{array} \right] \, 
+            [\ve{b}_1]_\basis{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}, \quad [\ve{b}_2]_\basis{C} = \begin{bmatrix} 2 \\ 3 \end{bmatrix} \,
           </me>.
         </p>
 
@@ -256,26 +248,25 @@
           Hence the change-of-basis matrix from
           <m>\basis{B}</m> to <m>\basis{C}</m> is
           <me>
-            \mat{P}_{\basis{C} \leftarrow \basis{B}} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 3  \end{bmatrix}
+            \mat{P}_{\basis{C} \leftarrow \basis{B}} = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 3  \end{bmatrix}
           </me>.
         </p>
       </statement>
     </example>
 
     <p>
-      Before we move on,
-      we need to recall something about matrix multiplication.
+      Before we move on, we need to recall something about matrix multiplication.
       Suppose you collect together <m>m</m> column vectors to form a matrix:
-    <me>
-\begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}
-  </me>
+      <me>
+        \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] \amp \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] \amp \ldots \amp \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}
+      </me>
     </p>
 
     <p>
       (For instance, our change-of-basis matrix
       <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> was formed in this way.) Then the product of this matrix with a column vector can be computed as follows:
       <men xml:id="column_vector_multiplication">
-        \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_m \end{array}\right] = a_1 \left[\begin{array}{c} \,  \\ \text{C}_1 \\ \, \end{array}\right] + a_2 \left[\begin{array}{c} \,  \\ \text{C}_2 \\ \, \end{array}\right] + \cdots + a_m \left[\begin{array}{c} \,  \\ \text{C}_m \\ \, \end{array}\right]
+        \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] \amp \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] \amp \ldots \amp \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_m \end{array}\right] = a_1 \left[\begin{array}{c} \,  \\ \text{C}_1 \\ \, \end{array}\right] + a_2 \left[\begin{array}{c} \,  \\ \text{C}_2 \\ \, \end{array}\right] + \cdots + a_m \left[\begin{array}{c} \,  \\ \text{C}_m \\ \, \end{array}\right]
       </men>.
     </p>
 
@@ -287,12 +278,12 @@
       </statement>
       <solution>
         <p>
-        We check the <m>i^\text{th}</m> entry of the LHS of <xref ref="column_vector_multiplication"/> using just the definition of matrix multiplation.
-        <me>
-(\text{LHS})_i = (\text C_1)_ia_1 + \ldots + (\text C_n)_ia_n = (\text{RHS})_i
-      </me>
-      and we're done!
- </p>
+          We check the <m>i^\text{th}</m> entry of the left hand-side of <xref ref="column_vector_multiplication"/> using just the definition of matrix multiplation.
+          <me>
+            (\text{LHS})_i = (\text C_1)_ia_1 + \ldots + (\text C_n)_ia_n = (\text{RHS})_i
+          </me>
+          and we're done!
+        </p>
       </solution>
     </exercise>
 
@@ -306,34 +297,34 @@
         <p>
           Suppose that <m>\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n\right\}</m> and
           <m>\basis{C} = \left\{ \ve{c}_1, \ldots, \ve{c}_n \right\}</m> are bases for a vector space <m>V</m>,
-          and let <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> be the change-of-basis matrix from <m>\basis{B}</m> to <m>\basis{C}</m>.
-          Then for all vectors <m>\ve{v}</m> in <m>V</m>,
+          and let <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> be the
+          change-of-basis matrix from <m>\basis{B}</m> to <m>\basis{C}</m>.
+          Then for all vectors <m>\ve{v}</m> in <m>V</m> we have
           <men xml:id="change-of-basis-in-action">
-            [\ve{v}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} 
+            [\ve{v}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B}
           </men>.
         </p>
       </statement>
+      <proof>
+        <p>
+          Let <m>\ve{v} \in V</m>.
+          Expand it in the basis <m>\basis{B}</m>:
+          <me>
+            \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \text{i.e. }  [\ve{v}]_\basis{B} = \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}
+          </me>.
+        </p>
+
+        <p>
+          Then,
+          <md>
+            <mrow>[\ve{v}]_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}</mrow>
+            <mrow>\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  (<xref ref="lin_of_coord_vectors">Lemma</xref>)</mrow>
+            <mrow>\amp =   \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right] \amp \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right] \amp \ldots \amp \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right] \amp \amp <xref ref = "column_vector_multiplication"/></mrow>
+            <mrow>\amp =    \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
+          </md>.
+        </p>
+      </proof>
     </theorem>
-
-    <proof>
-      <p>
-        Let <m>\ve{v} \in V</m>.
-        Expand it in the basis <m>\basis{B}</m>:
-        <me>
-          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right]
-        </me>.
-      </p>
-
-      <p>
-        Then,
-        <md>
-          <mrow>[\ve{v}]_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}</mrow>
-          <mrow>\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  (<xref ref="lin_of_coord_vectors">Lemma</xref>)</mrow>)
-          <mrow>\amp =   \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right] \amp \amp <xref ref = "column_vector_multiplication"/></mrow>
-          <mrow>\amp =    \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
-        </md>.
-      </p>
-    </proof>
 
     <example>
       <statement>
@@ -341,7 +332,7 @@
           In our running example, the theorem says that for <em>any</em>
           vector <m>\ve{v} \in \mathbb{R}^2</m>,
           <me>
-            [\ve{v}]_\basis{C} = \begin{bmatrix} 1 &amp;  2 \\ 3 &amp;  3  \end{bmatrix} [\ve{v}]_\basis{B}  .
+            [\ve{v}]_\basis{C} = \begin{bmatrix} 1 \amp  2 \\ 3 \amp  3  \end{bmatrix} [\ve{v}]_\basis{B}  .
           </me>
         </p>
 
@@ -349,14 +340,14 @@
           In particular, this must hold for our vector <m>\ve{w}</m>,
           whose coordinate vector in the basis <m>\ve{B}</m> was:
           <me>
-            [\ve{w}]_\basis{B} = \left[\begin{array}{c} -3 \\ 2 \end{array}\right]
+            [\ve{w}]_\basis{B} = \begin{bmatrix} -3 \\ 2 \end{bmatrix}
           </me>.
         </p>
 
         <p>
           So in this case, the theorem is saying that
           <me>
-            [\ve{w}]_{\basis{C}} = \begin{bmatrix} 1 &amp;  2 \\ 3 &amp;  3 \end{bmatrix} \left[\begin{array}{c} -3 \\ 2\end{array}\right] = \left[ \begin{array}{c} 1 \\ -3 \end{array} \right]
+            [\ve{w}]_{\basis{C}} = \begin{bmatrix} 1 \amp  2 \\ 3 \amp  3 \end{bmatrix} \begin{bmatrix} -3 \\ 2\end{bmatrix} = \begin{bmatrix} 1 \\ -3 \end{bmatrix}
           </me>
           which agrees with our previous calculation <xref ref="w_in_basis_C" />!
         </p>
@@ -364,29 +355,29 @@
     </example>
   </subsection>
 
- <exercises>
-<exercise>
+  <exercises>
+    <exercise>
     <statement>
       <p>
         This is a continuation of <xref ref="matrix_basis_exercise">Exercise</xref>.
         Consider the following two bases for <m>\Mat_{2,2}</m>:
         <me>
-\basis B = \left\{ 
-\text{B}_1 =   \begin{bmatrix} 1 &amp;  0 \\ 0 &amp;  1 \end{bmatrix}, \,
-\text{B}_2 =   \begin{bmatrix} 1 &amp;  0\\ 0 &amp;  -1 \end{bmatrix}, \, 
-\text{B}_3 =   \begin{bmatrix} 1 &amp;  1 \\ 1 &amp;  1 \end{bmatrix}, \,
-\text{B}_4 =   \begin{bmatrix} 0 &amp;  1 \\ -1 &amp; 0 \end{bmatrix}               
-\right\}
-      </me>
+          \basis B = \left\{
+          \text{B}_1 =   \begin{bmatrix} 1 \amp  0 \\ 0 \amp  1 \end{bmatrix}, \,
+          \text{B}_2 =   \begin{bmatrix} 1 \amp  0\\ 0 \amp  -1 \end{bmatrix}, \,
+          \text{B}_3 =   \begin{bmatrix} 1 \amp  1 \\ 1 \amp  1 \end{bmatrix}, \,
+          \text{B}_4 =   \begin{bmatrix} 0 \amp  1 \\ -1 \amp 0 \end{bmatrix}
+          \right\}
+        </me>
 
-      <me>
-\basis C = \left\{ 
-\text{C}_1 =   \begin{bmatrix} 1 &amp;  1 \\ 0 &amp;  0  \end{bmatrix}, \,
-\text{C}_2 =   \begin{bmatrix} 1 &amp;  -1 \\ 0 &amp;  0 \end{bmatrix}, \, 
-\text{C}_3 =   \begin{bmatrix} 0 &amp;  0 \\ 1 &amp;  1 \end{bmatrix}, \,
-\text{C}_4 =   \begin{bmatrix} 0 &amp;  0 \\ 1 &amp; -1 \end{bmatrix}               
-\right\}
-      </me>
+        <me>
+          \basis C = \left\{
+          \text{C}_1 =   \begin{bmatrix} 1 \amp  1 \\ 0 \amp  0  \end{bmatrix}, \,
+          \text{C}_2 =   \begin{bmatrix} 1 \amp  -1 \\ 0 \amp  0 \end{bmatrix}, \,
+          \text{C}_3 =   \begin{bmatrix} 0 \amp  0 \\ 1 \amp  1 \end{bmatrix}, \,
+          \text{C}_4 =   \begin{bmatrix} 0 \amp  0 \\ 1 \amp -1 \end{bmatrix}
+          \right\}
+        </me>
 
         <dl>
           <li>
@@ -402,7 +393,7 @@
             <p>
               Determine <m>[\mat{A}]_\basis{B}</m> and <m>[\mat{A}]_\basis{C}</m> where
               <me>
-                A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
+                A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}
               </me>.
             </p>
           </li>
@@ -410,7 +401,8 @@
           <li>
             <title>(c)</title>
             <p>
-              Check that <m>[\mat{A}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{A}]_\basis{B}</m> and that <m>[\mat{A}]_\basis{B} = \mat{P}_{\basis{B} \leftarrow \basis{C}} [\mat{A}]_\basis{C}</m>.
+              Check that <m>[\mat{A}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{A}]_\basis{B}</m>
+              and that <m>[\mat{A}]_\basis{B} = \mat{P}_{\basis{B} \leftarrow \basis{C}} [\mat{A}]_\basis{C}</m>.
             </p>
           </li>
         </dl>
@@ -428,74 +420,77 @@
         </me>
         of <m>\Trig_2</m> to the basis
         <me>
-          \basis{B} = \left\{ 1, \cos x, \sin x, \cos^2 x, \sin^2 x \right\} \, 
+          \basis{B} = \left\{ 1, \cos x, \sin x, \cos^2 x, \sin x\cos x \right\} \,
         </me>.
       </p>
     </statement>
   </exercise>
 
   <exercise>
-    <statement><p><xref ref="w_in_b_basis_exc"/> displays a basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> for <m>\mathbb{R}^2</m>, a background of integral linear combinations of <m>\ve{b}_1</m> and <m>\ve{b}_2</m>, and a certain vector <m>\ve{w} \in \mathbb{R}^2</m>. Similarly, <xref ref="w_in_c_basis_exc"/> displays another basis <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose</m> for <m>\mathbb{R}^2</m>, a background of integral linear combinations of <m>\ve{c}_1</m> and <m>\ve{c}_2</m>, and the same vector <m>\ve{w} \in \mathbb{R}^2</m>. </p>
-    <sidebyside>
-      <figure xml:id="w_in_b_basis_exc">
-      <caption>The vector <m>\ve{w}</m> against a background of integral linear combinations of the basis vectors from <m>\basis{B}</m>. </caption>
-      <image>
+    <statement>
+      <p>
+        <xref ref="w_in_b_basis_exc"/> displays a basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> for <m>\mathbb{R}^2</m>, a background of integral linear combinations of <m>\ve{b}_1</m> and <m>\ve{b}_2</m>, and a certain vector <m>\ve{w} \in \mathbb{R}^2</m>. Similarly, <xref ref="w_in_c_basis_exc"/> displays another basis <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose</m> for <m>\mathbb{R}^2</m>, a background of integral linear combinations of <m>\ve{c}_1</m> and <m>\ve{c}_2</m>, and the same vector <m>\ve{w} \in \mathbb{R}^2</m>.
+      </p>
+      <sidebyside>
+        <figure xml:id="w_in_b_basis_exc">
+          <caption>
+            The vector <m>\ve{w}</m> against a background of integral linear combinations of the basis vectors from <m>\basis{B}</m>.
+          </caption>
+          <image>
+            <latex-image>
+              <![CDATA[\begin{tikzpicture}[scale=0.5]
+              \draw[primaryColor, dotted] (-3, -9) -- (9, -3);
+              \draw[primaryColor, dotted] (-4, -7) -- (8, -1);
+              \draw[primaryColor, dotted] (-5, -5) -- (7, 1);
+              \draw[primaryColor, dotted] (-6, -3) -- (6, 3);
+              \draw[primaryColor, dotted] (-7, -1) -- (5, 5);
+              \draw[primaryColor, dotted] (-8, 1) -- (4, 7);
+              \draw[primaryColor, dotted] (-9, 3) -- (3, 9);
 
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5]
-  \draw[red, dotted] (-3, -9) -- (9, -3);
-  \draw[red, dotted] (-4, -7) -- (8, -1);  
-  \draw[red, dotted] (-5, -5) -- (7, 1);
-  \draw[red, dotted] (-6, -3) -- (6, 3);
-  \draw[red, dotted] (-7, -1) -- (5, 5);
-  \draw[red, dotted] (-8, 1) -- (4, 7);
-  \draw[red, dotted] (-9, 3) -- (3, 9);
+              \draw[primaryColor, dotted] (-3, -9) -- (-9, 3);
+              \draw[primaryColor, dotted] (-1, -8) -- (-7, 4);
+              \draw[primaryColor, dotted] (1, -7) -- (-5, 5);
+              \draw[primaryColor, dotted] (3, -6) -- (-3, 6);
+              \draw[primaryColor, dotted] (5, -5) -- (-1, 7);
+              \draw[primaryColor, dotted] (7, -4) -- (1, 8);
+              \draw[primaryColor, dotted] (9, -3) -- (3, 9);
 
-  \draw[red, dotted] (-3, -9) -- (-9, 3);
-  \draw[red, dotted] (-1, -8) -- (-7, 4);
-  \draw[red, dotted] (1, -7) -- (-5, 5);
-  \draw[red, dotted] (3, -6) -- (-3, 6);
-  \draw[red, dotted] (5, -5) -- (-1, 7);
-  \draw[red, dotted] (7, -4) -- (1, 8);
-  \draw[red, dotted] (9, -3) -- (3, 9);
+              \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1);
+              \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (-1,2);
+              \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (3,-1);\end{tikzpicture}]]>
+            </latex-image>
+          </image>
+        </figure>
 
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (-1,2);
-  \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (3,-1);\end{tikzpicture}]]>
-</latex-image>
-      </image>
-    </figure>
+        <figure xml:id="w_in_c_basis_exc">
+          <caption>The vector <m>\ve{w}</m> against a background of integral linear combinations of the basis vectors from <m>\basis{C}</m>. </caption>
+          <image>
+            <latex-image>
+              <![CDATA[\begin{tikzpicture}[scale=0.5]
+              \draw[secondaryColor, dotted] (0, -6) -- (6, 0);
+              \draw[secondaryColor, dotted] (-1, -5) -- (5, 1);
+              \draw[secondaryColor, dotted] (-2, -4) -- (4, 2);
+              \draw[secondaryColor, dotted] (-3, -3) -- (3, 3);
+              \draw[secondaryColor, dotted] (-4, -2) -- (2, 4);
+              \draw[secondaryColor, dotted] (-5, -1) -- (1, 5);
+              \draw[secondaryColor, dotted] (-6, 0) -- (0, 6);
 
-  <figure xml:id="w_in_c_basis_exc">
-    <caption>The vector <m>\ve{w}</m> against a background of integral linear combinations of the basis vectors from <m>\basis{C}</m>. </caption>
-      <image>
+              \draw[secondaryColor, dotted] (0, -6) -- (-6, 0);
+              \draw[secondaryColor, dotted] (1, -5) -- (-5, 1);
+              \draw[secondaryColor, dotted] (2, -4) -- (-4, 2);
+              \draw[secondaryColor, dotted] (3, -3) -- (-3, 3);
+              \draw[secondaryColor, dotted] (4, -2) -- (-2, 4);
+              \draw[secondaryColor, dotted] (5, -1) -- (-1, 5);
+              \draw[secondaryColor, dotted] (6, 0) -- (0, 6);
 
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5]
-  \draw[blue, dotted] (0, -6) -- (6, 0);
-  \draw[blue, dotted] (-1, -5) -- (5, 1);
-  \draw[blue, dotted] (-2, -4) -- (4, 2);
-  \draw[blue, dotted] (-3, -3) -- (3, 3);
-  \draw[blue, dotted] (-4, -2) -- (2, 4);
-  \draw[blue, dotted] (-5, -1) -- (1, 5);
-  \draw[blue, dotted] (-6, 0) -- (0, 6);
+              \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (1,1);
+              \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (-1,1);
+              \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (3,-1);\end{tikzpicture}]]>
+            </latex-image>
+          </image>
+        </figure>
+      </sidebyside>
 
-  \draw[blue, dotted] (0, -6) -- (-6, 0);
-  \draw[blue, dotted] (1, -5) -- (-5, 1);
-  \draw[blue, dotted] (2, -4) -- (-4, 2);
-  \draw[blue, dotted] (3, -3) -- (-3, 3);
-  \draw[blue, dotted] (4, -2) -- (-2, 4);
-  \draw[blue, dotted] (5, -1) -- (-1, 5);
-  \draw[blue, dotted] (6, 0) -- (0, 6);
-
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (1,1); 
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (-1,1);
-  \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (3,-1);\end{tikzpicture}]]>
-</latex-image>
-      </image>
-
-    </figure>
-  </sidebyside>
     <ol>
       <li xml:id="ch-basis-exercise2">
         <p> Determine <m>[\ve{w}]_\basis{B}</m>, directly from <xref ref="w_in_b_basis_exc"/>. </p>
@@ -503,64 +498,67 @@
       <li xml:id="ch-basis-exercise3">
         <p> Determine <m>[\ve{w}]_\basis{C}</m>, directly from <xref ref="w_in_c_basis_exc"/>. </p>
       </li>
-      <li xml:id="ch-basis-exercise1"> <p>The following figure displays the <m>\basis{B}</m> basis against a background of integral linear combinations of the <m>\basis{C}</m> basis:
+      <li xml:id="ch-basis-exercise1"> <p>The following figure displays the basis <m>\basis{B}</m>  against a background of integral linear combinations of the basis <m>\basis{C}</m>:</p>
 
-    <sidebyside>
-    <image width="60%">
+    <figure>
+      <caption></caption>
+        <image width="60%">
+          <latex-image>
+            <![CDATA[\begin{tikzpicture}[scale=0.5]
+            \draw[secondaryColor, dotted] (0, -6) -- (6, 0);
+            \draw[secondaryColor, dotted] (-1, -5) -- (5, 1);
+            \draw[secondaryColor, dotted] (-2, -4) -- (4, 2);
+            \draw[secondaryColor, dotted] (-3, -3) -- (3, 3);
+            \draw[secondaryColor, dotted] (-4, -2) -- (2, 4);
+            \draw[secondaryColor, dotted] (-5, -1) -- (1, 5);
+            \draw[secondaryColor, dotted] (-6, 0) -- (0, 6);
 
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5]
+            \draw[secondaryColor, dotted] (0, -6) -- (-6, 0);
+            \draw[secondaryColor, dotted] (1, -5) -- (-5, 1);
+            \draw[secondaryColor, dotted] (2, -4) -- (-4, 2);
+            \draw[secondaryColor, dotted] (3, -3) -- (-3, 3);
+            \draw[secondaryColor, dotted] (4, -2) -- (-2, 4);
+            \draw[secondaryColor, dotted] (5, -1) -- (-1, 5);
+            \draw[secondaryColor, dotted] (6, 0) -- (0, 6);
 
-  \draw[blue, dotted] (0, -6) -- (6, 0);
-  \draw[blue, dotted] (-1, -5) -- (5, 1);
-  \draw[blue, dotted] (-2, -4) -- (4, 2);
-  \draw[blue, dotted] (-3, -3) -- (3, 3);
-  \draw[blue, dotted] (-4, -2) -- (2, 4);
-  \draw[blue, dotted] (-5, -1) -- (1, 5);
-  \draw[blue, dotted] (-6, 0) -- (0, 6);
-
-  \draw[blue, dotted] (0, -6) -- (-6, 0);
-  \draw[blue, dotted] (1, -5) -- (-5, 1);
-  \draw[blue, dotted] (2, -4) -- (-4, 2);
-  \draw[blue, dotted] (3, -3) -- (-3, 3);
-  \draw[blue, dotted] (4, -2) -- (-2, 4);
-  \draw[blue, dotted] (5, -1) -- (-1, 5);
-  \draw[blue, dotted] (6, 0) -- (0, 6);
-
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (1,1); 
-  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (-1,1);
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
-  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (-1,2);\end{tikzpicture}]]>
-</latex-image>
-    </image>
-  </sidebyside>
-        Determine the change-of-basis matrix <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m>. (You may assume that all coefficients are either integers and half-integers.)</p>
+            \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (1,1);
+            \draw[very thick, secondaryColor, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (-1,1);
+            \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1);
+            \draw[very thick, primaryColor, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (-1,2);\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+      </figure>
+        <p>
+          Determine the change-of-basis matrix <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m>. (You may assume that all coefficients are either integers and half-integers (like <m>3/2</m>).)
+        </p>
       </li>
-      <li> Multiply the matrix you computed in <xref ref="ch-basis-exercise1" text="title">(c)</xref> with the column vector you computed in <xref ref="ch-basis-exercise2" text="title">(a)</xref>. That is, compute the product <m>\mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{w}]_{\basis{B}}</m>. Is your answer the same as what you obtained in <xref ref="ch-basis-exercise3" text="title">(b)</xref>?
-    </li>
+      <li> <p>
+        Multiply the matrix you computed in <xref ref="ch-basis-exercise1" >(c)</xref> with the column vector you computed in <xref ref="ch-basis-exercise2" >(a)</xref>. That is, compute the product <m>\mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{w}]_{\basis{B}}</m>. Is your answer the same as what you obtained in <xref ref="ch-basis-exercise3" >(b)</xref>?
+      </p></li>
     </ol>
     </statement>
   </exercise>
 
 <exercise>
   <statement>
-    Consider the following three bases for <m>\mathbb R^3</m>:
-    <md>
-    <mrow>  \mathcal A = \bopen (1,0,0), (0,1,0), (0,0,1) \bclose </mrow>
-      <mrow> \mathcal B = \bopen (2,1,1) , (1,1,1), (0,2,1) \bclose </mrow>
-     <mrow> \mathcal C= \bopen (1,2,3),(0,1,0),(1,0,1) \bclose</mrow>.
-    </md>
-    Compute <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}, \mat{P}_{\basis{B} \leftarrow \basis{A}}, \mat{P}_{\basis{C} \leftarrow \basis{A}}</m> and verify the equation
-    <me>
-\mat{P}_{\basis{C} \leftarrow \basis{B}}  \mat{P}_{\basis{B} \leftarrow \basis{A}} =  \mat{P}_{\basis{C} \leftarrow \basis{A}}.
-  </me>
+    <p>
+      Consider the following three bases for <m>\mathbb R^3</m>:
+      <md>
+        <mrow>  \mathcal A = \bopen (1,0,0), (0,1,0), (0,0,1) \bclose </mrow>
+        <mrow> \mathcal B = \bopen (2,1,1) , (1,1,1), (0,2,1) \bclose </mrow>
+        <mrow> \mathcal C= \bopen (1,2,3),(0,1,0),(1,0,1) \bclose</mrow>
+      </md>.
+      Compute <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}, \mat{P}_{\basis{B} \leftarrow \basis{A}}, \mat{P}_{\basis{C} \leftarrow \basis{A}}</m> and verify the equation
+      <me>
+        \mat{P}_{\basis{C} \leftarrow \basis{B}}  \mat{P}_{\basis{B} \leftarrow \basis{A}} =  \mat{P}_{\basis{C} \leftarrow \basis{A}}.
+      </me>
+    </p>
   </statement>
 </exercise>
 
 
  </exercises>
 
- <!-- <solutions divisional="solution answer" /> -->
 
 </section>
 

@@ -1,13 +1,12 @@
 
 
 <section xml:id="ACh4Sec1DefsAndExamples">
-  <title>Definisie en Voorbeelde</title>
+  <title>Eiewaardes</title>
   <definition>
     <statement>
       <p>
-        Laat <m>T : V \rightarrow V</m> 'n line&#xea;re bewerking op
-        'n vektorruimte <m>V</m> wees.
-        Ons s&#xea; dat <m>\lambda \in \mathbb{R}</m> is 'n
+        Laat <m>T : V \rightarrow V</m> 'n lineêre operator op 'n vektorruimte <m>V</m> wees.
+        Ons sê dat <m>\lambda \in \mathbb{R}</m> is 'n
         <term>eiewaarde van <m>T</m></term>
         as daar 'n nie-nul vektor <m>\ve{v} \in V</m>
         bestaan, sodat <m>T(\ve{v}) = \lambda \ve{v}</m>.
@@ -18,74 +17,62 @@
   <proposition xml:id="prop_eigenvalue">
     <statement>
       <p>
-        Veronderstel <m>T : V \rightarrow
-        V</m> is 'n line&#xea;re afbeelding,
+        Veronderstel <m>T : V \rightarrow V</m> is 'n lineêre afbeelding,
         en <m>V</m> is eindig-dimensioneel.
-        Dan is
-        die volgende ekwivalent:
+        Dan is die volgende ekwivalent:
 
-        <ul>
+        <ol>
           <li>
-            <title>1.</title>
             <p>
               <m>\lambda</m> is 'n eiewaarde van <m>T</m>.
             </p>
           </li>
 
           <li>
-            <title>2.</title>
             <p>
-              <m>T - \lambda \id_V</m> is nie injektief nie.
+              <m>\lambda \id_V - T</m> is nie injektief nie.
             </p>
           </li>
 
           <li>
-            <title>3.</title>
             <p>
-              <m>T - \lambda \id_V</m> is nie surjektief nie.
+              <m>\lambda \id_V - T</m> is nie surjektief nie.
             </p>
           </li>
 
           <li>
-            <title>4.</title>
             <p>
-              <m>T - \lambda \id_V</m> is nie inverteerbaar nie.
+              <m>\lambda \id_V - T</m> is nie inverteerbaar nie.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
   </proposition>
 
-  <assemblage>
+  <insight>
     <p>
-      Ek hoop jy verstaan die notasie hier.
-      As <m>S, T : V
-      \rightarrow W</m> line&#xea;re afbeeldings is,
-      kan ons hulle <em>saamtel</em>
-      om 'n nuwe line&#xea;re afbeelding
+      Kom ons neem 'n oomblik om die notasie hier te analiseer.
+      As <m>S, T : V \rightarrow W</m> lineêre afbeeldings is,
+      kan ons hulle <em>saamtel</em> om 'n nuwe lineêre afbeelding
       <me>
         S+T : V \rightarrow W
       </me>
       te verkry wat gedefinieer word as <m>(S+T)(\ve{v}) := S(\ve{v}) + T(\ve{v})</m>.
-      So as ek skryf <sq><m>T - \lambda \id_V</m></sq>,
-      verwys ek na die line&#xea;re
-      afbeelding <m>V \rightarrow V</m> gedefineer deur
+      So as ek skryf <q><m>T - \lambda \id_V</m></q>, verwys ek na die lineêre afbeelding <m>V \rightarrow V</m> gedefineer deur
       <me>
-        (T - \lambda \id_V) (\ve{v}) := T(\ve{v}) - \lambda \id_V
-        (\ve{v})
+        (\lambda \id_V - T) (\ve{v}) := \lambda \id_V(\ve{v}) - T (\ve{v}) = \lambda \ve{v} - T(\ve{v})
       </me>.
     </p>
-  </assemblage>
+  </insight>
 
   <proof>
+    <title> Bewys van <xref ref="prop_eigenvalue" /></title>
     <p>
       (1) <m>\Rightarrow</m> (2).
-      Veronderstel <m>\lambda</m> is 'n eiewaarde
-      van <m>T</m>.
+      Veronderstel <m>\lambda</m> is 'n eiewaarde van <m>T</m>.
       <md>
-        <mrow>\amp \therefore \mbox{Daar bestaan 'n nie-nul \(\ve{v} \in V\), sodat
-        \(T(\ve{v}) = \lambda \ve{v}\).}</mrow>
+        <mrow>\amp \therefore \text{Daar bestaan 'n nie-nul } \ve{v} \in V,\text{ sodat } T(\ve{v}) = \lambda \ve{v}.</mrow>
         <mrow>\amp \therefore T(\ve{v}) - \lambda \ve{v} = \ve{0}</mrow>
         <mrow>\amp  \therefore (T - \lambda \id_V)(\ve{v}) = \ve{0}</mrow>
         <mrow>\amp  \therefore \ve{v} \in \Ker(T - \lambda \id_V)</mrow>
@@ -94,24 +81,19 @@
 
     <p>
       Maar <m>\ve{v}</m> is nie-nul.
-      So ons het 'n nie-nul vektor in die kern van
-      <m>T - \lambda \id_V</m>, so
+      So ons het 'n nie-nul vektor in die kern van <m>T - \lambda \id_V</m>, so
       <m>T - \lambda \id_V</m> is nie injektief nie,
       volgens <xref ref="injective-kernel-lemma">Lemma</xref>.
     </p>
 
     <p>
       (2) <m>\Rightarrow</m> (1).
-      Veronderstel <m>T - \lambda \id_V</m> is nie
-      injektief nie.
+      Veronderstel <m>T - \lambda \id_V</m> is nie injektief nie.
       <md>
-        <mrow>\amp  \therefore \Ker(T - \lambda \id_V) \neq \{\ve{0} \} \amp \amp 
-        \mbox{(deur <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
-        <mrow>\amp  \therefore \mbox{daar bestaan 'n nie-nul \(\ve{v} \in V\), sodat
-        }</mrow>
+        <mrow>\amp  \therefore \Ker(T - \lambda \id_V) \neq \{\ve{0} \} \amp \amp (\text{deur }<xref ref="injective-kernel-lemma"></xref>)</mrow>
+        <mrow>\amp  \therefore \text{daar bestaan 'n nie-nul } (\ve{v} \in V, \text{ sodat }</mrow>
         <mrow>\amp   (T - \lambda \id_V)(\ve{v}) = \ve{0}.</mrow>
-        <mrow>\amp  \mbox{Dit is, \(T(\ve{v}) = \lambda \ve{v}\), so \(\lambda\) is 'n
-        eiewaarde van \(T\).}</mrow>
+        <mrow>\amp  \text{Dit is, } T(\ve{v}) = \lambda \ve{v},\text{ so }\lambda\text{ is 'n eiewaarde van } T.</mrow>
       </md>
     </p>
 
@@ -122,38 +104,33 @@
   </proof>
 
   <p>
-    Daar is 'n eenvoudige toets vir wanneer 'n
+    Daar is 'n eenvoudige toets om te sien wanneer 'n
     <em>matriks</em> <m>A</m> inverteerbaar
-    is: bereken die determinant <m>\det(A)</m>.
-    As <m>\det(A) = 0</m>, Dan is die
+    is <mdash/> bereken die determinant <m>\det(A)</m>.
+    As <m>\det(A) = 0</m>, dan is die
     matriks <em>nie</em> inverteerbaar <em>nie</em>.
-    As <m>\det(A) \neq 0</m>, dan is
-    die matriks inverteerbaar.
+    As <m>\det(A) \neq 0</m>, dan is die matriks inverteerbaar.
   </p>
 
-  <assemblage>
+  <historical>
     <p>
-      Dit is inderwaarheid waar die woord <sq>determinant</sq>
-      vandaan kom!. Dit <em>bepaal/<sq>determineer</sq></em> of die matriks
-      inverteerbaar is, aldan nie.
+      Dit is waar die woord <q>determinant</q>
+      vandaan kom!. Dit <em>bepaal</em> (Eng. <foreign>determine</foreign>) of die matriks inverteerbaar is of nie.
     </p>
-  </assemblage>
+  </historical>
 
   <p>
-    Maar hoe weet ons of 'n <em>line&#xea;re bewerking</em> inverteerbaar is?
+    Maar hoe weet ons of 'n <em>lineêre operator</em> inverteerbaar is?
   </p>
 
   <definition xml:id="determinant_lin_op">
     <statement>
       <p>
-        Die <term>determinant</term> van 'n
-        line&#xea;re bewerking <m>T : V \rightarrow V</m> op 'n eindig-dimensionele
-        vektorruimte <m>V</m> is die determinant van die matriks van <m>T</m> met
-        betrekking tot enige basis <m>\basis{B}</m> van <m>V</m>.
+        Die <term>determinant</term> van 'n  lineêre operator <m>T : V \rightarrow V</m> op 'n eindig-dimensionele
+        vektorruimte <m>V</m> is die determinant van die matriks van <m>T</m> met betrekking tot enige basis <m>\basis{B}</m> van <m>V</m>.
         Dit is,
         <me>
-          \det(T) := \det \left( [T]_{\basis{B} \leftarrow \basis{B}}
-          \right),  \basis{B} \text{ enige basis vir \(V\). }
+          \det(T) := \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right),  \basis{B} \text{ enige basis vir \(V\). }
         </me>
       </p>
     </statement>
@@ -162,43 +139,34 @@
   <lemma>
     <statement>
       <p>
-        Die determinant van 'n line&#xea;re operator, soos hierbo
-        gedefinieer, is goed-gedefinieerd.
+        Die determinant van 'n lineêre operator, soos hierbo gedefinieer, is wel-gedefinieerd.
         Dit is, as <m>\basis{B}</m> en
         <m>\basis{C}</m> basisse vir <m>V</m> is, dan
         <me>
-          \det\left( [T]_{\basis{C} \leftarrow \basis{C}} \right) =
-          \det\left( [T]_{\basis{B} \leftarrow \basis{B}} \right)
+          \det\left( [T]_{\basis{C} \leftarrow \basis{C}} \right) = \det\left( [T]_{\basis{B} \leftarrow \basis{B}} \right)
         </me>.
       </p>
     </statement>
-  </lemma>
-
   <proof>
     <p>
       Ons weet vanaf <xref ref="matrix-in-different-basis">Stelling</xref> dat
       <me>
-        [T]_{\basis{C} \leftarrow \basis{C}} = \mat{P}^{-1} [T]_{\basis{B}
-        \leftarrow \basis{B}} \mat{P}
+        [T]_{\basis{C} \leftarrow \basis{C}} = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} \mat{P}
       </me>
       waar <m>\mat{P} = \mat{P}_{\basis{B} \leftarrow \basis{C}}</m>.
       Daarom,
       <md>
-        <mrow>\det\left( [T]_{\basis{C} \leftarrow \basis{C}} \right) \amp = \det
-        \left( \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} \mat{P}
-        \right)</mrow>
-        <mrow>\amp = \det(\mat{P}^{-1}) \det \left( [T]_{\basis{B} \leftarrow
-        \basis{B}} \right) \det(\mat{P})  \amp \amp  \mbox{(\(\det(\mat{A} \mat{B})
-        = \det(\mat{A}) \det (\mat{B})\))}</mrow>
-        <mrow>\amp = \frac{1}{\det(\mat{P})} \det\left( [T]_{\basis{B} \leftarrow
-        \basis{B}} \right) \det(\mat{P})</mrow>
+        <mrow>\det\left( [T]_{\basis{C} \leftarrow \basis{C}} \right) \amp = \det \left( \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} \mat{P} \right)</mrow>
+        <mrow>\amp = \det(\mat{P}^{-1}) \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})  \amp \amp  (\det(\mat{A} \mat{B}) = \det(\mat{A}) \det (\mat{B}))</mrow>
+        <mrow>\amp = \frac{1}{\det(\mat{P})} \det\left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})</mrow>
         <mrow>\amp = \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
       </md>.
     </p>
   </proof>
+</lemma>
 
   <p>
-    Nou dat ons weet hoe om die determinant van 'n line&#xea;re bewerking te
+    Nou dat ons weet hoe om die determinant van 'n lineêre operator te
     definieer, kan ons die volgende definisie gee.
   </p>
 
@@ -206,7 +174,7 @@
     <statement>
       <p>
         Die <term>karakteristieke polinoom</term> <m>\chi_T</m> van 'n
-        line&#xea;re bewerking <m>T : V \rightarrow V</m> op 'n eindig-dimensionele
+        lineêre operator <m>T : V \rightarrow V</m> op 'n eindig-dimensionele
         vektorruimte <m>V</m> word gedefinieer as
         <me>
           \chi_T (\lambda) := \det(\lambda \id - T)
@@ -215,85 +183,66 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <note>
     <p>
       Die rede dat <m>\chi_T</m> 'n <em>polinoom</em> is
-      (en nie bloot 'n
-      arbitr&#xea;re funksie is nie)
-      spruit uit die formule vir die
-      determinant.
+      (en nie bloot 'n arbitrêre funksie is nie)
+      spruit uit die formule vir die determinant.
       Meer hieroor volg later.
     </p>
-  </assemblage>
+  </note>
 
   <p>
-    Om op te som,
-    sien ons dat <m>\lambda</m> 'n eiewaarde van 'n line&#xea;re
-    bewerking <m>T</m> is as en slegs as <m>\lambda</m> 'n wortel van die karakteristieke
-    polinoom van <m>T</m> is.
-    Kom ons noteer dit formeel as 'n uitbreiding van
-    <xref ref="prop_eigenvalue">Proposisie</xref>.
+    Om op te som, sien ons dat <m>\lambda</m> 'n eiewaarde van 'n lineêre operator <m>T</m> is as en slegs as <m>\lambda</m> 'n wortel van die karakteristieke polinoom van <m>T</m> is.
+    Kom ons noteer dit formeel as 'n uitbreiding van <xref ref="prop_eigenvalue">Proposisie</xref>.
   </p>
 
   <proposition>
     <statement>
       <p>
-        Laat <m>T</m> 'n line&#xea;re bewerking op 'n
-        eindig-dimensionele vektorruimte <m>V</m> wees,
+        Laat <m>T</m> 'n lineêre operator op 'n eindig-dimensionele vektorruimte <m>V</m> wees,
         en <m>\lambda \in \mathbb{R}</m>.
         Dan is die volgende stellings ekwivalent:
 
-        <ul>
+        <ol>
           <li>
-            <title>1.</title>
             <p>
               <m>\lambda</m> is an eiewaarde van <m>T</m>.
             </p>
           </li>
 
           <li>
-            <title>2.</title>
             <p>
               <m>\lambda \id - T</m> is nie inverteerbaar nie.
             </p>
           </li>
 
           <li>
-            <title>3.</title>
             <p>
               <m>\chi_T(\lambda) = 0</m>.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
-      Die enigste ding wat ons moet wys is dat (2)
-      <m>\Leftrightarrow</m> (3).
-      Inderdaad, as <m>\basis{B}</m> 'n basis vir <m>V</m> is,
-      dan
+      Die enigste ding wat ons moet wys is dat (2) <m>\Leftrightarrow</m> (3).
+      Inderdaad, as <m>\basis{B}</m> 'n basis vir <m>V</m> is, dan
       <md>
-        <mrow>\amp \mbox{\(\lambda \id - T\) is nie inverteerbaar nie}</mrow>
-        <mrow>\amp 
-        \Leftrightarrow
-        \mbox{die matriks \([\lambda \id - T]_{\basis{B} \leftarrow
-        \basis{B}}\) is nie inverteerbaar nie}  \amp \amp  \mbox{(<xref ref="map-iso-matrix-iso">Gevolgtrekking</xref>)}</mrow>
-        <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow
-        \basis{B}} \right) = 0 \amp \amp  \mbox{(Eienskap van \(\det\))}</mrow>
-        <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \mbox{(Defn van
-        \(\chi_T(\lambda)\))}</mrow>
+        <mrow>\amp \lambda \id - T \text{ is nie inverteerbaar nie}</mrow>
+        <mrow>\amp \Leftrightarrow \text{die matriks }[\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \text{ is nie inverteerbaar nie}  \amp \amp  (<xref ref="map-iso-matrix-iso"></xref>)</mrow>
+        <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) = 0 \amp \amp  \text{(Eienskap van }\det)</mrow>
+        <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \text{(Defn van } \chi_T(\lambda))</mrow>
       </md>
     </p>
   </proof>
+</proposition>
 
   <example xml:id="poly-example-eigenvalue">
     <statement>
       <p>
-        Vind die eiewaardes van die
-        line&#xea;re bewerking
+        Vind die eiewaardes van die lineêre operator
         <me>
           T : \Poly_2 \rightarrow \Poly_2
         </me>
@@ -305,8 +254,7 @@
     </statement>
     <solution>
       <p>
-        Ons moet eers die matriks van <m>T</m> relatief tot 'n
-        basis vir <m>\Poly_2</m> bereken.
+        Ons moet eers die matriks van <m>T</m> relatief tot 'n basis vir <m>\Poly_2</m> bereken.
         Laat
         <me>
           \basis{B} := \bopen p_0, p_1, p_2 \bclose
@@ -319,52 +267,44 @@
 
       <p>
         Dan
-        <md>
-          <mrow>T(p_0)(x) \amp = p_0 (2x+3) \nonumber</mrow>
-          <mrow>\amp = 1 \nonumber</mrow>
-          <mrow>\therefore T(p_0) \amp = p_0</mrow>
-        </md>
-        <md>
-          <mrow>T(p_1)(x) \amp = p_1 (2x+3) \nonumber</mrow>
-          <mrow>\amp = 2x+3  \nonumber</mrow>
-          <mrow>\therefore T(p_1) \amp = 3p_0 + 2p_1</mrow>
-        </md>
-        <md>
-          <mrow>T(p_2)(x) \amp = p_2 (2x+3) \nonumber</mrow>
-          <mrow>\amp = (2x+3)^2 \nonumber</mrow>
-          <mrow>\amp = 4x^2 + 12x + 9 \nonumber</mrow>
-          <mrow>\therefore T(p_2) \amp = 9p_0 + 12p_1 + 4p_0</mrow>
-        </md>.
+        <mdn>
+          <mrow number="no">T(p_0)(x) \amp = p_0 (2x+3) </mrow>
+          <mrow number="no">\amp = 1 </mrow>
+          <mrow xml:id="poly-example-eigenvalue-Tp0">\therefore T(p_0) \amp = p_0</mrow>
+        </mdn>
+        <mdn>
+          <mrow number="no">T(p_1)(x) \amp = p_1 (2x+3) </mrow>
+          <mrow number="no">\amp = 2x+3  </mrow>
+          <mrow xml:id="poly-example-eigenvalue-Tp1">\therefore T(p_1) \amp = 3p_0 + 2p_1</mrow>
+        </mdn>
+        <mdn>
+          <mrow number="no">T(p_2)(x) \amp = p_2 (2x+3) </mrow>
+          <mrow number="no">\amp = (2x+3)^2 </mrow>
+          <mrow number="no">\amp = 4x^2 + 12x + 9 </mrow>
+          <mrow xml:id="poly-example-eigenvalue-Tp2">\therefore T(p_2) \amp = 9p_0 + 12p_1 + 4p_0</mrow>
+        </mdn>.
       </p>
 
       <p>
         So die matriks van <m>T</m> relatief tot <m>\basis{B}</m> is
-        <md>
-          [T]_{\basis{B} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  3 \amp  9 \\ 0
-          \amp  2 \amp  12 \\ 0 \amp  0 \amp  4}
-        </md>
+        <me>
+          [T]_{\basis{B} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  3 \amp  9 \\ 0 \amp  2 \amp  12 \\ 0 \amp  0 \amp  4}
+        </me>
       </p>
 
       <p>
         So die karakteristieke polinoom van <m>T</m> is
         <md>
-          <mrow>\chi_T (\lambda) \amp = \det(\lambda \id - T) \amp \amp  \mbox{(defn van
-          \(\chi_T\))}</mrow>
-          <mrow>\amp = \det \left([\lambda \id - T]_{\basis{B} \leftarrow
-          \basis{B}} \right) \amp \amp  \mbox{(defn van \(\det\))}</mrow>
-          <mrow>\amp = \det \left( [\lambda \id]_{\basis{B} \leftarrow \basis{B}} -
-          [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
-          <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9</mrow>
-          <mrow>0 \amp  \lambda -
-          2 \amp  -12</mrow>
-          <mrow>0 \amp  0 \amp  4}} \right)</mrow>
+          <mrow>\chi_T (\lambda) \amp = \det(\lambda \id - T) \amp \amp  \text{(defn van }\chi_T)</mrow>
+          <mrow>\amp = \det \left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) \amp \amp  \text{(defn van }\det)</mrow>
+          <mrow>\amp = \det \left( [\lambda \id]_{\basis{B} \leftarrow \basis{B}} - [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
+          <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9\\ 0 \amp  \lambda - 2 \amp  -12\\ 0 \amp  0 \amp  \lambda - 4}} \right)</mrow>
           <mrow>\amp = (\lambda - 1)(\lambda - 2)(\lambda - 4)</mrow>
         </md>.
       </p>
 
       <p>
-        Die eiewaardes van <m>T</m> is die wortels van die karakteristieke
-        polinoom van <m>T</m>.
+        Die eiewaardes van <m>T</m> is die wortels van die karakteristieke polinoom van <m>T</m>.
         So die eiewaardes van <m>T</m> is <m>1</m>, <m>2</m> en <m>4</m>.
       </p>
     </solution>
@@ -373,7 +313,7 @@
   <p>
     As ons van die eiewaardes en eievektore van 'n <m>n\times n</m> <em>matriks</em>
     <m>\mat{A}</m> praat, verwys ons na die eiewaardes en eievektore van die
-    geassosieerde line&#xea;re bewerking
+    geassosieerde lineêre operator
     <md>
       <mrow>T_{\mat{A}} : \Col_n \amp \rightarrow \Col_n</mrow>
       <mrow>\ve{v} \amp  \mapsto \mat{A} \ve{v} </mrow>
@@ -383,17 +323,13 @@
   <p>
     Nou, <m>\Col_n</m> het die standaard basis
     <me>
-      \mat{e}_1 = \cmatrix{1 \\ 0  \\ \vdots \\ 0}, \, 
-      \mat{e}_2 = \cmatrix{0 \\ 1 \\ \vdots \\ 0}, \, 
-      \cdots \, , \, 
-      \mat{e}_n = \cmatrix{0 \\ 0 \\ \vdots \\ 1}
+      \mat{e}_1 = \cmatrix{1 \\ 0  \\ \vdots \\ 0}, \, \mat{e}_2 = \cmatrix{0 \\ 1 \\ \vdots \\ 0}, \, \cdots \, , \, \mat{e}_n = \cmatrix{0 \\ 0 \\ \vdots \\ 1}
     </me>.
   </p>
 
   <p>
     Die matriks van <m>T_{\mat{A}}</m> met betrekking tot hierdie standaardbasis
-    <m>\basis{B} = \bopen \mat{e}_1, \ldots, \mat{e}_n \bclose</m> is bloot
-    <m>\mat{A}</m> self.
+    <m>\basis{B} = \bopen \mat{e}_1, \ldots, \mat{e}_n \bclose</m> is bloot <m>\mat{A}</m> self.
   </p>
 
   <exercise>
@@ -401,46 +337,38 @@
       <p>
         Bevestig dit.
         Met ander woorde, gaan na dat 'n
-        <m>n \times
-        n</m>-matriks <m>\mat{A}</m>,
-        <m>[T_{\mat{A}}]_{\basis{B} \leftarrow \basis{B}} =
-        \mat{A}</m>.
+        <m>n \times n</m>-matriks <m>\mat{A}</m>,
+        <m>[T_{\mat{A}}]_{\basis{B} \leftarrow \basis{B}} = \mat{A}</m>.
       </p>
     </statement>
   </exercise>
 
   <p>
-    So die eiewaardes van 'n matriks <m>\mat{A}</m> is maar net die oplossings van
-    die vergelyking <m>\det (\lambda I - \mat{A}) = 0</m>.
+    So die eiewaardes van 'n matriks <m>\mat{A}</m> is maar net die oplossings van die vergelyking <m>\det (\lambda I - \mat{A}) = 0</m>.
   </p>
 
   <p>
     Die volgende voorbeelde kom van die aanlyn Desmos-werkblad van eiewaardes
     by <c>student.desmos.com</c>,
     klaskode <c>RGJ93S</c>.
-    In die
-    Desmos-werkblad kry jy die eiewaardes grafies, deur inspeksie.
-    Werk deur
-    daardie werkblad eerste, en doen dan eers daarna die volgende
-    algebra&#xef;ese metode soos hieronder aangetoon.
+    In die Desmos-werkblad kry jy die eiewaardes grafies, deur inspeksie.
+    Werk eers deur daardie werkblad, en doen daarna die volgende
+    algebraïese metode soos hieronder aangetoon.
   </p>
 
   <example xml:id="desmos_matrix">
     <statement>
       <p>
-        Vind die eiewaardes van <m>A = \cmatrix{2 \amp 1 \\ \frac{1}{2}
-        \amp \frac{5}{2}}</m>.
+        Vind die eiewaardes van <m>A = \cmatrix{2 \amp 1 \\ \frac{1}{2} \amp \frac{5}{2}}</m>.
       </p>
     </statement>
     <solution>
       <p>
         Die karakteristieke polinoom van <m>A</m> is
         <md>
-          <mrow>\chi_A(\lambda) \amp = \det \left({\cmatrix{ \lambda - 2 \amp  -1</mrow>
-          <mrow>-\frac{1}{2} \amp  \lambda - \frac{5}{2} }} \right)</mrow>
+          <mrow>\chi_A(\lambda) \amp = \det \left({\cmatrix{ \lambda - 2 \amp  -1\\ -\frac{1}{2} \amp  \lambda - \frac{5}{2} }} \right)</mrow>
           <mrow>\amp = (\lambda - 2)(\lambda - \frac{5}{2}) - \frac{1}{2}</mrow>
-          <mrow>\amp = \Leftrightarrow \lambda^2 - \frac{9}{2} \lambda +
-          \frac{9}{2}</mrow>
+          <mrow>\amp = \Leftrightarrow \lambda^2 - \frac{9}{2} \lambda + \frac{9}{2}</mrow>
         </md>.
       </p>
 
@@ -448,18 +376,16 @@
         Die eiewaardes is die wortels van die karakteristieke polinoom.
         So:
         <md>
-          <mrow>\chi_A (\lambda) = 0 \amp \Leftrightarrow (\lambda -
-          \frac{3}{2})(\lambda - 3) = 0</mrow>
-          <mrow>\amp  \Leftrightarrow \lambda = \frac{3}{2} \text{ of }  \lambda =
-          3</mrow>
+          <mrow>\chi_A (\lambda) = 0 \amp \Leftrightarrow (\lambda - \frac{3}{2})(\lambda - 3) = 0</mrow>
+          <mrow>\amp  \Leftrightarrow \lambda = \frac{3}{2} \text{ of }  \lambda = 3</mrow>
         </md>.
       </p>
 
       <p>
-        So die eiewaardes van <m>A</m> is <m>\lambda = \frac{3}{2}</m> en <m>\lambda =
-        3</m>.
-        Dit kan visueel in Desmos nagegaan word: vir sekere vektore
-        <m>\ve{v}</m>,
+        So die eiewaardes van <m>A</m> is
+        <m>\lambda = \frac{3}{2}</m> en <m>\lambda = 3</m>.
+        Dit kan visueel in Desmos nagegaan word:
+        vir sekere vektore <m>\ve{v}</m>,
         <m>A \ve{v} = \frac{3}{2} \ve{v}</m> en vir sekere ander
         vektore <m>\ve{v}</m>, <m>A \ve{v} = 3 \ve{v}</m>.
       </p>
@@ -475,10 +401,9 @@
     <solution>
       <p>
         Die karakteristieke polinoom van <m>A</m> is
-        <md>
-          \det (\lambda I - A) = \det \cmatrix{ \lambda - 1 \amp  3 \\
-          \lambda + 2 \amp  2} = \lambda^2 - 3\lambda + 8.
-        </md>
+        <me>
+          \det (\lambda I - A) = \det \cmatrix{ \lambda - 1 \amp  3 \\ \lambda + 2 \amp  2} = \lambda^2 - 3\lambda + 8.
+        </me>
       </p>
 
       <p>
@@ -486,15 +411,17 @@
         <me>
           \lambda^2 - 3\lambda + 8 = 0
         </me>
-        wat geen re&#xeb;le wortels het nie.
+        wat geen reële wortels het nie.
         So <m>A</m> het geen eiewaardes nie.
         Dit kan visueel op Desmos gesien word:
         rofweg, <m>A\ve{v}</m> roteer die
         vektor <m>\ve{v}</m> kloksgewys met 'n sekere hoek.
-        So <m>A \ve{v}</m> kan
-        nooit 'n veelvoud van <m>\ve{v}</m> wees nie.
+        So <m>A \ve{v}</m> kan nooit 'n veelvoud van <m>\ve{v}</m> wees nie.
       </p>
     </solution>
   </example>
+
+<!-- <exercises></exercises> -->
+
 </section>
 

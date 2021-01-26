@@ -12,10 +12,9 @@
     <definition xml:id="defn_basis">
       <statement>
         <p>
-          'n Lys vektore <m>\basis{B} = \bopen \ve{e}_1,
-          \ve{e}_2, \ldots, \ve{e}_n \bclose </m> in 'n vektorruimte <m>V</m> word 'n
+          'n Lys vektore <m>\basis{B} = \bopen \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \bclose </m> in 'n vektorruimte <m>V</m> word 'n
           <term>basis</term> van <m>V</m> genoem
-          as dit line&#xea;r onafhanklik is en <m>V</m> span.
+          as dit lineêr onafhanklik is en vir <m>V</m> onderspan.
         </p>
       </statement>
     </definition>
@@ -33,15 +32,12 @@
 
     <proof>
       <p>
-        Dit is 'n gevolg van <xref ref="bumping_off_lemma">Proposisie</xref>
-        (die
-        afstampproposisie).
-        Aangesien die <m>\ve{e}</m>-vectore <m>V</m> line&#xea;r
-        onfafhanklik is en die <m>\ve{f}</m>-vektore <m>V</m> span,
+        Dit is 'n gevolg van <xref ref="Steinitz-exchange-lemma" text="title"></xref>.
+        Aangesien die <m>\ve{e}</m>-vektore <m>V</m> lineêr onafhanklik is en die <m>\ve{f}</m>-vektore vir <m>V</m> onderspan,
         het ons <m>m \leq n</m>.
         Aan die ander kant,
-        omdat die <m>\ve{f}</m>-vektore lin&#xea;r onfahanklik is
-        en die <m>\ve{e}</m>-vektore <m>V</m> span, het ons <m>n \leq m</m>.
+        omdat die <m>\ve{f}</m>-vektore lineêr onfahanklik is
+        en die <m>\ve{e}</m>-vektore <m>V</m> onderspan, het ons <m>n \leq m</m>.
         Daarom is <m>m=n</m>.
       </p>
     </proof>
@@ -49,26 +45,26 @@
     <definition xml:id="dim_vec_space">
       <statement>
         <p>
-          'n Vektorruimte <m>V</m> is <term>eindigdimensioneel</term> as dit
-          'n eindige basis het.
+          'n Vektorruimte <m>V</m> is <term>eindig dimensioneel</term> as dit 'n basis met 'n eindige aantal elemente het.
           In daardie geval is die <term>dimensie</term> van <m>V</m>
           die aantal elemente in 'n basis vir <m>V</m>. 'n Vektorruimte is
-          <term>oneindigdimensioneel</term>
-          as dit nie eindigdimensioneel is nie.
+          <term>oneindig dimensioneel</term>
+          as dit nie eindig dimensioneel is nie.
         </p>
       </statement>
     </definition>
 
-    <assemblage>
+    <remark>
       <p>
-        Let op dat die konsep van die <sq>dimensie van </sq>n vektorruimte' slegs
-        goedgedefinieerd is as gevolg van <xref ref="inv_dim">Stelling</xref>.
+        Let op dat die konsep van die <q>dimensie van </q> 'n vektorruimte slegs wel-gedefinieerd is as gevolg van <xref ref="inv_dim">Stelling</xref>.
       </p>
-    </assemblage>
+    </remark>
 
-      <assemblage xml:id="defn_dim_zero_vec_space">
-      <p>Die geval van die nulvektorruimte <m>Z = \{\ve{0}\}</m> is nie eksplisiet in <xref ref="dim_vec_space"/> gehanteer nie. Ons hanteer dit as 'n spesiale geval. Naamlik, ons <em>defineer</em> die dimensie van die nulvektorruimte <m>Z</m> as <m>0</m>. So, volgens die definisie is <m>Z</m> is eindig-dimensionaal, en sy dimensie is gelyk aan <m>0</m>. </p>
-    </assemblage>
+      <convention xml:id="defn_dim_zero_vec_space">
+        <p>
+          Die geval van die nulvektorruimte <m>Z = \{\ve{0}\}</m> is nie eksplisiet in <xref ref="dim_vec_space"/> gehanteer nie. Ons hanteer dit as 'n spesiale geval. Naamlik, ons <em>defineer</em> die dimensie van die nulvektorruimte <m>Z</m> as <m>0</m>. So, volgens die definisie is <m>Z</m> is eindig-dimensionaal, en sy dimensie is gelyk aan <m>0</m>.
+        </p>
+    </convention>
 </introduction>
 
 <subsection>
@@ -80,24 +76,21 @@
         <p>
           Die lys vektore
           <me>
-            \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots,
-            0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
+            \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots, 0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
           </me>
           is 'n basis vir <m>\mathbb{R}^n</m>.
           Ons het reeds in <xref ref="Rn_spanning_set">Voorbeeld</xref>
-          gesien dat die lys <m>\mathbb{R}^n</m> span.
-          Ons moet
-          seker maak dat die lys line&#xea;r onafhanklik is.
-          So, suppose that
+          gesien dat die lys vir <m>\mathbb{R}^n</m> onderspan.
+          Ons moet seker maak dat die lys lineêr onafanklik is.
+          So, veronderstel dat
           <me>
             a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}
           </me>.
         </p>
 
         <p>
-          Uitbreiding van die linkerkant na komponente volgens die definisie van
-          die standaard basisvektore
-          <m>\ve{e}_i</m> lewer die vergelyking
+          As ons die linkerkant in komponente uitbrei volgens die definisie van
+          die standaard basisvektore <m>\ve{e}_i</m> kry ons die vergelyking
           <me>
             (a_1, 0, 0, \ldots, 0) + (0, a_2, 0, \ldots, 0) + \cdots + (0, 0,
             0, \ldots, a_n) = (0, 0, 0, \ldots, 0)
@@ -109,43 +102,45 @@
           <me>
             (a_1, a_2, a_3, \ldots, a_n) = (0, 0, 0, \ldots, 0)
           </me>
-          wat beteken dat <m>a_1 = a_2 = a_3 = \cdots = a_n = 0</m>, presies
-          wat ons moes bewys.
+          wat beteken dat <m>a_1 = a_2 = a_3 = \cdots = a_n = 0</m>,
+          presies wat ons moes bewys.
           Gevolglik is die lys vektore
-          <m>\ve{e}_1, \ve{e}_2,
-          \ldots, \ve{e}_n</m> line&#xea;r onafhanklik en daarom is dit 'n basis vir
-          <m>\mathbb{R}^n</m>.
+          <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m> lineêr onafhanklik en daarom is dit 'n basis vir <m>\mathbb{R}^n</m>.
           So <m>\mathbb{R}^n</m> het dimensie <m>n</m>.
         </p>
       </statement>
     </example>
 
-<!-- TO DO: Translate into Afrikaans -->
-    <example>
-      <title>A basis for <m>\mathbb{R}^4</m></title>
-      <statement> <p> Check whether the following list of vectors
-        <men>
-       \ve{v}_1 = (1, 0, 2, -3), \, \ve{v}_2 = (1, 3, -1, 2), \, \ve{v}_3 = (0, 1, 2, -1), \ve{v}_4 = (1, 2, 3, 4)
-      </men>
-      is a basis for <m>\mathbb{R}^4</m>. </p></statement>
 
-      <solution> 
+    <example>
+      <title>'n Basis vir <m>\mathbb{R}^4</m></title>
+      <statement>
         <p>
-          First we check if the list of vectors is <xref ref="defn_of_linear_ind" text="title">linearly independent</xref>. Consider the equation
-          <mdn>
-            <mrow> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{0} </mrow>
-            <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (0, 0, 0, 0) </mrow>
-            <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (0,0,0,0) </mrow>
-        </mdn>
-        So the list of vectors is linearly indepedent if and only if the following equations have only the trivial solution <m>a_1 = 0, a_2 = 0, a_3 = 0, a_4 = 0</m>:
+          Stel vas of die volgende lys vektore
+          <men>
+          \ve{v}_1 = (1, 0, 2, -3), \, \ve{v}_2 = (1, 3, -1, 2), \, \ve{v}_3 = (0, 1, 2, -1), \ve{v}_4 = (1, 2, 3, 4)
+          </men>
+          'n basis vir <m>\mathbb{R}^4</m> is.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Ons kyk eers of die lys vektore <xref ref="defn_of_linear_ind" >lineêr onafhanklik</xref> is. Beskou die vergelyking
+          <md>
+            <mrow> \ve{0} \amp = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 </mrow>
+            <mrow> \amp = a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4)  </mrow>
+            <mrow> \amp = (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) </mrow>
+        </md>.
+        Die lys vektore is lineêr onafhanklik as en slegs as die volgende vergelykings slegs die triviale oplossing <m>a_1 = 0, a_2 = 0, a_3 = 0, a_4 = 0</m> het:
         <mdn>
-    <mrow xml:id="R4-example-eqn1"> a_1 - a_2 + a_4 \amp = 0 </mrow>
-    <mrow> 3a_1 + a_3 + 2a_4 \amp = 0 </mrow>
-    <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = 0 </mrow>
-    <mrow xml:id="R4-example-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = 0 </mrow>
+          <mrow xml:id="R4-example-eqn1"> a_1 - a_2 + a_4 \amp = 0 </mrow>
+          <mrow> 3a_1 + a_3 + 2a_4 \amp = 0 </mrow>
+          <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = 0 </mrow>
+          <mrow xml:id="R4-example-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = 0 </mrow>
         </mdn>
-        We can compute the solutions to equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  by hand, or using SageMath.
-        </p> 
+        Ons kan die oplossings vir hierdie vergelykings <xref first="R4-example-eqn1" last="R4-example-eqn4"/> met die hand bereken, of deur SageMath te gebruik.
+        </p>
         <sage>
           <input>
             var('a1, a2, a3, a4')
@@ -156,86 +151,95 @@
                   -3*a1 + 2*a2 - a3 + 4*a4 == 0],
                   [a1, a2, a3, a4])
           </input>
-        </sage>    
-      <p> SageMath outputs:
-      <sidebyside>
-       <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
-      </sidebyside>     
-      So indeed,  equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  have only the trivial solution. Therefore the list of vectors is linearly independent. </p>
+        </sage>
+      <p> SageMath se antwoord is:</p>
 
-      <p> Next, we need to check that the list of vectors spans <m>\mathbb{R}^4</m>. (There is a shorter way of doing this, using <xref ref="lin-ind-implies-basis"/> below, but for now we prove it from first principles.) So, let <m>\ve{w} = (w_1, w_2, w_3, w_4)</m> be an arbitrary vector in <m>\mathbb{R}^4</m>. We need to show that there exists at least one way to express <m>\ve{w}</m> as a linear combination of the vectors <m>\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4</m>. In other words, we need to check if there exists at least one solution to the following equation:
-         <mdn>
-            <mrow xml:id="fund_eqn_span_r4_ex"> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{w} </mrow>
-            <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (w_1, w_2, w_3, w_4) </mrow>
-            <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (w_1, w_2, w_3, w_4) </mrow>
-        </mdn>
-        So the list of vectors spans <m>\mathbb{R}^4</m> if and only if the following equations for <m>a_1, a_2, a_3, a_4</m> always have a solution, no matter what the values of <m>w_1, w_2, w_3, w_4</m> are:
-           <mdn>
-    <mrow xml:id="R4-example-span-eqn1"> a_1 - a_2 + a_4 \amp = w_1 </mrow>
-    <mrow> 3a_1 + a_3 + 2a_4 \amp = w_2 </mrow>
-    <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = w_3 </mrow>
-    <mrow xml:id="R4-example-span-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = w_4 </mrow>
-        </mdn>
-        We can compute the solutions to equations <xref first="R4-example-span-eqn1" last="R4-example-span-eqn4"/>  by hand, or using SageMath:</p>
-        <sage>
-          <input>
-            var('a1, a2, a3, a4, w1, w2, w3, w4')
+      <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
 
-            solve([a1 - a2 + a4 == w1,
-                  3*a1 + a3 + 2*a4 == w2,
-                  2*a1 - a2 + 2*a3 + 3*a4 == w3,
-                  -3*a1 + 2*a2 - a3 + 4*a4 == w4],
-                  [a1, a2, a3, a4])
-          </input>
-        </sage>    
-        <p>Note that we ask SageMath to solve for <c>a1, a2, a3, a4</c>, since <c>w1, w2, w3, w4</c> are regarded as constants in the equation... we are not trying to solve for them, they are fixed, but arbitrary! SageMath outputs:</p>
-        <sidebyside>
-          <p>
-            <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </c>
-          </p>
-        </sidebyside>
-        <p>In other words, there does indeed exist a solution, no matter what <m>(w_1, w_2, w_3, w_4)</m> is. For instance, if <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, then the solution is
-        <me>
-           a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{36}.
+      <p>
+      So inderdaad het die vergelykings <xref first="R4-example-eqn1" last="R4-example-eqn4"/> slegs die triviale oplossing. Dus is die lys vektore lineêr onafhanklik. </p>
+
+      <p> Volgende moet ons kyk of die lys vekore vir <m>\mathbb{R}^4</m> onderspan. (Daar is 'n vinniger manier om dit te doen, deur <xref ref="lin-ind-implies-basis"/> hier onder te gebruik, maar ons gaan dit hier uit eerste beginsels bewys.) Laat dus <m>\ve{w} = (w_1, w_2, w_3, w_4)</m> 'n willekeurige vektor in <m>\mathbb{R}^4</m> wees. Ons moet wys dat daar ten minste een manier bestaan om <m>\ve{w}</m> as 'n lineêre kombinasie van die vektore <m>\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4</m> uit te druk. Met ander woorde, ons moet kyk of daar ten minste een oplossing vir die volgende vergelyking bestaan:
+      <mdn>
+        <mrow xml:id="fund_eqn_span_r4_ex"> \ve{w} \amp = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4   </mrow>
+      </mdn>
+      Ons ontbind die twee kante van die vergelyking as volg:
+      <md>
+        <mrow number="no"> \therefore (w_1, w_2, w_3, w_4) \amp = a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + </mrow>
+        <mrow number="no"> \amp \qquad\quad + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) </mrow>
+        <mrow number="no"> \amp = (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4,  </mrow>
+        <mrow number="no">  \amp \qquad\quad\phantom{+} 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) </mrow>
+      </md>
+      So die lys vektore onderspan vir <m>\mathbb{R}^4</m> as en slegs as die volgende stelsel vergelykings vir <m>a_1, a_2, a_3, a_4</m> altyd 'n oplossing het, maak nie saak wat die waardes van <m>w_1, w_2, w_3, w_4</m> is nie:
+     <mdn>
+       <mrow xml:id="R4-example-span-eqn1"> a_1 - a_2 + a_4 \amp = w_1 </mrow>
+       <mrow> 3a_1 + a_3 + 2a_4 \amp = w_2 </mrow>
+       <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = w_3 </mrow>
+       <mrow xml:id="R4-example-span-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = w_4 </mrow>
+      </mdn>
+      Ons kan die oplossings vir die vergelykings <xref first="R4-example-span-eqn1" last="R4-example-span-eqn4"/>  met die hand bereken, of deur SageMath te gebruik:</p>
+      <sage>
+        <input>
+          var('a1, a2, a3, a4, w1, w2, w3, w4')
+
+          solve([a1 - a2 + a4 == w1,
+                3*a1 + a3 + 2*a4 == w2,
+                2*a1 - a2 + 2*a3 + 3*a4 == w3,
+                -3*a1 + 2*a2 - a3 + 4*a4 == w4],
+                [a1, a2, a3, a4])
+        </input>
+      </sage>
+      <p>Let op dat ons vir SageMath vra om vir <c>a1, a2, a3, a4</c> op te los, aangesien <c>w1, w2, w3, w4</c> as konstantes in hierdie vergelykings beskou word<ellipsis /> ons los nie vir hulle op nie; hulle is vas maar willekeurig.  SageMath outputs:</p>
+      <aside>
+        <p>
+          Dit is eintlik iets belangrik om te besef in die skryf van bewyse. Die <m>w_i</m> is willekeurig, maar word aan die begin van die bewys vasgemaak en die argument word dan op die vaste vektore <m>w_i</m> toegepas. Selfs al kan ons na die tyd verskillende waardes vir die <m>w_i</m> kies, geld die <em>argument</em> nogsteeds vir daardie waardes en weet ons dat die stelsel 'n oplossing het vir enige vaste waardes wat ons kan kies.
+        </p>
+      </aside>
+
+        <p>
+          <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4,
+            a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4,
+            a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4,
+            a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]]
+          </c>
+        </p>
+
+      <p>Met ander woorde, daar bestaan wel 'n oplossing, maak nie saak wat <m>(w_1, w_2, w_3, w_4)</m> is nie. Byyvoorbeeld, as  <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, dan is die oplossing
+      <me>
+         a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{36}.
       </me>
-        In other words, 
+        Met ander woorde,
         <me>
           (3, 1, 2, 4) = \frac{1}{18} \ve{v}_1 - \frac{19}{12} \ve{v}_2 - \frac{17}{9} \ve{v}_3 + \frac{49}{36} \ve{v}_4.
       </me>
-      Since there exists a solution to equation <xref ref="fund_eqn_span_r4_ex"/> for each vector <m>\ve{w} \in \mathbb{R}^4</m>, we conclude that <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m> spans <m>\mathbb{R}^4</m>. </p>
+      Aangesien daar vir elke vektor <m>\ve{w} \in \mathbb{R}^4</m> 'n oplossing vir die vergelyking <xref ref="fund_eqn_span_r4_ex"/> is, lei ons af dat <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m> vir <m>\mathbb{R}^4</m> onderspan. </p>
 
-      <p>Hence <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m>  is a basis for <m>\mathbb{R}^4</m>, since it is linearly independent and spans <m>\mathbb{R}^4</m>.</p>
+      <p>Dus is <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m>  'n basis vir <m>\mathbb{R}^4</m>, omdat dit lineêr onafhanklik is en vir <m>\mathbb{R}^4</m> onderspan.</p>
       </solution>
 
     </example>
 
-<!-- Translation job ends -->
-
     <example>
+      <title> Dimensie van <m>Poly_n</m></title>
       <statement>
         <p>
           Die lys polinome
           <me>
-            \ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \,
-            \ldots, \, \ve{p}_n (x) := x^n
+            \ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \, \ldots, \, \ve{p}_n (x) := x^n
           </me>
           is 'n basis vir <m>\Poly_n</m>,
-          so <m>\dim \Poly_n = n+1</m>.
-          Duidelik span
-          hierdie lys <m>\Poly_n</m> per definisie,
-          so ons moet net seker maak dat
-          hulle line{&#xea;r} onafhanklik is.
+          so <m>\Dim \Poly_n = n+1</m>.
+          Duidelik sal hierdie lys <m>\Poly_n</m> onderspan (per definisie),
+          so ons moet net seker maak dat hulle line{êr} onafhanklik is.
           Veronderstel dat
           <me>
-            a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n
-            = \ve{0}
+            a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n = \ve{0}
           </me>.
         </p>
 
         <p>
           <em>Dit is 'n vergelyking van funksies,
-          so dit geld vir alle <m>x \in
-          \mathbb{R}</m>!</em> Met ander woorde,
+          so dit geld vir alle <m>x \in \mathbb{R}</m>!</em> Met ander woorde,
           vir <em>alle</em> <m>x \in \mathbb{R}</m> het
           ons het die vergelyking
           <men xml:id="root_of_poly">
@@ -243,7 +247,7 @@
           </men>.
         </p>
 
-        <p>Dink versigtig hieraan. Vergelyking <xref ref="root_of_poly"/> verteenwordig 'n <em>oneindige</em> stelsel van vergelykings vir die onbekendes <m>a_0, a_1, \ldots, a_n</m>. Daar is een vergelyking vir elke waarde van <m>x \in \mathbb{R}</m>. Byvoorbeeld 
+        <p>Dink versigtig hieraan. Vergelyking <xref ref="root_of_poly"/> verteenwordig 'n <em>oneindige</em> stelsel van vergelykings vir die onbekendes <m>a_0, a_1, \ldots, a_n</m>. Daar is een vergelyking vir elke waarde van <m>x \in \mathbb{R}</m>. Byvoorbeeld
         <mdn>
           <mrow xml:id="poly-example-first-eqn"> (x=1) \amp \amp a_0 + a_1 + a_2 + \cdots + a_n \amp = 0 </mrow>
           <mrow> (x= -1) \amp \amp a_0 - a_1 + a_2 + \cdots + (-1)^n a_n \amp = 0 </mrow>
@@ -259,11 +263,10 @@
         <p>
           Maar, ons weet uit algebra dat 'n
           polinoom van die vorm <xref ref="root_of_poly" /> met nie-nul
-          ko&#xeb;ffisi&#xeb;nte <em>meestens</em>
+          koëffisiënte <em>meestens</em>
           <m>n</m> wortels <m>x_1, x_2, \ldots,
-          x_n</m> het . So, die ko&#xeb;ffisi&#xeb;nte moet nul wees, i.e.
-          <m>a_0 = a_1
-          = a_2 = \cdots = a_n = 0</m>,
+          x_n</m> het . So, die koëffisiënte moet nul wees, i.e.
+          <m>a_0 = a_1 = a_2 = \cdots = a_n = 0</m>,
           wat is wat ons moes bewys.
         </p>
       </statement>
@@ -273,25 +276,27 @@
       <title>Dimensie van <m>\Poly_n[x,y]</m></title>
       <statement>
       <p>
-        Onthou uit <xref ref="poly_many_variables_example"/> die vektorruimte <m>\Poly_n[x,y]</m> van polinome in veranderlikes <m>x</m> en <m>y</m> van graad minder of gelyk aan <m>n</m>.</p>
+        Onthou uit <xref ref="poly_many_variables_example"/> die vektorruimte <m>\Poly_n[x,y]</m> van polinome in veranderlikes <m>x</m> en <m>y</m> van graad minder of gelyk aan <m>n</m>.
+      </p>
 
-        <p> 'n Basis vir <m>\Poly_0[x,y]</m> word gegee deur die konstante polinoom
+      <p>
+        'n Basis vir <m>\Poly_0[x,y]</m> word gegee deur die konstante polinoom
         <me>
          1
-       </me>
-       so <m>\Dim \Poly_0 [x,y] = 1</m>. Soortgelyk, 'n basis vir <m>\Poly_1[x,y]</m> word gegee deur die polinome
+        </me>
+        so <m>\Dim \Poly_0 [x,y] = 1</m>. Soortgelyk, 'n basis vir <m>\Poly_1[x,y]</m> word gegee deur die polinome
         <me>
-                1, x, y
-      </me>
-      so  <m>\Dim \Poly_1[x,y] = 3</m>. Soortgelyk, 'n basis vir <m>\Poly_2[x,y]</m> word gegee deur die polinome
-      <me>
-        1, x, y, x^2, xy, y^2
-      </me>
-      so <m>\Dim \Poly_2[x,y] = 6</m>. Deur sò te redeneer, sien ons dat
-      <md>
-            <mrow> \Dim \Poly_n [x,y] \amp = 1 + 2 + 3 + \cdots n+1 </mrow>
-            <mrow> \amp =  \frac{(n+1)(n+2)}{2}. </mrow>
-      </md>
+                  1, x, y
+        </me>
+        so  <m>\Dim \Poly_1[x,y] = 3</m>. Soortgelyk, 'n basis vir <m>\Poly_2[x,y]</m> word gegee deur die polinome
+        <me>
+          1, x, y, x^2, xy, y^2
+        </me>
+        so <m>\Dim \Poly_2[x,y] = 6</m>. Deur sò te redeneer, sien ons dat
+        <md>
+          <mrow> \Dim \Poly_n [x,y] \amp = 1 + 2 + 3 + \cdots n+1 </mrow>
+          <mrow> \amp =  \frac{(n+1)(n+2)}{2}. </mrow>
+        </md>
       </p>
     </statement>
     </example>
@@ -304,15 +309,15 @@
       <p>'n Basis vir <m>\Vect_0 (\mathbb{R}^2)</m> word gegee deur die konstant polinomiaalvektorvelde
       <me>
         (1, 0), (0, 1)
-    </me>
-    so <m>\Dim \Vect_0(\mathbb{R}^2) = 1 + 1 = 2</m>. Soortgelyk, 'n basis vir <m>\Vect_1(\mathbb{R}^2)</m> word gegee deur die polinomiaalvektorvelde
-        <me>
+      </me>
+      so <m>\Dim \Vect_0(\mathbb{R}^2) = 1 + 1 = 2</m>. Soortgelyk, 'n basis vir <m>\Vect_1(\mathbb{R}^2)</m> word gegee deur die polinomiaalvektorvelde
+      <me>
                 (1, 0), (x, 0), (y, 0), (0, 1), (0, x), (0, y)
       </me>
       so <m>\Dim \Vect_1(\mathbb{R}^2) = 3+3 = 6</m>. Soortgelyk 'n basis vir <m>\Vect_2(\mathbb{R}^2)</m> word gegee deur die polinomiaalvektorvelde
       <md>
-          <mrow>      (1, 0), (x, 0), (y, 0), (x^2, 0), (xy, 0), (y^2, 0),  </mrow>
-          <mrow>      (0, 1), (0, x), (0, y), (0, x^2), (0, xy), (0, y^2)      </mrow>
+        <mrow>      (1, 0), (x, 0), (y, 0), (x^2, 0), (xy, 0), (y^2, 0),  </mrow>
+        <mrow>      (0, 1), (0, x), (0, y), (0, x^2), (0, xy), (0, y^2)      </mrow>
       </md>
       so <m>\Dim \Vect_2(\mathbb{R}^2) = 6 + 6 = 12</m>. Deur sò te redeneer, sien ons dat
       <md>
@@ -327,15 +332,12 @@
       <statement>
         <p>
           Veronderstel <m>X</m> 'n eindige versameling is.
-          Dan is
-          <m>\Fun(X)</m> eindig-dimensioneel,
+          Dan is <m>\Fun(X)</m> eindig-dimensioneel,
           met dimensie <m>|X|</m>, waar die basis gegee
           word deur die funksies <m>f_a</m>,
           <m>a \in X</m>, gedefinieer deur:
           <men xml:id="defn_of_basis_of_functions">
-            f_a (x) :=  
-            \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ andersins}  
-            \end{cases}
+            f_a (x) := \begin{cases} 1 \amp  \text{ if }  x = a \\ 0 \amp  \text{ andersins} \end{cases}
           </men>
         </p>
 
@@ -343,33 +345,27 @@
           Ons sal dit in 'n reeks oefeninge bewys.
         </p>
 
-        <assemblage>
-          <p>
-            Die formule aan die regterkant van
-            <xref ref="defn_of_basis_of_functions" /> kom so gereeld in wiskunde voor
-            dat ons dit 'n spesiale simbool gee,
-            naamlik <m>\delta_{ab}</m>
-            (die
-            <sq>Kronecker-delta</sq>).
-            Hierdie simbool staan vir die formule: <q>As
-            <m>a=b</m>, gee die waarde 1.
-            As <m>a \neq b</m>, gee die waarde <m>0</m></q>.
-            In
-            hierdie taal kan ons die definisie van die funksies <m>f_a</m> as
-            <men>
-              f_a (x) := \delta_{ax}
-            </men>
-            herskryf.
-          </p>
-        </assemblage>
-
+        <p>
+          Die formule aan die regterkant van
+          <xref ref="defn_of_basis_of_functions" /> kom so gereeld in
+          wiskunde voor dat ons dit 'n spesiale simbool gee,
+          naamlik <m>\delta_{ab}</m>
+          (die <q>Kronecker-delta</q>).
+          Hierdie simbool staan vir die formule: <q>As
+          <m>a=b</m>, gee die waarde 1.
+          As <m>a \neq b</m>, gee die waarde <m>0</m></q>.
+          In hierdie taal kan ons die definisie van die funksies <m>f_a</m> as
+          <men>
+            f_a (x) := \delta_{ax}
+          </men> herskryf.
+        </p>
       </statement>
     </example>
 
     <exercise>
         <statement>
           <p>
-            Suppose <m>X = \{a, b, c\}</m>.
+            Suppose <m>X = \left\{a, b, c\right\}</m>.
 
             <ol>
               <li>
@@ -391,20 +387,17 @@
     <exercise>
       <statement>
         <p>
-          Nou, laat <m>X</m> 'n arbitrêre eindige versameling
-          wees.
+          Nou, laat <m>X</m> 'n willekeurige eindige versameling wees.
           Oorweeg die versameling funksies
           <me>
-             \basis{B} = \bopen f_a : \, a \in X \bclose 
+             \basis{B} = \bopen f_a : \, a \in X \bclose
           </me>
         </p>
-
         <p>
           Toon aan dat <m>\basis{B}</m> 'n basis vir <m>\Fun(X)</m> is.
         </p>
       </statement>
     </exercise>
-    -->
 
     <example>
       <statement>
@@ -417,9 +410,9 @@
         </p>
 
         <p>
-          Hierdie funksies span <m>\Trig_n</m> per definisie.
-          Hulle is ook line&#xea;r
-          onafhanklik, alhoewel ons dit nie sal bewys nie.
+          Hierdie funksies onderspan per definisie vir <m>\Trig_n</m>.
+          Hulle is ook lineêr
+          onafhanklik, alhoewel ons dit nie in die notas sal bewys nie.
         </p>
       </statement>
     </example>
@@ -435,34 +428,27 @@
           wat 'n <m>1</m> in ry <m>i</m> en kolom <m>j</m> het, en nulle orals elders.
         </p>
 
-        <assemblage>
-          <p>
-            Normaalweg is <m>\mat{A}</m> 'n matriks en <m>\mat{A}_{ij}</m>
-            is die element van die matriks in die posisie <m>(i,j)</m>.
-            Maar nou is
-            <m>\mat{E}_{ij}</m> 'n matriks in eie reg! 'n Element in posisie <m>(k,l)</m> sal
-            geskryf word as <m>(\mat{E}_{ij})_{kl}</m>.
-            Ek hoop jy vind dit nie te
-            verwarrend nie.
-            Trouens, ons kan 'n elegante formule vir die elemente
-            van <m>\mat{E}_{ij}</m> neerskryf deur gebruik te maak van die Kronecker
-            delta-simbool:
-            <men xml:id="kronecker_for_matrix_basis">
-              (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
-            </men>
-          </p>
-        </assemblage>
-
+        <p>
+          Normaalweg is <m>\mat{A}</m> 'n matriks en <m>\mat{A}_{ij}</m>
+          is die element van die matriks in die posisie <m>(i,j)</m>.
+          Maar nou is <m>\mat{E}_{ij}</m> 'n matriks in eie reg! 'n Element in posisie <m>(k,l)</m> sal
+          geskryf word as <m>(\mat{E}_{ij})_{kl}</m>.
+          Ek hoop jy vind dit nie te verwarrend nie.
+          Trouens, ons kan 'n elegante formule vir die elemente
+          van <m>\mat{E}_{ij}</m> neerskryf deur gebruik te maak van die Kronecker delta-simbool:
+          <men xml:id="kronecker_for_matrix_basis">
+            (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
+          </men>
+        </p>
       </statement>
     </example>
-
 
     <exercise>
       <statement>
         <p>
-          Kontroleer dat <xref ref="kronecker_for_matrix_basis" />
-          wel die korrekte formule vir die matrikselemente van <m>\mat{E}_{ij}</m>
-          gee.
+          Bevestig dat <xref ref="kronecker_for_matrix_basis" />
+          wel die korrekte formule vir die matrikselemente van
+          <m>\mat{E}_{ij}</m> gee.
         </p>
       </statement>
     </exercise>
@@ -472,26 +458,26 @@
         <p>
           Die standaard basis van <m>\Mat_{2,2}</m> is
           <me>
-            \mat{E}_{11} = \left[ 
-            \begin{array}{cc} 
-            1 \amp  0 \\
-            0 \amp  0
-            \end{array}  
-            \right], \, \mat{E}_{12} = \left[ 
-            \begin{array}{cc} 
-            0 \amp  1 \\
-            0 \amp  0
-            \end{array}  
-            \right], \mat{E}_{21} = \left[ 
-            \begin{array}{cc} 
-            0 \amp  0 \\ 
-            1 \amp  0
-            \end{array}  \right], \mat{E}_{22} = \left[ 
-            \begin{array}{cc} 
-            0 \amp  0 \\
-            0 \amp  1
-            \end{array}  
-            \right]
+            \mat{E}_{11} =
+            \begin{bmatrix}
+              1 \amp  0 \\
+              0 \amp  0
+            \end{bmatrix}, \,
+            \mat{E}_{12} =
+            \begin{bmatrix}
+              0 \amp  1 \\
+              0 \amp  0
+            \end{bmatrix}, \,
+            \mat{E}_{21} =
+            \begin{bmatrix}
+              0 \amp  0 \\
+              1 \amp  0
+            \end{bmatrix}, \,
+            \mat{E}_{22} =
+            \begin{bmatrix}
+              0 \amp  0 \\
+              0 \amp  1
+            \end{bmatrix}
           </me>.
         </p>
       </statement>
@@ -502,13 +488,13 @@
         <p>
           Die standaard basis van <m>\Col_n</m> is
           <me>
-            \ve{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
-            \end{array}  \right], \, 
-            \ve{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
-            \end{array}  \right], \, 
+            \col{e}_1 := \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0
+            \end{bmatrix}, \,
+            \col{e}_2 := \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0
+            \end{bmatrix}, \,
             \ldots, \,
-            \ve{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
-            \end{array}  \right] 
+            \col{e}_n := \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1
+            \end{bmatrix}
           </me>.
         </p>
       </statement>
@@ -516,258 +502,302 @@
 
     <example xml:id ="dimension_of_hyperplane">
       <title>Dimensie van 'n hipervlak</title>
-    <statement> 
-      <p> Laat <m>\ve{v} \in \mathbb{R}^n</m> 'n vaste vektor wees, en beskou die hipervlak <m>W \subset \mathbb{R}^n</m> ortogonaal aan <m>\ve{v}</m> soos in <xref ref="hyperplanes_example_subspace"/>. Jy in Oefening  <xref ref="dimension_of_hyperplane_exercise"/> bewys dat  <m>\Dim(W) = n-1</m>. </p>
+      <statement>
+        <p>
+          Laat <m>\ve{v} \in \mathbb{R}^n</m> 'n vaste vektor wees, en beskou die hipervlak <m>W \subset \mathbb{R}^n</m> ortogonaal aan <m>\ve{v}</m> soos in <xref ref="hyperplanes_example_subspace"/>. Jy in   <xref ref="dimension_of_hyperplane_exercise"/> bewys dat  <m>\Dim(W) = n-1</m>.
+        </p>
 
-      <p>Byvoorbeeld, beskou die spesifieke voorbeeld uit <xref ref="hyperplanes_example_subspace"/>, naamlik die vlak <m>W \subset \mathbb{R}^3</m> ortogonaal aan <m>\ve{v} = (1,2,3)</m>. Met ander woorde,
-      <men xml:id="eqn_for_W_1">
-      W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.
-    </men>
-    Daar is geen 'standaard basis' vir <m>W</m> nie. Maar, hier is een basis (net so goed as enige ander basis):
-    <men xml:id="ab_basis_orth_plane">
-    \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{2}{3}).
-  </men>
-    Jy sal in <xref ref="prove_basis_for_ex_hyperplane"/> aantoon dat dit wel 'n basis vir <m>W</m> is. Ek het hierdie vektore as volg bereken. Vir <m>\ve{a}</m>, het ek eenvoudig net <m>w_1 = 1, w_2 = 0</m> gestel en dan vir <m>w_3</m> opgelos deur Vergelyking <xref ref="eqn_for_W_1"/> te gebruik. Soortgelyk, vir <m>\ve{b}</m>, het ek eenvoudig net <m>w_1 = 0, w_2 = 1</m> gestel en dan vir  <m>w_3</m> opgelos deur  <xref ref="eqn_for_W_1"/> te gebruik.</p>
+        <p>
+          Byvoorbeeld, beskou die spesifieke voorbeeld uit <xref ref="hyperplanes_example_subspace"/>, naamlik die vlak <m>W \subset \mathbb{R}^3</m> ortogonaal aan <m>\ve{v} = (1,2,3)</m>. Met ander woorde,
+          <men xml:id="eqn_for_W_1">
+            W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.
+          </men>
+          Daar is geen <q>standaardbasis</q> vir <m>W</m> nie. Maar, hier is een basis (net so goed as enige ander basis):
+          <men xml:id="ab_basis_orth_plane">
+            \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{2}{3}).
+          </men>
+          Jy sal in <xref ref="prove_basis_for_ex_hyperplane"/> aantoon dat dit wel 'n basis vir <m>W</m> is. Ek het hierdie vektore as volg bereken. Vir <m>\ve{a}</m>, het ek eenvoudig net <m>w_1 = 1, w_2 = 0</m> gestel en dan vir <m>w_3</m> opgelos deur Vergelyking <xref ref="eqn_for_W_1"/> te gebruik. Soortgelyk, vir <m>\ve{b}</m>, het ek eenvoudig net <m>w_1 = 0, w_2 = 1</m> gestel en dan vir  <m>w_3</m> opgelos deur  <xref ref="eqn_for_W_1"/> te gebruik.
+        </p>
 
-    <p> Daar is niks spesiaal met my metode hierbô om 'n basis vir <m>W</m> te bereken nie. Hier is nog 'n basis vir <m>W</m>, wat ek bereken het deur arbitrêre waardes van  <m>w_1</m> en <m>w_2</m> te kies en dan  <m>w_3</m> te bereken deur Vergelyking  <xref ref="eqn_for_W_1"/> te gebruik:
-    <men>
-    \ve{u} = (1, 2, -\frac{5}{3}), \quad \ve{v} = (-4, 2, 0).
-  </men>
-</p>
-<p>Wat ook al metode ons gebruik om 'n basis vir <m>W</m> te bereken, sien ons dat <m>\Dim(W) = 2</m>.</p>
-    </statement>
+        <p>
+          Daar is niks spesiaal met my metode hierbo om 'n basis vir <m>W</m> te bereken nie. Hier is nog 'n basis vir <m>W</m>, wat ek bereken het deur arbitrêre waardes van  <m>w_1</m> en <m>w_2</m> te kies en dan  <m>w_3</m> te bereken deur Vergelyking  <xref ref="eqn_for_W_1"/> te gebruik:
+          <men>
+            \ve{u} = (1, 2, -\frac{5}{3}), \quad \ve{v} = (-4, 2, 0).
+          </men>
+        </p>
+
+        <p>
+          Wat ook al metode ons gebruik om 'n basis vir <m>W</m> te bereken, sien ons dat <m>\Dim(W) = 2</m>.
+        </p>
+      </statement>
     </example>
 
     <exercise xml:id="prove_basis_for_ex_hyperplane">
-      <statement><p> Toon aan dat die  lys vektore <m>\bopen \ve{a}, \ve{b} \bclose </m> uit <xref ref="ab_basis_orth_plane"/> in <xref ref="dimension_of_hyperplane"/> 'n basis vir <m>W</m> is. </p>
+      <statement>
+        <p>
+          Toon aan dat die  lys vektore <m>\bopen \ve{a}, \ve{b} \bclose </m> uit <xref ref="ab_basis_orth_plane"/> in <xref ref="dimension_of_hyperplane"/> 'n basis vir <m>W</m> is.
+        </p>
       </statement>
     </exercise>
 
     <exercise xml:id="dimension_of_hyperplane_exercise">
-      <statement><p> Laat <m>\ve{v} \in \mathbb{R}^n</m> 'n vaste vektor wees, en stel
-      <me>
-      W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0 \}
-    </me>
-    Bewys dat <m>\Dim(W) = n-1</m>.</p>
+      <statement>
+        <p>
+          Laat <m>\ve{v} \in \mathbb{R}^n</m> 'n vaste vektor wees, en stel
+          <me>
+            W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0 \}
+          </me>
+          Bewys dat <m>\Dim(W) = n-1</m>.
+        </p>
       </statement>
-      <hint>Vind 'n basis vir die oplossingversamling van die vergelyking wat <m>W</m> defineer.</hint>
+      <hint>
+        <p>
+          Vind 'n basis vir die oplossingversamling van die vergelyking wat <m>W</m> defineer.
+        </p>
+      </hint>
     </exercise>
-
     </subsection>
 
     <subsection>
-  <title>Dimensie van die vektorruimte van oplossings van 'n homogene lineêre differensiaalvergelyking</title>
-  <introduction>
-    <p>Ons gaan nou die dimensie bereken van die vektorruimte van oplossings van 'n homogene lineêre differensiaalvergelyking. Ons het die volgende stelling nodig uit die teorie van differensiaalvergelykings, wat ons nie sal bewys nie.
+      <title>Dimensie van die vektorruimte van oplossings van 'n homogene lineêre differensiaalvergelyking</title>
+      <p>
+        Ons gaan nou die dimensie bereken van die vektorruimte van oplossings van 'n homogene lineêre differensiaalvergelyking. Ons het die volgende stelling nodig uit die teorie van differensiaalvergelykings, wat ons nie sal bewys nie.
       </p>
-  </introduction>
-  <theorem xml:id="diff_eqn_exist_unique">
-    <title>Bestaan en uniekheid van oplossings van lineêre GDV's</title>
-    <statement>Laat
-    <men xml:id="diff_eqn_in_thm">
-      y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y == 0
-    </men>
-    'n lineêre homogene differensiaalvergelyking wees op 'n interval <m>I</m>, waar <m>a_0(x), \cdots, a_{n-1}(x)</m> kontinu op <m>I</m> is. Verdonderstel dat ons beginwaardes gegee word,
-    <mdn>
-      <mrow xml:id="diff_eqn_thm_ic1"> y(x_0) \amp = c_0 </mrow>
-      <mrow> y^{(1)}(x_0) \amp = c_1 </mrow>
-      <mrow> \vdots  \amp </mrow>
-      <mrow xml:id="diff_eqn_thm_iclast"> y^{(n-1)}(x_0) \amp = c_{n-1} </mrow>
-    </mdn>
-    waar <m>x_0 \in I</m> en <m>c_0, \ldots, c_{n-1}</m> willekeurige konstantes is. Dan bestaan daar 'n unieke funksie <m>y(x)</m> op <m>I</m> wat die differensiaalvergelyingsaisfying <xref ref="diff_eqn_in_thm"/> bevredig asook die beginwaardes  <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
-    </statement>
-  </theorem>
- Ons gaan nie <xref ref="diff_eqn_exist_unique"/> bewys nie --- jy kan die bewys in 'n kursus oor Differensiaalvergelykings vind. Ons is eerder geinteresseerd in die Lineêre Algebra <em>gevolgtrekkings</em> van <xref ref="diff_eqn_exist_unique"/>.
- Maar eerstens, 'n voorbeeld om die Stelling te illustreer,.
-<example xml:id="geogebra_diff_eqn_1">
-  <title>Visualisering van <xref ref="diff_eqn_exist_unique"/></title>
-  <statement>
-    Die volgende app illustreer <xref ref="diff_eqn_exist_unique"/>. Sleep die rooi en groen slepers om die koëffisiente van die differensiaal vergelyking te verander (in hierdie voordbeeld, die koëffisiënte is net getalle, maar in algemeen hulle is funksies van <m>x</m>). Sleep die rooi punte om die beginwaardes te verander.
-    <figure>
-        <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%"/>
-        <caption>GeoGebra App: 2de orde GDV met konstante koëffisiënte.</caption>
-    </figure>
-  </statement>
 
-</example>
+      <theorem xml:id="diff_eqn_exist_unique">
+        <title>Bestaan en uniekheid van oplossings van lineêre GDV's</title>
+        <statement>
+          <p>
+            Laat
+            <men xml:id="diff_eqn_in_thm">
+              y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y == 0
+            </men>
+            'n lineêre homogene differensiaalvergelyking wees op 'n interval <m>I</m>, waar <m>a_0(x), \ldots</m>, <m>a_{n-1}(x)</m> kontinu op <m>I</m> is. Verdonderstel dat ons beginwaardes gegee word,
+            <mdn>
+              <mrow xml:id="diff_eqn_thm_ic1"> y(x_0) \amp = c_0 </mrow>
+              <mrow> y^{(1)}(x_0) \amp = c_1 </mrow>
+              <mrow> \vdots  \amp </mrow>
+              <mrow xml:id="diff_eqn_thm_iclast"> y^{(n-1)}(x_0) \amp = c_{n-1} </mrow>
+            </mdn>
+            waar <m>x_0 \in I</m> en <m>c_0, \ldots, c_{n-1}</m> willekeurige konstantes is. Dan bestaan daar 'n unieke funksie <m>y(x)</m> op <m>I</m> wat die differensiaalvergelying  <xref ref="diff_eqn_in_thm"/> bevredig asook die beginwaardes  <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
+          </p>
+        </statement>
+      </theorem>
 
+      <p>
+        Ons gaan nie <xref ref="diff_eqn_exist_unique"/> bewys nie --- jy kan die bewys in 'n kursus oor Differensiaalvergelykings vind. Ons is eerder geïnteresseerd in die Lineêre Algebra <em>gevolgtrekkings</em> van <xref ref="diff_eqn_exist_unique"/>. Maar eerstens, 'n voorbeeld om die Stelling te illustreer.
+      </p>
 
+      <example xml:id="geogebra_diff_eqn_1">
+        <title>Visualisering van <xref ref="diff_eqn_exist_unique"/></title>
+        <statement>
+        <p>
+          Die volgende app illustreer <xref ref="diff_eqn_exist_unique"/>. Sleep die rooi en groen slepers om die koëffisiënte van die differensiaal vergelyking te verander (in hierdie voordbeeld, die koëffisiënte is net getalle, maar in algemeen hulle is funksies van <m>x</m>). Sleep die rooi punte om die beginwaardes te verander.
+        </p>
+          <figure>
+            <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%"/>
+            <caption>GeoGebra App: 2de orde GDV met konstante koëffisiënte.</caption>
+          </figure>
+        </statement>
+      </example>
 
+      <p>
+        Ons stel egter eerder belang in die volgende Lineêre Algebra <em>gevolg</em> van <xref ref="diff_eqn_exist_unique"/>.
+      </p>
 
+      <corollary>
+        <title>Dimensie van vektorruimte van oplossings van 'n homogene lineêre GDV van orde <m>n</m></title>
+        <statement>
+          <p>
+            Laat <m>V</m> die vektorruimte van alle oplossings van 'n <m>n</m>-ste orde homogene lineêre gewone differensiaalvergelyking op 'n interval <m>I</m> wees,
+            <men xml:id="diff_eqn_in_thm_2">
+              y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y = 0,
+            </men>
+            waar <m>a_0(x), \cdots, a_{n-1}(x)</m> kontinu op <m>I</m> is. Dan is
+            <me>
+              \Dim(V) = n.
+            </me>
+          </p>
+        </statement>
+      </corollary>
 
-<corollary> 
-  <title>Dimensie van vektorruimte van oplossings van 'n homogene lineêre GDV van orde <m>n</m></title>
-  <statement> Laat <m>V</m> die vektorruimte van alle oplossings van 'n <m>n</m>-ste orde homogene lineêre gewone differensiaalvergelyking op 'n interval <m>I</m> wees,
-      <men xml:id="diff_eqn_in_thm_2">
-     y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y = 0,
-    </men>
-  waar <m>a_0(x), \cdots, a_{n-1}(x)</m> kontinu op <m>I</m> is. Dan is
-<me>
- \Dim(V) = n.
-  </me>
-  </statement>
-</corollary> 
-<proof> <p>Kies 'n vaste <m>a \in I</m>. Deur die <em>bestaan</em> deel van <xref ref="diff_eqn_exist_unique"/>, weet ons dat daar bestaan
-<men>
-  y_0, \ldots, y_{n-1} \in V
-</men>
-wat die volgende beginwaardes bevredig:
-<men xml:id="ics_delta_form">
-  y_i^{(j)} (a) = \delta_{ij}, \quad i,j = 1 \ldots n-1.
-</men>
-Hier is <xref ref="ics_delta_form"/> volledig uitgeskryf:
-<mdn>
-<mrow xml:id="ics_delta_1"> y_0(a) \amp  = 1 \amp y_1(a) \amp = 0 \amp \amp \cdots \amp y_{n-1}(a) = 0 </mrow>
-<mrow> y^{(1)}_0(a) \amp  = 0 \amp y^{(1)}_1(a) \amp = 1 \amp \amp \cdots \amp y^{(1)}_{n-1}(a) = 0 </mrow>
-<mrow> \amp \vdots \amp \amp \amp \amp   \vdots </mrow>
-<mrow xml:id="ics_delta_n"> y^{(n-1)}_0(a) \amp  = 0 \amp y^{(n-1)}_1(a) \amp = 0 \amp \amp \cdots \amp y^{(n-1)}_{n-1}(a) = 1 </mrow>
-  </mdn>
-Ek beweer dat  <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> 'n basis vir <m>V</m> is.</p>
+      <proof>
+        <p>
+          Kies 'n vaste <m>a \in I</m>. Deur die <em>bestaan</em> deel van <xref ref="diff_eqn_exist_unique"/>, weet ons dat daar bestaan
+          <men>
+            y_0, \ldots, y_{n-1} \in V
+          </men>
+          wat die volgende beginwaardes bevredig:
+          <men xml:id="ics_delta_form">
+            y_i^{(j)} (a) = \delta_{ij}, \quad i,j = 1 \ldots n-1.
+          </men>
+          Hier is <xref ref="ics_delta_form"/> volledig uitgeskryf:
+          <mdn>
+            <mrow xml:id="ics_delta_1"> y_0(a) \amp  = 1 \amp y_1(a) \amp = 0 \amp \amp \cdots \amp y_{n-1}(a) = 0 </mrow>
+            <mrow> y^{(1)}_0(a) \amp  = 0 \amp y^{(1)}_1(a) \amp = 1 \amp \amp \cdots \amp y^{(1)}_{n-1}(a) = 0 </mrow>
+            <mrow> \amp \vdots \amp \amp \amp \amp   \vdots </mrow>
+            <mrow xml:id="ics_delta_n"> y^{(n-1)}_0(a) \amp  = 0 \amp y^{(n-1)}_1(a) \amp = 0 \amp \amp \cdots \amp y^{(n-1)}_{n-1}(a) = 1 </mrow>
+            </mdn>
+          Ek beweer dat  <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> 'n basis vir <m>V</m> is.
+        </p>
 
-<paragraphs>
- <title>Stap 1. <m> \bopen y_0, \ldots, y_{n-1} \bclose </m> is lineêr onafhanklik.</title>
- <p>Veronderstel
-  <men xml:id="lin_dep_no_wronskian">
- k_0 y_0 + \cdots + k_{n-1}y_{n-1} = 0.
-</men>
-Deur Vergelyking <xref ref="lin_dep_no_wronskian"/> herhaaldelik te differensieer, kry ons  <m>n</m> vergelykings:
-<mdn>
- <mrow xml:id="no_wronskian_proof_1"> k_0 y_0 + \cdots + k_{n-1}y_{n-1} \amp = 0 </mrow>
- <mrow xml:id="no_wronskian_proof_2"> k_0 y'_0 + \cdots + k_{n-1}y'_{n-1} \amp = 0 </mrow>
- <mrow> \vdots </mrow>
- <mrow> k_0 y^{(n-1)}_0 + \cdots + k_{n-1}y^{(n-1)}_{n-1} \amp = 0 </mrow>
-</mdn>
-Deur <xref ref="no_wronskian_proof_1"/> te evalueer by <m>x=a</m> kry ons:
-<md>
- <mrow>  k_0 \underbrace{y_0 (a)}_{=1} + k_1 \underbrace{y_1(a)}_{=0} + \cdots + k_{n-1} \underbrace{y_{n-1}(a)}_{=0} \amp = 0</mrow> 
- <mrow> \therefore k_0 \amp = 0.</mrow>
-</md>
-Soortgelyk, deur <xref ref="no_wronskian_proof_2"/> te evalueer by <m>x=a</m> kry ons
-<md>
- <mrow>  k_0 \underbrace{y'_0 (a)}_{=0} + k_1 \underbrace{y'_1(a)}_{=1} + \cdots + k_{n-1} \underbrace{y'_{n-1}(a)}_{=0} \amp = 0</mrow> 
- <mrow> \therefore k_1 \amp = 0.</mrow>
-</md>
-Soortgelyk, deur die oorblywnede höer afgeleides by <m>x=a</m> te evalueer kry ons <m>k_2 = 0, \ldots, k_{n-1} = 0</m>. Dus,  <m>\bopen y_0, \ldots, y_{n-1} \bclose</m> is lineêr onafhanklik.</p>
-</paragraphs>
+    <p>
+      Stap 1: Ons wys dat <m> \bopen y_0, \ldots, y_{n-1} \bclose </m> lineêr onafhanklik is.
+    </p>
+      <p>
+        Veronderstel
+        <men xml:id="lin_dep_no_wronskian">
+          k_0 y_0 + \cdots + k_{n-1}y_{n-1} = 0.
+        </men>
+        Deur Vergelyking <xref ref="lin_dep_no_wronskian"/> herhaaldelik te differensieer, kry ons  <m>n</m> vergelykings:
+        <mdn>
+          <mrow xml:id="no_wronskian_proof_1"> k_0 y_0 + \cdots + k_{n-1}y_{n-1} \amp = 0 </mrow>
+          <mrow xml:id="no_wronskian_proof_2"> k_0 y'_0 + \cdots + k_{n-1}y'_{n-1} \amp = 0 </mrow>
+          <mrow> \vdots </mrow>
+          <mrow> k_0 y^{(n-1)}_0 + \cdots + k_{n-1}y^{(n-1)}_{n-1} \amp = 0 </mrow>
+        </mdn>
+        Deur <xref ref="no_wronskian_proof_1"/> te evalueer by <m>x=a</m> kry ons:
+        <md>
+          <mrow>  k_0 \underbrace{y_0 (a)}_{=1} + k_1 \underbrace{y_1(a)}_{=0} + \cdots + k_{n-1} \underbrace{y_{n-1}(a)}_{=0} \amp = 0</mrow>
+          <mrow> \therefore k_0 \amp = 0.</mrow>
+        </md>
+        Soortgelyk, deur <xref ref="no_wronskian_proof_2"/> te evalueer by <m>x=a</m> kry ons
+        <md>
+          <mrow>  k_0 \underbrace{y'_0 (a)}_{=0} + k_1 \underbrace{y'_1(a)}_{=1} + \cdots + k_{n-1} \underbrace{y'_{n-1}(a)}_{=0} \amp = 0</mrow>
+          <mrow> \therefore k_1 \amp = 0.</mrow>
+        </md>
+        Soortgelyk, deur die oorblywnede höer afgeleides by <m>x=a</m> te evalueer kry ons <m>k_2 = 0, \ldots, k_{n-1} = 0</m>. Dus,  <m>\bopen y_0, \ldots, y_{n-1} \bclose</m> is lineêr onafhanklik.
+      </p>
 
-<paragraphs>
-<title>Stap 2. <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> span vir <m>V</m>.</title>
-<p>Laat <m>y</m> 'n willekeurige oplossing van die differensiaalvergelyking <xref ref="diff_eqn_in_thm"/> wees. Ons moet aantoon dat  <m>y</m> uitgedruk kan word as 'n lineêre kombinasie van <m>y_0, \ldots, y_{n-1}</m>. </p>
+    <p>
+    Stap 2: Ons wys dat <m>\bopen y_0, \ldots, y_{n-1} \bclose </m> vir <m>V</m> onderspan.
+    </p>
+      <p>
+        Laat <m>y</m> 'n willekeurige oplossing van die differensiaalvergelyking <xref ref="diff_eqn_in_thm"/> wees. Ons moet aantoon dat  <m>y</m> uitgedruk kan word as 'n lineêre kombinasie van <m>y_0, \ldots, y_{n-1}</m>.
+      </p>
 
-<p>Defineer skalare <m>c_0, \ldots, c_{n-1}</m> deur die afgeleides van <m>y</m> by <m>x=a</m> te evalueer:
-<md>
-<mrow> c_0 \amp := y(a) </mrow>
-<mrow> c_1 \amp := y'(a) </mrow>
-<mrow> \vdots </mrow>
-<mrow> c_{n-1} \amp := y^{(n-1)}(a) </mrow>
-  </md>
-Ek beweer dat
-<men xml:id="span_ode_rtp">
- y = c_0 y_0 + c_1 y_1 + \cdots + c_{n-1} y_{n-1}.
-</men>
-Om hierdie te bewys, laat <m>f</m> die funksie op die regterkant van <xref ref="span_ode_rtp"/> wees:
-<me> 
- f :=c_0 y_0 + c_1 y_1 + \cdots + c_{n-1} y_{n-1} 
-</me> </p>
-<p>
-Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van die differensiaalvergelyking <xref ref="diff_eqn_in_thm"/>.</p>
-<p>Verder, oorweeg om <m>f</m> herhaaldelik te differensieer en dan te evalueer by <m>x=a</m>. Deur die beginwaardes wat deur die funksies <m>y_i</m> bevredig word, Vergelyking <xref ref="ics_delta_form"/>, bereken ons: 
-<md>
-  <mrow> f(a) \amp = c_0 </mrow>
-  <mrow> f'(a) \amp = c_1 </mrow>
-  <mrow> \vdots </mrow>
-   <mrow> f^{(n-1)}(a) \amp = c_{n-1} </mrow>
- </md>
- Hierdie is presies dieselfde beginwaardes bevredig deur <m>y</m> in Vergelykings <xref first="ics_delta_1" last="ics_delta_n"/>! Dus, deur die uniekheid deel van <xref ref="diff_eqn_exist_unique"/>,  lei ons af dat  <m>f = y</m>. Dus <xref ref="span_ode_rtp"/> is inderdaad waar.
-</p>
-   </paragraphs>
-</proof>
- Laat ons nou 'n paar voorbeelde doen wat die ideë hierbô illustreer.
+      <p>
+        Defineer skalare <m>c_0, \ldots, c_{n-1}</m> deur die afgeleides van <m>y</m> by <m>x=a</m> te evalueer:
+        <md>
+        <mrow> c_0 \amp := y(a) </mrow>
+        <mrow> c_1 \amp := y'(a) </mrow>
+        <mrow> \vdots </mrow>
+        <mrow> c_{n-1} \amp := y^{(n-1)}(a) </mrow>
+          </md>
+        Ek beweer dat
+        <men xml:id="span_ode_rtp">
+         y = c_0 y_0 + c_1 y_1 + \cdots + c_{n-1} y_{n-1}.
+        </men>
+        Om hierdie te bewys, laat <m>f</m> die funksie op die regterkant van <xref ref="span_ode_rtp"/> wees:
+        <me>
+         f :=c_0 y_0 + c_1 y_1 + \cdots + c_{n-1} y_{n-1}
+        </me>
+      </p>
+
+      <p>
+        Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van die differensiaalvergelyking <xref ref="diff_eqn_in_thm"/>.
+      </p>
+
+      <p>
+        Verder, oorweeg om <m>f</m> herhaaldelik te differensieer en dan te evalueer by <m>x=a</m>. Deur die beginwaardes wat deur die funksies <m>y_i</m> bevredig word, Vergelyking <xref ref="ics_delta_form"/>, bereken ons:
+        <md>
+          <mrow> f(a) \amp = c_0 </mrow>
+          <mrow> f'(a) \amp = c_1 </mrow>
+          <mrow> \vdots </mrow>
+           <mrow> f^{(n-1)}(a) \amp = c_{n-1} </mrow>
+         </md>
+        Hierdie is presies dieselfde beginwaardes bevredig deur <m>y</m> in Vergelykings <xref first="ics_delta_1" last="ics_delta_n"/>! Dus, deur die uniekheid deel van <xref ref="diff_eqn_exist_unique"/>,  lei ons af dat  <m>f = y</m>. Dus <xref ref="span_ode_rtp"/> is inderdaad waar.
+      </p>
+  </proof>
+
+  <p>
+    Kom ons doen nou 'n paar voorbeelde  wat die idees hierbo illustreer.
+  </p>
 
   <example>
     <title>Toepassing van bestaan en uniekheid van oplossings van 'n GDV</title>
-    <statement><p>Beskou die GDV
-    <men>
-      x^2 y^{''} - 3xy^{'} + 5y = 0 \quad \mbox{on } (0, \infty)
-    </men>
-    uit <xref ref="first_example_2nd_order_ode"/>. Om <xref ref="diff_eqn_exist_unique"/> toe te pas, heskryf ons dit eers in die vorm
-    <men xml:id="diff_eqn_example_thm">
-      y^{''} - \frac{3}{x} y' + \frac{5}{x^2} y = 0 \quad \mbox{on } (0, \infty).
-    </men>
-    Die koëffisiëntfunksies <m>\frac{3}{x}</m> en <m>\frac{5}{x^2}</m> is albei kontinu op  <m>(0, \infty)</m> en so kan ons  <xref ref="diff_eqn_exist_unique"/> toepas. Kies, byvoorbeeld, <m>x_0 = 1</m> en willekeurige getalle <m>c_0, c_1</m>. Dan sê <xref ref="diff_eqn_exist_unique"/> dat daar bestaan 'n unieke oplossing <m>y(x)</m> van die differensiaalvergelyking  <xref ref="diff_eqn_example_thm"/> wat die volgende beginwaardes bevredig:
-    <mdn>
-      <mrow xml:id="ic1_diff_eqn_ex"> y(1) \amp = c_0 </mrow>
-      <mrow xml:id="ic2_diff_eqn_ex"> y'(1) \amp = c_1 </mrow>
-    </mdn> 
-    Laat ons die verifeer  in SageMath. Eerstens, ons vra SageMath om die algemene oplossing van differensiaalvergelyking <xref ref="diff_eqn_example_thm"/> te bereken:
-    <sage>
-      <input>
-        x = var('x')
-        y = function('y')(x)
+    <statement>
+      <p>
+        Beskou die GDV
+        <men>
+          x^2 y^{''} - 3xy^{'} + 5y = 0 \quad \text{ on } (0, \infty)
+        </men>
+        uit <xref ref="first_example_2nd_order_ode"/>. Om <xref ref="diff_eqn_exist_unique"/> toe te pas, heskryf ons dit eers in die vorm
+        <men xml:id="diff_eqn_example_thm">
+          y^{''} - \frac{3}{x} y' + \frac{5}{x^2} y = 0 \quad \text{ on } (0, \infty).
+        </men>
+        Die koëffisiëntfunksies <m>\frac{3}{x}</m> en <m>\frac{5}{x^2}</m> is albei kontinu op  <m>(0, \infty)</m> en so kan ons  <xref ref="diff_eqn_exist_unique"/> toepas. Kies, byvoorbeeld, <m>x_0 = 1</m> en willekeurige getalle <m>c_0, c_1</m>. Dan sê <xref ref="diff_eqn_exist_unique"/> dat daar bestaan 'n unieke oplossing <m>y(x)</m> van die differensiaalvergelyking  <xref ref="diff_eqn_example_thm"/> wat die volgende beginwaardes bevredig:
+        <mdn>
+          <mrow xml:id="ic1_diff_eqn_ex"> y(1) \amp = c_0 </mrow>
+          <mrow xml:id="ic2_diff_eqn_ex"> y'(1) \amp = c_1 </mrow>
+        </mdn>
+        Kom ons bevestig dit in SageMath. Eerstens, ons vra SageMath om die algemene oplossing van differensiaalvergelyking <xref ref="diff_eqn_example_thm"/> te bereken:
+      </p>
+        <sage>
+          <input>
+            x = var('x')
+            y = function('y')(x)
 
-        ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
+            ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
 
-        show(desolve(ode, y))
-      </input>
-    </sage>
-    SageMath vertel ons dat die algemene oplossing van die differensiaalvergelyking <xref ref="diff_eqn_example_thm"/> is
-    <men xml:id="gen_soln_formula_ode">
-      y = K_1 x^2 \sin(\log(x)) + K_2 x^2 \cos(\log(x)). 
-    </men>
-    Laat ons nou die beginwaardes <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> toe pas. Ons kan <m>y(1)</m> en <m>y'(1)</m> bereken deur die formule vir <m>y</m> uit <xref ref="gen_soln_formula_ode"/> te gebruik. So <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> word (kontrolleer!):
-    <mdn>
-      <mrow xml:id="first_eqn_ks"> K_2 \amp = c_0 </mrow>
-      <mrow xml:id="second_eqn_ks"> K_1 + 2K_2 \amp = c_1 </mrow>
-    </mdn>
-    Vergelykings <xref first="first_eqn_ks" last="second_eqn_ks"/> het 'n unieke oplossing, naamlik <m>K_1 = c_1 - 2 c_0, K_2 = c_0</m>. So inderdaad, vir enige beginwaardes <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/>, het die differensiaalvergelyking <xref ref="diff_eqn_example_thm"/> 'n unieke oplossing, naamlik:
-    <me>
-      y = (c_1 - 2 c_0) x^2 \sin (\log(x)) + c_0 x^2\cos(\log(x))
-    </me>
-    Byvoorbeeld, as ons beginwaardes 
-    <mdn>
-      <mrow> y(1) \amp = 1 </mrow>
-      <mrow> y'(1) \amp = 0 </mrow>
-    </mdn> 
-    is, dan is die unieke oplossing as volg:
-    <men xml:id="soln_example_ic">
-      y = -2 x^2 \sin(\log(x)) + x^2 \cos(\log(x)).
-    </men>
-    Jy kan dit ook eksplisiet in SageMath bevestig, deur die <c>ics=[1,1,0]</c> opsie van <c>desolve</c> te gebruik (die eerste nommer is die waarde van <m>x_0</m>, die tweede nommer is die waarde van <m>y(x_0)</m>, en die derde nommer is die waarde van y'(x_0), etc.):
-    <sage>
-      <input>
-        x = var('x')
-        y = function('y')(x)
+            show(desolve(ode, y))
+          </input>
+        </sage>
+      <p>
+        SageMath vertel ons dat die algemene oplossing van die differensiaalvergelyking <xref ref="diff_eqn_example_thm"/> is
+        <men xml:id="gen_soln_formula_ode">
+          y = K_1 x^2 \sin(\log(x)) + K_2 x^2 \cos(\log(x)).
+        </men>
+        Kom ons pas nou die beginwaardes <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> toe. Ons kan <m>y(1)</m> en <m>y'(1)</m> bereken deur die formule vir <m>y</m> uit <xref ref="gen_soln_formula_ode"/> te gebruik. So <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> word (bevestig dit!):
+        <mdn>
+          <mrow xml:id="first_eqn_ks"> K_2 \amp = c_0 </mrow>
+          <mrow xml:id="second_eqn_ks"> K_1 + 2K_2 \amp = c_1 </mrow>
+        </mdn>
+        Vergelykings <xref first="first_eqn_ks" last="second_eqn_ks"/> het 'n unieke oplossing, naamlik <m>K_1 = c_1 - 2 c_0, K_2 = c_0</m>. So inderdaad, vir enige beginwaardes <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/>, het die differensiaalvergelyking <xref ref="diff_eqn_example_thm"/> 'n unieke oplossing, naamlik:
+        <me>
+          y = (c_1 - 2 c_0) x^2 \sin (\log(x)) + c_0 x^2\cos(\log(x))
+        </me>
+        Byvoorbeeld, as ons beginwaardes
+        <mdn>
+          <mrow> y(1) \amp = 1 </mrow>
+          <mrow> y'(1) \amp = 0 </mrow>
+        </mdn>
+        is, dan is die unieke oplossing as volg:
+        <men xml:id="soln_example_ic">
+          y = -2 x^2 \sin(\log(x)) + x^2 \cos(\log(x)).
+        </men>
+        Jy kan dit ook eksplisiet in SageMath bevestig, deur die <c>ics=[1,1,0]</c> opsie van <c>desolve</c> te gebruik (die eerste nommer is die waarde van <m>x_0</m>, die tweede nommer is die waarde van <m>y(x_0)</m>, en die derde nommer is die waarde van y'(x_0), etc.):
+      </p>
+        <sage>
+          <input>
+            x = var('x')
+            y = function('y')(x)
 
-        ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
+            ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
 
-        show(desolve(ode, y, ics=[1,1,0]))
-        
-      </input>
-    </sage>
-    SageMath druk uit dieselfde oplossing as in <xref ref="soln_example_ic"/>.
+            show(desolve(ode, y, ics=[1,1,0]))
 
-    Soortgelyk, as ons beginwaardes 
-    <mdn>
-      <mrow xml:id="ic1_diff_eqn_ex_ex"> y(1) \amp = 1 </mrow>
-      <mrow xml:id="ic2_diff_eqn_ex_ex"> y'(1) \amp = 0 </mrow>
-    </mdn> 
-    is, dan is die unieke oplossing
-    <me>
-      y = x^2 \sin(\log (x)).
-    </me>
-  </p>
-  </statement>
-  </example>   
+          </input>
+        </sage>
+      <p>
+        SageMath druk uit dieselfde oplossing as in <xref ref="soln_example_ic"/>.
 
- 
-
+        Soortgelyk, as ons beginwaardes
+        <mdn>
+          <mrow xml:id="ic1_diff_eqn_ex_ex"> y(1) \amp = 1 </mrow>
+          <mrow xml:id="ic2_diff_eqn_ex_ex"> y'(1) \amp = 0 </mrow>
+        </mdn>
+        is, dan is die unieke oplossing
+        <me>
+          y = x^2 \sin(\log (x)).
+        </me>
+      </p>
+    </statement>
+  </example>
   </subsection>
 
-
-
-    <subsection>
-      <title>Dimensies van deelruimtes</title>
-
+  <subsection>
+    <title>Dimensies van deelruimtes</title>
     <p>
       Ons gaan nou deelruimtes van vektorruimtes se dimensie bestudeer.
     </p>
@@ -782,82 +812,97 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
         </p>
       </statement>
     </proposition>
-<!-- TO DO: Translate this -->
- <proof>
-    <paragraphs>
-      <title>Proving that <m>\Dim(W) \leq \Dim(V)</m></title>
-      <p> Let 
+
+    <proof>
+      <p>
+        Ons bewys eers dat <m>\Dim(W) \leq \Dim(V)</m>.
+      </p>
+      <p> Laat
         <me>
-          \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose 
-        </me> 
-        be a basis for <m>V</m>, so that <m>\Dim(V) = n</m>. We just need to show that <m>W</m> is finite-dimensional, i.e. that there exists a basis
-      <me>
-        \basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_k \bclose
-      </me>
-      for <m>W</m>. For then <m>\basis{B}</m> will be a list of <m>k</m> linearly independent vectors which live in <m>W</m> (and hence also in <m>V</m>) and hence we must have <m>k \leq n</m> by <xref ref="bumping_off_lemma"/>, as <m>\basis{C}</m> spans <m>V</m>.</p>
+          \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose
+        </me>
+        'n basis vir <m>V</m> wees, sodat <m>\Dim(V) = n</m>. Ons moet net wys dat <m>W</m> eindig-dimensioneel is, m.a.w. dat daar 'n basis
+        <me>
+          \basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_k \bclose
+        </me>
+        vir <m>W</m> bestaan. As ons dit kan doen, dan sal <m>\basis{B}</m> 'n lys van <m>k</m> lineêr onafhanklike vektore in <m>W</m> (en dus ook in <m>V</m>) wees en dus moet  <m>k \leq n</m> uit <xref ref="Steinitz-exchange-lemma" text="title"/>, omdat <m>\basis{C}</m> vir <m>V</m> onderspan.
+      </p>
 
-      <p>We show that <m>W</m> is finite-dimensional as follows.</p>
+      <p>
+        Ons wys as volg dat <m>W</m> eindig-dimensioneel is.
+      </p>
 
-      <p> If <m>W</m> is the zero vector space <m>\{ \ve{0} \} </m>, then <m>W</m> is finite-dimensional <xref ref="defn_dim_zero_vec_space" text="title">by definition</xref>. </p>
+      <p>
+        As <m>W</m> die nul-vektorruimte <m>\{ \ve{0} \} </m> is, dan is <m>W</m> <xref ref="defn_dim_zero_vec_space" text="custom">per definisie</xref> eindig-dimensioneel.
+      </p>
 
-      <p>If <m>W</m> is not the zero vector space, then there exists a nonzero vector <m>\ve{w}_1 \in W</m>. Consider the list <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Note that <m>\basis{B}_1</m> is linearly independent, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_1</m> spans <m>W</m>, then it is a basis for <m>W</m>, and so <m>W</m> is finite-dimensional and we are done.</p>
+      <p>
+        As <m>W</m> nie die nul-vektorruimte is nie, dan bestaan daar 'n nie-nul vektor <m>\ve{w}_1 \in W</m>. Beskou nou die lys <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Let op dat <m>\basis{B}_1</m> lineêr onafhanklik is uit <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/>. So, as <m>\basis{B}_1</m> vir <m>W</m> onderspan, dan is dit 'n basis vir <m>W</m>, en dus is <m>W</m> eindig-dimensioneel en ons is klaar.
+      </p>
 
-      <p>If <m>\basis{B}_1</m> does not span <m>W</m>, then there exists a vector <m>\ve{w}_2 \in W</m> which is not a scalar multiple of <m>\ve{e}_1</m>.
-        Now consider the list <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>. Once again, <m>\basis{B}_2</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_2</m> spans <m>W</m>, then it is a basis for <m>W</m>, and we are done. </p>
+      <p>
+        As <m>\basis{B}_1</m> nie vir <m>W</m> onderspan nie, dan is daar 'n vektor <m>\ve{w}_2 \in W</m> wat nie 'n skalaarveelvoud van <m>\ve{e}_1</m>is nie.
+        Beskou nou die lys <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>. Weereens is <m>\basis{B}_2</m> lineêr onafhanklik uit <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/>. So, as <m>\basis{B}_2</m> vir <m>W</m> onderspan, dan is dit 'n basis vir <m>W</m>, en ons is klaar.
+      </p>
 
+      <p>
+        As <m>\basis{B}_2</m> nog nie vir <m>W</m> onderspan nie, dan is daar 'n vektor
+        <m>\ve{w}_3 \in W</m> wat nie 'n lineêre kombinasie van <m>\ve{w}_1</m> en <m>\ve{w}_2</m> is nie.
+        Beskou nou die lys <m>\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}</m>. Weereens is <m>\basis{B}_3</m> lineêr onafhanklik uit <xref ref="lin_comb_prec_vec"/> van <xref ref="lin_dependence_prop"/>. As dit nogsteeds nie vir <m>W</m> onderspan nie, dan is daar 'n vektor <m>\ve{w}_4 \in W</m> wat nie 'n lineêre kombinasie van <m>\ve{w}_1, \ve{w}_2, \ve{w}_3</m> is nie. Beskou dan die lys <m>\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose </m>.
+      </p>
 
-      <p>If <m>\basis{B}_2</m> does not span <m>W</m>, then there exists a vector
-        <m>\ve{w}_3 \in W</m> which is not a linear combination of <m>\ve{w}_1</m> and <m>\ve{w}_2</m>.
-        Now consider the list <m>\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}</m>. Again, <m>\basis{B}_3</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. If it does not span <m>W</m>, then there exists a vector <m>\ve{w}_4 \in W</m> which is not a linear combination of <m>\ve{w}_1, \ve{w}_2, \ve{w}_3</m>. So consider the list <m>\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose </m>. </p>
-
-       <p>This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="bumping_off_lemma"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.</p>
-    </paragraphs>
-      <paragraphs>
-        <title>Proving that <m>\Dim(V) = \Dim(W) \Rightarrow W = V</m></title>  
-        <p>
-          Suppose that <m>\Dim(W) = \Dim(V)</m> but that <m>W \neq V</m>. Since <m>W \neq V</m>, there exists a vector <m>\ve{v}</m> which is an element of <m>V</m> but not an element of <m>W</m>. Let <m>\basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_n \bclose</m> be a basis for <m>W</m>. We can add <m>\ve{v}</m> to <m>\basis{B}</m> to get the following list of vectors in <m>V</m>:
-          <me>
-            \basis{B}' = \bopen \ve{w}_1, \ldots, \ve{w}_n, \ve{v} \bclose.
-          </me>
-          Since <m>\ve{v}</m> cannot be written as a linear combination of <m>\ve{w}_1, \ldots, \ve{w}_n</m>, we conclude that <m>\basis{B}'</m> linearly lindependent, by <xref ref="lin_comb_prec_vec"/>. But then <m>\basis{B}'</m> is a list of <m>n+1</m> linearly independent vectors in an <m>n</m>-dimensional vector space <m>V</m>. This is impossible, by <xref ref="bumping_off_lemma"/>. Therefore our assumption was false, and we must have <m>W = V</m>. 
-        </p>
-      </paragraphs>
-
+       <p>
+        So gaan ons aan, maar hierdie proses moet stop vir een of ander <m>k \leq n</m>. As dit nie die geval is nie, sou dit 'n lys <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m> tot gevolg hê wat uit <m>n+1</m> lineêr onafhanklike vektore uit <m>V</m> bestaan. Maar <m>\Dim V = n</m>, so dit is uit <xref ref="Steinitz-exchange-lemma" text="title"/> onmoontlik. Dus moet die versameling <m>\basis{B}_k</m> vir een of ander <m>k \leq n</m> 'n basis vir <m>W</m> wees.
+      </p>
+      <p>
+        Nou bewys ons dat as <m>\Dim(V) = \Dim(W)</m>, dan volg <m>W = V</m>.
+      </p>
+      <p>
+        Veronderstel dat <m>\Dim(W) = \Dim(V)</m> maar dat <m>W \neq V</m>. Aangesien <m>W \neq V</m>, moet daar 'n vektor <m>\ve{v}</m> bestaan wat 'n element van <m>V</m> is, maar nie 'n element van <m>W</m> is nie. Laat <m>\basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_n \bclose</m> 'n basis vir <m>W</m> wees. Ons kan nou <m>\ve{v}</m> by <m>\basis{B}</m> voeg om die volgende lys vektore in <m>V</m> te kry:
+        <me>
+          \basis{B}' = \bopen \ve{w}_1, \ldots, \ve{w}_n, \ve{v} \bclose.
+        </me>
+        Aangesien <m>\ve{v}</m> nie as 'n lineêre kombinasie van <m>\ve{w}_1, \ldots, \ve{w}_n</m> geskryf kan word nie, lei ons af dat <m>\basis{B}'</m> uit <xref ref="lin_comb_prec_vec"/> ook lineêr onafhanklik is. Maar dan is <m>\basis{B}'</m> 'n lys van <m>n+1</m> lineêr onafhanklike vektore in 'n <m>n</m>-dimensionele vektorruimte <m>V</m>. Uit <xref ref="Steinitz-exchange-lemma" text="title"/> is dit onmoontlik. Daarom was ons aanname onwaar en dit volg dat <m>W = V</m>.
+      </p>
     </proof>
- <!-- End of translation needed -->
   </subsection>
+
   <subsection>
     <title>Oneindig-dimensionele vektorruimtes</title>
+
+    <definition>
+      <statement>
+        <p>
+          'n Vektorruimte <m>V</m> word
+          <term>oneindig-dimensioneel</term> genoem
+          as dit nie eindig-dimensioneel is nie.
+        </p>
+      </statement>
+    </definition>
+
     <p>
-      Dit is goed om 'n paar voorbeelde van oneindig-dimensionele vektorruimte te
-      hê.
+      Dit is goed om 'n paar voorbeelde van oneindig-dimensionele vektorruimte te hê.
     </p>
 
     <proposition>
       <statement>
         <p>
-          <m>\Poly</m> is oneindigdimensioneel.
+          <m>\Poly</m> is oneindig-dimensioneel.
         </p>
       </statement>
     </proposition>
 
     <proof>
       <p>
-        Veronderstel <m>\Poly</m> is eindigdimensioneel.
-        Dit beteken daar
-        bestaan 'n eindige versameling polinome
-        <m>\ve{p}_1, \ve{p}_2, \ldots,
-        \ve{p}_n</m> wat <m>\Poly</m> span.
-        Maar, laat <m>d</m> die hoogste graad van al die
-        polinome in die lys <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m> wees.
-        Dan is
-        <m>\ve{p} := x^{d+1}</m> 'n polinoom wat nie in die span van
-        <m>\ve{p}_1,
-        \ve{p}_2, \ldots, \ve{p}_n</m> is nie, want die sommering en
-        skalaarvermenigvuldiging van polinome kan nooit die graad verhoog nie.
-        Ons het 'n teenstelling bereik.
-        So ons aanvanklike aanname kan nie waar
-        wees nie, i.e.
+        Veronderstel <m>\Poly</m> is eindig dimensioneel.
+        Dit beteken dat daar 'n eindige versameling polinome
+        <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m> bestaan wat <m>\Poly</m> onderspan.
+        Maar, laat <m>d</m> die hoogste graad van al die polinome in die lys <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m> wees.
+        Dan is <m>\ve{p} := x^{d+1}</m> 'n polinoom wat nie in die span van
+        <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m> is nie,
+        want die optelling en skalaarvermenigvuldiging van polinome nooit die graad kan verhoog nie.
+        Dit is 'n teenstrydigheid.
+        So ons aanvanklike aanname kan nie waar wees nie, i.e.
         <m>\Poly</m> kan nie eindigdimensioneel wees nie.
       </p>
     </proof>
@@ -866,7 +911,7 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
       <statement>
         <p>
           Ons sal dit nie hier bewys nie, maar die volgende
-          vektorruimtes is ook eindigdimensioneel:
+          vektorruimtes is ook oneindig dimensioneel:
 
           <ul>
             <li>
@@ -883,7 +928,7 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
 
             <li>
               <p>
-                <m>\Cont(I)</m> vir enige nie-le&#xeb; interval <m>I</m>,
+                <m>\Cont(I)</m> vir enige nie-leë interval <m>I</m>,
               </p>
             </li>
 
@@ -892,34 +937,30 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
                 <m>\Diff(I)</m> vir enige oop interval <m>I</m>, en
               </p>
             </li>
+
             <li>
               <p>
                 <m>\Poly^k</m>.
               </p>
             </li>
-
           </ul>
         </p>
       </statement>
     </example>
   </subsection>
-  
 
   <subsection xml:id="sifting_subsection">
     <title>Die sifalgoritme en die gebruike daarvan</title>
     <p>
-      As ons die bewys van <xref ref="bumping_off_lemma">Proposisie</xref> (die
-      <sq>Afstampproposisie</sq>) noukeurig bestudeer, vind ons dat dit van 'n
+      As ons die bewys van <xref ref="Steinitz-exchange-lemma" text="title"></xref>
+      noukeurig bestudeer, vind ons dat dit van 'n
       <em>sif-algoritme</em> gebruik maak.
       Hierdie algoritme kan op <em>enige</em>
-      lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> in 'n vektorruimte
-      toegepas word.
-      Beskou elke vektor <m>\ve{v}_i</m> in so 'n lys
-      opeenvolgend.
-      As <m>\ve{v}_i</m> die nul-vektor is, of as dit 'n line&#xea;re
+      lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> in 'n vektorruimte toegepas word.
+      Beskou elke vektor <m>\ve{v}_i</m> in so 'n lys opeenvolgend.
+      As <m>\ve{v}_i</m> die nul-vektor is, of as dit 'n lineêre
       kombinasie van die voorafgaande vektore
-      <m>\ve{v}_1, \ve{v}_2, \ldots,
-      \ve{v}_{n-1}</m> is, verwyder dit van die lys.
+      <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_{n-1}</m> is, verwyder dit van die lys.
     </p>
 
     <example>
@@ -927,17 +968,15 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
         <p>
           Sif die volgende lys vektore in <m>\mathbb{R}^3</m>:
           <md>
-            <mrow>\ve{v}_1 \amp = (1,2,-1), \amp  \ve{v}_2 \amp = (0, 0, 0), \amp  \ve{v}_3 \amp = (3, 6,
-            -3)</mrow>
-            <mrow>\ve{v}_4 \amp = (1, 0, 5), \amp  \ve{v}_5 \amp = (5, 4, 13), \amp   \ve{v}_6 \amp = (1,
-            1, 0)</mrow>
+            <mrow>\ve{v}_1 \amp = (1,2,-1), \amp  \ve{v}_2 \amp = (0, 0, 0), \amp  \ve{v}_3 \amp = (3, 6, -3)</mrow>
+            <mrow>\ve{v}_4 \amp = (1, 0, 5), \amp  \ve{v}_5 \amp = (5, 4, 13), \amp   \ve{v}_6 \amp = (1, 1, 0)</mrow>
           </md>.
         </p>
 
         <p>
           Ons begin met <m>\ve{v}_1</m>.
           Aangesien dit nie die nul-vektor is nie en
-          nie 'n line&#xea;re kombinasie van enige voorafgaande vektore is nie,
+          nie 'n lineêre kombinasie van enige voorafgaande vektore is nie,
           bly dit in die lys.
           Nou beweeg ons aan na <m>\ve{v}_2</m>, wat nul is, so
           ons verwyder dit.
@@ -945,28 +984,24 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
           vasstel dat dit as<m>3 \ve{v}_1</m> geskryf kan word, so ons verwyder dit.
           Ons beweeg aan na <m>\ve{v}_4</m>.
           Dit is nie nul nie, en dit kan nie as 'n
-          veelvoud van <m>\ve{v}_1</m> uitgedruk word nie (bevestig dit vir jouself),
+          veelvoud van <m>\ve{v}_1</m> uitgedruk word nie (bevestig dit self),
           so dit bly in die lys.
           Ons beweeg aan na <m>\ve{v}_5</m>.
-          Ons kyk of dit as
-          die line&#xea;re kombinasie
+          Ons kyk of dit as die lineêre kombinasie
           <me>
             \ve{v}_5 = a\ve{v}_1 + b \ve{v}_4
           </me>
           geskryf kan word en vind die oplossing <m>a=2, b=3</m>
           (bevestig self),
-          so
-          ons verwyder dit.
-          Uiteindelik kom ons by <m>\ve{v}_6</m>.
-          Ons ondersoek of
-          dit as 'n line&#xea;re kombinasie
+          so ons verwyder dit.
+          Laastens kom ons by <m>\ve{v}_6</m>.
+          Ons ondersoek of dit as 'n lineêre kombinasie
           <me>
             \ve{v}_6 = a\ve{v}_1 + b \ve{v}_4
           </me>
           geskryf kan word en vind geen oplossings nie
           (bevestig self),
-          so dit
-          bly in die lys.
+          so dit bly in die lys.
           Ons finale gesifte lys is
           <me>
             \ve{v}_1, \ve{v}_4, \ve{v}_6
@@ -978,47 +1013,44 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
     <exercise>
       <statement>
         <p>
-          Doen die drie <sq>bevestig self</sq>-bewerkings hierbo.
+          Doen die drie <q>bevestig self</q>-berekeninge hierbo.
         </p>
       </statement>
-     <solution>
+      <solution>
         <p>
         <ol>
-        <li>
-        <p>
-        Suppose <me> (a,2a,-a) = (1,0,5) </me>. Then the first entry requires that <m> a =1 </m> but the second entry requires that <m> a = 0 </m>. Hence there can be no <m> a </m> satisfying the equation.
-        </p>
-        </li>
+          <li>
+            <p>
+              Veronderstel dat <me> (a,2a,-a) = (1,0,5) </me>. Uit die eerste inskrywing volg dit dat <m> a =1 </m>, maar die tweede vereis dat <m> a = 0 </m>. Dus kan daar geen <m> a </m> wees wat die vergelyking bevredig nie.
+            </p>
+          </li>
 
-        <li>
-        <p>
-        <me>
-        2 \ve v_1 + 3 \ve v_2 = 2(1,2,-1) + 3(1,0,5) \\ = (2 + 3, 4 + 0, -2 + 15) =  (5,4,13) = \ve v_4
-        </me>
-        </p>
-        </li>
+          <li>
+            <p>
+              <md>
+                <mrow> 2 \ve v_1 + 3 \ve v_2 \amp = 2(1,2,-1) + 3(1,0,5) </mrow>
+                <mrow> \amp = (2 + 3, 4 + 0, -2 + 15) =  (5,4,13) = \ve v_4</mrow>
+              </md>
+            </p>
+          </li>
 
-
-        <li>
-          <p>
-        Suppose 
-        <me>
-        a \ve v_1 + b \ve v_4 = \ve v_6 
-        </me>
-        i.e.
-        <me>
-        (a,2a,-a) + (b,0,5b)= (1,1,0).
-        </me>
-        Consideration of the second entry gives <m> a = \frac{1}{2} </m> which, by looking at the first entry, forces <m> b = \frac{1}{2}</m> but then, if we look at the third entry, <m> -\frac{1}{2} + \frac{5}{2} \neq 0 </m>. Hence there are no solutions to the equation.
-        </p>
-        </li>
-
+          <li>
+            <p>
+              Veronderstel dat
+              <me>
+                a \ve v_1 + b \ve v_4 = \ve v_6
+              </me>
+              m.a.w.
+              <me>
+                (a,2a,-a) + (b,0,5b)= (1,1,0).
+              </me>
+              As ons na die tweede inskrywing kyk, kry ons <m> a = \frac{1}{2} </m> wat, as ons dan na die eerste inskrywing kyk, <m> b = \frac{1}{2}</m> forseer. Maar dan, as ons na die derde inskrywing kyk, moet <m> -\frac{1}{2} + \frac{5}{2} \neq 0 </m>. Dus is daar geen oplossings vir die vergelyking nie.
+            </p>
+          </li>
 
         </ol>
         </p>
-    </solution>
-
-
+      </solution>
     </exercise>
 
     <p>
@@ -1029,10 +1061,8 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
     <lemma xml:id="sift_lemma_basis">
       <statement>
         <p>
-          As 'n lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots,
-          \ve{v}_n</m> 'n vektorruimte <m>V</m> span,
-          dan sal sifting van die lys in 'n
-          basis vir <m>V</m> resulteer.
+          As 'n lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> 'n vektorruimte <m>V</m> onderspan,
+          dan sal sifting van die lys in 'n basis vir <m>V</m> resulteer.
         </p>
       </statement>
     </lemma>
@@ -1040,36 +1070,29 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
     <proof>
       <p>
         By elke stap vind ons dat 'n vektor wat uit die lys verwyder word
-        &#xf3;f die nul-vektor is, &#xf3;f 'n line&#xea;re kombinasie van die
-        voorafgaande vektore is wat ni&#xe9;
-        uit die lys verwyder word nie.
-        So
-        as ons die vektor uit die lys verwyder,
-        sal die oorblywende vektore
-        steeds <m>V</m> span.
-        Daarom span die vektore in die finale lys steeds <m>V</m>.
+        òf die nul-vektor is, òf 'n lineêre kombinasie van die
+        voorafgaande vektore is wat nié uit die lys verwyder word nie.
+        So as ons die vektor uit die lys verwyder,
+        sal die oorblywende vektore steeds vir <m>V</m> onderspan.
+        Daarom onderspan die vektore in die finale lys steeds <m>V</m>.
       </p>
 
       <p>
-        Om te sien dat die finale gesifte lys line&#xea;r onafhanklik is, pas
+        Om te sien dat die finale gesifte lys lineêr onafhanklik is, pas
         ons <xref ref="lin_dependence_prop">Proposisie</xref> toe.
         Deur konstruksie is geen
-        vektor in die finale lys 'n line&#xea;re kombinasie van die voorafgaande
-        vektore nie
-        (ander sou dit verwyder gewees het!).
-        Daarom is die finale
-        lys nie line&#xea;r afhanklik nie,
-        so dit moet line&#xea;r onafhanklik
-        wees!
+        vektor in die finale lys 'n lineêre kombinasie van die voorafgaande vektore nie
+        (anders sou dit verwyder gewees het!).
+        Daarom is die finale lys nie lineêr afhanklik nie,
+        so dit moet lineêr onafhanklik wees!
       </p>
     </proof>
 
     <corollary xml:id="first_corollary_please">
       <statement>
         <p>
-          Enige line&#xea;r onafhanklike lys vektore
-          <m>\ve{v}_1,
-          \ve{v}_2, \ldots, \ve{v}_k</m> in 'n eindig-dimensionele vektorruimte <m>V</m>
+          Enige lineêr onafhanklike lys vektore
+          <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k</m> in 'n eindig-dimensionele vektorruimte <m>V</m>
           kan uitgebrei word tot 'n basis van <m>V</m>.
         </p>
       </statement>
@@ -1081,34 +1104,28 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
         <m>\ve{e}_1, \ldots, \ve{e}_n</m>.
         Oorweeg nou die lys
         <me>
-          L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2,
-          \ldots, \ve{e}_n
+          L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n
         </me>
-        wat duidelik <m>V</m> span.
+        wat duidelik <m>V</m> onderspan.
         Deur die lys te sif, sal ons 'n basis vir <m>V</m>
         kry, volgens <xref ref="sift_lemma_basis">Lemma</xref>.
-        Sommige van die
-        <m>\ve{e}</m>-vektore mag dalk verwyder wees in die proses.
-        Maar geeneen van
-        die <m>\ve{v}</m>-vektore sal verwyder word nie, aangesien dit sou beteken
-        dat sommige vektore <m>\ve{v}_i</m> 'n line&#xea;re kombinasie van die
-        voorafgaande vektore <m>\ve{v}_1, \ldots, \ve{v}_{i-1}</m> is, wat
-        onmoontlik is,
-        omdat <m>\ve{v}_1, \ldots, \ve{v}_k</m> 'n line&#xea;r
-        onafhanklike lys is.
-        Dus n&#xe1; sifting van die lys <m>L</m> brei ons ons
-        die oorspronklike lys <m>\ve{v}_1, \ldots, \ve{v}_k</m> uit na 'n basis van
-        <m>V</m>.
+        Sommige van die <m>\ve{e}</m>-vektore mag dalk verwyder wees in die proses.
+        Maar geeneen van die <m>\ve{v}</m>-vektore sal verwyder word nie,
+        aangesien dit sou beteken dat sommige vektore
+        <m>\ve{v}_i</m> 'n lineêre kombinasie van die
+        voorafgaande vektore <m>\ve{v}_1, \ldots, \ve{v}_{i-1}</m> is, wat onmoontlik is,
+        omdat <m>\ve{v}_1, \ldots, \ve{v}_k</m> 'n lineêr onafhanklike lys is.
+        Dus ná sifting van die lys <m>L</m> brei ons ons die oorspronklike lys
+        <m>\ve{v}_1, \ldots, \ve{v}_k</m> uit na 'n basis van <m>V</m>.
       </p>
     </proof>
 
     <corollary xml:id="lin-ind-implies-basis">
       <statement>
         <p>
-          As <m>\ve{v}_1, \ve{v}_2,
-          \ldots, \ve{v}_n</m> 'n line&#xea;r
-          onafhanklike lys van <m>n</m> vektore in 'n <m>n</m>-dimensionele vektorruimte
-          <m>V</m> is, dan is dit 'n basis.
+          As <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> 'n lineêr
+          onafhanklike lys van <m>n</m> vektore in 'n <m>n</m>-dimensionele
+          vektorruimte <m>V</m> is, dan is dit 'n basis.
         </p>
       </statement>
     </corollary>
@@ -1116,12 +1133,11 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
     <proof>
       <p>
         Volgens <xref ref="first_corollary_please">Gevolgtrekking</xref> kan ons
-        <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> uitbrei tot 'n basis van <m>V</m>.
+        <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> tot 'n basis van <m>V</m> uitbrei.
         Maar <m>V</m> het dimensie <m>n</m>,
-        so die basis moet slegs <m>n</m> vektore bevat
-        volgens <xref ref="inv_dim">Stelling</xref>
-        (Onveranderlikheid van Dimensie).
-        Gevolglike het ons geen vektore bygevoeg nie, en ons oorspronklike lys
+        so die basis moet  volgens <xref ref="inv_dim">Stelling</xref> (Onveranderlikheid van Dimensie)
+        slegs <m>n</m> vektore bevat
+        Gevolglik het ons geen vektore bygevoeg nie, en ons oorspronklike lys
         is reeds 'n basis.
       </p>
     </proof>
@@ -1132,36 +1148,31 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
           In <xref ref="new_basis_for_poly_3">Voorbeeld</xref> het ons gewys dat
           die lys polinome
           <me>
-            \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2
-            - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
+            \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
           </me>
-          line&#xea;r onafhanklik in <m>\Poly_3</m> is.
-          Aangesien <m>\dim \Poly_3 = 4</m>,
+          lineêr onafhanklik in <m>\Poly_3</m> is.
+          Aangesien <m>\Dim \Poly_3 = 4</m>,
           sien ons dat dit 'n basis vir <m>\Poly_3</m> is.
         </p>
 
-        <assemblage>
-          <p>
-            In <xref ref="chebyshev_example">Oefening</xref> het jy gewys
-            dat <m>\ve{q}_0, \ldots, \ve{q}_3</m> 'n basis vir <m>\Poly_3</m> is deur 'n
-            <sq>brute krag</sq> benadering.
-            Hierdie nuwe metode is <em>verskillend</em>!
-          </p>
-        </assemblage>
-
+        <p>
+          In <xref ref="chebyshev_example">Oefening</xref> het jy gewys
+          dat <m>\ve{q}_0, \ldots, \ve{q}_3</m> 'n basis vir <m>\Poly_3</m> is deur dit direk teen die definisie te bevestig.
+          Hierdie nuwe metode is <em>verskillend</em>!
+        </p>
       </statement>
     </example>
   </subsection>
-<exercises>
-    <exercise>
+
+<exercises xml:id="ch2sec3exercises">
+
+    <exercise xml:id="exercise_for_new_basis">
       <statement>
         <p>
           Sif die lys vektore
           <md>
-            <mrow>\ve{v}_1 \amp = (0,0,0), \amp  \ve{v}_2 \amp = (1, 0, -1), \amp  \ve{v}_3 \amp = (1, 2,
-            3)</mrow>
-            <mrow>\ve{v}_4 \amp = (3, 4, 5), \amp  \ve{v}_5 \amp = (4, 8, 12), \amp   \ve{v}_6 \amp = (1,
-            1, 0)</mrow>
+            <mrow>\ve{v}_1 \amp = (0,0,0), \amp  \ve{v}_2 \amp = (1, 0, -1), \amp  \ve{v}_3 \amp = (1, 2, 3)</mrow>
+            <mrow>\ve{v}_4 \amp = (3, 4, 5), \amp  \ve{v}_5 \amp = (4, 8, 12), \amp   \ve{v}_6 \amp = (1, 1, 0)</mrow>
           </md>.
         </p>
       </statement>
@@ -1171,111 +1182,93 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
       <statement>
         <p>
           Laat <m>V</m> 'n vektorruimte van dimensie <m>n</m> wees.
-          Besluit
-          (en skryf jou besluit neer!) of die volgende bewerings waar of onwaar
-          is.
+          Besluit (en skryf jou besluit neer!) of die volgende bewerings waar of onwaar is.
           As dit waar is, bewys dit.
           Indien nie, gee 'n teenvoorbeeld.
 
-          <ul>
+          <ol label="a">
             <li>
-              <title>(a)</title>
               <p>
-                Enige line&#xea;r onafhanklike lys vektore in <m>V</m> bevat
-                hoogstens <m>n</m> vektore.
+                Enige lineêr onafhanklike lys vektore in <m>V</m> bevat hoogstens <m>n</m> vektore.
               </p>
             </li>
 
             <li>
-              <title>(b)</title>
               <p>
-                Enige lys vektore wat <m>V</m> span bevat ten minste <m>n</m>
-                vektore.
+                Enige lys vektore wat vir <m>V</m> onderspan bevat ten minste <m>n</m> vektore.
               </p>
             </li>
-          </ul>
+          </ol>
         </p>
       </statement>
-      <!-- TO DO: Translate the solutions -->
-    <solution>
-      <p>
-        <ol>
-          <li>
-            <p>
-             True
-             <proof>
-              <p>
-             Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\dim V \geq n+1 </m> contradicting, the fact that <m> \dim V = n</m>.
-           </p>
-           </proof>
-           </p>
-          </li>
-         
-          <li>
-            <p>
-            True
-            <proof>
-              <p>
-                Try it yourself! Your proof will be very similar to the one given for <m>a</m>.
-              </p>
-            </proof>
-          </p>
-          </li>
-        </ol>
-      </p>
-    </solution>
 
+      <solution>
+        <p>
+          <ol>
+            <li>
+            <p>
+              Waar
+            </p>
+            <p>
+              Veronderstel ons het 'n lys van <m>n+1</m> lineêr onafhanklike vektore gehad. Uit <xref ref = "first_corollary_please">Gevolgtrekking </xref>, kan ons die lys uitbrei tot 'n basis vir <m>V</m>. Dus sou ons 'n basis vir <m>V</m> met ten minste <m> n + 1</m> hê. Ons lei af dat <m>\Dim V \geq n+1 </m> wat teenstrydig is met die feit dat <m> \Dim V = n</m>.
+           </p>
+          </li>
+
+            <li>
+            <p>
+              Waar
+            </p>
+            <p>
+              Probeer dit self. Jou bewys sal baie soortgelyk wees aan die een wat vir <m>a</m> gegee is.
+            </p>
+          </li>
+          </ol>
+        </p>
+      </solution>
     </exercise>
-
-
 
     <exercise xml:id="n_lin_ind_is_basis">
       <statement>
         <p>
-          Voltooi die bewys van die
-          volgende Lemma.
+          Voltooi die bewys van die volgende Lemma.
         </p>
 
         <p>
           <em>Lemma.</em> Veronderstel dat <m>V</m> 'n vektorruimte van dimensie <m>n</m> is.
-          Dan is enige line&#xea;r onafhanklike lys van <m>n</m> vektore in <m>V</m> 'n
-          basis vir <m>V</m>.
+          Dan is enige lineêr onafhanklike lys van <m>n</m> vektore in <m>V</m> 'n basis vir <m>V</m>.
         </p>
 
         <p>
-          <em>Bewys.</em> Laat <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n
-          \right\}</m> 'n line&#xea;r onafhanklike lys vektore in <m>V</m> wees.
+          <em>Bewys.</em> Laat <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> 'n lineêr onafhanklike lys vektore in <m>V</m> wees.
         </p>
 
         <p>
-          Veronderstel dat <m>\basis{B}</m> <em>nie</em>
-          'n basis vir <m>V</m> is nie.
+          Veronderstel dat <m>\basis{B}</m> <em>nie</em> 'n basis vir <m>V</m> is nie.
         </p>
 
         <p>
-          Daarom span <m>\basis{B}</m> nie <m>V</m> nie, want... (a)
+          Daarom onderspan <m>\basis{B}</m> nie vir <m>V</m> nie, want <ellipsis /> (a)
         </p>
 
         <p>
-          Daarom bestaan daar <m>\ve{v} \in V</m> sodanig dat ... (b)
+          Daarom bestaan daar <m>\ve{v} \in V</m> sodanig dat <ellipsis /> (b)
         </p>
 
         <p>
           Voeg nou <m>\ve{v}</m> by die lys
-          <m>\basis{B}</m> om 'n nuwe lys te vorm,
-          <m>\basis{B}' :=</m> ... (c)
+          <m>\basis{B}</m> om 'n nuwe lys <m>\basis{B}' :=</m> te vorm <ellipsis /> (c)
         </p>
 
         <p>
-          Die nuwe lys <m>\basis{B}'</m> is line&#xea;r onafhanklik omdat ... (d)
+          Die nuwe lys <m>\basis{B}'</m> is lineêr onafhanklik omdat <ellipsis /> (d)
         </p>
 
         <p>
-          Dit is 'n teenstelling, omdat ... (e)
+          Dit is 'n teenstrydigheid, omdat <ellipsis /> (e)
         </p>
 
         <p>
-          Dus <m>\basis{B}</m> moet 'n basis vir <m>V</m> wees.
+          Dus moet <m>\basis{B}</m> 'n basis vir <m>V</m> wees.
         </p>
       </statement>
     <solution>
@@ -1283,13 +1276,13 @@ Duidelik is <m>f \in V</m>, met ander woorde <m>f</m> is wel 'n oplossing van di
       <ol>
         <li>
           <p>
-Any linearly independent spanning set is by definition a basis, contradicting our assumption.
+            Enige lineêr onafhanklike versameling wat 'n vektorruimte onderspan is per definisie 'n basis. Dit is teenstrydig met ons aanname.
           </p>
         </li>
 
         <li>
           <p>
-            <m> \ve v </m> is not a linearly combination of the vectors in <m> \basis B </m>.
+            <m> \ve v </m> is nie 'n lineêre kombinasie van die vektore in <m> \basis B </m> nie.
           </p>
         </li>
 
@@ -1301,38 +1294,36 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
 
         <li>
           <p>
-           No vector in  <m> \basis B'  </m> is a linear combination of the previous vectors and so the list is thus linearly indepedent by <xref ref = "lin_dependence_prop" />.
+            Geen vektor in <m> \basis B'  </m> is 'n lineêre kombinasie van die voorafgaande vektore nie, so die lys is uit <xref ref = "lin_dependence_prop" /> lineêr onafhanklik.
           </p>
         </li>
 
         <li>
           <p>
-            The vector subspace <m> W </m> of <m> V </m> spanned by the vectors in <m> \basis B' </m> has dimension <m> n + 1</m> and so <m> \dim(W) > \dim(V)</m> which contradicts <xref ref = "dim-of-subspace-prop" />.
+            Die deelruimte <m> W </m> van <m> V </m> wat onderspan word deur die vektore in <m> \basis B' </m> het dimensie <m> n + 1</m> en dus is <m> \Dim(W) > \Dim(V)</m> wat teenstrydig is met <xref ref = "dim-of-subspace-prop" />.
           </p>
         </li>
       </ol>
       </p>
-</solution>
-          </exercise>
+    </solution>
+    </exercise>
 
     <exercise xml:id="checking_matrices_lin_dep">
       <statement>
         <p>
           Gebruik <xref ref="true_false_span_lin_ind">Oefening</xref>(a) om aan te toon dat die lys matrikse in
-          <m>\Mat_{2,2}</m> vanaf <xref ref="x2_by_2_matrices_lin_dep">Oefening</xref> line&#xea;r
-          onafhanklik is.
+          <m>\Mat_{2,2}</m> vanaf <xref ref="x2_by_2_matrices_lin_dep">Oefening</xref> lineêr onafhanklik is.
         </p>
       </statement>
-    <solution>
-      <p>
-        <m>\Mat_{2,2}</m> has dimension 4 since it is spanned by <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> where <m> \ve e_{i,j}</m> is the matrix with a <m> 1 </m> in the <m>ij^\text{th} </m> entry and 0's everywhere else. By <xref ref="true_false_span_lin_ind">Exercise</xref>(a), any linearly indepedent list of vectors in  <m>\Mat_{2,2}</m> has length at most 4. Since the list of matrices in
-        <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> has length 5, it cannot be linearly independent.
-      </p>
-    </solution>
-
+      <solution>
+        <p>
+          <m>\Mat_{2,2}</m> is 4-dimensioneel omdat dit deur <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> onderspan word, waar <m> \ve e_{i,j}</m> die matriks is met 'n <m> 1 </m> in die inskrywing in ry <m>i</m> en kolom <m>j</m> en nulle oral anders. Uit <xref ref="true_false_span_lin_ind">Oefening</xref>(a), het enige lineêr onafhanklike lys vektore in <m>\Mat_{2,2}</m> 'n lengte van hoogstens 4. Aangesien die lys matrikse in
+          <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Oefening</xref>5 elemente het, kan dit nie lineêr onafhanklik wees nie.
+        </p>
+      </solution>
     </exercise>
 
-    <exercise xml:id="dim_poly_at_2_ex">
+    <exercise xml:id="dim_poly_at_2_ex-a">
       <statement>
         <p>
           In elke geval, gebruik die
@@ -1340,9 +1331,8 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
           <xref ref="n_lin_ind_is_basis">en</xref> om te bepaal
           of <m>\basis{B}</m> 'n basis vir <m>V</m> is:
 
-          <ul>
+          <ol label="a">
             <li>
-              <title>(a)</title>
               <p>
                 <m>V = \Poly_2</m>, <m>\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1
                 + x - 3x^2, \, x-x^2 \right\}</m>
@@ -1350,33 +1340,33 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
             </li>
 
             <li>
-              <title>(b)</title>
               <p>
-                <m>V = \Mat_{2,2}</m>, <me>\basis{B} = \left\{ 
- \begin{bmatrix}
-1 &amp; 2 \\
--1 &amp; 3
-\end{bmatrix},\,
- \begin{bmatrix}
-0 &amp; 1\\
-3 &amp; -1
-\end{bmatrix},\,
-\begin{bmatrix}
-1 &amp; 2\\
-3 &amp; 4
-\end{bmatrix}
-     \right\} </me>
+                <m>V = \Mat_{2,2}</m>,
+                <me>\basis{B} = \left\{
+                   \begin{bmatrix}
+                    1 \amp 2 \\
+                    -1 \amp 3
+                  \end{bmatrix},\,
+                   \begin{bmatrix}
+                    0 \amp 1\\
+                    3 \amp -1
+                  \end{bmatrix},\,
+                  \begin{bmatrix}
+                    1 \amp 2\\
+                    3 \amp 4
+                  \end{bmatrix}
+                       \right\}
+                </me>
               </p>
             </li>
 
             <li>
-              <title>(c)</title>
               <p>
-                <m>V = \Trig_2</m>, <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2
-                x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
+                <m>V = \Trig_2</m>,
+                <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
               </p>
             </li>
-          </ul>
+          </ol>
         </p>
       </statement>
     <solution>
@@ -1384,180 +1374,165 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         <ol>
 
           <li>
-            <m> \Poly_2 </m> has a basis <m> \basis B' = \bopen 1 , x , x^2 \bclose </m> and so has dimension 3. Since <m> \basis B </m> has length 4, it cannot be linearly independent by <xref ref="true_false_span_lin_ind">Exercise</xref>(a). Hence <m> \basis B </m> cannot be a basis for  <m> \Poly_2 </m>.
+            Die versameling <m> \basis B' = \bopen 1 , x , x^2 \bclose </m> is 'n basis vir <m> \Poly_2 </m> en hierdie vektorruimte het dus dimensie 3. Aangesien <m> \basis B </m> uit 4 elemente bestaan, kan dit uit <xref ref="true_false_span_lin_ind">Oefening</xref>(a) nie lineêr onafhanklik wees nie. Dus kan <m> \basis B </m> nie 'n basis vir <m> \Poly_2 </m> wees nie.
           </li>
 
           <li>
-          <m> \Mat_{2,2} </m> has dimension 4. Since <m> \basis B </m> has length 3, it cannot span <m> \Mat_{2,2} </m>. Hence  <m> \basis B </m> cannot be a basis for <m> \Mat_{2,2} </m>.
+          <m> \Mat_{2,2} </m> het dimensie 4. Aagesien <m> \basis B </m> lengte 3 het, kan dit nie <m> \Mat_{2,2} </m> onderspan nie. Dus kan <m> \basis B </m> nie 'n basis vir <m> \Mat_{2,2} </m> wees nie.
           </li>
 
           <li>
-<m> \Trig_2 </m> has dimension 5. Since <m> \basis B </m> has length 5, it cannot span <m> \Trig_2 </m>. Hence <m> \basis B </m> cannot be a basis for <m> \Trig_2 </m>.
+            <m> \Trig_2 </m> het dimensie 5. Aangesien <m> \basis B </m> lengte 4 het, kan dit nie <m> \Trig_2 </m> onderspan nie. Dus is <m> \basis B </m> nie 'n basis vir <m> \Trig_2 </m> nie.
           </li>
         </ol>
       </p>
     </solution>
-
     </exercise>
 
     <exercise>
       <statement>
         <p>
-          Laat <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> 'n line&#xea;r
+          Laat <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> 'n lineêr
           onafhanklike lys vektore in 'n vektorruimte <m>V</m> wees.
-          Skryf neer of die
-          volgende bewerings waar of onwaar is.
+          Skryf neer of die volgende bewerings waar of onwaar is.
           As dit waar is, bewys dit.
-          As dit
-          onwaar is, gee 'n teenvoorbeeld.
-          Wenk: Gebruik die definisie van
-          line&#xea;re onafhanklikheid.
+          As dit onwaar is, gee 'n teenvoorbeeld.
+          (Wenk: Gebruik die definisie van lineêre onafhanklikheid.)
 
-          <ul>
+          <ol label="a">
             <li>
-              <title>(a)</title>
               <p>
-                Die lys <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \,
-                \ve{u} + \ve{w} \right\}</m> is line&#xea;r onafhanklik.
+                Die lys <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is lineêr onafhanklik.
               </p>
             </li>
 
             <li>
-              <title>(b)</title>
               <p>
-                Die lys <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \,
-                \ve{u} - \ve{w} \right\}</m> is line&#xea;r onafhanklik.
+                Die lys <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is lineêr onafhanklik.
               </p>
             </li>
-          </ul>
+          </ol>
         </p>
       </statement>
       <solution>
-<p>
-<ol>
-<li>
-  <p>
-True. Suppose there is a linear relation on  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m>:
-<me>
-a( \ve{u} + \ve{v}) + b(\ve{v} + \ve{w}) + c(\ve{u} + \ve{w}).
-</me>
-This induces a linear relation on <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m>:
-<m>
-(a + c)\ve u + (a +b )\ve v + (b + c)w = \ve 0
-</m>
-Since <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> is linearly independent, we must have that
-<me>
-a + c = 0 \qquad (1) \\
-a + b = 0 \qquad (2) \\
-b + c = 0 \qquad (3)
-</me>
-<m> (1) + (2) </m> combined with <m> (3) </m> gives us that <m> a = 0 </m> and so <m> b = c = 0 </m> too. We conclude that  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
-  </p>
-</li>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Waar. Veronderstel daar was 'n lineêre verband tussen  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m>:
+              <me>
+                a( \ve{u} + \ve{v}) + b(\ve{v} + \ve{w}) + c(\ve{u} + \ve{w}).
+              </me>
+              Dit sou 'n lineêre verband tussen <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> tot gevolg hê:
+              <m>
+                (a + c)\ve u + (a +b )\ve v + (b + c)w = \ve 0
+              </m>
+              Aangesien <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> lineêr onafhanklik is, moet ons
+              <md>
+                <mrow> a + c = 0 \qquad (1) </mrow>
+                <mrow> a + b = 0 \qquad (2) </mrow>
+                <mrow> b + c = 0 \qquad (3) </mrow>
+              </md> hê.
+              <m> (1) + (2) </m> saam met <m> (3) </m> gee aan ons dat <m> a = 0 </m> en dus ook <m> b = c = 0 </m>. Ons lei af dat <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> lineêr onafhanklik is.
+            </p>
+          </li>
 
+          <li>
+            <p>
+              Onwaar. Laat <m> V = \mathbb{R}^3 </m> en
+              <me>
+                \ve u = (1,0,0) \, \ve v = (0,1,0), \, \ve w = (0,0,1)
+              </me>
+              sodat
+              <md>
+                <mrow> \ve u - \ve v \amp = (1,-1,0) </mrow>
+                <mrow> \ve v - \ve w \amp = (0,1,-1) </mrow>
+                <mrow> \ve u - \ve w \amp = (1,0,-1) </mrow>
+              </md>.
+              Deur inspeksie sien ons dat
+              <me>
+                (1,-1,0) + (0,1,-1) = (1,0,-1)
+              </me>
+              en dus is  <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> lineêr afhanklik.
+            </p>
 
-<li>
-  <p>
-False. Let <m> V = \mathbb{R}^3 </m>. Let
-<me>
-\ve u = (1,0,0) \, \ve v = (0,1,0), \, \ve w = (0,0,1)
-</me>
-and so
-<me>
-\ve u - \ve v = (1,-1,0) \\  \ve v - \ve w = (0,1,-1) \\ \ve u - \ve w = (1,0,-1)
-</me>.
-By inspection, we see that 
-<me>
- (1,-1,0) + (0,1,-1) = (1,0,-1)
-</me>
-and so  <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly dependent.</p>
-
-<p>
-Alternatively, we could have noticed that for any vectors <m> \ve u , \ve v , \ve w </m>:
-<me>
-(\ve u - \ve v) + (\ve v - \ve w) = \ve u - \ve w.
-</me>
-Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m>  satisfies <xref ref = "lin_dependence_prop" /> and so is linearly dependent.
-</p>
-</li>
-
-</ol>
-  </p>
+            <p>
+              Alternatiewelik kon ons oplet dat vir enige vektore <m> \ve u , \ve v , \ve w </m> geld
+              <me>
+                (\ve u - \ve v) + (\ve v - \ve w) = \ve u - \ve w
+              </me>.
+              Dus sal <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m>  vir <xref ref = "lin_dependence_prop" /> bevredig en is dus lineêr afhanklik.
+            </p>
+          </li>
+        </ol>
+      </p>
     </solution>
-
     </exercise>
 
-    <exercise>
+    <exercise xml:id="dim_poly_at_2_ex-b">
       <statement>
         <p>
           Vir elkeen van die volgende, toon aan dat <m>V</m> 'n
           deelruimte van <m>\Poly_2</m> is,
-          vind 'n basis vir <m>V</m>, en bereken <m>\dim
-          V</m>.
+          vind 'n basis vir <m>V</m>, en bereken <m>\Dim V</m>.
 
-          <ul>
+          <ol label="a">
             <li>
-              <title>(a)</title>
               <p>
                 <m>V = \{ p \in \Poly_2 : p(2) = 0 \}</m>
               </p>
             </li>
 
             <li>
-              <title>(b)</title>
               <p>
                 <m>V = \{ p \in \Poly_2 : xp'(x) = p(x) \}</m>
               </p>
             </li>
-          </ul>
+          </ol>
         </p>
       </statement>
-    <solution>
-<ol>
+    <solution><p>
+      <ol>
+        <li>
+          Ons los die bevestiging uit dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is, omdat dit eenvoudig is. Kom ons konstrueer nou 'n basis vir <m> V </m>. Begin met 'n nie-nul vektor <m> \ve v_1 </m>  in <m> V </m>. Ons maak die vanselfsprekende keuse <m> \ve v_1 = x -2 </m>. Kies volgende enige vektor <m> \ve v_2 </m> in <m> V </m> wat nie in die span van <m> \left \{ \ve v_1 \right\} </m> is nie. Een keuse daarvoor is <m> \ve v_2 = x(x-2) </m>. Aangesien <m> V </m> nie die hele vektorruimte <m>\Poly_2 </m>, is nie, weet ons dat <m> \Dim V \lt 3 </m>. Dus is <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> 'n basis vir <m> V </m> en dus is <m> \Dim V = 2 </m>.
+        </li>
 
-  <li>
-    We omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m> since it is routine. Let us now construct a basis for <m> V </m>. Begin with a non-zero vector <m> \ve v_1 </m>  in <m> V </m>. We make the most obvious choice, let <m> \ve v_1 = x -2 </m>. Next pick any vector  <m> \ve v_2 </m> in <m> V </m> not in the span of <m> \left \{ \ve v_1 \right\} </m>. An obvious choice is <m> \ve v_2 = x(x-2) </m>. Since <m> V </m> is not all of <m>\Poly_2 </m>, we know that <m> \dim V \lt 3 </m>. Thus <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> is a basis for <m> V </m> and so <m> \dim V = 2 </m>.
-  </li>
-
-  <li>
-Once again, we omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m>. Pick any non-zero vector <m>\ve v_1 </m> in <m> V </m>. Let's choose <m> \ve v_1 = x </m>. It is not as obvious as before whether there are indeed any vectors in <m> V </m> not in the span of <m> \left\{ \ve v_1 \right\} </m>, and so we must do some computations. If <m> p(x) = ax^2 + bx + c</m> is in <m> V </m>, <m> p(x)</m> must satisfy
-<me>
-x(2ax + b) = ax^2 + bx + c \\
-\implies 2ax^2 + bx = ax^2 + bx + c.
-</me>
-Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples of <m> \ve v_1 = x </m>. Hence <m> \bopen \ve v_1 \bclose </m> is a basis for <m> V </m> and so <m> \dim V = 1</m>.
-  </li>
-</ol>
-    </solution>
-
+        <li>
+          Weereens laat ons die bevestiging uit dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is. Kies enige nie-nul vektor <m>\ve v_1 </m> in <m> V </m>. Kom ons kies <m> \ve v_1 = x </m>. Hierdie keer is dit nie so duidelik dat daar enige vektore in <m> V </m> is wat nie in die span van <m> \left\{ \ve v_1 \right\} </m> is nie, en dus moet ons 'n paar berekeninge doen. As <m> p(x) = ax^2 + bx + c</m> in <m> V </m> is, moet <m> p(x)</m> die vergelykings
+          <md>
+            <mrow> x(2ax + b) = ax^2 + bx + c </mrow>
+            <mrow> \implies 2ax^2 + bx = ax^2 + bx + c </mrow>
+          </md> bevredig.
+          Dus is <m> a  = c = 0 </m>. Dus is alle vektore in <m> V </m> inderdaad skalaarveelvoude van <m> \ve v_1 = x </m>. Dus is <m> \bopen \ve v_1 \bclose </m> 'n basis vir <m> V </m> en gevolglik is <m> \Dim V = 1</m>.
+        </li>
+      </ol>
+    </p></solution>
     </exercise>
 
   <exercise xml:id="ex_basis_no_deg_2">
-<statement >
-  <p>
-    Prove or disprove: there exits a basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> of <m>\Poly_3 </m> such that none of the polynomials <m> p_0, p_1, p_2, p_3</m> have degree 2.
-  </p>
-</statement>
-<solution>
-<p>
-  The basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> works. The check is routine.
-</p>
-</solution>
-
+    <statement >
+      <p>
+        Bewys of bewys verkeerd: daar bestaan 'n basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> van <m>\Poly_3 </m> sodat geen van die polinome <m> p_0, p_1, p_2, p_3</m> graad 2 het nie.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Die basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> werk. Dit is vinnig om te bevestig.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
     <statement>
       <p>
-Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="title">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.) 
+        Bewys of bewys verkeerd: Laat <m>U</m> en <m> W </m> verskillende deelruimtes van <m>V</m> met <m>U \neq V</m>, en <m> W \neq V</m> wees. Dan is <m>\Dim(U + V) = \Dim(U) + \Dim(V)</m>. (Hersien die <xref ref="def_sum_subspace" text="custom">definisie van die som van twee deelruimtes</xref> van <xref ref="sum_of_subspaces_is_subspace"/>.)
       </p>
     </statement>
    <solution>
       <p>
-        We can disprove the statement with the following counterexample. Let <m> V = \mathbb{R}^3 </m>. Let <m>U</m> be the vector subspace with basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> and let <m>W</m> be the vector subspace with basis <m>\bopen (0,0,1), (0,1,0) \bclose</m>. Clearly <m>\dim U = \dim W = 2 </m> and thus <m> \dim(U) + \dim(V) = 4</m>. But since <m>U + W =  \mathbb{R}^3</m>, <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
+        Ons gee 'n teenvoorbeeld wat die bewering verkeerd bewys. Laat <m> V = \mathbb{R}^3 </m>, laat <m>U</m> die vektorruimte met basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> en laat <m>W</m> die vektorruimte met basis <m>\bopen (0,0,1), (0,1,0) \bclose</m> wees. Duidelik is <m>\Dim U = \Dim W = 2 </m> en dus <m> \Dim(U) + \Dim(V) = 4</m>. Maar <m>U + W =  \mathbb{R}^3</m> en dus is <m> \Dim (U+V) = \Dim \mathbb{R}^3 = 3 </m>.
       </p>
     </solution>
-
   </exercise>
 
     <exercise>
@@ -1565,22 +1540,21 @@ Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m>
         <p>
           Laat <m>V</m> die vektorruimte van oplossings van die volgende differensiaalevergelying wees:
           <men xml:id="diff_eqn_exerc_3">
-        x^3 y''' + x^2 y'' - 2xy' + 2y =0
-      </men>
+            x^3 y''' + x^2 y'' - 2xy' + 2y =0
+          </men>
         </p>
         <p>
           <ol>
             <li>
-              Sonder om enige eksplisiete berekeninge to doen, bepaal die dimensie van 
-              <m>V</m>.
+              Bereken die dimensie van <m>V</m> sonder om enige eksplisiete berekeninge to doen
             </li>
 
-            <li>
-              Deur SageMath te gebruik, vind 'n basis vir <m>V</m>. (Sien die voorbeelde in  <xref ref = "ACh2Sec3BasisDimension"/>). Toon eksplisiet aan (met had berekeninge!) dat elkeen van jou basis vektore inderdaad <xref ref = "diff_eqn_exerc_3"/> bevredig.
+            <li><p>
+              Vind 'n basis vir <m>V</m> deur SageMath te gebruik. (Sien die voorbeelde in  <xref ref = "ACh2Sec3BasisDimension"/>). Toon eksplisiet aan (met had berekeninge!) dat elkeen van jou basis vektore inderdaad <xref ref = "diff_eqn_exerc_3"/> bevredig.</p>
               <sage>
-      <input>
-      </input>
-    </sage>
+                <input>
+                </input>
+              </sage>
             </li>
 
             <li>
@@ -1590,7 +1564,7 @@ Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m>
               </me>
             </li>
 
-             <li>
+            <li>
               Bepaal die unieke funksie <m>y_2</m> wat 'n oplossing van  <xref ref = "diff_eqn_exerc_3"/> en die volgende beginwaardes bevredig:
               <me>
                 y_2(1) = 0 \quad y_2'(1) = 1 \quad y_2''(1) = 0.
@@ -1598,29 +1572,22 @@ Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m>
             </li>
 
             <li>
-              Beskou die funksie <m> y_3 = y_1 + y_2 </m>. Bevredig dit ook die differensiaalvergelyking <xref ref = "diff_eqn_exerc_3"/>? As gevolg van <xref ref = "diff_eqn_exist_unique"/>, is <m>y_3</m> die unieke oplossing van 'n beginwaardeprobleem wat te doen het met  <xref ref = "diff_eqn_exerc_3"/>. Wat is daardie beginwaardes?
+              Bevredig die funksie <m> y_3 = y_1 + y_2 </m> ook die differensiaalvergelyking <xref ref = "diff_eqn_exerc_3"/>? As gevolg van <xref ref = "diff_eqn_exist_unique"/>, is <m>y_3</m> die unieke oplossing van 'n beginwaardeprobleem wat te doen het met  <xref ref = "diff_eqn_exerc_3"/>. Wat is daardie beginwaardes?
             </li>
 
-            <li>
-              Lees deur <link xml:link="plot_sage" href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </link>. Gebruik SageMath om 'n grafiek van <m>y_1, y_2, y_3</m> te teken op die interval <m>[0,10]</m>.
+            <li><p>
+              Lees deur <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Gebruik SageMath om 'n grafiek van <m>y_1, y_2, y_3</m> te teken op die interval <m>[0,10]</m>.</p>
               <sage>
-      <input>
-      </input>
-    </sage>
+                <input>
+                </input>
+              </sage>
             </li>
           </ol>
         </p>
       </statement>
     </exercise>
 
-
-
   </exercises>
-
-
-
- <solutions divisional="solution answer" />
-
 
 
 

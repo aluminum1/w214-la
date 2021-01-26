@@ -4,122 +4,123 @@
   <title>Definisie van 'n abstrakte vektorruimte</title>
   <p>
     Wiskunde behels die identifisering van patrone.
-    Ons het drie versamelings
-    gevind, <m>A</m>, <m>B</m> en <m>C</m>,
+    Ons het drie versamelings,
+    <m>A</m>, <m>B</m> en <m>C</m>, gevind
     wat aanvanklik baie soortgelyk voorkom maar baie
     in gemeen het.
-    In elke versamiling is daar 'n sommeringsbewerking, 'n
+    In elke versamiling is daar 'n optellingsbewerking, 'n
     nulvektor en 'n skalaarvermenigvuldigingbewerking.
-    Verder geld dieselfde
-    re&#xeb;ls vir hierdie bewerkings.
-    Kom ons noteer hierdie patroon deur dit
-    'n naam te gee en die re&#xeb;ls eksplisiet neer te pen.
+    Verder geld dieselfde reëls vir hierdie bewerkings.
+    Kom ons noteer hierdie patroon deur dit 'n naam te gee
+    en die reëls eksplisiet neer te skryf.
   </p>
 
   <definition xml:id="real_vec_space">
     <statement>
       <p>
-        A <term>vektorruimte</term> is 'n versameling <m>V</m> wat met die
-        volgende data toegerus is:
+        A <term>vektorruimte</term> is 'n versameling <m>V</m>
+         wat met die volgende data toegerus is:
 
-        <dl>
+        <dl width="narrow">
           <li xml:id="D1">
-            <title>D1.</title>
+            <title>D1</title>
             <p>
-              'n <em>Sommeringsbewerking</em>. (I.e. vir elke
-              elementpaar <m>\ve{v}, \ve{v}' \in V</m>, word 'n nuwe element
-              <m>\ve{v} + \ve{v}'</m> definieer.)
+              'n <em>Optellingsbewerking</em>. (I.e. vir elke
+              paar elemente <m>\ve{v}, \ve{v}' \in V</m>, word 'n nuwe element
+              <m>\ve{v} + \ve{v}'</m> gedefinieer.)
             </p>
           </li>
 
           <li xml:id = "D2">
-            <title>D2.</title>
+            <title>D2</title>
             <p>
-              'n <em>Nul-vektor</em>. (I.e. 'n spesiale vektor <m>\ve{0}
-              \in V</m> word bepaal.)
+              'n <em>Nul-vektor</em>.
+              (M.a.w. 'n spesiale vektor
+              <m>\ve{0} \in V</m>
+               word gekies.)
             </p>
           </li>
 
           <li xml:id="D3">
-            <title>D3.</title>
+            <title>D3</title>
             <p>
-              'n <em>Skalaarvermenigvuldigingsbewerking</em>. (I.e.,
-              vir elke re&#xeb;le getal <m>k</m> en elke element <m>\ve{v} \in V</m>
+              'n <em>Skalaarvermenigvuldigingsbewerking</em>.
+               (M.a.w., vir elke reële getal <m>k</m>
+              en elke element <m>\ve{v} \in V</m>
               word 'n nuwe element <m>k \cdot \ve{v} \in V</m> definieer.)
             </p>
           </li>
         </dl>
       </p>
 
+      <p>
+        Hierdie data moet  vir alle
+        <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>
+        en vir alle reële getalle <m>k</m> en <m>l</m>
+        aan die volgende reëls voldoen:
+      </p>
 
       <p>
-        Hierdie data moet aan die volgende re&#xeb;ls vir alle
-        <m>\ve{u}, \ve{v},
-        \ve{w}</m> in <m>V</m> en vir alle re&#xeb;le getalle <m>k</m> en <m>l</m> voldoen:
-
-        <dl>
+        <dl width="narrow">
           <li xml:id="R1">
-            <title>R1.</title>
+            <title>R1</title>
             <p>
               <m>\ve{v} + \ve{w} = \ve{w} + \ve{v}</m>
             </p>
           </li>
 
           <li xml:id="R2">
-            <title>R2.</title>
+            <title>R2</title>
             <p>
-              <m>(\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} +
-              \ve{w})</m>
+              <m>(\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})</m>
             </p>
           </li>
 
           <li xml:id="R3a">
-            <title>R3a.</title>
+            <title>R3a</title>
             <p>
               <m>\ve{0} + \ve{v} = \ve{v}</m>
             </p>
           </li>
 
           <li xml:id="R3b">
-            <title>R3b.</title>
+            <title>R3b</title>
             <p> <m>\ve{v} + \ve{0} = \ve{v}</m>
             </p>
           </li>
 
           <li xml:id = "R4">
-            <title>R4.</title>
+            <title>R4</title>
             <p>
-              <m>k \cdot (\ve{v} + \ve{w}) = k \cdot \ve{v} + k \cdot
-              \ve{w}</m>
+              <m>k \smul (\ve{v} + \ve{w}) = k \smul \ve{v} + k \smul \ve{w}</m>
             </p>
           </li>
 
           <li xml:id="R5">
-            <title>R5.</title>
+            <title>R5</title>
             <p>
-              <m>(k + l) \cdot \ve{v} = k \cdot \ve{v} + l \cdot
-              {\ve{v}}</m>
+              <m>(k + l) \smul \ve{v} = k \smul \ve{v} + l \smul {\ve{v}}</m>
             </p>
           </li>
 
           <li xml:id="R6">
-            <title>R6.</title>
+            <title>R6</title>
             <p>
-              <m>k \cdot (l \cdot \ve{v}) = (kl) \cdot \ve{v}</m>
+              <m>k \smul (l \smul \ve{v}) = (kl) \smul \ve{v}</m>
             </p>
           </li>
 
           <li xml:id="R7">
-            <title>R7.</title>
+            <title>R7</title>
             <p>
-              <m>1 \cdot \ve{v} = \ve{v}</m>
+              <m>1 \smul \ve{v} = \ve{v}</m>
             </p>
           </li>
 
           <li xml:id="R8">
-            <title>R8.</title>
+            <title>R8</title>
             <p>
-              <m>0 \cdot \ve{v} = \ve{0}</m>
+              <m>0 \smul \ve{v} = \ve{0}</m>
             </p>
           </li>
         </dl>
@@ -128,53 +129,57 @@
   </definition>
 
   <p>
-    Ons noem elemente van 'n vektorruimte
-    <em>vektore</em> en ons skryf hulle in
-    vetdruk, bv.
+    Ons noem elemente van 'n vektorruimte <term>vektore</term>
+    en ons skryf hulle in vetdruk, bv.
     <m>\ve{v} \in V</m>.
-    Dit is om vektore van re&#xeb;le getalle te
-    onderskei, wat ons <em>skalare</em>
-    noem en wat nie in vetdruk geskryf word
-    nie.
-    Dit is moeilik om vetdruk met handskrif uit te druk, so jy kan hulle
-    onderstreep, soos volg: <m>\underline{v}</m>.
+    Dit is om vektore te ondrskei van reële getalle,
+    wat ons <em>skalare</em> noem
+    en wat nie in vetdruk geskryf word nie.
+    Dit is moeilik om vetdruk met handskrif uit te druk,
+    so jy kan hulle met 'n pyltjie skryf, soos
+    <m>\vec{v}</m>
+    of onderstreep, soos <m>\underline{v}</m>.
+    Dit is nie noodsaaklik om dit te doen nie,
+    want dit sal gewoonlik duidelik wees uit die konteks.
+    Maar dit kan jou dalk help om helder oor hul verskille na te dink.
   </p>
 
   <p>
-    In hierdie hoofstuk sal ons skalaarvermenigvuldiging met 'n <m>\cdot</m> skryf,
-    byvoorbeeld <m>k \cdot \ve{v}</m>,
-    maar in hieropvolgende hoofstukke sal on
-    doodgewoon <m>k \ve{v}</m> skryf, so weer versigtig!
+    In hierdie hoofstuk sal ons skalaarvermenigvuldiging met
+    'n <m>\cdot</m> skryf, byvoorbeeld <m>k \cdot \ve{v}</m>,
+    maar in hieropvolgende hoofstukke sal ons
+    gewoon <m>k \ve{v}</m> skryf, so weer versigtig!
   </p>
 
   <p>
-    Om te bewys dat 'n gegewe versameling 'n vektorruimte is,
-    moet 'n mens die
-    volgende doen:
+    Om te bewys dat 'n gegewe versameling
+    in 'n vektorruimte gemaak kan word,
+    moet 'n mens dus die volgende doen:
   </p>
-
 
   <assemblage>
+    <title>Wat jy moet doen om 'n vektorruimte te definieer</title>
     <p>
     <ol>
       <li>
         <p>
-          Definieer die versameling <m>V</m>.
+          Definieer 'n versameling <m>V</m>.
         </p>
       </li>
 
       <li>
         <p>
-                    Definieer die data van 'n sommeringsbewerking (D1), 'n
-          nul-vektor (D2) en 'n skalaarvermenigvuldigingsbewerking (D3)
+          Definieer die data van
+          'n optellingsbewerking (D1),
+          'n nul-vektor (D2) en 'n
+          skalaarvermenigvuldigingsbewerking (D3)
           op <m>V</m>.
-
         </p>
       </li>
 
       <li>
         <p>
-          Gaan na dat hierdie data aan re&#xeb;ls (R1) - (R8) voldoen.
+          Gaan na dat hierdie data aan reëls (R1) <ndash /> (R8) voldoen.
         </p>
       </li>
     </ol>

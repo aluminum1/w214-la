@@ -1,23 +1,24 @@
 
 
-<section xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch0NoteForStudent">
-  <title  number="no" >Note for the student</title>
+<preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch0NoteForStudent">
+  <title>Note for the student</title>
   <p>
     You are about to meet linear algebra for the second time.
     In the first year, we focused on systems of linear equations,
     matrices, and their determinants.
-    That was good and well,
-    but the time has come for you to return to these topics from a more abstract,
-    mathematical viewpoint.
+    That was good and well, but the time has come for you to
+    return to these topics from a more abstract, mathematical viewpoint.
   </p>
 
   <p>
     You should not be scared by <em>abstraction</em>.
-    It simply means getting rid of extraneous detail and limiting oneself exclusively to the most important features of a problem.
+    It simply means getting rid of extraneous detail
+    and limiting oneself exclusively to the most important features of a problem.
     This allows you to understand the problem better.
     There are less things to worry about!
     Moreover, if you encounter another problem,
-    which is superficially different but shares the same important features as the original problem,
+    which is superficially different,
+    but shares the same important features as the original problem,
     then you could understand it in the same way.
     This is the power of abstraction.
   </p>
@@ -30,7 +31,9 @@
     (developing abstract mathematical thinking)
     can be a daunting task at first.
     But keep trying.
-    One day it will <sq>click</sq> into place and you will realize it is all much more simple than you had first imagined.
+    One day it will <q>click</q> into place
+    and you will realize it is all much more simple
+    than you had first imagined.
   </p>
 
   <p>
@@ -46,8 +49,8 @@
     If you encounter a worked example,
     try to write out the example yourself.
     Perhaps the example is trying to show that <m>A</m> equals <m>B</m>.
-    Start by asking yourself: Do I understand what <sq><m>A</m></sq> actually means?
-    Do I understand what <sq><m>B</m></sq> actually means?
+    Start by asking yourself: Do I understand what <q><m>A</m></q> actually means?
+    Do I understand what <q><m>B</m></q> actually means?
     Only then are you ready to consider the question of whether <m>A</m> is equal to <m>B</m> !
   </p>
 
@@ -55,5 +58,5 @@
     Good luck in this new phase of your mathematical training.
     Enjoy the ride!
   </p>
-</section>
+</preface>
 

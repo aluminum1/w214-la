@@ -8,8 +8,7 @@
         A function <m>f : X \rightarrow Y</m> from a set <m>X</m> to a set <m>Y</m> is called <term>one-to-one</term>
         (or <term>injective</term>)
         if whenever <m>f(x) = f(x')</m> for some
-        <m>x,
-        x' \in X</m> it necessarily holds that <m>x = x'</m>.
+        <m>x, x' \in X</m> it necessarily holds that <m>x = x'</m>.
         The function <m>f</m> is called <term>onto</term>
         (or <term>surjective</term>)
         if for all <m>y \in Y</m> there exists an <m>x \in X</m> such that <m>f(x) = y</m>.
@@ -27,14 +26,12 @@
     <statement>
       <p>
         Let <m>T : V \rightarrow W</m> be a linear map between vector spaces.
-        Then:
+        Then <m>T</m> is injective if and only if
         <me>
-          T \mbox{ is injective}  \Longleftrightarrow \Ker(T) = \{\ve{0}_V\} 
+          \Ker(T) = \{\ve{0}_V\}
         </me>.
       </p>
     </statement>
-  </lemma>
-
   <proof>
     <p>
       <m>\Rightarrow</m>.
@@ -47,8 +44,7 @@
 
     <p>
       <m>\Leftarrow</m>.
-      Suppose <m>\Ker(T) = \{\ve{0}_V\}</m>.
-      Now, suppose that
+      Suppose <m>\Ker(T) = \{\ve{0}_V\}</m> and that
       <me>
         T(\ve{v}) = T(\ve{v}')
       </me>
@@ -62,6 +58,7 @@
       which is what we wanted to show.
     </p>
   </proof>
+</lemma>
 
   <p>
     Another simplification occurs if <m>T</m> is a linear map from a vector space <m>V</m> to itself (i.e.
@@ -75,12 +72,10 @@
         Let <m>T : V \rightarrow V</m> be a linear operator on a finite-dimensional vector space <m>V</m>.
         Then:
         <me>
-          T \mbox{ is injective}  \Longleftrightarrow T \mbox{ is surjective} 
+          T \text{ is injective}  \Longleftrightarrow T \text{ is surjective}
         </me>.
       </p>
     </statement>
-  </lemma>
-
   <proof>
     <p>
       <m>\Rightarrow</m>.
@@ -105,10 +100,11 @@
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
         <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  ( <xref ref="rank-nullity-theorem"/> )</mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
-        <mrow>\amp \therefore T \mbox{ is injective. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
+        <mrow>\amp \therefore T \text{ is injective. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
       </md>
     </p>
   </proof>
+</lemma>
 
   <proposition xml:id="iso-inj-surj">
     <statement>
@@ -116,8 +112,6 @@
         A linear map <m>T : V \rightarrow W</m> is an isomorphism if and only if <m>T</m> is injective and surjective.
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
       <m>\Rightarrow</m>.
@@ -126,9 +120,9 @@
       <m>T \circ S = \id_W</m> and <m>S \circ T = \id_C</m>.
       We will show that <m>T</m> is injective and surjective.
       <md>
-        <mrow>\mbox{Suppose that }  T(\ve{v}_1) \amp = T(\ve{v}_2).</mrow>
+        <mrow>\text{Suppose that }  T(\ve{v}_1) \amp = T(\ve{v}_2).</mrow>
         <mrow>\therefore S(T(\ve{v}_1)) \amp = S(T(\ve{v}_2))</mrow>
-        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \mbox{(using } S \circ T = \id_V)</mrow>
+        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \text{(using } S \circ T = \id_V)</mrow>
         <mrow>\therefore \ve{v}_1 \amp = \ve{v}_2</mrow>
       </md>
       which shows that <m>T</m> is injective.
@@ -139,7 +133,7 @@
       Then
       <md>
         <mrow>T(\ve{v}) \amp = T(S(\ve{w}))</mrow>
-        <mrow>\amp = \id_W (\ve{w})  \mbox{(using } T \circ S = \id_W)</mrow>
+        <mrow>\amp = \id_W (\ve{w})  \text{(using } T \circ S = \id_W)</mrow>
         <mrow>\amp = \ve{w}</mrow>
       </md>.
     </p>
@@ -157,7 +151,7 @@
       We define the inverse map <m>S</m> as follows:
       <md>
         <mrow>S : W \amp  \rightarrow V</mrow>
-        <mrow>\ve{w} \amp  \mapsto \mbox{the unique } \ve{v} \in V \text{ such that } T(\ve{v}) = \ve{w}.</mrow>
+        <mrow>\ve{w} \amp  \mapsto \text{the unique } \ve{v} \in V \text{ such that } T(\ve{v}) = \ve{w}.</mrow>
       </md>
     </p>
 
@@ -178,12 +172,13 @@
       <m>T \circ S = \id_W</m> and <m>S \circ T = \id_V</m>.
       We only need to check that <m>S</m> is linear.
     </p>
+
     <p>
       Let <m>\ve{w}_1, \ve{w}_2 \in W</m>.
       Then
       <md>
         <mrow>S( a \ve{w}_1 + b \ve{w}_2) \amp = S\big(a T(S(\ve{w}_1)) + b T(S(\ve{w}_2)) \big) \amp \amp  (\text{using } T \circ S = \id_W )</mrow>
-        <mrow>\amp = S\big( a T(\ve{v}_1) + b T(\ve{v}_2) \big) \amp \amp \left(\text{setting }  \ve{v}_1 := S(\ve{w}_1), 
+        <mrow>\amp = S\big( a T(\ve{v}_1) + b T(\ve{v}_2) \big) \amp \amp \left(\text{setting }  \ve{v}_1 := S(\ve{w}_1),
         \ve{v}_2 := S(\ve{w}_2)) \right) </mrow>
         <mrow>\amp = S\big(T(a \ve{v}_1 + b \ve{v}_2)\big) \amp \amp  (T \text{ is linear})</mrow>
         <mrow>\amp = a \ve{v}_1 + b \ve{v}_2 \amp \amp   ((S \circ T = \id_V)</mrow>
@@ -194,6 +189,7 @@
       Hence <m>S</m> is linear, which completes the proof.
     </p>
   </proof>
+</proposition>
 
   <proposition xml:id="equiv-inj-sur-iso">
     <statement>
@@ -201,40 +197,38 @@
         Let <m>T : V \rightarrow V</m> be a linear operator on a finite-dimensional vector space <m>V</m>.
         The following statements are equivalent:
 
-        <ul>
+        <ol label="(a)">
           <li>
-            <title>1.</title>
             <p>
               <m>T</m> is injective.
             </p>
           </li>
 
           <li>
-            <title>2.</title>
             <p>
               <m>T</m> is surjective.
             </p>
           </li>
 
           <li>
-            <title>3.</title>
             <p>
               <m>T</m> is an isomorphism.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
-      (1) is equivalent to (2) by <xref ref="inj-surj">Lemma</xref>.
-      On the other hand, (1) and (2) is equivalent to (3) by <xref ref="iso-inj-surj">Proposition</xref>.
+      (a) is equivalent to (b) by <xref ref="inj-surj">Lemma</xref>.
+      On the other hand, <q>(a) and (b)</q>  is equivalent to (c) by <xref ref="iso-inj-surj"></xref>.
     </p>
   </proof>
+</proposition>
 
-<!--  <solutions divisional="solution answer" /> -->
+
+
+<!-- <exercises> &  <solutions divisional="solution answer" /> -->
 
 
 </section>

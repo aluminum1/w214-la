@@ -1,0 +1,77 @@
+To do list:
+
+- Image sizes are inconsistent.
+- Decide on and implement better colors for tikz diagrams. Use latex macros like \primaryColor etc. to ensure uniformity.
+- Parts in Theorems and Proofs to (a) etc instead 1. etc. using <ol label="(a)"> (?)
+- Some exercises do not have solutions yet.
+- Titles for examples? and Exercises?
+
+- Can the first two lemmas in 1.5 be written using more words? And many others...
+- Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
+- First person to first person plural? (I to we)
+- Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.
+- Create index? And index of notation?
+- Ch3Sec 3 line 6 & 25: images not allowed in text mode --- rework.
+- Ch2Sec4 (in a few places actually) I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
+
+Consistency and technique:
+- Make sure all <proofs> are inside the <theorem> (etc.) tags and not outside (?) (low priority)
+- Decide on using => and <= in proofs.
+
+
+Add solutions:
+- Ch3Sec5 line (1322 & 1338 add sol)
+
+
+Afrikaans:
+- Check that all of the following translations are consistent:
+  - verify -> bevestig, nagaan?
+
+
+I would like to add
+- learning outcomes for each section; or maybe only the exercises for each section
+- link exercises or groups of exercises to these learning outcomes.
+- longer paragraphs, especially in introductions (sections can also have <conclusion>s).
+- overspecified or underspecified problems
+- more problems (e.g. <fillin characters=10 /> for fill in questions, like terminology)
+- solutions
+
+Ideas for problems and examples:
+- Claim: Let T:V to W. Show: If T(v1) and T(v2) are linearly independent, show that v1 and v2 are
+- Application: Show that sin x and cos x are lin. ind. by using the linear map T:Func to R^2 defined by T(f) = (f(0),f(pi/2)).
+
+Use??
+- <objective>?
+- <outcomes>
+- <reading-questions>?
+- <project> or <activity> or <exploration> or <investigation>
+		<introduction />
+		<task />
+		<conclusion />
+- <worksheet>
+		<objective />
+		<introduction />
+		<theorem />
+		<figure />
+		<sidebyside>
+	  		<exercise width="50%" />
+		</sidebyside>
+
+
+
+- Throughout there are some figures with <caption> tags, but no text. But I think this is ok.
+
+This can be used at the start of a section of exercises:
+  <introduction>
+    <p>
+      Some text
+    </p>
+    <assemblage>
+      <title>Outcomes of the exercises</title>
+      <p>
+      <dl>
+        <li> <title>Title1</title> <p>List Item 1</p> </li>
+      </dl>
+      </p>
+    </assemblage>
+  </introduction>

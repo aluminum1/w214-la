@@ -1,165 +1,213 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch1Sec3ExampleVectorSpace">
   <title>First example of a vector space</title>
-  <introduction>
     <p>
       We were led to the definition
       (<xref ref="real_vec_space">Definition</xref>)
-      of an abstract vector space by considering the properties of sets <m>A</m>,
-      <m>B</m> and <m>C</m> in <xref ref="Ch1Sec1Intro">Section</xref>.
+      of an abstract vector space
+      by considering the properties of sets
+      <m>A</m>, <m>B</m> and <m>C</m>
+      in <xref ref="Ch1Sec1Intro">Section</xref>.
       Let us check, for instance,
-      that <m>B</m> indeed satisfies <xref ref="real_vec_space">Definition</xref>.
-      The others will be left as exercises.
+      that <m>B</m> really is an abstract vector space
+      by checking that it satisfies the conditions of
+      <xref ref="real_vec_space">Definition</xref>.
+      That the other two sets form vector spaces
+      will be left as exercises for you.
     </p>
-  </introduction>
-
 
   <example xml:id="B_is_vs">
     <title>The set <m>B</m> is a vector space</title>
-    <p> <alert>1. Define a set <m>B</m>. </alert> </p>
     <p>
+      First we need to define the set <m>B</m>.
       We define
       <men xml:id="def_of_b">
-        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\} 
+        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \text{ and }  u_1 - u_2 + u_3 = 0\}
       </men>.
     </p>
 
-    <p> <alert>2. Define addition, the zero vector, and scalar multiplication</alert></p>
-    <dl>
+    <p>
+      Then we define addition, the zero vector, and
+      scalar multiplication:
+    </p>
+    <p><dl width="narrow">
       <li>
         <title>D1. Addition</title>
-        <p> We define addition as follows.
-      Suppose <m>\ve{u} = (u_1, \, u_2, \, u_3)</m> and
-      <m>\ve{v} = (v_1, , v_2, \, v_3)</m> are elements of <m>B</m>.
-      Note that in particular this means
-      <m>u_1 - u_2 + u_3 = 0</m> and <m>v_1 - v_2 + v_3 = 0</m>.
-      We define <m>\ve{u} + \ve{v}</m> by:
-      <men xml:id="def_add_in_B">
-        \ve{u} + \ve{v} := (u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3)
-      </men>.
-    </p>
+        <p>
+          We define addition as follows:
+          Suppose
+          <m>\ve{u} = (u_1, \, u_2, \, u_3)</m> and
+          <m>\ve{v} = (v_1, \, v_2, \, v_3)</m>
+          are elements of <m>B</m>.
+          Note that in particular this means
+          <m>u_1 - u_2 + u_3 = 0</m> and
+          <m>v_1 - v_2 + v_3 = 0</m>.
+          We define <m>\ve{u} + \ve{v}</m> by:
+          <men xml:id="def_add_in_B">
+            \ve{u} + \ve{v} :=
+            (u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3)
+          </men>.
+        </p>
+
+        <p>
+          We need to check that this makes sense.
+          The first thing we need to check is that
+          <m>\ve{u} + \ve{v}</m> is also an element of
+          <m>B</m>.
+          We can't just write down any definition!
+          To check if <m>\ve{u} + \ve{v}</m> is an
+          element of <m>B</m>,
+          we need to check if it satisfies
+          equation <xref ref="def_of_b" />.
+          Let us check:
+          <md>
+            <mrow>\amp (u_1 + v_1) - (u_2 + v_2) + (u_3 + v_3)</mrow>
+            <mrow>\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3)
+            \amp \amp  \text{(true for ordinary numbers)}</mrow>
+            <mrow>\amp = 0 + 0 \amp \amp  (\text{since } \ve{u} \text{ and } \ve{v} \text{ are in } B)</mrow>
+            <mrow>\amp = 0</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Therefore, <m>\ve{u} + \ve{v}</m>
+          is indeed an element of <m>B</m>,
+          so we have written down a well-defined
+          addition operation on <m>B</m>,
+          which takes two arbitrary elements of <m>B</m>
+          and outputs another element of <m>B</m>.
+        </p>
+      </li>
+
+      <li>
+        <title>D2. Zero vector</title>
+        <p>
+        We define the zero vector <m>\ve{0} \in B</m> as
+        <men xml:id="zero_vec_in_B">
+          \ve{0} := (0, 0, 0)
+        </men>.
+        </p>
+
+        <p>
+          We need to check that this makes sense.
+          Does <m>(0,0,0)</m> really belong to <m>B</m>?
+          In other words, does it satisfy equation
+          <xref ref="def_of_b" />?
+          Yes, since <m>0 - 0 + 0 = 0</m>.
+          So we have a well-defined zero vector.
+        </p>
+      </li>
+
+      <li>
+        <title>D3. Scalar multiplication</title>
+        <p>
+          We define scalar multiplication on <m>B</m>
+          as follows:
+          Let <m>k</m> be a real number and
+          <m>\ve{u} = (u_1, \, u_2, \, u_3)</m>
+          be an element of <m>B</m>.
+          We define
+          <men xml:id="s_mu_in_B">
+            k \smul\ve{u} := (ku_1, \, ku_2, \, ku_3)
+          </men>.
+        </p>
+
+        <p>
+          We need to check that this makes sense.
+          When I multiply a multiply a vector
+          <m>\ve{u}</m> in <m>B</m> by a scalar <m>k</m>,
+          the result <m>k \smul\ve{u}</m>
+          must to be an element of <m>B</m>.
+          Does <m>(ku_1, \, ku_2, \, ku_3)</m>
+          really belong to <m>B</m>?
+          Let us check that it satisfies the defining
+          equation <xref ref="def_of_b" />:
+          <md>
+            <mrow>\amp  ku_1 - ku_2 + ku_3</mrow>
+            <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp
+            \text{(true for numbers)}</mrow>
+            <mrow>\amp = k 0 \amp \amp  (\text{since } \ve{u} \text{ is in } B)</mrow>
+            <mrow>\amp = 0</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Therefore, <m>k \smul\ve{u}</m> is indeed
+          an element of <m>B</m>,
+          so we have written down a well-defined
+          scalar multiplication operation on <m>B</m>.
+        </p>
+      </li>
+    </dl></p>
 
     <p>
-      We need to check that this makes sense.
-      We are supposed to have that
-      <m>\ve{u} + \ve{v}</m> is also an element of <m>B</m>.
-      We can't just write down any definition!
-      To check if <m>\ve{u} + \ve{v}</m> is an element of <m>B</m>,
-      we need to check if it satisfies equation <xref ref="def_of_b" />.
-      Let us check:
-      <md>
-        <mrow>\amp (u_1 + v_1) - (u_2 + v_2) + (u_3 + v_3)</mrow>
-        <mrow>\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3) \amp \amp  \mbox{(this algebra step is true for ordinary numbers)}</mrow>
-        <mrow>\amp = 0 + 0 \amp \amp  \mbox{(since \(\ve{u}\) and \(\ve{v}\) are in \(B\))}</mrow>
-        <mrow>\amp = 0</mrow>
-      </md>.
+      Lastly we check that the data satisfies the rules
     </p>
-
     <p>
-      Therefore, <m>\ve{u} + \ve{v}</m> is indeed an element of <m>B</m>,
-      so we have written down a well-defined addition operation on <m>B</m>,
-      which takes two arbitrary elements of <m>B</m> and outputs another element of <m>B</m>.
-    </p>
-    </li>
-
-    <li>
-      <title>D2. Zero vector</title>
-      <p>
-      We define the zero vector <m>\ve{0} \in B</m> as
-      <men xml:id="zero_vec_in_B">
-        \ve{0} := (0, 0, 0)
-      </men>.
+      We must check that our data D1, D2 and D3
+      satisfy the rules R1 <ndash /> R8.
+      So, suppose that
+      <m>\ve{u} = (u_1, \, u_2, \,u_3)</m>,
+      <m>\ve{v} = (v_1, \, v_2, \, v_3)</m> and
+      <m>\ve{w} = (w_1, \, w_2, \, w_3)</m> are in <m>B</m>,
+      and that <m>k</m> and <m>l</m> are real numbers.
     </p>
 
-    <p>
-      We need to check that this makes sense.
-      Does <m>(0,0,0)</m> really belong to <m>B</m>,in other words,
-      does it satisfy equation <xref ref="def_of_b" />?
-      Yes, since <m>0 - 0 + 0 = 0</m>.
-      So we have a well-defined zero vector.
-    </p>
-    </li>
-
-    <li> 
-      <title>D3. Scalar multiplication</title>
-      <p>
-      We define scalar multiplication on <m>B</m> as follows.
-      Let <m>k</m> be a real number and
-      <m>\ve{u} = (u_1, \, u_2, \, u_3)</m> be an element of <m>B</m>.
-      We define
-      <men xml:id="s_mu_in_B">
-        k \smul\ve{u} := (ku_1, \, ku_2, \, ku_3)
-      </men>.
-    </p>
-
-    <p>
-      We need to check that this makes sense.
-      When I multiply a multiply a vector <m>\ve{u}</m> in <m>B</m> by a scalar <m>k</m>,
-      the result <m>k \smul\ve{u}</m> is supposed to be an element of <m>B</m>.
-      Does <m>(ku_1, \, ku_2, \, ku_3)</m> really belong to <m>B</m>?
-      Let us check that it satisfies the defining equation <xref ref="def_of_b" />:
-      <md>
-        <mrow>\amp  ku_1 - ku_2 + ku_3</mrow>
-        <mrow>\amp = k (u_1 - u_2 + u_3) \amp \amp  \mbox{(this algebra step is true for ordinary numbers)}</mrow>
-        <mrow>\amp = k 0 \amp \amp  \mbox{(since \(\ve{u}\) is in \(B\))}</mrow>
-        <mrow>\amp = 0</mrow>
-      </md>.
-    </p>
-
-    <p>
-      Therefore, <m>k \smul\ve{u}</m> is indeed an element of <m>B</m>,
-      so we have written down a well-defined scalar multiplication operation on <m>B</m>.
-    </p>
-    </li>
-    </dl>
-
-    <p><alert>3. Check that the data satisfies the rules</alert></p>
-    <p>
-      We must check that our data D1, D2 and D3 satisfies the rules R1 <mdash /> R8.
-      So, suppose <m>\ve{u} = (u_1, \, u_2, \,u_3)</m>,
-      <m>\ve{v} = (v_1, \, v_2, \, v_3)</m> and <m>\ve{w} = (w_1, \, w_2, \, w_3)</m> are in <m>B</m>,
-      and suppose that <m>k</m> and <m>l</m> are real numbers.
-    </p>
-
-    <dl>
+    <p><dl width="narrow">
       <li> <title>R1</title>
-      <p> We check:
-      <md>
-        <mrow>\amp  \ve{v} + \ve{w}\tag{R1.}</mrow>
-        <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp  \mbox{(because \(x + y = y + x\) is true for real numbers)}</mrow>
-        <mrow>\amp = \ve{w} + \ve{v}. \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-      </md>
+      <p>
+        We check:
+        <md>
+          <mrow>\amp  \ve{v} + \ve{w}</mrow>
+          <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3)
+          \amp \amp  (\text{Def. of + in } B)</mrow>
+          <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp
+          (x + y = y + x \text{ for
+          real numbers})</mrow>
+          <mrow>\amp = \ve{w} + \ve{v}. \amp \amp
+          (\text{Def. of + in } B)</mrow>
+        </md>
       </p>
       </li>
 
-      <li> <title>R2</title>
-      <p> We check:
-      <md>
-        <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
-        <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp  \mbox{(since \((x + y) + z = x + (y + z)\) is true for real numbers)}</mrow>
-        <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \mbox{(by defn of addition in \(B\))} </mrow>
-      </md>.
+      <li>
+      <title>R2</title>
+      <p>
+        We check:
+        <md>
+          <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
+          <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w}
+          \amp \amp  \text{(Def. of + in } B)</mrow>
+          <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, </mrow>
+          <mrow>\amp \qquad \qquad (u_3 + v_3) + w_3) \amp \amp
+          \text{(Def. of + in } B)</mrow>
+          <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, \amp \amp (x + y) + z = x + (y + z)</mrow>
+          <mrow> \amp \qquad u_3 + (v_3 + w_3)) \amp \amp
+           \quad \text{ for real numbers)}</mrow>
+          <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp
+          \text{(Def. of + in }B)</mrow>
+          <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \text{(Def. of + in }B) </mrow>
+        </md>.
       </p>
       </li>
 
       <li>
       <title>R3</title>
       <p>
-      We check:
-      <md>
-        <mrow>\amp \ve{0} + \ve{v}</mrow>
-        <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(by defn of the zero vector in \(B\)}</mrow>
-        <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(because \(x + 0 = x\) is true for real numbers)}</mrow>
-        <mrow>\amp = \ve{v}</mrow>
-      </md>.
+        We check:
+        <md>
+          <mrow>\amp \ve{0} + \ve{v}</mrow>
+          <mrow>\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp
+          \text{(Def. of zero vector in } B</mrow>
+          <mrow>\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp
+          \text{(Def. of + in } B)</mrow>
+          <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp
+          x + 0 = x \text{ for real numbers)}</mrow>
+          <mrow>\amp = \ve{v}</mrow>
+        </md>.
       </p>
 
       <p>
-      By the same reasoning, we can check that <m>\ve{v} + \ve{0} = \ve{v}</m>.
+        By the same reasoning, we can check that <m>\ve{v} + \ve{0} = \ve{v}</m>.
       </p>
       </li>
 
@@ -169,11 +217,12 @@
       We check:
       <md>
         <mrow>\amp  k \smul( \ve{v + w} )</mrow>
-        <mrow>\amp = k \smul(v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(by defn of addition in \(B\)}</mrow>
-        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp  \mbox{(by defn of scalar multipliation in \(B\))}</mrow>
-        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  \mbox{(since \(k(x+y) = kx + ky\) for real numbers \(x,y\))}</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp = k \smul\ve{v} + k \smul\ve{w} \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
+        <mrow>\amp = k \smul(v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \text{(Def. of + in } B)</mrow>
+        <mrow>\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp  \text{(Def. of scalar mult. in }B)</mrow>
+        <mrow>\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  (k(x+y) = kx + ky \text{ for}</mrow>
+        <mrow>\amp \amp \amp \quad\text{ real numbers } x,y)</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp  \text{(Def. of + in } B)</mrow>
+        <mrow>\amp = k \smul\ve{v} + k \smul\ve{w} \amp \amp  \text{(Def. of scalar mult. in }B)</mrow>
       </md>
       </p>
       </li>
@@ -184,10 +233,10 @@
       We check:
       <md>
         <mrow>\amp  (k + l) \smul\ve{v}</mrow>
-        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
-        <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  \mbox{(since \((k+l)x = kx + lx\) for real numbers)}</mrow>
-        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp = k \smul\ve{v} + l \smul\ve{v} \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
+        <mrow>\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \text{(Def. of scalar mult. in } B)</mrow>
+        <mrow>\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  ((k+l)x = kx + lx \text{ for real numbers)}</mrow>
+        <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp  \text{(Def. of + in }B)</mrow>
+        <mrow>\amp = k \smul\ve{v} + l \smul\ve{v} \amp \amp  \text{(Def. of scalar mult. in } B)</mrow>
       </md>
       </p>
       </li>
@@ -195,44 +244,97 @@
       <li>
       <title>R6</title>
       <p>
-      We check:
-      <md>
-        <mrow>\amp  k \smul(l \smul\ve{v})</mrow>
-        <mrow>\amp = k \smul(l v_1, \, l v_2, \, lv_3) \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
-        <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
-        <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  \mbox{(since \(k(lx) = (kl)x\) for real numbers)}</mrow>
-        <mrow>\amp = (kl) \smul\ve{v} \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))} </mrow>
-      </md>.
+        We check:
+        <md>
+          <mrow>\amp  k \smul(l \smul\ve{v})</mrow>
+          <mrow>\amp = k \smul(l v_1, \, l v_2, \, lv_3) \amp \amp  \text{(Def. of scalar mult. in }B )</mrow>
+          <mrow>\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \text{(Def. of scalar mult. in }B )</mrow>
+          <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  (k(lx) = (kl)x \text{ for real numbers)}</mrow>
+          <mrow>\amp = (kl) \smul\ve{v} \amp \amp  \text{(Def. of scalar mult. in } B) </mrow>
+        </md>.
       </p>
       </li>
 
       <li>
       <title>R7</title>
       <p>
-      We check:
-      <md>
-        <mrow>1 \smul\ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
-        <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(since \(1 x = x\) for real numbers \(x\))}</mrow>
-        <mrow>\amp = \ve{v}</mrow>
-      </md>.
+        We check:
+        <md>
+          <mrow>1 \smul\ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \text{(Def. of scalar mult. in } B)</mrow>
+          <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  ( 1 x = x  \text{ for real numbers }x)</mrow>
+          <mrow>\amp = \ve{v}</mrow>
+        </md>.
       </p>
       </li>
 
       <li>
       <title>R8</title>
-      <p>We check:
-      <md>
-        <mrow>0 \smul\ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
-        <mrow>\amp = (0, \, 0, \, 0) \amp \amp  \mbox{(since \(0 x = 0\) for real numbers}</mrow>
-        <mrow>\amp = \ve{0} \amp \amp  \mbox{(by defn of the zero vector in \(B\))} </mrow>
-      </md>.
+      <p>
+        We check:
+        <md>
+          <mrow>0 \smul\ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \text{(Def. of scalar mult. in }B)</mrow>
+          <mrow>\amp = (0, \, 0, \, 0) \amp \amp  (0 x = 0 \text{ for real numbers})</mrow>
+          <mrow>\amp = \ve{0} \amp \amp  \text{(Def. of  zero vector in } B) </mrow>
+        </md>.
       </p>
       </li>
-    </dl>
-  </example>  
+    </dl></p>
+  </example>
 
+  <assemblage>
+    <title>Summary of this section</title>
+    <p>
+      To prove that a set <m>V</m> is a vector space, you need to do the following:
+      <ul>
+        <li>
+          Make sure you know what addition and scalar multiplication mean in this context (i.e. make sure they are defined).
+        </li>
+        <li>
+          <p>
+            Make sure that the operations addition and scalar multiplication are closed, i.e. make sure that
+            <ul>
+              <li> when you add two elements of <m>V</m>, the answer is again an element in <m>V</m>; and </li>
+              <li> when you multiply any element in <m>V</m> with a scalar (any real number), then the answer is gain an element in <m>V</m>.
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          Verify that the rules R1 to R8 hold for all possible choices of elements in <m>V</m> and all possible choices of scalars in <m>\mathbb{R}</m>.
+        </li>
+        <li>
+          You may use the fact that usual real numbers satisfy the usual rules of commutativity, associativity and distributivity to help you prove the rules for other objects, like vectors.
+        </li>
+      </ul>
+    </p>
+  </assemblage>
 
   <exercises>
+    <introduction>
+      <assemblage>
+        <title>Learning outcomes addressed by these exercises</title>
+        <p>
+          <dl>
+            <li><title>VS1</title>
+              <p>
+                I can check whether a given definition of addition or scalar multiplication is closed.
+              </p>
+            </li>
+            <li> <title>VS2</title>
+              <p>
+                I can check whether a certain definition of addition and scalar multiplication satisfies any one of the rules R1 to R8.
+              </p>
+            </li>
+            <li><title>VS3</title>
+              <p>
+                I can check whether a set together with operations addition and scalar multiplication is a vector space.
+              </p>
+            </li>
+          </dl>
+        </p>
+      </assemblage>
+    </introduction>
+
     <exercise>
       <statement>
         <p>
@@ -263,21 +365,21 @@
         <p>
           Give a counterexample!
         </p>
-    </hint>
-    <solution>
-      <p>
-      Consider the following two polynomials in <m>C^\prime</m>:
-      <md>
-        <mrow>\ve p(x) = x^4 + x^3, </mrow>
-        <mrow> \ve q(x) = -x^4. </mrow>
-      </md>
-        However, their sum is not in <m>C^\prime</m> since
-        <me>
-\ve p(x) + \ve q(X) = (1 - 1 )x^4 + x^3 = x^3
-      </me>
-      which has degree 3. Hence <m>C^\prime</m> is not closed under addition and so cannot be a vector space, as the addition operation is not well-defined on <m>C'</m>.
-      </p>
-    </solution>
+      </hint>
+      <solution>
+        <p>
+        Consider the following two polynomials in <m>C^\prime</m>:
+        <md>
+          <mrow>\ve p(x) = x^4 + x^3, </mrow>
+          <mrow> \ve q(x) = -x^4. </mrow>
+        </md>
+          However, their sum is not in <m>C^\prime</m> since
+          <me>
+  \ve p(x) + \ve q(X) = (1 - 1 )x^4 + x^3 = x^3
+        </me>
+        which has degree 3. Hence <m>C^\prime</m> is not closed under addition and so cannot be a vector space, as the addition operation is not well-defined on <m>C'</m>.
+        </p>
+      </solution>
     </exercise>
 
     <exercise xml:id="show_X_is_not_vector_space">
@@ -285,9 +387,9 @@
       <p>
         Consider the set
         <me>
-        X := \{(a_1, a_2) \in \mathbb{R}^2 : a_1 \geq 0, a_2 \geq 0\}
-      </me>
-      equipped with the same addition operation <xref ref="add_in_A" />,
+          X := \{(a_1, a_2) \in \mathbb{R}^2 : a_1 \geq 0, a_2 \geq 0\}
+        </me>
+          equipped with the same addition operation <xref ref="add_in_A" />,
           zero vector <xref ref="zero_in_A" /> and scalar multiplication operation <xref ref="sm_in_A"/> as in <m>A</m>. Does <m>X</m> form a vector space? If not, why not?
         </p>
       </statement>
@@ -299,8 +401,7 @@
     </exercise>
   </exercises>
 
-<solutions divisional="solution answer" />
 
-  
+
 </section>
 

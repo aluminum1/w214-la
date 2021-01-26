@@ -4,51 +4,51 @@
   <title>Isomorfismes van vektorruimtes</title>
   <p>
     Veronderstel jy het twee versamelings,
+    <!--
     <me>
-      A = \{ \mbox{vo{\"e}l} , \mbox{oog} , \mbox{persoon}  \}  \mbox{en} 
-      B = \left\{ \begin{aligned}<image width="100%" source="images/bird.png" /> 
-      \end{aligned}  , \begin{aligned}<image width="100%" source="images/eye.png" /> 
-      \end{aligned} , \begin{aligned}<image width="100%" source="images/person.png" /> 
+      A = \{ \mbox{vo{\"e}l} , \mbox{oog} , \mbox{persoon}  \}  \mbox{en}
+      B = \left\{ \begin{aligned}<image width="100%" source="images/bird.png" />
+      \end{aligned}  , \begin{aligned}<image width="100%" source="images/eye.png" />
+      \end{aligned} , \begin{aligned}<image width="100%" source="images/person.png" />
       \end{aligned}  \right\}
     </me>.
+    -->
   </p>
 
   <p>
     Die elemente van <m>A</m> en <m>B</m> is nie
-    <em>dieselfde</em> nie, so <m>A</m> is nie
-    <em>gelyk</em> aan <m>B</m> nie.
-    Maar dit is nie heeltemal bevredigend nie <mdash />
-    duidelik is die elemente van <m>A</m> net die Afrikaanse beskrywings van die
-    Sjinese simbole in <m>B</m>.
+    <em>dieselfde</em> nie, so <m>A</m> is nie <em>gelyk</em> aan <m>B</m> nie.
+    Maar dit is nie heeltemal bevredigend nie <mdash /> duidelik is die elemente van <m>A</m> net die Afrikaanse beskrywings van die Sjinese simbole in <m>B</m>.
     Hoe kan ons dit noukeurig wiskundig beskryf?
   </p>
 
   <p>
     Ons kan twee afbeeldings definieer, byvoorbeeld
+    <!-- For now images aren't allowed in text mode, so rework this:
     <md>
       <mrow>S: A \amp \rightarrow B</mrow>
-      <mrow>\mbox{vo&#xea;l}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" /> 
+      <mrow>\mbox{voêl}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" />
       \end{aligned}</mrow>
-      <mrow>\mbox{oog}  \amp \mapsto \begin{aligned}<image width="100%" source="images/eye.png" /> 
+      <mrow>\mbox{oog}  \amp \mapsto \begin{aligned}<image width="100%" source="images/eye.png" />
       \end{aligned}</mrow>
-      <mrow>\mbox{persoon}  \amp \mapsto \begin{aligned}<image width="100%" source="images/person.png" /> 
+      <mrow>\mbox{persoon}  \amp \mapsto \begin{aligned}<image width="100%" source="images/person.png" />
       \end{aligned}</mrow>
       <intertext>en</intertext>
       <mrow>T : B \amp \rightarrow A</mrow>
-      <mrow>\begin{aligned}<image width="100%" source="images/bird.png" /> 
-      \end{aligned}  \amp  \mapsto \mbox{vo&#xea;l}</mrow>
-      <mrow>\begin{aligned}<image width="100%" source="images/eye.png" /> 
+      <mrow>\begin{aligned}<image width="100%" source="images/bird.png" />
+      \end{aligned}  \amp  \mapsto \mbox{voêl}</mrow>
+      <mrow>\begin{aligned}<image width="100%" source="images/eye.png" />
       \end{aligned}  \amp  \mapsto \mbox{oog}</mrow>
-      <mrow>\begin{aligned}<image width="100%" source="images/person.png" /> 
-      \end{aligned}  \amp  \mapsto
-      \mbox{persoon}  </mrow>
+      <mrow>\begin{aligned}<image width="100%" source="images/person.png" />
+      \end{aligned}  \amp \mapsto \mbox{persoon}  </mrow>
     </md>.
+    -->
   </p>
 
   <p>
     Dan neem ons waar dat
     <men xml:id="bijection_eqn">
-      T \circ S = \id_A  \mbox{and}   S \circ T = \id_B 
+      T \circ S = \id_A  \text{ en }   S \circ T = \id_B
     </men>.
   </p>
 
@@ -58,40 +58,32 @@
     <em>isomorfisme van versamelings</em>
     tussen <m>A</m> en <m>B</m> genoem.
     As jy wil, kan jy <m>T</m> as <m>S^{-1}</m> herdoop, omdat
-    <m>S^{-1} \circ S = \id_A</m> en
-    <m>S \circ S^{-1} = \id_B</m>. (Om <m>T</m> van die begin
+    <m>S^{-1} \circ S = \id_A</m> en <m>S \circ S^{-1} = \id_B</m>. (Om <m>T</m> van die begin
     af <m>S^{-1}</m> te noem sou voortydig gewees het.
     Ek moes dit eers definieer en
     seker maak dat dit <xref ref="bijection_eqn" /> bevredig.
-    Slegs dan het ek die reg
-    om dit <m>S^{-1}</m> te noem!)
+    Slegs dan het ek die reg om dit <m>S^{-1}</m> te noem!)
   </p>
 
   <p>
     Dalk is jy 'n ietwat spaarsamige persoon.
-    Jy sien die nut van die
-    Afrikaans-na-Sjinese afbeelding <m>S</m>, maar nie die nut van die
+    Jy sien die nut van die Afrikaans-na-Sjinese afbeelding <m>S</m>, maar nie die nut van die
     Sjinees-na-Afrikaanse afbeelding <m>T</m> nie.
     Buitendien, aangesien geen twee
-    verskillende Afrikaanse woorde in <m>A</m> na dieselfde Sjinese simbool in <m>B</m>
-    afgebeeld word nie (<sq><m>S</m> is een-tot-een</sq>) en elke Sjinese simbool <m>y \in B</m>
-    is gelyk aan <m>S(x)</m> vir een of ander <m>x \in A</m> (<sq><m>S</m> is <em>op</em></sq>), het
+    verskillende Afrikaanse woorde in <m>A</m> na dieselfde Sjinese simbool in <m>B</m> afgebeeld word nie (<q><m>S</m> is een-tot-een</q>) en elke Sjinese simbool <m>y \in B</m> is gelyk aan <m>S(x)</m> vir een of ander <m>x \in A</m> (<q><m>S</m> is <em>op</em></q>), het
     ons nie <m>T</m> nodig nie.
     Dit is oorbodig!
   </p>
 
   <p>
-    Hierop sou ek reageer soos volg:
+    Hierop sou ek as volg reageer:
     jy is reg, maar is dit nie nuttig om 'n
-    eksplisiete Sjinees-na-Afrikaanse afbeelding <m>T</m> te h&#xea; nie?
-    In
-    boekwinkels word woordeboeke in pare geskep, in 'n enkele volume.
-    Buitendien, as mens die Afrikaanse woord vir <m>\begin{aligned}<image width="100%" source="images/bird.png" /> 
-    \end{aligned}</m> wil opsoek, sal dit lastig wees
+    eksplisiete Sjinees-na-Afrikaanse afbeelding <m>T</m> te hê nie?
+    In boekwinkels word woordeboeke in pare geskep, in 'n enkele volume.
+    Buitendien, as mens die Afrikaanse woord vir <c>BIRD</c>
+    wil opsoek, sal dit lastig wees
     om deur die hele Afrikaans-na-Sjinese woordeboek te werk,
-    om die Afrikaanse
-    woord vir <m>\begin{aligned}<image width="100%" source="images/bird.png" /> 
-    \end{aligned}</m> te vind!
+    om die Afrikaanse  woord vir <c>BIRD</c> te vind!
   </p>
 
   <p>
@@ -101,18 +93,16 @@
   <definition>
     <statement>
       <p>
-        Ons sê dat 'n lineêre afbeelding
-        <m>T : V  \rightarrow W</m> 'n <term>isomorfisme</term>
-        is as daar 'n lineêre
-        afbeelding <m>T^{-1} : W \rightarrow V</m> bestaan, sodat
+        Ons sê dat 'n lineêre afbeelding <m>T : V  \rightarrow W</m> 'n <term>isomorfisme</term>
+        is as daar 'n lineêre afbeelding <m>T^{-1} : W \rightarrow V</m> bestaan, sodat
         <men xml:id="inverse_map_in_iso">
-          T^{-1} \circ T = \id_V  \mbox{en}   T \circ T^{-1} = \id_W
+          T^{-1} \circ T = \id_V  \text{ en }   T \circ T^{-1} = \id_W
         </men>.
       </p>
     </statement>
   </definition>
 
-  <lemma>
+  <lemma xml:id="lemma-inverse-unique">
     <title>Inverse is Uniek</title>
     <statement>
       <p>
@@ -126,26 +116,27 @@
     </statement>
   </lemma>
 
-  <assemblage>
+  <convention>
     <p>
-      Hierdie lemma beteken dat dit maak sin om te praat van  "die inverse" (in plaas van "'n inverse") van 'n lineêre afbeelding. So dit maak sin vir oms om die notasie<m>T^{-1}</m> te gebruik, wat gelees word as 
-      "die" inverse van <m>T</m>.
+      Hierdie lemma beteken dat dit maak sin om te praat van  <q>die inverse</q> (in plaas van <q>'n inverse</q>) van 'n lineêre afbeelding. So dit maak sin vir oms om die notasie<m>T^{-1}</m> te gebruik, wat gelees word as
+      <q>die</q> inverse van <m>T</m>.
     </p>
-  </assemblage>
+  </convention>
 
   <proof>
+    <title>Bewys van <xref ref="lemma-inverse-unique" /></title>
     <p>
       Om te wys dat <m>S = S'</m>, moet ons wys dat vir alle
-      <m>\ve{w} \in
-      W</m>, <m>S(\ve{w}) = S'(\ve{w})</m>.
+      <m>\ve{w} \in W</m> geld
+      <m>S(\ve{w}) = S'(\ve{w})</m>.
       Inderdaad:
       <md>
-        <mrow>S(\ve{w}) \amp = S(\id_W (\ve{w})) \amp \amp  \mbox{(Defn of \(\id_W\))}</mrow>
-        <mrow>\amp = S( (T \circ S')(\ve{w})) \amp \amp  \mbox {($T \circ S' = \id_W$)}</mrow>
-        <mrow>\amp = S(T(S'(\ve{w}))) \amp \amp  \mbox {(Defn of $T \circ S'$)}</mrow>
-        <mrow>\amp = (S \circ T)(S'(\ve{w})) \amp \amp  \mbox {(Defn of $S \circ T$)}</mrow>
-        <mrow>\amp = \id_V (S'(\ve{w})) \amp \amp  \mbox{(\(S \circ T = \id_V\))}</mrow>
-        <mrow>\amp = S'(\ve{w}) \amp \amp  \mbox {(Defn of $\id_V$)}</mrow>
+        <mrow>S(\ve{w}) \amp = S(\id_W (\ve{w})) \amp \amp  \text{(Defn van } \id_W)</mrow>
+        <mrow>\amp = S( (T \circ S')(\ve{w})) \amp \amp  (T \circ S' = \id_W)</mrow>
+        <mrow>\amp = S(T(S'(\ve{w}))) \amp \amp  \text{(Defn of } T \circ S')</mrow>
+        <mrow>\amp = (S \circ T)(S'(\ve{w})) \amp \amp  \text{(Defn of } S \circ T)</mrow>
+        <mrow>\amp = \id_V (S'(\ve{w})) \amp \amp  (S \circ T = \id_V)</mrow>
+        <mrow>\amp = S'(\ve{w}) \amp \amp  \text{(Defn of } \id_V)</mrow>
       </md>.
     </p>
   </proof>
@@ -153,40 +144,46 @@
   <definition>
     <statement>
       <p>
-        Ons s&#xea; twee vektorruimtes <m>V</m> en <m>W</m> is
-        <term>isomorfies</term> as daar 'n isomorfisme tussen hulle bestaan.
+        Ons sê twee vektorruimtes <m>V</m> en <m>W</m> is
+        <term>isomorf</term> as daar 'n isomorfisme tussen hulle bestaan.
       </p>
     </statement>
   </definition>
 
+  <remark>
+    <p>
+      Indien twee vektorruimtes van positiewe dimensie
+      isomorf is, dan sal daar baie isomorfismes tussen
+      hulle wees  <mdash /> nie net een nie.
+    </p>
+  </remark>
+
   <example>
     <statement>
       <p>
-        Wys dat <m>\mathbb{R}^n</m> isomorfies aan <m>\Poly_{n-1}</m> is.
+        Wys dat <m>\mathbb{R}^n</m> isomorf aan <m>\Poly_{n-1}</m> is.
       </p>
-      <solution>
-        <p>
-          Ons definieer die volgende lineêre afbeeldings:
-          <md>
+    </statement>
+    <solution>
+      <p>
+        Ons definieer die volgende lineêre afbeeldings:
+        <md>
           <mrow>T : \mathbb{R}^n \amp  \rightarrow \Poly_{n-1}</mrow>
           <mrow>(a_1, a_2, \ldots, a_n) \amp \mapsto a_1 + a_2 x + \cdots + a_n x^{n-1}</mrow>
           <mrow>T^{-1} : \Poly_{n-1} \amp \rightarrow \mathbb{R}^n </mrow>
           <mrow> a_1 + a_2 x + \cdots + a_n x^{n-1} \amp \mapsto (a_1, a_2, \ldots, a_n)</mrow>
-          </md>
-        </p>
-      <p>
-        Ons het duidelik dat <m>T^{-1} \circ T = \id_{\mathbb{R}^n}</m> en <m>T \circ T^{-1} =
-        \id_{\Poly_{n-1}}</m>.
+        </md>
       </p>
-      </solution>
-    </statement>
+      <p>
+        Ons het duidelik dat <m>T^{-1} \circ T = \id_{\mathbb{R}^n}</m> en <m>T \circ T^{-1} = \id_{\Poly_{n-1}}</m>.
+      </p>
+    </solution>
   </example>
-
 
   <exercise>
     <statement>
       <p>
-        Maak seker dat hierdie afbeeldings line&#xea;r is.
+        Maak seker dat hierdie afbeeldings lineêr is.
       </p>
     </statement>
   </exercise>
@@ -199,8 +196,7 @@
   <theorem xml:id="iso_same_dim">
     <statement>
       <p>
-        Twee eindigdimensionele vektorruimtes <m>V</m> en <m>W</m> is
-        isomorfies as en slegs as hulle dieselfde dimensie het.
+        Twee eindigdimensionele vektorruimtes <m>V</m> en <m>W</m> is isomorf as en slegs as hulle dieselfde dimensie het.
       </p>
     </statement>
   </theorem>
@@ -208,71 +204,54 @@
   <proof>
     <p>
       <m>\Rightarrow</m>.
-      Veronderstel <m>V</m> en <m>W</m> is isomorfies, d.m.v.
-      'n paar line&#xea;re afbeeldings <m>S : V \rightleftarrows W : T</m>.
-      Laat
-      <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m> 'n basis vir
-      <m>V</m> wees.
-      Dan maak ek die bewering dat
-      <m>\basis{C} = \bopen S(\ve{e}_1),
-      \ldots, S(\ve{e}_m) \bclose</m> 'n basis vir <m>W</m> is.
-      Die lys vektore
-      <m>\basis{C}</m> is inderdaad line&#xea;r onafhanklik , want as
+      Veronderstel <m>V</m> en <m>W</m> is isomorf, d.m.v.
+      'n paar lineêre afbeeldings <m>S : V \rightleftarrows W : T</m>.
+      Laat <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m> 'n basis vir <m>V</m> wees.
+      Dan beweer ek dat <m>\basis{C} = \bopen S(\ve{e}_1), \ldots, S(\ve{e}_m) \bclose</m> 'n basis vir <m>W</m> is.
+      Dit is omdat die lys vektore
+      <m>\basis{C}</m> lineêr onafhanklik is, want as
       <me>
-        a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) =
-        \ve{0}_W
+        a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) = \ve{0}_W
       </me>,
       dan lewer die toepassing van <m>T</m> aan beide kante
       <md>
-        <mrow>T(a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m)) \amp  =
-        T(\ve{0}_W)</mrow>
-        <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m
-        T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  \mbox{(\(T\) is line&#xea;r)}</mrow>
-        <mrow>\therefore a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m \amp =
-        \ve{0}_V \amp \amp  \mbox{(\(T\circ S = \id_V\))}</mrow>
+        <mrow>T(a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m)) \amp  = T(\ve{0}_W)</mrow>
+        <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  (T \text{ is lineêr)}</mrow>
+        <mrow>\therefore a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m \amp = \ve{0}_V \amp \amp  (T\circ S = \id_V)</mrow>
       </md>
       wat impliseer dat <m>a_1 = a_2 = \cdots = a_m = 0</m>,
-      aangesien <m>\basis{B}</m>
-      line&#xea;r onafhanklik is.
-      Verder span die lys vektore <m>\basis{C}</m> vir
-      <m>W</m>, want as <m>\ve{w} \in W</m>,
-      met <m>T</m> daarop toegepas, dan kan ons
+      aangesien <m>\basis{B}</m> lineêr onafhanklik is.
+      Verder onderspan die lys vektore <m>\basis{C}</m> vir
+      <m>W</m>, want as <m>\ve{w} \in W</m>, dan kan ons
       <me>
         T(\ve{w}) = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m
       </me>
-      skryf vir skalare <m>a_i</m> aangesien<m>\basis{B}</m> <m>V</m> span.
+      skryf vir skalare <m>a_i</m> aangesien<m>\basis{B}</m> vir <m>V</m> onderspan.
       Maar dan
       <md>
-        <mrow>\ve{w} \amp = S(T(\ve{w})) \amp \amp  \mbox{(since \(S \circ T = \id_W\))}</mrow>
+        <mrow>\ve{w} \amp = S(T(\ve{w})) \amp \amp  \text{(since } S \circ T = \id_W)</mrow>
         <mrow>\amp = S(a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m)</mrow>
-        <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp 
-        \mbox{(\(S\) is line&#xea;r)}</mrow>
+        <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp (S \text{ is lineêr)}</mrow>
       </md>
-      sodat <m>\basis{C}</m> <m>W</m> span.
+      sodat <m>\basis{C}</m> vir <m>W</m> onderspan.
       Daarom is <m>\basis{C}</m> 'n basis vir <m>V</m>, so
-      <m>\dim V = \mbox{aantal vektore in
-      <m>\basis{B}</m>}</m> = <m>n</m>, terwyl <m>\dim W =
-      \mbox{aantal vektore in <m>\basis{C}</m>}  = n</m>.
+      <m>\Dim V = \text{aantal vektore in }\basis{B}</m> = <m>n</m>, terwyl <m>\Dim W =
+      \text{aantal vektore in }\basis{C}  = m</m>.
     </p>
 
     <p>
       <m>\Leftarrow</m>.
-      Veronderstel <m>\dim V = \dim W</m>.
-      Laat <m>\ve{e}_1, \ldots,
-      \ve{e}_m</m> 'n basis vir <m>V</m> wees,
-      en laat <m>\ve{f}_1, \ldots, \ve{f}_m</m>
-      'n basis vir <m>W</m> wees.
-      (Ons weet dat die aantal basisvektore dieselfde
-      is, want <m>\dim V = \dim W</m>.)
+      Veronderstel <m>\Dim V = \Dim W</m>.
+      Laat <m>\ve{e}_1, \ldots, \ve{e}_m</m> 'n basis vir <m>V</m> wees,
+      en laat <m>\ve{f}_1, \ldots, \ve{f}_m</m> 'n basis vir <m>W</m> wees.
+      (Ons weet dat die aantal basisvektore dieselfde is, want <m>\Dim V = \Dim W</m>.)
     </p>
 
     <p>
-      Om line&#xea;re afbeeldings te definieer
+      Om lineêre afbeeldings te definieer
       <md>
         <mrow>S : V \amp \rightleftarrows W : T</mrow>
-        <intertext>is dit voldoende, volgens <xref ref="defining_linear_map_on_basis">Proposisie</xref> (Voldoende om 'n Line{\^e}re
-        Afbeelding te Definieer op 'n Basis), om die aksie van <m>S</m> en <m>T</m>
-        op die basisvektore te definieer. Ons pen neer:</intertext>
+        <intertext>is dit voldoende, volgens <xref ref="defining_linear_map_on_basis">Proposisie</xref> (Voldoende om 'n Line{\^e}re Afbeelding te Definieer op 'n Basis), om die aksie van <m>S</m> en <m>T</m> op die basisvektore te definieer. Ons pen neer:</intertext>
         <mrow>\ve{e}_i \amp  \stackrel{S}{\mapsto} \ve{f}_i</mrow>
         <mrow>\ve{f}_i \amp  \stackrel{T}{\mapsto} \ve{e}_i</mrow>
       </md>
@@ -286,53 +265,43 @@
   <example>
     <statement>
       <p>
-        Wys dat <m>\Mat_{n,m}</m> isomorfies aan <m>\mathbb{R}^{mn}</m> is.
+        Wys dat <m>\Mat_{n,m}</m> isomorf is aan <m>\mathbb{R}^{mn}</m>.
       </p>
     </statement>
     <solution>
       <p>
-        Ons observeer volgens <xref ref="dimension_of_matrix_space_example">Voorbeeld</xref>,
-        <m>\dim \Mat_{n,m} = mn</m>,
+        Ons let op volgens <xref ref="dimension_of_matrix_space_example">Voorbeeld</xref>,
+        <m>\Dim \Mat_{n,m} = mn</m>,
         terwyl uit <xref ref="standard_basis_R_n_ex">Voorbeeld</xref>, is
-        <m>\dim
-        \mathbb{R}^{mn}</m> ook gelyk aan <m>mn</m>.
+        <m>\Dim \mathbb{R}^{mn}</m> ook gelyk aan <m>mn</m>.
       </p>
     </solution>
   </example>
 
   <p>
     Daar is een baie belangrike isomorfisme wat ons herhaaldelik gaan gebruik.
-    Laat <m>V</m> 'n vektorruimte weest met 'n basis <m>\basis{B} = \bopen \ve{b}_1,
-    \ldots, \ve{b}_m \bclose</m>.
+    Laat <m>V</m> 'n vektorruimte weest met 'n basis <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose</m>.
     Oorweeg die afbeelding
     <md>
       <mrow>[\cdot]_\basis{B} : V \amp  \rightarrow \Col_m</mrow>
       <mrow>\ve{v} \amp  \mapsto [\ve{v}]_\basis{B}</mrow>
-    </md>
-  </p>
-
-  <p>
-    , wat 'n vektor <m>\ve{v} \in V</m> na sy ooreenstemmende
-    ko&#xf6;rdinaatvektor<m>[\ve{v}]_\basis{B} \in \Col_m</m> stuur.
-    <xref ref="lin_of_coord_vectors">Lemma</xref> s&#xea;
-    presies dat <m>[ \cdot ]_\basis{B}</m> 'n
-    line&#xea;re afbeelding is.
+    </md>,
+    wat 'n vektor <m>\ve{v} \in V</m> na sy ooreenstemmende
+    koördinaatvektor <m>[\ve{v}]_\basis{B} \in \Col_m</m> stuur.
+    <xref ref="lin_of_coord_vectors">Lemma</xref> sê
+    presies dat <m>[ \cdot ]_\basis{B}</m> 'n lineêre afbeelding is.
     Ons gaan nou die inverse beskryf.
   </p>
 
   <definition>
     <statement>
       <p>
-        Laat <m>V</m> 'n <m>m</m>-dimensionele vektorruimte wees met basis
-        <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m\bclose</m>.
-        Laat <m>\mat{c}
-        \in \Col_m</m> 'n <m>m</m>-dimensionele kolomvektor wees.
-        Dan is die
-        <term>vektor in <m>V</m> wat ooreenstem aan <m>\mat{c}</m> relatief tot die basis
-        <m>\basis{B}</m></term>
+        Laat <m>V</m> 'n <m>m</m>-dimensionele vektorruimte met basis
+        <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m\bclose</m> wees.
+        Laat <m>\mat{c} \in \Col_m</m> 'n <m>m</m>-dimensionele kolomvektor wees.
+        Dan is die <term>vektor in <m>V</m> wat ooreenstem met <m>\mat{c}</m> relatief tot die basis <m>\basis{B}</m></term>
         <me>
-          \ve{vec}_{V, \basis{B}} (\mat{c}) := \mat{c}_1 \ve{e}_1 + \mat{c}_2
-          \ve{e}_2 + \cdots + \mat{c}_m \ve{e}_m
+          \ve{vec}_{V, \basis{B}} (\mat{c}) := \mat{c}_1 \ve{e}_1 + \mat{c}_2 \ve{e}_2 + \cdots + \mat{c}_m \ve{e}_m
         </me>.
       </p>
     </statement>
@@ -341,11 +310,9 @@
   <example>
     <statement>
       <p>
-        Die polinome <m>\basis{B} = \bopen \ve{p}_1, \ve{p}_2,
-        \ve{p}_3 \bclose</m> waar
+        Die polinome <m>\basis{B} = \bopen \ve{p}_1, \ve{p}_2,\ve{p}_3 \bclose</m> waar
         <me>
-          \ve{p}_1 := 1 + x,  \ve{p}_2 := 1 + x + x^2, \ve{p}_3 :=
-          1-x^2
+          \ve{p}_1 := 1 + x,  \ve{p}_2 := 1 + x + x^2, \ve{p}_3 := 1-x^2
         </me>
         is 'n basis vir <m>\Poly_2</m>
         (bevestig dit self).
@@ -363,46 +330,40 @@
       <p>
         Wys dat:
 
-        <ul>
+        <ol label="a">
           <li>
-            <title>(a)</title>
             <p>
-              <m>\ve{vec}_{V, \basis{B}} (\mat{c} + \mat{c}') =
-              \ve{vec}_{V, \basis{B}} (\mat{c}) + \ve{vec}_{V, \basis{B}}
-              (\mat{c}')</m>
+              <m>\ve{vec}_{V, \basis{B}} (\mat{c} + \mat{c}') = \ve{vec}_{V, \basis{B}} (\mat{c}) + \ve{vec}_{V, \basis{B}} (\mat{c}')</m>
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
             <p>
-              <m>\ve{vec}_{V, \basis{B}} (k\mat{c}) = k \, \ve{vec}_{V,
-              \basis{B}} (\mat{c})</m>.
+              <m>\ve{vec}_{V, \basis{B}} (k\mat{c}) = k \, \ve{vec}_{V, \basis{B}} (\mat{c})</m>.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
 
       <p>
-        Dit beteken dat <m>\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V</m> 'n
-        line&#xea;re afbeelding is.
+        Dit beteken dat <m>\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V</m> 'n lineêre afbeelding is.
       </p>
     </statement>
-     <solution>
+    <solution>
       <p>
- <ol>
+        <ol>
           <li>
              <p>
               <md>
-              <mrow>\ve{vec}_{V, \basis B}(\mat c + \mat c') \amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} +  \begin{bmatrix}  c^\prime_1\\ \vdots \\ c^\prime_n\end{bmatrix}\right) </mrow>
+                <mrow>\ve{vec}_{V, \basis B}(\mat c + \mat c') \amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} +  \begin{bmatrix}  c^\prime_1\\ \vdots \\ c^\prime_n\end{bmatrix}\right) </mrow>
 
-              <mrow>\amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1+ c^\prime_1 \\ \vdots \\c_n + c^\prime_n \end{bmatrix}\right) </mrow>
+                <mrow>\amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1+ c^\prime_1 \\ \vdots \\c_n + c^\prime_n \end{bmatrix}\right) </mrow>
 
-              <mrow>\amp =  (c_1+ c^\prime_1)\ve e_1 +\cdots +  (c_n+ c^\prime_n)\ve e_n  </mrow>
+                <mrow>\amp =  (c_1+ c^\prime_1)\ve e_1 +\cdots +  (c_n+ c^\prime_n)\ve e_n  </mrow>
 
-              <mrow> \amp = (c_1\ve e_1 + \cdots + c_n\ve e_n )  + (c_1^\prime\ve e_1 + \cdots + c^\prime_n\ve e_n ) </mrow>
+                <mrow> \amp = (c_1\ve e_1 + \cdots + c_n\ve e_n )  + (c_1^\prime\ve e_1 + \cdots + c^\prime_n\ve e_n ) </mrow>
 
-              <mrow> \amp = \ve{vec}_{V, \basis B}(\mat c) + \ve{vec}_{V, \basis B}(\mat c')</mrow>
+                <mrow> \amp = \ve{vec}_{V, \basis B}(\mat c) + \ve{vec}_{V, \basis B}(\mat c')</mrow>
 
             </md>
 
@@ -413,7 +374,7 @@
             <p>
              <md>
 
-              <mrow>\ve{vec}_{V, \basis B}(k\mat c) \amp = \ve{vec}_{V, \basis B}\left(k \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} \right)  </mrow> 
+              <mrow>\ve{vec}_{V, \basis B}(k\mat c) \amp = \ve{vec}_{V, \basis B}\left(k \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} \right)  </mrow>
 
               <mrow> \amp =  \ve{vec}_{V, \basis B}\left(\begin{bmatrix}  kc_1 \\ \vdots \\kc_n\end{bmatrix} \right)</mrow>
 
@@ -428,16 +389,14 @@
           </li>
         </ol>
 
-
-</p>
-</solution>
+      </p>
+    </solution>
   </exercise>
 
   <theorem>
     <statement>
       <p>
-        Laat <m>V</m> 'n vektorruimte met basis <m>\basis{B} = \bopen
-        \ve{e}_1, \ldots, \ve{e}_m\bclose</m> wees.
+        Laat <m>V</m> 'n vektorruimte met basis <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m\bclose</m> wees.
         Die afbeelding
         <md>
           <mrow>[\cdot]_\basis{B} : V \amp  \rightleftarrows  \Col_m </mrow>
@@ -456,16 +415,14 @@
     <p>
       Gegee <m>\ve{v} \in V</m>, brei dit in die basis <m>\basis{B}</m> uit:
       <me>
-        \ve{v} = a_1 \ve{e}_1 + \ldots + a_m \ve{e}_m 
+        \ve{v} = a_1 \ve{e}_1 + \ldots + a_m \ve{e}_m
       </me>.
     </p>
 
     <p>
       Dan,
       <md>
-        <mrow>(\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} )
-        \big(\ve{v}\big)
-        \amp = \ve{vec}_{V, \basis{B}} \big( [\ve{v}]_\basis{B} \big)</mrow>
+        <mrow>(\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} ) \big(\ve{v}\big) \amp = \ve{vec}_{V, \basis{B}} \big( [\ve{v}]_\basis{B} \big)</mrow>
         <mrow>\amp = \ve{vec}_{V,\basis{B}} \left( \begin{bmatrix} a_1 \\ \vdots \\ a_m \end{bmatrix} \right)</mrow>
         <mrow>\amp = a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m</mrow>
         <mrow>\amp = \ve{v}</mrow>
@@ -475,88 +432,83 @@
       <me>
         \mat{c} = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}\in \Col_m
       </me>,
-      dan het ons
+      het ons
       <md>
-        <mrow>\big( [ \cdot ]_\basis{B} \circ \ve{vec}_{V, \basis{B}} \big)
-        \big( \mat{c} \big) \amp =
+        <mrow>\big( [ \cdot ]_\basis{B} \circ \ve{vec}_{V, \basis{B}} \big) \big( \mat{c} \big) \amp =
         \big[\ve{vec}_{V, \basis{B}} (\mat{c}) \big]_\basis{B}</mrow>
         <mrow>\amp = \big[ \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m \big]</mrow>
         <mrow>\amp = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}</mrow>
         <mrow>\amp = \mat{c}</mrow>
       </md>
-      waar die tweede laaste stap die
-      <em>definisie</em> van die
-      ko&#xf6;rdinaatvektor van <m>\ve{v} = \mat{c}_1 \ve{e}_1 + \cdots +
-      \mat{c}_m \ve{e}_m</m> gebruik.
-      Gevolglik <m>[\cdot]_\basis{B} \circ
-      \ve{vec}_{V, \basis{B}} = \id_{\Col_m}</m>.
+      waar die tweede laaste stap die <em>definisie</em> van die
+      koördinaatvektor van <m>\ve{v} = \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m</m> gebruik.
+      Gevolglik is <m>[\cdot]_\basis{B} \circ \ve{vec}_{V, \basis{B}} = \id_{\Col_m}</m>.
     </p>
   </proof>
 
-  <assemblage>
+  <insight>
     <p>
-      Die bostaande resultaat is baie belangrik in
-      line&#xea;re algebra.
-      Dit s&#xea; dat, as ons 'n basis vir 'n abstrakte
-      eindigdimensionele vektorruimte <m>V</m> gekies het, dan kan ons die
+      Die bostaande resultaat is baie belangrik in lineêre algebra.
+      Dit sê dat, sodra ons 'n basis vir 'n abstrakte
+      eindig dimensionele vektorruimte <m>V</m> gekies het, dan kan ons die
       elemente van <m>V</m> behandel asof hulle kolomvektore is!
     </p>
-  </assemblage>
+  </insight>
 
- <exercises>
-
+<exercises>
   <exercise>
     <statement>
       <p>
-        Is die volgende vektorruimtes isofmorfies?
+        Is die volgende vektorruimtes isomorf?
         <md>
-          V = \left\{ \mat{v} \in \Col_4 : \cmatrix{1 \amp  2 \amp  0 \amp  -1 \\ -1 \amp  1
-          \amp  1 \amp  0}  \mat{v}  = \mat{0}  \right\}
-        </md>
-        <me>
-          W = \left\{ p \in \Poly_2 : \int_0^2 p(x) dx = 0 \right\}
-        </me>.
+          <mrow>
+            V = \left\{ \mat{v} \in \Col_4 : \cmatrix{1 \amp  2 \amp  0 \amp  -1 \\ -1 \amp  1 \amp  1 \amp  0}  \mat{v}  = \mat{0}  \right\}
+          </mrow>
+          <mrow>
+            W = \left\{ p \in \Poly_2 : \int_0^2 p(x) dx = 0 \right\}
+          </mrow>
+        </md>.
       </p>
 
       <p>
         As hulle is, gee 'n eksplisiete isomorfisme tussen hulle.
-        Indien nie,
-        bewys dat hulle nie isofmorfies is nie.
+        Indien nie,   bewys dat hulle nie isomorf is nie.
       </p>
     </statement>
     <solution>
       <p>
-        V consists of all vectors <m>(x,y,z,w)</m> satisyfing the linear equations
+        <m>V</m> bestaan uit alle vektore <m>(x,y,z,w)</m> wat die lineêre vergelykings
         <md>
 
          <mrow> x + 2y - w = 0 </mrow>
 
          <mrow> -x + y + z = 0 </mrow>
 
-        </md>.
+        </md> bevredig.
 
-        We are free to choose <m>x</m> and <m> y </m> arbitrarily, but then (1) above fixes <m> w </m> and (2) fixes <m> z </m>. Hence <m> V </m> is a 2 dimensional subspace.
-      </p>
-<p>
-Onto <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
-
-      
-        <me> 
-\int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
-      </me>
-     Thus, for any choice of <m> a </m> and <m> b </m>, <m> c </m> is uniquely determined. Hence <m>W</m> is a 2 dimensional subspace.
-      </p>
-      <p>
-Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are isomorphic by <xref ref = "iso_same_dim" />. To exhibit an explicit isomorphism between the <m> V</m> and <m> W </m> we shall need find bases for both spaces.
+        Ons kan <m>x</m> en <m> y </m> willekeurig kies, maar dan is <m> w </m> vas uit (1) hier bo en <m> z </m> vas uit (2) hier bo. Dus is <m> V </m> 'n 2-dimensionele deelruimte.
       </p>
 
       <p>
-        Since <m>V</m> is 2 dimensional, a basis for <m> V </m> consists of any two non-zero vectors in <m>V</m> that are not scalar multiples of one another. By inspection, we find the basis <m> \basis B_V = \bopen (1,0,1,1) , (0,1,-1,2) \bclose</m>. By similar reasoning, we find a basis <m> \basis B_W = \bopen  \frac{3}{8}x^2 - \frac{1}{2} , x - 1\bclose </m>. By <xref ref="defining_linear_map_on_basis" />, there is a unique linear map <m> T: V \to W </m> such that
+        Nou kyk ons na <m>W</m>. Laat <m>p(x) = ax^2 + bx +c</m>. Vir <m> p(x) </m> om in <m> W</m> te wees, moet <m> p(x)</m> die volgendde vergelyking bevredig:
+
+        <me>
+          \int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
+        </me>
+        Dus, vir enige keuse van <m> a </m> en <m> b </m>, word <m> c </m> uniek daaruit bepaal. Dus is <m>W</m> 'n 2-dimensionele deelruimte.
+      </p>
+
+      <p>
+        Aangesien <m> V </m> en <m> W </m> beide 2 dimensioneel is, moet hulle uit <xref ref = "iso_same_dim" /> isomorf wees. Om 'n eksplisiete isomorfisme tussen <m> V</m> en <m> W </m> te vind, sal ons basisse vir beide moet kry.
+      </p>
+
+      <p>
+        Aangesien <m>V</m> 2-dimensioneel is, sal 'n basis vir <m> V </m> uit twee nie-nul vektore in <m>V</m> bestaan wat nie skalaarveelvoude van mekaar is nie. Deur inspeksie, vind ons die basis <m> \basis B_V = \bopen (1,0,1,1) , (0,1,-1,2) \bclose</m>. Met 'n soortgelyke argument vind ons 'n basis <m> \basis B_W = \bopen  \frac{3}{8}x^2 - \frac{1}{2} , x - 1\bclose </m>. Uit <xref ref="defining_linear_map_on_basis" /> is daar 'n unieke lineêre afbeelding <m> T: V \to W </m> sodat
         <md>
          <mrow> T((1,0,1,1)) \amp = \frac{3}{8}x^2 - \frac{1}{2} </mrow>
 
          <mrow> T((0,1,-1,2)) \amp = x -1 </mrow>
-        </md>. This map is an isomorphism, as demonstrated by the proof of <xref ref ="iso_same_dim" />.
+        </md>. Hierdie afbeelding is 'n isomorfisme, soos in die bewys van <xref ref ="iso_same_dim" /> aangetoon is.
       </p>
     </solution>
   </exercise>
@@ -564,7 +516,7 @@ Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are i
   <exercise>
     <statement>
       <p>
-        Is die volgende vektorruimtes isomorfies?
+        Is die volgende vektorruimtes isomorf?
         <me>
           V = \{ \ve{v} \in \mathbb{R}^3 : \ve{v} \times (1,2,3) = \ve{0} \}
         </me>
@@ -575,57 +527,56 @@ Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are i
 
       <p>
         As hulle is, gee 'n eksplisiete isomorfisme tussen hulle.
-        Indien nie,
-        bewys dat hulle nie isomorfies is nie.
+        Indien nie, bewys dat hulle nie isomorf is nie.
       </p>
     </statement>
   <solution>
     <p>
-      We use some geometry to find the dimension of <m> V</m>. <m> \ve v \in V  </m> if and only if
+      Ons gebruik bietjie meetkunde om die dimensie van <m> V</m> te bereken. Die vektor <m> \ve v \in V  </m> as en slegs as
       <me>
-|\ve v||(1,2,3)|\sin \theta =0 
-    </me>
-    where <m> \theta</m> is the angle between <m> \ve v </m> and <m> (1,2,3)</m>. Thus <m> V </m> consists of <m> \ve 0 </m> as well as all those vectors parallel to <m> (1,2,3)</m>. But this set is precisely all vectors of the form <m>k(1,2,3)</m> with <m> k \in \mathbb R </m>. Hence <m> V </m> is 1 dimensional with basis <m> \bopen (1,2,3) \bclose </m>.
+        |\ve v||(1,2,3)|\sin \theta =0
+      </me>
+      waar <m> \theta</m> die hoek tussen  <m> \ve v </m> en <m> (1,2,3)</m> is. Dus bestaan <m> V </m> uit <m> \ve 0 </m> asook al die vektore parallel aan <m> (1,2,3)</m>. Maar hierdie versameling is presies al die vektore van die vorm <m>k(1,2,3)</m> met <m> k \in \mathbb R </m>. Dus is <m> V </m> 1-dimensioneel met basis <m> \bopen (1,2,3) \bclose </m>.
     </p>
+
     <p>
-<m> W </m> consists of all matrices <m>(a_{ij})</m> satisfying
-<me>
-\begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}.
-</me>
-Thus <m> a_{11}  = a_{22} = 0 </m> and <m> b = -c</m>. So <m>W</m> consists of all those matrices  of the form
-<me>
-\begin{bmatrix} 0 \mamp k \\ -k \mamp 0\end{bmatrix}
-</me>.
-This also shows that 
-<me>
-\bopen \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix} \bclose
-</me>
-is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the isomorphism given by the unique linear map <m> V \to W</m> satisfying
-<me>
-(1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix}
-</me>
+      <m> W </m> bestaan uit alle matrikse <m>(a_{ij})</m> wat
+      <me>
+        \begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}
+      </me> bevredig.
+      Dus is <m> a_{11}  = a_{22} = 0 </m> en <m> b = -c</m>. So <m>W</m> bestaan uit alle matrikse van die vorm
+      <me>
+        \begin{bmatrix} 0 \mamp k \\ -k \mamp 0\end{bmatrix}
+      </me>.
+      Dit wys ook dat
+      <me>
+        \bopen \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix} \bclose
+      </me>
+      'n basis vir <m>W</m> is. Dus is <m> V </m> en <m> W</m> isomorf met die isomorfisme gegee deur die unieke lineêre afbeelding <m> V \to W</m> wat
+      <me>
+        (1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix}
+      </me> bevredig.
     </p>
   </solution>
-
   </exercise>
 
   <exercise>
     <statement>
       <p>
-        Are the following vector spaces
+        Is die volgende vektorruimtes
         <me>
           V = \{ \ve{v} \in \mathbb{R}^4 : (1, -1, 2, 1) \cdot \ve{v} = 0 \}
         </me>
-        and
+        en
         <me>
           \Poly_1[x,y]
         </me>
-        isomorphic?
+        isomorf?
       </p>
 
       <p>
-        If they are, construct an explicit isomorphism between them.
-        If not, prove that they are not isomorphic.
+        As hulle is, konstrueer 'n eksplisiete isomorfise tussen hulle.
+        As hulle nie is nie, bewys dat hulle nie is nie.
       </p>
     </statement>
   </exercise>
@@ -633,23 +584,22 @@ is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the 
   <exercise>
     <statement>
       <p>
-        Are the following vector spaces isomorphic?
-        <me>
-          V = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \} \\
+        Is die volgende vektorruimtes isomorf?
+        <md>
+          <mrow> V_1 = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \}, \text{ waar} </mrow>
+          <mrow>
           D = \{ (x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \}
-        </me>
+          </mrow>
+        </md>;
         <me>
-          \Vect_2 (\mathbb{R}^2)
-        </me>
+          V_2 = \Vect_2 (\mathbb{R}^2)
+        </me>.
       </p>
     </statement>
   </exercise>
 
 
-
-   </exercises>
-
-<!-- <solutions divisional="solution answer" />  -->
+</exercises>
 
 
 </section>

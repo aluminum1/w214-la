@@ -2,8 +2,8 @@
   <title>Subspaces</title>
   <introduction>
     <p>
-    In this section we will introduce the notion of a <em>subspace</em> of a vector space. This notion will allow us to quickly establish many more examples of vector spaces.
-    </p> 
+      In this section we will introduce the notion of a <em>subspace</em> of a vector space. This notion will allow us to quickly establish many more examples of vector spaces.
+    </p>
   </introduction>
 
   <subsection>
@@ -12,8 +12,9 @@
   <definition xml:id="defn-subspace">
     <statement>
       <p>
-        A subset <m>U \subseteq V</m> of a vector space <m>V</m> is called a
-        <term>subspace</term> of <m>V</m> if:
+        A subset <m>U \subseteq V</m> of a vector space
+        <m>V</m> is called a <term>subspace</term> of
+        <m>V</m> if:
 
         <ul>
           <li>
@@ -31,7 +32,8 @@
 
           <li>
             <p>
-              For all scalars <m>k</m> and all vectors <m>\ve{u} \in U</m>,
+              For all scalars <m>k</m> and all vectors
+              <m>\ve{u} \in U</m>,
               <m>k \smul\ve{u} \in U</m>
             </p>
           </li>
@@ -40,13 +42,51 @@
     </statement>
   </definition>
 
+<p>
+    When <m>U</m> is a subset of a vector space
+    <m>V</m>, then we can try to add two elements in <m>U</m>
+    or try to multiply one element in <m>U</m> with a scalar
+    as though they all were elements of <m>V</m>.
+    Since these two operations are operations on
+    <m>V</m>, the output will always be an element in <m>V</m>.
+    But even if all the input elements are in the subset
+    <m>U</m>, the outputs of these operations might not
+    necessarily be in <m>U</m> (although they are definitely
+    in <m>V</m>).
+  </p>
+  <p>
+    However, if <m>U</m> is a subspace, then these output
+    values will be in <m>U</m> according to
+    <xref ref="defn-subspace" text="type-global" />. In
+    this case we say that the operations on <m>V</m>
+    <term>restrict to</term> operations on <m>U</m>. In the
+    following lemma we see that these restricted operations
+    can be used to form the data that turns <m>U</m>,
+    into a vector space.
+  </p>
+  <remark><p>
+    Some textbooks will use the property in
+    <xref ref="subspace_lem" text="type-global" />
+    as the definition of a subspace and will then derive
+    <xref ref="defn-subspace" text="type-global" />
+    as a consequence.
+  </p></remark>
+  <remark><p>
+    There is very little that distinguishes an operation
+    on <m>V</m> from its restriction to <m>U</m>. Some
+    people will even call these operations the same, because
+    if you performed the operation on two elements from
+    <m>U</m> you will get the same answer in both cases.
+  </p></remark>
+
   <lemma xml:id="subspace_lem">
     <statement>
       <p>
-        If <m>U</m> is a subspace of a vector space <m>V</m>,
-        then <m>U</m> is also a vector space,
-        when we equip it with the same addition operation,
-        zero vector and scalar multiplication as in <m>V</m>.
+        Suppose that <m>U</m> is a subspace of a vector
+        space <m>V</m>. If we equip <m>U</m> with the
+        restricted operations addition and scalar
+        multiplication from <m>V</m>, then <m>U</m>
+        is a vector space.
       </p>
     </statement>
   </lemma>
@@ -55,7 +95,7 @@
     <p>
       Since <m>U</m> is a subspace,
       we know that it actually makes sense to
-      <q>equip it with the same addition operation,
+      <q>equip it with the same (restricted) addition operation,
       zero vector and scalar multiplication as in <m>V</m></q>.
       (If <m>U</m> was <em>not</em> a subspace,
       then we might have for instance
@@ -65,8 +105,10 @@
 
     <p>
       So we simply need to check the rules R1 to R8.
-      Since these rules hold for all vectors <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>,
-      they certainly hold for all vectors <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m>.
+      Since these rules hold for all vectors
+      <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>,
+      they certainly hold for all vectors
+      <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m>.
       So R1 to R8 are satisfied.
     </p>
   </proof>
@@ -82,45 +124,50 @@
       A line <m>L</m> through the origin in
       <m>\mathbb{R}^2</m> is a subspace of <m>\mathbb{R}^2</m>:
     </p>
-    <sidebyside>
-      <figure xml:id="line-through-origin-R2-example">
+    <figure xml:id="line-through-origin-R2-example">
       <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
       <image width="50%">
-      <latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
-  \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-  \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
-      </latex-image>
+        <latex-image>
+          <![CDATA[\begin{tikzpicture}
+          \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+          \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+          \draw[thick, primaryColor] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+        </latex-image>
       </image>
-      </figure>
-  </sidebyside>
-    
+    </figure>
+
     <p>
-      Indeed, recall that <m>L</m> can be specified by a homogenous linear equation of the form:
+      Indeed, recall that <m>L</m> can be specified by
+      a homogeneous linear equation of the form:
       <men xml:id="eqn_of_L">
         L = \{ (x,y) \in \mathbb{R}^2 : ax + by = 0 \}
       </men>
       for some constants <m>a</m> and <m>b</m>.
-      So, if <m>\ve{v} = (x, \, y)</m> and <m>\ve{v}' = (x', \, y')</m> lie on <m>L</m>,
-      then their sum <m>\ve{v} + \ve{v}' = (x + x', \, y + y')</m> also lies on <m>L</m>,
-      because its components satisfy the defining equation <xref ref="eqn_of_L" />:
+      So, if <m>\ve{v} = (x, \, y)</m> and
+      <m>\ve{v}' = (x', \, y')</m> lie on <m>L</m>,
+      then their sum
+      <m>\ve{v} + \ve{v}' = (x + x', \, y + y')</m>
+      also lies on <m>L</m>,
+      because its components satisfy the defining equation
+      <xref ref="eqn_of_L" text="global"/>:
       <md>
         <mrow>\amp a(x + x') + b (y + y')</mrow>
         <mrow>\amp  = (ax + by) + (ax' + by')</mrow>
-        <mrow>\amp = 0 + 0 \amp \amp  \mbox{(since \(ax + by = 0\) and \(ax' + by' = 0\))}</mrow>
+        <mrow>\amp = 0 + 0 \amp \amp  \text{(since }ax + by = 0\text{ and }ax' + by' = 0)</mrow>
         <mrow>\amp = 0</mrow>
       </md>.
     </p>
 
     <p>
       This also makes sense geometrically:
-      if you look at the picture, then you will see that adding two vectors
-      <m>\ve{v}, \ve{v}'</m> on <m>L</m> by the head-to-tail method will produce another vector on <m>L</m>.
+      if you look at the picture
+      <xref ref="line-through-origin-R2-example" text="global" />,
+      then you will see that adding two vectors
+      <m>\ve{v}, \ve{v}'</m> on <m>L</m> by the head-to-tail
+      method will produce another vector on <m>L</m>.
     </p>
-
-
-    </statement>
-  </example>
+  </statement>
+</example>
 
      <exercise>
       <statement>
@@ -136,9 +183,11 @@
     <title>Lines and planes in <m>\mathbb{R}^3</m></title>
     <statement>
       <p>
-        Similarly a line <m>L</m> or a plane <m>P</m> through the origin in
-        <m>\mathbb{R}^3</m> is a subspace of <m>\mathbb{R}^3</m>:
-        <sidebyside width="40%">
+        Similarly a line <m>L</m> or a plane <m>P</m>
+        through the origin in <m>\mathbb{R}^3</m> is a
+        subspace of <m>\mathbb{R}^3</m>:
+      </p>
+      <sidebyside width="40%">
         <figure xml:id="line-in-R3-example-subspace">
           <caption>A line through the origin in <m>\mathbb{R}^3</m>.</caption>
           <image>
@@ -148,7 +197,7 @@
             \draw[->] (0, 0) -- (2,0) node[right] {$y$};
             \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
             \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-            \draw[thick, red] (-2, 1) node[above] {$L$} -- (2, -1);
+            \draw[thick, primaryColor] (-2, 1) node[above] {$L$} -- (2, -1);
           \end{tikzpicture}
           ]]>
           </latex-image>
@@ -164,30 +213,27 @@
             \draw[->] (0, 0) -- (2,0) node[right] {$y$};
             \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
             \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-            \draw[thick, red] (-0.1, -1) -- (-1, 0.4);
-            \draw[thick, red] (-1, 0.4) -- (0.3, 1.5);
-            \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
-            \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);
+            \draw[thick, primaryColor] (-0.1, -1) -- (-1, 0.4);
+            \draw[thick, primaryColor] (-1, 0.4) -- (0.3, 1.5);
+            \draw[thick, primaryColor] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
+            \draw[thick, primaryColor] (1.5, 0.4) -- (-0.1, -1);
           \end{tikzpicture}
           ]]>
           </latex-image>
           </image>
         </figure>
-        </sidebyside>
-      </p>
+      </sidebyside>
     </statement>
   </example>
 
   <example>
     <title>Zero vector space</title>
     <statement>
-    <p>
-      If <m>V</m> is a vector space,
-      the the set <m>\{\ve{0}\} \subseteq V</m> containing just the zero vector <m>\ve{0}</m> is a subspace of <m>V</m>.
-    </p>
-
-
-
+      <p>
+        If <m>V</m> is a vector space, the the
+        set <m>\{\ve{0}\} \subseteq V</m> containing just
+        the zero vector <m>\ve{0}</m> is a subspace of <m>V</m>.
+      </p>
     </statement>
   </example>
 
@@ -204,16 +250,21 @@
     <statement>
       <p>
         Be careful though <mdash /> not <em>every</em>
-        line <m>L \subset \mathbb{R}^2</m> is a subspace of <m>\mathbb{R}^2</m>.
+        line <m>L \subset \mathbb{R}^2</m> is a subspace of
+        <m>\mathbb{R}^2</m>.
         If <m>L</m> does not go through the origin,
-        then <m>\ve{0} \notin L</m>, so <m>L</m> is not a subspace.
+        then <m>\ve{0} \notin L</m>, so <m>L</m> is
+        not a subspace.
       </p>
 
       <p>
-        Another reason that <m>L</m> is not a subspace is that it is not closed under addition:
-        when we add two nonzero vectors <m>\ve{v}</m> and <m>\ve{v}'</m> on <m>L</m>,
-        we end up with a vector <m>\ve{v} + \ve{v}'</m> which does not lie on <m>L</m>:
-        <sidebyside>
+        Another reason that <m>L</m> is not a subspace is
+        that it is not closed under addition:
+        when we add two non-zero vectors <m>\ve{v}</m> and
+        <m>\ve{v}'</m> on <m>L</m>,
+        we end up with a vector <m>\ve{v} + \ve{v}'</m>
+        which does not lie on <m>L</m>:
+      </p>
           <figure xml:id="line-not-through-origin-non-example">
             <caption>A line which does not pass through the origin is not closed under addition.</caption>
             <image>
@@ -222,88 +273,89 @@
               \begin{tikzpicture}
                 \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
                 \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-                \draw[thick, red] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
-                \draw[very thick, blue, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
-                \draw[very thick, blue, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
-                \draw[very thick, blue, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};
+                \draw[thick, primaryColor] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
+                \draw[very thick, secondaryColor, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
+                \draw[very thick, secondaryColor, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
+                \draw[very thick, secondaryColor, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};
               \end{tikzpicture}
               ]]>
             </latex-image>
             </image>
         </figure>
-      </sidebyside>
-      </p>
     </statement>
   </example>
 
   <example xml:id="hyperplanes_example_subspace">
     <title>Hyperplanes orthogonal to a fixed vector</title>
-    <statement><p>This example generalizes <xref ref="lines_planes_R3"/> to higher dimensions. Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. The <em>hyperplane orthogonal to <m>\ve{v}</m></em> is the set <m>W</m> of all vectors orthogonal to <m>\ve{v}</m>, that is,
-    <men>
-    W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
-    </men>
-    You will prove in Exercise <xref ref="prove_hyperplane_subspace"/> that <m>W</m> is a subspace of <m>\mathbb{R}^n</m>.  </p>
+    <statement>
+      <p>This example generalizes <xref ref="lines_planes_R3" text="type-global"/> to higher dimensions. Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed non-zero vector. The <em>hyperplane orthogonal to <m>\ve{v}</m></em> is the set <m>W</m> of all vectors orthogonal to <m>\ve{v}</m>, that is,
+      <men>
+      W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+      </men>
+      You will prove in Exercise <xref ref="prove_hyperplane_subspace" text="type-global"/> that <m>W</m> is a subspace of <m>\mathbb{R}^n</m>.  </p>
 
-    <p>For example, consider the vector <m>\ve{v} = (1,2,3) \in \mathbb{R}^3</m>. Then the hyperplane orthogonal to <m>\ve{v}</m> is
-    <men>
-      W = \{ \ve{w} \in \mathbb{R}^3 : \ve{v} \dotp \ve{w} = 0 \}.
-  </men>
-    If we write <m>\ve{w} = (w_1, w_2, w_3)</m> then <m>\ve{v} \dotp \ve{w} = 0</m> translates into the equation
-    <men xml:id="explicit_eqn_hyperplane1">
-      w_1 + 2 w_2 + 3w_3 = 0.
-    </men>
-    So, <m>W</m> can be regarded as the set of vectors in <m>\mathbb{R}^3</m> whose components satisfy <xref ref="explicit_eqn_hyperplane1"/>.</p> 
-</statement>
-</example>
+      <p>For example, consider the vector <m>\ve{v} = (1,2,3) \in \mathbb{R}^3</m>. Then the hyperplane orthogonal to <m>\ve{v}</m> is
+      <men>
+        W = \{ \ve{w} \in \mathbb{R}^3 : \ve{v} \dotp \ve{w} = 0 \}.
+      </men>
+      If we write <m>\ve{w} = (w_1, w_2, w_3)</m> then <m>\ve{v} \dotp \ve{w} = 0</m> translates into the equation
+      <men xml:id="explicit_eqn_hyperplane1">
+        w_1 + 2 w_2 + 3w_3 = 0.
+      </men>
+      So, <m>W</m> can be regarded as the set of vectors in <m>\mathbb{R}^3</m> whose components satisfy <xref ref="explicit_eqn_hyperplane1" text="global"/>.</p>
+    </statement>
+  </example>
 
     <exercise xml:id="prove_hyperplane_subspace">
       <statement>
-    Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. Show that 
-        <me>
-    W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
-    </me>
-    is a subspace of <m>\mathbb{R}^n</m>.
+        <p>
+          Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed non-zero vector. Show that
+          <me>
+            W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+          </me>
+          is a subspace of <m>\mathbb{R}^n</m>.
+        </p>
     </statement>
     <solution>
-    <paragraphs>
-      <title>Closed under addition.</title>
-      <p> Suppose <m>\ve{w}, \ve{w}' \in W</m>. </p>
-      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m> and <m>\ve{v} \dotp \ve{w}' = 0 </m>.  </p>
-      <p> We must show that <m>\ve{w} + \ve{w}' \in W</m>. </p>
-      <p> That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>. </p>
-      <p> Indeed, 
+      <p>
+        First we check whether it is closed under addition.
+      </p>
+      <p>
+        Suppose <m>\ve{w}, \ve{w}' \in W</m>.
+        That is, <m>\ve{v} \dotp \ve{w} = 0 </m> and <m>\ve{v} \dotp \ve{w}' = 0 </m>.
+        We must show that <m>\ve{w} + \ve{w}' \in W</m>. That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>.
+        Indeed,
         <md>
-      <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
-      <mrow> \amp = 0 + 0 </mrow>
-      <mrow> \amp = 0. </mrow>
-      </md>
+          <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
+          <mrow> \amp = 0 + 0 </mrow>
+          <mrow> \amp = 0 </mrow>
+        </md>.
       </p>
-    </paragraphs>
 
-    <paragraphs>
-      <title>Contains the zero vector.</title>
-      <p> Since <m>\ve{v} \dotp \ve{0} = 0</m>, we conclude that <m>\ve{0} \in W</m>.
+      <p>
+        Next we check whether it contains the zero vector.
       </p>
-    </paragraphs>
+      <p>
+        Since <m>\ve{v} \dotp \ve{0} = 0</m>, we conclude that <m>\ve{0} \in W</m>.
+      </p>
 
-    <paragraphs>
-      <title>Closed under scalar multiplication.</title>
-      <p> Suppose <m>\ve{w} \in W</m> and <m>k</m> is a scalar. </p>
-      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m>.  </p>
-      <p> We must show that <m>k \smul \ve{w}  \in W</m>. </p>
-      <p> That is, we must show that <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>. </p>
-      <p> Indeed, 
+      <p>
+        Lastly, we check whether it is closed under scalar multiplication.
+      </p>
+      <p>
+        Suppose <m>\ve{w} \in W</m> and <m>k</m> is a scalar.
+        That is, <m>\ve{v} \dotp \ve{w} = 0 </m>.
+        We must show that <m>k \smul \ve{w}  \in W</m>.
+        That is, we must show that <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>.
+        Indeed,
         <md>
-      <mrow> \ve{v} \dotp (k \smul \ve{w}) \amp = k \smul (\ve{v} \dotp \ve{w}) </mrow>
-      <mrow> \amp = (k)(0) </mrow>
-      <mrow> \amp = 0. </mrow>
-      </md>
+          <mrow> \ve{v} \dotp (k \smul \ve{w}) \amp = k \smul (\ve{v} \dotp \ve{w}) </mrow>
+          <mrow> \amp = (k)(0) </mrow>
+          <mrow> \amp = 0 </mrow>
+        </md>.
       </p>
-    </paragraphs>
-  </solution>
-  
+    </solution>
   </exercise>
-  
 
   <example>
     <title>Continuous functions as a subspace</title>
@@ -311,9 +363,10 @@
       <p>
         The set
         <me>
-          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ continuous}  \}
+          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \text{ continuous}  \}
         </me>
-        of all continuous functions on an interval <m>I</m> is a subspace of the set <m>\Fun(I)</m> of
+        of all continuous functions on an interval <m>I</m>
+        is a subspace of the set <m>\Fun(I)</m> of
         <em>all</em> functions on <m>I</m>.
         Let us check that it satisfies the definition.
         You know from earlier courses that:
@@ -343,7 +396,7 @@
       </p>
 
       <p>
-        Hence, by <xref ref="subspace_lem">Lemma</xref>,
+        Hence, by <xref ref="subspace_lem" text="type-global">Lemma</xref>,
         <m>\Cont(I)</m> is a vector space in its own right.
       </p>
     </statement>
@@ -352,52 +405,54 @@
   <example>
     <title>Differentiable functions as a subspace</title>
     <statement>
-    <p>
-      Similarly, the set
-      <me>
-        \Diff(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ differentiable}  \}
-      </me>
-      of differentiable functions on an open interval <m>I</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun (I)</m>.
-    </p>
-
-
-
+      <p>
+        Similarly, the set
+        <me>
+          \Diff(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \text{ differentiable}  \}
+        </me>
+        of differentiable functions on an open interval <m>I</m> is a <xref ref="defn-subspace" text="custom">subspace</xref> of <m>\Fun (I)</m>.
+      </p>
     </statement>
   </example>
 
-   <exercise>
-      <statement>
-        <p>
-          Check this.
-          Also, is <m>\Diff( I)</m> a subspace of <m>\Cont(I)</m>?
-        </p>
-      </statement>
-    </exercise>
+ <exercise>
+    <statement>
+      <p>
+        Check this.
+        Also, is <m>\Diff( I)</m> a subspace of <m>\Cont(I)</m>?
+      </p>
+    </statement>
+  </exercise>
 
   <example>
     <title>Vector spaces of polynomials</title>
     <statement>
     <p>
-      A <em>polynomial</em> is a function <m>\ve{p} : \mathbb{R} \rightarrow \mathbb{R}</m> of the form
+      A <em>polynomial</em> is a function
+      <m>\ve{p} : \mathbb{R} \rightarrow \mathbb{R}</m>
+      of the form
       <men xml:id="formula_poly">
         \ve{p}(x) = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0
       </men>.
       for some fixed real coefficients <m>a_0, \ldots, a_n</m>.
-      Two polynomials <m>\ve{p}</m> and <m>\ve{q}</m> are <em>equal</em>
-      if they are equal <em>as functions</em>,
-      that is if <m>\ve{p}(x) = \ve{q} (x)</m> for all <m>x \in \mathbb{R}</m>.
-      The <em>degree</em> of a polynomial is the highest power of <m>x</m> which occurs in its formula.
+      Two polynomials <m>\ve{p}</m> and <m>\ve{q}</m> are
+      <em>equal</em> if they are equal <em>as functions</em>,
+      that is if <m>\ve{p}(x) = \ve{q} (x)</m> for all
+      <m>x \in \mathbb{R}</m>.
+      The <em>degree</em> of a polynomial is the highest
+      power of <m>x</m> which occurs in its formula.
     </p>
 
     <p>
-      For example,
-      <m>2x^3 - x + 7</m> is a polynomial of degree 3, while <m>x^5 - 2</m> is a polynomial of degree 5.
-      We write the set of <em>all</em>
-      polynomials as <m>\Poly</m> and the set of all polynomials having degree less than or equal to <m>n</m> as <m>\Poly_n</m>.
+      For example, <m>2x^3 - x + 7</m> is a polynomial of
+      degree 3, while <m>x^5 - 2</m> is a polynomial of degree 5.
     </p>
-
-
-
+    <p>
+      We write the set of <em>all</em>
+      polynomials as <m>\Poly</m> and the set of all
+      polynomials having degree less than or equal to
+      <m>n</m> as <m>\Poly_n</m>.
+    </p>
     </statement>
   </example>
 
@@ -409,44 +464,51 @@
       </statement>
     </exercise>
 
-
   <example xml:id="poly_many_variables_example">
     <title>Polynomials in many variables</title>
     <statement>
     <p>
-      A <em>monomial</em> in two variables <m>x</m> and <m>y</m> is an expression of the form <m>x^m y^n</m> for some nonnegative integers <m>m,n</m>. The <em>degree</em> of the monomial is <m>m+n</m>. For example,
+      A <em>monomial</em> in two variables <m>x</m> and <m>y</m> is an expression of the form <m>x^m y^n</m> for some non-negative integers <m>m,n</m>. The <em>degree</em> of the monomial is <m>m+n</m>. For example,
       <me>
-             \underbrace{x^3 y^2}_{\text{degree 5}}, \quad \underbrace{y^7}_{\text{degree 7}}.
-    </me>
-A <em>polynomial in two variables <m>x</m> and <m>y</m></em> is a linear combination of monomials. The <em>degree</em> of the polynomial is the highest degree of the monomials occuring in the linear combination. For instance, 
+        \underbrace{x^3 y^2}_{\text{degree 5}}, \quad \underbrace{y^7}_{\text{degree 7}}.
+      </me>
+      A <em>polynomial in two variables <m>x</m> and <m>y</m></em> is a linear combination of monomials. The <em>degree</em> of the polynomial is the highest degree of the monomials occuring in the linear combination. For instance,
       <men xml:id="two_var_poly_ex">
-             p = 5x^3 y^2 - 3xy^7
-    </men>
-  is a polynomial in <m>x</m> and <m>y</m> of degree <m>8</m>. </p>
+        p = 5x^3 y^2 - 3xy^7
+      </men>
+      is a polynomial in <m>x</m> and <m>y</m> of degree <m>8</m>.
+    </p>
 
-   <p>   We write <m>\Poly[x,y]</m> for the set of <em>all</em> polynomials in two variables <m>x</m> and <m>y</m>, and <m>\Poly_n [x,y] </m> for the set of all polynomials in <m>x</m> and <m>y</m> with degree less than or equal to <m>n</m>. </p>
+    <p>
+      We write <m>\Poly[x,y]</m> for the set of <em>all</em> polynomials in two variables <m>x</m> and <m>y</m>, and <m>\Poly_n [x,y] </m> for the set of all polynomials in <m>x</m> and <m>y</m> with degree less than or equal to <m>n</m>.
+    </p>
 
+    <p>
+      We can regard a polynomial <m>p</m> in two variables as a function
+      <md>
+        <mrow> p : \mathbb{R}^2 \amp \rightarrow \mathbb{R} </mrow>
+        <mrow> (x,y) \amp \mapsto p(x,y) </mrow>
+      </md>
+      In this way, we can regard <m>\Poly_n[x,y]</m> as a subset of the vector space <m>\Fun(\mathbb{R}^2)</m> of <em>all</em> real-valued functions on <m>\mathbb{R}^2</m> (see <xref ref="functions_on_set_vec_space"/> to remind yourself of the vector space of real-valued functions on a set <m>X</m>). Indeed, <m>\Poly_n[x,y]</m> is a <em>subspace</em> of <m>\Fun(\mathbb{R}^2)</m>, and hence it is a vector space.
+    </p>
 
-  <p> We can regard a polynomial <m>p</m> in two variables as a function
-    <md>
-   <mrow> p : \mathbb{R}^2 \amp \rightarrow \mathbb{R} </mrow>
-   <mrow> (x,y) \amp \mapsto p(x,y) </mrow>
-  </md>
-In this way, we can regard <m>\Poly_n[x,y]</m> as a subset of the vector space <m>\Fun(\mathbb{R}^2)</m> of <em>all</em> real-valued functions on <m>\mathbb{R}^2</m> (see <xref ref="functions_on_set_vec_space"/> to remind yourself of the vector space of real-valued functions on a set <m>X</m>). Indeed, <m>\Poly_n[x,y]</m> is a <em>subspace</em> of <m>\Fun(\mathbb{R}^2)</m>, and hence it is a vector space. </p>
+    <p>
+      Two polynomials <m>p</m> and <m>q</m> in variables <m>x</m> and <m>y</m> are defined to be <em>equal</em> if and only if all their corresponding coefficients are equal. This is equivalent to the statement that <m>p(x,y)=q(x,y)</m> for all <m>(x,y) \in \mathbb{R}^2</m>.
+    </p>
 
-  <p>Two polynomials <m>p</m> and <m>q</m> in variables <m>x</m> and <m>y</m> are defined to be <em>equal</em> if and only if all their corresponding coefficients are equal. This is equivalent to the statement that <m>p(x,y)=q(x,y)</m> for all <m>(x,y) \in \mathbb{R}^2</m>. </p>
-
-<p>In the same way, we can talk about 3-variable polynomials, and so on, eg.
- <me>
-   r = 5x^3y^2z + 3xy - 4xz^3 \in \Poly_6[x,y,z].
-</me></p>
-    </statement>
-
-  <assemblage>
-    <p>When we say simply '<m>p</m> is a polynomial' we will mean that <m>p</m> is a polynomial in a single variable, i.e. <m>p \in \Poly</m>. Note that <m>\Poly = \Poly[x]</m>. </p>
-  </assemblage>
+    <p>
+      In the same way, we can talk about 3-variable polynomials, and so on, eg.
+     <me>
+       r = 5x^3y^2z + 3xy - 4xz^3 \in \Poly_6[x,y,z].
+    </me>
+  </p>
+  </statement>
 
   </example>
+
+  <aside>
+    <p>When we say simply <q><m>p</m> is a polynomial</q> we will mean that <m>p</m> is a polynomial in a single variable, i.e. <m>p \in \Poly</m>. Note that <m>\Poly = \Poly[x]</m>. </p>
+  </aside>
 
 <example xml:id="poly_vector_fields_example">
   <title>Polynomial vector fields</title>
@@ -454,40 +516,40 @@ In this way, we can regard <m>\Poly_n[x,y]</m> as a subset of the vector space <
     <p>
     Recall that a <em>vector field</em> on <m>\mathbb{R}^2</m> is just a vector whose components are functions of <m>x</m> and <m>y</m>. For example,
     <me>
- \ve{V} = (x^2 y, x \cos(y)).
-  </me>
-    We write <m> \Vect_n (\mathbb{R}^2) </m> for the set of all vector fields 
+      \ve{V} = (x^2 y, x \cos(y)).
+    </me>
+    We write <m> \Vect_n (\mathbb{R}^2) </m> for the set of all vector fields
     <me>
-    \ve{V} = (P(x,y), Q(x,y))
+      \ve{V} = (P(x,y), Q(x,y))
     </me>
     on <m>\mathbb{R}^2</m> whose component functions <m>P</m> and <m>Q</m> are polynomials in <m>x,y</m> of degree less than or equal to <m>n</m>. For example,
     <me>
- \ve{V} = (xy, x^2y^3 - x) \in \Vect_5(\mathbb{R}^2).
-  </me>
-  We define addition and scalar multiplcation for vector fields just as for ordinary vectors. That is, if <m>\ve{V} = (V_1, V_2) </m> and <m>\ve{W} = (W_1, W_2)</m> are vector fields on <m>\mathbb{R}^2</m>, then we define
-  <me>
- \ve{V} + \ve{W} := (V_1 + W_1, V_2 + W_2).
-</me>
-Similarly, if <m>k \in \mathbb{R}</m>, we define
-<me>
- k \ve{V} = (k V_1, k V_2).
-</me>
-The zero vector field is defined as the vector field whose components are the constant zero function:
- <me>
- Z = (0, 0)
- </me>
-In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rules of a vector space.</p>
+      \ve{V} = (xy, x^2y^3 - x) \in \Vect_5(\mathbb{R}^2).
+    </me>
+    We define addition and scalar multiplcation for vector fields just as for ordinary vectors. That is, if <m>\ve{V} = (V_1, V_2) </m> and <m>\ve{W} = (W_1, W_2)</m> are vector fields on <m>\mathbb{R}^2</m>, then we define
+    <me>
+      \ve{V} + \ve{W} := (V_1 + W_1, V_2 + W_2).
+    </me>
+    Similarly, if <m>k \in \mathbb{R}</m>, we define
+    <me>
+      k \ve{V} = (k V_1, k V_2).
+    </me>
+    The zero vector field is defined as the vector field whose components are the constant zero function:
+    <me>
+      Z = (0, 0)
+    </me>
+    In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rules of a vector space.
+  </p>
   </statement>
 </example>
-
-
 
   <example xml:id="trig_poly_example">
     <title>Trigonometric polynomials</title>
     <statement>
     <p>
-      A <em>trigonometric polynomial</em>
-      is a function <m>\ve{T} : \mathbb{R} \rightarrow \mathbb{R}</m> of the form
+      A <em>trigonometric polynomial</em> is a function
+      <m>\ve{T} : \mathbb{R} \rightarrow \mathbb{R}</m>
+      of the form
       <men xml:id="formula_for_trig_poly">
         \ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx).
       </men>
@@ -503,10 +565,8 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
       We write the set of <em>all</em>
       trigonometric polynomials as <m>\Trig</m> and the set of all trigonometric polynomials having degree less than or equal to <m>n</m> as <m>\Trig_n</m>.
     </p>
-
     </statement>
   </example>
-
 
   <exercise>
       <statement>
@@ -520,7 +580,8 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
       <statement>
         <p>
           Consider the function <m>\ve{f} (x) = \sin^3(x)</m>.
-          Show that <m>\ve{f} \in \Trig_3</m> by writing it in the form <xref ref="formula_for_trig_poly" />.
+          Show that <m>\ve{f} \in \Trig_3</m> by writing it in the form
+          <xref ref="formula_for_trig_poly" text="global"/>.
           Hint: use the identities
           <md>
             <mrow>\sin(A) \sin(B) \amp = \frac{1}{2}(\cos(A-B) - \cos(A+B))</mrow>
@@ -543,9 +604,8 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
     <p> A homogenous <m>n</m>th order linear ordinary differential equation on an interval <m>I</m> is a differential equation of the form
     <men xml:id="general_lin_diff_eqn">
         a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I
-    </men> 
-    where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn"/>.</p>
-
+    </men>
+    where <m>y^{(k)}</m> means the <m>k</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn"/>.</p>
 
     <example xml:id="first_example_2nd_order_ode">
       <title>An example of a <m>2</m>nd order homogenous linear differential equation</title>
@@ -557,16 +617,16 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
       <men xml:id="a_soln_to_my_ode">
         y_1(x) = x^2 \sin (\log x)
       </men>
-      is a solution to <xref ref="first_example_2nd_order_ode_eqn"/>. Similarly, 
+      is a solution to <xref ref="first_example_2nd_order_ode_eqn"/>. Similarly,
       <men xml:id="a_2nd_soln_to_my_ode">
         y_2(x) = x^2 \cos (\log x)
       </men>
       is also a solution to <xref ref="first_example_2nd_order_ode_eqn"/>.
       </p>
-      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation. 
+      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button <mdash /> it should output <q>True</q>, indicating that <m>y_1</m> is indeed a solution to the differential equation.
       </p>
       <sage>
-      
+
       <input>
         def solves_de(y):
          return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
@@ -577,10 +637,9 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
       </input>
       </sage>
 
-      <assemblage>
-         <p>
-         Edit the code above to check whether <m>y_2</m> is a solution of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.</p>
-      </assemblage>
+      <p>
+        Edit the code above to check whether <m>y_2</m> is a solution of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.
+      </p>
 
       <p>We can also plot the graphs of <m>y_1</m> and <m>y_2</m>. Again, click on <c>Evaluate (Sage)</c>. </p>
       <sage>
@@ -591,10 +650,9 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
         plot([y1, y2], (x, 0, 1), legend_label=['y1', 'y2'])
       </input>
       </sage>
-      <assemblage>
-        <p>Play with the code above, and plot some different functions.
-        </p>
-      </assemblage>
+      <p>
+        Play with the code above, and plot some different functions.
+      </p>
 
       </statement>
 
@@ -622,9 +680,9 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
     <exercise>
     <statement>
       <p>
-     Show that <m>V</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun(I)</m>.
+        Show that <m>V</m> is a <xref ref="defn-subspace" text="custom">subspace</xref> of <m>\Fun(I)</m>.
       </p>
-     </statement> 
+     </statement>
     </exercise>
 
     <p>So, by <xref ref="subspace_lem"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
@@ -653,15 +711,15 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
         solves_de(2*y1 + 5*y2)
       </input>
     </sage>
-              
+
       </statement>
     </example>
 
         <example xml:id="non_example_nonlinear_ode">
-        <title>A non-example: Solutions to a nonlinear ODE</title>
+        <title>A non-example: Solutions to a non-linear ODE</title>
         <statement>
           <p>
-            We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
+            We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the non-linear case. For example, consider the non-linear ODE
             <men xml:id="explicit_nonlinear_ode">
             y^\prime = y^2.
             </men>
@@ -675,7 +733,7 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
             are solutions.
           </p>
           <p>
-            Use the SageMath script below to check whether the linear combination <m>y_1 + y_2</m> is also a solution. 
+            Use the SageMath script below to check whether the linear combination <m>y_1 + y_2</m> is also a solution.
             </p>
           <sage>
           <input>
@@ -691,7 +749,7 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
         </input>
         </sage>
         <p>
-        The answer is <c>False!</c> So linear combinations of solutions to the nonlinear differential equation <xref ref="explicit_nonlinear_ode"/> are no longer solutions, in general.
+        The answer is <c>False!</c> So linear combinations of solutions to the non-linear differential equation <xref ref="explicit_nonlinear_ode"/> are no longer solutions, in general.
           </p>
         </statement>
     </example>
@@ -719,7 +777,7 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
     <p>SageMath reports that the general solution is given in terms of two unspecified constants <c>_K1</c> and <c>_K2</c> as <c>(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</c>.
     </p>
     <p>
-    If we set <c>_K1</c> equal to 1 and <c>_K2</c> equal to 0 in the general solution, we will get a particular solution <m>y_1</m> of the differential equation. 
+    If we set <c>_K1</c> equal to 1 and <c>_K2</c> equal to 0 in the general solution, we will get a particular solution <m>y_1</m> of the differential equation.
   </p>
     <sage>
         <input>
@@ -735,15 +793,16 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
         y1
         </input>
       </sage>
-    <p>SageMath is telling us that <m>y_1 = e^{-x} \sin(2x)</m> is a particular solution. </p>
-    <assemblage>
-      <p>
-    Edit the code to set <c>_K2</c> equal to 0 and <c>_K1</c> equal to 1 in the general solution to get a different particular solution <m>y_2</m>. What is <m>y_2</m>? </p>
-  </assemblage>
+    <p>
+      SageMath is telling us that <m>y_1 = e^{-x} \sin(2x)</m> is a particular solution.
+    </p>
+
+    <p>
+      Edit the code to set <c>_K2</c> equal to 0 and <c>_K1</c> equal to 1 in the general solution to get a different particular solution <m>y_2</m>. What is <m>y_2</m>?
+    </p>
 
     </statement>
     </example>
-
 
 </subsection>
 
@@ -765,7 +824,7 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
       <p>
         Show that the set
         <me>
-          V := \{ \mbox{polynomials of the form }  \ve{p}(x) = ax^3 + bx^2 - cx + a, \, a,b,c \in \mathbb{R}\}
+          V := \{ \text{polynomials of the form }  \ve{p}(x) = ax^3 + bx^2 - cx + a, \, a,b,c \in \mathbb{R}\}
         </me>
         is a subspace of <m>\Poly_3</m>.
       </p>
@@ -781,6 +840,8 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
           V := \{ (x_1, \, x_2, \, x_3) \in \mathbb{R}^3 : 2x_1 - 3x_2 + 5x_3 = b \}
         </me>
         is a subspace of <m>\mathbb{R}^3</m> if and only if <m>b=0</m>.
+        (Remember that if and only if means that both the
+        forward <em>and</em> backwards implications must be proved.)
       </p>
     </statement>
   </exercise>
@@ -832,7 +893,7 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
   <exercise>
     <statement>
       <p>
-        Give an example of a nonempty subset <m>U</m> of
+        Give an example of a non-empty subset <m>U</m> of
         <m>\mathbb{R}^2</m> which is closed under addition and under taking additive inverses (i.e. if <m>\ve{u}</m> is in <m>U</m> then <m>-\ve{u}</m> is in <m>V</m>),
         but <m>U</m> is not a subspace of <m>\mathbb{R}^2</m>.
       </p>
@@ -842,43 +903,44 @@ In this way, one can check that <m>\Vect_n (\mathbb{R}^2)</m> satisfies the rule
   <exercise>
     <statement>
       <p>
-        Give an example of a nonempty subset <m>V</m> of
+        Give an example of a non-empty subset <m>V</m> of
         <m>\mathbb{R}^2</m> which is closed under scalar multiplication,
         but <m>V</m> is not a subspace of <m>\mathbb{R}^2</m>.
       </p>
     </statement>
   </exercise>
 
+
+
 <exercisegroup>
   <introduction>
-<p>The next 4 exercises will help acquaint the reader with the concept of the <emp>sum of two subspaces</emp>. First, we'll need a definition.</p>
-
-<definition xml:id="def_sum_subspace">
-  <statement>
     <p>
-Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
-<me>
-U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
-</me>
-</p>
-</statement>
-</definition>
-<p>
-  In the exercises below, <m>V,U,W</m> will be as above.
-</p>
-</introduction>
-<exercise xml:id="sum_of_subspaces_is_subspace">
+      The next four exercises will help acquaint you with the concept of the <em>sum of two subspaces</em>. First, we'll need to define what that is.
+    </p>
+
+    <p>
+      Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
+      <men xml:id="def_sum_subspace">
+        U + W  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
+      </men>.
+    </p>
+
+    <p>
+      In the exercises below, <m>V,U,W</m> will be as above.
+    </p>
+  </introduction>
+  <exercise xml:id="sum_of_subspaces_is_subspace">
     <statement>
       <p>
-      Show that <m>U + V</m> is a subspace of <m>V</m>.
-    </p>
+        Show that <m>U + W</m> is a subspace of <m>V</m>.
+      </p>
     </statement>
   </exercise>
 
   <exercise>
     <statement>
       <p>
-      Show that  <m>U + V</m> is, in fact, the smallest subspace of <m>V</m> containing both <m>U</m> and <m>V</m>.
+      Show that  <m>U + V</m> is, in fact, the smallest subspace of <m>V</m> containing both <m>U</m> and <m>V</m> (as subsets).
     </p>
     </statement>
   </exercise>
@@ -894,19 +956,14 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
    <exercise>
     <statement>
       <p>
-      Can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <m>\mathbb{R}^2</m>? Similarly, can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <emp>not</emp> all of <m>\mathbb{R}^2</m>?
-    </p>
+        Can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <m>\mathbb{R}^2</m>? Similarly, can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <em>not</em> all of <m>\mathbb{R}^2</m>?
+      </p>
     </statement>
   </exercise>
 </exercisegroup>
 </exercises>
 
-<solutions divisional="solution answer" />
-
 
 
 </section>
-
-
-
 

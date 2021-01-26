@@ -8,7 +8,7 @@
         Let <m>T : V \rightarrow V</m> be a linear operator on a vector space <m>V</m>.
         We say that <m>\lambda \in \mathbb{R}</m> is an
         <term>eigenvalue of <m>T</m></term>
-        if there exists a nonzero vector
+        if there exists a non-zero vector
         <m>\ve{v} \in V</m> such that <m>T(\ve{v}) = \lambda \ve{v}</m>.
       </p>
     </statement>
@@ -21,61 +21,58 @@
         and <m>V</m> is finite-dimensional.
         Then the following are equivalent:
 
-        <ul>
+        <ol>
           <li>
-            <title>1.</title>
             <p>
               <m>\lambda</m> is an eigenvalue of <m>T</m>.
             </p>
           </li>
 
           <li>
-            <title>2.</title>
             <p>
               <m>\lambda \id_V - T</m> is not injective.
             </p>
           </li>
 
           <li>
-            <title>3.</title>
             <p>
               <m>\lambda \id_V - T</m> is not surjective.
             </p>
           </li>
 
           <li>
-            <title>4.</title>
             <p>
               <m>\lambda \id_V - T</m> is not invertible.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
   </proposition>
 
-  <assemblage>
+  <insight>
     <p>
-      I hope you understand the notation here.
+      Let us take a moment to analyse the notation here.
       If <m>S, T : V \rightarrow W</m> are linear maps,
       we can <em>add them</em> together to get a new linear map
       <me>
         S+T : V \rightarrow W
       </me>
       defined by <m>(S+T)(\ve{v}) := S(\ve{v}) + T(\ve{v})</m>.
-      So when I write <sq><m>T - \lambda \id_V</m></sq>, I am referring to the linear map <m>V \rightarrow V</m> defined by
+      So when I write <q><m>T - \lambda \id_V</m></q>, I am referring to the linear map <m>V \rightarrow V</m> defined by
       <me>
         (\lambda \id_V - T) (\ve{v}) := \lambda \id_V(\ve{v}) - T (\ve{v}) = \lambda \ve{v} - T(\ve{v})
       </me>.
     </p>
-  </assemblage>
+  </insight>
 
   <proof>
+    <title> Proof of <xref ref="prop_eigenvalue" /></title>
     <p>
       (1) <m>\Rightarrow</m> (2).
       Suppose <m>\lambda</m> is an eigenvalue of <m>T</m>.
       <md>
-        <mrow>\amp \therefore \mbox{There exists a nonzero \(\ve{v} \in V\) such that \(T(\ve{v}) = \lambda \ve{v}\).}</mrow>
+        <mrow>\amp \therefore \text{There exists a nonzero } \ve{v} \in V \text{ such that } T(\ve{v}) = \lambda \ve{v}.</mrow>
         <mrow>\amp \therefore \lambda \ve{v} - T(\ve{v}) = \ve{0}</mrow>
         <mrow>\amp  \therefore (\lambda \id_V - T)(\ve{v}) = \ve{0}</mrow>
         <mrow>\amp  \therefore \ve{v} \in \Ker(\lambda \id_V - T)</mrow>
@@ -86,17 +83,17 @@
       But <m>\ve{v}</m> is nonzero.
       So we have a nonzero vector in the kernel of <m>\lambda \id_V - T</m>,
       so <m>\lambda \id_V - T</m> is not injective,
-      by <xref ref="injective-kernel-lemma">Lemma</xref>.
+      by <xref ref="injective-kernel-lemma"></xref>.
     </p>
 
     <p>
       (2) <m>\Rightarrow</m> (1).
       Suppose <m>\lambda \id_V - T</m> is not injective.
       <md>
-        <mrow>\amp  \therefore \Ker(\lambda \id_V - T) \neq \{\ve{0} \} \amp \amp  \mbox{(by <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
-        <mrow>\amp  \therefore \mbox{there exists a nonzero \(\ve{v} \in V\) such that}</mrow>
+        <mrow>\amp  \therefore \Ker(\lambda \id_V - T) \neq \{\ve{0} \} \amp \amp  (\text{by }<xref ref="injective-kernel-lemma">Lemma</xref>)</mrow>
+        <mrow>\amp  \therefore \text{there exists a nonzero }\ve{v} \in V\text{ such that}</mrow>
         <mrow>\amp   (\lambda \id_V - T)(\ve{v}) = \ve{0}.</mrow>
-        <mrow>\amp  \mbox{That is, \(T(\ve{v}) = \lambda \ve{v}\), so \(\lambda\) is an eigenvalue of \(T\).}</mrow>
+        <mrow>\amp  \text{That is, } T(\ve{v}) = \lambda \ve{v},\text{ so }\lambda\text{ is an eigenvalue of }T.</mrow>
       </md>
     </p>
 
@@ -108,19 +105,19 @@
 
   <p>
     We have a simple test for when a <em>matrix</em>
-    <m>A</m> is invertible: simply
+    <m>A</m> is invertible <mdash/> simply
     compute the determinant <m>\det(A)</m>.
     If <m>\det(A) = 0</m>, then the matrix is
     <em>not</em> invertible.
     If <m>\det(A) \neq 0</m>, the matrix is invertible.
   </p>
 
-  <assemblage>
+  <historical>
     <p>
-      Indeed, this is where the word <sq>determinant</sq> comes from!
+      Indeed, this is where the word <q>determinant</q> comes from!
       It <em>determines</em> whether a matrix is invertible or not.
     </p>
-  </assemblage>
+  </historical>
 
   <p>
     But how do we know when a <em>linear operator</em> is invertible?
@@ -142,8 +139,7 @@
   <lemma>
     <statement>
       <p>
-        The determinant of a linear operator,
-        as defined above, is well-defined.
+        The determinant of a linear operator, as defined above, is well-defined.
         That is, if <m>\basis{B}</m> and
         <m>\basis{C}</m> are bases for <m>V</m>, then
         <me>
@@ -151,8 +147,6 @@
         </me>.
       </p>
     </statement>
-  </lemma>
-
   <proof>
     <p>
       We know from <xref ref="matrix-in-different-basis">Theorem</xref> that
@@ -163,12 +157,13 @@
       Therefore,
       <md>
         <mrow>\det\left( [T]_{\basis{C} \leftarrow \basis{C}} \right) \amp = \det \left( \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} \mat{P} \right)</mrow>
-        <mrow>\amp = \det(\mat{P}^{-1}) \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})  \amp \amp  \mbox{(\(\det(\mat{A} \mat{B}) = \det(\mat{A}) \det (\mat{B})\))}</mrow>
+        <mrow>\amp = \det(\mat{P}^{-1}) \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})  \amp \amp  (\det(\mat{A} \mat{B}) = \det(\mat{A}) \det (\mat{B}))</mrow>
         <mrow>\amp = \frac{1}{\det(\mat{P})} \det\left( [T]_{\basis{B} \leftarrow \basis{B}} \right) \det(\mat{P})</mrow>
         <mrow>\amp = \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
       </md>.
     </p>
   </proof>
+</lemma>
 
   <p>
     Now that we know how to define the determinant of a linear operator,
@@ -188,14 +183,14 @@
     </statement>
   </definition>
 
-  <assemblage>
+  <note>
     <p>
       The reason that <m>\chi_T</m> is a <em>polynomial</em>
       (and not just an arbitrary function)
       comes from the formula for the determinant.
       More on this later.
     </p>
-  </assemblage>
+  </note>
 
   <p>
     In summary, we see that <m>\lambda</m> is an eigenvalue of a linear operator <m>T</m> if and only if <m>\lambda</m> is a root of the characteristic polynomial of <m>T</m>.
@@ -209,44 +204,40 @@
         and <m>\lambda \in \mathbb{R}</m>.
         Then the following are equivalent:
 
-        <ul>
+        <ol>
           <li>
-            <title>1.</title>
             <p>
               <m>\lambda</m> is an eigenvalue of <m>T</m>.
             </p>
           </li>
 
           <li>
-            <title>2.</title>
             <p>
               <m>\lambda \id - T</m> is not invertible.
             </p>
           </li>
 
           <li>
-            <title>3.</title>
             <p>
               <m>\chi_T(\lambda) = 0</m>.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
-  </proposition>
-
   <proof>
     <p>
       The only thing left to show is that (2) <m>\Leftrightarrow</m> (3).
       Indeed, if <m>\basis{B}</m> is a basis for <m>V</m>, then
       <md>
-        <mrow>\amp \mbox{\(\lambda \id - T\) is not invertible}</mrow>
-        <mrow>\amp  \Leftrightarrow \mbox{the matrix \([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}}\) is not invertible}  \amp \amp  \mbox{(<xref ref="map-iso-matrix-iso">Corollary</xref>)}</mrow>
-        <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) = 0 \amp \amp  \mbox{(Property of \(\det\))}</mrow>
-        <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \mbox{(Defn of \(\chi_T(\lambda)\))}</mrow>
+        <mrow>\amp \lambda \id - T \text{ is not invertible}</mrow>
+        <mrow>\amp  \Leftrightarrow \text{the matrix } [\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \text{ is not invertible}  \amp \amp  (<xref ref="map-iso-matrix-iso"></xref>)</mrow>
+        <mrow>\amp  \Leftrightarrow \det\left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) = 0 \amp \amp  \text{(Property of }\det)</mrow>
+        <mrow>\amp  \Leftrightarrow \chi_T(\lambda) = 0 \amp \amp  \text{(Defn of } \chi_T(\lambda))</mrow>
       </md>
     </p>
   </proof>
+</proposition>
 
   <example xml:id="poly-example-eigenvalue">
     <statement>
@@ -276,40 +267,38 @@
 
       <p>
         Then
-        <md>
-          <mrow>T(p_0)(x) \amp = p_0 (2x+3) \nonumber</mrow>
-          <mrow>\amp = 1 \nonumber</mrow>
-          <mrow>\therefore T(p_0) \amp = p_0</mrow>
-        </md>
-        <md>
-          <mrow>T(p_1)(x) \amp = p_1 (2x+3) \nonumber</mrow>
-          <mrow>\amp = 2x+3  \nonumber</mrow>
-          <mrow>\therefore T(p_1) \amp = 3p_0 + 2p_1</mrow>
-        </md>
-        <md>
-          <mrow>T(p_2)(x) \amp = p_2 (2x+3) \nonumber</mrow>
-          <mrow>\amp = (2x+3)^2 \nonumber</mrow>
-          <mrow>\amp = 4x^2 + 12x + 9 \nonumber</mrow>
-          <mrow>\therefore T(p_2) \amp = 9p_0 + 12p_1 + 4p_0</mrow>
-        </md>.
+        <mdn>
+          <mrow number="no">T(p_0)(x) \amp = p_0 (2x+3) </mrow>
+          <mrow number="no">\amp = 1 </mrow>
+          <mrow xml:id="poly-example-eigenvalue-Tp0">\therefore T(p_0) \amp = p_0</mrow>
+        </mdn>
+        <mdn>
+          <mrow number="no">T(p_1)(x) \amp = p_1 (2x+3) </mrow>
+          <mrow number="no">\amp = 2x+3  </mrow>
+          <mrow xml:id="poly-example-eigenvalue-Tp1">\therefore T(p_1) \amp = 3p_0 + 2p_1</mrow>
+        </mdn>
+        <mdn>
+          <mrow number="no">T(p_2)(x) \amp = p_2 (2x+3) </mrow>
+          <mrow number="no">\amp = (2x+3)^2 </mrow>
+          <mrow number="no">\amp = 4x^2 + 12x + 9 </mrow>
+          <mrow xml:id="poly-example-eigenvalue-Tp2">\therefore T(p_2) \amp = 9p_0 + 12p_1 + 4p_0</mrow>
+        </mdn>.
       </p>
 
       <p>
         So the matrix of <m>T</m> relative to <m>\basis{B}</m> is
-        <md>
+        <me>
           [T]_{\basis{B} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  3 \amp  9 \\ 0 \amp  2 \amp  12 \\ 0 \amp  0 \amp  4}
-        </md>
+        </me>
       </p>
 
       <p>
         So the characteristic polynomial of <m>T</m> is
         <md>
-          <mrow>\chi_T (\lambda) \amp = \det(\lambda \id - T) \amp \amp  \mbox{(defn of \(\chi_T\))}</mrow>
-          <mrow>\amp = \det \left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) \amp \amp  \mbox{(defn of \(\det\))}</mrow>
+          <mrow>\chi_T (\lambda) \amp = \det(\lambda \id - T) \amp \amp  \text{(defn of }\chi_T)</mrow>
+          <mrow>\amp = \det \left([\lambda \id - T]_{\basis{B} \leftarrow \basis{B}} \right) \amp \amp  \text{(defn of }\det)</mrow>
           <mrow>\amp = \det \left( [\lambda \id]_{\basis{B} \leftarrow \basis{B}} - [T]_{\basis{B} \leftarrow \basis{B}} \right)</mrow>
-          <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9</mrow>
-          <mrow>0 \amp  \lambda - 2 \amp  -12</mrow>
-          <mrow>0 \amp  0 \amp  4}} \right)</mrow>
+          <mrow>\amp = \det \left( {\cmatrix{\lambda - 1 \amp  -3 \amp  -9\\ 0 \amp  \lambda - 2 \amp  -12\\ 0 \amp  0 \amp  \lambda - 4}} \right)</mrow>
           <mrow>\amp = (\lambda - 1)(\lambda - 2)(\lambda - 4)</mrow>
         </md>.
       </p>
@@ -377,8 +366,7 @@
       <p>
         The characteristic polynomial of <m>A</m> is
         <md>
-          <mrow>\chi_A(\lambda) \amp = \det \left({\cmatrix{ \lambda - 2 \amp  -1</mrow>
-          <mrow>-\frac{1}{2} \amp  \lambda - \frac{5}{2} }} \right)</mrow>
+          <mrow>\chi_A(\lambda) \amp = \det \left({\cmatrix{ \lambda - 2 \amp  -1\\ -\frac{1}{2} \amp  \lambda - \frac{5}{2} }} \right)</mrow>
           <mrow>\amp = (\lambda - 2)(\lambda - \frac{5}{2}) - \frac{1}{2}</mrow>
           <mrow>\amp = \Leftrightarrow \lambda^2 - \frac{9}{2} \lambda + \frac{9}{2}</mrow>
         </md>.
@@ -413,9 +401,9 @@
     <solution>
       <p>
         The characteristic polynomial of <m>A</m> is
-        <md>
+        <me>
           \det (\lambda I - A) = \det \cmatrix{ \lambda - 1 \amp  3 \\ \lambda + 2 \amp  2} = \lambda^2 - 3\lambda + 8.
-        </md>
+        </me>
       </p>
 
       <p>
@@ -432,5 +420,8 @@
       </p>
     </solution>
   </example>
+
+<!-- <exercises></exercises> -->
+
 </section>
 

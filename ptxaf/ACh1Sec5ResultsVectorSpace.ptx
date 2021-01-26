@@ -1,24 +1,22 @@
-<!-- TO DO: Make all references to the rules in this section into xrefs -->
 
 
 <section xml:id="ACh1Sec5ResultsVectorSpace">
   <title>'n Paar resultate rakende abstrakte vektorruimtes</title>
   <p>
-    Dit is tyd om die re&#xeb;ls van vektorruimtes te gebruik om 'n paar
-    algemene resultate te bewys.
+    Dit is tyd om die reëls van vektorruimtes te gebruik
+    om 'n paar algemene resultate te bewys.
   </p>
 
-  <assemblage>
     <p>
-      Ons is op die punt om on eerste formele bewys in die kursus te doen!
+      <alert>Ons is op die punt om on eerste formele bewys in die kursus te doen!</alert>
     </p>
-  </assemblage>
 
+  <p> Ons eerste hulpstelling wys dat die nulvektor <m>\ve{0} </m> die <em>unieke</em> vektor in <m>V</m> is wat soos'n nulvektor werk. Meer presies:</p>
   <lemma>
     <statement>
       <p>
         Veronderstel <m>V</m> is 'n vektor-ruimte met nul-vektor <m>\ve{0}</m>.
-        As <m>\ve{0}'</m> 'n ander vektor is wat re&#xeb;l R3(a) bevredig,
+        As <m>\ve{0}'</m> 'n ander vektor is wat reël R3(a) bevredig,
         <men xml:id="uniqueness_zero">
           \ve{0}' + \ve{v} = \ve{v}\text{ vir alle }\ve{v} \in V
         </men>
@@ -28,19 +26,22 @@
   </lemma>
 
   <proof>
-    <md>
-      <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero"/> \text{ vir } \ve{v}=\ve{0} </mrow>
-      <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3b">R3b </xref>\text{)}</mrow>
-    </md>
+    <p>
+      <md>
+        <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero"/> \text{ vir } \ve{v}=\ve{0} </mrow>
+        <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3b" text="title" />\text{)}</mrow>
+      </md>
+    </p>
   </proof>
 
   <definition>
     <statement>
       <p>
-        Laat <m>V</m> 'n vektorruimte wees; ons definieer die
-        <term>sommeringsinverse</term> van 'n vektor <m>\ve{v} \in V</m> as
+        Laat <m>V</m> 'n vektorruimte wees. Ons definieer die
+        <term>optellingsinverse</term> van 'n vektor
+        <m>\ve{v} \in V</m> as
         <me>
-          - \ve{v} := (-1) \cdot \ve{v}
+          - \ve{v} := (-1) \smul \ve{v}
         </me>
       </p>
     </statement>
@@ -50,76 +51,78 @@
     <statement>
       <p>
         As <m>V</m> 'n vektorruimte is,
-        dan vir alle <m>\ve{v} \in V</m>,
+        dan vir alle <m>\ve{v} \in V</m> is
         <men>
-          -\ve{v} + \ve{v} = \ve{0} \mbox{ en }  \ve{v} + (-\ve{v}) = \ve{0}
+          -\ve{v} + \ve{v} = \ve{0} \text{ en }  \ve{v} + (-\ve{v}) = \ve{0}
         </men>.
       </p>
     </statement>
+    <proof>
+      <p>
+        <md>
+          <mrow>-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \text{(Def. van }- \ve{v}{)}</mrow>
+          <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  (<xref ref="R7" text="title" />)</mrow>
+          <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  (<xref ref="R5" text="title" />)</mrow>
+          <mrow>\amp = 0 \smul\ve{v}</mrow>
+          <mrow>\amp = \ve{0} \amp \amp  (<xref ref="R8" text="title" />)</mrow>
+        </md>
+      </p>
+      <p>
+        Verder,
+        <md>
+          <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  (<xref ref="R1" text="title" />)</mrow>
+          <mrow>\amp  = \ve{0} \amp \amp  \text{(deur vorige bewys)}</mrow>
+        </md>
+      </p>
+    </proof>
   </lemma>
-
-  <proof>
-    <md>
-      <mrow>-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \mbox{(Definisie \(- \ve{v}\))}</mrow>
-      <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \mbox{}</mrow>
-      <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \mbox{(R5)}</mrow>
-      <mrow>\amp = 0 \smul\ve{v}</mrow>
-      <mrow>\amp = \ve{0} \amp \amp  \mbox{(R8)}</mrow>
-    </md>
-    <p>
-      Verder,
-      <md>
-        <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \mbox{(R1)}</mrow>
-        <mrow>\amp  = \ve{0} \amp \amp  \mbox{(deur vorige bewys)}</mrow>
-      </md>
-    </p>
-  </proof>
 
   <lemma>
     <statement>
       <p>
-        Veronderstel twee vektore <m>\ve{w}</m> en <m>\ve{v}</m> in 'n
-        vektor-ruimte bevredig <m>\ve{w} + \ve{v} = \ve{0}</m>.
-        Dan volg dit dat
-        <m>\ve{w} = -\ve{v}</m>.
+        Veronderstel twee vektore <m>\ve{w}</m> en
+        <m>\ve{v}</m> in 'n vektorruimte bevredig
+        <m>\ve{w} + \ve{v} = \ve{0}</m>.
+        Dan volg dit dat <m>\ve{w} = -\ve{v}</m>.
       </p>
     </statement>
+    <proof>
+      <p>
+        <md>
+          <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  (<xref ref="R3b" text="title" />)</mrow>
+          <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv"/></mrow>
+          <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  (<xref ref="R2" text="title" />)</mrow>
+          <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \text{(volgens aanname)}</mrow>
+          <mrow>\amp = -\ve{v} \amp \amp  (<xref ref="R3a" text="title" />) </mrow>
+        </md>.
+      </p>
+    </proof>
   </lemma>
 
-
-  <proof>
-    <md>
-      <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \mbox{(R3b)}</mrow>
-      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv"/></mrow>
-      <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \mbox{(R2)}</mrow>
-      <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \mbox{(volgens aanname)}</mrow>
-      <mrow>\amp = -\ve{v} \amp \amp  \mbox{(R3a)} </mrow>
-    </md>.
-  </proof>
-
   <p>
-    Laat ons twee meer hulpstellings bewys, net vir goeie oefening.
+    Kom ons bewys nog twee hulpstellings, vir nog 'n bietjie oefening.
   </p>
 
-
   <lemma xml:id="scalar_times_zero_vec">
-    <statement> 
+    <statement>
       <p>
       Laat <m>V</m> 'n vektorruimte wees en <m>k</m> enige skalaar. Dan is
       <me>
         k \smul\ve{0} = \ve{0}
-      </me>
+      </me>.
      </p>
     </statement>
+    <proof>
+      <p>
+        <md>
+          <mrow> k \smul\ve{0} \amp = k \smul(0 \smul\ve{0}) \amp (<xref ref="R8" text="title" />\text{ vir } \ve{v}=\ve{0}) </mrow>
+          <mrow> \amp = ((k)(0))\smul\ve{0} \amp (<xref ref="R6" text="title" />) </mrow>
+          <mrow> \amp = 0 \smul\ve{0} \amp \text{(} (k)(0)=0 \text{ vir enige reële getal }  k \text{)} </mrow>
+          <mrow> \amp = \ve{0} \amp (<xref ref="R8" text="title" />\text{ vir } \ve{v}=\ve{0}) </mrow>
+        </md>
+      </p>
+    </proof>
   </lemma>
-  <proof>
-    <md>
-      <mrow> k \smul\ve{0} \amp = k \smul(0 \smul\ve{0}) \amp \text{(R8 for } \ve{v}=\ve{0}\text{)} </mrow>
-      <mrow> \amp = ((k)(0))\smul\ve{0} \amp \text{(R6)} </mrow>
-      <mrow> \amp = 0 \smul\ve{0} \amp \text{(} (k)(0)=0 \text{ vir enige reële getal }  k \text{)} </mrow>
-      <mrow> \amp = \ve{0} \amp \text{(R8 vir } \ve{v}=\ve{0}\text{)} </mrow>
-    </md>
-  </proof>
 
   <lemma xml:id="dichotomy_lem">
     <statement>
@@ -128,8 +131,7 @@
         'n vektorruimte <m>V</m> is en dat <m>k</m> 'n skalaar is.
         Dan volg dit dat
         <me>
-          k \cdot \ve{v} = \ve{0}  \Leftrightarrow  k = 0 \mbox{ of
-          }  \ve{v} = \ve{0}
+          k \smul \ve{v} = \ve{0}  \Leftrightarrow  k = 0 \text{ of }  \ve{v} = \ve{0}
         </me>.
       </p>
     </statement>
@@ -137,35 +139,27 @@
 
   <proof>
     <p>
-      <alert>Bewys van <m>\Leftarrow</m></alert>.
-      Veronderstel <m>k=0</m>.
-      Dan <m>k
-      \cdot \ve{v} = 0 \cdot \ve{v} = \ve{0}</m> deur R8 van 'n vektor-ruimte.
+      Eers bewys ons dat as <m>k=0</m> of <m>\ve{v}=\ve{0}</m>, dan is <m>k.\ve{0}=\ve{0}</m>.
+      Veronderstel dat <m>k=0</m>.
+      Dan <m>k \smul \ve{v} = 0 \smul \ve{v} = \ve{0}</m> deur R8 van 'n vektor-ruimte.
       Aan die ander kant, veronderstel <m>\ve{v} = \ve{0}</m>.
-      Dan <m>k \cdot \ve{v}
-      = k \cdot \ve{0} = \ve{0}</m> deur <xref ref="mult_by_zero_ex">Oefening</xref>.
+      Dan <m>k \smul \ve{v} = k \smul \ve{0} = \ve{0}</m> deur <xref ref="mult_by_zero_ex" text="type-global">Oefening</xref>.
     </p>
 
     <p>
       <alert>Bewys van <m>\Rightarrow</m>)</alert>.
-      Veronderstel <m>k \cdot \ve{v} = \ve{0}</m>.
-      Daar
-      is twee moontlikhede: óf <m>k = 0</m>, óf <m>k \neq 0</m>.
-      As <m>k=0</m>, dan is ons
-      klaar.
-      As <m>k \neq 0</m>, dan bestaan
-      <m>\frac{1}{k}</m> en ons vermenigvuldig
-      albei kante daardeur:
+      Veronderstel dat <m>k \smul \ve{v} = \ve{0}</m>.
+      Daar is twee moontlikhede:
+      óf <m>k = 0</m>, óf <m>k \neq 0</m>.
+      As <m>k=0</m>, dan is ons klaar.
+      As <m>k \neq 0</m>, dan bestaan <m>\frac{1}{k}</m>
+      en ons vermenigvuldig albei kante daarmee:
       <md>
-        <mrow>k \cdot \ve{v} \amp  = \ve{0}</mrow>
-        <mrow>\therefore  \frac{1}{k} \cdot (k \cdot \ve{v})  \amp  = \frac{1}{k}
-        \cdot \ve{0} \amp \amp  \mbox{(Vermenigvuldig beide kante met
-        \(\frac{1}{k}\))}</mrow>
-        <mrow>\therefore \left(\frac{1}{k} k\right) \cdot \ve{v} \amp = \ve{0} \amp \amp 
-         \mbox{(R6 aan LK. Gebruik } <xref ref="mult_by_zero_ex">Oefening</xref> \mbox{ aan die RK.)}</mrow>
-        <mrow>\therefore 1 \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{(gebruik \(\frac{1}{k}
-        k = 1\))}</mrow>
-        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \mbox{(R7)}</mrow>
+        <mrow>k \smul \ve{v} \amp  = \ve{0}</mrow>
+        <mrow>\therefore  \frac{1}{k} \smul (k \smul \ve{v})  \amp  = \frac{1}{k} \smul \ve{0} \amp \amp  \text{(Vermenigvuldig beide kante met \(\frac{1}{k}\))}</mrow>
+        <mrow>\therefore \left(\frac{1}{k} k\right) \smul \ve{v} \amp = \ve{0} \amp \amp (<xref ref="R6" text="title" />\text{ aan LK. Gebruik } <xref ref="mult_by_zero_ex" text="global">Oefening</xref> \text{ aan RK.)}</mrow>
+        <mrow>\therefore 1 \smul \ve{v} \amp = \ve{0} \amp \amp  \text{(gebruik \(\frac{1}{k} k = 1\))}</mrow>
+        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  (<xref ref="R7" text="title" />)</mrow>
       </md>
     </p>
 
@@ -175,77 +169,64 @@
     </p>
   </proof>
 
-
   <example xml:id="explicit_solve_x">
     <statement>
       <p>
-        Kom ons oefen die gebruik van
-        die reëls van vektorruimtes om alledaagse berekeninge uit te voer.
-        Byvoorbeeld,
-        veronderstel dat ons vir die vektor <m>\ve{x}</m> in die
-        volgende vergelyking wil oplos:
+        Kom ons oefen die gebruik van die reëls van vektorruimtes
+        om alledaagse berekeninge uit te voer.
+        Veronderstel byvoorbeeld dat ons vir die vektor
+        <m>\ve{x}</m> in die volgende vergelyking wil oplos:
         <men>
           \ve{v} + 7 \cdot \ve{x} = \ve{w}
         </men>
       </p>
 
       <p>
-        Ons gaan te werk met die re&#xeb;ls soos volg:
+        Ons gaan as volg te werk met die reëls:
         <md>
-          <mrow>\ve{v} + 7 \cdot \ve{x} \amp  = \ve{w}</mrow>
-          <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \cdot \ve{x}) \amp  = -\ve{v} +
-          \ve{w} \amp \amp  \mbox{(tel \(-\ve{v}\) aan beide kante by)}</mrow>
-          <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} +
-          \ve{w} \amp \amp  \mbox{(gebruik R2 aan LK)}</mrow>
-          <mrow>\therefore  \ve{0} + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp 
-          \mbox{(gebruik <xref ref="add_inv">Lemma</xref> aan LK)}</mrow>
-          <mrow>\therefore  7 \cdot \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \mbox{(gebruik
-          R3a aan LK)}</mrow>
-          <mrow>\therefore  \frac{1}{7} \cdot (7 \cdot \ve{x}) \amp  = \frac{1}{7}
-          \cdot (-\ve{v} + \ve{w}) \amp \amp  \mbox{(skalaarvermenigvuldig aan beide
-          kante met \(\frac{1}{7}\))}</mrow>
-          <mrow>\therefore  (\frac{1}{7} 7) \cdot   \ve{x} \amp  = \frac{1}{7} \cdot
-          (-\ve{v} + \ve{w}) \amp \amp  \mbox{(gebruik R6 aan LK)}</mrow>
-          <mrow>\therefore  1 \cdot \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} +
-          \ve{w})  \amp \amp  \mbox{(vermenigvuldig \(\frac{1}{7}\) met \(7\))}</mrow>
-          <mrow>\therefore  \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} + \ve{w}) \amp \amp 
-          \mbox{(R7)}</mrow>
+          <mrow>\ve{v} + 7 \smul \ve{x} \amp  = \ve{w}</mrow>
+          <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \cdot \ve{x}) \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(tel } -\ve{v} \text{ links aan beide kante by)}</mrow>
+          <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(gebruik R2 aan LK)}</mrow>
+          <mrow>\therefore  \ve{0} + 7 \smul \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp (<xref ref="add_inv" text="global">Lemma</xref> \text{ aan LK)}</mrow>
+          <mrow>\therefore  7 \smul \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \text{(R3a aan LK)}</mrow>
+          <mrow>\therefore  \frac{1}{7} \smul (7 \cdot \ve{x}) \amp  = \frac{1}{7} \smul (-\ve{v} + \ve{w}) \amp \amp  \text{(skalaarvermenigvuldig aan beide kante met }\frac{1}{7})</mrow>
+          <mrow>\therefore  (\frac{1}{7} 7) \cdot   \ve{x} \amp  = \frac{1}{7} \smul (-\ve{v} + \ve{w}) \amp \amp  \text{(gebruik R6 aan LK)}</mrow>
+          <mrow>\therefore  1 \cdot \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} + \ve{w})  \amp \amp  \text{(vermenigvuldig }\frac{1}{7}\text{ met 7)}</mrow>
+          <mrow>\therefore  \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} + \ve{w}) \amp \amp \text{(R7)}</mrow>
         </md>
       </p>
 
       <p>
         Soos die kursus vorder sal ons hierdie stappe uitlaat.
-        Maar dit is
-        belangrik dat jy hulle almal kan weergee, as dit van jou gevra sou
-        word!
+        Maar dit is belangrik dat jy hulle almal kan weergee,
+        as dit van jou gevra sou word!
       </p>
     </statement>
   </example>
 
- 
-  <exercises>
 
+<exercises>
   <exercise xml:id="minus_minus_v_equals_v">
     <statement>
       <p>
         Bewys dat, vir alle vektore <m>v</m> in 'n vektorruimte,
-        <m>-(-\ve{v}) = \ve{v}</m>.
+        geld <m>-(-\ve{v}) = \ve{v}</m>.
       </p>
     </statement>
     <solution>
       <p>
-        We apply the definition of <m>-\ve v</m> twice:
+        Ons pas die definisie van <m>-\ve v</m> twee maal toe:
         <me>
         -(-\ve{v}) = (-1)\smul(- \ve v) = (-1)\smul(-1\smul(\ve v)).
-      </me>
-      Using <xref ref="R6"/> we get
-      <me>
-(-1)\smul(-1(\ve v)) = ((-1)(-1))\smul\ve v = 1.\ve v.
-    </me>
-    Finally, a single application of <xref ref="R7"/> allows us to conclude that
-    <me>
-1.\ve v = \ve v
-  </me>
+        </me>
+        As ons nou <xref ref="R6" text="title"/> gebruik, kry ons
+        <me>
+          (-1)\smul(-1(\ve v)) = ((-1)(-1))\smul\ve v = 1.\ve v.
+        </me>
+        Laastens laat 'n enkele toepassing van  <xref ref="R7" text="title"/> ons toe om af te lei dat
+        <me>
+          1\smul\ve v = \ve v
+        </me>
       </p>
     </solution>
   </exercise>
@@ -254,31 +235,31 @@
     <statement>
       <p>
         Laat <m>V</m> 'n vektorruimte wees met nul-vektor <m>\ve{0}</m>.
-        Bewys dat vir alle skalare <m>k</m>,
+        Bewys dat vir alle skalare <m>k</m>, geld
         <m>k \cdot \ve{0} = \ve{0}</m>.
       </p>
     </statement>
-          <solution>
-        <p>
-          We apply <xref ref = "R3b"/> to <m>k \smul \ve{0}</m>:
-          <me>
-k \smul \ve{0} = k \smul (\ve 0 + \ve 0).
-        </me>
-        By <xref ref = "R4"/> we get
+    <solution>
+      <p>
+        Ons pas <xref ref = "R3b" text="title"/> toe op <m>k \smul \ve{0}</m>:
         <me>
-        k \smul (\ve 0 + \ve 0) = k \smul \ve 0 + k \smul 0.
-      </me>
-      We now know
-      <me>
-k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
-    </me>
-    Adding the inverse of <m>k \smul 0</m> to both sides we get
-    <me>
-\ve 0 = k \smul \ve 0 + \ve 0 = k \smul 0.
-  </me>
-  And we are done.
-        </p>
-        </solution>
+          k \smul \ve{0} = k \smul (\ve 0 + \ve 0)
+        </me>.
+        Uit <xref ref = "R4" text="title"/> kry ons
+        <me>
+          k \smul (\ve 0 + \ve 0) = k \smul \ve 0 + k \smul 0
+        </me>.
+        Nou weet ons dat
+        <me>
+          k \smul \ve{0} = k \smul \ve 0 + k \smul 0
+        </me>.
+        As ons nou die inverse van <m>k \smul 0</m> aan albei kante bytel, kry ons
+        <me>
+          \ve 0 = k \smul \ve 0 + \ve 0 = k \smul 0
+        </me>
+        en ons is klaar.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="fivevequals2v">
@@ -288,35 +269,33 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
       <men xml:id="funny-eqn-smul">
         5\smul \ve{v} = 2 \smul \ve{v}.
       </men>
-      Toon aan dat <m>\ve{v}=\ve{0}</m>.
+      Wys dat <m>\ve{v}=\ve{0}</m>.
     </p>
   </statement>
-        <solution>
-        <p>
-          <md>
-            <mrow>\amp  5 \smul v = 2\smul v </mrow>
-          <mrow> \amp \implies 5.v + (-2).v = 2.v + (-2).v </mrow>
-          <mrow>\amp \implies (5 - 2).v = (2 - 2).v </mrow>
-          <mrow> \amp \implies 3.v = 0.v </mrow>
-          <mrow> \amp \implies (\frac{1}{3} 3).v = (\frac{1}{3} 0) v </mrow>
-          <mrow> \amp \implies 1v = 0v </mrow>
-          <mrow> \amp \implies v = 0</mrow>
+    <solution>
+      <p>
+        <md>
+          <mrow>\amp  5 \smul v = 2\smul v </mrow>
+          <mrow> \amp \implies 5\smul v + (-2)\smul v = 2\smul v + (-2)\smul v </mrow>
+          <mrow>\amp \implies (5 - 2)\smul v = (2 - 2)\smul v </mrow>
+          <mrow> \amp \implies 3\smul v = 0\smul v </mrow>
+          <mrow> \amp \implies (\frac{1}{3} 3)\smul v = (\frac{1}{3} 0) \smul v </mrow>
+          <mrow> \amp \implies 1\smul v = 0\smul v </mrow>
+          <mrow> \amp \implies v = \ve{0}</mrow>
         </md>
-        </p>
-      </solution>
+      </p>
+    </solution>
   </exercise>
-
 
   <exercise xml:id="solve_for_x_exercise">
     <statement>
       <p>
-        Veronderstel dat twee vektore <m>\ve{x}</m> en <m>\ve{w}</m> in 'n
-        vektorruimte <m>2 \ve{x} + 6 \ve{w} = \ve{0}</m> bevredig.
-        Los op vir
-        <m>\ve{x}</m>,
-        maar wys eksplisiet hoe jy die re&#xeb;ls van 'n vektorruimte
-        gebruik het,
-        soos in <xref ref="explicit_solve_x">Voorbeeld</xref>.
+        Veronderstel dat twee vektore <m>\ve{x}</m> en
+        <m>\ve{w}</m> in 'n vektorruimte die vergelyking
+        <m>2 \ve{x} + 6 \ve{w} = \ve{0}</m> bevredig.
+        Los op vir <m>\ve{x}</m> en wys eksplisiet
+        hoe jy die reëls van 'n vektorruimte gebruik,
+        soos byvoorbeeld in <xref ref="explicit_solve_x" text="global">Voorbeeld</xref>.
       </p>
     </statement>
     <solution>
@@ -324,70 +303,79 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
         <md>
          <mrow>2 \smul \ve x + 6 \smul \ve w  \amp = \ve 0</mrow>
 
-          <mrow>\implies  (2 \smul \ve x + 6 \smul \ve w) + (-(6 \smul \ve w))  \amp =  \ve 0 + (-(6 \smul \ve w)) 
-           \amp (\text{add } -(6\smul\ve{w}) \text{ to both sides})</mrow>
+        <mrow>\implies  (2 \smul \ve x + 6 \smul \ve w) + (-(6 \smul \ve w))  \amp =  \ve 0 + (-(6 \smul \ve w))
+         \amp (\text{tel } -(6\smul\ve{w}) \text{ by beide kante})</mrow>
 
-          <mrow> \implies 2 \smul \ve{x} + (6 \smul \ve{w} + (-(6 \smul \ve{w}))) \amp = -(6 \smul \ve{w}) \amp (<xref ref="R2">R2</xref> \text{ on LHS}, <xref ref="R3a">R3a</xref> \text{on RHS})            
-          </mrow>
+        <mrow> \implies 2 \smul \ve{x} + (6 \smul \ve{w} + (-(6 \smul \ve{w}))) \amp = -(6 \smul \ve{w})
+        \amp (<xref ref="R2" text="title"></xref> \text{ aan  LK}, <xref ref="R3a" text="title"></xref> \text{ aan  RK}) </mrow>
 
-          <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)  \amp (<xref ref = "add_inv"/>) </mrow>
+        <mrow> \implies  2 \smul \ve x + \ve{0}  \amp = -(6 \smul \ve w)
+        \amp (<xref ref = "add_inv" text="global"/>) </mrow>
 
-           <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)  \amp (<xref ref = "R3b">R3b</xref>)</mrow>
+        <mrow> \implies  2 \smul \ve x   \amp = -(6\smul \ve w)
+        \amp (<xref ref = "R3b" text="title"></xref>)</mrow>
 
-           <mrow> \implies  (\frac{1}{2})\smul (2 \smul \ve x) \amp = \frac{1}{2} \smul (-(6 \smul \ve{w}))  </mrow>
+        <mrow> \implies  (\frac{1}{2})\smul (2 \smul \ve x) \amp = \frac{1}{2} \smul (-(6 \smul \ve{w}))  </mrow>
 
-            <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6">R6</xref> \text{ on LHS, defn of inverse on RHS}) </mrow>
+        <mrow> \implies  (\frac{1}{2}2) \smul \ve x  \amp = \frac{1}{2} \smul ( (-1)\smul(6\smul \ve{w})) \amp (<xref ref="R6" text="title"></xref> \text{ aan LK, def. van inverse aan RK}) </mrow>
 
 
-            <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
+        <mrow> \implies  1 \smul \ve x  \amp = \frac{1}{2} \smul ((-1)(6)) \smul \ve{w}) \amp (<xref ref="R6" text="title" /> \text{ aan RK}) </mrow>
 
-               <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7">R7</xref> \text{ on LHS})  </mrow>
+        <mrow>\implies   \ve x  \amp  = \frac{1}{2} \smul ((-6) \smul \ve{w}) \amp (<xref ref="R7" text="title"></xref> \text{ aan LK})  </mrow>
 
-                <mrow>\implies  \ve x   \amp = ((\frac{1}{2})(-6))\smul \ve w  \amp (<xref ref="R6">R6</xref> \text{ on RHS}) </mrow>
+        <mrow>\implies  \ve x   \amp = ((\frac{1}{2})(-6))\smul \ve w  \amp (<xref ref="R6" text="title"></xref> \text{ aan RK}) </mrow>
 
-                <mrow> \implies \ve{x} \amp =  (-3)\smul \ve{w} </mrow>
-                </md>
-</p>
-</solution>  </exercise>
+        <mrow> \implies \ve{x} \amp =  (-3)\smul \ve{w} </mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
 
   <exercise>
     <statement>
     <p>
-      Suppose <m>V</m> is a vector space which is not the zero vector space. Show that <m>V</m> contains infinitely many elements.
+      Veronderstel dat <m>V</m> 'n vektorruimte is wat nie die
+      nul-vektorruimte is nie. Wys dat <m>V</m> oneindig baie
+      elemente bevat.
     </p>
   </statement>
   <hint xml:id="inf-elements-hint1">
     <p>
-      Since <m>V</m> is not the zero vector space, there must exist a vector <m>\ve{v} \in V</m> such that <m>\ve{v} \neq \ve{0}</m>.
+      Aangesien <m>V</m> nie die nul-vektorruimte is nie, moet daar 'n vektor <m>\ve{v} \in V</m> wees sodat <m>\ve{v} \neq \ve{0}</m>.
     </p>
   </hint>
   <hint>
     <p>
-      Use the idea of the proof from <xref ref="fivevequals2v"/>.
+      Gebruik die idee uit die bewys van <xref ref="fivevequals2v" text="type-global"/>.
     </p>
   </hint>
   </exercise>
 
-<!-- TO DO: Translate to Afrikaans: beginning -->
-
   <exercisegroup>
-    <title>True or False</title>
+    <title>Waar of Onwaar</title>
     <introduction>
       <p>
-      For each of the following statements, write down whether the statement is true or false, and prove your assertion. (In other words, if you say that it is true, prove that it is true, and if you say that it is false, prove that it is false, by giving an <em>explicit counterexample</em>.)
+        Vir elkeen van die volgende bewerings, besluit of dit waar of onwaar is en bewys dat jou keuse korrek is. (Met ander woorde, as jy sê dat dit waar is moet jy bewys dat dit waar is en as jy sê dat dit onwaar is, moet jy bewys dat dit onwaar is deur 'n  <em>eksplisiete teenvoorbeeld</em> te gee.)
       </p>
     </introduction>
     <exercise xml:id="is_k_equal_to_zero">
       <statement>
       <p>
-        If <m>k \smul \ve{v} = \ve{0}</m> in a vector space, then it necessarily follows that <m>k=0</m>.
+        Indien <m>k \smul \ve{v} = \ve{0}</m> in 'n vektorruimte, dan is <m>k=0</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Onwaar. Neem <m>\mathbb{R}^2</m> as 'n voorbeeld. Indien <m>v = (0,0)</m> dan is
+        <m>2\smul(0,0) = (0,0) </m>, maar natuurlik is <m> 2 \neq 0</m>.
+      </p>
+      </solution>
     </exercise>
     <exercise>
       <statement>
       <p>
-        If <m>k \smul \ve{v} = \ve{0}</m> in a vector space, then it necessarily follows that <m>\ve{v}=\ve{0}</m>.
+        Indien <m>k \smul \ve{v} = \ve{0}</m> in 'n vektorruimte, dan is <m>\ve{v}=\ve{0}</m>.
       </p>
     </statement>
     </exercise>
@@ -395,50 +383,49 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
     <exercise xml:id="empty_vector_space">
       <statement>
       <p>
-        The empty set can be equipped with data <xref ref="D1">D1</xref>, <xref ref="D2">D2</xref>, <xref ref="D3">D3</xref> satisfying the rules of a vector space.
+        Die leê versameling kan met die data <xref ref="D1" text="title" />, <xref ref="D2" text="title" />, <xref ref="D3" text="title" /> toegerus word wat aan die reëls vir 'n vektorruimte voldoen.
       </p>
     </statement>
      <solution>
     <p>
-      False. In order for the empty set to be a vector space, it must have a zero vector. That is, we must be able to find some <m> v \in \text{the empty set} </m> satisfying the axioms for the zero vector. However, since the empty set has no elements in it, by definition, we cannot ever hope to find such a <m> v </m>. Hence the empty set can never be a vector space.
+      Onwaar. Vir die leë versameling om 'n vektorruimte te wees, moet dit 'n nulvektor hê. Ons moet dus 'n element <m> v \in \emptyset </m> kan vind wat die reëls vir die nulvektor bevredig. Maar aangesien die leë versameling geen elemente bevat nie, kan ons nooit so 'n element <m> v </m> vind nie. Dus kan die leë versameling mooit 'n vektorruimte wees nie.
     </p>
     </solution>
     </exercise>
-    
+
     <exercise>
       <statement>
       <p>
-      Rule <xref ref="R3b">R3b</xref> of a vector space follows automatically from the other rules.
+        Reël <xref ref="R3b" text="title"></xref> van 'n vektorruimte volg outomaties uit die ander reëls.
       </p>
     </statement>
     <solution>
-      True. Combining <xref ref = "R1">R1</xref> and <xref ref = "R3a">R3a</xref> gives <xref ref="R3b">R3b</xref>.
+      <p>
+        Waar. As ons <xref ref = "R1" text="title"></xref> en <xref ref = "R3a" text="title"></xref> saam sit, gee dit <xref ref="R3b" text="title"></xref>.
+      </p>
     </solution>
     </exercise>
 
     <exercise xml:id="R7_follows">
       <statement>
       <p>
-      Rule <xref ref="R7">R7</xref> of a vector space follows automatically from the other rules.
+        Reël <xref ref="R7" text="title"></xref> van 'n vektorruimte volg outomaties uit die ander reëls.
       </p>
     </statement>
       <solution>
       <p>
-        False. Let <m>V</m> be a non-zero vector space (such as <m>\mathbb{R}^2</m>). Redefine scalar multiplication as follows
-        <me> 
-            k.v := 0 \mbox{ for all scalars k and all vectors v}.
-        </me>
-        Then <m>V</m> will satisfy all the rules of a vector space except R7. Thus it is not the case that R7 follows from the other rules.
+        Onwaar. Laat <m>V</m> 'n nie-nul vektorruimte wees (soos byvoorbeeld <m>\mathbb{R}^2</m>). Herdefinieer nou skalaarvermenigvuldiging deur
+        <me>
+            k\smul v := 0 \text{ vir alle skalare } k \text{ en alle vektore } v
+        </me>.
+        Dan sal <m>V</m> al die reëls vir 'n vektorruimte bevredig, behalwe R7. Dus is dit nie die geval dat R7 uit die ander reëls volg nie.
       </p>
       </solution>
     </exercise>
   </exercisegroup>
 
-<!-- Translate to Afrikaans: end -->
 
 </exercises>
-
-<solutions divisional="solution answer" />
 
 
 </section>
