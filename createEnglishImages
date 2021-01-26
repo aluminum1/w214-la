@@ -1,0 +1,4 @@
+
+pretext -vv -c latex-image -f svg -d /c/pretext/w214-la/ptx/html/images /c/pretext/w214-la/ptx/W214-Lin-Alg.ptx
+
+

@@ -1,0 +1,4 @@
+echo "Creating English Images"
+./createEnglishImages
+echo "Creating Afrikaans Images"
+./createAfrikaansImages

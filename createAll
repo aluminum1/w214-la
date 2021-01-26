@@ -1,0 +1,25 @@
+echo "Starting compilation of English version to HTML"
+./createEnglishHTML
+
+echo "Starting compilation of Afrikaans version to HTML"
+./createAfrikaansHTML
+
+echo "Starting compilation of English version to LaTeX"
+./createEnglishLaTeX
+
+echo "Starting compilation of Afrikaans version to LaTeX"
+./createAfrikaansLaTeX
+
+cd /c/pretext/w214-la/ptx/latex
+
+echo "Compiling English LaTeX to PDF"
+pdflatex -interaction nonstopmode -halt-on-error -file-line-error W214-Lin-Alg.tex
+echo "Second Run to ensure labels are correct"
+pdflatex -interaction nonstopmode -halt-on-error -file-line-error W214-Lin-Alg.tex
+
+cd /c/pretext/w214-la/ptxaf/latex
+
+echo "Compiling Afrikaans LaTeX to PDF"
+pdflatex -interaction nonstopmode -halt-on-error -file-line-error W214-Lin-Alg-Af.tex
+echo "Second Run to ensure labels are correct"
+pdflatex -interaction nonstopmode -halt-on-error -file-line-error W214-Lin-Alg-Af.tex
