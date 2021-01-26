@@ -115,31 +115,25 @@
       <xi:include href="./bibliography.ptx" />
 -->
 
-      <appendix>
-        <title> Oplossings vir Oefeninge</title>
-        <section>
-          <title>Wenke en antwoorde vir Oefeninge</title>
-          <p></p>
-          <solutions
-            divisional = "hint answer"
-            project = "hint answer"
-            scope="W214-Lin-Alg-Af">
-            <title>Wenke en antwoorde</title>
-          </solutions>
-        </section>
+      <solutions
+        divisional = "hint answer"
+        project = "hint answer"
+        scope="W214-Lin-Alg-Af">
+        <title>Wenke en antwoorde vir oefeninge</title>
+      </solutions>
 
-        <section>
-          <title>Oplossings vir Oefeninge</title>
-          <p></p>
-          <solutions
-            divisional = "solution"
-            project = "solution"
-            scope="W214-Lin-Alg-Af">
-            <title>
-              Oplossings
-            </title>
-          </solutions>
-        </section>
+      <solutions
+        divisional = "solution"
+        project = "solution"
+        scope="W214-Lin-Alg-Af">
+        <title>
+          Oplossings vir oefeninge
+        </title>
+      </solutions>
+
+      <appendix>
+        <title>Lys van stellings en soortgelyke bewerings</title>
+        <list-of elements="theorem proposition lemma corollary" />
       </appendix>
 
     </backmatter>

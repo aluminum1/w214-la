@@ -281,7 +281,60 @@
     </dl></p>
   </example>
 
+  <assemblage>
+    <title>Summary of this section</title>
+    <p>
+      To prove that a set <m>V</m> is a vector space, you need to do the following:
+      <ul>
+        <li>
+          Make sure you know what addition and scalar multiplication mean in this context (i.e. make sure they are defined).
+        </li>
+        <li>
+          <p>
+            Make sure that the operations addition and scalar multiplication are closed, i.e. make sure that
+            <ul>
+              <li> when you add two elements of <m>V</m>, the answer is again an element in <m>V</m>; and </li>
+              <li> when you multiply any element in <m>V</m> with a scalar (any real number), then the answer is gain an element in <m>V</m>.
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          Verify that the rules R1 to R8 hold for all possible choices of elements in <m>V</m> and all possible choices of scalars in <m>\mathbb{R}</m>.
+        </li>
+        <li>
+          You may use the fact that usual real numbers satisfy the usual rules of commutativity, associativity and distributivity to help you prove the rules for other objects, like vectors.
+        </li>
+      </ul>
+    </p>
+  </assemblage>
+
   <exercises>
+    <introduction>
+      <assemblage>
+        <title>Learning outcomes addressed by these exercises</title>
+        <p>
+          <dl>
+            <li><title>VS1</title>
+              <p>
+                I can check whether a given definition of addition or scalar multiplication is closed.
+              </p>
+            </li>
+            <li> <title>VS2</title>
+              <p>
+                I can check whether a certain definition of addition and scalar multiplication satisfies any one of the rules R1 to R8.
+              </p>
+            </li>
+            <li><title>VS3</title>
+              <p>
+                I can check whether a set together with operations addition and scalar multiplication is a vector space.
+              </p>
+            </li>
+          </dl>
+        </p>
+      </assemblage>
+    </introduction>
+
     <exercise>
       <statement>
         <p>

@@ -115,31 +115,26 @@
       <xi:include href="./bibliography.ptx" />
 -->
 
-      <appendix>
-        <title> Solutions to Exercises</title>
-        <section>
-          <title>Hints and Answers to Exercises</title>
-          <p></p>
-          <solutions
-            project = "hint answer"
-            divisional = "hint answer"
-            scope="w214-lin-alg">
-            <title>Hints and answers</title>
-          </solutions>
-        </section>
 
-        <section>
-          <title>Solutions to exercises</title>
-          <p></p>
-          <solutions
-            project = "solution"
-            divisional = "solution"
-            scope="w214-lin-alg">
-            <title>
-              Solutions
-            </title>
-          </solutions>
-        </section>
+      <solutions
+        project = "hint answer"
+        divisional = "hint answer"
+        scope="w214-lin-alg">
+        <title>Hints and answers to exercises</title>
+      </solutions>
+
+      <solutions
+        project = "solution"
+        divisional = "solution"
+        scope="w214-lin-alg">
+        <title>
+          Solutions to exercises
+        </title>
+      </solutions>
+
+      <appendix>
+        <title>List of theorems and theorem-like statements</title>
+        <list-of elements="theorem proposition lemma corollary" />
       </appendix>
 
     </backmatter>

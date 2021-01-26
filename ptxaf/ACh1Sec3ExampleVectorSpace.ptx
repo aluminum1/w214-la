@@ -281,7 +281,60 @@
   </dl></p>
   </example>
 
+  <assemblage>
+    <title>Opsomming van hierdie afdeling</title>
+    <p>
+      Om te bewys dat 'n versameling <m>V</m> 'n vektorruimte is, moet jy die volgende doen:
+      <ul>
+        <li>
+          Maak seker dat jy weet wat optelling en skalaarvermenigvuldiging in hierdie konteks beteken (m.a.w. maak seker hulle is gedefinieer).
+        </li>
+        <li>
+          <p>
+            Maak seker dat die bewerkings optelling en skalaarvermenigvuldiging geslote is, m.a.w. maak seker dat
+            <ul>
+              <li> wanneer jy twee elemente van <m>V</m> by mekaar tel, is die antwoord weer 'n element van <m>V</m>; en </li>
+              <li> wanneer jy 'n element van <m>V</m> met 'n skalaar (enige reële getal) vermenigvuldig, is die antwoord weer 'n element van <m>V</m>.
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          Bevestig die reëls  R1 tot R8 vir alle moontlike keuses van vektore in  <m>V</m> en alle moontlike keuses van skalare in <m>\mathbb{R}</m>.
+        </li>
+        <li>
+          Jy mag die feit gebruik dat gewone reële getalle die gewone reëls van kommutatiwiteit, assosiatiwiteit en distributiwiteit bevredig om jou te help om die reëls vir ander voorwerpe, soos vektore, te bewys.
+        </li>
+      </ul>
+    </p>
+  </assemblage>
+
   <exercises>
+    <introduction>
+      <assemblage>
+        <title>Leeruitkomstes aangespreek deur hierdie oefeninge</title>
+        <p>
+          <dl>
+            <li><title>VS1</title>
+              <p>
+                Ek kan toets of 'n gegewe definisie van optelling of skalaarvermenigvuldiging I geslote is.
+              </p>
+            </li>
+            <li> <title>VS2</title>
+              <p>
+                Ek kan toets of 'n sekere definisie van optelling en skalaarvermenigvuldiging enigeen van die reëls R1 tot R8 bevredig.
+              </p>
+            </li>
+            <li><title>VS3</title>
+              <p>
+                Ek kan toets of 'n versameling saam met bewerkings optelling en skalaarvermenigvuldiging 'n vektorruimte is.
+              </p>
+            </li>
+          </dl>
+        </p>
+      </assemblage>
+    </introduction>
+
     <exercise>
       <statement>
         <p>
