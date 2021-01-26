@@ -1,343 +1,349 @@
 <appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ListOfOutcomes">
   <title>List of Learning Outcomes</title>
   <dl width="narrow">
-    <li>
+    <li xml:id = "outcome-set1">
       <title>Set1</title>
       <p>
         I can determine whether a given object is an element of a set given in set builder notation.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-set2">
       <title>Set2</title>
       <p>
         I can write down some example elements of a set given in set builder notation.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-vs1">
       <title>VS1</title>
       <p>
         I can check whether a given definition of addition or scalar multiplication is closed.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-vs2">
       <title>VS2</title>
       <p>
         I can check whether a certain definition of addition and scalar multiplication satisfies any one of the rules R1 to R8.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-vs3">
       <title>VS3</title>
       <p>
         I can check whether a set together with operations addition and scalar multiplication is a vector space.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-vs4">
       <title>VS4</title>
       <p>
         I can write down some examples of vector spaces from memory or by creating new ones.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-vs5">
       <title>VS5</title>
       <p>
         I can prove simple consequences of the rules R1 to R8.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-sub1">
       <title>Sub1</title>
       <p>
         I can state a simple check to check if a subset of a vector space is a subspace.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-sub2">
       <title>Sub2</title>
       <p>
         I can check whether a subset of a vector space is a subspace.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-span1">
       <title>Span1</title>
       <p>
         I can check whether a vector is in the span of a given set of vectors.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-span2">
       <title>Span2</title>
       <p>
         I can write down an example vector that is (or is not) in the span of a given set of vectors.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-span3">
       <title>Span3</title>
       <p>
         I can check whether a given set of vectors spans an entire vector space.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-ind1">
       <title>Ind1</title>
       <p>
         I can check whether a given set of vectors is linearly independent.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-ind2">
       <title>Ind2</title>
       <p>
         I can sift a list of vectors to remain with a linearly independent set.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-ind3">
       <title>Ind3</title>
       <p>
         I can state a theorem that relates the notions of linear dependence and span.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-basis1">
       <title>Basis1</title>
       <p>
         I can check whether a given set is a basis for a vector space.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-basis2">
       <title>Basis2</title>
       <p>
         I can create a basis for a given vector space
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-basis3">
       <title>Basis3</title>
       <p>
         I can write any vector as a linear combination of the vectors in a basis.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-coord1">
       <title>Coord1</title>
       <p>
         I can calculate a vector given its coordinate vector w.r.t. some basis.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-coord2">
       <title>Coord2</title>
       <p>
         I can calculate the coordinate vector for a given vector w.r.t. some basis.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-coord3">
       <title>Coord3</title>
       <p>
         I can calculate the change of basis matrix between two given bases.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-coord4">
       <title>Coord4</title>
       <p>
         I can use the change of basis matrix to calculate the coordinate vector w.r.t. one basis from the coordinate vector w.r.t. another basis.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-map1">
       <title>Map1</title>
       <p>
         I can calculate the image of a vector under a given function.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-map2">
       <title>Map2</title>
       <p>
         I can check whether a given function between two vector spaces is a linear map.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-map3">
       <title>Map3</title>
       <p>
         I can write down some examples of linear maps between two given matrices.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-map4">
       <title>Map4</title>
       <p>
         I can prove simple consequences of the definition of a linear map.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-map5">
       <title>Map5</title>
       <p>
         I can calculate the image of a vector under a linear map given how it is defined on a basis.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-mapmat1">
       <title>MapMat1</title>
       <p>
-        I can calculate the image of a vector under a linear map given how it is defined on a basis.
+        I can calculate the matrix for a linear map given bases for the domain and codomain.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-mapmat2">
       <title>MapMat2</title>
       <p>
         I can write down and use relations between matrices for a given linear map and change of basis matrices when different bases are used.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-mapmat3">
       <title>MapMat3</title>
       <p>
         I can write a change of basis matrix as the matrix for a linear map.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-injsur1">
       <title>InjSur1</title>
       <p>
         I can write down the definitions of injectivity and surjectivity of a linear map.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-injsur2">
       <title>InjSur2</title>
       <p>
         I can determine whether a linear map is injective.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-injsur3">
       <title>InjSur3</title>
       <p>
         I can determine whether a linear map is surjective.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-comp1">
       <title>Comp1</title>
       <p>
         I can write down the domain and codomain of the composite of two linear maps.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-comp2">
       <title>Comp2</title>
       <p>
         I can calculate the image of a given vector under the composite of two linear maps.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-comp3">
       <title>Comp3</title>
       <p>
         I can write down a formula for the composite of two linear maps.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-comp4">
       <title>Comp4</title>
       <p>
         I can write down and use a relation between the matrices for two linear maps and their composite.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-rownull1">
       <title>RowNull1</title>
       <p>
         I can write down the definitions of the row space, column space and null space of a matrix.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-rownull2">
       <title>RowNull2</title>
       <p>
-        I can write down rules for comparing generators for the row space, column space and null space of a matrix versus those of its reduced row echelon form.
+        I can write down statements for comparing generators for the row space, column space and null space of a matrix versus those of its reduced row echelon form.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-rownull3">
       <title>RowNull3</title>
       <p>
         I can calculate bases for the row space, column space and null space of a matrix.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-kerran1">
       <title>KerRan1</title>
       <p>
         I can compute a basis for the kernel of a linear map.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-kerran2">
       <title>KerRan2</title>
       <p>
         I can compute a basis for the range of a linear map.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-kerran3">
       <title>KerRan3</title>
       <p>
         I can compute the rank and nullity of a linear map.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-kerran4">
       <title>KerRan4</title>
       <p>
         I can write down conditions on the rank and nullity that are equivalent to the injectivivity or surjectivity of a linear map.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-inv1">
       <title>Inv1</title>
       <p>
         I can write down conditions under which a linear map is invertible.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-inv2">
       <title>Inv2</title>
       <p>
         I can determine whether a given linear map is invertible.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-inv3">
       <title>Inv3</title>
       <p>
-        I can write down the inverse of a linear map if it exists.
+        I can calculate the inverse of a linear map if it exists.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-ranknull1">
       <title>RankNull1</title>
       <p>
         I can state the Rank-Nullity Theorem.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-ranknull2">
       <title>RankNull2</title>
       <p>
         I can apply the Rank-Nullity Theorem.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-det1">
       <title>Det1</title>
       <p>
-        I can calculate the determinant of a linear map.
+        I can calculate the determinant of a linear operator.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-det2">
       <title>Det2</title>
       <p>
-        I can calculate the trace of a linear map.
+        I can calculate the trace of a linear operator.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-det3">
+      <title>Det3</title>
+      <p>
+        I can calculate the characteristic polynomial of a linear operator.
+      </p>
+    </li>
+    <li xml:id = "outcome-eig1">
       <title>Eig1</title>
       <p>
         I can calculate the eigenvalues of a linear operator.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-eig2">
       <title>Eig2</title>
       <p>
         I can calculate the eigenvectors of a linear operator associated to an eigenvalue.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-eig3">
       <title>Eig3</title>
       <p>
         I can determine if a matrix is diagonalizable.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-eig4">
       <title>Eig4</title>
       <p>
         I can diagonalise a matrix if it is diagonalisable.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-eig5">
       <title>Eig5</title>
       <p>
         I can write down a basis such that the matrix for a linear operator is diagonal.
       </p>
     </li>
-    <li>
+    <li xml:id = "outcome-eig6">
       <title>Eig6</title>
       <p>
         I can write down an example of a matrix that is not diagonalizable.

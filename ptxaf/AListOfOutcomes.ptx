@@ -1,0 +1,354 @@
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AListOfOutcomes">
+  <title>Lys van Leeruitkomstes</title>
+  <dl width="narrow">
+    <li xml:id = "outcome-set1">
+      <title>Set1</title>
+      <p>
+        Ek kan bepaal of 'n voorwerp 'n element is van 'n versameling gegee in bou-notasie.
+      </p>
+    </li>
+    <li xml:id = "outcome-set2">
+      <title>Set2</title>
+      <p>
+        Ek kan voorbeeldelemente neerskryf van 'n versameling gegee in bou-notasie.
+      </p>
+    </li>
+    <li xml:id = "outcome-vs1">
+      <title>VS1</title>
+      <p>
+        Ek kan toets of 'n gegewe definisie van optelling of skalaarvermenigvuldiging geslote is.
+      </p>
+    </li>
+    <li xml:id = "outcome-vs2">
+      <title>VS2</title>
+      <p>
+        Ek kan toets of 'n sekere definisie van optelling en skalaarvermenigvuldiging enigeen van die reëls R1 tot R8 bevredig.
+      </p>
+    </li>
+    <li xml:id = "outcome-vs3">
+      <title>VS3</title>
+      <p>
+        Ek kan toets of 'n versameling saam met bewerkings optelling en skalaarvermenigvuldiging 'n vektorruimte is.
+      </p>
+    </li>
+    <li xml:id = "outcome-vs4">
+      <title>VS4</title>
+      <p>
+        Ek kan voorbeelde van vektorruimtes neer skryf; of uit geheue of deur nuwe konstruksie.
+      </p>
+    </li>
+    <li xml:id = "outcome-vs5">
+      <title>VS5</title>
+      <p>
+        Ek kan eenvoudige gevolge van die reëls R1 tot R8 bewys.
+      </p>
+    </li>
+    <li xml:id = "outcome-sub1">
+      <title>Sub1</title>
+      <p>
+        Ek kan 'n eenvoudige toets neerskryf om vas te stel of 'n deelversameling van 'n vektorruimte 'n deelruimte is.
+      </p>
+    </li>
+    <li xml:id = "outcome-sub2">
+      <title>Sub2</title>
+      <p>
+        Ek kan toets of 'n deelversameling van 'n vektorruimte 'n deelruimte is.
+      </p>
+    </li>
+    <li xml:id = "outcome-span1">
+      <title>Span1</title>
+      <p>
+        Ek kan I can check whether a vector is in the span of a given set of vectors.
+      </p>
+    </li>
+    <li xml:id = "outcome-span2">
+      <title>Span2</title>
+      <p>
+        Ek kan 'n voorbeeld neerskryf van 'n vektor wat in die span van 'n gegewe versameling vektore is (en een wat nie is nie).
+      </p>
+    </li>
+    <li xml:id = "outcome-span3">
+      <title>Span3</title>
+      <p>
+        Ek kan toets of 'n gegewe versameling vektore 'n vektorruimte onderspan.
+      </p>
+    </li>
+    <li xml:id = "outcome-ind1">
+      <title>Ind1</title>
+      <p>
+        Ek kan toets of 'n versameling vektore lineêr onafhanklik is.
+      </p>
+    </li>
+    <li xml:id = "outcome-ind2">
+      <title>Ind2</title>
+      <p>
+        Ek kan 'n lys vektore sif om oor te bly met 'n lineêr onafhanklike versameling.
+      </p>
+    </li>
+    <li xml:id = "outcome-ind3">
+      <title>Ind3</title>
+      <p>
+        Ek kan 'n stelling nerskryf wat die konsepte van lineêr afhanklikheid en span verbind.
+      </p>
+    </li>
+    <li xml:id = "outcome-basis1">
+      <title>Basis1</title>
+      <p>
+        Ek kan toets of 'n gegewe versameling 'n basis vir 'n vektorruimte is.
+      </p>
+    </li>
+    <li xml:id = "outcome-basis2">
+      <title>Basis2</title>
+      <p>
+        Ek kan 'n basis vir 'n gegewe vektorruimte konstureer.
+      </p>
+    </li>
+    <li xml:id = "outcome-basis3">
+      <title>Basis3</title>
+      <p>
+        Ek kan enige vektor as 'n lineêre kombinasie van die vektore in 'n basis neerskryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-coord1">
+      <title>Coord1</title>
+      <p>
+        Ek kan 'n vektor bereken as sy koördinaatvektor m.b.t. 'n basis gegee word.
+      </p>
+    </li>
+    <li xml:id = "outcome-coord2">
+      <title>Coord2</title>
+      <p>
+        Ek kan die koördinaatvektor van 'n gegewe vektor m.b.t. 'n basis bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-coord3">
+      <title>Coord3</title>
+      <p>
+        Ek kan die basisomskakelingsmatriks tussen twee gegewe basisse bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-coord4">
+      <title>Coord4</title>
+      <p>
+        Ek kan die basisomskakelingsmatriks gebruik om die koördinaatvektor m.b.t. een basis uit te werk as die koördinaatvektor m.b.t. 'n ander basis gegee word.
+      </p>
+    </li>
+    <li xml:id = "outcome-map1">
+      <title>Map1</title>
+      <p>
+        Ek kan die beeld van 'n gegewe vektor onder 'n gegewe funksie bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-map2">
+      <title>Map2</title>
+      <p>
+        Ek kan toets of 'n gegewe afbeelding tusen twee vektorruimtes 'n lineêre afbeelding is.
+      </p>
+    </li>
+    <li xml:id = "outcome-map3">
+      <title>Map3</title>
+      <p>
+        Ek kan voorbeelde van lineêre afbeeldings tussen twee gegewe vektorruimtes neerskryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-map4">
+      <title>Map4</title>
+      <p>
+        Ek kan eenvoudige gevolge van die definisie van 'n lineêre afbeelding bewys.
+      </p>
+    </li>
+    <li xml:id = "outcome-map5">
+      <title>Map5</title>
+      <p>
+        Ek kan die beeld van 'n vektor onder 'n lineêre afbeelding bereken gegee hoe dit op 'n basis gedefinieer word.
+      </p>
+    </li>
+    <li xml:id = "outcome-mapmat1">
+      <title>MapMat1</title>
+      <p>
+        Ek kan die matriks vir 'n lineêre afbeelding m.b.t. basisse vir die definisieversameling en teikenversameling bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-mapmat2">
+      <title>MapMat2</title>
+      <p>
+        Ek kan vergelykings neer skryf tussen matrikse vir 'n lineêre afbeelding m.b.t. verskillende basisse en basisomskakelingsmatrikse.
+      </p>
+    </li>
+    <li xml:id = "outcome-mapmat3">
+      <title>MapMat3</title>
+      <p>
+        Ek kan die basisomskakelingsmatriks skryf as die matriks vir 'n lineêre afbeelding.
+      </p>
+    </li>
+    <li xml:id = "outcome-injsur1">
+      <title>InjSur1</title>
+      <p>
+        Ek kan die definisies vir injektiwiteit en surjektiwiteit van 'n lineêre afbeelding neer skryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-injsur2">
+      <title>InjSur2</title>
+      <p>
+        Ek kan bepaal of 'n lineêre afbeelding injektief is.
+      </p>
+    </li>
+    <li xml:id = "outcome-injsur3">
+      <title>InjSur3</title>
+      <p>
+        Ek kan bepaal of 'n lineêre afbeelding surjektief is.
+      </p>
+    </li>
+    <li xml:id = "outcome-comp1">
+      <title>Comp1</title>
+      <p>
+        Ek kan die definisieversameling en teikenversameling van die samestelling van twee lineêre afbeeldings neer skryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-comp2">
+      <title>Comp2</title>
+      <p>
+        Ek kan die beeld van 'n gegewe vektor onder die samestelling van twee lineêre afbeeldings uitwerk.
+      </p>
+    </li>
+    <li xml:id = "outcome-comp3">
+      <title>Comp3</title>
+      <p>
+        Ek kan 'n formule vir die samestelling van twee lineêre afbeeldings neerskryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-comp4">
+      <title>Comp4</title>
+      <p>
+        Ek kan 'n verband tussen die matrikse vir twee lineêre afbeeldings en die matriks vir hul samestelling neer skryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-rownull1">
+      <title>RowNull1</title>
+      <p>
+        Ek kan die definisies van die ryruimte, kolomruimte en nulruimte van 'n matriks neerskryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-rownull2">
+      <title>RowNull2</title>
+      <p>
+        Ek kan bewerings neerskryf wat die ryruimte, kolomruimte en nulruimte van 'n matriks vergelyk met daardie ruimtes van sy gereduseerde rytrapvorm.
+      </p>
+    </li>
+    <li xml:id = "outcome-rownull3">
+      <title>RowNull3</title>
+      <p>
+        Ek kan basisse vir die ryruimte, kolomruimte en nulruimte van 'n matriks neerskryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-kerran1">
+      <title>KerRan1</title>
+      <p>
+        Ek kan 'n basis vir die kern van 'n lineêre afbeelding bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-kerran2">
+      <title>KerRan2</title>
+      <p>
+        Ek kan 'n basis vir die beeld van 'n lineêre afbeelding neerskryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-kerran3">
+      <title>KerRan3</title>
+      <p>
+        Ek kan die rang en nulheid van 'n lineêre afbeelding bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-kerran4">
+      <title>KerRan4</title>
+      <p>
+        Ek kan voorwaardes neerskryf wat ekwivalent is aan die injektiwiteit of surjektiwiteit van 'n lineêre afbeelding.
+      </p>
+    </li>
+    <li xml:id = "outcome-inv1">
+      <title>Inv1</title>
+      <p>
+        Ek kan voorwaardes neerskryf waaronder 'n lineêre afbeelding inverteerbaar is.
+      </p>
+    </li>
+    <li xml:id = "outcome-inv2">
+      <title>Inv2</title>
+      <p>
+        Ek kan bepaal of 'n gegewe lineêre afbeelding inverteerbaar is.
+      </p>
+    </li>
+    <li xml:id = "outcome-inv3">
+      <title>Inv3</title>
+      <p>
+        Ek kan die inverse van 'n lineêre afbeelding bereken as dit bestaan.
+      </p>
+    </li>
+    <li xml:id = "outcome-ranknull1">
+      <title>RankNull1</title>
+      <p>
+        Ek kan die Rang-Nulheidsgraad Stelling neerkskryf.
+      </p>
+    </li>
+    <li xml:id = "outcome-ranknull2">
+      <title>RankNull2</title>
+      <p>
+        Ek kan die Rang-Nulheidsgraad Stelling toepas.
+      </p>
+    </li>
+    <li xml:id = "outcome-det1">
+      <title>Det1</title>
+      <p>
+        Ek kan die determinant van 'n lineêre operator bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-det2">
+      <title>Det2</title>
+      <p>
+        Ek kan die spoor van 'n lineêre operator bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-det3">
+      <title>Det3</title>
+      <p>
+        Ek kan die karakteristieke polinoom van 'n lineêre operator bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-eig1">
+      <title>Eig1</title>
+      <p>
+        Ek kan die eiewaardes van 'n lineêre operator berkeen.
+      </p>
+    </li>
+    <li xml:id = "outcome-eig2">
+      <title>Eig2</title>
+      <p>
+        Ek kan die eiewaardes van 'n lineêre operator wat met 'n sekere eiewaarde gepaard gaan bereken.
+      </p>
+    </li>
+    <li xml:id = "outcome-eig3">
+      <title>Eig3</title>
+      <p>
+        Ek kan bepaal of 'n matriks diagonaliseerbaar is.
+      </p>
+    </li>
+    <li xml:id = "outcome-eig4">
+      <title>Eig4</title>
+      <p>
+        Ek kan 'n matriks diagonaliseer indien dit diagonaliseerbaar is.
+      </p>
+    </li>
+    <li xml:id = "outcome-eig5">
+      <title>Eig5</title>
+      <p>
+        Ek kan 'n basis neerskryf waarvoor die matriks vir 'n lineêre operator diagonaal is.
+      </p>
+    </li>
+    <li xml:id = "outcome-eig6">
+      <title>Eig6</title>
+      <p>
+        Ek kan 'n voorbeeld van 'n matriks neerskryf wat nie diagonaliseerbaar is nie.
+      </p>
+    </li>
+  </dl>
+
+</appendix>
