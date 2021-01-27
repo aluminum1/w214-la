@@ -1,78 +1,75 @@
 \RequireVersions{
-  *{application}{pdfTeX}  {0000/00/00 v1.40.18}
-  *{format} {LaTeX2e}     {2017-04-15 v2.e}
+  *{application}{pdfTeX}  {0000/00/00 v1.40.19}
+  *{format} {LaTeX2e}     {2018-04-01 v2.e}
   *{package}{snapshot}    {2020/06/17 v2.14}
   *{class}  {book}        {2014/09/29 v1.4h}
   *{file}   {bk10.clo}    {2014/09/29 v1.4h}
-  *{package}{geometry}    {2010/09/12 v5.6}
+  *{package}{geometry}    {2018/04/16 v5.8}
   *{package}{keyval}      {2014/10/28 v1.15}
-  *{package}{ifpdf}       {2017/03/15 v3.2}
-  *{package}{ifvtex}      {2016/05/16 v1.6}
-  *{package}{ifxetex}     {2010/09/12 v0.6}
+  *{package}{ifpdf}       {2019/10/25 v3.4}
+  *{package}{iftex}       {2020/03/06 v1.0d}
+  *{package}{ifvtex}      {2019/10/25 v1.7}
+  *{package}{ifxetex}     {2019/10/25 v0.7}
   *{file}   {geometry.cfg}{0000/00/00 v0.0}
   *{package}{ifthen}      {2014/09/29 v1.1c}
-  *{package}{etoolbox}    {2018/02/04 v2.5b}
-  *{package}{ifluatex}    {2016/05/16 v1.4}
+  *{package}{etoolbox}    {2018/08/19 v2.5f}
+  *{package}{ifluatex}    {2019/10/25 v1.5}
   *{package}{graphicx}    {2017/06/01 v1.1a}
   *{package}{graphics}    {2017/06/25 v1.2c}
   *{package}{trig}        {2016/01/03 v1.10}
   *{file}   {graphics.cfg}{2016/06/04 v1.11}
-  *{file}   {pdftex.def}  {2017/01/12 v0.06k}
-  *{package}{infwarerr}   {2016/05/16 v1.4}
-  *{package}{ltxcmds}     {2016/05/16 v1.23}
+  *{file}   {pdftex.def}  {2018/01/08 v1.0l}
   *{package}{xcolor}      {2016/05/11 v2.12}
   *{file}   {color.cfg}   {2016/01/02 v1.6}
   *{package}{colortbl}    {2018/12/12 v1.0d}
-  *{package}{array}       {2016/10/06 v2.4d}
+  *{package}{array}       {2018/04/30 v2.4h}
   *{file}   {dvipsnam.def}{2016/06/17 v3.0m}
   *{file}   {svgnam.def}  {2016/05/11 v2.12}
-  *{package}{tcolorbox}   {2018/01/12 v4.12}
-  *{package}{pgf}         {2015/08/07 v3.0.1a}
-  *{package}{pgfrcs}      {2015/08/07 v3.0.1a}
+  *{package}{tcolorbox}   {2020/10/09 v4.42}
+  *{package}{pgf}         {2019/01/05 v3.1}
+  *{package}{pgfrcs}      {2019/01/05 v3.1}
   *{package}{everyshi}    {2001/05/15 v3.00}
   *{file}   {pgfrcs.code.tex}{0000/00/00 v0.0}
-  *{package}{pgfcore}     {2010/04/11 v3.0.1a}
-  *{package}{pgfsys}      {2014/07/09 v3.0.1a}
+  *{package}{pgfcore}     {2019/01/05 v3.1}
+  *{package}{pgfsys}      {2019/01/05 v3.1}
   *{file}   {pgfsys.code.tex}{0000/00/00 v0.0}
-  *{file}   {pgfsyssoftpath.code.tex}{2013/09/09 v1.9)}
-  *{file}   {pgfsysprotocol.code.tex}{2006/10/16 v1.4)}
+  *{file}   {pgfsyssoftpath.code.tex}{2019/01/05 v3.1}
+  *{file}   {pgfsysprotocol.code.tex}{2019/01/05 v3.1}
   *{file}   {pgfcore.code.tex}{0000/00/00 v0.0}
-  *{package}{pgfcomp-version-0-65}{2007/07/03 v3.0.1a}
-  *{package}{pgfcomp-version-1-18}{2007/07/23 v3.0.1a}
+  *{package}{pgfcomp-version-0-65}{2019/01/05 v3.1}
+  *{package}{pgfcomp-version-1-18}{2019/01/05 v3.1}
   *{package}{verbatim}    {2014/10/28 v1.5q}
   *{package}{environ}     {2014/05/04 v0.3}
   *{package}{trimspaces}  {2009/09/17 v1.1}
-  *{package}{tikz}        {2015/08/07 v3.0.1a}
-  *{package}{pgffor}      {2013/12/13 v3.0.1a}
+  *{package}{tikz}        {2019/01/05 v3.1}
+  *{package}{pgffor}      {2019/01/05 v3.1}
   *{package}{pgfkeys}     {0000/00/00 v0.0}
   *{file}   {pgfkeys.code.tex}{0000/00/00 v0.0}
   *{package}{pgfmath}     {0000/00/00 v0.0}
   *{file}   {pgfmath.code.tex}{0000/00/00 v0.0}
   *{file}   {pgffor.code.tex}{0000/00/00 v0.0}
   *{file}   {tikz.code.tex}{0000/00/00 v0.0}
-  *{package}{xparse}      {2016/05/18 v6512}
-  *{package}{expl3}       {2016/05/18 v6512}
-  *{file}   {expl3-code.tex}{2016/05/18 v6512}
-  *{file}   {l3pdfmode.def}{2016/03/26 v6465}
+  *{package}{pdfcol}      {2016/05/17 v1.4}
+  *{package}{ltxcmds}     {2016/05/16 v1.23}
+  *{package}{infwarerr}   {2016/05/16 v1.4}
+  *{package}{xparse}      {2018-10-17 v3}
+  *{package}{expl3}       {2019-01-28 v3}
+  *{file}   {expl3-code.tex}{2019-01-28 v3}
+  *{file}   {l3pdfmode.def}{2019-01-28 v3}
   *{package}{xstring}     {2019/02/06 v1.83}
-  *{package}{chngcntr}    {2018/04/09 v1.1a}
-  *{package}{inputenc}    {2015/03/17 v1.2c}
-  *{file}   {utf8.def}    {2017/01/28 v1.1t}
-  *{file}   {t1enc.dfu}   {2017/01/28 v1.1t}
-  *{file}   {ot1enc.dfu}  {2017/01/28 v1.1t}
-  *{file}   {omsenc.dfu}  {2017/01/28 v1.1t}
+  *{package}{inputenc}    {2018/04/06 v1.3b}
   *{package}{lmodern}     {2009/10/30 v1.6}
   *{package}{fontenc}     {0000/00/00 v0.0}
   *{file}   {t1enc.def}   {2017/04/05 v2.0i}
   *{package}{inconsolata} {2019/05/17 v1.12}
   *{package}{textcomp}    {2017/04/05 v2.0i}
   *{file}   {ts1enc.def}  {2001/06/05 v3.0e}
-  *{file}   {ts1enc.dfu}  {2017/01/28 v1.1t}
+  *{file}   {ts1enc.dfu}  {2018/04/05 v1.2c}
   *{package}{xkeyval}     {2014/12/03 v2.7a}
   *{file}   {xkeyval.tex} {2014/12/03 v2.7a}
-  *{package}{microtype}   {2016/05/14 v2.6a}
-  *{file}   {microtype-pdftex.def}{2016/05/14 v2.6a}
-  *{file}   {microtype.cfg}{2016/05/14 v2.6a}
+  *{package}{microtype}   {2020/12/07 v2.8}
+  *{file}   {microtype-pdftex.def}{2020/12/07 v2.8}
+  *{file}   {microtype.cfg}{2020/12/07 v2.8}
   *{package}{amsmath}     {2017/09/02 v2.17a}
   *{package}{amstext}     {2000/06/29 v2.01}
   *{package}{amsgen}      {1999/11/30 v2.0}
@@ -85,16 +82,17 @@
   *{package}{titleps}     {0000/00/00 v0.0}
   *{package}{titletoc}    {2019/10/16 v2.13}
   *{package}{qrcode}      {2015/01/08 v1.51}
+  *{package}{listings}    {2020/03/24 v1.8d}
+  *{package}{lstmisc}     {2020/03/24 v1.8d}
+  *{file}   {listings.cfg}{2020/03/24 v1.8d}
+  *{package}{pdftexcmds}  {2018/01/30 v0.27}
+  *{package}{shellesc}    {2016/06/07 v0.02a}
   *{package}{listingsutf8}{2016/05/16 v1.3}
-  *{package}{listings}    {2019/09/10 v1.8c}
-  *{package}{lstmisc}     {2019/09/10 v1.8c}
-  *{file}   {listings.cfg}{2019/09/10 v1.8c}
-  *{package}{pdftexcmds}  {2018/01/21 v0.26}
   *{package}{stringenc}   {2016/05/16 v1.11}
   *{package}{pdfescape}   {2016/05/16 v1.14}
-  *{package}{shellesc}    {2016/06/07 v0.02a}
-  *{package}{enumitem}    {2011/09/28 v3.5.2}
-  *{package}{hyperref}    {2017/03/14 v6.85a}
+  *{package}{enumitem}    {2019/06/20 v3.9}
+  *{package}{longtable}   {2014/10/28 v4.11}
+  *{package}{hyperref}    {2018/02/06 v6.86b}
   *{package}{hobsub-hyperref}{2016/05/16 v1.14}
   *{package}{hobsub-generic}{2016/05/16 v1.14}
   *{package}{hobsub}      {2016/05/16 v1.14}
@@ -114,16 +112,16 @@
   *{package}{hycolor}     {2016/05/16 v1.8}
   *{package}{auxhook}     {2016/05/16 v1.4}
   *{package}{kvoptions}   {2016/05/16 v3.12}
-  *{file}   {pd1enc.def}  {2017/03/14 v6.85a}
+  *{file}   {pd1enc.def}  {2018/02/06 v6.86b}
   *{file}   {hyperref.cfg}{2002/06/06 v1.2}
   *{package}{url}         {2013/09/16 v3.4}
-  *{file}   {hpdftex.def} {2017/03/14 v6.85a}
+  *{file}   {hpdftex.def} {2018/02/06 v6.86b}
   *{package}{rerunfilecheck}{2016/05/16 v1.8}
-  *{package}{tkz-graph}   {2018/09/19 v1.00}
-  *{package}{tkz-euclide} {2011/06/01 v1.16}
-  *{package}{tkz-base}    {2011/06/01 v1.16}
-  *{package}{etex}        {2016/08/01 v2.7}
+  *{package}{tkz-graph}   {2021/01/20 v2.00}
+  *{package}{tkz-euclide} {2020/03/18 v3.06c}
+  *{package}{tkz-base}    {2020/03/18 v3.06c}
   *{package}{numprint}    {2012/08/20 v1.39}
+  *{package}{xfp}         {2018-10-17 v3}
   *{package}{fp}          {1995/04/02 v0.0}
   *{package}{defpattern}  {1994/10/12 v0.0}
   *{package}{fp-basic}    {1996/05/13 v0.0}
@@ -136,25 +134,16 @@
   *{package}{fp-eqn}      {1995/04/03 v0.0}
   *{package}{fp-upn}      {1996/10/21 v0.0}
   *{package}{fp-eval}     {1995/04/03 v0.0}
-  *{file}   {tkz-tools-utilities}{0000/00/00 v0.0}
-  *{file}   {tkz-tools-arith}{0000/00/00 v0.0}
-  *{file}   {tkz-tools-base}{0000/00/00 v0.0}
-  *{file}   {tkz-tools-misc}{0000/00/00 v0.0}
-  *{file}   {tkz-tools-math}{0000/00/00 v0.0}
-  *{file}   {tkz-obj-points}{0000/00/00 v0.0}
-  *{file}   {tkz-obj-segments}{0000/00/00 v0.0}
-  *{file}   {tkz-obj-marks}{0000/00/00 v0.0}
+  *{file}   {tkz-base.cfg}{0000/00/00 v0.0}
+  *{file}   {tkz-tools-modules}{0000/00/00 v0.0}
+  *{file}   {tkz-lib-marks}{0000/00/00 v0.0}
   *{file}   {tkz-tools-intersections}{0000/00/00 v0.0}
-  *{file}   {tkz-tools-transformations}{0000/00/00 v0.0}
-  *{file}   {tkz-obj-lines}{0000/00/00 v0.0}
-  *{file}   {tkz-lib-symbols}{0000/00/00 v0.0}
-  *{file}   {tkz-obj-circles}{0000/00/00 v0.0}
-  *{file}   {tkz-obj-addpoints}{0000/00/00 v0.0}
-  *{package}{pgfplots}    {2017/06/05 v1.15}
+  *{file}   {tkz-tools-angles}{0000/00/00 v0.0}
+  *{package}{pgfplots}    {2018/03/28 v1.16}
   *{package}{extpfeil}    {2009/10/31 v0.4}
-  *{package}{mathtools}   {2015/11/12 v1.18}
-  *{package}{calc}        {2014/10/28 v4.3}
-  *{package}{mhsetup}     {2010/01/21 v1.2a}
+  *{package}{mathtools}   {2020/03/24 v1.24}
+  *{package}{calc}        {2017/05/25 v4.3}
+  *{package}{mhsetup}     {2017/03/31 v1.3}
   *{package}{stmaryrd}    {1994/03/03 v0.0}
   *{file}   {ts1cmr.fd}   {2014/09/29 v2.5h}
   *{file}   {t1lmr.fd}    {2009/10/30 v1.6}
@@ -177,11 +166,9 @@
   *{file}   {mt-cmr.cfg}  {2013/05/19 v2.2}
   *{package}{nameref}     {2016/05/21 v2.44}
   *{package}{gettitlestring}{2016/05/16 v1.5}
-  *{file}   {W214-Lin-Alg-Af.out}{0000/00/00 v0.0}
-  *{file}   {W214-Lin-Alg-Af.out}{0000/00/00 v0.0}
   *{file}   {mt-msa.cfg}  {2006/02/04 v1.1}
   *{file}   {mt-msb.cfg}  {2005/06/01 v1.0}
-  *{package}{lstlang1}    {2019/09/10 v1.8c}
+  *{package}{lstlang1}    {2020/03/24 v1.8d}
   *{file}   {W214-Lin-Alg-Af.listing}{0000/00/00 v0.0}
   *{file}   {W214-Lin-Alg-Af.listing}{0000/00/00 v0.0}
   *{file}   {W214-Lin-Alg-Af.listing}{0000/00/00 v0.0}
