@@ -199,6 +199,12 @@
         Ek kan bepaal of 'n lineêre afbeelding surjektief is.
       </p>
     </li>
+    <li xml:id = "outcome-injsur4">
+      <title>InjSurj4</title>
+      <p>
+        Ek kan eenvoudige bewerings bewys wat die injektiwiteit of surjektiwiteit van twee lineêre afbeeldings verbind met die injektiwiteit of surjektiwiteit van hul samestelling.
+      </p>
+    </li>
     <li xml:id = "outcome-comp1">
       <title>Comp1</title>
       <p>
@@ -350,5 +356,85 @@
       </p>
     </li>
   </dl>
+
+  <p>
+    'n Lys uitkomstes om te wys dat jy 'n definisie verstaan.
+    (Jy moet hulle vir elke definisie in die module te probeer behaal.)
+  </p>
+
+  <dl>
+    <li xml:id = "outcome-def1">
+      <title>Def1</title>
+      <p>
+        Ek kan verkeerde dele van 'n definisie identifiseer of ontbrekende dele daarvan invul.
+      </p>
+    </li>
+    <li xml:id = "outcome-def2">
+      <title>Def2</title>
+      <p>
+        Ek kan drie voorbeelde neerskryf van die voorwerpe wat gedefinieer word en motiveer waarom dit die definisie bevredig.
+      </p>
+    </li>
+    <li xml:id = "outcome-def3">
+      <title>Def3</title>
+      <p>
+        Ek kan drie nie-voorbeelde neerskryf van die voorwerp wat gedefinieer word en motiveer waarom dit nie die definisie bevredig nie.
+        (Probeer nie-voorbeelde vind wat aan soveel moontlik voorwaardes voldoen sonder om almal te bevredig.)
+      </p>
+    </li>
+    <li xml:id = "outcome-def1">
+      <title>Def4</title>
+      <p>
+        Ek kan gegewe data herfraseer in terme van 'n definisie.
+        (bv. gegee 'n funksie <m>f:\mathbb{R}\to\mathbb{R}</m> wat <m>f(x)=f(-x)</m> vir alle <m>x\in\mathbb{R}</m> bevredig en dat <m>f(x)</m> van die vorm <m>ax^2+bx+c</m> is, is een manier om dit te herfraseer <q>'n ewefunksie wat 'n kwadratiese polinoom is</q>).
+      </p>
+    </li>
+  </dl>
+
+  <p>
+    'n Lys uitkomstes wat wys dat jy 'n stelling verstaan.
+    (Jy moet hulle vir elke hulpstelling, proposisie, stelling en gevolg in die module probeer behaal.)
+  </p>
+  <dl>
+    <li xml:id="outcome-thm1">
+      <title>Thm1</title>
+      <p>
+        Ek kan verkeerde dele van 'n stelling korrigeer of ontbrekende dele invul.
+      </p>
+    </li>
+    <li xml:id="outcome-thm2">
+      <title>Thm2</title>
+      <p>
+        Ek kan identifiseer of 'n stelling van toepassing is in 'n gegewe situasie.
+      </p>
+    </li>
+    <li xml:id="outcome-thm3">
+      <title>Thm3</title>
+      <p>
+        Ek kan in 'n gegewe situasie afleidings maak deur die stelling toe te pas.
+      </p>
+    </li>
+    <li xml:id="outcome-thm4">
+      <title>Thm4</title>
+      <p>
+        Ek kan 'n paar stellings neerskryf wat dalk in 'n situasie weg van konteks (m.a.w. as die vraag nie in dieselfde afdeling is as die stelling nie) van toepassing is.
+      </p>
+    </li>
+  </dl>
+
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Sommige van die uitkomstes wat gelys is, kom op min of meer dieselfde neer.
+          Byvoorbeeld, <xref ref="outcome-vs1" /> vra dat jy toets of 'n bewerking geslote is , terwyl <xref ref="outcome-sub2" /> jou vra om te toets of 'n deelversameling 'n deelruimte is.
+          Om die tweede een te doen, moet jy die eerste vir beide optelling en skalaarvermenigvuldiging doen, so daar is 'n sterk verband tussen die vermoëns wat hulle vereis.
+        </p>
+        <p>
+          Skep 'n konsepkaart (of ander grafiese uitbeelding) wat way watter uitkomstes aan mekaar verbind. Dit sal jou verstaan van die interne verbande in die materiaal versterk en jou help om op 'n kleiner groep vermoëns te fokus.
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
 
 </appendix>
