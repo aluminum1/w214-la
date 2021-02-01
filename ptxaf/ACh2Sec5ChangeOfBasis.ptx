@@ -359,7 +359,7 @@
     <exercise>
       <statement>
         <p>
-          Dit is 'n voortsetting van <xref ref="matrix_basis_exercise">Oefening</xref>.
+          Hierdie is 'n voortsetting van <xref ref="matrix_basis_exercise">Oefening</xref>.
           Beskou die volgende twee basisse vir <m>\Mat_{2,2}</m>:
           <me>
             \basis B = \left\{
@@ -379,9 +379,8 @@
             \right\}
           </me>
 
-          <dl>
+          <ol label="(a)">
             <li>
-              <title>(a)</title>
               <p>
                 Bereken die basisomskakelingsmatrikse
                 <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> en <m>\mat{P}_{\basis{B} \leftarrow \basis{C}}</m>.
@@ -389,7 +388,6 @@
             </li>
 
             <li>
-              <title>(b)</title>
               <p>
                 Bereken <m>[\mat{A}]_\basis{B}</m> en <m>[\mat{A}]_\basis{C}</m>, waar
                 <me>
@@ -399,16 +397,35 @@
             </li>
 
             <li>
-              <title>(c)</title>
               <p>
-                Gaan na dat <m>[\mat{A}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{A}]_\basis{B}</m> en dat
+                Bevestig dat <m>[\mat{A}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{A}]_\basis{B}</m> en dat
                 <m>[\mat{A}]_\basis{B} = \mat{P}_{\basis{B} \leftarrow \basis{C}} [\mat{A}]_\basis{C}</m>.
               </p>
             </li>
-          </dl>
+          </ol>
         </p>
       </statement>
     </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Vir elkeen van die volgende word twee basisse <m>\basis{B}</m> en <m>\basis{B}'</m> gegee.
+        Bereken die basisomskakelingsmatriks <m>\mat{P}_{\basis{B'}\leftarrow \basis{B}}</m>.
+      <ol label="(a)">
+        <li>
+          <m>V = \Row_2</m>, <m>\basis{B} = ((1,3),(3,8))</m> en <m>\basis{B}' = ((2,-1), (-3,2)) </m>;
+        </li>
+        <li>
+          <m>V = \Row_2</m>, <m>\basis{B} = ((2,-1), (-3,2)) </m> en <m>\basis{B}' =  ((1,3),(3,8))</m>;
+        </li>
+        <li>
+          <m>V = \Poly_2</m>, <m>\basis{B} = (x, 2x^2-x+3, x^2+2x+2)</m>  en <m>\basis{B}' = (1+5x^2,x^2,3-x-2x^2) </m>.
+        </li>
+      </ol>
+      </p>
+    </statement>
+  </exercise>
 
     <exercise>
       <statement>
@@ -539,6 +556,34 @@
     </statement>
   </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+        In elkeen van die volgende probleme, word daar een koördinaatvektor en 'n bassisomskakelingsmatriks gegee en word jy gevra om die ander koördinaatvektor te vind:
+      <ol label="(a)">
+        <li>
+          Laat <m>V=\Row_2</m>,
+          <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 3\amp 2\\1\amp 2\end{bmatrix}</m> en
+          <m>[v]_{\basis{B}}=\begin{bmatrix}1\\-2 \end{bmatrix}</m>.
+          Vind <m>[v]_{\basis{B}'}</m>.
+        </li>
+        <li>
+          Laat <m>V=\Row_3</m>,
+          <m>P_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 3\amp 2\amp 1\\1\amp 2\amp 2\\2\amp 0\amp 1\end{bmatrix}</m> en
+          <m>[v]_{\basis{B}}=\begin{bmatrix}1\\-2\\-1 \end{bmatrix}</m>.
+          Vind <m>[v]_{\basis{B}'}</m>.
+        </li>
+        <li>
+          Laat <m>V=\Row_2</m>,
+          <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 2 \amp 2\\1\amp 2\end{bmatrix}</m>
+          en <m>[v]_{\basis{B}'}=\begin{bmatrix}1\\-2 \end{bmatrix}</m>.
+          Vind <m>[v]_{\basis{B}}</m>.
+        </li>
+      </ol>
+      </p>
+    </statement>
+  </exercise>
+
 <exercise>
   <statement>
     <p>
@@ -556,6 +601,77 @@
   </statement>
 </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+        Die doel van hierdie oefening is om 'n <q>gemengde-oefen</q> probleem te wees.
+        Probeer hulle doen sonder om terug te kyk na vorige probleme om te sien hoe goed jy hulle <q>buite-konteks</q> kan doen.
+        Dit vereis buigsame begrip van die verbande tussen die konsepte.
+      <li label="(a)">
+        Laat <m>V=\Poly_2</m> en <m>\basis{B} = (1+x-x^2, 2x^2-1, 2-3x)</m> en
+        <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1\amp 1\amp -1\\ 2\amp -1\amp 0\\ 0\amp 1\amp 1\end{bmatrix}</m>.
+        Bereken die basis <m>\basis{B}'</m>.
+      </li>
+      <li>
+        Veronderstel dat <m>\mat{P}_{\basis{B}\leftarrow \basis{B}'}=\begin{bmatrix} 1\amp 1\\2\amp 1\end{bmatrix}</m>
+        en <m>\mat{P}_{\basis{B}\leftarrow \basis{B}''}=\begin{bmatrix} 3\amp 2\\1\amp 1\end{bmatrix}</m>
+        en <m>[v]_{\basis{B}'}=\begin{bmatrix} 1\\-1\end{bmatrix}</m>.
+        Vind <m>[v]_{\basis{B}''}</m>.
+      </li>
+      <li>
+        Laat <m>V=\Row_2</m>, en
+        <m>\basis{B}=((-1,1),(3,-2))</m>, en
+        <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}}=\begin{bmatrix} 1\amp 3\\2\amp -2\end{bmatrix}</m>
+        en <m>[v]_{\mathcal{B}'}=\begin{bmatrix} -1\\2 \end{bmatrix}</m>.
+        Bereken die vektor <m>v</m>.
+      </li>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Bewys dat as <m>\basis{B}</m> 'n basis vir die  <m>n</m>-dimensionele vektorruimte <m>V</m> is, dan is <m>\mat{P}_{\basis{B}\leftarrow\basis{B}}</m> die <m>n\times n</m> identititeitsmatriks.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Kom ons neem aan dat <m>\basis{B}</m> en
+        <m>\basis{B}'</m> twee basisse vir die
+        eindig-dimensionele vektorruimte <m>V</m> is.
+        Veronderstel dat <m>\basis{B}</m> bestaan uit die
+        vektore <m>b_1,\ldots, b_n</m> in daardie volgorde.
+        Bewys dat die vektore
+        <me>
+          [b_1]_{\basis{B}'},\ldots, [b_n]_{\basis{B}'}
+        </me>
+        'n basis vir <m>\Col_n</m> vorm.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Dit is genoeg om te wys dat daardie vektore lineêr onafhanklik is. Waarom?
+      </p>
+    </hint>
+    <hint>
+      <p>
+        Wanneer okal jy moet wys dat 'n versameling vektore lineêr onafhanklik is, moet jy begin deur aan te neem dat daar 'n lineêre verband
+        <me>
+          c_1[b_1]_{\basis{B}'}+\cdots+ c_n[b_n]_{\basis{B}'}=0
+        </me>
+        bestaan en probeer wys dat <m>c_1=c2=\cdots=c_n=0</m>.
+      </p>
+    </hint>
+    <hint>
+      <p>
+        Gebruik die verbande <m>c[b]_{\basis{B}'} = [cb]_{\basis{B}'}</m> en <m>[b_1]_{\basis{B}'}+[b_2]_{\basis{B}'} = [b_1+b_2]_{\basis{B}'}</m>.
+      </p>
+    </hint>
+  </exercise>
 
  </exercises>
 

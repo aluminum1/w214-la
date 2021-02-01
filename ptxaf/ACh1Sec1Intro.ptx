@@ -29,7 +29,7 @@
         Kom ons stop hier vir 'n oomblik en vertaal die
         definisie van Afrikaans na wiskundige simbole.
         Die vertaling is:
-        <men>
+        <men xml:id = "set-builder-equation">
           A := \{ (a_1,\, a_2) : a_1,a_2 \in \mathbb{R}  \}
         </men>.
       </p>

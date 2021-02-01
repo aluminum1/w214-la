@@ -382,7 +382,7 @@
         (Probeer nie-voorbeelde vind wat aan soveel moontlik voorwaardes voldoen sonder om almal te bevredig.)
       </p>
     </li>
-    <li xml:id = "outcome-def1">
+    <li xml:id = "outcome-def4">
       <title>Def4</title>
       <p>
         Ek kan gegewe data herfraseer in terme van 'n definisie.
@@ -427,7 +427,7 @@
       <statement>
         <p>
           Sommige van die uitkomstes wat gelys is, kom op min of meer dieselfde neer.
-          Byvoorbeeld, <xref ref="outcome-vs1" /> vra dat jy toets of 'n bewerking geslote is , terwyl <xref ref="outcome-sub2" /> jou vra om te toets of 'n deelversameling 'n deelruimte is.
+          Byvoorbeeld, <xref ref="outcome-vs1"  text="title" /> vra dat jy toets of 'n bewerking geslote is , terwyl <xref ref="outcome-sub2" text="title" /> jou vra om te toets of 'n deelversameling 'n deelruimte is.
           Om die tweede een te doen, moet jy die eerste vir beide optelling en skalaarvermenigvuldiging doen, so daar is 'n sterk verband tussen die vermoëns wat hulle vereis.
         </p>
         <p>

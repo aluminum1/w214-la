@@ -432,6 +432,52 @@
   <exercise>
     <statement>
       <p>
+        In elk van die volgende, word daar 'n vektorruimte <m>V</m>,
+        'n geordende basis <m>\basis{B}</m> en die koördinaatvektor
+        <m>[v]_\basis{B}</m> van <m>v</m> met betrekking tot <m>\basis{B}</m> aan jou gegee.
+        In elk van die probleme hier onder, bepaal <m>v</m>.
+      <ol label="(a)">
+        <li>
+          <m>V=\Poly_1</m>, <m>\basis{B}=(1+2x,2+3x)</m> en <m>[v]_{\basis{B}}=\begin{bmatrix} 3\\ -2\end{bmatrix}</m>;
+        </li>
+        <li>
+          <m>V = \Mat_{2,2}</m>, die vektorruimte van <m>2\times 2</m> matrikse,
+          <m>\basis{B} = \left(\begin{bmatrix} 1\amp 1\\ -1\amp 1\end{bmatrix},
+          \begin{bmatrix} 2\amp 1\\1\amp -1\end{bmatrix}, \begin{bmatrix} 0\amp 0\\1\amp 1 \end{bmatrix},
+          \begin{bmatrix} 1 \amp 0\\1\amp 1\end{bmatrix}\right)</m>,
+          en <m>[v]_{\basis{B}} = \begin{bmatrix}  1\\2\\-1\\-2\end{bmatrix}</m>;
+        </li>
+        <li>
+          <m>V = \Col_2</m>, <m>\basis{B} = \left(\begin{bmatrix} 3\\-2 \end{bmatrix}, \begin{bmatrix} 2\\3 \end{bmatrix}\right)</m> en <m>[v]_{\basis{B}} = \begin{bmatrix} 1\\1 \end{bmatrix}</m>.
+        </li>
+      </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        In elk van die volgende, word aan jou 'n vektorruimte <m>V</m>,
+        'n geordende basis <m>\basis{B}</m>
+        en 'n vektor <m>v</m> gegee.
+        Vind die koördinaatvektor <m>[v]_\basis{B}</m>
+        van <m>v</m> met betrekking tot <m>\basis{B}</m>.
+      <ol label="(a)">
+        <li>
+          <m>V = \Row_2</m>, <m>\basis{B} = \bopen(2,3), (3,4)\bclose</m>, en <m>v = (1,0)</m>.
+        </li>
+        <li>
+          <m>V = \Poly_2</m>, <m>\basis{B} = (1-x+x^2, 3+2x+x^2,x^2-1)</m> en <m>v=x^2+x+2</m>.
+        </li>
+      </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
         Bewys <xref ref="lin_of_coord_vectors">Lemma</xref>(b) in die geval waar <m>V</m> twee-dimensioneel is,
         sodat <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2\right\}</m>.
         Verduidelik elke stap met die toepaslike reël van 'n vektorruimte.

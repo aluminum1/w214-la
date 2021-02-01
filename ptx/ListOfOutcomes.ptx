@@ -382,7 +382,7 @@
         (Try to find non-examples that satisfy as many conditions as possible without satisfying all of them.)
       </p>
     </li>
-    <li xml:id = "outcome-def1">
+    <li xml:id = "outcome-def4">
       <title>Def4</title>
       <p>
         I can rephrase given data using the definition.
@@ -427,7 +427,7 @@
       <statement>
         <p>
           Some of the outcomes listed amount to more or less the same thing.
-          For example, <xref ref="outcome-vs1" /> asks you to check that an operation is closed, while <xref ref="outcome-sub2" /> asks you to check that a subset is a subspace.
+          For example, <xref ref="outcome-vs1" text="title"/> asks you to check that an operation is closed, while <xref ref="outcome-sub2" text="title" /> asks you to check that a subset is a subspace.
           To do the second, you need to perform the first for both addition and scalar multiplication, so there is a strong link between the skills needed.
         </p>
         <p>

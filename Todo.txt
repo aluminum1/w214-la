@@ -39,6 +39,8 @@ I would like to add
 Ideas for problems and examples:
 - Claim: Let T:V to W. Show: If T(v1) and T(v2) are linearly independent, show that v1 and v2 are
 - Application: Show that sin x and cos x are lin. ind. by using the linear map T:Func to R^2 defined by T(f) = (f(0),f(pi/2)).
+- Rank-Nullity Theorem to show the rank theorem from 144: #free + #non-0 rows = #columns
+- Sometimes go back and show how new "technology" can help you better understand previous problems.
 
 Use??
 - <objective>?
@@ -61,17 +63,3 @@ Use??
 
 - Throughout there are some figures with <caption> tags, but no text. But I think this is ok.
 
-This can be used at the start of a section of exercises:
-  <introduction>
-    <p>
-      Some text
-    </p>
-    <assemblage>
-      <title>Outcomes of the exercises</title>
-      <p>
-      <dl>
-        <li> <title>Title1</title> <p>List Item 1</p> </li>
-      </dl>
-      </p>
-    </assemblage>
-  </introduction>

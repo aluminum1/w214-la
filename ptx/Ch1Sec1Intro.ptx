@@ -29,7 +29,7 @@
         Let us pause for a second and translate this
         definition from English into mathematical symbols.
         The translation is:
-        <men>
+        <men xml:id = "set-builder-equation">
           A := \{ (a_1,\, a_2) : a_1,a_2 \in \mathbb{R}  \}
         </men>.
       </p>
