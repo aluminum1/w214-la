@@ -90,7 +90,7 @@
     This motivates the following definition.
   </p>
 
-  <definition>
+  <definition xml:id="def-isomorphism">
     <statement>
       <p>
         We say that a linear map <m>T : V \rightarrow W</m> is an <term>isomorphism</term>

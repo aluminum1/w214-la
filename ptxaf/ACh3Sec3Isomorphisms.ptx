@@ -90,7 +90,7 @@
     Dit lei tot die volgende definisie.
   </p>
 
-  <definition>
+  <definition xml:id="def-isomorphism">
     <statement>
       <p>
         Ons sê dat 'n lineêre afbeelding <m>T : V  \rightarrow W</m> 'n <term>isomorfisme</term>

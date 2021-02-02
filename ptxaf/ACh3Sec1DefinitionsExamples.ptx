@@ -614,7 +614,7 @@
         Veronderstel <m>T : V \rightarrow W</m> is 'n lineêre afbeelding.
         Dan volg dit dat
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>T(\ve{0}_V) = \ve{0}_W</m>;
@@ -633,29 +633,12 @@
 
   <proof>
     <p>
-      Ons werk soos volg:
-
-      <ol label="a">
-        <li>
-          <p>
-            <md>
-              <mrow>T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp (\text{R8 toegepas op }\ve{v} = \ve{0}_V \in V )</mrow>
-              <mrow>\amp = 0T(\ve{0}_V) \amp \text{(T is line{\^e}r)}</mrow>
-              <mrow>\amp = \ve{0}_W \amp (\text{R8 toegepas op }\ve{v} = T(\ve{0}_V) \in W </mrow>
-            </md>
-          </p>
-        </li>
-
-        <li>
-          <p>
-            <md>
-              <mrow>T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp \amp (\text{defn  van }-\ve{v} \in V) </mrow>
-              <mrow>\amp = (-1) T(\ve{v}) \amp \amp  \text{(T is line{\^e}r)}</mrow>
-              <mrow>\amp = - T(\ve{v}) \amp  \amp(\text{defn van }-T(\ve{v}) \in W)</mrow>
-            </md>
-          </p>
-        </li>
-      </ol>
+      Ons los (a) as <xref ref="exercise-zero-maps-to-zero" /> en werk soos volg vir (b):
+      <md>
+        <mrow>T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp \amp (\text{defn  van }-\ve{v} \in V) </mrow>
+        <mrow>\amp = (-1) T(\ve{v}) \amp \amp  \text{(T is line{\^e}r)}</mrow>
+        <mrow>\amp = - T(\ve{v}) \amp  \amp(\text{defn van }-T(\ve{v}) \in W)</mrow>
+      </md>
     </p>
   </proof>
 
@@ -824,6 +807,40 @@
 </subsection>
 
 <exercises>
+  <exercise>
+  <statement>
+    <p>
+      Bepaal of die volgende lineêre afbeeldings is en motiveer jou antwoord:
+    <ol>
+      <li>
+        <m>T:\Row_3\to \Row_2</m> gedefinieer deur <m>T(x,y,z) = (2x-y,x+y-z)</m>;
+      </li>
+      <li>
+        <m>T:Func(\reals,\reals)\to \Row_2</m> gedefinieer deur <m>T(f) = (f(1),f(0))</m>. (Met ander woorde, die inset is 'n funksie van reële getalle na reële getalle en die uitset is die vektor wat bestaan uit die waardes van <m>f</m> by 0 en 1.)
+      </li>
+      <li>
+        <m>T:\Row_2\to \Row_2</m> gedefinieer deur <m>T(x,y) = (x+1, y-2)</m>;
+      </li>
+      <li>
+        <m>T:\Poly_2\to \Poly_3</m> gedefinieer deur <m>T(p(x)) = xp(x)</m>. (M.a.w. die inset polinoom word met <m>x</m> vermenigvuldig en die antwoord is die uitset.)
+      </li>
+      <li>
+        <m>T:\Poly_2\to \Poly_4</m> gedefinieer deur <m>T(p(x)) = (p(x))^2</m>;
+      </li>
+      <li>
+        <m>T:\Poly_2\to \Poly_4</m> gedefinieer deur <m>T(p(x)) = p(x^2)</m>. (Wat is die verskil tussen hierdie en die vorige vraag?)
+      </li>
+      <li>
+        <m>T:Func(\reals,\reals)\to Func(\reals,\reals)</m> gedefinieer deur <m>T(f(x)) = f(x-1)</m>;
+      </li>
+      <li>
+        <m>T:\Mat_{22}\to \reals</m> gedefinieer deur <m>T\left(\begin{bmatrix} a\amp b\\c\amp d\end{bmatrix}\right) = ad-bc</m>.
+      </li>
+    </ol>
+    </p>
+  </statement>
+</exercise>
+
   <exercise>
     <statement>
       <p>
@@ -1021,6 +1038,37 @@
     </statement>
   </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+        In elk van die volgende word aan jou 'n lineêre afbeelding <m>T</m> en sy waarde op 'n paar spesifieke elemente gegee. Vind die ontbrekende waardes:
+      <ol>
+        <li>
+          Indien <m>T:\Row_2\to \Row_3</m> die vergelykings <m>T(1,0) = (2,1,-1)</m> en <m>T(0,1) = (1,1,2)</m> bevredig, vind <m>T(3,-2)</m>;
+        </li>
+        <li>
+          Indien <m>T:\Row_2\to \Row_4</m> die vergelykings <m>T(1,1) = (1,2,3,4)</m> en <m>T(1,-1)=(3,2,1,0)</m> bevredig, vind <m>T(1,0)</m> en <m>T(0,1)</m>;
+        </li>
+        <li>
+          Indien <m>T:\Poly_2\to \Row_2</m>  die vergelykings <m>T(1+x+x^2) = (1,2)</m>, <m>T(1+x)=(2,1)</m> en <m>T(1) = (0,0)</m> bevredig, vind <m>T(3+2x+x^2)</m>.
+        </li>
+      </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Beskou die basis <m>\basis{B} = \bopen\ve{v}_1,\ve{v}_2\bclose</m> van <m>\reals^2</m>, waar <m>\ve{v}_1 = \begin{bmatrix} 1\\0 \end{bmatrix}</m> en <m>\ve{v}_2 = \begin{bmatrix} 1\\1 \end{bmatrix}</m>, en laat <m>T:\reals^2\to \reals^2</m> die lineêre afbeelding wees wat
+        <me>
+          T(\ve{v}_1) = \begin{bmatrix} -1\\2 \end{bmatrix} \text{ en } T(\ve{v}_2) = \begin{bmatrix} 2\\-3 \end{bmatrix}
+        </me>
+        bevredig. Vind 'n formule vir <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right)</m> en gebruik dit om  <m>T\left(\begin{bmatrix} 5\\-3 \end{bmatrix}\right)</m> te bereken.
+      </p>
+    </statement>
+  </exercise>
+
  <exercise>
     <p>
       Bepaal die werking van die gradiënt-lineêre afbeelding
@@ -1195,10 +1243,94 @@
     </solution>
   </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>T:V\to W</m> 'n lineêre afbeelding wees en veronderstel dat <m>T(\ve{v}_1)=\ve{w}_1</m> en <m>T(\ve{v}_2)=\ve{w}_2</m>. Bewys dat <m>T(4\ve{v}_1-\ve{v}_2)=4\ve{w}_1-\ve{w}_2</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="exercise-zero-maps-to-zero">
+    <statement>
+      <p>
+        Bewys dat vir enige lineêre afbeelding <m>T:V \to W</m> geld <m>T(\ve{0}_V)=\ve{0}_W</m>, waar <m>\ve{0}_V</m> die nul-vektor in <m>V</m> en <m>\ve{0}_W</m> die nul-vektor in <m>W</m> is.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <md>
+          <mrow>T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp (\text{R8 toegepas op }\ve{v} = \ve{0}_V \in V )</mrow>
+          <mrow>\amp = 0T(\ve{0}_V) \amp \text{(T is line{\^e}r)}</mrow>
+          <mrow>\amp = \ve{0}_W \amp (\text{R8 toegepas op }\ve{v} = T(\ve{0}_V) \in W </mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>T:V \to W</m> 'n lineêre afbeelding tussen twee vektorruimtes wees.
+        Veronderstel dat <m>V</m> eindig-dimensioneel is en dat
+        <m>\basis{B} = \bopen \ve b_1,\ldots, \ve b_n\bclose</m>
+        'n basis vir <m>V</m> is.
+        Indien <m>T(\ve b_i)=0</m> (die nul-vektor in <m>W</m>)
+        vir alle basiselemente <m>\ve b_i</m>,
+        dan is <m>T</m> die nulafbeelding (m.a.w. dit beeld alle vektore op <m>\ve{0}</m> af).
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>V</m> en <m>W</m> vektorruimtes wees en  <m>T:V\to W</m> 'n lineêre afbeelding.
+        Wys dat as die vektore <m>\ve v_1,\ldots, \ve v_m</m>
+        lineêr onafhanklik in <m>V</m> is,
+        dan is die vektore <m>T(\ve v_1),\ldots, T(\ve v_m)</m> lineêr onafhanklik in <m>W</m>.
+        (Is dit ook waar as die vektore <m>\ve v_i</m> lineêr onafhanklik is,
+        dat die vektore <m>T(\ve v_i)</m> ook lineêr onafhanklik moet wees?)
+      </p>
+    </statement>
+  </exercise>
+
+<exercisegroup>
+  <introduction>
+    <p>
+      Laat <m>\mathcal{L}(V,\reals)</m> die versameling van alle <em>lineêre</em> afbeeldings van <m>V</m> na <m>\reals</m> aandui.
+      Ons gaan wys dat hierdie versameling die struktuur van 'n vektorruimte het!
+    </p>
+    <p>
+      As jy twee lineêre afbeeldings <m>T_1:V\to \reals</m> en <m>T_2:V\to \reals</m> het,
+      dan kan ons hul som definieer as die funksie wat enige vektor
+      <m>\ve v\in V</m> afbeeld op <m>T_1(\ve v)+T_2(\ve v)</m>.
+      Let op dat dit dieselfde manier is as wat optelling van twee funksies gedefinieer is.
+    </p>
+    <p>
+      So kan ons ook kan skalaarvermenigvuldiging definieer deur die afbeelding
+      <m>c\smul T</m> te definieer as die afbeelding gedefinieer deur <m>(c\smul T)(\ve v) = c\smul T(\ve v)</m>.
+      Let weereens op dat skalaarvermenigvuldiging op dieselfde manier gedefinieer is as vir gewone funksies.
+    </p>
+    <p>
+      Dus kan ons enige twee lineêre afbeeldings <m>T_1,T_2</m> by mekaar tel om 'n afbeelding <m>T_1+T_2</m> te kry
+      en enige lineêre afbeelding <m>T</m> met 'n skalaar vermenigvuldig om 'n afbeelding <m>c\smul T</m> te kry.
+      Jou eerste doel is om te wys dat hierdie afbeeldings beide lineêre afbeeldings is.
+    </p>
+  </introduction>
+
    <exercise>
     <statement>
       <p>
-        Bewys dat as <m>V</m> 'n eindig-dimensionele vektorruimte is, dan is die versameling van alle lineêre afbeeldings van <m>V</m> na <m>\mathbb R</m>, wat deur <m>\mathcal L (V,\mathbb R)</m> aangedui word, self ook 'n vektorruimte. Aangesien ons reeds weet dat die versameling van alle funksies van <m> V </m> na <m>\mathbb R</m> 'n vektorruimte is, hoef jy slegs te wys dat <m>\mathcal L (V,\mathbb R)</m> die funksie <m>\ve 0</m> bevat, en geslote is onder beide optelling en skalaarvermenigvuldiging.
+        Bewys dat as <m>V</m> 'n vektorruimte is,
+        dan is die versameling van alle lineêre afbeeldings van <m>V</m> na <m>\mathbb R</m>,
+        wat deur <m>\mathcal L (V,\mathbb R)</m> aangedui word,
+        self ook 'n vektorruimte.
+        Aangesien ons reeds weet dat die versameling van alle
+        funksies van <m> V </m> na <m>\mathbb R</m> 'n vektorruimte is,
+        hoef jy slegs te wys dat <m>\mathcal L (V,\mathbb R)</m>
+        die funksie <m>\ve 0</m> bevat, en geslote is
+        onder beide optelling en skalaarvermenigvuldiging.
       </p>
     </statement>
     <solution>
@@ -1249,10 +1381,44 @@
     </statement>
   </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+        Wys dat vir elke element <m>\ve v\in V</m> is die afbeelding <m>\phi_{\ve v}:\mathcal{L}(V,\reals)\to \reals</m> gedefinieer deur <m>\phi_{\ve v}(T)  = T(\ve v)</m> 'n lineêre afbeelding.
+      </p>
+      <p>
+        Hierdie probleem is 'n bietjie moeiliker, want dit
+        is iets wat dalk lank kan vat om aan gewoond te raak.
+        Jy behoort aan 'n lineêre afbeelding <m>T</m>
+        as 'n enkele voorwerp te dink wat as die inset vir die afbeelding <m>\phi_{\ve v}</m> gebruik kan word.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <title> Not for the faint-hearted</title>
+    <statement>
+      <p>
+        Weereens laat <m>V</m> 'n vektorruimte wees.
+        Laat <m>W</m> die vektorruimte <m>\mathcal{L}(V,\reals)</m> wees.
+        So sy elemente is lineêre afbeeldings van <m>V</m> na <m>\reals</m>.
+        Beskou nou die afbeelding <m>\Phi:V \to \mathcal{L}(W,\reals)</m>
+        gedefinieer deur <m>\Phi(\ve v) = \phi_{\ve v}</m>.
+        (Onthou uit die vorige probleem dat <m>\phi_{\ve v}</m>
+        'n lineêre afbeelding van <m>\mathcal{L}(V,\reals)</m>
+        na <m>\reals</m> is, so dit behoort regtig aan <m>\mathcal{L}(W,\reals)</m>,
+        so die definisie van <m>\Phi</m> maak sin.)
+        Bewys dat <m>\Phi</m> ook 'n lineêre afbeelding is.
+      </p>
+      <p>
+        Bonus: As <m>V</m> eindig-dimensioneel is, bewys dat <m>\Phi</m> 'n isomorfisme is (<xref ref="def-isomorphism" />).
+      </p>
+    </statement>
+  </exercise>
+
+</exercisegroup>
 
 </exercises>
-
-
 
 </section>
 

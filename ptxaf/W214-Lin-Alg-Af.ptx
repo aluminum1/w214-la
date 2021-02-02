@@ -45,6 +45,8 @@
 \newcommand{\mamp}{\amp}
 % The \amp command changes correctly whether html or latex is used. This used to be &amp; which works correctly only in html. I didn't want to search for all occurrences of \mamp.
 \newcommand{\mapsfrom}{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\reals}{\mathbb{R}}
 
 
 \DeclareMathOperator{\Fun}{Fun}
@@ -53,12 +55,13 @@
 \DeclareMathOperator{\Poly}{Poly}
 \DeclareMathOperator{\Trig}{Trig}
 \DeclareMathOperator{\Mat}{Mat}
-\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\Col}{Kol}
+\DeclareMathOperator{\Row}{Ry}
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\vc}{vec}
 \DeclareMathOperator{\Dim}{Dim}
 \DeclareMathOperator{\Ker}{Ker}
-\DeclareMathOperator{\Nullity}{Nullity}
+\DeclareMathOperator{\Nullity}{Nhg}
 \DeclareMathOperator{\Rank}{Rank}
 \DeclareMathOperator{\Vect}{Vect}
 \DeclareMathOperator{\Div}{Div}

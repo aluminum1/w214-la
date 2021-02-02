@@ -614,7 +614,7 @@
         Suppose <m>T : V \rightarrow W</m> is a linear map.
         Then
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>T(\ve{0}_V) = \ve{0}_W</m>;
@@ -633,29 +633,12 @@
 
   <proof>
     <p>
-      We go to work as follows:
-
-    <ol label="a">
-        <li>
-          <p>
-            <md>
-              <mrow>   T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp  \text{(R8 applied to } \ve{v} = \ve{0}_V \in V)</mrow>
-              <mrow>\amp = 0T(\ve{0}_V) \amp  (T \text{ is linear)}</mrow>
-              <mrow>\amp = \ve{0}_W \amp  \text{(R8 applied to } \ve{v} = T(\ve{0}_V) \in W)</mrow>
-            </md>
-          </p>
-        </li>
-
-        <li>
-          <p>
-            <md>
-              <mrow> T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp  \text{(defn of } -\ve{v} \text{ in } V)</mrow>
-              <mrow>\amp = (-1) T(\ve{v}) \amp  (T \text{ is linear)}</mrow>
-              <mrow>\amp = - T(\ve{v}) \amp  \text{(defn of }-T(\ve{v}) \text{ in } W)</mrow>
-            </md>
-          </p>
-        </li>
-      </ol>
+      We leave (a) as <xref ref="exercise-zero-maps-to-zero" /> and go to work as follows for (b):
+      <md>
+        <mrow> T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp  \text{(defn of } -\ve{v} \text{ in } V)</mrow>
+        <mrow>\amp = (-1) T(\ve{v}) \amp  (T \text{ is linear)}</mrow>
+        <mrow>\amp = - T(\ve{v}) \amp  \text{(defn of }-T(\ve{v}) \text{ in } W)</mrow>
+      </md>
     </p>
   </proof>
 
@@ -825,6 +808,40 @@
 
 <exercises>
  <exercise>
+  <statement>
+    <p>
+      Determine whether the following are linear maps and motivate your answer:
+    <ol>
+      <li>
+        <m>T:\Row_3\to \Row_2</m> defined by <m>T(x,y,z) = (2x-y,x+y-z)</m>;
+      </li>
+      <li>
+        <m>T:Func(\reals,\reals)\to \Row_2</m> defined by <m>T(f) = (f(1),f(0))</m>. (In other words, the input is a function from reals to reals and the output is the vector consisting of the values of <m>f</m> at 0 and 1.)
+      </li>
+      <li>
+        <m>T:\Row_2\to \Row_2</m> defined by <m>T(x,y) = (x+1, y-2)</m>;
+      </li>
+      <li>
+        <m>T:\Poly_2\to \Poly_3</m> defined by <m>T(p(x)) = xp(x)</m>. (I.e. the input polynomial gets multiplied by <m>x</m> and the result is the output.)
+      </li>
+      <li>
+        <m>T:\Poly_2\to \Poly_4</m> defined by <m>T(p(x)) = (p(x))^2</m>;
+      </li>
+      <li>
+        <m>T:\Poly_2\to \Poly_4</m> defined by <m>T(p(x)) = p(x^2)</m>. (What is the difference between this and the previous question?)
+      </li>
+      <li>
+        <m>T:Func(\reals,\reals)\to Func(\reals,\reals)</m> defined by <m>T(f(x)) = f(x-1)</m>;
+      </li>
+      <li>
+        <m>T:\Mat_{22}\to \reals</m> defined by <m>T\left(\begin{bmatrix} a\amp b\\c\amp d\end{bmatrix}\right) = ad-bc</m>.
+      </li>
+    </ol>
+    </p>
+  </statement>
+</exercise>
+
+  <exercise>
     <statement>
       <p>
         Let <m>V</m> be a vector space,
@@ -1022,6 +1039,37 @@
   </exercise>
 
   <exercise>
+    <statement>
+      <p>
+        In each of the following you are given a linear map <m>T</m> and its value on a few specified elements. Find missing values:
+      <ol>
+        <li>
+          If <m>T:\Row_2\to \Row_3</m> satisfies <m>T(1,0) = (2,1,-1)</m> and <m>T(0,1) = (1,1,2)</m>, find <m>T(3,-2)</m>;
+        </li>
+        <li>
+          If <m>T:\Row_2\to \Row_4</m> satisfies <m>T(1,1) = (1,2,3,4)</m> and <m>T(1,-1)=(3,2,1,0)</m>, find <m>T(1,0)</m> and <m>T(0,1)</m>;
+        </li>
+        <li>
+          If <m>T:\Poly_2\to \Row_2</m>  satisfies <m>T(1+x+x^2) = (1,2)</m>, <m>T(1+x)=(2,1)</m> and <m>T(1) = (0,0)</m>, find <m>T(3+2x+x^2)</m>.
+        </li>
+      </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the basis <m>\basis{B} = \bopen\ve{v}_1,\ve{v}_2\bclose</m> of <m>\reals^2</m>, where <m>\ve{v}_1 = \begin{bmatrix} 1\\0 \end{bmatrix}</m> and <m>\ve{v}_2 = \begin{bmatrix} 1\\1 \end{bmatrix}</m>, and let <m>T:\reals^2\to \reals^2</m> be the linear transformation satisfying
+        <me>
+          T(\ve{v}_1) = \begin{bmatrix} -1\\2 \end{bmatrix} \text{ and } T(\ve{v}_2) = \begin{bmatrix} 2\\-3 \end{bmatrix}
+        </me>.
+        Find a formula for <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right)</m> and use it to find <m>T\left(\begin{bmatrix} 5\\-3 \end{bmatrix}\right)</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
     <p>
       Determine the action of the gradient linear map
       <me>
@@ -1198,7 +1246,91 @@
   <exercise>
     <statement>
       <p>
-        Prove that if <m>V</m> is a finite dimensional vector space then the set of all linear maps from <m>V</m> to <m>\mathbb R</m>,<m>\mathcal L (V,\mathbb R)</m>, is itself a vector space. Since we already know that the set of all real valued functions from <m> V </m> to <m>\mathbb R</m> forms a vector space, you will only have to show that <m>\mathcal L (V,\mathbb R)</m> contains the function <m>\ve 0</m>, and is closed under both addition and scalar multiplication.
+        Let <m>T:V\to W</m> be a linear map and suppose that <m>T(\ve{v}_1)=\ve{w}_1</m> and <m>T(\ve{v}_2)=\ve{w}_2</m>. Prove that <m>T(4\ve{v}_1-\ve{v}_2)=4\ve{w}_1-\ve{w}_2</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="exercise-zero-maps-to-zero">
+    <statement>
+      <p>
+        Prove that for any linear map <m>T:V \to W</m> we have <m>T(\ve{0}_V)=\ve{0}_W</m>, where <m>\ve{0}_V</m> is the zero vector in <m>V</m> and <m>\ve{0}_W</m> is the zero vector in <m>W</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <md>
+          <mrow>   T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp  \text{(R8 applied to } \ve{v} = \ve{0}_V \in V)</mrow>
+          <mrow>\amp = 0T(\ve{0}_V) \amp  (T \text{ is linear)}</mrow>
+          <mrow>\amp = \ve{0}_W \amp  \text{(R8 applied to } \ve{v} = T(\ve{0}_V) \in W)</mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>T:V \to W</m> be a linear map between two vector spaces.
+        Suppose that <m>V</m> is finite-dimensional and that
+        <m>\basis{B} = \bopen \ve b_1,\ldots, \ve b_n\bclose</m>
+        is a basis for <m>V</m>.
+        If <m>T(\ve b_i)=0</m> (the zero vector in <m>W</m>)
+        for all the basis elements <m>\ve b_i</m>,
+        then <m>T</m> is the zero map (i.e. it maps all vectors to <m>\ve{0}</m>).
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>V</m> and <m>W</m> be vector spaces and <m>T:V\to W</m> a linear map.
+        Show that if the vectors <m>\ve v_1,\ldots, \ve v_m</m>
+        are linearly dependent in <m>V</m>,
+        then the vectors <m>T(\ve v_1),\ldots, T(\ve v_m)</m> are linearly dependent in <m>W</m>.
+        (Is it true that if the <m>\ve v_i</m> are linearly independent,
+        then the <m>T(\ve v_i)</m> are linearly independent?)
+      </p>
+    </statement>
+  </exercise>
+
+<exercisegroup>
+  <introduction>
+    <p>
+      Let <m>\mathcal{L}(V,\reals)</m> denote the set of all <em>linear</em> maps from <m>V</m> to <m>\reals</m>.
+      We will show that this set has the natural structure of a vector space!
+    </p>
+    <p>
+      If you have two linear maps <m>T_1:V\to \reals</m> and <m>T_2:V\to \reals</m>,
+      then we can define their sum as the function that maps any
+      <m>\ve v\in V</m> to <m>T_1(\ve v)+T_2(\ve v)</m>.
+      Note that this is exactly the same as the addition of two functions.
+    </p>
+    <p>
+      We can also define a scalar multiplication by defining the map
+      <m>c\smul T</m> to be the map defined by <m>(c\smul T)(\ve v) = c\smul T(\ve v)</m>.
+      Again, note that scalar multiplication is defined in the same way as it was for functions.
+    </p>
+    <p>
+      So we can add any two linear maps <m>T_1,T_2</m> to get a map <m>T_1+T_2</m>
+      and we can multiply any linear map <m>T</m> by a scalar to get a map <m>c\smul T</m>.
+      Your first aim is to show that those maps are also linear maps.
+    </p>
+  </introduction>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove that if <m>V</m> is a vector space,
+        then the set of all linear maps from <m>V</m> to <m>\mathbb R</m>,
+        denoted <m>\mathcal L (V,\mathbb R)</m>,
+        is itself a vector space.
+        Since we already know that the set of all
+        real valued functions from <m> V </m> to <m>\mathbb R</m> forms a vector space,
+        you will only have to show that <m>\mathcal L (V,\mathbb R)</m>
+        contains the function <m>\ve 0</m>, and is closed
+        under both addition and scalar multiplication.
       </p>
     </statement>
     <solution>
@@ -1249,10 +1381,44 @@
     </statement>
   </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+        Show that for every element <m>\ve v\in V</m> the map <m>\phi_{\ve v}:\mathcal{L}(V,\reals)\to \reals</m> defined by <m>\phi_{\ve v}(T)  = T(\ve v)</m> is linear.
+      </p>
+      <p>
+        This problem is a bit harder, because it is
+        something that might take long to get used to.
+        You should be thinking of a linear map <m>T</m>
+        as a single object that can be used as the input to this map <m>\phi_{\ve v}</m>.
+      </p>
+    </statement>
+  </exercise>
 
-  </exercises>
+  <exercise>
+    <title> Not for the faint-hearted</title>
+    <statement>
+      <p>
+        Again, let <m>V</m> be a vector space.
+        Let <m>W</m> be the vector space <m>\mathcal{L}(V,\reals)</m>.
+        So its elements are linear maps from <m>V</m> to <m>\reals</m>.
+        Now consider the map <m>\Phi:V \to \mathcal{L}(W,\reals)</m>
+        defined by <m>\Phi(\ve v) = \phi_{\ve v}</m>.
+        (Recall from the previous problem that <m>\phi_{\ve v}</m>
+        is a linear map from <m>\mathcal{L}(V,\reals)</m>
+        to <m>\reals</m>, so it really does belong to <m>\mathcal{L}(W,\reals)</m>,
+        so the definition of <m>\Phi</m> makes sense.)
+        Prove that <m>\Phi</m> is also a linear map.
+      </p>
+      <p>
+        Bonus: If <m>V</m> is finite-dimensional, prove that <m>\Phi</m> is an isomorphism (<xref ref="def-isomorphism" />).
+      </p>
+    </statement>
+  </exercise>
 
+</exercisegroup>
 
+</exercises>
 
 </section>
 
