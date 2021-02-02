@@ -508,7 +508,7 @@
         </figure>
       </sidebyside>
 
-    <ol>
+    <ol label="(a)">
       <li xml:id="ch-basis-exercise2">
         <p> Determine <m>[\ve{w}]_\basis{B}</m>, directly from <xref ref="w_in_b_basis_exc"/>. </p>
       </li>

@@ -572,7 +572,7 @@
 
   <exercise>
     <statement>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>Find a basis <m>\basis{B}</m> for the vector space
               <me>
@@ -596,7 +596,7 @@
     </statement>
    <solution>
     <p>
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             <me>
@@ -661,7 +661,7 @@
         <mrow> \ve{u} \amp = (1, 2, -\frac{5}{3}), \amp \ve{v} \amp = (-4, 2, 0) </mrow>
       </md>
       Consider the vector <m>\ve{w} = (-2, 4, -2) \in \mathbb{R}^3</m>.
-      <ol>
+      <ol label="(a)">
         <li>Show that <m>\ve{w} \in W</m>. </li>
         <li>Determine <m>[\ve{w}]_{\basis{B}}</m>.</li>
         <li>Determine <m>[\ve{w}]_{\basis{C}}</m>. </li>
@@ -670,7 +670,7 @@
   </statement>
   <solution>
     <p>
-      <ol>
+      <ol label="(a)">
         <li>
           The equation <m>-2 + 2(4) - 3(2) = 0</m> holds and so <m> \ve w \in W</m>.
         </li>
@@ -716,7 +716,7 @@
         </men>
       </p>
 
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             Show that <m>\basis{B} = \bopen \cos x, \, \sin x \bclose </m> is a basis for <m>V</m>.
@@ -746,7 +746,7 @@
 
     <solution>
     <p>
-    <ol>
+    <ol label="(a)">
       <li>
         We must first show that <m>\cos x</m> and <m> \sin x</m>
         are indeed solutions to the ODE.
@@ -824,7 +824,7 @@
           (1-x^2)y^{''} - xy' + 4y = 0, \quad x \in (-1, 1)
         </men>.
       </p>
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             Show that <m>y_1</m> and <m>y_2</m> are elements of <m>V</m>, where
@@ -860,7 +860,7 @@
           </men>
         </p>
         <p>
-          <ol>
+          <ol label="(a)">
             <li>
               Without performing any explicit calculations, determine the dimension of <m>V</m>.
             </li>

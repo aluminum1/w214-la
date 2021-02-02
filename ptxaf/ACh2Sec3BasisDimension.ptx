@@ -367,7 +367,7 @@
           <p>
             Suppose <m>X = \left\{a, b, c\right\}</m>.
 
-            <ol>
+            <ol label="(a)">
               <li>
                 <p>
                   Evaluate the function <m>f_{b }</m> at each <m>x \in X</m>.
@@ -1186,7 +1186,7 @@
           As dit waar is, bewys dit.
           Indien nie, gee 'n teenvoorbeeld.
 
-          <ol label="a">
+          <ol label="(a)">
             <li>
               <p>
                 Enige lineêr onafhanklike lys vektore in <m>V</m> bevat hoogstens <m>n</m> vektore.
@@ -1204,7 +1204,7 @@
 
       <solution>
         <p>
-          <ol>
+          <ol label="(a)">
             <li>
             <p>
               Waar
@@ -1273,7 +1273,7 @@
       </statement>
     <solution>
       <p>
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             Enige lineêr onafhanklike versameling wat 'n vektorruimte onderspan is per definisie 'n basis. Dit is teenstrydig met ons aanname.
@@ -1331,7 +1331,7 @@
           <xref ref="n_lin_ind_is_basis">en</xref> om te bepaal
           of <m>\basis{B}</m> 'n basis vir <m>V</m> is:
 
-          <ol label="a">
+          <ol label="(a)">
             <li>
               <p>
                 <m>V = \Poly_2</m>, <m>\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1
@@ -1371,7 +1371,7 @@
       </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
 
           <li>
             Die versameling <m> \basis B' = \bopen 1 , x , x^2 \bclose </m> is 'n basis vir <m> \Poly_2 </m> en hierdie vektorruimte het dus dimensie 3. Aangesien <m> \basis B </m> uit 4 elemente bestaan, kan dit uit <xref ref="true_false_span_lin_ind">Oefening</xref>(a) nie lineêr onafhanklik wees nie. Dus kan <m> \basis B </m> nie 'n basis vir <m> \Poly_2 </m> wees nie.
@@ -1399,7 +1399,7 @@
           As dit onwaar is, gee 'n teenvoorbeeld.
           (Wenk: Gebruik die definisie van lineêre onafhanklikheid.)
 
-          <ol label="a">
+          <ol label="(a)">
             <li>
               <p>
                 Die lys <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is lineêr onafhanklik.
@@ -1416,7 +1416,7 @@
       </statement>
       <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Waar. Veronderstel daar was 'n lineêre verband tussen  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m>:
@@ -1476,7 +1476,7 @@
           deelruimte van <m>\Poly_2</m> is,
           vind 'n basis vir <m>V</m>, en bereken <m>\Dim V</m>.
 
-          <ol label="a">
+          <ol label="(a)">
             <li>
               <p>
                 <m>V = \{ p \in \Poly_2 : p(2) = 0 \}</m>
@@ -1492,7 +1492,7 @@
         </p>
       </statement>
     <solution><p>
-      <ol>
+      <ol label="(a)">
         <li>
           Ons los die bevestiging uit dat <m> V </m> 'n deelruimte van <m> \Poly_2 </m> is, omdat dit eenvoudig is. Kom ons konstrueer nou 'n basis vir <m> V </m>. Begin met 'n nie-nul vektor <m> \ve v_1 </m>  in <m> V </m>. Ons maak die vanselfsprekende keuse <m> \ve v_1 = x -2 </m>. Kies volgende enige vektor <m> \ve v_2 </m> in <m> V </m> wat nie in die span van <m> \left \{ \ve v_1 \right\} </m> is nie. Een keuse daarvoor is <m> \ve v_2 = x(x-2) </m>. Aangesien <m> V </m> nie die hele vektorruimte <m>\Poly_2 </m>, is nie, weet ons dat <m> \Dim V \lt 3 </m>. Dus is <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> 'n basis vir <m> V </m> en dus is <m> \Dim V = 2 </m>.
         </li>
@@ -1544,7 +1544,7 @@
           </men>
         </p>
         <p>
-          <ol>
+          <ol label="(a)">
             <li>
               Bereken die dimensie van <m>V</m> sonder om enige eksplisiete berekeninge to doen
             </li>

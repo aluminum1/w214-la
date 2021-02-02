@@ -367,7 +367,7 @@
           <p>
             Suppose <m>X = \left\{a, b, c\right\}</m>.
 
-            <ol>
+            <ol label="(a)">
               <li>
                 <p>
                   Evaluate the function <m>f_{b }</m> at each <m>x \in X</m>.
@@ -1186,7 +1186,7 @@
         If it is true, prove it.
         If it is false, give a counterexample.
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               Any linearly independent list of vectors in <m>V</m> contains at most <m>n</m> vectors.
@@ -1204,7 +1204,7 @@
 
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               True
@@ -1273,7 +1273,7 @@
     </statement>
     <solution>
       <p>
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             Any linearly independent spanning set is by definition a basis, contradicting our assumption.
@@ -1331,7 +1331,7 @@
         and <xref ref="n_lin_ind_is_basis"></xref>
         to determine if <m>\basis{B}</m> is a basis for <m>V</m>.
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>V = \Poly_2</m>,
@@ -1371,7 +1371,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
 
           <li>
             <m> \Poly_2 </m> has a basis <m> \basis B' = \bopen 1 , x , x^2 \bclose </m> and so has dimension 3. Since <m> \basis B </m> has length 4, it cannot be linearly independent by <xref ref="true_false_span_lin_ind">Exercise</xref>(a). Hence <m> \basis B </m> cannot be a basis for  <m> \Poly_2 </m>.
@@ -1399,7 +1399,7 @@
         If it is false, give a counterexample.
         (Hint: Use the definition of linear independence.)
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               The list <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
@@ -1416,7 +1416,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               True. Suppose there is a linear relation on  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m>:
@@ -1476,7 +1476,7 @@
         show that <m>V</m> is a subspace of <m>\Poly_2</m>,
         find a basis for <m>V</m>, and compute <m>\Dim V</m>.
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>V = \{ p \in \Poly_2 : p(2) = 0 \}</m>
@@ -1492,7 +1492,7 @@
       </p>
     </statement>
     <solution><p>
-      <ol>
+      <ol label="(a)">
         <li>
           We omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m> since it is routine. Let us now construct a basis for <m> V </m>. Begin with a non-zero vector <m> \ve v_1 </m>  in <m> V </m>. We make the most obvious choice, let <m> \ve v_1 = x -2 </m>. Next pick any vector  <m> \ve v_2 </m> in <m> V </m> not in the span of <m> \left \{ \ve v_1 \right\} </m>. An obvious choice is <m> \ve v_2 = x(x-2) </m>. Since <m> V </m> is not all of <m>\Poly_2 </m>, we know that <m> \Dim V \lt 3 </m>. Thus <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> is a basis for <m> V </m> and so <m> \Dim V = 2 </m>.
         </li>
@@ -1544,7 +1544,7 @@
           </men>
         </p>
         <p>
-          <ol>
+          <ol label="(a)">
             <li>
               Without performing any explicit calculations, determine the dimension of <m>V</m>.
             </li>

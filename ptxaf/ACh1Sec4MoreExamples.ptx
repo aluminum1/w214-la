@@ -367,7 +367,7 @@
         Sê of elkeen van die volgende kombinasies simbole
         'n reële getal of 'n funksie voorstel.
 
-        <ol>
+        <ol label="(a)" cols="2">
           <li>
             <p>
               <m>\mathbf{f}</m>
@@ -396,7 +396,7 @@
     </statement>
       <solution>
       <p>
-        <ol>
+        <ol label="(a)" cols="2">
           <li>
             Funksie
           </li>
@@ -419,7 +419,7 @@
       <p>
         Laat <m>X = \{a, b, c\}</m>.
 
-        <ol>
+        <ol label="(a)">
           <li xml:id="three_function_question">
             <p>
               Skryf drie verskillende funksies <m>\mathbf{f}, \mathbf{g}, \mathbf{h}</m> in <m>\Fun(X)</m> neer.
@@ -438,7 +438,7 @@
     </statement>
       <solution>
         <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <md>
             <mrow> \ve f(a)= 4 </mrow>
@@ -628,7 +628,7 @@
         waar <m>x, y \in \mathbb{R}^+</m> en <m>k</m> 'n
         skalaar is (i.e. 'n willekeurige reële getal).
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Gaan na dat hierdie bewerkings wel-gedefinieerd is.
@@ -648,7 +648,7 @@
     </statement>
     <solution>
     <p>
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             Laat <m>x,y</m> twee positiewe reële getalle wees. Dan is
@@ -684,7 +684,7 @@
     <me>
       (a_1, a_2) \oplus (b_1, b_2) := (a_1 + b_2, a_2 + b_1).
     </me>
-    <ol>
+    <ol label="(a)">
       <li> Bevredig hierdie bewerking <xref ref="R1" text="title" />? </li>
       <li> Bevredig hierdie bewerking <xref ref="R2" text="title" />? </li>
     </ol>
@@ -692,7 +692,7 @@
 </statement>
 <solution>
   <p>
-    <ol>
+    <ol label="(a)">
       <li>
         <p>
           Nee <mdash /> hier is 'n teenvoorbeeld:

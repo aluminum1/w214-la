@@ -347,14 +347,14 @@
 
   <exercise>
     <statement>
-      <ol label="a">
+      <ol label="(a)">
         <li><p> Why is <m>D</m> a map from <m>\Poly_n</m> to <m>\Poly_{n-1}</m>?</p></li>
         <li><p> Check that <m>D</m> is linear.</p></li>
       </ol>
     </statement>
     <solution>
       <p>
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               As you know from calculus, taking the derivative of a polynomial decreases every power of <m> x </m> by 1. So if <m> p </m> is in <m>\Poly_n </m>, then <m> p </m> has degree at most <m> n </m> . Therefore, its image under <m> D </m> has degree at most <m> n - 1</m>. Thus <m> p' </m> is in <m>\Poly_{n-1} </m>.
@@ -408,7 +408,7 @@
 
   <exercise>
       <statement>
-        <ol label="a">
+        <ol label="(a)">
           <li><p>
             Why is <m>A</m> a map from <m>\Poly_n</m> to <m>\Poly_{n+1}</m>?
           </p></li>
@@ -419,7 +419,7 @@
       </statement>
       <solution>
         <p>
-          <ol label="a">
+          <ol label="(a)">
             <li>
               <p>
               You know from calculus that the antiderivative of a polynomial <m> \ve p </m> must always have degree one greater than <m> \ve p </m>. Hence <m> A </m> maps <m>\Poly_n</m> to <m> \Poly_{n+1}</m>.
@@ -811,7 +811,7 @@
   <statement>
     <p>
       Determine whether the following are linear maps and motivate your answer:
-    <ol>
+    <ol label="(a)">
       <li>
         <m>T:\Row_3\to \Row_2</m> defined by <m>T(x,y,z) = (2x-y,x+y-z)</m>;
       </li>
@@ -851,7 +851,7 @@
           <mrow>T : V \amp \rightarrow V</mrow>
           <mrow>\ve{v} \amp  \mapsto \ve{a} + \ve{v}</mrow>
         </md>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Is <m>T</m> a linear map? (Yes or no)
@@ -868,7 +868,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               No.
@@ -893,7 +893,7 @@
       <p>
         Consider the map <m>T : \mathbb{R}^3 \rightarrow \mathbb{R}^3</m> given by <m>T\left( (x,y,z) \right) = (z,x,y)</m>.
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Is <m>T</m> a linear map? (Yes or no)
@@ -910,7 +910,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Yes.
@@ -943,7 +943,7 @@
         </md>
         where <m>M(\ve{p})(x) = x^2 \ve{p}(x)</m>.
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Why does <m>M</m> map from <m>\Poly_n</m> to <m>\Poly_{n+2}</m>?
@@ -967,7 +967,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               If <m> p(x) </m> has degree at most <m>n</m>, then <m> \ve q(x) := x^2 \ve p(x) </m> has degree at most <m>n+2</m>.
@@ -1013,7 +1013,7 @@
         <me>
           C(p)(x) := p(\cos x).
         </me>
-        <ol>
+        <ol label="(a)">
           <li>
           Compute <m>C(p)</m>, where <m>p(x)=3x^2-x+1</m>. Express your answer in terms of the standard basis for <m>Trig_2</m>,
           <me>
@@ -1042,7 +1042,7 @@
     <statement>
       <p>
         In each of the following you are given a linear map <m>T</m> and its value on a few specified elements. Find missing values:
-      <ol>
+      <ol label="(a)">
         <li>
           If <m>T:\Row_2\to \Row_3</m> satisfies <m>T(1,0) = (2,1,-1)</m> and <m>T(0,1) = (1,1,2)</m>, find <m>T(3,-2)</m>;
         </li>
@@ -1098,7 +1098,7 @@
         <mrow> p \amp \mapsto \begin{bmatrix} p(0) \\ p(1) \end{bmatrix} </mrow>
       </md>
     </p>
-    <ol>
+    <ol label="(a)">
       <li><p>
         Is <m>T</m> a linear map?
       </p></li>
@@ -1131,7 +1131,7 @@
           <mrow>I : \Poly_n \amp  \rightarrow \mathbb{R}</mrow>
           <mrow>\ve{p} \amp  \mapsto \int_{-1}^{1} \ve{p}(x) \, dx</mrow>
         </md>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Prove that <m>I</m> is linear.
@@ -1155,7 +1155,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
 
           <li>
             <p>
@@ -1336,7 +1336,7 @@
     <solution>
       <p>
         For all <m>\ve v,\ve w \in  V</m>, for all <m>S, T \in \mathcal L (V,\mathbb R)</m> and for all <m>a , b \in \mathbb R</m>:
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             <md>

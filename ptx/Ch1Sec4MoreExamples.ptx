@@ -367,7 +367,7 @@
           Say whether the following combination of symbols
           represents a real number or a function.
 
-          <ol>
+          <ol label="(a)" cols="2">
             <li>
               <p>
                 <m>f</m>
@@ -396,7 +396,7 @@
       </statement>
       <solution>
       <p>
-        <ol>
+        <ol label="(a)" cols="2">
           <li>
             Function
           </li>
@@ -419,7 +419,7 @@
         <p>
           Let <m>X = \{a, b, c\}</m>.
 
-          <ol>
+          <ol label="(a)">
             <li xml:id="three_functions">
               <p>
                 Write down three different functions <m>f, g, h</m> in <m>\Fun(X)</m>.
@@ -438,7 +438,7 @@
       </statement>
        <solution>
         <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <md>
             <mrow> \ve f(a)= 4 </mrow>
@@ -628,7 +628,7 @@
         where <m>x, y \in \mathbb{R}^+</m>, and <m>k</m>
         is a scalar (i.e. an arbitrary real number).
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Check that these operations are well-defined.
@@ -648,7 +648,7 @@
     </statement>
     <solution>
     <p>
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             Let <m>x,y</m> be two positive reals. Then
@@ -684,7 +684,7 @@
     <me>
       (a_1, a_2) \oplus (b_1, b_2) := (a_1 + b_2, a_2 + b_1).
     </me>
-    <ol>
+    <ol label="(a)">
       <li> Does this operation satisfy <xref ref="R1" text="title" />? </li>
       <li> Does this operation satisfy <xref ref="R2" text="title" />? </li>
     </ol>
@@ -692,7 +692,7 @@
 </statement>
 <solution>
   <p>
-    <ol>
+    <ol label="(a)">
       <li>
         <p>
           No <mdash /> here is a counterexample:

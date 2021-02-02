@@ -347,14 +347,14 @@
 
   <exercise>
     <statement>
-      <ol label="a">
+      <ol label="(a)">
         <li><p> Hoekom is <m>D</m> 'n afbeelding van <m>\Poly_n</m> na <m>\Poly_{n-1}</m>?</p></li>
         <li><p> Bevestig dat <m>D</m> lineêr is. </p></li>
       </ol>
     </statement>
     <solution>
       <p>
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               Soos jy uit Kalkulus weet, verminder elke mag van <m> x </m> met 1 wanneer ons die afgeleide neem. So as <m> p </m> in <m>\Poly_n </m> is, dan het <m> p </m> 'n graad van hoogstens <m> n </m>. Daarom het sy beeld onder <m> D </m> 'n graad van hoogstens <m> n - 1</m>. Dus is <m> p' </m> in <m>\Poly_{n-1} </m>.
@@ -408,7 +408,7 @@
 
   <exercise>
     <statement>
-      <ol label="a">
+      <ol label="(a)">
         <li><p>
           Waarom is <m>A</m> 'n afbeelding vanaf <m>\Poly_n</m> na <m>\Poly_{n+1}</m>?
         </p></li>
@@ -419,7 +419,7 @@
     </statement>
     <solution>
         <p>
-          <ol label="a">
+          <ol label="(a)">
             <li>
               <p>
                 Jy weet uit Kalkulus dat die anti-afgeleide van 'n nie-nul polinoom <m> \ve p </m> altyd 'n graad van een meer as <m> \ve p </m> het. Dus sal <m> A </m> die vektorruimte <m>\Poly_n</m> op <m> \Poly_{n+1}</m> afbeeld.
@@ -811,7 +811,7 @@
   <statement>
     <p>
       Bepaal of die volgende lineêre afbeeldings is en motiveer jou antwoord:
-    <ol>
+    <ol label="(a)">
       <li>
         <m>T:\Row_3\to \Row_2</m> gedefinieer deur <m>T(x,y,z) = (2x-y,x+y-z)</m>;
       </li>
@@ -851,7 +851,7 @@
           <mrow>T : V \amp \rightarrow V</mrow>
           <mrow>\ve{v} \amp  \mapsto \ve{a} + \ve{v}</mrow>
         </md>
-        <ul>
+        <ol label="(a)">
           <li>
             <p>
               Is <m>T</m> 'n lineêre afbeelding? (Ja of nee)
@@ -863,12 +863,12 @@
               Bewys jou antwoord vir (a).
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Nee.
@@ -893,7 +893,7 @@
       <p>
         Beskou die afbeelding <m>T : \mathbb{R}^3 \rightarrow \mathbb{R}^3</m> wat deur <m>T\left( (x,y,z) \right) = (z,x,y)</m> gegee word.
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Is <m>T</m> 'n lineêre afbeelding? (Ja of nee)
@@ -910,7 +910,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Ja.
@@ -943,7 +943,7 @@
         </md>
         waar <m>M(\ve{p})(x) = x^2 \ve{p}(x)</m>.
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Hoekom beeld <m>M</m> <m>\Poly_n</m> op <m>\Poly_{n+2}</m> af?
@@ -967,7 +967,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               As <m> p(x) </m> graad hoogstens <m>n</m> het, dan het <m> \ve q(x) := x^2 \ve p(x) </m> graad hoogstens <m>n+2</m>.
@@ -1013,7 +1013,7 @@
         <me>
           C(p)(x) := p(\cos x).
         </me>
-        <ol>
+        <ol label="(a)">
           <li>
           Bereken <m>C(p)</m>, waar <m>p(x)=3x^2-x+1</m>. Druk jou antwoord in terme van die standaardbasis van <m>Trig_2</m>, naamlik
           <me>
@@ -1042,7 +1042,7 @@
     <statement>
       <p>
         In elk van die volgende word aan jou 'n lineêre afbeelding <m>T</m> en sy waarde op 'n paar spesifieke elemente gegee. Vind die ontbrekende waardes:
-      <ol>
+      <ol label="(a)">
         <li>
           Indien <m>T:\Row_2\to \Row_3</m> die vergelykings <m>T(1,0) = (2,1,-1)</m> en <m>T(0,1) = (1,1,2)</m> bevredig, vind <m>T(3,-2)</m>;
         </li>
@@ -1098,7 +1098,7 @@
         <mrow> p \amp \mapsto \begin{bmatrix} p(0) \\ p(1) \end{bmatrix} </mrow>
       </md>
     </p>
-    <ol>
+    <ol label="(a)">
       <li><p>
         Is <m>T</m> 'n lineêre afbeelding?
       </p></li>
@@ -1131,7 +1131,7 @@
           <mrow>I : \Poly_n \amp  \rightarrow \mathbb{R}</mrow>
           <mrow>\ve{p} \amp  \mapsto \int_{-1}^{1} \ve{p}(x) \, dx</mrow>
         </md>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Bewys dat <m>I</m> lineêr is.
@@ -1155,7 +1155,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
 
           <li>
             <p>
@@ -1336,7 +1336,7 @@
     <solution>
       <p>
         Vir alle <m>\ve v,\ve w \in  V</m>, en vir alle <m>S, T \in \mathcal L (V,\mathbb R)</m> en vir alle <m>a , b \in \mathbb R</m> geld:
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             <md>

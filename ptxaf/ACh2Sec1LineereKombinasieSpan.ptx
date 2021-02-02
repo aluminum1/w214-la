@@ -423,7 +423,7 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
         <me>
           \ve{r}_1 (x) := 3x^2 - 2, \, \ve{r}_2 (x) := x^2 + x, \, \ve{r}_3 (x) := x + 1, \, \ve{r}_4 (x) := x-1
         </me>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Kan die polinoom <m>\ve{p}</m> met
@@ -443,7 +443,7 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
           Ons moet die regte stelsel lineêre vergelykings opstel:
           <md>

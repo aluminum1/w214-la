@@ -572,7 +572,7 @@
 
   <exercise>
     <statement>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>Bepaal 'n basis  <m>\basis{B}</m> vir die vektorruimte
               <me>
@@ -596,7 +596,7 @@
     </statement>
    <solution>
     <p>
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             <me>
@@ -661,7 +661,7 @@
         <mrow> \ve{u} \amp = (1, 2, -\frac{5}{3}), \amp \ve{v} \amp = (-4, 2, 0) </mrow>
       </md>
       Beskou die vektor <m>\ve{w} = (-2, 4, -2) \in \mathbb{R}^3</m>.
-      <ol>
+      <ol label="(a)">
         <li>Toon aan dat <m>\ve{w} \in W</m>. </li>
         <li>Bereken <m>[\ve{w}]_{\basis{B}}</m>.</li>
         <li>Bereken <m>[\ve{w}]_{\basis{C}}</m>. </li>
@@ -670,7 +670,7 @@
   </statement>
   <solution>
     <p>
-      <ol>
+      <ol label="(a)">
         <li>
           Die vergelyking <m>-2 + 2(4) - 3(2) = 0</m> geld en dus is <m> \ve w \in W</m>.
         </li>
@@ -716,7 +716,7 @@
         </men>
       </p>
 
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             Toon aan dat <m>\basis{B} = \bopen \cos x, \, \sin x \bclose </m> 'n basis vir  <m>V</m> is.
@@ -746,7 +746,7 @@
 
     <solution>
     <p>
-    <ol>
+    <ol label="(a)">
       <li>
         Ons moet eers wys dat <m>\cos x</m> en <m> \sin x</m>
         wel oplossings vir die GDV is.
@@ -824,7 +824,7 @@
           (1-x^2)y^{''} - xy' +  4y = 0, \quad x \in (-1, 1)
         </men> wees.
       </p>
-      <ol>
+      <ol label="(a)">
         <li>
           <p>
             Wys dat <m>y_1</m> en <m>y_2</m> elemente van <m>V</m> is, waar
@@ -860,7 +860,7 @@
           </men> wees.
         </p>
         <p>
-          <ol>
+          <ol label="(a)">
             <li>
               Bereken die dimensie van <m>V</m> sonder om enige eksplisiete berekeninge te doen.
             </li>

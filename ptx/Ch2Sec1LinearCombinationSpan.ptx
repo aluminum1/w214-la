@@ -423,7 +423,7 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
         <me>
           \ve{r}_1 (x) := 3x^2 - 2, \, \ve{r}_2 (x) := x^2 + x, \, \ve{r}_3 (x) := x + 1, \, \ve{r}_4 (x) := x-1
         </me>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Can the polynomial <m>\ve{p}</m> with
@@ -443,7 +443,7 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
           We must set up the appropriate system of linear equations:
           <md>
