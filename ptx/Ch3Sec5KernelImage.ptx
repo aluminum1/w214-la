@@ -901,16 +901,32 @@
           </li>
           <li>
             To determine whether <m>(1,2,3)</m> is in the image of <m>T</m>, we need to find out whether there exist <m>x,y</m> such that <m>T(x,y) = (1,2,3)</m>, or equivalently <m>x-y,2x-2y,y-x) = (1,2,3)</m>. So we need to solve the system
-            <me> \begin{align*} x-y \amp = 1\\ 2x-2y \amp = 2\\ -x+y \amp = 3 \end{align*}</me>.
+            <md>
+              <mrow>  x-y \amp = 1 </mrow>
+              <mrow> 2x-2y \amp = 2 </mrow>
+              <mrow> -x+y \amp = 3 </mrow>
+            </md>.
             By performing row reduction on this system, we see that it is equivalent to
-            <me> \begin{align*} x-y \amp = 1 \\ 0 \amp = 0 \\ 0 \amp = 4 \end{align*} </me>.
+            <md>
+              <mrow> x-y \amp = 1 </mrow>
+              <mrow> 0 \amp = 0 </mrow>
+              <mrow> 0 \amp = 4 </mrow>
+            </md>.
             This last equation is a contradiction, so there are no solutions and thus <m>(1,2,3)</m> is not in the image of <m>T</m>.
           </li>
           <li>
             We do the same thing as for (e), but this time the system
-            <me> \begin{align*} x-y \amp = 1\\ 2x-2y \amp = 2\\ -x+y \amp = -1 \end{align*}</me>
+            <md>
+              <mrow> x-y \amp = 1</mrow>
+              <mrow> 2x-2y \amp = 2</mrow>
+              <mrow> -x+y \amp = -1 </mrow>
+            </md>
             reduces to
-            <me> \begin{align*} x-y \amp = 1 \\ 0 \amp = 0 \\ 0 \amp = 0 \end{align*} </me>
+            <md>
+              <mrow> x-y \amp = 1 </mrow>
+              <mrow> 0 \amp = 0 </mrow>
+              <mrow> 0 \amp = 0 </mrow>
+            </md>
             which has the solution <m>x=1</m>, <m>y=0</m> (and many others). Thus the vector <m>(1,2,-1)</m> is in the image of <m>T</m>, because, for example <m>(1,2,-1)=T(1,0)</m>.
           </li>
         </ol>

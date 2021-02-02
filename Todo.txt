@@ -68,3 +68,5 @@ Use??
 
 - Throughout there are some figures with <caption> tags, but no text. But I think this is ok.
 
+Put pdf publisher settings (and environment customizations) in the file /xsl/w214-latex.xsl and use the following to compile to Latex:
+xsltproc --xinclude xsl/w214-latex.xsl ptx/W214-Lin-Alg.ptx > %OUTPUT_FILE

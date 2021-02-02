@@ -901,16 +901,32 @@
           </li>
           <li>
             Om te bepaal of <m>(1,2,3)</m> in die beeld van <m>T</m> is, moet ons uitvind of daar <m>x,y</m> bestaan sodat <m>T(x,y) = (1,2,3)</m>, of ekwivalent <m>x-y,2x-2y,y-x) = (1,2,3)</m>. Ons moet dus die stelsel
-            <me> \begin{align*} x-y \amp = 1\\ 2x-2y \amp = 2\\ -x+y \amp = 3 \end{align*}</me>
+            <md>
+              <mrow>  x-y \amp = 1 </mrow>
+              <mrow> 2x-2y \amp = 2 </mrow>
+              <mrow> -x+y \amp = 3 </mrow>
+            </md>.
             oplos. Deur ry-reduksie op hierdie stelsel toe te pas, sien ons dat dit ekwivalent is aan
-            <me> \begin{align*} x-y \amp = 1 \\ 0 \amp = 0 \\ 0 \amp = 4 \end{align*} </me>.
+            <md>
+              <mrow> x-y \amp = 1 </mrow>
+              <mrow> 0 \amp = 0 </mrow>
+              <mrow> 0 \amp = 4 </mrow>
+            </md>.
             Die laaste vergelyking is 'n teenstrydigheid, so daar is geen oplossings nie en dus is <m>(1,2,3)</m> nie in die beeld van <m>T</m> nie.
           </li>
           <li>
             Ons doen dieselfde as in (e), maar die stelsel
-            <me> \begin{align*} x-y \amp = 1\\ 2x-2y \amp = 2\\ -x+y \amp = -1 \end{align*}</me>
+            <md>
+              <mrow> x-y \amp = 1</mrow>
+              <mrow> 2x-2y \amp = 2</mrow>
+              <mrow> -x+y \amp = -1 </mrow>
+            </md>
             reduseer na
-            <me> \begin{align*} x-y \amp = 1 \\ 0 \amp = 0 \\ 0 \amp = 0 \end{align*} </me>
+            <md>
+              <mrow> x-y \amp = 1 </mrow>
+              <mrow> 0 \amp = 0 </mrow>
+              <mrow> 0 \amp = 0 </mrow>
+            </md>
             wat die oplossing <m>x=1</m>, <m>y=0</m> (en baie ander) het. Dus is die vektor <m>(1,2,-1)</m> in die beeld van <m>T</m>, want byvoorbeeld <m>(1,2,-1)=T(1,0)</m>..
           </li>
         </ol>
