@@ -865,206 +865,268 @@
 
 <exercises>
   <exercise>
-    <statement>
-      <p>
-        Bevestig die Rang-Nulheidgraad-stelling vir die volgende lineêre afbeeldings.
-        D.w.s., vir elke afbeelding <m>T</m>,
-        (a) bepaal <m>\Ker(T)</m> en <m>\Be(T)</m> eksplisiet,
-        (b) bepaal die dimensie van <m>\Ker(T)</m> en <m>\Be(T)</m>,
-        (c) maak seker dat die getalle die Rang-Nulheidsgraad-stelling bevredig.
-
-        <ol>
+      <statement>
+        <p>
+           Laat <m>T:\Row_2\to \Row_3</m> die lineêre afbeelding wees gedefinieer deur <m>T(x,y) = (x-y,2x-2y, y-x)</m>.
+           Vir elk van die volgende vektore, bepaal of dit 'n element van <m>\Ker(T)</m>, <m>\Im(T)</m> of beide of geeneen is:
+        <ol label="(a)" cols="3">
+          <li> v_1 = (0,0) </li>
+          <li> v_2 = (0,0,0) </li>
+          <li> v_3 = (2,1) </li>
+          <li> v_4 = (4,4) </li>
+          <li> v_5 = (1,2,3) </li>
+          <li> v_6 = (1,2,-1) </li>
+        </ol>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>v_1</m> en <m>v_4</m> is in die kern en <m>v_2</m> en <m>v_6</m> is in die beeld.
+        </p>
+      </answer>
+      <solution>
+        <p>
+        <ol label="(a)">
           <li>
-            <p>
-              Die identiteitsafbeelding <m>\id_V : V \rightarrow V</m> op 'n eindig-dimensionele vektorruimte <m>V</m>.
-            </p>
+            Die vektor <m>(0,0)</m> is in <m>Row_2</m>, maar nie in <m>Row_3</m> nie, so dit is 'n kandidaat om in die kern te wees, maar nie in die beeld nie (verkeerde tipe). Dit is in die kern, omdat <m>T(0,0)=(0,0,0)</m>. Die nulvektor van die definisieversameling sal altyd in die kern wees.
           </li>
-
           <li>
-            <p>
-              Die nul-afbeelding
-              <md>
-                <mrow>Z : V \amp  \rightarrow V</mrow>
-                <mrow>\ve{v} \amp  \mapsto \ve{0}</mrow>
-              </md>
-              op 'n eindig-dimensionele vektorruimte <m>V</m>.
-            </p>
+            Die vektor <m>(0,0,0)</m> is nie in die definisieversameling <m>Row_2</m> nie en kan dus nie in die kern wees nie. Maar dit is in die beeld, omdat <m>T(0,0)=(0,0,0)</m>. Weereens sal die nulvektor van die teikenversameling altyd in die beeld van 'n lineêre afbeelding wees.
           </li>
-
           <li>
-            <p>
-              Die afbeelding
-              <md>
-                <mrow>T : \Poly_3 \amp  \rightarrow \Col_3</mrow>
-                <mrow>p \amp  \mapsto \begin{bmatrix} p(1) \\ p(2) \\ p(3) \end{bmatrix}</mrow>
-              </md>
-            </p>
+            Die vektor <m>(2,1)</m> kan nie in die beeld wees nie, so ons toets slegs of dit in die kern is. Om dit te doen, kyk ons of <m>T(2,1)=(0,0,0)</m>. Maar <m>T(2,1) = (2-1,4,2,1-2) = (1,2,-1)</m>. Aangesien dit nie die nulvektor is nie, is <m>(2,1)</m> nie in die kern van <m>T</m> nie.
           </li>
-
           <li>
-            <p>
-              Die afbeelding
-              <md>
-                <mrow>S : \Trig_2 \amp  \rightarrow \Col_2</mrow>
-                <mrow>f \amp  \mapsto \begin{bmatrix} \int_0^\pi f(x) \cos x
-                dx \\ \int_0^\pi f(x) \sin x dx \end{bmatrix}</mrow>
-              </md>
-            </p>
+            Ons het <m>T(4,4) = (4-4,8-8,4-4) = (0,0,0)</m>. Aangesien <m>(4,4)</m> op die nulvektor afgebeeld word, is  <m>(4,4)</m> in die kern van <m>T</m>.
           </li>
-
           <li>
-            <p>
-              Die <q>krul</q> afbeelding
-              <md>
-                <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
-                <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
-              </md>
-              Bonus vraag: Watter soort vektorvelde is in die kern van <m>C</m>?
-            </p>
+            Om te bepaal of <m>(1,2,3)</m> in die beeld van <m>T</m> is, moet ons uitvind of daar <m>x,y</m> bestaan sodat <m>T(x,y) = (1,2,3)</m>, of ekwivalent <m>x-y,2x-2y,y-x) = (1,2,3)</m>. Ons moet dus die stelsel
+            <me> \begin{align*} x-y \amp = 1\\ 2x-2y \amp = 2\\ -x+y \amp = 3 \end{align*}</me>
+            oplos. Deur ry-reduksie op hierdie stelsel toe te pas, sien ons dat dit ekwivalent is aan
+            <me> \begin{align*} x-y \amp = 1 \\ 0 \amp = 0 \\ 0 \amp = 4 \end{align*} </me>.
+            Die laaste vergelyking is 'n teenstrydigheid, so daar is geen oplossings nie en dus is <m>(1,2,3)</m> nie in die beeld van <m>T</m> nie.
           </li>
-
           <li>
-            <p>(Poole 6.5.12) Die afbeelding
-              <md>
-                <mrow>T : \Mat_{2,2} \amp \rightarrow \Mat_{2,2} </mrow>
-                <mrow> \mat{A} \amp \mapsto \mat{A} \mat{B} - \mat{B} \mat{A}</mrow>
-              </md>
-              waar
-              <me>
-                \mat{B} = \begin{bmatrix} 1 \amp -1 \\ -1 \amp 1 \end{bmatrix}
-              </me>
-            </p>
+            Ons doen dieselfde as in (e), maar die stelsel
+            <me> \begin{align*} x-y \amp = 1\\ 2x-2y \amp = 2\\ -x+y \amp = -1 \end{align*}</me>
+            reduseer na
+            <me> \begin{align*} x-y \amp = 1 \\ 0 \amp = 0 \\ 0 \amp = 0 \end{align*} </me>
+            wat die oplossing <m>x=1</m>, <m>y=0</m> (en baie ander) het. Dus is die vektor <m>(1,2,-1)</m> in die beeld van <m>T</m>, want byvoorbeeld <m>(1,2,-1)=T(1,0)</m>..
           </li>
         </ol>
+        </p>
+      </solution>
+    </exercise>
+
+  <exercisegroup>
+    <introduction>
+      <p>
+        In <xref ref="exercise-RankNullity-group-1st" /> tot <xref ref="exercise-RankNullity-group-last" />,
+        bevestig die Rang-Nulheidgraad-stelling vir die gegewe lineêre afbeeldings.
+        Met ander woorde, vir elke afbeelding <m>T</m>,
+        <ol label="(a)">
+          <li>
+            bepaal <m>\Ker(T)</m> en <m>\Be(T)</m> eksplisiet,
+          </li>
+          <li>
+            bepaal die dimensie van <m>\Ker(T)</m> en <m>\Be(T)</m>,
+          </li>
+          <li>
+            maak seker dat die getalle die Rang-Nulheidsgraad-stelling bevredig.
+          </li>
+        </ol>
+      </p>
+    </introduction>
+  <exercise xml:id="exercise-RankNullity-group-1st">
+    <statement>
+      <p>
+        Die identiteitsafbeelding <m>\id_V : V \rightarrow V</m> op 'n eindig-dimensionele vektorruimte <m>V</m>.
       </p>
     </statement>
     <solution>
       <p>
-        <ol>
-          <li>
-            <p>
-              <m>\id_V</m> stuur slegs een vektor na <m>0</m>, naamlik die vektor <m>\ve 0_v</m>. Dus is <m>\Ker(\id_v) = \{\ve 0_v\}</m> en dus <m>\Nullity(\id_v) = 0</m>. Ons het ook <m>\Im(\id_V) = V</m> en dus <m>\Rank(\id_V) = \Dim(V) </m>. Die vergeyking
-              <me>
-                \Dim V + 0 = \Dim V .
-              </me>
-              bevestig dat die Rang-Nulheidsgraadstelling in hierdie voorbeeld geld.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Die nul-afbeelding stuur elke element in <m>V </m> na <m> \ve 0 </m>. Dus is <m>\Ker(Z) = V </m> en dus <m> \Nullity(Z) = \Dim V </m>. Vir dieselfde rede is <m>\Im(Z) = \{0\}</m> en dus <m>\Rank(Z) = 0 </m>. Die vergelyking
-              <me>
-                \Dim V + 0 = \Dim V .
-              </me>
-              wys nou dat die Rang-Nulheidsgraadstelling wel geld vir hierdie voorbeeld.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              <m> \ve p(x) \in \Ker(T) </m> as en slegs as
-              <me>
-                p(1) = p(2) = p(3) = 0
-              </me>.
-              Maar enige derdegraadse polinoom met <m>1, 2</m> en <m> 3</m> as wortels, moet van die vorm
-              <me>
-                a(x-1)(x-2)(x-3)
-              </me> wees
-              waar <m> a \in \mathbb R </m>. Omgekeerd, is enige element van hierdie vorm wel in <m> \Ker T </m>. Dus is
-              <me>
-                \Ker(T) = \{a(x-1)(x-2)(x-3) \in \Poly_3 \, : \, a \in \mathbb R\}
-              </me>
-              en dus is <m> \Nullity(T)  = 1 </m>.
-            </p>
-
-            <p>
-              Ons beweer nou dat <m>\Im(T) = \Col_3</m>. Met ander woorde, vir enige
-              <me>
-                \begin{bmatrix} s \\ t \\u \end{bmatrix} \in \Col_3,
-              </me>
-              kan ons 'n polinoom <m>\ve p</m>, van graad 3 of minder vind, sodat <m> p(1) = s, p(2) = t, p(3) = u</m>. Om dit te wys, kan jy byvoorbeeld die stelsel lineêre vergelykings
-              <md>
-                <mrow> a + b + c +d = s </mrow>
-                <mrow> 8a + 4b + 2c + d = t</mrow>
-                <mrow> 27b + 9 b + 3c + d  = u</mrow>
-              </md> opstel
-              en oplos vir die koëffisiënte van <m> \ve p </m>. Dit is miskien meer elegant om die teorie van Lagrange interpolasie polinome <fn> https://en.wikipedia.org/wiki/Lagrange_polynomial</fn> te gebruik. Vir enige 3 verskillende punte in <m>\mathbb R^2 </m> (met geen twee van hulle op dieselfde vertikale lyn nie), kan ons altyd 'n tweedegraadse polinoom vind wat deur hierdie 3 punte gaan. In ons geval, laat one die punte <m>(1,s), (2,t), (3,u)</m> wees. Die graad twee Lagrange polinoom wat deur hierdie punte gaan is
-              <me>
-                \ve p(x) = u\left[ \frac{(x-2)(x-3)}{(1-2)(1-3)}\right] + s\left[ \frac{(x-1)(x-3)}{(2-1)(2-3)}\right] + t\left[ \frac{(x-1)(x-2)}{(3-1)(3-2)}\right].
-              </me>
-              Dit is maklik om te bevestig dat <m> p(1) = s, p(2) = t, p(3) = u</m>. Dus is <m>\Im(T) = \Col_3</m> en dus <m>\Rank(T) = 3</m>.
-              <me>
-                \Rank(T) + \Nullity(T) = 1 + 3 = 4 = \Dim(\Poly_3).
-              </me>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Dit sal handig wees om die volgende integrale byderhand te hê:
-              <md>
-                <mrow>\amp \int_0^\pi \cos(x) = 0 </mrow>
-                <mrow>\amp \int_0^\pi \sin(x) = 0 </mrow>
-                <mrow>\amp \int_0^\pi \cos^2(x) = \pi/2 </mrow>
-                <mrow>\amp \int_0^\pi \sin^2(x) = \pi/2 </mrow>
-                <mrow>\amp \int_0^\pi \sin(x)\cos(x) = 0</mrow>
-                <mrow>\amp \int_0^\pi \cos(2x)\cos(x) = 0</mrow>
-                <mrow>\amp \int_0^\pi \sin(2x)\cos(x) = \frac{4}{3}</mrow>
-                <mrow>\amp \int_0^\pi \cos(2x)\sin(x) = -\frac{2}{3}</mrow>
-                <mrow>\amp \int_0^\pi \sin(2x)\sin(x) = 0</mrow>
-              </md>
-            </p>
-
-            <p>
-              Veronderstel nou
-              <me>
-              \ve f(x) = a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \in \Ker(S).
-              </me>
-              Dan is
-              <mdn>
-                <mrow> \int_0^\pi f(x)\cos(x) \, dx = b\frac{\pi}{2} + e\frac{4}{3} = 0</mrow>
-                <mrow> \int_0^\pi f(x)\sin(x) \, dx = c\frac{\pi}{2} - d\frac{2}{3} = 0</mrow>
-              </mdn>.
-              Omgekeerd, is enige <m> f </m> wat die lineêre vergelykings hierbo bevredig, definitied in <m> \Ker(S)</m>. Dus is
-              <md>
-                <mrow>
-                \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: </mrow>
-                <mrow>
-                 b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \} </mrow>
-              </md>.
-              Ons is vry om  <m> a </m> op enige manier te kies, want die konstante sal nie enige van die integrale beïnvloed nie. Ons kan ook <m> b </m> vryelik kies, maar dan word <m> e </m> uit (1) bepaal. Soortgelyk kan ons <m> c </m> kies, maar dan word <m> d </m> uit (2) bepaal.
-              Dus is <me>
-              \Nullity(S) = 3.
-              </me>
-            </p>
-
-            <p>
-              Ons beweer dat <m> \Im(S) = \Col_2</m>. Om dit te sien, veronderstel dat
-              <me>
-                \begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2
-              </me>.
-              Beskou nou
-              <me>
-                f(x) = \frac{2s}{\pi}\cos(x) + \frac{2t}{\pi}\sin(x)
-              </me>.
-              Deur die tabel van integrale hier bo na te slaan, sien ons dat
-              <me>
-                S(T) = \begin{bmatrix} s \\ t \end{bmatrix} .
-              </me>
-              Dus is <me>
-              \Rank(T) = 2
-              </me>.
-            </p>
-
-            <p>
-              Aangesien <m>\Dim(\Trig_2) = 5</m>, geld die Rang-Nulheidsgraadstelling vir <m>S</m>.
-            </p>
-          </li>
-        </ol>
+        <m>\id_V</m> stuur slegs een vektor na <m>0</m>, naamlik die vektor <m>\ve 0_v</m>. Dus is <m>\Ker(\id_v) = \{\ve 0_v\}</m> en dus <m>\Nullity(\id_v) = 0</m>. Ons het ook <m>\Im(\id_V) = V</m> en dus <m>\Rank(\id_V) = \Dim(V) </m>. Die vergeyking
+        <me>
+          \Dim V + 0 = \Dim V .
+        </me>
+        bevestig dat die Rang-Nulheidsgraadstelling in hierdie voorbeeld geld.
       </p>
     </solution>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Die nul-afbeelding
+        <md>
+          <mrow>Z : V \amp  \rightarrow V</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{0}</mrow>
+        </md>
+        op 'n eindig-dimensionele vektorruimte <m>V</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Die nul-afbeelding stuur elke element in <m>V </m> na <m> \ve 0 </m>. Dus is <m>\Ker(Z) = V </m> en dus <m> \Nullity(Z) = \Dim V </m>. Vir dieselfde rede is <m>\Im(Z) = \{0\}</m> en dus <m>\Rank(Z) = 0 </m>. Die vergelyking
+        <me>
+          \Dim V + 0 = \Dim V .
+        </me>
+        wys nou dat die Rang-Nulheidsgraadstelling wel geld vir hierdie voorbeeld.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Die afbeelding
+        <md>
+          <mrow>T : \Poly_3 \amp  \rightarrow \Col_3</mrow>
+          <mrow>p \amp  \mapsto \begin{bmatrix} p(1) \\ p(2) \\ p(3) \end{bmatrix}</mrow>
+        </md>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m> \ve p(x) \in \Ker(T) </m> as en slegs as
+        <me>
+          p(1) = p(2) = p(3) = 0
+        </me>.
+        Maar enige derdegraadse polinoom met <m>1, 2</m> en <m> 3</m> as wortels, moet van die vorm
+        <me>
+          a(x-1)(x-2)(x-3)
+        </me> wees
+        waar <m> a \in \mathbb R </m>. Omgekeerd, is enige element van hierdie vorm wel in <m> \Ker T </m>. Dus is
+        <me>
+          \Ker(T) = \{a(x-1)(x-2)(x-3) \in \Poly_3 \, : \, a \in \mathbb R\}
+        </me>
+        en dus is <m> \Nullity(T)  = 1 </m>.
+      </p>
+      <p>
+        Ons beweer nou dat <m>\Im(T) = \Col_3</m>. Met ander woorde, vir enige
+        <me>
+          \begin{bmatrix} s \\ t \\u \end{bmatrix} \in \Col_3,
+        </me>
+        kan ons 'n polinoom <m>\ve p</m>, van graad 3 of minder vind, sodat <m> p(1) = s, p(2) = t, p(3) = u</m>. Om dit te wys, kan jy byvoorbeeld die stelsel lineêre vergelykings
+        <md>
+          <mrow> a + b + c +d = s </mrow>
+          <mrow> 8a + 4b + 2c + d = t</mrow>
+          <mrow> 27b + 9 b + 3c + d  = u</mrow>
+        </md> opstel
+        en oplos vir die koëffisiënte van <m> \ve p </m>. Dit is miskien meer elegant om die teorie van Lagrange interpolasie polinome <fn> https://en.wikipedia.org/wiki/Lagrange_polynomial</fn> te gebruik. Vir enige 3 verskillende punte in <m>\mathbb R^2 </m> (met geen twee van hulle op dieselfde vertikale lyn nie), kan ons altyd 'n tweedegraadse polinoom vind wat deur hierdie 3 punte gaan. In ons geval, laat one die punte <m>(1,s), (2,t), (3,u)</m> wees. Die graad twee Lagrange polinoom wat deur hierdie punte gaan is
+        <me>
+          \ve p(x) = u\left[ \frac{(x-2)(x-3)}{(1-2)(1-3)}\right] + s\left[ \frac{(x-1)(x-3)}{(2-1)(2-3)}\right] + t\left[ \frac{(x-1)(x-2)}{(3-1)(3-2)}\right].
+        </me>
+        Dit is maklik om te bevestig dat <m> p(1) = s, p(2) = t, p(3) = u</m>. Dus is <m>\Im(T) = \Col_3</m> en dus <m>\Rank(T) = 3</m>.
+        <me>
+          \Rank(T) + \Nullity(T) = 1 + 3 = 4 = \Dim(\Poly_3).
+        </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Die afbeelding
+        <md>
+          <mrow>S : \Trig_2 \amp  \rightarrow \Col_2</mrow>
+          <mrow>f \amp  \mapsto \begin{bmatrix} \int_0^\pi f(x) \cos x
+          dx \\ \int_0^\pi f(x) \sin x dx \end{bmatrix}</mrow>
+        </md>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Dit sal handig wees om die volgende integrale byderhand te hê:
+        <md>
+          <mrow>\amp \int_0^\pi \cos(x) = 0 </mrow>
+          <mrow>\amp \int_0^\pi \sin(x) = 0 </mrow>
+          <mrow>\amp \int_0^\pi \cos^2(x) = \pi/2 </mrow>
+          <mrow>\amp \int_0^\pi \sin^2(x) = \pi/2 </mrow>
+          <mrow>\amp \int_0^\pi \sin(x)\cos(x) = 0</mrow>
+          <mrow>\amp \int_0^\pi \cos(2x)\cos(x) = 0</mrow>
+          <mrow>\amp \int_0^\pi \sin(2x)\cos(x) = \frac{4}{3}</mrow>
+          <mrow>\amp \int_0^\pi \cos(2x)\sin(x) = -\frac{2}{3}</mrow>
+          <mrow>\amp \int_0^\pi \sin(2x)\sin(x) = 0</mrow>
+        </md>
+      </p>
+
+      <p>
+        Veronderstel nou
+        <me>
+        \ve f(x) = a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \in \Ker(S).
+        </me>
+        Dan is
+        <mdn>
+          <mrow> \int_0^\pi f(x)\cos(x) \, dx = b\frac{\pi}{2} + e\frac{4}{3} = 0</mrow>
+          <mrow> \int_0^\pi f(x)\sin(x) \, dx = c\frac{\pi}{2} - d\frac{2}{3} = 0</mrow>
+        </mdn>.
+        Omgekeerd, is enige <m> f </m> wat die lineêre vergelykings hierbo bevredig, definitied in <m> \Ker(S)</m>. Dus is
+        <md>
+          <mrow>
+          \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: </mrow>
+          <mrow>
+           b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \} </mrow>
+        </md>.
+        Ons is vry om  <m> a </m> op enige manier te kies, want die konstante sal nie enige van die integrale beïnvloed nie. Ons kan ook <m> b </m> vryelik kies, maar dan word <m> e </m> uit (1) bepaal. Soortgelyk kan ons <m> c </m> kies, maar dan word <m> d </m> uit (2) bepaal.
+        Dus is <me>
+        \Nullity(S) = 3.
+        </me>
+      </p>
+
+      <p>
+        Ons beweer dat <m> \Im(S) = \Col_2</m>. Om dit te sien, veronderstel dat
+        <me>
+          \begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2
+        </me>.
+        Beskou nou
+        <me>
+          f(x) = \frac{2s}{\pi}\cos(x) + \frac{2t}{\pi}\sin(x)
+        </me>.
+        Deur die tabel van integrale hier bo na te slaan, sien ons dat
+        <me>
+          S(T) = \begin{bmatrix} s \\ t \end{bmatrix} .
+        </me>
+        Dus is <me>
+        \Rank(T) = 2
+        </me>.
+      </p>
+
+      <p>
+        Aangesien <m>\Dim(\Trig_2) = 5</m>, geld die Rang-Nulheidsgraadstelling vir <m>S</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Die <q>krul</q> afbeelding
+        <md>
+          <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
+          <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
+        </md>
+        Bonus vraag: Watter soort vektorvelde is in die kern van <m>C</m>?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="exercise-RankNullity-group-last">
+    <statement>
+      <p>(Poole 6.5.12) Die afbeelding
+        <md>
+          <mrow>T : \Mat_{2,2} \amp \rightarrow \Mat_{2,2} </mrow>
+          <mrow> \mat{A} \amp \mapsto \mat{A} \mat{B} - \mat{B} \mat{A}</mrow>
+        </md>
+        waar
+        <me>
+          \mat{B} = \begin{bmatrix} 1 \amp -1 \\ -1 \amp 1 \end{bmatrix}
+        </me>
+      </p>
+    </statement>
+  </exercise>
+</exercisegroup>
 
   <exercise>
     <statement>
