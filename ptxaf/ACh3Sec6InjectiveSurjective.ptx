@@ -226,10 +226,71 @@
   </proof>
 </proposition>
 
-
-
-<!-- <exercises> & <solutions divisional="solution answer" />  -->
-
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Vir elkeen van die volgende probleme gee ons gedeeltelike inligting oor die dimensies van die vektorruimtes  <m>V</m> en <m>W</m> en die rang en nulheid van die lineere afbeelding <m>T:V\to W</m>. Beantwoord die volgende vrae: Kan ons definitief se dat <m>T</m> injektief is of dat dit nie injektief is nie of kan ons geen afleiding maak nie. Vervang ook injektief in die vraag met surkjektief en isomorfisme.
+      <ol label="(a)">
+        <li>
+          <m>\Dim V = 3</m> en <m>\Nullity(T)=0</m>;
+        </li>
+        <li>
+          <m>\Dim V = 5</m>, <m>\Dim W = 3</m> en <m>\Nullity(T) = 2</m>;
+        </li>
+        <li>
+          <m>\Dim V = 3</m>, <m>\Rank(T) = 2</m>;
+        </li>
+        <li>
+          <m>\Dim V = 3</m>, <m>\Rank(T) = 3</m>;
+        </li>
+        <li>
+          <m>\Dim W = 2</m>, <m>\Nullity(T) = 0</m>;
+        </li>
+        <li>
+          <m>\Dim V \gt \Dim W</m>;
+        </li>
+        <li>
+          <m>\Dim V \lt \Dim W</m>;
+        </li>
+        <li>
+          <m>\Dim V = \Dim W</m>.
+        </li>
+      </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+      <ol label="(a)">
+        <li>
+          Aangesien die nulheisgraad 0 is, kan ons sê dat <m>T</m> injektief is, maar niks oor of dit surjektief is nie, want ons weet niks van <m>\Dim(W)</m> nie.
+        </li>
+        <li>
+          <m>T</m> is nie injektief nie, aangesien die nulheidsgraad groter as 0 is. Maar dan kan ons die rang bereken as <m>\Dim V- \Nullity(T) = 5-2 =3</m>, wat dieselfde is as <m>\Dim W</m>. Dus is <m>T</m> surjektief.
+        </li>
+        <li>
+          Ons kan niks sê oor surjektiwiteit nie. Maar ons weet dat die nulheidsgraad <m>3-2=1</m> is, wat groter as 0 is. So <m>T</m> is definitief nie injektief nie.
+        </li>
+        <li>
+          In hierdie geval is die nulheidsgraad <m>3-3=0</m>, so <m>T</m> is injektief. Niks kan oor surjektiwiteit gesê word nie, aangesien ons nie die dimensie van <m>W</m> weet nie.
+        </li>
+        <li>
+          Die nulheidsgraad is 0, so <m>T</m> is injektief, maar ons weet nie die rang nie en kan dit nie bereken nie, omdat ons ook nie <m>\Dim V</m> weet nie. Dus kan niks oor surjektiwiteit gesê word nie.
+        </li>
+        <li>
+          ns het <m>\Rank\le \Dim W \lt \Dim V</m> en dus is <m>\Nullity \gt 0</m>. Dus is <m>T</m> nie injektief nie. Ons kan niks oor surjektiwiteit sê nie. (Bv. die nulafbeelding is nie surjektief nie, maar iets soos 'n projeksie op 'n kleiner deelruimte is surjektief.)
+        </li>
+        <li>
+          In hierdie geval is <m>\Rank \le \Dim V \lt \Dim W</m> en dus is <m>T</m> nie surjektief nie. ns kan niks oor injektiwiteit sê nie.
+        </li>
+        <li>
+          Hier kan ons heeltemal niks sê nie, behalwe dat as <m>T</m> injektief is, dan moet dit ook surjektief wees, en omgekeerd.
+        </li>
+      </ol>
+      </p>
+    </solution>
+  </exercise>
+</exercises>
 
 </section>
 

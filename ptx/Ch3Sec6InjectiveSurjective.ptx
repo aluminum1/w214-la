@@ -226,10 +226,71 @@
   </proof>
 </proposition>
 
-
-
-<!-- <exercises> &  <solutions divisional="solution answer" /> -->
-
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        For each of the following problems, we give partial information about the dimensions of the vector spaces <m>V</m> and <m>W</m> and the rank and nullity of a linear map <m>T:V\to W</m>. Answer the following questions: Can we definitely conclude that <m>T</m> is injective, or that <m>T</m> is not injective or can we not make any conclusion? And the same question with injective replaced by surjective and isomorphism.
+      <ol label="(a)">
+        <li>
+          <m>\Dim V = 3</m> and <m>\Nullity(T)=0</m>;
+        </li>
+        <li>
+          <m>\Dim V = 5</m>, <m>\Dim W = 3</m> and <m>\Nullity(T) = 2</m>;
+        </li>
+        <li>
+          <m>\Dim V = 3</m>, <m>\Rank(T) = 2</m>;
+        </li>
+        <li>
+          <m>\Dim V = 3</m>, <m>\Rank(T) = 3</m>;
+        </li>
+        <li>
+          <m>\Dim W = 2</m>, <m>\Nullity(T) = 0</m>;
+        </li>
+        <li>
+          <m>\Dim V \gt \Dim W</m>;
+        </li>
+        <li>
+          <m>\Dim V \lt \Dim W</m>;
+        </li>
+        <li>
+          <m>\Dim V = \Dim W</m>.
+        </li>
+      </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+      <ol label="(a)">
+        <li>
+          Since the nullity is 0 we can say that <m>T</m> is injective, but nothing about whether it is surjective, since we don't know <m>\Dim(W)</m>.
+        </li>
+        <li>
+          <m>T</m> is not injective, since the nullity is greater than 0. But we can compute the rank to be <m>\Dim V- \Nullity(T) = 5-2 =3</m>, which is the same as <m>\Dim W</m>. Thus <m>T</m> is surjective.
+        </li>
+        <li>
+          We cannot say anything about surjectivity. But we know the nullity is <m>3-2=1</m>, which is greater than 0. So definitely <m>T</m> is not injective.
+        </li>
+        <li>
+          In this case the nullity is <m>3-3=0</m>, so <m>T</m> is injective. Nothing can be said about surjectivity, since we don't know the dimension of <m>W</m>.
+        </li>
+        <li>
+          The nullity is 0, so <m>T</m> is injective, but we don't know the rank and can't compute it since we also don't know <m>\Dim V</m>. Thus nothing can be said about surjectivity.
+        </li>
+        <li>
+          We have <m>\Rank\le \Dim W \lt \Dim V</m> and thus <m>\Nullity \gt 0</m>. Thus <m>T</m> is not injective. We can't say anything about surjectivity. (E.g. the zero map is not surjective, but something like a projection onto a smaller subspace is surjective.)
+        </li>
+        <li>
+          In this case <m>\Rank \le \Dim V \lt \Dim W</m> and thus <m>T</m> is not surjective. We can't say anything about injectivity.
+        </li>
+        <li>
+          Here nothing can be said, except that if <m>T</m> is injective, it must also be surjective and vice versa.
+        </li>
+      </ol>
+      </p>
+    </solution>
+  </exercise>
+</exercises>
 
 </section>
 

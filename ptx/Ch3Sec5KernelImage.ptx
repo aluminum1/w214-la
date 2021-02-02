@@ -243,8 +243,8 @@
       The <q>dimension of <m>\Ker(T)</m></q> makes sense because <m>\Ker(T)</m> is a subspace of a finite-dimensional vector space <m>V</m>,
       and hence is finite-dimensional by <xref ref="dim-of-subspace-prop">Proposition</xref>.
       We do not yet know that <m>\Im(T)</m> is finite-dimensional,
-      but this will follow from the Rank-Nullity Theorem
-      (<xref ref="rank-nullity-theorem">Theorem</xref>).
+      but this will follow from
+      <xref ref="rank-nullity-theorem" />.
     </p>
   </insight>
 
@@ -688,7 +688,7 @@
   </example>
 
   <theorem xml:id="rank-nullity-theorem">
-    <title>Rank-nullity theorem</title>
+    <title>The Rank-nullity theorem</title>
     <statement>
       <p>
         Let <m>T : V \rightarrow W</m> be a linear map from a finite-dimensional vector space <m>V</m> to a vector space <m>W</m>.
