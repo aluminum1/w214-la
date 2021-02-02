@@ -1416,6 +1416,35 @@
     </solution>
   </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>T:U\to V</m> en<m>S:V\to W</m> twee lineere afbeeldings wees. Wys dat indien <m>Im(T)</m> 'n deelruimte van <m>Ker(S)</m> is, dan is die saamgestelde afbeelding <m>S\circ T</m> die nulafbeelding (m.a.w. dit beeld elke insetvektor van <m>U</m> af op die nulvektor in <m>W</m>).
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Laat <m>u\in U</m> enige vektor wees. Dan is <m>T(u)</m> is'n element van <m>Im(T)</m>, bloot uit die definisie van <m>Im(T)</m>. Maar aangesien <m>Im(T)\subset Ker(S)</m>, is enige element van <m>Im(T)</m> ook 'n element van <m>Ker(S)</m>. In besonder is <m>T(u)\in Ker(S)</m>. Maar dit is ekwivalent daaraan om te sê dat <m>S(T(u))=0</m>. Dus beeld die saamgestelde afbeelding <m>S\circ T</m> elke element <m>u\in U</m> op die nulvektor in <m>W</m> af.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>T:U\to V</m> en <m>S:V\to W</m> twee lineere afbeeldings wees. Wys dat <m>Ker(T)</m> 'n deelruimte van <m>Ker(S\circ T)</m> is. Is dit moontlik dat <m>Ker(S\circ T)</m> streng groter is?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Om te wys dat <m>Ker(T)\subset Ker(S\circ T)</m> moet ons wys dat as <m>u\in Ker(T)</m>, dan is ook <m>u\in Ker(S\circ T)</m>. So veronderstel dat <m>u\in Ker(T)</m>, wat beteken dat <m>T(u)=0_V</m>. Dan is <m>S(T(u)) = S(0_V) = 0_W</m>, wat dieselfde is as om te sê dat <m>u\in Ker (S\circ T)</m>.
+      </p>
+      <p>
+        Dit is moontlik vir <m>\Ker(S\circ T)</m> om streng groter as <m>Ker(T)</m> te wees. Die eenvoudigste voorbeeld is die ekstreemgeval waar <m>T</m> die identiteistafbeelding op <m>U=V</m> is en <m>S</m> die nulafbeelding na enige vektorruimte is. Dan bevat die kern van <m>T</m> slegs die nulvektor, maar die kern van <m>S\circ T</m> bevat al die vektore in <m>V</m>. So, vir dit om 'n geldige voorbeeld te wees, moet ons eintlik nog verder spesifiseer dat <m>V</m> nie die nul-vektorruimte is nie.
+      </p>
+    </solution>
+  </exercise>
+
 </exercises>
 
 </section>

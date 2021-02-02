@@ -1416,6 +1416,35 @@
     </solution>
   </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+        Let <m>T:U\to V</m> and <m>S:V\to W</m> be two linear maps. Show that if <m>Im(T)</m> is a subspace of <m>Ker(S)</m>, then the composite map <m>S\circ T</m> is the zero map (i.e. it maps every input vector of <m>U</m> to the zero vector in <m>W</m>).
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let <m>u\in U</m> be any vector. Then <m>T(u)</m> is an element of <m>Im(T)</m>, by the definition of <m>Im(T)</m>. But since <m>Im(T)\subset Ker(S)</m> any element of <m>Im(T)</m> is an element of <m>Ker(S)</m>. In particular, <m>T(u)\in Ker(S)</m>. But this is equivalent to saying that <m>S(T(u))=0</m>. Thus the composite map <m>S\circ T</m> maps every <m>u\in U</m> to the zero vector in <m>W</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>T:U\to V</m> and <m>S:V\to W</m> be two linear maps. Show that <m>Ker(T)</m> is a subspace of <m>Ker(S\circ T)</m>. Is it possible for <m>Ker(S\circ T)</m> to be strictly larger?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        To show that <m>Ker(T)\subset Ker(S\circ T)</m> we need to show that if <m>u\in Ker(T)</m>, then <m>u\in Ker(S\circ T)</m>. So assume that <m>u\in Ker(T)</m>, which means that <m>T(u)=0_V</m>. Then <m>S(T(u)) = S(0_V) = 0_W</m>, which is the same as saying that <m>u\in Ker (S\circ T)</m>.
+      </p>
+      <p>
+        It is possible for <m>\Ker(S\circ T)</m> to be strictly larger than <m>Ker(T)</m>. The simplest example is the extreme case where <m>T</m> is the identity map on <m>U=V</m> and <m>S</m> is the zero map to any vector space. Then the kernel of <m>T</m> contains only the zero vector, but the kernel of <m>S\circ T</m> contains all the vectors in <m>V</m>. So, actually for this to be a valid example, we need to specify that <m>V</m> is not the zero vector space.
+      </p>
+    </solution>
+  </exercise>
+
 </exercises>
 
 </section>
