@@ -1,5 +1,6 @@
 <appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AListOfOutcomes">
   <title>Lys van Leeruitkomstes</title>
+  <p>
   <dl width="narrow">
     <li xml:id = "outcome-set1">
       <title>Set1</title>
@@ -356,12 +357,14 @@
       </p>
     </li>
   </dl>
+  </p>
 
   <p>
     'n Lys uitkomstes om te wys dat jy 'n definisie verstaan.
     (Jy moet hulle vir elke definisie in die module te probeer behaal.)
   </p>
 
+  <p>
   <dl>
     <li xml:id = "outcome-def1">
       <title>Def1</title>
@@ -390,11 +393,14 @@
       </p>
     </li>
   </dl>
+  </p>
 
   <p>
     'n Lys uitkomstes wat wys dat jy 'n stelling verstaan.
     (Jy moet hulle vir elke hulpstelling, proposisie, stelling en gevolg in die module probeer behaal.)
   </p>
+
+  <p>
   <dl>
     <li xml:id="outcome-thm1">
       <title>Thm1</title>
@@ -421,20 +427,18 @@
       </p>
     </li>
   </dl>
+  </p>
 
-  <exercises>
-    <exercise>
-      <statement>
-        <p>
-          Sommige van die uitkomstes wat gelys is, kom op min of meer dieselfde neer.
-          Byvoorbeeld, <xref ref="outcome-vs1"  text="title" /> vra dat jy toets of 'n bewerking geslote is , terwyl <xref ref="outcome-sub2" text="title" /> jou vra om te toets of 'n deelversameling 'n deelruimte is.
-          Om die tweede een te doen, moet jy die eerste vir beide optelling en skalaarvermenigvuldiging doen, so daar is 'n sterk verband tussen die vermoëns wat hulle vereis.
-        </p>
-        <p>
-          Skep 'n konsepkaart (of ander grafiese uitbeelding) wat way watter uitkomstes aan mekaar verbind. Dit sal jou verstaan van die interne verbande in die materiaal versterk en jou help om op 'n kleiner groep vermoëns te fokus.
-        </p>
-      </statement>
-    </exercise>
-  </exercises>
+  <activity>
+    <title>Oefeninge</title>
+    <p>
+      Sommige van die uitkomstes wat gelys is, kom op min of meer dieselfde neer.
+      Byvoorbeeld, <xref ref="outcome-vs1"  text="title" /> vra dat jy toets of 'n bewerking geslote is , terwyl <xref ref="outcome-sub2" text="title" /> jou vra om te toets of 'n deelversameling 'n deelruimte is.
+      Om die tweede een te doen, moet jy die eerste vir beide optelling en skalaarvermenigvuldiging doen, so daar is 'n sterk verband tussen die vermoëns wat hulle vereis.
+    </p>
+    <p>
+      Skep 'n konsepkaart (of ander grafiese uitbeelding) wat way watter uitkomstes aan mekaar verbind. Dit sal jou verstaan van die interne verbande in die materiaal versterk en jou help om op 'n kleiner groep vermoëns te fokus.
+    </p>
+  </activity>
 
 </appendix>

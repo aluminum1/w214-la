@@ -217,7 +217,7 @@
       In fact, this calculation can be phrased in terms of matrices.
     </p>
 
-    <definition>
+    <definition xml:id="def-change-of-basis-matrix">
       <statement>
         <p>
           Let <m>\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n \right\}</m> and
@@ -607,7 +607,8 @@
         The purpose of this exercise is to be a <q>mixed practice</q> problem.
         Try to do them without looking back to previous problems to see how well you can do them <q>out of context</q>.
         This requires a more flexible understanding of the connections between concepts.
-      <li label="(a)">
+      <ol label="(a)">
+      <li>
         Let <m>V=\Poly_2</m> and <m>\basis{B} = (1+x-x^2, 2x^2-1, 2-3x)</m> and
         <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1\amp 1\amp -1\\ 2\amp -1\amp 0\\ 0\amp 1\amp 1\end{bmatrix}</m>.
         Calculate the basis <m>\basis{B}'</m>.
@@ -625,6 +626,7 @@
         and <m>[v]_{\mathcal{B}'}=\begin{bmatrix} -1\\2 \end{bmatrix}</m>.
         Calculate the vector <m>v</m>.
       </li>
+      </ol>
       </p>
     </statement>
   </exercise>

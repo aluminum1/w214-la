@@ -217,7 +217,7 @@
       Hierdie berekening kan in terme van matrikse uitgedruk word.
     </p>
 
-    <definition>
+    <definition xml:id="def-change-of-basis-matrix">
       <statement>
         <p>
           Laat <m>\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n \right\}</m> en
@@ -607,7 +607,8 @@
         Die doel van hierdie oefening is om 'n <q>gemengde-oefen</q> probleem te wees.
         Probeer hulle doen sonder om terug te kyk na vorige probleme om te sien hoe goed jy hulle <q>buite-konteks</q> kan doen.
         Dit vereis buigsame begrip van die verbande tussen die konsepte.
-      <li label="(a)">
+      <ol label="(a)">
+      <li>
         Laat <m>V=\Poly_2</m> en <m>\basis{B} = (1+x-x^2, 2x^2-1, 2-3x)</m> en
         <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1\amp 1\amp -1\\ 2\amp -1\amp 0\\ 0\amp 1\amp 1\end{bmatrix}</m>.
         Bereken die basis <m>\basis{B}'</m>.
@@ -625,6 +626,7 @@
         en <m>[v]_{\mathcal{B}'}=\begin{bmatrix} -1\\2 \end{bmatrix}</m>.
         Bereken die vektor <m>v</m>.
       </li>
+      </ol>
       </p>
     </statement>
   </exercise>

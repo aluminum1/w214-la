@@ -2,6 +2,11 @@ To do list:
 
 - Image sizes are inconsistent.
 - Decide on and implement better colors for tikz diagrams. Use latex macros like \primaryColor etc. to ensure uniformity.
+- Do we want to use the Stellenbosch University Brand Colors? If so, here they are
+  - brand-maroon: #60223b, RGB(140, 151, 154)
+  - brand-gray: #8c979a, RGB(96,34,59)
+  - brand-gold: #967140, RGB(150,113,64)
+- Write Python script to change link to Mathjax to the local one on SunLearn and the links to the pretext css files to local versions. Make sure they are available locally, and build in a test for updates. Make sure to test it!
 - Parts in Theorems and Proofs to (a) etc instead 1. etc. using <ol label="(a)"> (?)
 - Some exercises do not have solutions yet.
 - Titles for examples? and Exercises?
@@ -31,13 +36,13 @@ Afrikaans:
 I would like to add
 - learning outcomes for each section; or maybe only the exercises for each section
 - link exercises or groups of exercises to these learning outcomes.
-- longer paragraphs, especially in introductions (sections can also have <conclusion>s).
+- longer paragraphs, especially in introductions (sections can also have <conclusion>s and <references> to other reading and/or Youtube Videos).
 - overspecified or underspecified problems
 - more problems (e.g. <fillin characters=10 /> for fill in questions, like terminology)
 - solutions
 
 Ideas for problems and examples:
-- Claim: Let T:V to W. Show: If T(v1) and T(v2) are linearly independent, show that v1 and v2 are
+- Claim: Let T:V to W. Show: If T(v1) and T(v2) are linearly independent, show that v1 and v2 are -  already in !
 - Application: Show that sin x and cos x are lin. ind. by using the linear map T:Func to R^2 defined by T(f) = (f(0),f(pi/2)).
 - Rank-Nullity Theorem to show the rank theorem from 144: #free + #non-0 rows = #columns
 - Sometimes go back and show how new "technology" can help you better understand previous problems.

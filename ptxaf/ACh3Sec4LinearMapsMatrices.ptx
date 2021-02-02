@@ -482,7 +482,80 @@
   </theorem>
 
   <exercises>
-    <exercise xml:id="trig_ex_1">
+    <exercisegroup>
+      <introduction>
+        <p>
+          Bereken die matrikse vir die lineêre afbeeldings hier onder relatief tot die gegewe basisse:
+        </p>
+      </introduction>
+    <exercise>
+      <statement>
+        <p>
+          Laat <m>T:\Row_3\to \Row_2</m> die lineêre afbeelding gedefinieer deur <m>T(x,y,z) = (2x+y,x-y-z)</m>.
+          Laat <m>\basis{B}</m> en <m>\basis{B}'</m> die standaardbasisse vir <m>Row_3</m> en <m>Row_2</m> wees.
+          Bereken die matriks
+          <me> [T]_{\basis{B}'\leftarrow \basis{B}} </me>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>[T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix}  2 \amp 1 \amp 0 \\ 1\amp  -1\amp -1 \end{bmatrix}  </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Laat <m>T</m> dieselfde afbeelding as in (a) wees,
+          maar nou gebruik ons die basisse
+          <m>\basis{B}=\bopen (2,1,0),(1,2,1), (3,2,1)\bclose</m> en
+          <m>\basis{B}'=\bopen(1,1),(1,0)\bclose</m>.
+          Bereken die matriks
+          <me> [T]_{\basis{B}'\leftarrow \basis{B}} </me>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m> [T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1 \amp -4 \amp 0 \\ 4 \amp 8 \amp 8 \end{bmatrix} </m>
+        </p>
+      </answer>
+      <solution>
+        <p>
+          Nou is <m>T((2,1,0)) = (5,1)</m>, <m>T((1,2,3)) = (4, -4)</m> en <m>T((3,2,1)) = (8,0)</m>.
+          Ons moet elkeen van hulle as 'n lineêrekombinasie van <m>(1,1)</m> en <m>(1,0)</m> skryf.
+          Ons het <m>(5,1) = 1(1,1)+4(1,0)</m>, en <m>(4,-4) = -4(1,1) + 8(1,0)</m> en <m>(8,0) = 0(1,1)+8(1,0)</m>. Dus is
+          <me> [T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1 \amp -4 \amp 0 \\ 4 \amp 8 \amp 8 \end{bmatrix} </me>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Laat <m>T:\Poly_2\to \Poly_1</m> die nul-afbeelding wees,
+          m.a.w. die lineêre afbeelding wat alle vektore in
+          <m>\Poly_2</m> op die nul-vektor in <m>\Poly_1</m> afbeeld.
+          Gebruik die standaardbasisse aan beide kante om
+          <me> [T]_{\basis{B}'\leftarrow \basis{B}}</me>
+          te vind. Sal die antwoord verander as jy ander basisse gebruik?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>[T]_{\mathcal{B}'\leftarrow \mathcal{B}} = \begin{bmatrix} 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix} </m>
+        </p>
+      </answer>
+      <solution>
+        <p>
+          Dit maak nie saak watter basisse gekies word nie;
+          die matriks sal altyd soos hierdie een lyk.
+          Indien die vektorruimtes ander dimensies gehad het,
+          sou die matriks 'n ander grootte gehad het,
+          maar die nul-afbeelding sal altyd die nul-matriks as sy matriks hê.
+        </p>
+      </solution>
+    </exercise>
+
+  <exercise xml:id="trig_ex_1">
     <statement>
       <p>
         Laat
@@ -580,6 +653,52 @@
       </p>
     </solution>
   </exercise>
+</exercisegroup>
+
+<exercisegroup>
+  <introduction>
+    <p>
+      Indien die geassosieerde matriks gegee word, skryf
+      neer hoe elke lineêre afbeelding 'n algemene element
+      van die vektorruimte afbeeld:
+    </p>
+  </introduction>
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>T:\Row_3\to \Row_4</m> met standaardbasisse aan beide kante. Veronderstel dat die matriks vir <m>T</m>
+        <me> \begin{bmatrix} 1\amp 2\amp 3\\1\amp 0\amp 1\\ 2\amp 1\amp 1\\ -1\amp -2\amp 2 \end{bmatrix} </me>
+        is. Skryf die waarde van <m>T(x,y,z)</m> neer.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>T(x,y,z) = (x+2y+3z, x+z, 2x+y+z, -x-2y+2z)</m>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>T:\Row_2\to \Row_3</m> met basisse <m>(1,1),(1,-1)</m> en <m>(1,0,1), (1,-1,0), (0,1,1)</m> en
+        <me> \begin{bmatrix} 1\amp -1\\0\amp 1\\1\amp 0 \end{bmatrix} </me>
+        Skryf die waarde van <m>T(x,y)</m> neer.
+      </p>
+    </statement>
+  </exercise>
+  <solution>
+    <p>
+      Die gegewe inligting beteken dat
+      <m>T(1,1) = 1(1,0,1)+0(1,-1,0)+1(0,1,1)=(1,1,2)</m>
+      en <m>T(1,-1)=-1(1,0,1)+1(1,-1,0)+0(0,1,1) = (0,-1,-1)</m>.
+      Dus is <m>T(1,0)=\frac{1}{2}(T(1,1)+T(1,-1))=\frac{1}{2}(1,0,1) = \left(\frac{1}{2},0,\frac{1}{2}\right)</m>
+      en <m>T(0,1) = T(1,1)-T(1,0)=\left(\frac{1}{2},1,\frac{3}{2}\right)</m>
+      en dus is
+      <me> T(x,y) = xT(1,0)+yT(0,1) = \left( \frac{x+y}{2},y,\frac{x+3y}{2} \right)</me>.
+    </p>
+  </solution>
+</exercisegroup>
 
   <exercise>
     <statement>
@@ -622,6 +741,29 @@
         die vergelyking <m>[S \circ T]_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{B}} [T]_{\basis{C} \leftarrow \basis{B}}</m> bevredig.
       </p>
     </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m> \basis{B} = \bopen e^x, xe^x, x^2e^x, x^3e^x\bclose </m>
+        'n basis vir 'n vektorruimte <m>V</m> van funksies wees.
+        Bereken die matriks vir die differensiasie-afbeelding
+        <m> D:V\to V </m> met betrekking tot hierdie basis.
+        Vind sy inverse en gebruik dit om 'n
+        anti-afgeleide vir <m> (x^3-x^2)e^x </m> te bereken.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Ons het <m>D(e^x) = e^x</m> en <m>D(xe^x) = xe^x + e^x</m> en <m>D(x^2e^x) = 2xe^x + x^2e^x</m> en <m>D(x^3e^x) = x^3e^x + 3x^2 e^x</m>. Dus is die matriks vir <m>D</m>
+        <me>[D]_{\mathcal{B}} = \begin{bmatrix} 1\amp 1\amp 0\amp 0 \\ 0\amp 1\amp 2\amp 0 \\ 0\amp 0\amp 1\amp 3 \\ 0\amp 0\amp 0\amp 1 \end{bmatrix} </me>.
+        Sy inverse is <m>\begin{bmatrix} 1\amp -1\amp 2\amp -6 \\ 0\amp 1\amp -2\amp 6\\ 0\amp 0\amp 1\amp -3 \\ 0\amp 0\amp 0\amp 1 \end{bmatrix}</m>.
+        Dus het 'n anti-afgeleide van <m>(x^3-x^2)e^x</m> 'n koördinaatvektor van
+        <me> \begin{bmatrix} 1\amp -1\amp 2\amp -6 \\ 0\amp 1\amp -2\amp 6\\ 0\amp 0\amp 1\amp -3 \\ 0\amp 0\amp 0\amp 1 \end{bmatrix} \begin{bmatrix} 0\\0\\-1\\1 \end{bmatrix} = \begin{bmatrix} -8\\8\\-4\\ 1 \end{bmatrix}</me>.
+        So, <m>\int (x^3-x^2)e^x dx = -8e^x+8xe^x-4x^2e^x+x^3e^x + C</m>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -691,6 +833,138 @@
       </p>
     </statement>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Beskou die lineêre afbeelding <m>T(x,y)=(x+y,2x)</m>.
+        Wys dat <m>(T((1,1)) = 2(1,1)</m> en dat <m> T((-1,2)) = (-1)\cdot(-1,2)</m>.
+        Vergelyk die twee matriks vir <m>T</m> <mdash />
+        die een met betrekking tot die standaardbasis,
+        en die ander met betrekking tot die basis <m>((1,1),(-1,2))</m>.
+      </p>
+      <p>
+        Dit is 'n ander rede waarom ons soms verskillende basisse wil gebruik. Soms stel ons eintlik belang in die lineêre afbeelding en dan laat 'n ander keuse van basis die lineêre afbeelding <q>beter</q> lyk en dus makliker om te bestudeer.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Met betrekking tot die standaardbasis het ons
+        <me> [T]_{\mathcal{B}} = \begin{bmatrix} 1 \amp  1 \\ 2 \amp  0 \end{bmatrix} </me>
+        en met betrekking tot die nuwe basis het ons
+        <me> [T]_{\mathcal{B}'} = \begin{bmatrix} 2\amp 0 \\ 0\amp -1 \end{bmatrix} </me>
+      </p>
+      <p>
+        In hierdie voorbeeld lyk die twee matriks nie soveel makliker as die eerste een nie.
+        Maar vir groter matrikse is daar 'n groot voordeel om die matriks in diagonaalvorm te kry.
+        Dit maak dit baie makliker om magte, die determinant en baie ander dinge te bereken.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercisegroup>
+    <title> Bewys tipe probleme</title>
+    <exercise>
+      <statement>
+        <p>
+          Laat <m>I : V\to V</m> die identiteitsafbeelding op <m>V</m> wees.
+          Bewys dat die matriks vir <m>I</m> met betrekking tot die basisse <m>\basis{B}</m> en <m>\basis{B}'</m> die basisomskakelingsmatriks is; m.a.w. bewys dat
+          <me>
+            [I]_{\basis{B}'\leftarrow \basis{B}} = \mat{P}_{\basis{B}'\leftarrow \basis{B}}
+          </me>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Die identiteitsafbeelding bevredig <m>I(v) = v</m> vir alle <m>v\in V</m>. Gebruik nou daardie formule om die definisies van <m>[I]_{\basis{B}'\leftarrow \basis{B}}</m> (<xref ref="matrix_of_linear_map_defn" />) en van <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}}</m> (<xref ref="def-change-of-basis-matrix" />) aan mekaar te verbind.
+        </p>
+      </hint>
+      <solution>
+        <p>
+          Laat <m>\basis{B} = (b_1,\ldots, b_n)</m>. Dan is die basisomskakelingsmatriks
+          <me>
+            \left[[b_1]_{\basis{B}'} \mid \cdots \mid [b_n]_{\basis{B}'}\right]
+          </me>,
+          terwyl die matriks vir die lineêre afbeelding <m>I</m> gelyk is aan
+          <me> \left[[I(b_1)]_{\basis{B}'} \mid \cdots \mid [I(b_n)]_{\basis{B}'}\right]</me>.
+          Maar aangesien <m>I</m> die identiteitsafbeelding is,
+          het ons <m>I(v)=v</m> vir alle <m>v\in V</m>
+          en in besonder <m>I(b_i)=b_i</m> vir elke <m>i</m>.
+          Dus word die twee matrikse deur dieselfde formule gedefinieer en is hulle gelyk.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Laat <m>I:V\to V</m> die identiteitsafbeelding op <m>V</m> wees.
+          Bewys dat vir enige keuse van basis <m>\basis{B}</m>
+          sal die matriks <m> [I]_{\basis{B}\leftarrow\basis{B}}</m> vir <m>T</m> altyd die identiteitsmatriks wees.
+          (Wat is die verskil tussen hierdie vraag en die vorige een?)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Dit kan met 'n direkte berekening bevestig word. As <m>\basis{B} = (b_1,\ldots, b_n)</m>, dan het ons
+          <me>
+            [I]_{\basis{B}\leftarrow \basis{B}} =  \left[[I(b_1)]_{\basis{B}'} \mid \cdots \mid [I(b_n)]_{\basis{B}'}\right]
+          </me>
+          Elke <m>I(b_i)=b_i</m> en aangesien
+          <m>b_i=0\cdot b_1 + \cdots + 0\cdot b_{i-1}+1\cdot b_i+0\cdot b_{i+1}+\cdots+0\cdot b_n</m>,
+          bestaan die koördinaatvektor uit nulle, behalwe vir een 1 in die <m>i</m>-set inskrywing.
+          As jy hierdie <m>n</m> kolomvektore langs mekaar sit,
+          kry jy presies die identiteitsmatriks.
+        </p>
+      </solution>
+    </exercise>
+
+<!--
+  This is already Theorem 3.4.9 Functoriality ..., but I am keeping it in case we need a different approach
+
+    <exercise>
+      <statement>
+        <p>
+          As <m>T: U \to V</m> en <m>S:V\to W</m> atwee lineêre afbeeldings is, en <m>\mathcal{B}</m>, <m>\basis{B}'</m> en <m>\basis{B}''</m>  basisse vir <m>U</m>, <m>V</m> en <m>W</m>, onderskeidelik is, dan is
+          <me>
+            [S\circ T]_{\basis{B}''\leftarrow \basis{B}} = [S]_{\basis{B}''\leftarrow \basis{B}'}[T]_{\basis{B}'\leftarrow \basis{B}}
+          </me>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          If we can show that for all vectors <m>u\in U</m> we have
+          <me> [S\circ T]_{\basis{B}''\leftarrow\basis{B}} [u]_{\basis{B}} = [S]_{\basis{B}''\leftarrow\basis{B}'}[T]_{\basis{B}'\leftarrow \basis{B}} [u]_{\basis{B}} </me>
+          then we can do the same trick as when we proved
+          that two change of basis matrices were equal.
+          By setting the vector <m>u</m> equal to the
+          basis elements in <m>\basis{B}</m> one by one,
+          their coordinate vectors range through the
+          standard basis elements for <m>\Col_n</m>.
+          And by multiplying these matrices
+          (the one on the left and the product on the right)
+          by the <m>i</m>-th standard basis element of
+          <m>\Col_n</m> we isolate the <m>i</m>-th column
+          of each matrix. If they are always equal, each
+          corresponding column of the matrices are equal,
+          and thus we will have proved what we wanted to.
+        </p>
+        <p>
+          We now show the equation in the second line.
+          On the left hand side we have
+          <me>
+            [S\circ T]_{\basis{B}''\leftarrow\basis{B}} [u]_{\basis{B}} = [(S\circ T)(u)]_{\basis{B}''}
+          </me>,
+          while on the right hand side we have
+          <me>
+            [S]_{\basis{B}''\leftarrow\basis{B}'}[T]_{\basis{B}'\leftarrow \basis{B}} [u]_{\basis{B}} = [S]_{\basis{B}''\leftarrow\basis{B}'}[T(u)]_{\basis{B}'} = [S(T(u))]_{\basis{B}''}
+          </me>
+          These two vectors are the same, and the proof is complete.
+        </p>
+      </solution>
+    </exercise>
+  -->
+  </exercisegroup>
 
 </exercises>
 

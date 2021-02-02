@@ -482,7 +482,80 @@
   </theorem>
 
   <exercises>
-    <exercise xml:id="trig_ex_1">
+    <exercisegroup>
+      <introduction>
+        <p>
+          Compute the matrices associated to the following linear maps:
+        </p>
+      </introduction>
+    <exercise>
+      <statement>
+        <p>
+          Let <m>T:\Row_3\to \Row_2</m> be the linear map defined by <m>T(x,y,z) = (2x+y,x-y-z)</m>.
+          Let <m>\basis{B}</m> and <m>\basis{B}'</m> be the standard bases for <m>Row_3</m> and <m>Row_2</m>.
+          Calculate the matrix
+          <me> [T]_{\basis{B}'\leftarrow \basis{B}} </me>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>[T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix}  2 \amp 1 \amp 0 \\ 1\amp  -1\amp -1 \end{bmatrix}  </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Let <m>T</m> be the same map as in (a),
+          but now use the bases
+          <m>\basis{B}=\bopen (2,1,0),(1,2,1), (3,2,1)\bclose</m> and
+          <m>\basis{B}'=\bopen(1,1),(1,0)\bclose</m>.
+          Calculate the matrix
+          <me> [T]_{\basis{B}'\leftarrow \basis{B}} </me>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m> [T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1 \amp -4 \amp 0 \\ 4 \amp 8 \amp 8 \end{bmatrix} </m>
+        </p>
+      </answer>
+      <solution>
+        <p>
+          Now <m>T((2,1,0)) = (5,1)</m>, <m>T((1,2,3)) = (4, -4)</m> and <m>T((3,2,1)) = (8,0)</m>.
+          We need to write each of these as a linear combination of <m>(1,1)</m> and <m>(1,0)</m>.
+          We have <m>(5,1) = 1(1,1)+4(1,0)</m>, and <m>(4,-4) = -4(1,1) + 8(1,0)</m> and <m>(8,0) = 0(1,1)+8(1,0)</m>. Thus
+          <me> [T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1 \amp -4 \amp 0 \\ 4 \amp 8 \amp 8 \end{bmatrix} </me>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Let <m>T:\Poly_2\to \Poly_1</m> be the 0 map,
+          i.e. the linear map that maps all vectors in
+          <m>\Poly_2</m> to the zero vector in <m>\Poly_1</m>.
+          Use the standard bases on both sides to find
+          <me> [T]_{\basis{B}'\leftarrow \basis{B}}</me>.
+          Will the answer change if you used different bases?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>[T]_{\mathcal{B}'\leftarrow \mathcal{B}} = \begin{bmatrix} 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix} </m>
+        </p>
+      </answer>
+      <solution>
+        <p>
+          It doesn't matter which bases were chosen;
+          the matrix would always look like this.
+          If the vector spaces had different dimensions,
+          then the associated matrix would have a different size,
+          but the 0 map would still have associated matrix the zero matrix.
+        </p>
+      </solution>
+    </exercise>
+
+  <exercise xml:id="trig_ex_1">
     <statement>
       <p>
         Let
@@ -516,7 +589,7 @@
     </solution>
   </exercise>
 
-<exercise xml:id="trig_ex_2">
+  <exercise xml:id="trig_ex_2">
     <statement>
       <p>
         Let
@@ -580,6 +653,52 @@
       </p>
     </solution>
   </exercise>
+</exercisegroup>
+
+<exercisegroup>
+  <introduction>
+    <p>
+      Given the associated matrix, write down how the
+      linear map acts on a general element of the vector
+      space.
+    </p>
+  </introduction>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>T:\Row_3\to \Row_4</m> with the standard bases on both sides. Suppose that its associated matrix is
+        <me> \begin{bmatrix} 1\amp 2\amp 3\\1\amp 0\amp 1\\ 2\amp 1\amp 1\\ -1\amp -2\amp 2 \end{bmatrix} </me>.
+        Write down the value of <m>T(x,y,z)</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>T(x,y,z) = (x+2y+3z, x+z, 2x+y+z, -x-2y+2z)</m>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>T:\Row_2\to \Row_3</m> with bases <m>(1,1),(1,-1)</m> and <m>(1,0,1), (1,-1,0), (0,1,1)</m> with associated matrix
+        <me> \begin{bmatrix} 1\amp -1\\0\amp 1\\1\amp 0 \end{bmatrix} </me>
+        Write down the value of <m>T(x,y)</m>.
+      </p>
+    </statement>
+  </exercise>
+  <solution>
+    <p>
+      The given information means that
+      <m>T(1,1) = 1(1,0,1)+0(1,-1,0)+1(0,1,1)=(1,1,2)</m>
+      and <m>T(1,-1)=-1(1,0,1)+1(1,-1,0)+0(0,1,1) = (0,-1,-1)</m>.
+      Thus <m>T(1,0)=\frac{1}{2}(T(1,1)+T(1,-1))=\frac{1}{2}(1,0,1) = \left(\frac{1}{2},0,\frac{1}{2}\right)</m>
+      and <m>T(0,1) = T(1,1)-T(1,0)=\left(\frac{1}{2},1,\frac{3}{2}\right)</m>
+      and thus
+      <me> T(x,y) = xT(1,0)+yT(0,1) = \left( \frac{x+y}{2},y,\frac{x+3y}{2} \right)</me>.
+    </p>
+  </solution>
+</exercisegroup>
 
   <exercise>
     <statement>
@@ -622,6 +741,29 @@
         satisfy <m>[S \circ T]_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{B}} [T]_{\basis{C} \leftarrow \basis{B}}</m>.
       </p>
     </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m> \basis{B} = \bopen e^x, xe^x, x^2e^x, x^3e^x\bclose </m>
+        be a basis for a vector space <m>V</m> of functions.
+        Compute the matrix associated to differentiation
+        <m> D:V\to V </m> with respect to this basis.
+        Find its inverse and use it to compute an
+        anti-derivative of <m> (x^3-x^2)e^x </m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We have <m>D(e^x) = e^x</m> and <m>D(xe^x) = xe^x + e^x</m> and <m>D(x^2e^x) = 2xe^x + x^2e^x</m> and <m>D(x^3e^x) = x^3e^x + 3x^2 e^x</m>. Thus the matrix associated with <m>D</m> is
+        <me>[D]_{\mathcal{B}} = \begin{bmatrix} 1\amp 1\amp 0\amp 0 \\ 0\amp 1\amp 2\amp 0 \\ 0\amp 0\amp 1\amp 3 \\ 0\amp 0\amp 0\amp 1 \end{bmatrix} </me>.
+        Its inverse is <m>\begin{bmatrix} 1\amp -1\amp 2\amp -6 \\ 0\amp 1\amp -2\amp 6\\ 0\amp 0\amp 1\amp -3 \\ 0\amp 0\amp 0\amp 1 \end{bmatrix}</m>.
+        Thus, an anti-derivative of <m>(x^3-x^2)e^x</m> has a coordinate vector
+        <me> \begin{bmatrix} 1\amp -1\amp 2\amp -6 \\ 0\amp 1\amp -2\amp 6\\ 0\amp 0\amp 1\amp -3 \\ 0\amp 0\amp 0\amp 1 \end{bmatrix} \begin{bmatrix} 0\\0\\-1\\1 \end{bmatrix} = \begin{bmatrix} -8\\8\\-4\\ 1 \end{bmatrix}</me>.
+        So, <m>\int (x^3-x^2)e^x dx = -8e^x+8xe^x-4x^2e^x+x^3e^x + C</m>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -691,6 +833,137 @@
       </p>
     </statement>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the linear map <m>T(x,y)=(x+y,2x)</m>.
+        Show that <m>(T((1,1)) = 2(1,1)</m> and that <m> T((-1,2)) = (-1)\cdot(-1,2)</m>.
+        Compare the two matrices associated to <m>T</m> <mdash />
+        the one associated to the standard basis,
+        and the one associated to the basis <m>((1,1),(-1,2))</m>.
+      </p>
+      <p>
+        This is another reason why we sometimes want to use different bases. Sometimes we are really interested in the linear map and a different choice of basis makes the linear map appear <q>better</q> and therefore easier to study.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        With respect to the standard basis we have
+        <me> [T]_{\mathcal{B}} = \begin{bmatrix} 1 \amp  1 \\ 2 \amp  0 \end{bmatrix} </me>
+        and with respect to the new basis we have
+        <me> [T]_{\mathcal{B}'} = \begin{bmatrix} 2\amp 0 \\ 0\amp -1 \end{bmatrix} </me>
+      </p>
+      <p>
+        In this example, the second matrix does not look that much simpler than the first.
+        But for larger matrices, there is a big advantage in getting a matrix in diagonal form.
+        It makes it much easier to compute powers of this matrix, the determinant, and many other things.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercisegroup>
+    <title> Proof type problem</title>
+    <exercise>
+      <statement>
+        <p>
+          Let <m>I : V\to V</m> be the identity map on <m>V</m>.
+          Prove that the matrix associated to <m>I</m> with respect to the bases <m>\basis{B}</m> and <m>\basis{B}'</m> is the change of basis matrix, i.e. prove that
+          <me>
+            [I]_{\basis{B}'\leftarrow \basis{B}} = \mat{P}_{\basis{B}'\leftarrow \basis{B}}
+          </me>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          The identity map satisfies <m>I(v) = v</m> for all <m>v\in V</m>. Now use that formula to relate the definitions of <m>[I]_{\basis{B}'\leftarrow \basis{B}}</m> (<xref ref="matrix_of_linear_map_defn" />) and of <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}}</m> (<xref ref="def-change-of-basis-matrix" />).
+        </p>
+      </hint>
+      <solution>
+        <p>
+          Let <m>\basis{B} = (b_1,\ldots, b_n)</m>. Then the change of basis matrix is
+          <me>
+            \left[[b_1]_{\basis{B}'} \mid \cdots \mid [b_n]_{\basis{B}'}\right]
+          </me>
+          while the matrix associated to the linear map <m>I</m> is
+          <me> \left[[I(b_1)]_{\basis{B}'} \mid \cdots \mid [I(b_n)]_{\basis{B}'}\right]</me>.
+          But since <m>I</m> is the identity map,
+          we have <m>I(v)=v</m> for all <m>v\in V</m>
+          and in particular <m>I(b_i)=b_i</m> for each <m>i</m>.
+          Thus, the two matrices are defined by the same formula, proving the statement.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>I:V\to V</m> be the identity map on <m>V</m>.
+          Prove that no matter what basis <m>\basis{B}</m> we choose,
+          the associated matrix <m> [I]_{\basis{B}\leftarrow\basis{B}}</m> is always the identity matrix.
+          (What is the difference between this and the previous problem?)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This can be done with a direct computation. If <m>\basis{B} = (b_1,\ldots, b_n)</m>, then we have
+          <me>
+            [I]_{\basis{B}\leftarrow \basis{B}} =  \left[[I(b_1)]_{\basis{B}'} \mid \cdots \mid [I(b_n)]_{\basis{B}'}\right]
+          </me>
+          Each <m>I(b_i)=b_i</m> and since
+          <m>b_i=0\cdot b_1 + \cdots + 0\cdot b_{i-1}+1\cdot b_i+0\cdot b_{i+1}+\cdots+0\cdot b_n</m>,
+          the coordinate vector consists of all zeros, except a 1 in the <m>i</m>-th position.
+          If you place these <m>n</m> column vectors next to each other,
+          you get exactly the identity matrix.
+        </p>
+      </solution>
+    </exercise>
+
+<!--
+  This is already Theorem 3.4.9 Functoriality ..., but I am keeping it in case we need a different approach
+    <exercise>
+      <statement>
+        <p>
+          If <m>T: U \to V</m> and <m>S:V\to W</m> are two linear maps, and <m>\mathcal{B}</m>, <m>\basis{B}'</m> and <m>\basis{B}''</m> are bases for <m>U</m>, <m>V</m> and <m>W</m>, respectively, then
+          <me>
+            [S\circ T]_{\basis{B}''\leftarrow \basis{B}} = [S]_{\basis{B}''\leftarrow \basis{B}'}[T]_{\basis{B}'\leftarrow \basis{B}}
+          </me>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          If we can show that for all vectors <m>u\in U</m> we have
+          <me> [S\circ T]_{\basis{B}''\leftarrow\basis{B}} [u]_{\basis{B}} = [S]_{\basis{B}''\leftarrow\basis{B}'}[T]_{\basis{B}'\leftarrow \basis{B}} [u]_{\basis{B}} </me>
+          then we can do the same trick as when we proved
+          that two change of basis matrices were equal.
+          By setting the vector <m>u</m> equal to the
+          basis elements in <m>\basis{B}</m> one by one,
+          their coordinate vectors range through the
+          standard basis elements for <m>\Col_n</m>.
+          And by multiplying these matrices
+          (the one on the left and the product on the right)
+          by the <m>i</m>-th standard basis element of
+          <m>\Col_n</m> we isolate the <m>i</m>-th column
+          of each matrix. If they are always equal, each
+          corresponding column of the matrices are equal,
+          and thus we will have proved what we wanted to.
+        </p>
+        <p>
+          We now show the equation in the second line.
+          On the left hand side we have
+          <me>
+            [S\circ T]_{\basis{B}''\leftarrow\basis{B}} [u]_{\basis{B}} = [(S\circ T)(u)]_{\basis{B}''}
+          </me>,
+          while on the right hand side we have
+          <me>
+            [S]_{\basis{B}''\leftarrow\basis{B}'}[T]_{\basis{B}'\leftarrow \basis{B}} [u]_{\basis{B}} = [S]_{\basis{B}''\leftarrow\basis{B}'}[T(u)]_{\basis{B}'} = [S(T(u))]_{\basis{B}''}
+          </me>
+          These two vectors are the same, and the proof is complete.
+        </p>
+      </solution>
+    </exercise>
+  -->
+  </exercisegroup>
 
 </exercises>
 
