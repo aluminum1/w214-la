@@ -156,7 +156,7 @@
       <p>
         Let <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> be a list of vectors in a vector space <m>V</m>.
         The following statements are equivalent:
-        <ol>
+        <ol label="(a)">
           <li xml:id="defn_lin_dep"> The list of vectors <m>\basis{B}</m> is linearly dependent.
           </li>
 
@@ -182,11 +182,11 @@
 
   <proof>
     <p>
-      We will show that (1) <m>\Leftrightarrow</m> (2), (1) <m>\Rightarrow</m> (3) and (3) <m>\Rightarrow</m> (2), and conclude that each statement implies the others.
+      We will show that (<xref ref="defn_lin_dep" text="local" />) <m>\Leftrightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />), (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />) and (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />), and conclude that each statement implies the others.
     </p>
 
     <p>
-      (1) <m>\Rightarrow</m> (2). Suppose that <m>\basis{B}</m> is linearly dependent. This means that there are scalars <m>k_1</m>,
+      (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />). Suppose that <m>\basis{B}</m> is linearly dependent. This means that there are scalars <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, not all zero, such that
       <men xml:id="lin_dep_lem_another_eqn">
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
@@ -197,11 +197,11 @@
           \ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \text{(No } \ve{v}_i \text{ terms on RHS)}
         </mrow>
       </md>
-      Therefore, (2) is true.
+      Therefore, (<xref ref="lin_comb_other_vec" text="local" />) is true.
     </p>
 
     <p>
-      (2) <m>\Rightarrow</m> (1). Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is,
+      (<xref ref="lin_comb_other_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="defn_lin_dep" text="local" />). Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is,
       <md>
         <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \text{(No } \ve{v}_s  \text{term on RHS.)} </mrow>
       </md>
@@ -213,7 +213,7 @@
     </p>
 
     <p>
-      (1) <m>\Rightarrow</m> (3).
+      (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />).
       Suppose that the list <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> is linearly dependent.
       This means that there are scalars <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, not all zero, such that
@@ -249,15 +249,15 @@
       <me>
         \therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r} \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \,
       </me>
-      Therefore, (3) is true.
+      Therefore, (<xref ref="lin_comb_prec_vec" text="local" />) is true.
     </p>
 
-     <p> (3) <m>\Rightarrow</m> (2) Suppose that (3) is true. In other words, either of the following two holds:
+     <p> (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />) Suppose that (<xref ref="lin_comb_prec_vec" text="local" />) is true. In other words, either of the following two holds:
         <ul>
-          <li> <m>\ve{v}_1 = \ve{0}</m>. Therefore, <m>\basis{B}</m> is linearly dependent, by <xref ref="remark_about_lin_dependence"/>. In other words, (1) is true. Therefore, since we have already proved that (1) <m>\Rightarrow </m> (2), we conclude that (2) is true. </li>
-          <li> For some <m>r \in \{2, \ldots, n\}</m>, the vector <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m>. In this case, clearly <m>\ve{v}_r</m> is a linear combination of the other vectors in <m>\basis{B}</m>, so (2) is true.</li>
+          <li> <m>\ve{v}_1 = \ve{0}</m>. Therefore, <m>\basis{B}</m> is linearly dependent, by <xref ref="remark_about_lin_dependence"/>. In other words, (<xref ref="defn_lin_dep" text="local" />) is true. Therefore, since we have already proved that (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow </m> (<xref ref="lin_comb_other_vec" text="local" />), we conclude that (<xref ref="lin_comb_other_vec" text="local" />) is true. </li>
+          <li> For some <m>r \in \{2, \ldots, n\}</m>, the vector <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m>. In this case, clearly <m>\ve{v}_r</m> is a linear combination of the other vectors in <m>\basis{B}</m>, so (<xref ref="lin_comb_other_vec" text="local" />) is true.</li>
         </ul>
-        In both cases, (2) is true. So, (3) <m>\Rightarrow</m> (2).
+        In both cases, (<xref ref="lin_comb_other_vec" text="local" />) is true. So, (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />).
     </p>
   </proof>
 

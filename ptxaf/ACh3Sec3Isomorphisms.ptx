@@ -330,7 +330,7 @@
       <p>
         Wys dat:
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>\ve{vec}_{V, \basis{B}} (\mat{c} + \mat{c}') = \ve{vec}_{V, \basis{B}} (\mat{c}) + \ve{vec}_{V, \basis{B}} (\mat{c}')</m>
@@ -351,7 +351,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
              <p>
               <md>
@@ -479,11 +479,8 @@
       <p>
         <m>V</m> bestaan uit alle vektore <m>(x,y,z,w)</m> wat die lineêre vergelykings
         <md>
-
-         <mrow> x + 2y - w = 0 </mrow>
-
-         <mrow> -x + y + z = 0 </mrow>
-
+         <mrow> x + 2y - w \amp = 0 \amp (1) </mrow>
+         <mrow> -x + y + z \amp = 0 \amp (2)</mrow>
         </md> bevredig.
 
         Ons kan <m>x</m> en <m> y </m> willekeurig kies, maar dan is <m> w </m> vas uit (1) hier bo en <m> z </m> vas uit (2) hier bo. Dus is <m> V </m> 'n 2-dimensionele deelruimte.

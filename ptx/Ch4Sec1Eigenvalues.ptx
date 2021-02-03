@@ -21,26 +21,26 @@
         and <m>V</m> is finite-dimensional.
         Then the following are equivalent:
 
-        <ol>
-          <li>
+        <ol label="(a)">
+          <li xml:id="prop_eigenvalue-1">
             <p>
               <m>\lambda</m> is an eigenvalue of <m>T</m>.
             </p>
           </li>
 
-          <li>
+          <li xml:id="prop_eigenvalue-2">
             <p>
               <m>\lambda \id_V - T</m> is not injective.
             </p>
           </li>
 
-          <li>
+          <li xml:id="prop_eigenvalue-3">
             <p>
               <m>\lambda \id_V - T</m> is not surjective.
             </p>
           </li>
 
-          <li>
+          <li xml:id="prop_eigenvalue-4">
             <p>
               <m>\lambda \id_V - T</m> is not invertible.
             </p>
@@ -69,7 +69,7 @@
   <proof>
     <title> Proof of <xref ref="prop_eigenvalue" /></title>
     <p>
-      (1) <m>\Rightarrow</m> (2).
+      (<xref ref="prop_eigenvalue-1" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-2" text="local"/>).
       Suppose <m>\lambda</m> is an eigenvalue of <m>T</m>.
       <md>
         <mrow>\amp \therefore \text{There exists a nonzero } \ve{v} \in V \text{ such that } T(\ve{v}) = \lambda \ve{v}.</mrow>
@@ -87,7 +87,7 @@
     </p>
 
     <p>
-      (2) <m>\Rightarrow</m> (1).
+      (<xref ref="prop_eigenvalue-2" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-1" text="local"/>).
       Suppose <m>\lambda \id_V - T</m> is not injective.
       <md>
         <mrow>\amp  \therefore \Ker(\lambda \id_V - T) \neq \{\ve{0} \} \amp \amp  (\text{by }<xref ref="injective-kernel-lemma">Lemma</xref>)</mrow>
@@ -98,8 +98,8 @@
     </p>
 
     <p>
-      Clearly (2) <m>\Leftrightarrow</m> (3)
-      <m>\Leftrightarrow</m> (4) by <xref ref="equiv-inj-sur-iso">Proposition</xref>.
+      Clearly (<xref ref="prop_eigenvalue-2" text="local"/>) <m>\Leftrightarrow</m> (<xref ref="prop_eigenvalue-3" text="local"/>)
+      <m>\Leftrightarrow</m> (<xref ref="prop_eigenvalue-4" text="local"/>) by <xref ref="equiv-inj-sur-iso" />.
     </p>
   </proof>
 
@@ -204,20 +204,20 @@
         and <m>\lambda \in \mathbb{R}</m>.
         Then the following are equivalent:
 
-        <ol>
-          <li>
+        <ol label="(a)">
+          <li xml:id="eigvalue_root_charpoly-1">
             <p>
               <m>\lambda</m> is an eigenvalue of <m>T</m>.
             </p>
           </li>
 
-          <li>
+          <li xml:id="eigvalue_root_charpoly-2">
             <p>
               <m>\lambda \id - T</m> is not invertible.
             </p>
           </li>
 
-          <li>
+          <li xml:id="eigvalue_root_charpoly-3">
             <p>
               <m>\chi_T(\lambda) = 0</m>.
             </p>
@@ -227,7 +227,7 @@
     </statement>
   <proof>
     <p>
-      The only thing left to show is that (2) <m>\Leftrightarrow</m> (3).
+      The only thing left to show is that (<xref ref="eigvalue_root_charpoly-2" text="local" />) <m>\Leftrightarrow</m> (<xref ref="eigvalue_root_charpoly-3" text="local" />).
       Indeed, if <m>\basis{B}</m> is a basis for <m>V</m>, then
       <md>
         <mrow>\amp \lambda \id - T \text{ is not invertible}</mrow>

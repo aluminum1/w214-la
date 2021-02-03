@@ -1429,9 +1429,9 @@
               </m>
               Since <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> is linearly independent, we must have that
               <md>
-                <mrow> a + c = 0 \qquad (1) </mrow>
-                <mrow> a + b = 0 \qquad (2) </mrow>
-                <mrow> b + c = 0 \qquad (3) </mrow>
+                <mrow> a + c = 0 \amp \amp (1) </mrow>
+                <mrow> a + b = 0 \amp \amp (2) </mrow>
+                <mrow> b + c = 0 \amp \amp (3) </mrow>
               </md>
               <m> (1) + (2) </m> combined with <m> (3) </m> gives us that <m> a = 0 </m> and so <m> b = c = 0 </m> too. We conclude that  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
             </p>

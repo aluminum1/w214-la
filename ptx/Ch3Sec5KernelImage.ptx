@@ -90,7 +90,7 @@
         Let <m>T : V \rightarrow W</m> be a linear map.
         Then:
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>\Ker(T)</m> is a subspace of <m>V</m>
@@ -111,7 +111,7 @@
     <p>
       In both cases, we must check the three requirements for being a subspace.
 
-      <ol>
+      <ol label="(a)">
         <li>
 
           <p>
@@ -163,7 +163,7 @@
     <p>
       Now we check the three requirements for <m>\Im(t)</m>.
 
-      <ol>
+      <ol label="(a)">
         <li>
 
           <p>
@@ -1083,9 +1083,9 @@
           <mrow>
           \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: </mrow>
           <mrow>
-           b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \} </mrow>
+           b\frac{\pi}{2} + e\frac{4}{3} = 0 \quad\text{and}\quad  c\frac{\pi}{2} - d\frac{2}{3} = 0 \} </mrow>
         </md>.
-        We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by (1) above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by (2).
+        We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by the first condition above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by the second condition above.
         Hence <me>
         \Nullity(S) = 3.
         </me>
@@ -1180,7 +1180,7 @@
         If it is true, prove it.
         If it is false, prove that it is false.
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               There exists a linear map <m>T : \mathbb{R}^5 \rightarrow \mathbb{R}^2</m> such that
@@ -1201,7 +1201,7 @@
     </statement>
     <solution>
      <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
              The statement is false. To see this, notice that if such a map were to exist then its kernel would be 2-dimensional since any choice of <m> x_1</m> and <m>x_3 </m> uniquely determines an element in <m>\Ker(T)</m>. But then by the Rank-Nullity theorem, <m> \Rank(T) = 3 </m> since <m> \mathbb R^5 </m> is 5 dimensional. But <m>\Im(T)</m> is a subspace of <m>\mathbb R^2</m> <mdash/> which is absurd, since <m> \mathbb R^2 </m> itself is 2-dimensional.
@@ -1234,7 +1234,7 @@
           <mrow>\ve{u} \amp \mapsto (\nabla f)(\ve{p}) \cdot \ve{u}</mrow>
         </md>.
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Show that <m>D_{\ve{p}}</m> as defined above is a linear map.
@@ -1252,7 +1252,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
 
           <li>
             <p>

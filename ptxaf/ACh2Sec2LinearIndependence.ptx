@@ -156,7 +156,7 @@
       <p>
         Laat <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> ;n lys vektore in 'n vektorruimte <m>V</m> wees.
         Die volgende bewerings is ekwivalent:
-        <ol>
+        <ol label="(a)">
           <li xml:id="defn_lin_dep"> Die lys vektore <m>\basis{B}</m> is lineêr afhanklik.
           </li>
 
@@ -182,11 +182,11 @@
 
   <proof>
     <p>
-      Ons sal wys dat (1) <m>\Leftrightarrow</m> (2), (1) <m>\Rightarrow</m> (3) en (3) <m>\Rightarrow</m> (2), en so aflei dat elke bewering elke ander bewering impliseer.
+      Ons sal wys dat (<xref ref="defn_lin_dep" text="local" />) <m>\Leftrightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />), (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />) en (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />), en so aflei dat elke bewering elke ander bewering impliseer.
     </p>
 
     <p>
-      (1) <m>\Rightarrow</m> (2). Veronderstel dat <m>\basis{B}</m> lineêr afhanklik is. Dit beteken dat daar skalare <m>k_1</m>,
+      (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />). Veronderstel dat <m>\basis{B}</m> lineêr afhanklik is. Dit beteken dat daar skalare <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, bestaan, wat nie almal nul is nie, sodat
       <men xml:id="lin_dep_lem_another_eqn">
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
@@ -197,11 +197,11 @@
           \ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \text{(Geen } \ve{v}_i \text{ terme aan RK)}
         </mrow>
       </md>
-      Daarom geld (2).
+      Daarom geld (<xref ref="lin_comb_other_vec" text="local" />).
     </p>
 
     <p>
-      (2) <m>\Rightarrow</m> (1). Veronderstel dat een van die vektore in die lys, sê <m>\ve{v}_s</m> 'n lineêre kombinasie van die ander vektore, is. Met ander woorde
+      (<xref ref="lin_comb_other_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="defn_lin_dep" text="local" />). Veronderstel dat een van die vektore in die lys, sê <m>\ve{v}_s</m> 'n lineêre kombinasie van die ander vektore, is. Met ander woorde
       <md>
         <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \text{(Geen } \ve{v}_s \text{terme aan RK.)} </mrow>
       </md>
@@ -213,7 +213,7 @@
     </p>
 
     <p>
-      (1) <m>\Rightarrow</m> (3).
+      (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />).
       Veronderstel dat die lys <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> lineêr afhanklik is. Dit beteken dat daar skalare <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m> bestaan,
       wat nie almal nul is nie, sodat
@@ -249,15 +249,15 @@
       <me>
         \therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r} \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \,
       </me>
-      Daarom geld (3).
+      Daarom geld (<xref ref="lin_comb_prec_vec" text="local" />).
     </p>
 
-     <p> (3) <m>\Rightarrow</m> (2) Veronderstel dat (3) waar is. Met ander woorde geld een van die volgende twee:
+     <p> (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />) Veronderstel dat (<xref ref="lin_comb_prec_vec" text="local" />) waar is. Met ander woorde geld een van die volgende twee:
         <ul>
-          <li> <m>\ve{v}_1 = \ve{0}</m>. Daarom is <m>\basis{B}</m> uit <xref ref="remark_about_lin_dependence"/> lineêr afhanklik. Met ander woorde, (1) is waar. Aangesien ons reeds (1) <m>\Rightarrow </m> (2) bewys het, lei ons af dat (2) waar is. </li>
-          <li> Daar bestaan 'n <m>r \in \{2, \ldots, n\}</m> sodat <m>\ve{v}_r</m> 'n lineêre kombinasie van <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m> is. In hierdie geval is <m>\ve{v}_r</m> duidelik 'n lineêre kombinasie van die ander vektore in <m>\basis{B}</m>, en dus is (2) waar.</li>
+          <li> <m>\ve{v}_1 = \ve{0}</m>. Daarom is <m>\basis{B}</m> uit <xref ref="remark_about_lin_dependence"/> lineêr afhanklik. Met ander woorde, (<xref ref="defn_lin_dep" text="local" />) is waar. Aangesien ons reeds (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow </m> (<xref ref="lin_comb_other_vec" text="local" />) bewys het, lei ons af dat (<xref ref="lin_comb_other_vec" text="local" />) waar is. </li>
+          <li> Daar bestaan 'n <m>r \in \{2, \ldots, n\}</m> sodat <m>\ve{v}_r</m> 'n lineêre kombinasie van <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m> is. In hierdie geval is <m>\ve{v}_r</m> duidelik 'n lineêre kombinasie van die ander vektore in <m>\basis{B}</m>, en dus is (<xref ref="lin_comb_other_vec" text="local" />) waar.</li>
         </ul>
-        In albei gevalle is (2) waar, so (3) <m>\Rightarrow</m> (2).
+        In albei gevalle is (<xref ref="lin_comb_other_vec" text="local" />) waar, so (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />).
     </p>
   </proof>
 

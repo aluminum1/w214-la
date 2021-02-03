@@ -615,13 +615,13 @@
         Then
 
         <ol label="(a)">
-          <li>
+          <li xml:id="lin_map_zero_to_zero_1">
             <p>
               <m>T(\ve{0}_V) = \ve{0}_W</m>;
             </p>
           </li>
 
-          <li>
+          <li xml:id="lin_map_zero_to_zero_2">
             <p>
               <m>T(-\ve{v}) = - T(\ve{v})</m> for all vectors <m>\ve{v} \in V</m>.
             </p>
@@ -633,7 +633,7 @@
 
   <proof>
     <p>
-      We leave (a) as <xref ref="exercise-zero-maps-to-zero" /> and go to work as follows for (b):
+      We leave (<xref ref="lin_map_zero_to_zero_1" text="local" />) as <xref ref="exercise-zero-maps-to-zero" /> and go to work as follows for (<xref ref="lin_map_zero_to_zero_2" text="local" />):
       <md>
         <mrow> T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp  \text{(defn of } -\ve{v} \text{ in } V)</mrow>
         <mrow>\amp = (-1) T(\ve{v}) \amp  (T \text{ is linear)}</mrow>

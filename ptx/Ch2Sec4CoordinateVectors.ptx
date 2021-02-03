@@ -17,20 +17,22 @@
         </p>
         <p>
           <ol label="(a)">
-            <li> <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
+            <li xml:id="prop_bases_give_coordinates-1">
+              <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
             </li>
-            <li> <p> Every vector
-            <m>\ve{v} \in V</m> <em>can</em> be written as a linear combination
-            <men xml:id="trying_to_formulate_basis">
-              \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
-            </men>
-            in precisely <em>one</em> way. (That is,
-            for each <m>\ve{v} \in V</m> there
-            <em>exist</em> scalars <m>a_1</m>,
-            <m>a_2</m>, <m>\ldots</m>,
-            <m>a_n</m> satisfying <xref ref="trying_to_formulate_basis" />,
-            and that moreover these scalars are
-            <em>unique</em>). </p>
+            <li xml:id="prop_bases_give_coordinates-2">
+              <p> Every vector
+              <m>\ve{v} \in V</m> <em>can</em> be written as a linear combination
+              <men xml:id="trying_to_formulate_basis">
+                \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+              </men>
+              in precisely <em>one</em> way. (That is,
+              for each <m>\ve{v} \in V</m> there
+              <em>exist</em> scalars <m>a_1</m>,
+              <m>a_2</m>, <m>\ldots</m>,
+              <m>a_n</m> satisfying <xref ref="trying_to_formulate_basis" />,
+              and that moreover these scalars are
+              <em>unique</em>). </p>
             </li>
           </ol>
         </p>
@@ -50,7 +52,7 @@
 
     <proof>
       <p>
-        First we prove that (a) implies (b).
+        First we prove that (<xref ref="prop_bases_give_coordinates-1" text="local" />) implies (<xref ref="prop_bases_give_coordinates-2" text="local" />).
       </p>
       <p>
         Suppose that the list of vectors <m>\basis{B} = \left\{ \ve{e}_1,
@@ -96,10 +98,10 @@
       </p>
 
         <p>
-          Conversely, we prove that (b) implies (a).
+          Conversely, we prove that (<xref ref="prop_bases_give_coordinates-2" text="local" />) implies (<xref ref="prop_bases_give_coordinates-1" text="local" />).
         </p>
         <p>
-          Conversely, suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
+          Suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
           <me>
             \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
           </me>.
@@ -387,13 +389,13 @@
         Then for all vectors <m>\ve{v}, \ve{w} \in V</m> and all scalars <m>k</m> we have
 
         <ol label="(a)">
-          <li>
+          <li xml:id="lin_of_coord_vectors-1">
             <p>
               <m>[\ve{v} + \ve{w}]_\basis{B} = [\ve{v}]_\basis{B} + [\ve{w}]_\basis{B}</m>
             </p>
           </li>
 
-          <li>
+          <li xml:id="lin_of_coord_vectors-2">
             <p>
               <m>[k \ve{v}]_\basis{B} = k [ \ve{v}]_\basis{B}</m>
             </p>
@@ -405,7 +407,7 @@
 
   <proof>
     <p>
-      (a) Suppose that
+      To prove (<xref ref="lin_of_coord_vectors-1" text="local" />) suppose that
       <md>
         <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n</mrow>
         <intertext>and</intertext>
@@ -424,7 +426,7 @@
     </p>
 
     <p>
-      The proof of (b) is similar.
+      The proof of (<xref ref="lin_of_coord_vectors-2" text="local" />) is similar.
     </p>
   </proof>
 
@@ -478,7 +480,7 @@
   <exercise>
     <statement>
       <p>
-        Prove <xref ref="lin_of_coord_vectors">Lemma</xref>(b) in the case where <m>V</m> is two-dimensional,
+        Prove <xref ref="lin_of_coord_vectors" />(<xref ref="lin_of_coord_vectors-2" text="local" />) in the case where <m>V</m> is two-dimensional,
         so that <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2\right\}</m>.
         Justify each step using the rules of a vector space.
       </p>

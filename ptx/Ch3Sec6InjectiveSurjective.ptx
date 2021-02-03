@@ -198,19 +198,19 @@
         The following statements are equivalent:
 
         <ol label="(a)">
-          <li>
+          <li xml:id="equiv-inj-sur-iso-1">
             <p>
               <m>T</m> is injective.
             </p>
           </li>
 
-          <li>
+          <li xml:id="equiv-inj-sur-iso-2">
             <p>
               <m>T</m> is surjective.
             </p>
           </li>
 
-          <li>
+          <li xml:id="equiv-inj-sur-iso-3">
             <p>
               <m>T</m> is an isomorphism.
             </p>
@@ -220,8 +220,8 @@
     </statement>
   <proof>
     <p>
-      (a) is equivalent to (b) by <xref ref="inj-surj">Lemma</xref>.
-      On the other hand, <q>(a) and (b)</q>  is equivalent to (c) by <xref ref="iso-inj-surj"></xref>.
+      (<xref ref="equiv-inj-sur-iso-1" text="local" />) is equivalent to (<xref ref="equiv-inj-sur-iso-2" text="local" />) by <xref ref="inj-surj">Lemma</xref>.
+      On the other hand, <q>(<xref ref="equiv-inj-sur-iso-1" text="local" />) and (<xref ref="equiv-inj-sur-iso-2" text="local" />)</q>  is equivalent to (<xref ref="equiv-inj-sur-iso-3" text="local" />) by <xref ref="iso-inj-surj"></xref>.
     </p>
   </proof>
 </proposition>

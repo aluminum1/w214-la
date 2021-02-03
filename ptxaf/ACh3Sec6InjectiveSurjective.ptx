@@ -198,19 +198,19 @@
         Die volgende bewerings is ekwivalent:
 
         <ol label="(a)">
-          <li>
+          <li xml:id="equiv-inj-sur-iso-1">
             <p>
               <m>T</m> is injektief.
             </p>
           </li>
 
-          <li>
+          <li xml:id="equiv-inj-sur-iso-2">
             <p>
               <m>T</m> is surjektief.
             </p>
           </li>
 
-          <li>
+          <li xml:id="equiv-inj-sur-iso-3">
             <p>
               <m>T</m> is 'n isomorfisme.
             </p>
@@ -220,8 +220,8 @@
     </statement>
   <proof>
     <p>
-      (a) is ekwivalent aan (b) deur <xref ref="inj-surj">Lemma</xref>.
-      Aan die ander kant is <q>(a) en (b)</q> ekwivalent aan (c) volgens <xref ref="iso-inj-surj"></xref>.
+      (<xref ref="equiv-inj-sur-iso-1" text="local" />) is ekwivalent aan (<xref ref="equiv-inj-sur-iso-2" text="local" />) deur <xref ref="inj-surj">Lemma</xref>.
+      Aan die ander kant is <q>(<xref ref="equiv-inj-sur-iso-1" text="local" />) en (<xref ref="equiv-inj-sur-iso-2" text="local" />)</q> ekwivalent aan (<xref ref="equiv-inj-sur-iso-3" text="local" />) volgens <xref ref="iso-inj-surj"></xref>.
     </p>
   </proof>
 </proposition>

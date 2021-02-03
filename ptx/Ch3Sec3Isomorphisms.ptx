@@ -330,7 +330,7 @@
       <p>
         Show that:
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>\ve{vec}_{V, \basis{B}} (\mat{c} + \mat{c}') = \ve{vec}_{V, \basis{B}} (\mat{c}) + \ve{vec}_{V, \basis{B}} (\mat{c}')</m>
@@ -351,7 +351,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
              <p>
               <md>
@@ -479,11 +479,8 @@
       <p>
         <m>V</m> consists of all vectors <m>(x,y,z,w)</m> satisyfing the linear equations
         <md>
-
-         <mrow> x + 2y - w = 0 </mrow>
-
-         <mrow> -x + y + z = 0 </mrow>
-
+         <mrow> x + 2y - w \amp = 0 \amp (1) </mrow>
+         <mrow> -x + y + z \amp = 0 \amp (2)</mrow>
         </md>.
 
         We are free to choose <m>x</m> and <m> y </m> arbitrarily, but then (1) above fixes <m> w </m> and (2) fixes <m> z </m>. Hence <m> V </m> is a 2 dimensional subspace.

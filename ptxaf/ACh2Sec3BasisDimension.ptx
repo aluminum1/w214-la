@@ -1428,10 +1428,10 @@
                 (a + c)\ve u + (a +b )\ve v + (b + c)w = \ve 0
               </m>
               Aangesien <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> lineêr onafhanklik is, moet ons
-              <md>
-                <mrow> a + c = 0 \qquad (1) </mrow>
-                <mrow> a + b = 0 \qquad (2) </mrow>
-                <mrow> b + c = 0 \qquad (3) </mrow>
+               <md>
+                <mrow> a + c = 0 \amp \amp (1) </mrow>
+                <mrow> a + b = 0 \amp \amp (2) </mrow>
+                <mrow> b + c = 0 \amp \amp (3) </mrow>
               </md> hê.
               <m> (1) + (2) </m> saam met <m> (3) </m> gee aan ons dat <m> a = 0 </m> en dus ook <m> b = c = 0 </m>. Ons lei af dat <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> lineêr onafhanklik is.
             </p>

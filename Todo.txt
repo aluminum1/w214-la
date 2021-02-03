@@ -6,11 +6,11 @@ To do list:
   - brand-maroon: #60223b, RGB(140, 151, 154)
   - brand-gray: #8c979a, RGB(96,34,59)
   - brand-gold: #967140, RGB(150,113,64)
-- Write Python script to change link to Mathjax to the local one on SunLearn and the links to the pretext css files to local versions. Make sure they are available locally, and build in a test for updates. Make sure to test it!
+- Write Python script to change link to Mathjax to the local one on SunLearn and the links to the pretext css files to local versions. Make sure they are available locally, and build in a test for updates. Make sure to test it! Robert Beezer discourages this in the
 - Parts in Theorems and Proofs to (a) etc instead 1. etc. using <ol label="(a)"> (?) [Prop 2.2.8]
 - Some exercises do not have solutions yet.
 - Titles for examples? and Exercises?
-- See if there are any lists (<ol> or <ul>) that can be improved by placing items in columns using the attrbiute @cols = "2" or @cols="3".
+- See if there are any lists (<ol> or <ul>) that can be improved by placing items in columns using the attrbiute @cols="2" or @cols="3".
 
 - Can the first two lemmas in 1.5 be written using more words? And many others...
 - Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
@@ -50,7 +50,6 @@ Ideas for problems and examples:
 
 Use??
 - <objective>?
-- <outcomes>
 - <reading-questions>?
 - <project> or <activity> or <exploration> or <investigation>
 		<introduction />

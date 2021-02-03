@@ -17,20 +17,22 @@
         </p>
         <p>
           <ol label="(a)">
-            <li> <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
+            <li xml:id="prop_bases_give_coordinates-1">
+              <p> <m>\basis{B}</m> is a basis for <m>V</m>. </p>
             </li>
-            <li> <p> Elke vektor
-            <m>\ve{v} \in V</m> <em>kan</em> in <em>presies een manier</em> as 'n lineêre kombinasie
-            <men xml:id="trying_to_formulate_basis">
-              \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
-            </men>
-            geskryf word. (Dit is,
-            vir elke <m>\ve{v} \in V</m>
-            <em>bestaan</em> daar skalare <m>a_1</m>,
-            <m>a_2</m>, <m>\ldots</m>,
-            <m>a_n</m> wat <xref ref="trying_to_formulate_basis" /> bevredig,
-            en verder is sulke skalare
-            <em>uniek</em>). </p>
+            <li xml:id="prop_bases_give_coordinates-2">
+              <p> Elke vektor
+              <m>\ve{v} \in V</m> <em>kan</em> in <em>presies een manier</em> as 'n lineêre kombinasie
+              <men xml:id="trying_to_formulate_basis">
+                \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+              </men>
+              geskryf word. (Dit is,
+              vir elke <m>\ve{v} \in V</m>
+              <em>bestaan</em> daar skalare <m>a_1</m>,
+              <m>a_2</m>, <m>\ldots</m>,
+              <m>a_n</m> wat <xref ref="trying_to_formulate_basis" /> bevredig,
+              en verder is sulke skalare
+              <em>uniek</em>). </p>
             </li>
           </ol>
         </p>
@@ -50,7 +52,7 @@
 
     <proof>
       <p>
-        Ons wys eers dat (a) vir (b) impliseer.
+        Ons wys eers dat (<xref ref="prop_bases_give_coordinates-1" text="local" />) vir (<xref ref="prop_bases_give_coordinates-2" text="local" />) impliseer.
       </p>
       <p>
         Veronderstel dat die lys vektore <m>\ve{e}_1</m>,
@@ -96,10 +98,10 @@
       </p>
 
       <p>
-        Omgekeerd, wys ons dat (b) vir (a) impliseer.
+        Omgekeerd, wys ons dat (<xref ref="prop_bases_give_coordinates-2" text="local" />) vir (<xref ref="prop_bases_give_coordinates-1" text="local" />) impliseer.
       </p>
       <p>
-        Omgekeerd, veronderstel dat elke vektor <m>\ve{v}</m> as 'n unieke lineêre kombinasie
+        Veronderstel dat elke vektor <m>\ve{v}</m> as 'n unieke lineêre kombinasie
         <me>
           \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
         </me> geskryf kan word.
@@ -387,13 +389,13 @@
         Dan het ons dat vir alle vektore <m>\ve{v}, \ve{w} \in V</m> en alle skalare <m>k</m> dat
 
         <ol label="(a)">
-          <li>
+          <li xml:id="lin_of_coord_vectors-1">
             <p>
               <m>[\ve{v} + \ve{w}]_\basis{B} = [\ve{v}]_\basis{B} + [\ve{w}]_\basis{B}</m>
             </p>
           </li>
 
-          <li>
+          <li xml:id="lin_of_coord_vectors-2">
             <p>
               <m>[k \ve{v}]_\basis{B} = k [ \ve{v}]_\basis{B}</m>
             </p>
@@ -405,7 +407,7 @@
 
   <proof>
     <p>
-      (a) Veronderstel dat
+      Om (<xref ref="lin_of_coord_vectors-1" text="local" />) te bewys, veronderstel dat
       <md>
         <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n</mrow>
         <intertext>en</intertext>
@@ -424,7 +426,7 @@
     </p>
 
     <p>
-      Die bewys van (b) is soortgelyk.
+      Die bewys van (<xref ref="lin_of_coord_vectors-2" text="local" />) is soortgelyk.
     </p>
   </proof>
 
@@ -478,7 +480,7 @@
   <exercise>
     <statement>
       <p>
-        Bewys <xref ref="lin_of_coord_vectors">Lemma</xref>(b) in die geval waar <m>V</m> twee-dimensioneel is,
+        Bewys <xref ref="lin_of_coord_vectors">Lemma</xref>(<xref ref="lin_of_coord_vectors-2" text="local" />) in die geval waar <m>V</m> twee-dimensioneel is,
         sodat <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2\right\}</m>.
         Verduidelik elke stap met die toepaslike reël van 'n vektorruimte.
       </p>

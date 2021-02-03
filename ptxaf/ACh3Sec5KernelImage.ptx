@@ -90,7 +90,7 @@
         Laat <m>T : V \rightarrow W</m> 'n lineêre afbeelding wees.
         Dan:
 
-        <ol label="a">
+        <ol label="(a)">
           <li>
             <p>
               <m>\Ker(T)</m> is 'n deelruimte van <m>V</m>
@@ -111,7 +111,7 @@
     <p>
       In albei gevalle moet ons seker maak dat die drie vereistes van 'n  deelruimte bevredig word.
 
-      <ol>
+      <ol label="(a)">
         <li>
 
           <p>
@@ -163,7 +163,7 @@
     <p>
       Nou bevestig ons dat <m>\Be(T)</m> die drie vereistes bevredig.
 
-      <ol>
+      <ol label="(a)">
         <li>
 
           <p>
@@ -1083,9 +1083,9 @@
           <mrow>
           \Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: </mrow>
           <mrow>
-           b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \} </mrow>
+           b\frac{\pi}{2} + e\frac{4}{3} = 0 \quad \text{and}\quad  c\frac{\pi}{2} - d\frac{2}{3} = 0 \} </mrow>
         </md>.
-        Ons is vry om  <m> a </m> op enige manier te kies, want die konstante sal nie enige van die integrale beïnvloed nie. Ons kan ook <m> b </m> vryelik kies, maar dan word <m> e </m> uit (1) bepaal. Soortgelyk kan ons <m> c </m> kies, maar dan word <m> d </m> uit (2) bepaal.
+        Ons is vry om  <m> a </m> op enige manier te kies, want die konstante sal nie enige van die integrale beïnvloed nie. Ons kan ook <m> b </m> vryelik kies, maar dan word <m> e </m> uit die eerste voorwaarde bepaal. Soortgelyk kan ons <m> c </m> kies, maar dan word <m> d </m> uit die twwede voorwaarde bepaal.
         Dus is <me>
         \Nullity(S) = 3.
         </me>
@@ -1180,7 +1180,7 @@
         As dit waar is, bewys dit.
         Indien nie, bewys dit.
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Daar bestaan 'n lineêre afbeelding <m>T : \mathbb{R}^5 \rightarrow \mathbb{R}^2</m> sodat
@@ -1201,7 +1201,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Hierdie bewering is onwaar. Om dit te sien, let op dat as so 'n afbeelding bestaan het, dan sou sy kern 2-dimensioneel wees, want enige keuse van <m> x_1</m> en <m>x_3 </m> bepaal 'n element in <m>\Ker(T)</m> uniek. Maar dan sê die Rang-Nulheidsgraadstelling dat <m> \Rang(T) = 3 </m>, want <m> \mathbb R^5 </m> is 5 dimensioneel. Maar <m>\Be(T)</m> is 'n deelruimte van <m>\mathbb R^2</m> <mdash/> dit is belaglik, want <m> \mathbb R^2 </m> is self  2-dimensioneel.
@@ -1234,7 +1234,7 @@
           <mrow>\ve{u} \amp \mapsto (\nabla f)(\ve{p}) \cdot \ve{u}</mrow>
         </md> sien.
 
-        <ol>
+        <ol label="(a)">
           <li>
             <p>
               Wys dat <m>D_{\ve{p}}</m> soos hierbo gedefinieer 'n lineêre afbeelding is.
@@ -1252,7 +1252,7 @@
     </statement>
     <solution>
       <p>
-        <ol>
+        <ol label="(a)">
 
           <li>
             <p>

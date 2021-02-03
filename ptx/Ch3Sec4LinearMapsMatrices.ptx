@@ -598,7 +598,7 @@
         </me>
         be the <q>shift by <m>\frac{\pi}{6}</m></q> map,
         <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
-        <ol>
+        <ol label="(a)">
           <li>
             Compute <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> with respect to the standard basis <m>\basis{C}</m> of <m>\Trig_2</m>.
           </li>

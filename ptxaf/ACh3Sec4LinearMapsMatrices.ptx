@@ -598,7 +598,7 @@
         </me>
         die <q>skuif met <m>\frac{\pi}{6}</m></q>-afbeelding wees,
         <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
-        <ol>
+        <ol label="(a)">
           <li>
             Bereken <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> met betrekking tot die standaardbasis <m>\basis{C}</m> van <m>\Trig_2</m>.
           </li>
