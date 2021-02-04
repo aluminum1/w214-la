@@ -1,13 +1,13 @@
 
 
 <subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch3Sec5RowColNullSpaces">
-  <title>The Row Space, Column Space and Null Space of a Matrix <mdash /> how to compute the kernel and image</title>
+  <title>The Row Space, Column Space and Null Space of a Matrix <mdash /> How to Compute the Kernel and Image</title>
 
   <p>
     Now that we have defined linear maps, kernels of
     linear maps and images of linear maps,
     we may want to compute each of the kernel and image with relative ease.
-    What does it mean to <q>compute</q> a vector space. If it is finite-dimensional,
+    What does it mean to <q>compute</q> a vector space? If it is finite-dimensional,
     then a basis specifies it precisely and gives us immediate information about the dimension.
     A second prize is giving a spanning set. This also uniquely determines the elements of the vector space, but has the drawback that we cannot easily read off the dimension.
     One can always take a set that spans a vector space ad sift it until what remains is a basis.
@@ -87,7 +87,7 @@
   <definition>
     <statement>
       <p>
-        For an <m>m\times n</m> matrix <m>A</m>, the <term>null space of <m>A</m></term> consists of all <m>v\in \Col_n</m> such that <m>A\cdot v = 0</m>, the zero vector in <m>\Col_m</m>.
+        For an <m>m\times n</m> matrix <m>A</m>, the <term>null space of <m>A</m></term> consists of all <m>v\in \Col_n</m> such that <m>A\cdot v = \ve 0_{\Col_m}</m>.
       </p>
     </statement>
   </definition>
@@ -194,7 +194,7 @@
         The matrix
         <me> A=\begin{bmatrix} 1\amp 1\amp 1\amp 1\\ 1\amp 2\amp 3\amp 2\\ 2\amp 3\amp 4\amp 0 \end{bmatrix}</me>
         has a reduced row echelon form
-        <me> R = \begin{bmatrix} 1\amp 0\amp -1\amp 0\\ 0\amp 1\amp 2\amp 0\\ 0\amp 0\amp 0\amp 1\end{bmatrix}.</me>
+        <me> R = \begin{bmatrix} 1\amp 0\amp -1\amp 0\\ 0\amp 1\amp 2\amp 0\\ 0\amp 0\amp 0\amp 1\end{bmatrix}</me>.
         Thus, a basis for its row space is <m> (1,0,-1,0), (0,1,2,0), (2,3,4,0)</m>, a basis for its null space is
         <me> \begin{bmatrix} 1 \\ -2 \\ 1\\ 0 \end{bmatrix}</me>
         and a basis for its column space is
@@ -204,7 +204,8 @@
   </example>
 
   <p>
-    In the proofs of the next two lemmas, we will distinguish the three types of elementary row operation: <dl width="narrow">
+    In the proofs of the next two lemmas, we will distinguish the three types of elementary row operation:
+    <dl width="narrow">
       <li xml:id="row-op-type-A">
         <title>Type (A)</title>
         <p> multiplying a row with a non-zero scalar;</p>
@@ -232,7 +233,7 @@
       </p>
       <p>
         For the other two cases, denote the rows of <m>A</m> by <m>r_1,\ldots, r_m</m> and the rows of <m>B</m> by <m>r_1,\ldots, r'_i,\ldots, r_m</m>, the only change being that <m>r_i</m> is replaced with <m>r'_i</m>, which could be either <m>k\cdot r_i</m> or <m>r_i+k\cdot r_j</m> depending on which type of elementary row operation we are treating. We show that
-        <me> span(r_1,\ldots, r_m) = span(r_1,\ldots, r_m,r'_i) = span(r_1,\ldots, r'_i,\ldots, r_m), </me>
+        <me> span(r_1,\ldots, r_m) = span(r_1,\ldots, r_m,r'_i) = span(r_1,\ldots, r'_i,\ldots, r_m) </me>,
         where the first set contains the rows of <m>A</m>, the last contains the rows of <m>B</m> and the middle set contains all the common rows and both versions of the row that is changed. Clearly the first and third sets are contained in the middle set, so it remains to show the other inclusions. But in both cases <m>r_i</m> is a linear combination of <m>r'_i</m> and <m>r_j</m>, so the span isn't changed by removing it; and <m>r'_i</m> is a linear combination of <m>r_i</m> and <m>r_j</m>, so the span isn't changed it it is removed. (Note however, that the span might change if both <m>r_i</m> and <m>r'_i</m> are removed!)
       </p>
     </proof>
@@ -261,12 +262,12 @@
         still holds. In the row that changes, row <m>r</m>, we have
         <me> c_1b_{r1}+\cdots + c_nb_{rn} = c_1(ka_{r1})+\cdots +c_n(ka_{rn}) = k(c_1a_{r1}+\cdots + c_na_{rn}) = 0.</me>
         Thus, in all, the linear relation between column vectors holds:
-        <me> c_1\begin{bmatrix} b_{11}\\ b_{21}\\ \vdots \\ b_{m1} \end{bmatrix} + c_2\begin{bmatrix} b_{12}\\ b_{22}\\ \vdots \\ b_{m2} \end{bmatrix} + \cdots + c_n\begin{bmatrix} b_{1n}\\ b_{2n} \\ \vdots \\ b_{mn} \end{bmatrix} = \begin{bmatrix} 0\\  \vdots \\ 0 \end{bmatrix}.</me>
+        <me> c_1\begin{bmatrix} b_{11}\\ b_{21}\\ \vdots \\ b_{m1} \end{bmatrix} + c_2\begin{bmatrix} b_{12}\\ b_{22}\\ \vdots \\ b_{m2} \end{bmatrix} + \cdots + c_n\begin{bmatrix} b_{1n}\\ b_{2n} \\ \vdots \\ b_{mn} \end{bmatrix} = \begin{bmatrix} 0\\  \vdots \\ 0 \end{bmatrix}</me>.
       </p>
       <p>
         Type (B) operations: In this case two rows are swapped, say rows <m>r</m> and <m>\ell</m>. Then for each <m>i</m> we have <m>b_{\ell i} = a_{ri}</m> and <m>b_{ri} = a_{\ell i}</m>. Then in rows <m>r</m> and <m>\ell</m> of <m>B</m> we have the relations
         <me> c_1b_{r1}+\cdots + c_nb_{rn} = c_1a_{\ell 1}+\cdots + c_na_{\ell n} = 0</me>
-        and \
+        and
         <me>c_1b_{\ell 1} + \cdots + c_nb_{\ell n} = c_1a_{r1}+\cdots + c_na_{rn} = 0.</me>
         Thus in this case too we have the same linear relation between the column vectors of <m>B</m>.
       </p>

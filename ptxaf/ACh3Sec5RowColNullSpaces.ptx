@@ -1,0 +1,306 @@
+
+
+<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch3Sec5RowColNullSpaces">
+  <title>Die Ryruimte, Kolomruimte en Nulruimte van 'n Matriks <mdash /> Hoe om die Kern en Beeld te Bereken</title>
+
+  <p>
+    Nou dat ons lineêre afbeeldings,
+    hul kerns en hul beelde gedefinieer het,
+    wil ons dalk 'n manier hê om elkeen van die kern en beeld redelik maklik te bereken.
+    Wat beteken dit om 'n vektorruimte te <q>bereken</q>? Indien dit indig-dimensioneel is,
+    dan spesifiseer 'n basis dit presies en dit gee vir ons inligting oor sy dimensie.
+    Tweede prys sou wees om 'n versameling te gee wat dit onderspan. Dit bepaal ook die versameling elemente in die vektorruimte, maar dit het die nadeel dat ons nie direk die dimensie kan aflees nie.
+    Ons kan altyd 'n versameling neem wat die vektorruimte onderspan en dan sif totdat ons 'n basis het.
+    Dit is 'n korrekte alternatief, maar ons gaan in hierdie afdeling sien
+    dat ons die berekening kan doen deur iets te gebruik wat ons al baie in die verlede gebruik het
+    <mdash /> die rytrapvorm van 'n matriks!
+  </p>
+  <p>
+    Natuurlik kan ons reeds die beeld van 'n lineêre afbeelding bereken.
+    Ons kan eenvoudig die versameling beelde van die vektore in 'n basis vir die definisieversameling gebruik
+    en dit sif totdat 'n basis vir die beeld oorbly.
+    Die idees wat ons nou gaan beskryf het die voordeel
+    dat hulle gelyktydig 'n paar vrae beantwoord,
+    rakend die beeld, die kern, en 'n ander verwante ruimte wat ons nog nie sover gesien het nie.
+  </p>
+  <p>
+    Die drie vektorruimtes wat ons gaan definieer word almal in terme van 'n matriks gedefinieer.
+    So een ding om in gedagte te hou is dat vir 'n algemene lineêre afbeelding
+    ons eers die matriks vir die afbeelding sal moet bereken voor ons vrae oor sy kern en beeld kan beantwoord.
+  </p>
+  <p>
+    Ons definieer eers die kolomruimmte van 'n matriks. Gegee 'n <m>m\times n</m> matriks <m>A</m>, kan ons dit sien as 'n matriks van <m>n</m> kolomvektore <m> [ c_1\mid c_2\mid \cdots \mid c_n]</m>. Elkeen van die <m>c_i</m> is 'n <m>n\times 1</m> kolomvektor en dus 'n element van <m>\Col_n</m>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Vir 'n <m>m\times n</m> matriks <m>A</m> definieer ons die <term>kolomruimte van <m>A</m></term> as die span van die kolomvektore <m>c_i</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Aangesien die span van 'n versameling vektore geslote is onder optelling en skalaarvermenigvuldiging, is die kolomruimte van <m>A</m> 'n deelruimte van <m>\Col_n</m>.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Indien
+        <me>A = \begin{bmatrix} 1\amp 1\amp 0\\ 0\amp 1\amp 1 \end{bmatrix},</me>
+        dan word die kolomruimte van <m>A</m> onderspan deur die kolomvektore
+        <me> \begin{bmatrix} 1\\0\end{bmatrix}, \begin{bmatrix} 1\\1\end{bmatrix}, \begin{bmatrix} 0\\1 \end{bmatrix}</me>.
+        Maar die derde een is 'n lineêre kombinasie van die eerste twee, en kan dus uit die versameling gehaal word wat vir die kolomruimte onderspan. Ons kan selfs sien dat dat die kolomruimte van <m>A</m> die hele <m>\Col_2</m> is.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Wanneer ons die ryruimte van 'n matriks wil doen, doen ons basies dieselfde ding, behalwe dat ons die <m>m\times n</m> matriks <m>A</m> opbreek in sy ryvektore
+    <me> \begin{bmatrix} r_1\\ r_2\\ \vdots \\ r_m\end{bmatrix}. </me>
+    Ons definieer dan die ryruimte as die span van hierdie vektore. Dit sal 'n deelruimte van <m>\Row_n</m> wees.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Vir 'n <m>m\times n </m> matriks <m>A</m> definieer ons die <term>ryruimte van <m>A</m></term> as die span van die vektore <m>r_i</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        In die vorige voorbeeld
+        <me>A = \begin{bmatrix} 1\amp 1\amp 0\\ 0\amp 1\amp 1 \end{bmatrix},</me>
+        het dit gebeur dat die twee rye lineêr onafhanklik was. Dus het hulle nie net die ryruimte van <m>A</m> onderspan nie, maar vorm ook 'n basis daarvoor. Let op dat beide die ryruimte en die kolomruimte van <m>A</m> dimensie 2 het.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Die nulruimte van 'n matriks word nie opgemaak uit vektore in die matriks <m>A</m> nie. Dit is eerder 'n versameling kolomvektore wat met <m>A</m> vermenigvuldig kan word. Aangesien <m>A</m> 'n <m>m\times n</m> matriks is, beteken dit dat die elemente in die nulruimte bestaan uit <m>n\times 1</m> kolomvektore.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Vir 'n <m>m\times n</m> matriks <m>A</m>, bestaan die <term>nulruimte van <m>A</m></term> uit alle <m>v\in \Col_n</m> sodat <m>A\cdot v = \ve 0_{\Col_m}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat die nulruimte van <m>A</m> 'n deelruimte van <m>\Col_n</m> is.
+      </p>
+    </statement>
+  </exercise>
+
+  <example xml:id="example-">
+    <statement>
+      <p>
+        Kom ons gebruik weer dieselfde voorbeeld:
+        <me>A = \begin{bmatrix} 1\amp 1\amp 0\\ 0\amp 1\amp 1 \end{bmatrix}.</me>
+        Dus is 'n vektor <m>v = \begin{bmatrix} x\\y\\z \end{bmatrix}</m> in die nulruimte van <m>A</m> as en slegs as
+        <md>
+          <mrow> x + y \phantom{ + z} \amp = 0 </mrow>
+          <mrow> \phantom{x + } y +z \amp = 0 </mrow>
+        </md>.
+        Met ander woorde, ons moet hê dat <m>y = -z</m> en <m>x=-y=z</m>. Dus bestaan die nulruimte uit presies die vektore <m>\begin{bmatrix} z\\-z\\z \end{bmatrix}</m>. Let op:
+        <ol>
+          <li> dit bevredig die Rang-Nulheid Stelling <mdash /> die nulruimte is 1-dimensioneel, die kolomruimte het dimensie 2 en die definisieversameling het dimensie 3;</li>
+          <li> dat ons dieselfde metode gebruik om stelsels lineêre vergelykings op te losas om vektore in die nulruimte te bereken.</li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Aagesien ons op die ou end hierdie drie ruimtes vir 'n algemene matriks wil vergelyk met die ooreenkomstige ruimtes vir sy rytrapvorm, gaan ons begin deur matrikse in rytrapvorm te bestudeer.
+  </p>
+
+  <p>
+    In die volgende stelling verwys ons na leidende inskrywings. Onthou dat as 'n matriks in rytrapvorm is, word die eerste nie-nul inskrywing van elke nie-nul ry 'n <em>leidende inskrywing</em> genoem. Let op dat elke kolom óf nul óf een leidende inskrywings het.
+  </p>
+
+  <proposition>
+    <statement>
+      <p>
+        Veronderstel dat <m>A</m> 'n matriks in rytrapvorm is. Dan
+        <ol label="(a)">
+          <li> vorm die nie-nul rye van <m>A</m> 'n basis vir die ryruimte vn <m>A</m>;</li>
+          <li> vorm die kolomme van <m>A</m> wat 'n leidende inskrywing bevat 'n basis vir die kolomruimte van  <m>A</m>.</li>
+        </ol>
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Vir (a), neem ons al die nie-nul rye, so dit is duidelik dat hierdie rye die ryruimte van <m>A</m> sal onderspan. Al wat ons nog hoef te wys is dat hulle ook lineêr onafhanklik is.
+      </p>
+      <p>
+        Die idee is dat geen ry 'n leidende inskrywing van 'n ry bo dit kan beïnvloed nie. Op hierdie manier kan ons een vir een van bo na onder aflei dat enige koëffisiënte van 'n lineêre verband tussen die rye nul moet wees.
+      </p>
+      <p>
+        Vir (b) wys ons dat as ons die siftingsproses op die versameling kolomvektore toepas, dan bly ons oor met presies daardie kolomme met 'n leidende inskrywing. Om te sien dat so 'n kolom nie verwyder sal word nie, let op dat sy leidende inskrywing 'n nie-nul inskrywing is in 'n posisie waar alle voorafgaande kolomme 'n nulle gehad het. Dit beteken dat dit nie as 'n lineêre kombinasie van voorafgaande vektore geksryf kan word nie.
+      </p>
+      <p>
+       Aan die ander kant, veronderstel dat 'n kolomvektor nie 'n leidende inskrywing het nie en veronderstel dat daar <m>k</m> kolomvektore links daarvan oorbly. Dan het hierdie <m>k+1</m>-ste kolomvektor net nulle onder sy <m>k</m>-ste inskrywing. Aangesien daar <m>k</m> lineêr onafhanklike vektore voor dit was, kan dit dus altyd as 'n lineêre kombinasie van voorafgaande vektore geskryf word en sal dus tydens die siftingsproses verwyder word.
+      </p>
+    </proof>
+  </proposition>
+
+  <example>
+    <statement>
+      <p>
+        As
+        <me> A = \begin{bmatrix} 1\amp 1\amp 2\amp -1\amp 0\\ 0\amp 0\amp 3\amp 2\amp -1 \\ 0\amp 0\amp 0\amp 2\amp 1 \\ 0\amp 0\amp 0\amp 0\amp 0   \end{bmatrix}, </me>
+        dan vorm die vektore
+        <me> (1,1,2,-1,0), (0,0,3,2,-1), (0,0,0,2,1)</me>
+        'n basis vir sy ryruimte en die vektore
+        <me> \begin{bmatrix} 1\\0\\0\\0 \end{bmatrix}, \begin{bmatrix} 2\\3\\0\\0\\ \end{bmatrix}, \begin{bmatrix} -1\\2\\2\\0 \end{bmatrix}</me>
+        'n basis vir sy kolomruimte. 'n Basis vir sy nulruimte kan bereken word deur die tweede en vyfde veranderliked as vrye veranderlikes te sien. Die algemene oplossing is
+        <me> \begin{bmatrix} -s-\frac{11}{6}t\\ s \\ \frac{2}{3}t\\ -\frac{1}{2}t\\t\end{bmatrix}.</me>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    As ons nou hierdie drie ruimtes wil bereken van 'n matriks wat nie in rytrapvorm is nie, dan is die rytrapvorm van daardie matriks nogsteeds baie nuttig in die proses. Die ryruimte en nulruimte van die rytrapvorm is gelyk aan die ryruimte en nulruimte van die oorspronklike matriks. Die kolomruimtes is verskillend, maar beide het basisse wat bestaan uit die ooreenkomstige kolomvektore (bv. eerste, derde en vyfde van albei). Hier is die volledige bewering:
+  </p>
+
+  <theorem xml:id="thm_spaces_of_row_reduction">
+    <statement>
+      <p>
+        Laat <m>A</m> 'n matriks wees en veronderstel dat <m>R</m> 'n rytrapvorm vir <m>A</m> is. Dan
+        <ol label="(a)">
+          <li> is die ryruimte van <m>A</m> gelyk aan die ryruimte van <m>R</m>;</li>
+          <li> is die nulruimte van <m>A</m> gelyk aan die nulruimte van <m>R</m>;</li>
+          <li> vorm die kolomme van <m>A</m> wat ooreenstem met kolomme van <m>R</m> wat leidende inskrywings bevat 'n basis vir die kolomruimte van <m>A</m>.</li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Ons sal dit nie dadelik bewys nie, omdat ons 'n Hulpstelling sal nodig hê om dit ordentlik te doen. Ons let egter hier dat aangesien die ryruimtes van <m>A</m> en <m>R</m> gelyk is, kan dieselfde basis vir beide van hulle gebruik word. Soortgelyk kan ons dieselfde basis vir die nulruimtes van <m>A</m> en <m>R</m> gebruik.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Die matriks
+        <me> A=\begin{bmatrix} 1\amp 1\amp 1\amp 1\\ 1\amp 2\amp 3\amp 2\\ 2\amp 3\amp 4\amp 0 \end{bmatrix}</me>
+        het 'n gereduseerde rytrapvorm'
+        <me> R = \begin{bmatrix} 1\amp 0\amp -1\amp 0\\ 0\amp 1\amp 2\amp 0\\ 0\amp 0\amp 0\amp 1\end{bmatrix}</me>.
+        Dus is 'n basis vir sy ryruimte <m> (1,0,-1,0), (0,1,2,0), (2,3,4,0)</m>, 'n basis vir sy nulruimte
+        <me> \begin{bmatrix} 1 \\ -2 \\ 1\\ 0 \end{bmatrix}</me>
+        en 'n basis vir sy kolomruimte
+        <me> \begin{bmatrix} 1\\1\\2\end{bmatrix}, \begin{bmatrix} 1\\2\\3 \end{bmatrix}, \begin{bmatrix} 1\\2\\0 \end{bmatrix} </me>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    In die bewyse van die volgende twee hulpstellings, sal ons die drie soorte elementêre rybewerkings onderskei:
+    <dl width="narrow">
+      <li xml:id="row-op-type-A">
+        <title>Tipe (A)</title>
+        <p> vermenigvuldig 'n ry met 'n nie-nul skalaar;</p>
+      </li>
+      <li xml:id="row-op-type-B">
+        <title>Tipe (B)</title>
+        <p> ruil twee rye om; en</p>
+      </li>
+      <li xml:id="row-op-type-C">
+        <title>Tipe (C)</title>
+        <p> tel 'n skalaarveelvoud van een ry by 'n ander ry.</p>
+      </li>
+    </dl>
+  </p>
+
+  <lemma xml:id="lem_row_operations_dont_change_span">
+    <statement>
+      <p>
+        Indien <m>A</m> 'n matriks is en <m>B</m> die matriks is at verkry word deur 'n elementêre ry-operasie op <m>A</m> toe te pas, dan het <m>A</m> en <m>B</m> dieselfde ryruimtes en dieselfde nulruimtes.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Duidelik, in geval <xref ref="row-op-type-B" text="title" /> waar ons twee rye omruil, bly die ryruimte dieselfde, omdat dit deur dieselfde versmaeling vektore (in 'n ander volgorde) onderspan word.
+      </p>
+      <p>
+        Vir die ander twee gevalle dui ons die rye van <m>A</m> met <m>r_1,\ldots, r_m</m> en die rye van <m>B</m> met <m>r_1,\ldots, r'_i,\ldots, r_m</m>waar die enigste verskil is dat ry <m>r_i</m> vervang is met ry <m>r'_i</m>, wat \'of <m>k\cdot r_i</m> \'of <m>r_i+k\cdot r_j</m> kan wees afhangend van watter tipe ry-operasie ons hanteer. Ons wys dat
+        <me> span(r_1,\ldots, r_m) = span(r_1,\ldots, r_m,r'_i) = span(r_1,\ldots, r'_i,\ldots, r_m) </me>,
+        waar die eerste versameling die rye van <m>A</m> bevat, die laaste die rye van <m>B</m> bevat en die middelste een all die rye bevat wat hulle in gemeen het, sowel as beide weergawes van die ry wat verander. Duidelik is die eerste en derde versamelings bevat in die middelste een, so dit bly oor om die ander insluitings te wys. Maar in beide gevalle is <m>r_i</m> 'n lineêre kombinasie van <m>r'_i</m> en <m>r_j</m>, so die span word nie verander deur dit te verwyder nie; en  <m>r'_i</m> is 'n lineêre kombinasie van <m>r_i</m> en <m>r_j</m>, so die span word ook nie verander as ons dit verwyder nie. (Let egter op dat die span kan verander indien ons beide van hulle verwyder!)
+      </p>
+    </proof>
+  </lemma>
+
+  <lemma xml:id = "lem_row_operations_linear_relations">
+    <statement>
+      <p>
+        Indien <m>A</m> 'n matriks is en <m>B</m> verkry word deur 'n elementêre ry-operasie op <m>A</m> toe te pas, dan geld enige lineêre verband wat tussen die kolomvektore van <m>A</m> geld ook tussen die kolomvektore van <m>B</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Dui die matrikse <m>A</m> en <m>B</m> met
+        <me> A = \begin{bmatrix} a_{11}\amp a_{12}\amp \cdots\amp a_{1n}\\ a_{21}\amp a_{22}\amp \cdots \amp  a_{2n}\\ \vdots \amp \amp \amp \vdots \\ a_{m1}\amp a_{m2}\amp \cdots \amp  a_{mn}\end{bmatrix} \quad\text{and}\quad B = \begin{bmatrix} b_{11}\amp b_{12}\amp \cdots\amp b_{1n}\\ b_{21}\amp b_{22}\amp \cdots \amp  b_{2n}\\ \vdots \amp \amp \amp \vdots \\ b_{m1}\amp b_{m2}\amp \cdots \amp  b_{mn} \end{bmatrix} </me>
+        aan en veronderstel dat die volgende verband tussen die kolomvektore van <m>A</m> geld:
+        <me> c_1\begin{bmatrix} a_{11}\\ a_{21}\\ \vdots \\ a_{m1} \end{bmatrix} + c_2\begin{bmatrix} a_{12}\\ a_{22}\\ \vdots \\ a_{m2} \end{bmatrix} + \cdots + c_n\begin{bmatrix} a_{1n}\\ a_{2n} \\ \vdots \\ a_{mn} \end{bmatrix} = \begin{bmatrix} 0\\  \vdots \\ 0 \end{bmatrix}</me>
+      </p>
+      <p>
+        Ons behandel nou die gevalle volgend die tipe elementêre ry-operasie.
+      </p>
+
+      <p>
+        Tipe (A) bewerkings: Veronderstel dat ry <m>r</m> verander na 'n nie-nul skalaarveelvoud van homself, sê vir elke <m>i</m> geld <m>b_{ri} = k\cdot a_{ri}</m>. Dan het ons in alle ander rye, sê ry<m>\ell\ne r</m>, dat <m>b_{\ell i}=a_{\ell i}</m> en dus geld die lineêre verband
+        <me> c_1b_{\ell 1}+\cdots + c_nb_{\ell n} = 0</me>
+        steeds. In die ry wat verander, ry <m>r</m>, het ons
+        <me> c_1b_{r1}+\cdots + c_nb_{rn} = c_1(ka_{r1})+\cdots +c_n(ka_{rn}) = k(c_1a_{r1}+\cdots + c_na_{rn}) = 0.</me>
+        Dus, in totaal, geld die lineêre verband steeds tussen kolomvektore:
+        <me> c_1\begin{bmatrix} b_{11}\\ b_{21}\\ \vdots \\ b_{m1} \end{bmatrix} + c_2\begin{bmatrix} b_{12}\\ b_{22}\\ \vdots \\ b_{m2} \end{bmatrix} + \cdots + c_n\begin{bmatrix} b_{1n}\\ b_{2n} \\ \vdots \\ b_{mn} \end{bmatrix} = \begin{bmatrix} 0\\  \vdots \\ 0 \end{bmatrix}</me>.
+      </p>
+      <p>
+        Tipe (B) bewerkings: In hierdie geval word twee rye omgeruil, sê rye <m>r</m> en <m>\ell</m>. Dan het ons vir elke <m>i</m> dat <m>b_{\ell i} = a_{ri}</m> en <m>b_{ri} = a_{\ell i}</m>. Dan het ons in rye <m>r</m> en <m>\ell</m> van <m>B</m> die verbande
+        <me> c_1b_{r1}+\cdots + c_nb_{rn} = c_1a_{\ell 1}+\cdots + c_na_{\ell n} = 0</me>
+        en
+        <me>c_1b_{\ell 1} + \cdots + c_nb_{\ell n} = c_1a_{r1}+\cdots + c_na_{rn} = 0.</me>
+        Dus geld dieselfde lineêre verband tussen die kolomvektore van <m>B</m>.
+      </p>
+      <p>
+        Tipe (C) bewerkings: Veronderstel dat vir elke <m>i</m> het ons <m>b_{ri} = a_{ri}+k\cdot a_{\ell i}</m>. Dan is
+        <md>
+          <mrow>
+            c_1b_{r1}+\cdots + c_nb_{rn} \amp = c_1 (a_{r1}+ka{\ell i}) + \cdots c_n (a_{rn}+ka_{\ell n})</mrow>
+          <mrow>
+            \amp = (c_1a_{r1}+\cdots + c_na_{rn}) + k(c_1a_{\ell i}+\cdots + c_n a_{\ell n})
+          </mrow>
+          <mrow>
+            \amp = 0 + k(0) = 0
+          </mrow>
+        </md>.
+        In hierdie geval geld die verband weereend tussen die kolomme van <m>B</m>.
+      </p>
+    </proof>
+  </lemma>
+
+  <p>
+    Let op dat aangesien elke elementêre ry-operasie inverteerbaar is deur 'n ander elementêre ry-operasie tie te pas, gaan dit beide kante toe. Enige lineêre verband wat tussen die kolomme van <m>B</m> geld, moet ook tussen die kolomme van <m>A</m> geld. Dus geld presies dieselfde lineêre verbande tussen beide versamelings kolomvektore. In besonder, indien 'n versameling kolomvektore lineêr onafhanklik is in een van die twee matriks, dan is die ooreenkomstige versameling kolomvektore ook lineêr onafhanklik in die ander matriks.
+  </p>
+
+  <proof>
+    <title> Bewys van <xref ref="thm_spaces_of_row_reduction"/> </title>
+    <p>
+      Let op dat die rytrapvorm  <m>R</m> van 'n matriks <m>A</m> verkry word deur 'n reeks elementêre ry-operasies toe te pas. Uit  By <xref ref="lem_row_operations_dont_change_span"/>, beteken dit dat  <m>A</m> en <m>R</m> dieselfde ryruimte en dieselfde nulruimte het.
+    </p>
+    <p>
+      Vir die kolomruimtes, veronderstel dat ons die siftingsproses op elkeen van die twee matrikse se kolomvektore toepas, in die volgorde waarin hulle voorkom. Dan, wanneer okal 'n kolom uit die een verwyder word, moes daar 'n lineêre verband wees tussen daardie kolomvektore en die voorafgaande kolomvektore. Maar uit <xref ref="lem_row_operations_linear_relations" /> geld hierdie selfde lineêre verband dan ook tussen die kolomvektore van die ander matriks, wat beteken dat dit ook uit daardie een se lys vektore verwyder sal word. Wanneer die proses klaar is aan die rytrapvorm kant, is ie oorblywende vektore lineêr onafhanklik. Die ooreenkomstige kolomme in <m>A</m> moet dan ook lineêr onafhanklik wees, anders sou hulle 'n verband bevredig het wat nie deur die kolomme in <m>R</m> bevredig word nie.
+    </p>
+  </proof>
+
+</subsection>

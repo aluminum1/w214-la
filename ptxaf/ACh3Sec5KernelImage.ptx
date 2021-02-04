@@ -1,7 +1,11 @@
 
 
-<section xml:id="ACh3Sec5KernelRange">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ACh3Sec5KernelRange">
   <title>Kern en Beeld 'n Lineêre Afbeelding</title>
+
+  <subsection>
+  <title> Kern en Beeld vir Willekeurige Lineêre Afbeeldings</title>
+
   <definition>
     <statement>
       <p>
@@ -862,6 +866,10 @@
       </p>
     </statement>
   </example>
+
+</subsection>
+
+  <xi:include href="./ACh3Sec5RowColNullSpaces.ptx" />
 
 <exercises>
   <exercise>
