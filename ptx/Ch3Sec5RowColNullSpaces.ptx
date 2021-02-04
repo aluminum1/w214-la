@@ -1,0 +1,304 @@
+
+
+<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch3Sec5RowColNullSpaces">
+  <title>The Row Space, Column Space and Null Space of a Matrix <mdash /> how to compute the kernel and image</title>
+
+  <p>
+    Now that we have defined linear maps, kernels of
+    linear maps and images of linear maps,
+    we may want to compute each of the kernel and image with relative ease.
+    What does it mean to <q>compute</q> a vector space. If it is finite-dimensional,
+    then a basis specifies it precisely and gives us immediate information about the dimension.
+    A second prize is giving a spanning set. This also uniquely determines the elements of the vector space, but has the drawback that we cannot easily read off the dimension.
+    One can always take a set that spans a vector space ad sift it until what remains is a basis.
+    This is perfectly fine, but we shall see in this section
+    that we can do the computation using something we have already seen many times in the past
+    <mdash /> the row echelon form of a matrix!
+  </p>
+  <p>
+    Of course, we can already compute the image of a linear map.
+    We could simply take the set of images of basis vectors of the domain
+    and sift them until we are left with a basis for the image of the linear map.
+    The ideas that we are about to described have the advantage
+    that they answer simultaneously the questions of computing the image, the kernel,
+    and another related space that we have not dealt with so far.
+  </p>
+  <p>
+    The three vector spaces that we will define are all defined in terms of a matrix.
+    So one thing to keep in mind is that for a general linear map,
+    we first have to compute the matrix associated to it before we can answer questions about its kernel and image.
+  </p>
+  <p>
+    First we define the column space of a matrix. Given an <m>m\times n</m> matrix <m>A</m>, we can view it as a matrix of <m>n</m> column vectors <m> [ c_1\mid c_2\mid \cdots \mid c_n]</m>. Each of the <m>c_i</m> is an <m>n\times 1</m> column vector and thus an element of <m>\Col_n</m>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        For an <m>m\times n</m> matrix <m>A</m> we define the <term>column space of <m>A</m></term> to be the span of the column vectors <m>c_i</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Since the span of a set of vectors is closed under addition and scalar multiplication, the column space of <m>A</m> is a vector subspace of <m>\Col_n</m>.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        If
+        <me>A = \begin{bmatrix} 1\amp 1\amp 0\\ 0\amp 1\amp 1 \end{bmatrix},</me>
+        then the column space of <m>A</m> is spanned by the column vectors
+        <me> \begin{bmatrix} 1\\0\end{bmatrix}, \begin{bmatrix} 1\\1\end{bmatrix}, \begin{bmatrix} 0\\1 \end{bmatrix}</me>.
+        But the third is a linear combination of the first two, so can be removed from the spanning set. In fact, the column space of <m>A</m> is the entire vector space <m>\Col_2</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    When we want to define the row space of a matrix, we do essentially the same thing, but we break up the <m>m\times n</m> matrix <m>A</m> into its row vectors
+    <me> \begin{bmatrix} r_1\\ r_2\\ \vdots \\ r_m\end{bmatrix}. </me>
+    Then we can define the span of these row vectors, which will be a subspace of <m>\Row_n</m>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        For an <m>m\times n </m> matrix <m>A</m> we define the <term>row space of <m>A</m></term> to be the span of the row vectors <m>r_i</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        In the previous example
+        <me>A = \begin{bmatrix} 1\amp 1\amp 0\\ 0\amp 1\amp 1 \end{bmatrix},</me>
+        it so happend that the two rows are linearly independent. Thus they do not just span the row space of <m>A</m> but also form a basis for it. Note that both the row space and column space of <m>A</m> have dimension 2.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The null space of a matrix is not made up of vectors that live inside the matrix. Rather, it is a a set of column vectors that can be multiplied with <m>A</m>. Since <m>A</m> is an <m>m\times n</m> matrix, that means elements of the null space consist of <m>n\times 1</m> column vectors.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        For an <m>m\times n</m> matrix <m>A</m>, the <term>null space of <m>A</m></term> consists of all <m>v\in \Col_n</m> such that <m>A\cdot v = 0</m>, the zero vector in <m>\Col_m</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise>
+    <statement>
+      <p>
+        Check that the null space of <m>A</m> is a vector space.
+      </p>
+    </statement>
+  </exercise>
+
+  <example xml:id="example-">
+    <statement>
+      <p>
+        Let us use the same example again:
+        <me>A = \begin{bmatrix} 1\amp 1\amp 0\\ 0\amp 1\amp 1 \end{bmatrix}.</me>
+        Then a vector <m>v = \begin{bmatrix} x\\y\\z \end{bmatrix}</m> is in the null space of <m>A</m> if and only if
+        <md>
+          <mrow> x + y \phantom{ + z} \amp = 0 </mrow>
+          <mrow> \phantom{x + } y +z \amp = 0 </mrow>
+        </md>.
+        In other words, we need <m>y = -z</m> and <m>x=-y=z</m>. Thus the null space consists of exactly the vectors <m>\begin{bmatrix} z\\-z\\z \end{bmatrix}</m>. Note:
+        <ol>
+          <li> that it satisfies the Rank-Nullity Theorem <mdash /> the null space has dimension 1, the column space has dimension 2 and the domain has dimension 3;</li>
+          <li> that we have used the same method of solving systems that we have used many times already to find the vectors in the null space.</li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We will eventually relate the three spaces of an arbitrary matrix to those three spaces of its row echelon form, so let us start by studying matrices in row echelon form.
+  </p>
+
+  <p>
+    In the following theorem, we make reference to leading entries. Recall that if a matrix is in row-echelon form, then the first non-zero entry in each non-zero row is called a <em>leading entry</em>. Note that each non-zero row contains exactly one leading entry and that each column contains either 0 or 1 leading entries.
+  </p>
+
+  <proposition>
+    <statement>
+      <p>
+        Suppose that <m>A</m> is a matrix in row echelon form. Then
+        <ol label="(a)">
+          <li> the non-zero rows of <m>A</m> form a basis for the row space of <m>A</m>;</li>
+          <li> the columns of <m>A</m> containing leading entries form a basis for the column space of <m>A</m>.</li>
+        </ol>
+      </p>
+    </statement>
+    <proof>
+      <p>For (a), we are taking all non-zero rows, so it is clear that these rows span the row space of <m>A</m>. All we need to show is that they are linearly independent.
+      </p>
+      <p>
+        The idea is that no row can affect the leading entry of a row above it. This way the coefficients of any possible linear relation are forced one by one to be zero starting at the top and working down.
+      </p>
+      <p>
+        For (b), we show that if we perform the sifting process on the set of column vectors, we are left with exactly the columns that contain a leading entry. To see that such a column cannot be removed, note that its leading entry is a non-zero  entry in a position where all previous column vectors had 0's. This means that it cannot be written as a linear combination of vectors preceding it.
+      </p>
+      <p>
+        On the other hand, suppose that a column vector does not have a leading entry and suppose that there are <m>k</m> column vectors left ahead of it in the list. Then this <m>k+1</m>-st column vector has only zeroes below its <m>k</m>-th entry. Since there are <m>k</m> linearly independent columns ahead of it, it can therefore always be written as a linear combination of the preceding vectors and will thus be removed in the sifting process.
+      </p>
+    </proof>
+  </proposition>
+
+  <example>
+    <statement>
+      <p>
+        If
+        <me> A = \begin{bmatrix} 1\amp 1\amp 2\amp -1\amp 0\\ 0\amp 0\amp 3\amp 2\amp -1 \\ 0\amp 0\amp 0\amp 2\amp 1 \\ 0\amp 0\amp 0\amp 0\amp 0   \end{bmatrix}, </me>
+        then  the vectors
+        <me> (1,1,2,-1,0), (0,0,3,2,-1), (0,0,0,2,1)</me>
+        form a basis for its row space, the vectors
+        <me> \begin{bmatrix} 1\\0\\0\\0 \end{bmatrix}, \begin{bmatrix} 2\\3\\0\\0\\ \end{bmatrix}, \begin{bmatrix} -1\\2\\2\\0 \end{bmatrix}</me>
+        form a basis for its column space, and a basis for its null space can be computed by viewing the second and fifth variables as free. The general solution is
+        <me> \begin{bmatrix} -s-\frac{11}{6}t\\ s \\ \frac{2}{3}t\\ -\frac{1}{2}t\\t\end{bmatrix}.</me>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Now if we want to compute these three spaces associated to a matrix that is not in row echelon form, the row echelon form still happen to be very useful in the process. The row space and null space of the row echelon form are the same as the row space and null space of the original matrix. The column spaces are different, but both have bases consisting of corresponding columns (e.g. first, third and fourth in both cases). Here is the full statement:
+  </p>
+
+  <theorem xml:id="thm_spaces_of_row_reduction">
+    <statement>
+      <p>
+        Let <m>A</m> be a matrix and suppose that <m>R</m> is a row echelon form for <m>A</m>. Then
+        <ol label="(a)">
+          <li> the row space of <m>A</m> equals the row space of <m>R</m>;</li>
+          <li> the null space of <m>A</m> equals the null space of <m>R</m>;</li>
+          <li> the columns of <m>A</m> that correspond to columns of <m>R</m> that contain a leading entry form a basis for the column space of <m>A</m>.</li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We will not prove this immediately, since we will need a Lemma to do it properly. However, we would like to note that since the row spaces of <m>A</m> and <m>R</m> are equal, they can be spanned by the same bases. Similarly we can use the same basis for the null spaces of <m>A</m> and <m>R</m>.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        The matrix
+        <me> A=\begin{bmatrix} 1\amp 1\amp 1\amp 1\\ 1\amp 2\amp 3\amp 2\\ 2\amp 3\amp 4\amp 0 \end{bmatrix}</me>
+        has a reduced row echelon form
+        <me> R = \begin{bmatrix} 1\amp 0\amp -1\amp 0\\ 0\amp 1\amp 2\amp 0\\ 0\amp 0\amp 0\amp 1\end{bmatrix}.</me>
+        Thus, a basis for its row space is <m> (1,0,-1,0), (0,1,2,0), (2,3,4,0)</m>, a basis for its null space is
+        <me> \begin{bmatrix} 1 \\ -2 \\ 1\\ 0 \end{bmatrix}</me>
+        and a basis for its column space is
+        <me> \begin{bmatrix} 1\\1\\2\end{bmatrix}, \begin{bmatrix} 1\\2\\3 \end{bmatrix}, \begin{bmatrix} 1\\2\\0 \end{bmatrix} </me>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    In the proofs of the next two lemmas, we will distinguish the three types of elementary row operation: <dl width="narrow">
+      <li xml:id="row-op-type-A">
+        <title>Type (A)</title>
+        <p> multiplying a row with a non-zero scalar;</p>
+      </li>
+      <li xml:id="row-op-type-B">
+        <title>Type (B)</title>
+        <p> exchanging two rows; and</p>
+      </li>
+      <li xml:id="row-op-type-C">
+        <title>Type (C)</title>
+        <p> add a multiple of a row to another row.</p>
+      </li>
+    </dl>
+  </p>
+
+  <lemma xml:id="lem_row_operations_dont_change_span">
+    <statement>
+      <p>
+        If <m>A</m> is a matrix and <m>B</m> is the matrix obtained by applying an elementary row operation to <m>A</m>, then <m>A</m> and <m>B</m> have the same row spaces and the same null spaces.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Clearly, in the case of <xref ref="row-op-type-B" text="title" /> operations where we exchange two rows, the row space stays the same, since it is spanned by the same set of vectors (that appear in a different order).
+      </p>
+      <p>
+        For the other two cases, denote the rows of <m>A</m> by <m>r_1,\ldots, r_m</m> and the rows of <m>B</m> by <m>r_1,\ldots, r'_i,\ldots, r_m</m>, the only change being that <m>r_i</m> is replaced with <m>r'_i</m>, which could be either <m>k\cdot r_i</m> or <m>r_i+k\cdot r_j</m> depending on which type of elementary row operation we are treating. We show that
+        <me> span(r_1,\ldots, r_m) = span(r_1,\ldots, r_m,r'_i) = span(r_1,\ldots, r'_i,\ldots, r_m), </me>
+        where the first set contains the rows of <m>A</m>, the last contains the rows of <m>B</m> and the middle set contains all the common rows and both versions of the row that is changed. Clearly the first and third sets are contained in the middle set, so it remains to show the other inclusions. But in both cases <m>r_i</m> is a linear combination of <m>r'_i</m> and <m>r_j</m>, so the span isn't changed by removing it; and <m>r'_i</m> is a linear combination of <m>r_i</m> and <m>r_j</m>, so the span isn't changed it it is removed. (Note however, that the span might change if both <m>r_i</m> and <m>r'_i</m> are removed!)
+      </p>
+    </proof>
+  </lemma>
+
+  <lemma xml:id = "lem_row_operations_linear_relations">
+    <statement>
+      <p>
+        If <m>A</m> is a matrix and <m>B</m> is the matrix obtained by applying an elementary row operation to <m>A</m>, then any linear relation that holds between the columns of <m>A</m> also holds between the columns of <m>B</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Let us denote the matrices <m>A</m> and <m>B</m> by
+        <me> A = \begin{bmatrix} a_{11}\amp a_{12}\amp \cdots\amp a_{1n}\\ a_{21}\amp a_{22}\amp \cdots \amp  a_{2n}\\ \vdots \amp \amp \amp \vdots \\ a_{m1}\amp a_{m2}\amp \cdots \amp  a_{mn}\end{bmatrix} \quad\text{and}\quad B = \begin{bmatrix} b_{11}\amp b_{12}\amp \cdots\amp b_{1n}\\ b_{21}\amp b_{22}\amp \cdots \amp  b_{2n}\\ \vdots \amp \amp \amp \vdots \\ b_{m1}\amp b_{m2}\amp \cdots \amp  b_{mn} \end{bmatrix} </me>
+        and suppose that the following relation holds between the column vectors of <m>A</m>:
+        <me> c_1\begin{bmatrix} a_{11}\\ a_{21}\\ \vdots \\ a_{m1} \end{bmatrix} + c_2\begin{bmatrix} a_{12}\\ a_{22}\\ \vdots \\ a_{m2} \end{bmatrix} + \cdots + c_n\begin{bmatrix} a_{1n}\\ a_{2n} \\ \vdots \\ a_{mn} \end{bmatrix} = \begin{bmatrix} 0\\  \vdots \\ 0 \end{bmatrix}</me>
+      </p>
+      <p>
+        We now treat the cases according to the type of elementary row operation:
+      </p>
+
+      <p>
+        Type (A) operations: Let us suppose that row <m>r</m> changes to a non-zero scalar multiple, say for each <m>i</m> we have <m>b_{ri} = k\cdot a_{ri}</m>. Then in all other rows, say row <m>\ell\ne r</m> we have <m>b_{\ell i}=a_{\ell i}</m> and thus the linear relation
+        <me> c_1b_{\ell 1}+\cdots + c_nb_{\ell n} = 0</me>
+        still holds. In the row that changes, row <m>r</m>, we have
+        <me> c_1b_{r1}+\cdots + c_nb_{rn} = c_1(ka_{r1})+\cdots +c_n(ka_{rn}) = k(c_1a_{r1}+\cdots + c_na_{rn}) = 0.</me>
+        Thus, in all, the linear relation between column vectors holds:
+        <me> c_1\begin{bmatrix} b_{11}\\ b_{21}\\ \vdots \\ b_{m1} \end{bmatrix} + c_2\begin{bmatrix} b_{12}\\ b_{22}\\ \vdots \\ b_{m2} \end{bmatrix} + \cdots + c_n\begin{bmatrix} b_{1n}\\ b_{2n} \\ \vdots \\ b_{mn} \end{bmatrix} = \begin{bmatrix} 0\\  \vdots \\ 0 \end{bmatrix}.</me>
+      </p>
+      <p>
+        Type (B) operations: In this case two rows are swapped, say rows <m>r</m> and <m>\ell</m>. Then for each <m>i</m> we have <m>b_{\ell i} = a_{ri}</m> and <m>b_{ri} = a_{\ell i}</m>. Then in rows <m>r</m> and <m>\ell</m> of <m>B</m> we have the relations
+        <me> c_1b_{r1}+\cdots + c_nb_{rn} = c_1a_{\ell 1}+\cdots + c_na_{\ell n} = 0</me>
+        and \
+        <me>c_1b_{\ell 1} + \cdots + c_nb_{\ell n} = c_1a_{r1}+\cdots + c_na_{rn} = 0.</me>
+        Thus in this case too we have the same linear relation between the column vectors of <m>B</m>.
+      </p>
+      <p>
+        Type (C) operations: Suppose that for each <m>i</m> we have <m>b_{ri} = a_{ri}+k\cdot a_{\ell i}</m>. Then
+        <md>
+          <mrow>
+            c_1b_{r1}+\cdots + c_nb_{rn} \amp = c_1 (a_{r1}+ka{\ell i}) + \cdots c_n (a_{rn}+ka_{\ell n})</mrow>
+          <mrow>
+            \amp = (c_1a_{r1}+\cdots + c_na_{rn}) + k(c_1a_{\ell i}+\cdots + c_n a_{\ell n})
+          </mrow>
+          <mrow>
+            \amp = 0 + k(0) = 0
+          </mrow>
+        </md>.
+        In this case too, the relation still holds between the column vectors of <m>B</m>.
+      </p>
+    </proof>
+  </lemma>
+
+  <p>
+    Note that since every elementary row operation is can be inverted with another elementary row operation, this goes both ways. Any linear relation between the columns of <m>B</m> also holds between the columns of <m>A</m>. Thus exactly the same relations hold in both matrices. In particular if a set of column vectors in one of them is linearly independent, then the corresponding set of column vectors in the other one will also be linearly independent.
+  </p>
+
+  <proof>
+    <title> Proof of <xref ref="thm_spaces_of_row_reduction"/> </title>
+    <p>
+      Note that the row echelon form <m>R</m> of a matrix <m>A</m> is obtained by applying a sequence of elementary row operations.  By <xref ref="lem_row_operations_dont_change_span"/>, this means that <m>A</m> and <m>R</m> have the same row space and the same null space.
+    </p>
+    <p>
+      For the column space, suppose that we performed the sifting process to each of the two matrices, putting the columns in the order they appear. Then, whenever a column is removed from one list, there must have been a linear relation involving this column and the previous ones. But by <xref ref="lem_row_operations_linear_relations" /> this same linear relation holds between the column vectors of the other matrix, which means that the corresponding column will be removed from the list of column vectors of the other matrix as well. Once the process is finished in the row echelon form, the remaining column vectors are linearly independent. The corresponding column vectors in <m>A</m> must then also be linearly independent, otherwise they would have a relation that is not present between the columns of <m>R</m>.
+    </p>
+  </proof>
+
+</subsection>

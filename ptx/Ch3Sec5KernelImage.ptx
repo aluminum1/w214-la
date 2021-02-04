@@ -1,7 +1,11 @@
 
 
-<section xml:id="Ch3Sec5KernelRange">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch3Sec5KernelRange">
   <title>Kernel and Image of a Linear Map</title>
+
+  <subsection>
+  <title> Kernel and Image for Arbitrary Linear Maps</title>
+
   <definition>
     <statement>
       <p>
@@ -50,7 +54,7 @@
 
   <figure xml:id = "ker_fig">
     <caption>An illustration of <m>\Ker(T)</m>, the kernel of <m>T</m> </caption>
-    <image>
+    <image width="60%">
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
         \draw (0,0) circle (1);
@@ -69,7 +73,7 @@
 
   <figure xml:id = "im_fig">
     <caption > An illustration of <m>\Im(T)</m>, the image of <m>T</m></caption>
-    <image>
+    <image width="60%">
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
         \draw (0,0) circle (1);
@@ -863,6 +867,10 @@
     </statement>
   </example>
 
+  </subsection>
+
+  <xi:include href="./Ch3Sec5RowColNullSpaces.ptx" />
+
   <exercises>
     <exercise>
       <statement>
@@ -870,12 +878,12 @@
            Let <m>T:\Row_2\to \Row_3</m> be the linear map defined by <m>T(x,y) = (x-y,2x-2y, y-x)</m>.
            For each of the following vectors, determine whether it is an element of <m>\Ker(T)</m>, <m>\Im(T)</m> or both or neither:
         <ol label="(a)" cols="3">
-          <li> v_1 = (0,0) </li>
-          <li> v_2 = (0,0,0) </li>
-          <li> v_3 = (2,1) </li>
-          <li> v_4 = (4,4) </li>
-          <li> v_5 = (1,2,3) </li>
-          <li> v_6 = (1,2,-1) </li>
+          <li> <m> \ve v_1 = (0,0) </m> </li>
+          <li> <m> \ve v_2 = (0,0,0) </m></li>
+          <li> <m> \ve v_3 = (2,1) </m></li>
+          <li> <m> \ve v_4 = (4,4) </m></li>
+          <li> <m> \ve v_5 = (1,2,3) </m></li>
+          <li> <m> \ve v_6 = (1,2,-1) </m></li>
         </ol>
         </p>
       </statement>

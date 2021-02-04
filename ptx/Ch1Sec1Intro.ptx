@@ -68,8 +68,8 @@
       Cartesian plane whose <m>x</m>-coordinate is <m>a_1</m> and whose
       <m>y</m>-coordinate is <m>a_2</m>:
     </p>
-      <sidebyside valign="middle" margins="20% 40%">
-        <p> <m> \ve{a} \xmapsto{\text{visualize as}} </m> </p>
+      <sidebyside valign="middle" margins="20% 30%">
+        <p> <m> \ve{a}\quad \xmapsto{\text{visualize as}} </m> </p>
         <image>
         <latex-image>
           <![CDATA[
@@ -104,8 +104,8 @@
       as a point in the plane in 3-dimensional
       space carved out by the equation <m>x-y+z = 0</m>:
     </p>
-      <sidebyside valign="middle" margins="20% 40%">
-        <p> <m> \ve{b} \xmapsto{\text{visualize as}} </m> </p>
+      <sidebyside valign="middle" margins="20% 30%">
+        <p> <m> \ve{b} \quad \xmapsto{\text{visualize as}} </m> </p>
         <image width="30%">
         <latex-image>
           <![CDATA[
@@ -148,8 +148,8 @@
       For instance, the polynomial
       <m>\ve{c} = x^4 - 3x^3 + 2x^2 \in C</m> can be visualized as:
     </p>
-      <sidebyside valign="middle" margins="20% 40%">
-        <p> <m> \ve{c} \xmapsto{\text{visualize as}} </m> </p>
+      <sidebyside valign="middle" margins="20% 30%">
+        <p> <m> \ve{c}\quad \xmapsto{\text{visualize as}} </m> </p>
         <image>
         <latex-image>
           <![CDATA[
@@ -469,7 +469,7 @@
         <m>k \smul\ve{a} \in A</m> by multiplying
         each component of <m>\ve{a}</m> by <m>k</m>:
         <me>
-          \underbrace{k \smul(a_1, \, a_2)}_{\text{ Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\text{Multiplying two numbers together} }, \, \underbrace{k a_2})
+          \underset{\substack{\text{Multiplying a} \\ \text{vector by a scalar}}}{ \underbrace{k .(a_1, \, a_2)}_{}}\ :=\ \ \underset{\substack{\text{Muliplying two} \\ \text{numbers together}}}{\big(\underbrace{k a_1}_{}\ , \ \underbrace{k a_2}_{}\big)}
         </me>
       </p>
 

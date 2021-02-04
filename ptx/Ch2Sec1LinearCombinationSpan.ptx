@@ -209,7 +209,7 @@
     </p>
     <figure xml:id="spanning_set_R2">
     <caption>A list of vectors which spans <m>\mathbb{R}^2</m>.</caption>
-    <image width="70%">
+    <image width="50%">
     <latex-image>
       <![CDATA[
       \begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};

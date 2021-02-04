@@ -68,8 +68,8 @@
       Cartesiese vlak waarvan die <m>x</m>-koördinaat <m>a_1</m> en die
       <m>y</m>-koördinaat <m>a_2</m> is:
     </p>
-      <sidebyside valign="middle" margins="20% 40%">
-        <p> <m> \ve{a} \xmapsto{\text{visualiseer as}} </m> </p>
+      <sidebyside valign="middle" margins="20% 30%">
+        <p> <m> \ve{a}\quad  \xmapsto{\text{visualiseer as}} </m> </p>
         <image>
         <latex-image>
           <![CDATA[
@@ -104,8 +104,8 @@
       as 'n punt in die vlak in 3-dimensionele
       ruimte wat deur die vergelyking <m>x-y+z = 0</m> gedefinieer word:
     </p>
-      <sidebyside valign="middle" margins="20% 40%">
-        <p> <m> \ve{b} \xmapsto{\text{visualiseer as}} </m> </p>
+      <sidebyside valign="middle" margins="20% 30%">
+        <p> <m> \ve{b} \quad \xmapsto{\text{visualiseer as}} </m> </p>
         <image width="30%">
         <latex-image>
           <![CDATA[
@@ -148,8 +148,8 @@
       Byvoorbeeld, die polinoom
       <m>\ve{c} = x^4 - 3x^3 + 2x^2 \in C</m> word soos volg gevisualiseer:
     </p>
-      <sidebyside valign="middle" margins="20% 40%">
-        <p> <m> \ve{c} \xmapsto{\text{visualiseer as}} </m> </p>
+      <sidebyside valign="middle" margins="20% 30%">
+        <p> <m> \ve{c}\quad \xmapsto{\text{visualiseer as}} </m> </p>
         <image>
         <latex-image>
           <![CDATA[
@@ -469,7 +469,7 @@
         om 'n nuwe element <m>k \cdot \ve{a} \in A</m> te kry deur
         elke komponent van <m>\ve{a}</m> met <m>k</m> te vermenigvuldig:
         <me>
-          \underbrace{k.(a_1, \, a_2)}_{\text{ Skalaarvermenigvuldiging} } := (\underbrace{k a_1}_{\text{Vermenigvuldig twee getalle} }, \, \underbrace{k a_2})
+          \underset{\substack{\text{Multiplying a} \\ \text{vector by a scalar}}}{ \underbrace{k .(a_1, \, a_2)}_{}}\ :=\ \ \underset{\substack{\text{Muliplying two} \\ \text{numbers together}}}{\big(\underbrace{k a_1}_{}\ , \ \underbrace{k a_2}_{}\big)}
         </me>
       </p>
 

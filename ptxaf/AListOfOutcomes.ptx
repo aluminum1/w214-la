@@ -365,7 +365,7 @@
   </p>
 
   <p>
-  <dl>
+  <dl width="narrow">
     <li xml:id = "outcome-def1">
       <title>Def1</title>
       <p>
@@ -401,7 +401,7 @@
   </p>
 
   <p>
-  <dl>
+  <dl width="narrow">
     <li xml:id="outcome-thm1">
       <title>Thm1</title>
       <p>

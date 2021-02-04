@@ -25,7 +25,7 @@
 
   <figure xml:id="explanation_of_mapsto">
     <caption>'n Funksie <m>f : X \rightarrow Y</m>.</caption>
-    <image>
+    <image width="75%">
       <latex-image>
         <![CDATA[\begin{tikzpicture}\draw (-2, 0) circle (1);
         \draw (2,0) circle (1);
@@ -207,7 +207,7 @@
       <figure>
         <caption>
         </caption>
-        <image>
+        <image width="70%">
           <latex-image>
             <![CDATA[\begin{tikzpicture}[xscale=1.5]
             \draw[<->] (-1, 0) -- (3, 0);
@@ -258,7 +258,7 @@
       <figure>
         <caption>
         </caption>
-        <image width="60%">
+        <image width="40%">
           <latex-image>
             <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
             \draw[<->] (0, -1) -- (0, 2);
@@ -764,9 +764,9 @@
           <latex-image>
             <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
             \draw[<->] (0, -1) -- (0, 2);
-            \draw[very thick, primaryColor, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
+            \draw[very thick, primaryColor, ->] (0, 0) -- (1.5, 0) node[below left] {$\ve{e}_1$};
             \draw[very thick, primaryColor, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
-            \draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};\end{tikzpicture}]]>
+            \draw (0:0.5) arc (0:30:0.5) node[above] {$\theta$};\end{tikzpicture}]]>
           </latex-image>
         </image>
         <image width="40%">
@@ -774,7 +774,7 @@
             <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
             \draw[<->] (0, -1) -- (0, 2);
             \draw[very thick, primaryColor, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
-            \draw[very thick, primaryColor, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
+            \draw[very thick, primaryColor, ->] (0,0) -- (120:1.5) node[above] {$R(\ve{e}_2)$};
             \draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;\end{tikzpicture}]]>
           </latex-image>
         </image>

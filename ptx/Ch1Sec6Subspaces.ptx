@@ -126,7 +126,7 @@
     </p>
     <figure xml:id="line-through-origin-R2-example">
       <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
-      <image width="50%">
+      <image width="40%">
         <latex-image>
           <![CDATA[\begin{tikzpicture}
           \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
@@ -197,7 +197,7 @@
             \draw[->] (0, 0) -- (2,0) node[right] {$y$};
             \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
             \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-            \draw[thick, primaryColor] (-2, 1) node[above] {$L$} -- (2, -1);
+            \draw[thick, primaryColor] (-1, 0.5) node[above] {$L$} -- (2, -1);
           \end{tikzpicture}
           ]]>
           </latex-image>
@@ -267,7 +267,7 @@
       </p>
           <figure xml:id="line-not-through-origin-non-example">
             <caption>A line which does not pass through the origin is not closed under addition.</caption>
-            <image>
+            <image width="60%">
             <latex-image>
               <![CDATA[
               \begin{tikzpicture}

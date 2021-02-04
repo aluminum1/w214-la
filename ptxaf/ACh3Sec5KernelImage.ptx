@@ -50,7 +50,7 @@
 
   <figure xml:id = "ker_fig">
     <caption>'n Uitbeelding van <m>\Ker(T)</m>, die kern van <m>T</m> </caption>
-    <image>
+    <image width="60%">
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
         \draw (0,0) circle (1);
@@ -69,7 +69,7 @@
 
 <figure xml:id = "im_fig">
   <caption > 'n Uitbeelding van <m>\Be(T)</m>, die beeld van <m>T</m></caption>
-    <image>
+    <image width="60%">
       <latex-image>
         <![CDATA[\begin{tikzpicture}[scale=1.1]
         \draw (0,0) circle (1);
@@ -870,12 +870,12 @@
            Laat <m>T:\Row_2\to \Row_3</m> die lineêre afbeelding wees gedefinieer deur <m>T(x,y) = (x-y,2x-2y, y-x)</m>.
            Vir elk van die volgende vektore, bepaal of dit 'n element van <m>\Ker(T)</m>, <m>\Im(T)</m> of beide of geeneen is:
         <ol label="(a)" cols="3">
-          <li> v_1 = (0,0) </li>
-          <li> v_2 = (0,0,0) </li>
-          <li> v_3 = (2,1) </li>
-          <li> v_4 = (4,4) </li>
-          <li> v_5 = (1,2,3) </li>
-          <li> v_6 = (1,2,-1) </li>
+          <li> <m> \ve v_1 = (0,0) </m> </li>
+          <li> <m> \ve v_2 = (0,0,0) </m></li>
+          <li> <m> \ve v_3 = (2,1) </m></li>
+          <li> <m> \ve v_4 = (4,4) </m></li>
+          <li> <m> \ve v_5 = (1,2,3) </m></li>
+          <li> <m> \ve v_6 = (1,2,-1) </m></li>
         </ol>
         </p>
       </statement>

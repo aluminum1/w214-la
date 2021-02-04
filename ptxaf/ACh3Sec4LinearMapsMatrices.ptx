@@ -182,7 +182,7 @@
 
   <figure>
     <caption></caption>
-    <image>
+    <image width="80%">
       <latex-image>
         <![CDATA[\begin{tikzpicture}[yscale=0.8]
         \draw (0, 0) circle (1);
@@ -686,7 +686,6 @@
         Skryf die waarde van <m>T(x,y)</m> neer.
       </p>
     </statement>
-  </exercise>
   <solution>
     <p>
       Die gegewe inligting beteken dat
@@ -698,6 +697,7 @@
       <me> T(x,y) = xT(1,0)+yT(0,1) = \left( \frac{x+y}{2},y,\frac{x+3y}{2} \right)</me>.
     </p>
   </solution>
+  </exercise>
 </exercisegroup>
 
   <exercise>
