@@ -524,6 +524,22 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
         Laat <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> 'n lys vektore in 'n vektorruimte <m>V</m> wees. Veronderstel dat <m>\basis{S}</m> vir <m>V</m> onderspan en veronderstel dat <m>w</m> 'n ander vektor in <m>V</m> is. Bewys dat die lys vektore <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> ook vir <m>V</m> onderspan.
       </p>
     </statement>
+    <hint>
+      <p>
+        Bepaal of <xref ref="spanning_check_thm"/> toegepas kan word.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        Ons kan <xref ref="spanning_check_thm"/> toepas, maar hier is 'n meer direkte manier.
+        Ons moet bewys dat 'n willekeurige element <m>\ve{x}\in V</m> as 'n lineêre kombinasie van die elemente in <m>\basis{S}'</m> geskryf kan word.
+        Maar, <m>\basis{S}</m> onderspan vir <m>V</m>, so enige vektor in <m>V</m> kan as 'n lineêre kombinasie van die vektore <m>\ve{v}_1,\ldots, \ve{v}_n</m> geskryf word.
+        In besonder kan <m>v</m> as so 'n lineêre kombinasie geskryf word, so ons veronderstel dat
+        <me> \ve{v} = c_1\ve{v}_1+\cdots + c_n\ve{v}_n</me>.
+        Maar dit is ook 'n manier om <m>\ve{v}</m> as 'n lineêre kombinasie van die elemente in <m>\basis{S}'</m> te skryf en dus is <m>\ve{v}</m> in die span van <m>\basis{S}'</m>.
+        Aangesien <m>\ve{v}</m> willekeurig uit <m>V</m> gekies is, is enige element in <m>V</m> in die span van <m>\basis{S}'</m>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="exercise-span-omission">

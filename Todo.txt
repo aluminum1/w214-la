@@ -1,7 +1,5 @@
 To do list:
 
-- Image sizes are inconsistent.
-- Decide on and implement better colors for tikz diagrams. Use latex macros like \primaryColor etc. to ensure uniformity.
 - Do we want to use the Stellenbosch University Brand Colors? If so, here they are
   - brand-maroon: #60223b, RGB(140, 151, 154)
   - brand-gray: #8c979a, RGB(96,34,59)
@@ -16,7 +14,6 @@ To do list:
 - First person to first person plural? (I to we)
 - Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.
 - Create index? And index of notation?
-- Ch3Sec 3 line 6 & 25: images not allowed in text mode --- rework.
 - Ch2Sec4 (in a few places actually) I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
 
 Consistency and technique:

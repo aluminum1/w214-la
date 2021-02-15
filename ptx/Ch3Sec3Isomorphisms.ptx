@@ -4,15 +4,10 @@
   <title>Isomorphisms of vector spaces</title>
   <p>
     Suppose you have two sets,
-    <!--
     <me>
-      A = \{ \mbox{bird} , \mbox{eye} , \mbox{person}  \}  \mbox{and}
-      B = \left\{ \begin{aligned}<image width="100%" source="images/bird.png" />
-      \end{aligned}  , \begin{aligned}<image width="100%" source="images/eye.png" />
-      \end{aligned} , \begin{aligned}<image width="100%" source="images/person.png" />
-      \end{aligned}  \right\}
+      A = \{ \mbox{star} , \mbox{heart} , \mbox{square}  \}  \mbox{and}
+      B = \left\{ \bigstar  , \heartsuit , \blacksquare  \right\}
     </me>.
-    -->
   </p>
 
   <p>
@@ -24,25 +19,17 @@
 
   <p>
     We could define two maps, say
-    <!-- For now images aren't allowed in text mode, so rework this:
     <md>
       <mrow>S: A \amp \rightarrow B</mrow>
-      <mrow>\mbox{bird}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" />
-      \end{aligned}</mrow>
-      <mrow>\mbox{eye}  \amp \mapsto \begin{aligned}<image width="100%" source="images/eye.png" />
-      \end{aligned}</mrow>
-      <mrow>\mbox{cross}  \amp \mapsto \begin{aligned}<image width="100%" source="images/person.png" />
-      \end{aligned}</mrow>
+      <mrow>\mbox{star}  \amp \mapsto \bigstar</mrow>
+      <mrow>\mbox{heart}  \amp \mapsto \heartsuit</mrow>
+      <mrow>\mbox{square}  \amp \mapsto \blacksquare</mrow>
       <intertext>and</intertext>
       <mrow>T : B \amp \rightarrow A</mrow>
-      <mrow>\begin{aligned}<image width="100%" source="images/bird.png" />
-      \end{aligned}  \amp  \mapsto \mbox{bird}</mrow>
-      <mrow>\begin{aligned}<image width="100%" source="images/eye.png" />
-      \end{aligned}  \amp  \mapsto \mbox{eye}</mrow>
-      <mrow>\begin{aligned}<image width="100%" source="images/person.png" />
-      \end{aligned}  \amp  \mapsto \mbox{cross}  </mrow>
+      <mrow>\bigstar  \amp  \mapsto \mbox{star}</mrow>
+      <mrow>\heartsuit  \amp  \mapsto \mbox{heart}</mrow>
+      <mrow>\blacksquare  \amp  \mapsto \mbox{square}  </mrow>
     </md>.
-    -->
   </p>
 
   <p>

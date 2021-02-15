@@ -524,6 +524,22 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
         Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
       </p>
     </statement>
+    <hint>
+      <p>
+        Determine whether <xref ref="spanning_check_thm"/> applies.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        We can apply <xref ref="spanning_check_thm"/>, but here is a more direct approach.
+        We need to show that an arbitrary element <m>\ve{x}\in V</m> can be written as a linear combination of the elements in <m>\basis{S}'</m>.
+        But <m>\basis{S}</m> spans <m>V</m>, so any vector in  <m>V</m> can be written as a linear combination of the vectors <m>\ve{v}_1,\ldots, \ve{v}_n</m>.
+        In particular, <m>v</m> can be written as such a linear combination, so suppose that
+        <me> \ve{v} = c_1\ve{v}_1+\cdots + c_n\ve{v}_n</me>.
+        But this is also a way of writing <m>\ve{v}</m> as a linear combination of elements in <m>\basis{S}'</m> and thus <m>\ve{v}</m> is in the span of <m>\basis{S}'</m>.
+        Since <m>\ve{v}</m> was chosen arbitrarily from <m>V</m>, any element from <m>V</m> is in the span of <m>\basis{S}'</m>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="exercise-span-omission">
