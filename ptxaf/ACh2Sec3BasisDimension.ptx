@@ -354,9 +354,9 @@
           Hierdie simbool staan vir die formule: <q>As
           <m>a=b</m>, gee die waarde 1.
           As <m>a \neq b</m>, gee die waarde <m>0</m></q>.
-          In hierdie taal kan ons die definisie van die funksies <m>f_a</m> as
+          In hierdie taal kan ons die definisie van die funksies <m>\ve f_a</m> as
           <men>
-            f_a (x) := \delta_{ax}
+            \ve f_a (x) := \delta_{ax}
           </men> herskryf.
         </p>
       </statement>
@@ -370,31 +370,39 @@
             <ol label="(a)">
               <li>
                 <p>
-                  Evaluate the function <m>f_{b }</m> at each <m>x \in X</m>.
+                  Werk die funksie <m>\ve f_{b }</m> by elke <m>x \in X</m> uit.
                 </p>
               </li>
 
               <li>
                 <p>
-                  Show that <m>\bopen f_a, f_b, f_c \bclose</m> is a basis for <m>\Fun(X)</m>.
+                  Wys dat <m>\bopen \ve f_a, \ve f_b, \ve f_c \bclose</m> 'n basis vir <m>\Fun(X)</m> is.
                 </p>
               </li>
             </ol>
           </p>
         </statement>
+        <answer>
+          <p>
+            Ons het
+            <md>
+              <mrow> \ve f_b(a) \amp = 0 \amp \ve f_b(b) \amp = 1 \amp \ve f_b(c) \amp = 0</mrow>
+            </md>.
+          </p>
+        </answer>
       </exercise>
 
     <exercise>
       <statement>
         <p>
-          Nou, laat <m>X</m> 'n willekeurige eindige versameling wees.
-          Oorweeg die versameling funksies
+          Laat nou <m>X</m> 'n willekeurige eindige versameling wees.
+          Beskou die versameling funksies
           <me>
              \basis{B} = \bopen f_a : \, a \in X \bclose
-          </me>
+          </me>.
         </p>
         <p>
-          Toon aan dat <m>\basis{B}</m> 'n basis vir <m>\Fun(X)</m> is.
+          Wys dat <m>\basis{B}</m> 'n basis vir <m>\Fun(X)</m> is.
         </p>
       </statement>
     </exercise>
@@ -402,7 +410,7 @@
     <example>
       <statement>
         <p>
-          <m>\Trig_n</m> is <m>(2n+1</m>)-dimensioneel, met basis
+          <m>\Trig_n</m> is <m>(2n+1)</m>-dimensioneel, met basis
           <md>
             <mrow>\ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x) := \sin x, \, \ve{T}_3 (x) := \cos 2x, </mrow>
             <mrow> \ve{T}_4 (x) := \sin 2x, \, \ldots, \, \ve{T}_{2n-1} (x) := \cos nx , \, \ve{T}_{2n} (x) := \sin nx.</mrow>
@@ -451,6 +459,16 @@
           <m>\mat{E}_{ij}</m> gee.
         </p>
       </statement>
+      <answer>
+        <p>
+          Beskou die uitdrukking <m>\delta_{ik}\delta_{jl}</m>.
+          As <m>i\ne k</m>, dan is <m>\delta_{ik}=0</m> en dus <m>\delta_{ik}\delta_{jl}=0</m>.
+          As <m>j\ne l</m>, dan is <m>\delta_{jl}=0</m> en dus <m>\delta_{ik}\delta_{jl}</m>.
+        </p>
+        <p>
+          Die enigste ander geval is wanneer <m>i=k</m> en <m>j=l</m>; en in daardie geval is <m>\delta_{ik}\delta_{jl}=1\cdot 1=1</m>.
+        </p>
+      </answer>
     </exercise>
 
     <example>
@@ -508,19 +526,25 @@
         </p>
 
         <p>
-          Byvoorbeeld, beskou die spesifieke voorbeeld uit <xref ref="hyperplanes_example_subspace"/>, naamlik die vlak <m>W \subset \mathbb{R}^3</m> ortogonaal aan <m>\ve{v} = (1,2,3)</m>. Met ander woorde,
+          Byvoorbeeld, beskou die spesifieke voorbeeld uit <xref ref="hyperplanes_example_subspace"/>, naamlik die vlak <m>W \subset \mathbb{R}^3</m> ortogonaal aan <m>\ve{v} = (1,2,3)</m>.
+          Met ander woorde,
           <men xml:id="eqn_for_W_1">
             W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.
           </men>
-          Daar is geen <q>standaardbasis</q> vir <m>W</m> nie. Maar, hier is een basis (net so goed as enige ander basis):
+          Daar is geen <q>standaardbasis</q> vir <m>W</m> nie.
+          Maar, hier is een basis (net so goed as enige ander basis):
           <men xml:id="ab_basis_orth_plane">
-            \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{2}{3}).
-          </men>
-          Jy sal in <xref ref="prove_basis_for_ex_hyperplane"/> aantoon dat dit wel 'n basis vir <m>W</m> is. Ek het hierdie vektore as volg bereken. Vir <m>\ve{a}</m>, het ek eenvoudig net <m>w_1 = 1, w_2 = 0</m> gestel en dan vir <m>w_3</m> opgelos deur Vergelyking <xref ref="eqn_for_W_1"/> te gebruik. Soortgelyk, vir <m>\ve{b}</m>, het ek eenvoudig net <m>w_1 = 0, w_2 = 1</m> gestel en dan vir  <m>w_3</m> opgelos deur  <xref ref="eqn_for_W_1"/> te gebruik.
+            \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{2}{3})
+          </men>.
+          Jy sal in <xref ref="prove_basis_for_ex_hyperplane"/> aantoon dat dit wel 'n basis vir <m>W</m> is.
+          Ek het hierdie vektore as volg bereken.
+          Vir <m>\ve{a}</m>, het ek eenvoudig net <m>w_1 = 1, w_2 = 0</m> gestel en dan vir <m>w_3</m> opgelos deur Vergelyking <xref ref="eqn_for_W_1"/> te gebruik.
+          Soortgelyk, vir <m>\ve{b}</m>, het ek eenvoudig net <m>w_1 = 0, w_2 = 1</m> gestel en dan vir  <m>w_3</m> opgelos deur  <xref ref="eqn_for_W_1"/> te gebruik.
         </p>
 
         <p>
-          Daar is niks spesiaal met my metode hierbo om 'n basis vir <m>W</m> te bereken nie. Hier is nog 'n basis vir <m>W</m>, wat ek bereken het deur arbitrêre waardes van  <m>w_1</m> en <m>w_2</m> te kies en dan  <m>w_3</m> te bereken deur Vergelyking  <xref ref="eqn_for_W_1"/> te gebruik:
+          Daar is niks spesiaal met my metode hierbo om 'n basis vir <m>W</m> te bereken nie.
+          Hier is nog 'n basis vir <m>W</m>, wat ek bereken het deur arbitrêre waardes van  <m>w_1</m> en <m>w_2</m> te kies en dan  <m>w_3</m> te bereken deur Vergelyking  <xref ref="eqn_for_W_1"/> te gebruik:
           <men>
             \ve{u} = (1, 2, -\frac{5}{3}), \quad \ve{v} = (-4, 2, 0).
           </men>
@@ -538,12 +562,32 @@
           Toon aan dat die  lys vektore <m>\bopen \ve{a}, \ve{b} \bclose </m> uit <xref ref="ab_basis_orth_plane"/> in <xref ref="dimension_of_hyperplane"/> 'n basis vir <m>W</m> is.
         </p>
       </statement>
+      <solution>
+        <p>
+          Ons moet twee goed wys: dat die vektore lineêr onafhanklik is en dat hulle vir <m>W</m> onderspan.
+          Vir lineêr onafhanklikheid veronderstel ons dat
+          <me> c_1\ve{a}+c_2\ve{b} = \ve{0}</me>.
+          As ons dit uitskryf met die definisies van <m>\ve{a}</m> en <m>\ve{b}</m>, kry ons
+          <me> c_1(1, 0, -\frac{1}{3})+c_2(0, 1, -\frac{2}{3})=(0,0,0)</me>
+          en dit is ekwivalent aan
+          <me>(c_1,c_2,\frac{-c_1-2c_2}{3})=(0,0,0)</me>.
+          Dit beteken dat <m>c_1=c_2=0</m> en dus is <m>\ve{a}</m> en <m>\ve{b}</m> lineêr onafhanklik.
+        </p>
+        <p>
+          Om te wys dat hulle vir <m>W</m> onderspan, skryf ons 'n algemene element in <m>W</m> in die vorm
+          <me> (x_1,x_2,\frac{1}{3}(-x_1-x_2))</me>.
+          Ons moet nou oplos vir <m>c_1,c_2</m> uit
+          <me>c_1(1, 0, -\frac{1}{3})+c_2(0, 1, -\frac{2}{3})=(x_1,x_2,\frac{1}{3}(-x_1-x_2))</me>.
+          Uit die eerste twee inskrywings kry ons <m>c_1=x_1</m> en <m>c_2=x_2</m>.
+          Daardie waardes bevredig ook die vergelyking van die derde inskrywings en dus bestaan daar waardes van <m>c_1,c_2</m> wat die vergelyking waar maak.
+        </p>
+      </solution>
     </exercise>
 
     <exercise xml:id="dimension_of_hyperplane_exercise">
       <statement>
         <p>
-          Laat <m>\ve{v} \in \mathbb{R}^n</m> 'n vaste vektor wees, en stel
+          Laat <m>\ve{v} \in \mathbb{R}^n</m> 'n vaste nie-nul vektor wees, en stel
           <me>
             W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0 \}
           </me>
@@ -552,9 +596,37 @@
       </statement>
       <hint>
         <p>
-          Vind 'n basis vir die oplossingversamling van die vergelyking wat <m>W</m> defineer.
+          Vind 'n basis vir die oplossingsversamling van die vergelyking wat <m>W</m> defineer.
         </p>
       </hint>
+      <solution>
+        <p>
+          Skryf die vektor <m>\ve {v} = (v_1,v_2,\ldots, v_n)^T</m> en veronderstel dat <m>v_i\ne 0</m>.
+          (Aangesien <m>\ve v</m> 'n nie-nul vektor is, moet daar so 'n <m>i</m> bestaan.)
+          Dan kan ons vir enige
+          <me> \ve w = (w_1,\ldots, w_n)^T</me>
+          in <m>W</m> sê dat
+          <me> v_1w_1+v_2w_2+\cdots + v_nw_n</me>,
+          of ekwivalent daaraan:
+          <me> w_i = -\frac{1}{v_i}(v_1w_1+\cdots + \hat{v_iw_i}+\cdots + v_nw_n)</me>
+          (waar die <m>\hat{v_iw_i}</m> aandui dat daardie term aan die regterkant uitgelaat word).
+          Ons kan dus die waardes van <m>w_1,w_2,\ldots, w_{i-1}, w_{i+1}, \ldots, w_n</m> spesifiseer en die waarde van <m>w_i</m> daaruit uitwerk.
+        </p>
+        <p>
+          Definieer nou vir <m>j\ne i</m> die vektore
+          <m>\ve b_j</m>
+          om 'n 1 in posisie <m>j</m> te hê, 'n <m>-\frac{v_j}{v_i}</m> in posisie <m>i</m> te hê, en nulle oral anders. Dus is byvoorbeeld
+          <me> b_1 = (1,0,\ldots, 0,-\frac{v_1}{v_i},0,\ldots, 0)^T</me>.
+          Enige vektor
+          <me> \ve w = (w_1,\ldots, w_n)^T</me>
+          kan nou op 'n unieke wyse as 'n lineêre kombinasie van hierdie vektore geskryf word:
+          <me> \ve w = w_1\ve b_1 + \cdots w_{i-1}\ve b_{i-1}+w_{i+1}\ve b_{i+1}+\cdots + w_n\ve b_n</me>
+          en dus vorm die <m>n-1</m> vektore <m>\ve b_1\ldots, \ve b_{i-1},\ve b_{i+1},\ldots, \ve b_{n}</m> 'n basis vir <m>W</m>.
+        </p>
+        <p>
+          Let op dat as <m>\ve v</m> die nul-vektor was, dan sou <m>W=\mathbb{R}^n</m> en dus <m>\Dim(W) = n</m>, so die aanname dat <m>\ve v</m> 'n nie-nul vektor is, is belangrik.
+        </p>
+      </solution>
     </exercise>
     </subsection>
 
@@ -1176,6 +1248,11 @@
           </md>.
         </p>
       </statement>
+      <answer>
+        <p>
+          <m> \ve{v}_2, \ve{v}_3, \ve{v}_6</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="true_false_span_lin_ind">
@@ -1506,7 +1583,8 @@
           Dus is <m> a  = c = 0 </m>. Dus is alle vektore in <m> V </m> inderdaad skalaarveelvoude van <m> \ve v_1 = x </m>. Dus is <m> \bopen \ve v_1 \bclose </m> 'n basis vir <m> V </m> en gevolglik is <m> \Dim V = 1</m>.
         </li>
       </ol>
-    </p></solution>
+    </p>
+    </solution>
     </exercise>
 
   <exercise xml:id="ex_basis_no_deg_2">

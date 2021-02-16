@@ -625,6 +625,13 @@
       (Bonus) Try adapt the argument in the question above to show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m> \Cont([0,1])</m>, the vector space of all <em>continuous</em> real valued functions on <m>[0,1]</m>.
     </p>
   </statement>
+  <solution>
+    <p>
+      Another construction in the previous problem could consist of polynomials (with their domains restricted to <m>[0,1]</m>:
+      <me> A_n = \left\{x^k\mid 0\le k\le n-1 \}</me>.
+      It consists of <m>n</m> linearly independent functions.
+    </p>
+  </solution>
 </exercise>
 
 </exercises>

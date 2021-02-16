@@ -624,6 +624,13 @@
       (Bonus) As jou konstruksie in die vraag hierbo nie uit kontinue funksies bestaan nie, probeer dit aanpas om te wys dat ons vir enige  <m> n \in \mathbb N </m>, 'n versameling van <m>n</m> lineêr onafhanklike vektore in <m> \Cont([0,1])</m>, die vektorruimte van <em>kontinue</em> reële funksies op <m>[0,1]</m> kan vind.
     </p>
   </statement>
+  <solution>
+    <p>
+      'n Ander konstruksie in die vorige vraag sou uit polinome (met definisieversameling beperk tot <m>[0,1]</m>) kon bestaan:
+      <me> A_n = \left\{x^k\mid 0\le k\le n-1 \}</me>.
+      Dit bestaan uit <m>n</m> funksies wat lineêr onafhanklik is.
+    </p>
+  </solution>
 </exercise>
 
 </exercises>
