@@ -437,25 +437,48 @@
       <p>
         In elk van die volgende, word daar 'n vektorruimte <m>V</m>,
         'n geordende basis <m>\basis{B}</m> en die koördinaatvektor
-        <m>[v]_\basis{B}</m> van <m>v</m> met betrekking tot <m>\basis{B}</m> aan jou gegee.
+        <m>[\ve v]_\basis{B}</m> van <m>v</m> met betrekking tot <m>\basis{B}</m> aan jou gegee.
         In elk van die probleme hier onder, bepaal <m>v</m>.
       <ol label="(a)">
         <li>
-          <m>V=\Poly_1</m>, <m>\basis{B}=(1+2x,2+3x)</m> en <m>[v]_{\basis{B}}=\begin{bmatrix} 3\\ -2\end{bmatrix}</m>;
+          <m>V=\Poly_1</m>, <m>\basis{B}=(1+2x,2+3x)</m> en <m>[\ve v]_{\basis{B}}=\begin{bmatrix} 3\\ -2\end{bmatrix}</m>;
         </li>
         <li>
           <m>V = \Mat_{2,2}</m>, die vektorruimte van <m>2\times 2</m> matrikse,
           <m>\basis{B} = \left(\begin{bmatrix} 1\amp 1\\ -1\amp 1\end{bmatrix},
           \begin{bmatrix} 2\amp 1\\1\amp -1\end{bmatrix}, \begin{bmatrix} 0\amp 0\\1\amp 1 \end{bmatrix},
           \begin{bmatrix} 1 \amp 0\\1\amp 1\end{bmatrix}\right)</m>,
-          en <m>[v]_{\basis{B}} = \begin{bmatrix}  1\\2\\-1\\-2\end{bmatrix}</m>;
+          en <m>[\ve v]_{\basis{B}} = \begin{bmatrix}  1\\2\\-1\\-2\end{bmatrix}</m>;
         </li>
         <li>
-          <m>V = \Col_2</m>, <m>\basis{B} = \left(\begin{bmatrix} 3\\-2 \end{bmatrix}, \begin{bmatrix} 2\\3 \end{bmatrix}\right)</m> en <m>[v]_{\basis{B}} = \begin{bmatrix} 1\\1 \end{bmatrix}</m>.
+          <m>V = \Col_2</m>, <m>\basis{B} = \left(\begin{bmatrix} 3\\-2 \end{bmatrix}, \begin{bmatrix} 2\\3 \end{bmatrix}\right)</m> en <m>[\ve v]_{\basis{B}} = \begin{bmatrix} 1\\1 \end{bmatrix}</m>.
         </li>
       </ol>
       </p>
     </statement>
+    <solution>
+      <p>
+        <ol label="(a)">
+          <li>
+            <m>\ve v = 3(1+2x)+(-2)(2+3x) = -1</m>
+          </li>
+          <li>
+            <me> \ve v =
+              1\begin{bmatrix} 1\amp 1\\ -1\amp 1\end{bmatrix} +
+              2\begin{bmatrix} 2\amp 1\\1\amp -1\end{bmatrix} +
+              (-1)\begin{bmatrix} 0\amp 0\\1\amp 1 \end{bmatrix}
+              (-2)\begin{bmatrix} 1 \amp 0\\1\amp 1\end{bmatrix}
+              = \begin{bmatrix} 3\amp 3\\ -2\amp -4 \end{bmatrix}
+            </me>
+          </li>
+          <li>
+            <m>\ve v = 1\begin{bmatrix} 3\\-2 \end{bmatrix}
+              + 1\begin{bmatrix} 2\\3 \end{bmatrix}
+              = \begin{bmatrix} 5\\ 1\end{bmatrix}</m>
+          </li>
+        </ol>
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -476,6 +499,38 @@
       </ol>
       </p>
     </statement>
+    <solution>
+      <p>
+        <ol label="(a)">
+          <li>
+            Ons moet <m>\ve v=(1,0)</m> skryf as 'n lineêre kombinasie <m>a(2,3)+b(3,4)</m>.
+            Dit behels om die stelsel
+            <md>
+              <mrow> 2a + 3b \amp = 1</mrow>
+              <mrow> 3a + 4b \amp = 0</mrow>
+            </md> op te los.
+            Hierdie stelsel het die unieke oplossing <m>a=-4</m> en <m>b=3</m> en dus is
+            <me> [\ve v]_{\basis{B}} = \begin{bmatrix} -4 \\ 3 \end{bmatrix}</me>.
+          </li>
+          <li>
+            Soortgelyk, stel ons
+            <me> x^2+x+2 = a(1-x+x^2)+b(3+2x+x^2)+c(x^2-1)</me>
+            en kry die stelsel
+            <md>
+              <mrow> a+3b-c \amp= 2 </mrow>
+              <mrow> -a+2b\phantom{+c} \amp = 1</mrow>
+              <mrow> a+b+c \amp = 1</mrow>
+            </md>.
+            Dit het die unieke oplossing
+            <md>
+              <mrow> a\amp = 1/4\amp b \amp = 5/8\amp c \amp= 1/8</mrow>
+            </md>,
+            so
+            <me> [x^2+x+2]_{\basis B} = \begin{bmatrix} 1/4 \\ 5/8 \\ 1/8 \end{bmatrix} </me>.
+          </li>
+        </ol>
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
