@@ -627,7 +627,7 @@
   <solution>
     <p>
       'n Ander konstruksie in die vorige vraag sou uit polinome (met definisieversameling beperk tot <m>[0,1]</m>) kon bestaan:
-      <me> A_n = \left\{x^k\mid 0\le k\le n-1 \}</me>.
+      <me> A_n = \left\{x^k\mid 0\le k\le n-1 \right\}</me>.
       Dit bestaan uit <m>n</m> funksies wat lineêr onafhanklik is.
     </p>
   </solution>

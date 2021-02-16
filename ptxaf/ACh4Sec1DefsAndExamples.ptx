@@ -22,25 +22,25 @@
         Dan is die volgende ekwivalent:
 
         <ol label="(a)">
-          <li>
+          <li xml:id="prop_eigenvalue-1">
             <p>
               <m>\lambda</m> is 'n eiewaarde van <m>T</m>.
             </p>
           </li>
 
-          <li>
+          <li xml:id="prop_eigenvalue-2">
             <p>
               <m>\lambda \id_V - T</m> is nie injektief nie.
             </p>
           </li>
 
-          <li>
+          <li xml:id="prop_eigenvalue-3">
             <p>
               <m>\lambda \id_V - T</m> is nie surjektief nie.
             </p>
           </li>
 
-          <li>
+          <li xml:id="prop_eigenvalue-4">
             <p>
               <m>\lambda \id_V - T</m> is nie inverteerbaar nie.
             </p>
@@ -131,8 +131,8 @@
         vektorruimte <m>V</m> is die determinant van die matriks van <m>T</m> met betrekking tot enige basis <m>\basis{B}</m> van <m>V</m>.
         Dit is,
         <me>
-          \det(T) := \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right),  \basis{B} \text{ enige basis vir \(V\). }
-        </me>
+          \det(T) := \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right),  \basis{B} \text{ enige basis vir }V
+        </me>.
       </p>
     </statement>
   </definition>
@@ -206,19 +206,19 @@
         Dan is die volgende stellings ekwivalent:
 
         <ol label="(a)">
-          <li>
+          <li xml:id="eigvalue_root_charpoly-1">
             <p>
               <m>\lambda</m> is an eiewaarde van <m>T</m>.
             </p>
           </li>
 
-          <li>
+          <li xml:id="eigvalue_root_charpoly-2">
             <p>
               <m>\lambda \id - T</m> is nie inverteerbaar nie.
             </p>
           </li>
 
-          <li>
+          <li xml:id="eigvalue_root_charpoly-3">
             <p>
               <m>\chi_T(\lambda) = 0</m>.
             </p>

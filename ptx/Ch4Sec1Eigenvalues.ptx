@@ -99,7 +99,8 @@
 
     <p>
       Clearly (<xref ref="prop_eigenvalue-2" text="local"/>) <m>\Leftrightarrow</m> (<xref ref="prop_eigenvalue-3" text="local"/>)
-      <m>\Leftrightarrow</m> (<xref ref="prop_eigenvalue-4" text="local"/>) by <xref ref="equiv-inj-sur-iso" />.
+      <m>\Leftrightarrow</m> (<xref ref="prop_eigenvalue-4" text="local"/>) by
+      <xref ref="equiv-inj-sur-iso" />.
     </p>
   </proof>
 
@@ -130,8 +131,8 @@
         <m>T : V \rightarrow V</m> on a finite-dimensional vector space <m>V</m> is the determinant of the matrix of <m>T</m> relative to any basis <m>\basis{B}</m> of <m>V</m>.
         That is,
         <me>
-          \det(T) := \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right),  \basis{B} \text{ any basis for \(V\). }
-        </me>
+          \det(T) := \det \left( [T]_{\basis{B} \leftarrow \basis{B}} \right),  \basis{B} \text{ any basis for }V
+        </me>.
       </p>
     </statement>
   </definition>

@@ -599,7 +599,6 @@
           Find a basis for the solution space of the equation determining <m>W</m>.
         </p>
       </hint>
-    </exercise>
     <solution>
         <p>
           Write the vector <m>\ve {v} = (v_1,v_2,\ldots, v_n)^T</m> and suppose that <m>v_i\ne 0</m>.
@@ -628,6 +627,7 @@
           Note that if <m>\ve v</m> were the zero vector, then we would have <m>W=\mathbb{R}^n</m> and thus <m>\Dim(W) = n</m>, so the assumption that <m>\ve v</m> is non-zero is important.
         </p>
       </solution>
+    </exercise>
     </subsection>
 
     <subsection>

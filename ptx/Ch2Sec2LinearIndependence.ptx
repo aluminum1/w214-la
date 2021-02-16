@@ -628,7 +628,7 @@
   <solution>
     <p>
       Another construction in the previous problem could consist of polynomials (with their domains restricted to <m>[0,1]</m>:
-      <me> A_n = \left\{x^k\mid 0\le k\le n-1 \}</me>.
+      <me> A_n = \left\{x^k\mid 0\le k\le n-1 \right\}</me>.
       It consists of <m>n</m> linearly independent functions.
     </p>
   </solution>
