@@ -205,12 +205,45 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <xsl:param name="exercise.divisional.solution" select="'no'" />
+<xsl:param name="exercise.divisional.answer" select="'no'" />
+<xsl:param name="exercise.divisional.hint" select="'no'" />
 
+<xsl:param name="exercise.inline.solution" select="'no'" />
+
+<xsl:param name="exercise.inline.answer" select="'no'" />
 <!--
   TODO: Set geometry parameter to a4page instead of default letter
 -->
 
+<xsl:template match="interactive[@geogebra]" mode="static-caption">
+    <xsl:choose>
+        <!-- author-supplied override -->
+        <xsl:when test="caption">
+            <xsl:apply-templates select="caption" />
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:text>\url{</xsl:text>
+            <xsl:value-of select="@geogebra"/>
+            <xsl:text>}</xsl:text>
+        </xsl:otherwise>
+    </xsl:choose>
+</xsl:template>
 
+
+<xsl:template match="*" mode="static-qr">
+    <xsl:choose>
+        <xsl:when test="not(@geogebra = '')">
+            <xsl:text>{\hypersetup{urlcolor=black}</xsl:text>
+            <xsl:text>\qrcode[height=\qrsize]{</xsl:text>
+                <xsl:value-of select="@geogebra" />
+            <xsl:text>}}%&#xa;</xsl:text>
+        </xsl:when>
+    </xsl:choose>
+</xsl:template>
+
+<xsl:template match="interactive[@platform='jsxgraph']" mode="static-qr">
+  <xsl:text>{}</xsl:text>
+</xsl:template>
 
 
 </xsl:stylesheet>

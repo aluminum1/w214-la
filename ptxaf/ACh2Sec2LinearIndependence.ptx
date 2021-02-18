@@ -184,8 +184,9 @@
       Ons sal wys dat (<xref ref="defn_lin_dep" text="local" />) <m>\Leftrightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />), (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />) en (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />), en so aflei dat elke bewering elke ander bewering impliseer.
     </p>
 
+    <case><title>(<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />)</title>
     <p>
-      (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />). Veronderstel dat <m>\basis{B}</m> lineêr afhanklik is. Dit beteken dat daar skalare <m>k_1</m>,
+      Veronderstel dat <m>\basis{B}</m> lineêr afhanklik is. Dit beteken dat daar skalare <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, bestaan, wat nie almal nul is nie, sodat
       <men xml:id="lin_dep_lem_another_eqn">
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
@@ -198,9 +199,11 @@
       </md>
       Daarom geld (<xref ref="lin_comb_other_vec" text="local" />).
     </p>
+    </case>
 
+    <case><title>(<xref ref="lin_comb_other_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="defn_lin_dep" text="local" />) </title>
     <p>
-      (<xref ref="lin_comb_other_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="defn_lin_dep" text="local" />). Veronderstel dat een van die vektore in die lys, sê <m>\ve{v}_s</m> 'n lineêre kombinasie van die ander vektore, is. Met ander woorde
+      Veronderstel dat een van die vektore in die lys, sê <m>\ve{v}_s</m> 'n lineêre kombinasie van die ander vektore, is. Met ander woorde
       <md>
         <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \text{(Geen } \ve{v}_s \text{terme aan RK.)} </mrow>
       </md>
@@ -210,9 +213,10 @@
       </men>
       Nie al die koëffisiënte aan die linkerkant van <xref ref="rearranged_lin_dep"/> is nul nie, aangesien die koëffisiënt van <m>\ve{v}_s</m> gelyk is aan <m>-1</m>. Daarom is <m>\basis{B}</m> lineêr afhanklik.
     </p>
+    </case>
 
+    <case><title>(<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />)</title>
     <p>
-      (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />).
       Veronderstel dat die lys <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> lineêr afhanklik is. Dit beteken dat daar skalare <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m> bestaan,
       wat nie almal nul is nie, sodat
@@ -250,14 +254,18 @@
       </me>
       Daarom geld (<xref ref="lin_comb_prec_vec" text="local" />).
     </p>
+    </case>
 
-     <p> (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />) Veronderstel dat (<xref ref="lin_comb_prec_vec" text="local" />) waar is. Met ander woorde geld een van die volgende twee:
+    <case><title>(<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />)</title>
+      <p>
+        Veronderstel dat (<xref ref="lin_comb_prec_vec" text="local" />) waar is. Met ander woorde geld een van die volgende twee:
         <ul>
           <li> <m>\ve{v}_1 = \ve{0}</m>. Daarom is <m>\basis{B}</m> uit <xref ref="remark_about_lin_dependence"/> lineêr afhanklik. Met ander woorde, (<xref ref="defn_lin_dep" text="local" />) is waar. Aangesien ons reeds (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow </m> (<xref ref="lin_comb_other_vec" text="local" />) bewys het, lei ons af dat (<xref ref="lin_comb_other_vec" text="local" />) waar is. </li>
           <li> Daar bestaan 'n <m>r \in \{2, \ldots, n\}</m> sodat <m>\ve{v}_r</m> 'n lineêre kombinasie van <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m> is. In hierdie geval is <m>\ve{v}_r</m> duidelik 'n lineêre kombinasie van die ander vektore in <m>\basis{B}</m>, en dus is (<xref ref="lin_comb_other_vec" text="local" />) waar.</li>
         </ul>
         In albei gevalle is (<xref ref="lin_comb_other_vec" text="local" />) waar, so (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />).
-    </p>
+      </p>
+    </case>
   </proof>
 
   <example xml:id="app_of_prop_preceding">
@@ -566,17 +574,16 @@
     </hint>
     <solution>
       <p>
-        As ons die Lineêre Kombinasie van Voorafgaande Vektore Proposisie gebruik,
+        As ons <xref ref="lin_dependence_prop"/> gebruik,
         is die bewys baie elegant!
         Die vektor <m> \ve v_i </m> (vir enige <m>i \in \left\{1,\ldots n\right\}</m>)
         kan nie 'n lineêre kombinasie van <m> \ve v_1 \ldots \ve v_{i-1} </m>
-        wees nie; anders is dit teenstrydig met die
-        Lineêre Kombinasie van Voorafgaande Vektore Proposisie.
-        Dit word gegee dat <m> \ve v </m> nie 'n lineêre kombinasie van  <m> \ve v_1 \ldots \ve v_{n} </m> is nie.
+        wees nie; anders is dit teenstrydig met <xref ref="lin_dependence_prop"/>.
+        Dit word gegee dat <m> \ve v </m> nie 'n lineêre kombinasie
+        van  <m> \ve v_1 \ldots \ve v_{n} </m> is nie.
         Dus is geen vektor in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m>
         'n lineêre kombinasie van die voorafgaande vektore nie.
-        Dus, uit die Lineêre Kombinasie van Voorafgaande
-        Vektore Proposisie, moet <m> {B}' </m>
+        Dus, uit <xref ref="lin_dependence_prop"/>, moet <m> {B}' </m>
         lineêr onafhanklik wees.
       </p>
     </solution>
@@ -634,7 +641,9 @@
 
 </exercises>
 
-
+<solutions inline="statement answer solution">
+  <title> Answers and solutions to Checkpoints in this section</title>
+</solutions>
 
 </section>
 

@@ -667,7 +667,7 @@
           Die volgende app illustreer <xref ref="diff_eqn_exist_unique"/>. Sleep die rooi en groen slepers om die koëffisiënte van die differensiaal vergelyking te verander (in hierdie voordbeeld, die koëffisiënte is net getalle, maar in algemeen hulle is funksies van <m>x</m>). Sleep die rooi punte om die beginwaardes te verander.
         </p>
           <figure>
-            <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%"/>
+            <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%" preview="../../images/interactive-preview-1.png"/>
             <caption>GeoGebra App: 2de orde GDV met konstante koëffisiënte.</caption>
           </figure>
         </statement>

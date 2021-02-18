@@ -138,6 +138,7 @@
   </lemma>
 
   <proof>
+    <case direction="backward" >
     <p>
       Eers bewys ons dat as <m>k=0</m> of <m>\ve{v}=\ve{0}</m>, dan is <m>k.\ve{0}=\ve{0}</m>.
       Veronderstel dat <m>k=0</m>.
@@ -145,7 +146,8 @@
       Aan die ander kant, veronderstel <m>\ve{v} = \ve{0}</m>.
       Dan <m>k \smul \ve{v} = k \smul \ve{0} = \ve{0}</m> deur <xref ref="mult_by_zero_ex" text="type-global">Oefening</xref>.
     </p>
-
+    </case>
+    <case direction="forward" >
     <p>
       <alert>Bewys van <m>\Rightarrow</m>)</alert>.
       Veronderstel dat <m>k \smul \ve{v} = \ve{0}</m>.
@@ -167,6 +169,7 @@
       Daarom, in die geval waar <m>k \neq 0</m> dit volg dat <m>\ve{v} = \ve{0}</m>,
       wat ons in die eerste plek wou bewys.
     </p>
+    </case>
   </proof>
 
   <example xml:id="explicit_solve_x">

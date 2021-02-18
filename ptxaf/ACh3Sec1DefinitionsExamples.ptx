@@ -117,7 +117,7 @@
       <figure>
         <title>App: Matriks as 'n lineêre afbeelding</title>
         <caption> Interactive GeoGebra applet wat die lineêre afbeelding <m>\col{v} \mapsto \mat{A}\col{v}</m> aantoon.</caption>
-          <interactive geogebra="https://www.geogebra.org/material/iframe/id/vexfrzez/width/600/height/701/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:701" width="90%"/>
+          <interactive geogebra="https://www.geogebra.org/material/iframe/id/vexfrzez/width/600/height/701/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:701" width="90%" preview="../../images/interactive-preview-3.png"/>
       </figure>
     </statement>
   </example>
@@ -135,7 +135,7 @@
     </p>
     <figure>
       <caption>App: Poolkoördinate as 'n nie-lineêre afbeelding</caption>
-      <interactive xml:id="interactive-polar-map" height="100%" platform="jsxgraph" source="code/jsxgraph/PolarCoordMap.js" aspect="10:4">
+      <interactive xml:id="interactive-polar-map" height="100%" platform="jsxgraph" source="code/jsxgraph/PolarCoordMap.js" aspect="10:4" preview="../../images/interactive-polar-map-preview.png">
         <sidebyside widths="40% 5% 40%" valign="middle">
           <slate xml:id="jsxgraph-polar-1" surface="jsxboard"/>
           <p><m> \xrightarrow{ \large T } </m></p>
@@ -597,7 +597,7 @@
     Sleep die blou vektor <m>\ve{v}</m> om die effek op sy beeld <m>T_{x_0}(\ve{v}) = y</m> in <m>V</m> te sien. Jy kan ook die waarde van <m>x_0</m> verander.
   </p>
     <figure xml:id="ode_lin_map">
-      <interactive geogebra="https://www.geogebra.org/material/iframe/id/kxcmtv5t/width/800/height/909/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="800:909" width="90%"/>
+      <interactive geogebra="https://www.geogebra.org/material/iframe/id/kxcmtv5t/width/800/height/909/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="800:909" width="90%" preview="../../images/interactive-preview-5.png"/>
       <caption>GeoGebra App: Beeld van die lineêre afbeelding <m>T</m>.</caption>
     </figure>
 </statement>

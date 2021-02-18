@@ -184,8 +184,9 @@
       We will show that (<xref ref="defn_lin_dep" text="local" />) <m>\Leftrightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />), (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />) and (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />), and conclude that each statement implies the others.
     </p>
 
+    <case><title> (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />)</title>
     <p>
-      (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />). Suppose that <m>\basis{B}</m> is linearly dependent. This means that there are scalars <m>k_1</m>,
+       Suppose that <m>\basis{B}</m> is linearly dependent. This means that there are scalars <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, not all zero, such that
       <men xml:id="lin_dep_lem_another_eqn">
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
@@ -198,9 +199,11 @@
       </md>
       Therefore, (<xref ref="lin_comb_other_vec" text="local" />) is true.
     </p>
+    </case>
 
+    <case><title> (<xref ref="lin_comb_other_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="defn_lin_dep" text="local" />)</title>
     <p>
-      (<xref ref="lin_comb_other_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="defn_lin_dep" text="local" />). Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is,
+       Suppose that one of the vectors in the list, say <m>\ve{v}_s</m>, is a linear combination of the others vectors. That is,
       <md>
         <mrow> \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \text{(No } \ve{v}_s  \text{term on RHS.)} </mrow>
       </md>
@@ -210,9 +213,10 @@
       </men>
       Not all the coefficients on the left hand-side of <xref ref="rearranged_lin_dep"/> are zero, since the coefficient of <m>\ve{v}_s</m> is equal to <m>-1</m>. Therefore, <m>\basis{B}</m> is linearly dependent.
     </p>
+    </case>
 
+    <case><title> (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />)</title>
     <p>
-      (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_prec_vec" text="local" />).
       Suppose that the list <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> is linearly dependent.
       This means that there are scalars <m>k_1</m>,
       <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, not all zero, such that
@@ -250,14 +254,18 @@
       </me>
       Therefore, (<xref ref="lin_comb_prec_vec" text="local" />) is true.
     </p>
+    </case>
 
-     <p> (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />) Suppose that (<xref ref="lin_comb_prec_vec" text="local" />) is true. In other words, either of the following two holds:
+    <case><title> (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />)</title>
+      <p>
+        Suppose that (<xref ref="lin_comb_prec_vec" text="local" />) is true. In other words, either of the following two holds:
         <ul>
           <li> <m>\ve{v}_1 = \ve{0}</m>. Therefore, <m>\basis{B}</m> is linearly dependent, by <xref ref="remark_about_lin_dependence"/>. In other words, (<xref ref="defn_lin_dep" text="local" />) is true. Therefore, since we have already proved that (<xref ref="defn_lin_dep" text="local" />) <m>\Rightarrow </m> (<xref ref="lin_comb_other_vec" text="local" />), we conclude that (<xref ref="lin_comb_other_vec" text="local" />) is true. </li>
           <li> For some <m>r \in \{2, \ldots, n\}</m>, the vector <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1, \ldots, \ve{v}_{r-1}</m>. In this case, clearly <m>\ve{v}_r</m> is a linear combination of the other vectors in <m>\basis{B}</m>, so (<xref ref="lin_comb_other_vec" text="local" />) is true.</li>
         </ul>
         In both cases, (<xref ref="lin_comb_other_vec" text="local" />) is true. So, (<xref ref="lin_comb_prec_vec" text="local" />) <m>\Rightarrow</m> (<xref ref="lin_comb_other_vec" text="local" />).
-    </p>
+      </p>
+    </case>
   </proof>
 
   <example xml:id="app_of_prop_preceding">
@@ -566,18 +574,16 @@
     </hint>
     <solution>
       <p>
-        If we use the Linear Combination of Preceding Vectors Proposition,
+        If we use <xref ref="lin_dependence_prop"/>,
         the proof is very slick!
         The vector <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>)
         cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m>
-        or else we would contradict the Linear
-        Combination of Preceding Vectors Proposition.
+        or else we would contradict <xref ref="lin_dependence_prop"/>.
         It is given that <m> \ve v </m> is not a linear
         combination of  <m> \ve v_1 \ldots \ve v_{n} </m>.
         Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m>
         is a linear combination of the previous vectors.
-        Thus by the Linear Combination of Preceding
-        Vectors Proposition, <m> {B}' </m> must be
+        Thus by <xref ref="lin_dependence_prop"/>, <m> {B}' </m> must be
         linearly independent.
       </p>
     </solution>
@@ -635,7 +641,9 @@
 
 </exercises>
 
-
+<solutions inline="statement answer solution">
+  <title> Answers and solutions to Checkpoints in this section</title>
+</solutions>
 
 </section>
 

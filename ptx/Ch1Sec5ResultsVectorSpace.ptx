@@ -138,35 +138,37 @@
   </lemma>
 
   <proof>
-    <p>
-      First we show that if either <m>k=0</m> or <m>\ve{v}=\ve{0}</m>, then <m>k.\ve{0}=\ve{0}</m>.
-      Suppose <m>k=0</m>.
-      Then <m>k \smul\ve{v} = 0 \smul\ve{v} = \ve{0}</m> by R8 of a vector space.
-      On the other hand, suppose <m>\ve{v} = \ve{0}</m>.
-      Then <m>k \smul\ve{v} = k \smul\ve{0} = \ve{0}</m> by <xref ref="mult_by_zero_ex" text="type-global">Exercise</xref>.
-    </p>
+    <case direction="backward" >
+      <p>
+        First we show that if either <m>k=0</m> or <m>\ve{v}=\ve{0}</m>, then <m>k.\ve{0}=\ve{0}</m>.
+        Suppose <m>k=0</m>.
+        Then <m>k \smul\ve{v} = 0 \smul\ve{v} = \ve{0}</m> by R8 of a vector space.
+        On the other hand, suppose <m>\ve{v} = \ve{0}</m>.
+        Then <m>k \smul\ve{v} = k \smul\ve{0} = \ve{0}</m> by <xref ref="mult_by_zero_ex" text="type-global">Exercise</xref>.
+      </p>
+    </case>
+    <case direction="forward" >
+      <p>
+        Suppose that <m>k \smul\ve{v} = \ve{0}</m>.
+        There are two possibilities:
+        either <m>k = 0</m>, or <m>k \neq 0</m>.
+        If <m>k=0</m>, then we are done.
+        If <m>k \neq 0</m>, then <m>\frac{1}{k}</m> exists
+        and we can multiply both sides by it:
+        <md>
+          <mrow>k \smul\ve{v} \amp  = \ve{0}</mrow>
+          <mrow>\therefore  \frac{1}{k} \smul(k \smul\ve{v})  \amp  = \frac{1}{k} \smul\ve{0} \amp \amp  \text{(Multiplied both sides by \(\frac{1}{k}\))}</mrow>
+          <mrow>\therefore \left(\frac{1}{k} k\right) \smul\ve{v} \amp = \ve{0} \amp \amp  \text{(LHS:  }(<xref ref="R6" text="title" />)\text{. RHS: } <xref ref="mult_by_zero_ex" text="global"/>)</mrow>
+          <mrow>\therefore 1 \smul\ve{v} \amp = \ve{0} \amp \amp  \text{(using \(\frac{1}{k} k = 1\))}</mrow>
+          <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  (<xref ref="R7" text="title" />)</mrow>
+        </md>
+      </p>
 
-    <p>
-      <alert>Proof of <m>\Rightarrow</m></alert>.
-      Suppose that <m>k \smul\ve{v} = \ve{0}</m>.
-      There are two possibilities:
-      either <m>k = 0</m>, or <m>k \neq 0</m>.
-      If <m>k=0</m>, then we are done.
-      If <m>k \neq 0</m>, then <m>\frac{1}{k}</m> exists
-      and we can multiply both sides by it:
-      <md>
-        <mrow>k \smul\ve{v} \amp  = \ve{0}</mrow>
-        <mrow>\therefore  \frac{1}{k} \smul(k \smul\ve{v})  \amp  = \frac{1}{k} \smul\ve{0} \amp \amp  \text{(Multiplied both sides by \(\frac{1}{k}\))}</mrow>
-        <mrow>\therefore \left(\frac{1}{k} k\right) \smul\ve{v} \amp = \ve{0} \amp \amp  \text{(LHS:  }(<xref ref="R6" text="title" />)\text{. RHS: } <xref ref="mult_by_zero_ex" text="global"/>)</mrow>
-        <mrow>\therefore 1 \smul\ve{v} \amp = \ve{0} \amp \amp  \text{(using \(\frac{1}{k} k = 1\))}</mrow>
-        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  (<xref ref="R7" text="title" />)</mrow>
-      </md>
-    </p>
-
-    <p>
-      Hence in the case <m>k \neq 0</m> we must have <m>\ve{v} = \ve{0}</m>,
-      which is what we wanted to show.
-    </p>
+      <p>
+        Hence in the case <m>k \neq 0</m> we must have <m>\ve{v} = \ve{0}</m>,
+        which is what we wanted to show.
+      </p>
+    </case>
   </proof>
 
   <example xml:id="explicit_solve_x">

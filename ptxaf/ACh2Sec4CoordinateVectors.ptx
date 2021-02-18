@@ -238,7 +238,7 @@
       <figure>
         <title>App: Koördinaatvektore</title>
         <caption> Interaktiewe Geogebra app wat die koördinaatvektor van <m>\ve{v}</m> relatief tot die basis <m>\basis{B}</m> aantoon. </caption>
-        <interactive geogebra="https://www.geogebra.org/material/iframe/id/tpdmz8kj/width/600/height/703/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:703" widith="90%"/>
+        <interactive geogebra="https://www.geogebra.org/material/iframe/id/tpdmz8kj/width/600/height/703/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:703" widith="90%" preview="../../images/interactive-preview-2.png"/>
       </figure>
     </statement>
   </example>

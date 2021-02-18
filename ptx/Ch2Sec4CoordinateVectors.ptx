@@ -238,7 +238,7 @@
       <figure>
         <title>App: Coordinate vectors</title>
         <caption> Interactive GeoGebra applet displaying the coordinate vector of <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m>. </caption>
-        <interactive geogebra="https://www.geogebra.org/material/iframe/id/tpdmz8kj/width/600/height/703/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:703" width="90%"/>
+        <interactive geogebra="https://www.geogebra.org/material/iframe/id/tpdmz8kj/width/600/height/703/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="600:703" width="90%" preview="../../images/interactive-preview-2.png"/>
       </figure>
     </statement>
   </example>

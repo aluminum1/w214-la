@@ -667,7 +667,7 @@
           The following app gives a visual demonstration of <xref ref="diff_eqn_exist_unique"/>. Drag the red and green sliders to change the coefficients of the differential equation (in this example, the coefficients are just numbers, but in general they are functions of <m>x</m>). Drag the blue points to change the initial conditions.
         </p>
           <figure>
-            <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%"/>
+            <interactive geogebra="https://www.geogebra.org/material/iframe/id/xfs4bpqk/width/598/height/804/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" aspect="598:804" width="90%" preview="../../images/interactive-preview-1.png"/>
             <caption>GeoGebra App: 2nd order ODE with constant coefficients.</caption>
           </figure>
         </statement>
