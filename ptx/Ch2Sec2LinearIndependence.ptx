@@ -166,7 +166,6 @@
           </li>
 
           <li xml:id="lin_comb_prec_vec">
-            <title>Linear Combination of Preceding Vectors</title>
             <p>
               <em>(Linear Combination of Preceding Vectors)</em>
               Either <m>\ve{v}_1 = \ve{0}</m>,

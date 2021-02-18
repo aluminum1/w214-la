@@ -441,29 +441,16 @@
         <ol label="(a)">
           <li>
             <md>
-            <mrow> \ve f(a)= 4 </mrow>
-            <mrow> \ve f(b) = 0 </mrow>
-            <mrow> \ve f(c) = 2 </mrow>
-            <mrow></mrow>
-            <mrow> \ve g(a)= 1 </mrow>
-            <mrow> \ve g(b) = 1 </mrow>
-            <mrow> \ve g(c) = 1 </mrow>
-            <mrow></mrow>
-            <mrow> \ve h(a)= 0 </mrow>
-            <mrow> \ve h(b) = 3</mrow>
-            <mrow> \ve h(c) = 0 </mrow>
-          </md>
+              <mrow> \ve f(a)\amp = 4 \amp \ve f(b) \amp = 0 \amp \ve f(c) = 2 </mrow>
+              <mrow> \ve g(a) \amp = 1 \amp \ve g(b) \amp = 1 \amp  \ve g(c) = 1 </mrow>
+              <mrow> \ve h(a)\amp = 0 \amp \ve h(b) \amp = 3 \amp \ve h(c) = 0 </mrow>
+            </md>
           </li>
           <li>
-          <md>
-          <mrow> (\ve f+\ve g)(a) =5</mrow>
-          <mrow> (\ve f+\ve g)(b) =1 </mrow>
-          <mrow> (\ve f+\ve g)(c) = 3</mrow>
-          <mrow></mrow>
-          <mrow>( 3 \smul \ve h)(a) = 0 </mrow>
-          <mrow>( 3 \smul \ve h)(b) = 9 </mrow>
-          <mrow>( 3 \smul \ve h)(c) = 0 </mrow>
-          </md>
+            <md>
+              <mrow> (\ve f+\ve g)(a) \amp =5 \amp (\ve f+\ve g)(b) \amp =1 \amp (\ve f+\ve g)(c) \amp= 3</mrow>
+              <mrow>( 3 \smul \ve h)(a) \amp = 0 \amp ( 3 \smul \ve h)(b) \amp = 9 \amp  ( 3 \smul \ve h)(c) \amp = 0 </mrow>
+            </md>
           </li>
         </ol>
         </p>

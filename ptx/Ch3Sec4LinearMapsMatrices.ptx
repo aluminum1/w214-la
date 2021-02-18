@@ -135,7 +135,7 @@
           <mrow>[\ve{v}]_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
           <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  (T \text{ is linear)}</mrow>
           <mrow>\amp = a_1 [T(\ve{b}_1)]_\basis{C} + \cdots + a_n [T(\ve{b}_m)]_\basis{C}  \amp \amp  (<xref ref = "lin_of_coord_vectors" />)</mrow>
-         <mrow> \amp =  \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} \amp \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} \amp \ldots \amp \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
+         <mrow> \amp =  \begin{bmatrix} \bigg[ T(\ve b_1) \bigg]_\basis{C} \amp \bigg[T(\ve b_2) \bigg]_\basis{C} \amp \cdots \amp \bigg[ T(\ve b_m) \bigg]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
           <mrow>\amp =    [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
         </md>.
       </p>
@@ -181,7 +181,7 @@
   </p>
 
   <figure>
-    <caption></caption>
+    <caption>Visual representation of <xref ref="lin-map-in-matrix-theorem"/></caption>
     <image width="80%">
       <latex-image>
         <![CDATA[\begin{tikzpicture}[yscale=0.8]

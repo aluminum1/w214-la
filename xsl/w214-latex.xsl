@@ -39,7 +39,14 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 <!-- "commentary" -->
 <!-- Green and ugly -->
 <xsl:template match="commentary" mode="tcb-style">
-    <xsl:text>size=minimal, attach title to upper, after title={\space}, fonttitle=\bfseries, coltitle=black, colback=green</xsl:text>
+    <xsl:text>
+      size=minimal,
+      attach title to upper,
+      after title={\space},
+      fonttitle=\bfseries,
+      coltitle=black,
+      colback=green
+    </xsl:text>
 </xsl:template>
 
 <!-- "objectives", "outcomes",etc. -->
@@ -54,26 +61,22 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- Example styling from CLP -->
 <xsl:template match="example" mode="tcb-style">
-    <xsl:text>colback=white, colframe=black, colbacktitle=white, coltitle=black,
-      enhanced,
-      breakable,
-      attach boxed title to top left={xshift=7mm, yshift*=-\tcboxedtitleheight/2},
-      frame hidden,
-      overlay unbroken={
-      \draw[thick, \lt-, rounded corners] ([yshift=-3ex]interior.north west)--(interior.north west)--(title);
-      \draw[thick, -\gt, rounded corners] (title)--(interior.north east)--([yshift=-3ex]interior.north east);
-      \draw[thick, \lt-\gt, rounded corners] ([yshift=3ex]interior.south west)--(interior.south west)--(interior.south east)--([yshift=3ex]interior.south east);
+    <xsl:text>
+      blanker,
+      coltitle=primaryColor,
+      fonttitle=\bfseries,
+      after title={\newline
+
       },
-      overlay first={
-        \draw[thick, \lt-, rounded corners] ([yshift=-3ex]interior.north west)--(interior.north west)--(title);
-        \draw[thick, -\gt, rounded corners] (title)--(interior.north east)--([yshift=-3ex]interior.north east);
-        },
-      overlay middle={},
-      overlay last={
-        \node[draw, thick, rectangle, rounded corners] (repeatTitle) at ([xshift=-12ex]interior.south east) {\textbf{Example~\thetcbcounter}};
-        \draw[thick, \lt-, rounded corners] ([yshift=3ex]interior.south west)--(interior.south west)--(repeatTitle);
-        \draw[thick,-\gt,rounded corners] (repeatTitle)--(interior.south east)--([yshift=3ex]interior.south east);
-        },
+      attach title to upper,
+      breakable,
+      left=5mm,
+      top=3mm,
+      before skip=10pt,
+      after skip=10pt,
+      borderline west={0.4mm}{0pt}{primaryColor},
+      borderline north={0.4mm}{0pt}{primaryColor},
+      after upper = {\hfill \(\blacksquare\)},
     </xsl:text>
 </xsl:template>
 
@@ -134,7 +137,48 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 <!-- of the LaTeX source using the hex A (dec 10) character   -->
 <!-- Note: "enhanced" is necessary for boxed titles           -->
 <xsl:template match="&DEFINITION-LIKE;" mode="tcb-style">
-  breakable, colframe=MidnightBlue, colback=MidnightBlue!5, colbacktitle=MidnightBlue!70, coltitle=black, enhanced, attach boxed title to top left={xshift=7mm, yshift*=-2ex},sharp corners=northwest, arc=10pt,
+  <xsl:text>
+    breakable,
+    colframe=primaryColor,
+    colback=primaryColor!5,
+    colbacktitle=primaryColor,
+    coltitle=white,
+    fonttitle = \bfseries,
+    enhanced,
+    attach boxed title to top left={xshift=7mm, yshift*=-2ex},
+    arc=10pt,
+  </xsl:text>
+</xsl:template>
+
+<!-- THEOREM-LIKE -->
+<xsl:template match="&THEOREM-LIKE;" mode="tcb-style">
+  <xsl:text>
+    breakable,
+    colframe=secondaryColor,
+    colback=secondaryColor!5,
+    colbacktitle=secondaryColor,
+    coltitle=black,
+    fonttitle = {\bfseries\upshape},
+    after title = {\ },
+    tcbox width = auto limited, % Don't know if this is necessary
+    enhanced,
+    attach title to upper,
+    arc=3pt,
+  </xsl:text>
+</xsl:template>
+
+
+<xsl:template match="proof" mode="tcb-style">
+  <xsl:text>
+    blanker, coltitle=black,
+    fonttitle=\itshape,
+    after title={\ },
+    attach title to upper,
+    breakable,left=5mm,
+    before skip=10pt,after skip=10pt,
+    borderline west={1mm}{0pt}{secondaryColor},
+    after upper = {\hfill \(\square\)},
+  </xsl:text>
 </xsl:template>
 
 <!-- REMARK-LIKE: "remark", "convention", "note",   -->
@@ -142,11 +186,21 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 <!-- COMPUTATION-LIKE: "computation", "technology"  -->
  <!--White title text, but title backgounds vary    -->
  <!--by category, and remarks have sharp corners    -->
+ <!--
 <xsl:template match="&REMARK-LIKE;" mode="tcb-style">
-    <xsl:text>colbacktitle=red, sharp corners</xsl:text>
+    <xsl:text>
+      %colbacktitle=primaryColor,
+      %sharp corners,
+      %enhanced,
+      %attach boxed title to top center={yshift*=-2ex},
+    </xsl:text>
 </xsl:template>
+-->
+
 <xsl:template match="&COMPUTATION-LIKE;" mode="tcb-style">
-    <xsl:text>colbacktitle=blue</xsl:text>
+    <xsl:text>
+      colbacktitle=secondaryColor,
+    </xsl:text>
 </xsl:template>
 
 

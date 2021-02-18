@@ -166,7 +166,6 @@
           </li>
 
           <li xml:id="lin_comb_prec_vec">
-            <title>Lineêre kombinasie van voorafgaande vektore</title>
             <p>
               <em>(Lineêre kombinasie van voorafgaande vektore)</em>
               Óf <m>\ve{v}_1 = \ve{0}</m>,

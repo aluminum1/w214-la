@@ -307,12 +307,12 @@
       </p>
 
       <figure>
-        <caption></caption>
-        <image>
+        <caption>Visual representation of the kernel and image for this example</caption>
+        <image width="50%">
           <latex-image>
             <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
             \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
-            \draw (1.5, -0.1) -- (1.5, -2);
+            \draw (1.5, -0.1) -- (1.5, -1);
             \node at (3.3, 1) {\(\Im(C)\)};
             \draw[very thick, primaryColor, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
           </latex-image>
@@ -339,7 +339,7 @@
 
       <figure>
         <caption></caption>
-        <image>
+        <image width="50%">
           <latex-image>
             <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
             \draw[very thick, primaryColor, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
@@ -401,9 +401,17 @@
         </me>
         with no constraints on the other constants <m>a_1, a_2, b_2</m>.
         In other words,
-        <me>
-          \Ker(I) = \left\{ \text{ all trigonometric polynomials of the form  } \\ (a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}), \text{ where } (a_0, a_1, a_2, b_2 \in \mathbb{R}). \right\}
-        </me>
+        <md>
+          <mrow>
+            \Ker(I) = \Big\{ \text{ all }\amp\text{trigonometric polynomials of the form  }
+          </mrow>
+          <mrow>
+            \amp(a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}),
+          </mrow>
+          <mrow>
+            \amp\text{ where } (a_0, a_1, a_2, b_2 \in \mathbb{R}) \Big\}
+          </mrow>
+        </md>.
       </p>
 
       <p>
