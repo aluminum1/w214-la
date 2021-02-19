@@ -1221,9 +1221,38 @@
         Find a formula for <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right)</m> and use it to find <m>T\left(\begin{bmatrix} 5\\-3 \end{bmatrix}\right)</m>.
       </p>
     </statement>
+    <answer>
+      <p>
+        We have
+        <me>T\left(\begin{bmatrix} x\\y \end{bmatrix}\right) = \begin{bmatrix} -x+3y\\ 2x-5y\end{bmatrix}</me>
+        and
+        <me>T\left(\begin{bmatrix}5\\-3\end{bmatrix}\right) = \begin{bmatrix} -14\\25\end{bmatrix}</me>.
+      </p>
+    </answer>
+    <solution>
+      <p>
+        Note that <m>\begin{bmatrix} 0\\1 \end{bmatrix} = \ve{v}_2-\ve{v}_1</m>, so
+        <md>
+          <mrow>T\left(\begin{bmatrix} 0\\1 \end{bmatrix}\right) \amp = T(\ve{v}_2)-T(\ve{v}_1) = \begin{bmatrix}2\\-3\end{bmatrix}\begin{bmatrix}-1\\2\end{bmatrix}</mrow>
+          <mrow>
+          \amp=\begin{bmatrix} 3\\ -5\end{bmatrix}
+        </mrow>
+      </md>.
+      Now,
+      <md>
+        <mrow>
+          T\left(\begin{bmatrix} x\\y \end{bmatrix}\right) \amp= xT\left(\begin{bmatrix} 1\\0\end{bmatrix}\right) + yT\left(\begin{bmatrix} 0\\1 \end{bmatrix}\right)</mrow>
+        <mrow> \amp= x\begin{bmatrix}-1\\2 \end{bmatrix} + y\begin{bmatrix} 3\\-5 \end{bmatrix}</mrow>
+        <mrow> \amp= \begin{bmatrix} -x+3y\\ 2x-5y\end{bmatrix}</mrow>
+      </md>.
+      Then
+      <me> T\left(\begin{bmatrix}5\\-3\end{bmatrix}\right) = \begin{bmatrix} -14\\25\end{bmatrix}</me>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
+  <statement>
     <p>
       Determine the action of the gradient linear map
       <me>
@@ -1242,26 +1271,24 @@
       </md>
       of <m>\Vect_1(\mathbb{R}^2)</m>respectively.
     </p>
-  </exercise>
-
-  <exercise>
+  </statement>
+  <solution>
     <p>
-      Consider the following function:
+      We first compute the values of <m>\nabla f</m>, for each polynomial <m>f</m> in the given basis for <m>\Poly_2[x,y]</m> and then write it in terms of the given basis for <m>\Vect_1(\reals^2)</m>:
       <md>
-        <mrow> T : \Poly_2 \amp \rightarrow \mathbb{R}^2        </mrow>
-        <mrow> p \amp \mapsto \begin{bmatrix} p(0) \\ p(1) \end{bmatrix} </mrow>
-      </md>
+        <mrow>\nabla(1) \amp= \left(\frac{\partial 1}{\partial x},\frac{\partial 1}{\partial y}\right) = (0,0)</mrow>
+        <mrow>\nabla(x) \amp= \left(\frac{\partial x}{\partial x},\frac{\partial x}{\partial y}\right) = (1,0)=V_1</mrow>
+        <mrow>\nabla(y) \amp= \left(\frac{\partial y}{\partial x},\frac{\partial y}{\partial y}\right) = (0,1)=V_4</mrow>
+        <mrow>\nabla(x^2) \amp= \left(\frac{\partial x^2}{\partial x},\frac{\partial x^2}{\partial y}\right) = (2x,0)=2V_2</mrow>
+        <mrow>\nabla(xy) \amp= \left(\frac{\partial xy}{\partial x},\frac{\partial xy}{\partial y}\right) = (y,x)=V_3+V_5</mrow>
+        <mrow>\nabla(y^2) \amp= \left(\frac{\partial y^2}{\partial x},\frac{\partial y^2}{\partial y}\right) = (0,2y)=2V_6</mrow>
+      </md>.
     </p>
-    <ol label="(a)">
-      <li><p>
-        Is <m>T</m> a linear map?
-      </p></li>
-      <li><p> Prove your assertion from (a).
-      </p></li>
-    </ol>
+  </solution>
   </exercise>
 
   <exercise>
+    <statement>
     <p>
       Let <m>V</m> be the vector space of solutions to the differential equation
       <me>
@@ -1274,6 +1301,7 @@
       </md>
       Is <m>T</m> a linear map? Prove your assertion.
     </p>
+  </statement>
   </exercise>
 
   <exercise>
@@ -1317,7 +1345,7 @@
             <md>
               <mrow>
               I(\ve p + \ve q) \amp = \int_{-1}^1 \left( \ve p(x) + \ve q(x)\right) \, dx</mrow>
-              <mrow> =  \int_{-1}^1 \ve p(x) \, dx +
+              <mrow> \amp =  \int_{-1}^1 \ve p(x) \, dx +
               \int_{-1}^1 \ve q(x) \, dx = I(\ve p) + I(\ve q)</mrow>
             </md>.
             <me>
@@ -1403,6 +1431,22 @@
         Let <m>T:V\to W</m> be a linear map and suppose that <m>T(\ve{v}_1)=\ve{w}_1</m> and <m>T(\ve{v}_2)=\ve{w}_2</m>. Prove that <m>T(4\ve{v}_1-\ve{v}_2)=4\ve{w}_1-\ve{w}_2</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        We make sure to say in each step how we use the definition of a linear map:
+        <md>
+          <mrow> T(4\ve{v}_1-\ve{v}_2) \amp = T(4\ve{v}_1+(-1)\ve{v}_2)</mrow>
+          <intertext> (this is the definition of <m>-\ve{v}_2</m>)</intertext>
+          <mrow> \amp = T(4\ve{v}_1) + T((-1)\ve{v}_2)</mrow>
+          <intertext> (From the first condition of a linear map)</intertext>
+          <mrow> \amp = 4T(\ve{v}_1) +(-1)T(\ve{v}_2)</mrow>
+          <intertext>(From the second condition of a linear map)</intertext>
+          <mrow> \amp = 4(\ve{w}_1)+(-1)(\ve{w}_2)</mrow>
+          <intertext>(This is how we defined <m>\ve{w}_1,\ve{w}_2</m>)</intertext>
+          <mrow> \amp = 4\ve{w}_1-\ve{w}_2</mrow>
+        </md>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="exercise-zero-maps-to-zero">
@@ -1434,6 +1478,29 @@
         then <m>T</m> is the zero map (i.e. it maps all vectors to <m>\ve{0}</m>).
       </p>
     </statement>
+    <hint>
+      <p>
+        Any vector in <m>V</m> can be written as a linear combination of basis elements.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        Let <m>\ve v\in V</m> be an arbitrary vector
+        Since <m>\ve b_1,\ldots, \ve b_n</m> is a basis for <m>V</m>,
+        we can write <m>\ve v</m> as a linear combination
+        <me>\ve v = c_1\ve b_1 + \cdots + c_n\ve b_n</me>.
+        Then
+        <md>
+          <mrow> T(\ve v) \amp = T(c_1\ve b_1+\cdots + c_n\ve b_n) </mrow>
+          <mrow> \amp = T(c_1\ve b_1) + \cdots + T(c_n\ve b_n)\amp (T\text{ is linear})</mrow>
+          <mrow> \amp = c_1T(\ve b_1) + \cdots + c_nT(\ve b_n)\amp (T\text{ is linear})</mrow>
+          <mrow> \amp = c_1(\ve 0_W) + \cdots + c_n(\ve 0_W)\amp (\text{ each }\ve b_i\mapsto \ve 0_W)</mrow>
+          <mrow> \amp = \ve 0_W + \cdots + \ve 0_W \amp(\text{R8 in }W)</mrow>
+          <mrow> \amp = \ve 0_W</mrow>
+        </md>.
+        The choice of <m>\ve v</m> was arbitrary, which means that all vectors in <m>V</m> map to <m>\ve 0_W</m>, and thus <m>T</m> is the zero map.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -1447,6 +1514,32 @@
         then the <m>T(\ve v_i)</m> are linearly independent?)
       </p>
     </statement>
+    <hint>
+      <p>
+        Whenever you need to prove that a set of vectors is linearly independent, start by assuming that there is some linear relation; and then prove that all the scalars involved are equal to 0.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        Suppose that there is a linear relation
+        <me> \ve 0_V = c_1\ve v_1+\cdots + c_n\ve v_n</me>.
+        Now we apply the linear map <m>T</m> to both sides:
+        <md>
+          <mrow>
+            \ve 0_W \amp = T(\ve 0 _V) \amp (\text{zero maps to zero})</mrow>
+          <mrow>
+            \amp = T(c_1\ve v_1 + \cdots + c_n\ve v_n)\amp
+            (\text{from assumption above})</mrow>
+          <mrow>
+            \amp = c_1T(\ve v_1) + \cdots + c_nT(\ve v_n)\amp
+            (T\text{ is linear})</mrow>
+        </md>
+        The last equation is a linear relation between the vectors <m>T(\ve v_1),\ldots, T(\ve v_n)</m> in <m>W</m>.
+        From our assumption that the vectors <m>T(\ve v_1),\ldots, T(\ve v_n)</m> are linearly independent in <m>W</m>, we now conclude that <m>c_1=\cdots=c_n=0</m>.
+        Thus, we started with the assumption of a linear relation and proved that all the scalars involved equal 0.
+        In other words, the vectors <m>\ve v_1,\ldots, \ve v_n</m> are linearly independent in <m>V</m>.
+      </p>
+    </solution>
   </exercise>
 
 <exercisegroup>

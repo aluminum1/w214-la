@@ -1221,9 +1221,38 @@
         bevredig. Vind 'n formule vir <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right)</m> en gebruik dit om  <m>T\left(\begin{bmatrix} 5\\-3 \end{bmatrix}\right)</m> te bereken.
       </p>
     </statement>
+    <answer>
+      <p>
+        Ons het
+        <me>T\left(\begin{bmatrix} x\\y \end{bmatrix}\right) = \begin{bmatrix} -x+3y\\ 2x-5y\end{bmatrix}</me>
+        en
+        <me>T\left(\begin{bmatrix}5\\-3\end{bmatrix}\right) = \begin{bmatrix} -14\\25\end{bmatrix}</me>.
+      </p>
+    </answer>
+    <solution>
+      <p>
+        Let op dat <m>\begin{bmatrix} 0\\1 \end{bmatrix} = \ve{v}_2-\ve{v}_1</m>, so
+        <md>
+          <mrow>T\left(\begin{bmatrix} 0\\1 \end{bmatrix}\right) \amp = T(\ve{v}_2)-T(\ve{v}_1) = \begin{bmatrix}2\\-3\end{bmatrix}\begin{bmatrix}-1\\2\end{bmatrix}</mrow>
+          <mrow>
+          \amp=\begin{bmatrix} 3\\ -5\end{bmatrix}
+        </mrow>
+      </md>.
+      Nou is
+      <md>
+        <mrow>
+          T\left(\begin{bmatrix} x\\y \end{bmatrix}\right) \amp= xT\left(\begin{bmatrix} 1\\0\end{bmatrix}\right) + yT\left(\begin{bmatrix} 0\\1 \end{bmatrix}\right)</mrow>
+        <mrow> \amp= x\begin{bmatrix}-1\\2 \end{bmatrix} + y\begin{bmatrix} 3\\-5 \end{bmatrix}</mrow>
+        <mrow> \amp= \begin{bmatrix} -x+3y\\ 2x-5y\end{bmatrix}</mrow>
+      </md>.
+      Dan is
+      <me> T\left(\begin{bmatrix}5\\-3\end{bmatrix}\right) = \begin{bmatrix} -14\\25\end{bmatrix}</me>.
+      </p>
+    </solution>
   </exercise>
 
  <exercise>
+  <statement>
     <p>
       Bepaal die werking van die gradiënt-lineêre afbeelding
       <me>
@@ -1242,26 +1271,24 @@
       </md>
       van <m>\Vect_1(\mathbb{R}^2)</m> onderskeidelik.
     </p>
-  </exercise>
-
-  <exercise>
+  </statement>
+  <solution>
     <p>
-      Beskou die volgende funksie:
+      Ons bereken eers die waardes van <m>\nabla f</m>, vir elke polinoom <m>f</m> in die gegewe basis vir <m>\Poly_2[x,y]</m> en skryf dit dan in terme van die gegewe basis vir <m>\Vect_1(\reals^2)</m>:
       <md>
-        <mrow> T : \Poly_2 \amp \rightarrow \mathbb{R}^2        </mrow>
-        <mrow> p \amp \mapsto \begin{bmatrix} p(0) \\ p(1) \end{bmatrix} </mrow>
-      </md>
+        <mrow>\nabla(1) \amp= \left(\frac{\partial 1}{\partial x},\frac{\partial 1}{\partial y}\right) = (0,0)</mrow>
+        <mrow>\nabla(x) \amp= \left(\frac{\partial x}{\partial x},\frac{\partial x}{\partial y}\right) = (1,0)=V_1</mrow>
+        <mrow>\nabla(y) \amp= \left(\frac{\partial y}{\partial x},\frac{\partial y}{\partial y}\right) = (0,1)=V_4</mrow>
+        <mrow>\nabla(x^2) \amp= \left(\frac{\partial x^2}{\partial x},\frac{\partial x^2}{\partial y}\right) = (2x,0)=2V_2</mrow>
+        <mrow>\nabla(xy) \amp= \left(\frac{\partial xy}{\partial x},\frac{\partial xy}{\partial y}\right) = (y,x)=V_3+V_5</mrow>
+        <mrow>\nabla(y^2) \amp= \left(\frac{\partial y^2}{\partial x},\frac{\partial y^2}{\partial y}\right) = (0,2y)=2V_6</mrow>
+      </md>.
     </p>
-    <ol label="(a)">
-      <li><p>
-        Is <m>T</m> 'n lineêre afbeelding?
-      </p></li>
-      <li><p> Bewys jou keuse in (a).
-      </p></li>
-    </ol>
+  </solution>
   </exercise>
 
   <exercise>
+  <statement>
     <p>
       Laat <m>V</m> die vektorruimte van oplossings vir die differensiaalvergelyking
       <me>
@@ -1274,6 +1301,7 @@
       </md>
       Is <m>T</m> 'n lineêre afbeelding? Bewys jou antwoord.
     </p>
+  </statement>
   </exercise>
 
   <exercise>
@@ -1317,7 +1345,7 @@
             <md>
               <mrow>
               I(\ve p + \ve q) \amp = \int_{-1}^1 \left( \ve p(x) + \ve q(x)\right) \, dx</mrow>
-              <mrow> =  \int_{-1}^1 \ve p(x) \, dx +
+              <mrow> \amp =  \int_{-1}^1 \ve p(x) \, dx +
               \int_{-1}^1 \ve q(x) \, dx = I(\ve p) + I(\ve q)</mrow>
             </md>.
             <me>
@@ -1403,6 +1431,22 @@
         Laat <m>T:V\to W</m> 'n lineêre afbeelding wees en veronderstel dat <m>T(\ve{v}_1)=\ve{w}_1</m> en <m>T(\ve{v}_2)=\ve{w}_2</m>. Bewys dat <m>T(4\ve{v}_1-\ve{v}_2)=4\ve{w}_1-\ve{w}_2</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Ons maak seker om in elke stap te wys hoe ons die definisie van 'n lineêre afbeelding gebruik:
+        <md>
+          <mrow> T(4\ve{v}_1-\ve{v}_2) \amp = T(4\ve{v}_1+(-1)\ve{v}_2)</mrow>
+          <intertext> (dis die definisie van <m>-\ve{v}_2</m>)</intertext>
+          <mrow> \amp = T(4\ve{v}_1) + T((-1)\ve{v}_2)</mrow>
+          <intertext> (Uit die eerste voorwaarde van 'n lineêre afbeelding)</intertext>
+          <mrow> \amp = 4T(\ve{v}_1) +(-1)T(\ve{v}_2)</mrow>
+          <intertext>(Uit die tweede voorwaarde van 'n lineêre afbeelding)</intertext>
+          <mrow> \amp = 4(\ve{w}_1)+(-1)(\ve{w}_2)</mrow>
+          <intertext>(Dis hoe ons <m>\ve{w}_1,\ve{w}_2</m> gedefinieer het)</intertext>
+          <mrow> \amp = 4\ve{w}_1-\ve{w}_2</mrow>
+        </md>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="exercise-zero-maps-to-zero">
@@ -1434,6 +1478,29 @@
         dan is <m>T</m> die nulafbeelding (m.a.w. dit beeld alle vektore op <m>\ve{0}</m> af).
       </p>
     </statement>
+    <hint>
+      <p>
+        Enige vektor in <m>V</m> kan as 'n lineêre kombinasie van basiselemente geskryf word.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        Laat <m>\ve v\in V</m> 'n willekeurige vektor wees.
+        Aangesien <m>\ve b_1,\ldots, \ve b_n</m> 'n basis vir <m>V</m> is,
+        kan ons <m>\ve v</m> as 'n lineêre kombinasie
+        <me>\ve v = c_1\ve b_1 + \cdots + c_n\ve b_n</me> skryf.
+        Dan is
+        <md>
+          <mrow> T(\ve v) \amp = T(c_1\ve b_1+\cdots + c_n\ve b_n) </mrow>
+          <mrow> \amp = T(c_1\ve b_1) + \cdots + T(c_n\ve b_n)\amp (T\text{ is lineêr})</mrow>
+          <mrow> \amp = c_1T(\ve b_1) + \cdots + c_nT(\ve b_n)\amp (T\text{ is lineêr})</mrow>
+          <mrow> \amp = c_1(\ve 0_W) + \cdots + c_n(\ve 0_W)\amp (\text{ elke }\ve b_i\mapsto \ve 0_W)</mrow>
+          <mrow> \amp = \ve 0_W + \cdots + \ve 0_W \amp(\text{R8 in }W)</mrow>
+          <mrow> \amp = \ve 0_W</mrow>
+        </md>.
+        Die keuse van <m>\ve v</m> was willekeurig, wat beteken dat alle vektore in <m>V</m> op <m>\ve 0_W</m> afbeeld, en dus is <m>T</m> die nul-afbeelding.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -1447,6 +1514,32 @@
         dat die vektore <m>T(\ve v_i)</m> ook lineêr onafhanklik moet wees?)
       </p>
     </statement>
+    <hint>
+      <p>
+        Wanneer okal jy moet bewys dat 'n versameling vektore lineêr onafhanklik is, begin deur aan te neem dat daar 'n lineêre verband bestaan; en probeer bewys dat al die betrokke skalare gelyk is aan 0.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        Veronderstel dat daar 'n lineêre verband
+        <me> \ve 0_V = c_1\ve v_1+\cdots + c_n\ve v_n</me> bestaan.
+        Kom ons pas nou die lineêre afbeelding <m>T</m> op albei kante toe:
+        <md>
+          <mrow>
+            \ve 0_W \amp = T(\ve 0 _V) \amp (\text{nul beeld af op nul})</mrow>
+          <mrow>
+            \amp = T(c_1\ve v_1 + \cdots + c_n\ve v_n)\amp
+            (\text{uit aanname hier bo})</mrow>
+          <mrow>
+            \amp = c_1T(\ve v_1) + \cdots + c_nT(\ve v_n)\amp
+            (T\text{ is lineêr})</mrow>
+        </md>
+        Die laaste vergelyking is 'n lineêre verband tussen die vektore <m>T(\ve v_1),\ldots, T(\ve v_n)</m> in <m>W</m>.
+        Uit ons aanname dat die vektore <m>T(\ve v_1),\ldots, T(\ve v_n)</m> lineêr onafhanklik is in <m>W</m>, lei ons nou af dat <m>c_1=\cdots=c_n=0</m>.
+        Dus het ons begin met die aanname van 'n lineêre kombinasie en afgelei dat al die skalare gelyk aan nul is.
+        Met ander woorde, die vektore <m>\ve v_1,\ldots, \ve v_n</m> is lineêr onafhanklik in <m>V</m>.
+      </p>
+    </solution>
   </exercise>
 
 <exercisegroup>
