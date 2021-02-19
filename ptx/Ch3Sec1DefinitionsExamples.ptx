@@ -816,7 +816,7 @@
         <m>T:\Row_3\to \Row_2</m> defined by <m>T(x,y,z) = (2x-y,x+y-z)</m>;
       </li>
       <li>
-        <m>T:Func(\reals,\reals)\to \Row_2</m> defined by <m>T(f) = (f(1),f(0))</m>. (In other words, the input is a function from reals to reals and the output is the vector consisting of the values of <m>f</m> at 0 and 1.)
+        <m>T:\Fun(\reals,\reals)\to \Row_2</m> defined by <m>T(f) = (f(1),f(0))</m>. (In other words, the input is a function from reals to reals and the output is the vector consisting of the values of <m>f</m> at 0 and 1.)
       </li>
       <li>
         <m>T:\Row_2\to \Row_2</m> defined by <m>T(x,y) = (x+1, y-2)</m>;
@@ -839,6 +839,101 @@
     </ol>
     </p>
   </statement>
+  <answer>
+    <p>
+      (a), (b), (d), (f), (g) are linear; the others are not.
+    </p>
+  </answer>
+  <solution>
+    <p>
+      <ol label="(a)">
+        <li>
+          Suppose that <m>\ve v_1 = (x_1,y_1,z_1)</m> en <m>\ve v_2 = (x_2,y_2,z_2)</m> are two vectors in <m>\Row_3</m>.
+          Then
+          <md>
+            <mrow> T(x_1,y_1,z_1) \amp = (2x_1-y_1,x_1+y_1-z_1)</mrow>
+            <mrow>T(x_2,y_2,z_2) \amp = (2x_2-y_2,x_2+y_2-z_2)</mrow>
+            <mrow>T(x_1+x_2,y_1+y_2,z_1+z_2) \amp = (2(x_1+x_2)-(y_1+y_2),(x_1+x_2)+(y_1+y_2)-(z_1+z_2))</mrow>
+          </md>
+          and thus
+          <me> T(\ve v_1+\ve v_2) = T(\ve v_1) + T(\ve v_2)</me>.
+          Similarly, we show that
+          <md>
+            <mrow> T(c(x,y,z)) = T((cx,cy,cz)) = (2cx-cy,cx+cy-cz) = c(x-y,x+y-z) = cT((x,y,z))</mrow>
+          </md>,
+          so that <m>T(c\ve v) = cT(\ve v)</m> for all vectors <m>\ve v</m> and all scalars <m>c</m>.
+          Since both conditions hold, <m>T</m> is linear.
+        </li>
+        <li>
+          Let <m>f,g</m> be two arbitrary functions in <m>\Fun(\reals,\reals)</m>.
+          Then we define <m>(f+g)</m> as the function that satisfies for each <m>x</m> that
+          <me> (f+g)(x) := f(x) + g(x)</me>.
+          In particular, we have
+          <md><mrow> (f+g)(0) = f(0)+g(0) \amp\amp (f+g)(1) = f(1)+g(1)</mrow></md>.
+          Thus
+          <md>
+            <mrow> T(f+g) \amp = ((f+g)(0),(f+g)(1)) = (f(0)+g(0),f(1)+g(1))</mrow>
+            <mrow> \amp = (f(0),g(0))+(f(1),g(1)) = T(f) + T(g)</mrow>
+          </md>.
+          Furthermore, the scalar product <m>cf</m> is defined as the function that satisfies for each  <m>x</m> that
+          <me> (cf)(x) := c(f(x))</me>.
+          Now we check
+          <me> T(cf) = ((cf)(0),(cf)(1)) = (c(f(0)),c(f(1))) = c(f(0),f(1))=c(T(f))</me>.
+          Thus <m>T</m> is linear.
+        </li>
+        <li>
+          To prove that <m>T</m> is linear, we have to prove a general statement for all paris of vectors.
+          But to show that it is not linear, we only need to find one pair of vectors for which one of the conditions doesn't hold.
+          (Remember that if a condition <em>doesn't hold</em> for one particular value, then it <em>doesn't hold for all values</em> <mdash /> this is not the same as saying that for all values it doesn't hold!)
+          We check that
+          <me> T(0(0,0)) = T((0,0)) = (0+1,0-2) = (1,-2)</me>,
+          while
+          <me> 0(T(0,0)) = 0(1,-2) = (0,0)</me>.
+          These two vectors are not equal, so <m>T</m> is not linear.
+          Instead of this example of where the scalar product condition we could have given an example of where the sum condition fails. Or we could even just have noticed that the zero vector isn't mapped to the zero vector!
+        </li>
+        <li>
+          We have
+          <me>T(p+q) = x(p+q) = xp+xq = T(p)+T(q)</me>
+          and
+          <me> T(cp) = x(cp) = c(xp) = cT(p)</me>
+          so <m>T</m> is linear.
+        </li>
+        <li>
+          We give a counterexample:
+          <me> T(1+x) = (1+x)^2 = 1+2x+x^2</me>,
+          while
+          <me> T(1) + T(x) = 1^2+x^2 = 1+x^2</me>.
+          The polynomials <m>1+2x+x^2</m> are <m>1+x^2</m> not equal, and thus <m>T</m> is not linear.
+        </li>
+        <li>
+          This question is different from the previous one. For example <m>T(1+x) = 1+x^2</m> and
+          <me>T(2x+3x^3) = 2(x^2) + 3(x^2)^3 = 2x^2+3x^6</me>.
+          This time it is linear:
+          <me>T((f+g)(x)) = (f+g)(x^2) = f(x^2)+g(x^2)=T(f(x))+T(g(x))</me>
+          <me>T(cf(x)) = (cf)(x^2) = c(f(x^2)) = cT(f(x))</me>.
+        </li>
+        <li>
+          We have
+          <me> T((f+g)(x)) = (f+g)(x-1) = f(x-1)+g(x-1) = T(f(x))+T(g(x))</me>
+          and
+          <me> T((cf)(x)) = (cf)(x-1) = c(f(x-1)) = cT(f(x))</me>
+          and thus <m>T</m> is linear.
+        </li>
+        <li>
+          We have
+          <me>T\left(\begin{bmatrix}1\amp 0\\0\amp 0\end{bmatrix}\right) = 1\cdot 0-0\times 0 = 0</me>
+          and
+          <me>T\left(\begin{bmatrix}0\amp 0\\0\amp 1\end{bmatrix}\right) = 0\cdot 1-0\times 0 = 0</me>,
+          but
+          <me>T\left(\begin{bmatrix}1\amp 0\\0\amp 1\end{bmatrix}\right) = 1\cdot 1-0\times 0 = 1</me>,
+          so
+          <me>T\left(\begin{bmatrix}1\amp 0\\0\amp 0\end{bmatrix}\right) + T\left(\begin{bmatrix}0\amp 0\\0\amp 1\end{bmatrix}\right) \ne T\left(\begin{bmatrix}1\amp 0\\0\amp 0\end{bmatrix} + \begin{bmatrix}0\amp 0\\0\amp 1\end{bmatrix}\right)</me>
+          and thus <m>T</m> is not linear.
+        </li>
+      </ol>
+    </p>
+  </solution>
 </exercise>
 
   <exercise>

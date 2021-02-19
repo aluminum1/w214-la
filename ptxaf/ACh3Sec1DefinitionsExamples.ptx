@@ -816,7 +816,7 @@
         <m>T:\Row_3\to \Row_2</m> gedefinieer deur <m>T(x,y,z) = (2x-y,x+y-z)</m>;
       </li>
       <li>
-        <m>T:Func(\reals,\reals)\to \Row_2</m> gedefinieer deur <m>T(f) = (f(1),f(0))</m>. (Met ander woorde, die inset is 'n funksie van reële getalle na reële getalle en die uitset is die vektor wat bestaan uit die waardes van <m>f</m> by 0 en 1.)
+        <m>T:\Fun(\reals,\reals)\to \Row_2</m> gedefinieer deur <m>T(f) = (f(1),f(0))</m>. (Met ander woorde, die inset is 'n funksie van reële getalle na reële getalle en die uitset is die vektor wat bestaan uit die waardes van <m>f</m> by 0 en 1.)
       </li>
       <li>
         <m>T:\Row_2\to \Row_2</m> gedefinieer deur <m>T(x,y) = (x+1, y-2)</m>;
@@ -839,6 +839,101 @@
     </ol>
     </p>
   </statement>
+  <answer>
+    <p>
+      (a), (b), (d), (f), (g) is lineêr; die ander is nie.
+    </p>
+  </answer>
+  <solution>
+    <p>
+      <ol label="(a)">
+        <li>
+          Veronderstel dat <m>\ve v_1 = (x_1,y_1,z_1)</m> en <m>\ve v_2 = (x_2,y_2,z_2)</m> twee vektore in <m>\Row_3</m> wees.
+          Dan is
+          <md>
+            <mrow> T(x_1,y_1,z_1) \amp = (2x_1-y_1,x_1+y_1-z_1)</mrow>
+            <mrow>T(x_2,y_2,z_2) \amp = (2x_2-y_2,x_2+y_2-z_2)</mrow>
+            <mrow>T(x_1+x_2,y_1+y_2,z_1+z_2) \amp = (2(x_1+x_2)-(y_1+y_2),(x_1+x_2)+(y_1+y_2)-(z_1+z_2))</mrow>
+          </md>
+          en dus is
+          <me> T(\ve v_1+\ve v_2) = T(\ve v_1) + T(\ve v_2)</me>.
+          Soortgelyk, wys ons dat
+          <md>
+            <mrow> T(c(x,y,z)) = T((cx,cy,cz)) = (2cx-cy,cx+cy-cz) = c(x-y,x+y-z) = cT((x,y,z))</mrow>
+          </md>,
+          sodat <m>T(c\ve v) = cT(\ve v)</m> vir alle vektore <m>\ve v</m> en alle skalare <m>c</m>.
+          Aangesien beide voorwaardes geld, is <m>T</m> lineêr.
+        </li>
+        <li>
+          Laat <m>f,g</m> twee willekeurige funksies in <m>\Fun(\reals,\reals)</m> wees.
+          Dan word <m>(f+g)</m> gedefinieer as die funksie waarvoor vir enige <m>x</m> geld
+          <me> (f+g)(x) := f(x) + g(x)</me>.
+          In besonder geld
+          <md><mrow> (f+g)(0) = f(0)+g(0) \amp\amp (f+g)(1) = f(1)+g(1)</mrow></md>.
+          Dus is
+          <md>
+            <mrow> T(f+g) \amp = ((f+g)(0),(f+g)(1)) = (f(0)+g(0),f(1)+g(1))</mrow>
+            <mrow> \amp = (f(0),g(0))+(f(1),g(1)) = T(f) + T(g)</mrow>
+          </md>.
+          Verder word die skalaarproduk <m>cf</m> gedefinieer as die funksie waarvoor vir elke <m>x</m> geld
+          <me> (cf)(x) := c(f(x))</me>.
+          Nou toets ons
+          <me> T(cf) = ((cf)(0),(cf)(1)) = (c(f(0)),c(f(1))) = c(f(0),f(1))=c(T(f))</me>.
+          Dus is <m>T</m> lineêr.
+        </li>
+        <li>
+          Om te bewys dat <m>T</m> lineêr is, moet ons 'n algemene stelling bewys vir alle pare vektore.
+          Maar om te wys dat die nie lineêr is nie, hoef ons net een paar vektore waarvoor een van die voorwaarde nie geld nie.
+          (Onthou dat as 'n voorwaarde vir een waarde <em>nie</em> geld nie, dan geld dit <em>nie vir alle waardes nie</em> <mdash /> dit is nie dieselfde as om te sê dat vir alle waardes geld die voorwaarde nie!)
+          Ons toets dus dat
+          <me> T(0(0,0)) = T((0,0)) = (0+1,0-2) = (1,-2)</me>,
+          terwyl
+          <me> 0(T(0,0)) = 0(1,-2) = (0,0)</me>.
+          Hierdie twee vektore is nie gelyk nie, so <m>T</m> is nie lineêr nie.
+          In plaas van om 'n voorbeeld te gee waar die skalaarproduk-voorwaarde breek, sou ons ook 'n voorwaarde kon gee waar die som-voorwaarde breek. Of ons sou selfs net kon oplet dat die nulvektor nie op die nulvektor afgebeeld word nie!
+        </li>
+        <li>
+          Ons het
+          <me>T(p+q) = x(p+q) = xp+xq = T(p)+T(q)</me>
+          en
+          <me> T(cp) = x(cp) = c(xp) = cT(p)</me>
+          so <m>T</m> is lineêr.
+        </li>
+        <li>
+          Ons gee 'n teenvoorbeeld:
+          <me> T(1+x) = (1+x)^2 = 1+2x+x^2</me>,
+          terwyl
+          <me> T(1) + T(x) = 1^2+x^2 = 1+x^2</me>.
+          Die polinome <m>1+2x+x^2</m> en <m>1+x^2</m> is nie gelyk nie, en dus is <m>T</m> nie lineêr nie.
+        </li>
+        <li>
+          Hierdie vraag is anders as die vorige een. Byvoorbeeld <m>T(1+x) = 1+x^2</m> en
+          <me>T(2x+3x^3) = 2(x^2) + 3(x^2)^3 = 2x^2+3x^6</me>.
+          Hierdie keer is dit lineêr:
+          <me>T((f+g)(x)) = (f+g)(x^2) = f(x^2)+g(x^2)=T(f(x))+T(g(x))</me>
+          <me>T(cf(x)) = (cf)(x^2) = c(f(x^2)) = cT(f(x))</me>.
+        </li>
+        <li>
+          Ons het
+          <me> T((f+g)(x)) = (f+g)(x-1) = f(x-1)+g(x-1) = T(f(x))+T(g(x))</me>
+          en
+          <me> T((cf)(x)) = (cf)(x-1) = c(f(x-1)) = cT(f(x))</me>
+          en dus is <m>T</m> lineêr.
+        </li>
+        <li>
+          Ons het
+          <me>T\left(\begin{bmatrix}1\amp 0\\0\amp 0\end{bmatrix}\right) = 1\cdot 0-0\times 0 = 0</me>
+          en
+          <me>T\left(\begin{bmatrix}0\amp 0\\0\amp 1\end{bmatrix}\right) = 0\cdot 1-0\times 0 = 0</me>,
+          maar
+          <me>T\left(\begin{bmatrix}1\amp 0\\0\amp 1\end{bmatrix}\right) = 1\cdot 1-0\times 0 = 1</me>,
+          so
+          <me>T\left(\begin{bmatrix}1\amp 0\\0\amp 0\end{bmatrix}\right) + T\left(\begin{bmatrix}0\amp 0\\0\amp 1\end{bmatrix}\right) \ne T\left(\begin{bmatrix}1\amp 0\\0\amp 0\end{bmatrix} + \begin{bmatrix}0\amp 0\\0\amp 1\end{bmatrix}\right)</me>
+          en dus is <m>T</m> nie lineêr nie.
+        </li>
+      </ol>
+    </p>
+  </solution>
 </exercise>
 
   <exercise>
