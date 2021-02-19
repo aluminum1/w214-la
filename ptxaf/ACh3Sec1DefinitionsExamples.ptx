@@ -1131,6 +1131,12 @@
         </ol>
       </p>
     </statement>
+    <answer>
+      <p>
+        Die antwoord vir (a) is <m>C(3x^2-x+1) = 3\cos^2-\cos x+1 = \frac{3}{2}\cos (2x) - \cos(x) +\frac{5}{2}</m>.
+        Die antwoord vir (b) is <q>Ja</q>.
+      </p>
+    </answer>
   </exercise>
 
   <exercise>
@@ -1150,6 +1156,59 @@
       </ol>
       </p>
     </statement>
+    <answer>
+      <p>
+        <ol label="(a)" cols="3">
+          <li>
+            <m>(4,1,-7)</m>
+          </li>
+          <li>
+            <m>(-1,0,1,2)</m>
+          </li>
+          <li>
+            <m>(3,3)</m>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <ol label="(a)">
+          <li>
+            Ons het
+            <me> T(3,-2) = T(3,0)+T(0,-2) = 3T(1,0)+(-2)T(0,1) = 3(2,1,-1)-2(1,1,2) = (4,1,-7)</me>.
+          </li>
+          <li>
+            Ons kan sê dat
+            <me>T(2,0) = T(1,1) + T(1,-1) = (1,2,3,4) + (3,2,1,0) = (4,4,4,4)</me>.
+            Dus is
+            <me>T(1,0) = \frac{1}{2}(4,4,4,4) = (2,2,2,2)</me>.
+            Nou kan ons ook sê dat
+            <me> T(0,1) = T(1,1) - T(1,0) = (1,2,3,4) - (2,2,2,2) = (-1,0,1,2)</me>.
+          </li>
+          <li>
+            Hierdie keer begin ons sommer deur te kyk of ons <m>3+2x+x^2</m> kan skryf as 'n lineêre kombinasie van <m>1+x+x^2</m>, <m>1+x</m> en <m>1</m>.
+            Veronderstel dat
+            <me> 3+2x+x^2 = a(1+x+x^2) + b(1+x) + c(1)</me>.
+            Dan is
+            <md>
+              <mrow> a+b+c \amp= 3</mrow>
+              <mrow> b+c \amp = 2</mrow>
+              <mrow> c \amp 1</mrow>
+            </md>,
+            wat die oplossing <m>a=b=c=1</m> het.
+            Dus is
+            <md>
+              <mrow>
+                T(3+2x+x^2) \amp= 1T(1+x+x^2)+1T(1+x)+1T(1)
+              </mrow>
+              <mrow> \amp = (1,2) + (2,1) + (0,0) </mrow>
+              <mrow> \amp = (3,3)</mrow>
+            </md>.
+          </li>
+        </ol>
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
