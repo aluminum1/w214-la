@@ -677,7 +677,7 @@
         Ons stel egter eerder belang in die volgende Lineêre Algebra <em>gevolg</em> van <xref ref="diff_eqn_exist_unique"/>.
       </p>
 
-      <corollary>
+      <corollary xml:id="cor-dimension-of-ode-solutions">
         <title>Dimensie van vektorruimte van oplossings van 'n homogene lineêre GDV van orde <m>n</m></title>
         <statement>
           <p>

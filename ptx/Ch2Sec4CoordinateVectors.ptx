@@ -887,8 +887,8 @@
           <p>
             Show that <m>y_1</m> and <m>y_2</m> are elements of <m>V</m>, where
             <me>
-              y_1(x) = 2x^2 - 1, \quad y_2(x) = x\sqrt{1-x^2}.
-            </me>
+              y_1(x) = 2x^2 - 1, \quad y_2(x) = x\sqrt{1-x^2}
+            </me>.
           </p>
         </li>
         <li>
@@ -907,6 +907,86 @@
         </li>
       </ol>
     </statement>
+    <hint>
+      <p>
+        For (a), take each function <m>y_1,y_2</m>,
+        differentiate them to find <m>y_1', y_2',y_1'',y_2''</m>
+        and put them in <xref ref="diff_eqn_exerc_2"/> to check if it holds.
+      </p>
+      <p>
+        For (b), see if you can apply <xref ref="cor-dimension-of-ode-solutions" />.
+      </p>
+      <p>
+        For (c), calculate <m>y_1(1/2)</m>, <m>y_1'(1/2)</m>, <m>y_2(1/2)</m> and <m>y_2'(1/2)</m>
+        and try to write <m>y</m> as a linear combination of <m>y_1</m> and <m>y_2</m>.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        <ol label="(a)">
+          <li>
+            We have
+            <md>
+              <mrow>
+                y_1(x) = 2x^2 - 1 \amp\amp y_1'(x)=4x\amp\amp y_1''(x) = 4
+              </mrow>
+            </md>
+            and thus
+            <md>
+              <mrow> (1-x^2)y_1^{''} - xy_1' +  4y_1 \amp (1-x^2)(4) -x(4x)+4(2x^2-1)</mrow>
+              <mrow> \amp 0</mrow>
+            </md>,
+            so <m>y_1</m> satisfies the equation and is thus a solution.
+            Furthermore
+            <md>
+              <mrow>
+                y_2(x) \amp= x\sqrt{1-x^2} \amp y_2'(x)=\sqrt{1-x^2}-\frac{x^2}{\sqrt{1-x^2}}=\frac{1-2x^2}{\sqrt{1-x^2}}
+              </mrow>
+            </md>
+            <md>
+              <mrow>
+                y_2^{''} \amp = \frac{-4x}{\sqrt{1-x^2}}+(1-2x^2)(-2x)(-1/2)\frac{1}{(1-x^2)^{3/2}}
+              </mrow>
+              <mrow>
+                \amp = \frac{2x^3-3x}{(1-x^2)^{3/2}}
+              </mrow>
+            </md>
+            and thus
+            <md>
+              <mrow> (1-x^2)y_2^{''} - xy_2' +  4y_2 \amp (1-x^2)\frac{2x^3-3x}{(1-x^2)^{3/2}} -x\frac{1-2x^2}{\sqrt{1-x^2}}+4x\sqrt{1-x^2}</mrow>
+              <mrow>\amp = \frac{2x^3-3x}{\sqrt{1-x^2}}-\frac{x-2x^2}{\sqrt{1-x^2}} + \frac{4x(1-x^2)}{\sqrt{1-x^2}}</mrow>
+              <mrow> \amp 0</mrow>
+            </md>,
+            so <m>y_2</m> satisfies the equation and is thus a solution.
+          </li>
+          <li>
+            This differential equation is a
+            second order homogeneous differential equation,
+            and thus <xref ref="cor-dimension-of-ode-solutions" /> applies.
+            It says that the solution set is a vector space of dimension 2.
+          </li>
+          <li>
+            We compute that
+            <md>
+              <mrow> y_1(1/2) \amp = -1/2 ,\amp y_1'(1/2) \amp = 2  </mrow>
+              <mrow> y_2(1/2) \amp = \sqrt{3}/4 ,\amp y_2'(1/2) \amp = \frac{1/2}{\sqrt{3/4}} = \frac{\sqrt{3}}{3} </mrow>
+            </md>.
+            Since the vectors <m>y_1,y_2</m> form a basis for the vector space of solutions, we can write <m>y</m> as a linear combination
+            <me> y =c_1y_1 + c_2y_2</me>.
+            In that case
+            <md>
+              <mrow>y(1/2) \amp c_1y_1(1/2)+c_2y_2(1/2) \amp y'(1/2) = c_1y_1'(1/2) + c_2y_2'(1/2)</mrow>
+              <intertext>in other words</intertext>
+              <mrow> 1 \amp =c_1(-1/2)+c_2(2) \amp 0=c_1\frac{\sqrt{3}}{4}+c_2\frac{\sqrt{3}}{3}</mrow>
+            </md>.
+            This system has the solution <m>c_1=-1/2</m> and <m>c_2=3/8</m>.
+            (The simplest is to first multiply the second one with <m>\sqrt{3}</m>.)
+            Thus
+            <me> [y]_{\basis B} = \begin{bmatrix}-1/2\\ 3/8\end{bmatrix}</me>.
+          </li>
+        </ol>
+      </p>
+    </solution>
     </exercise>
 
     <exercise>
@@ -915,7 +995,7 @@
           Let <m>V</m> be the vector space of solutions to the differential equation
           <men xml:id="diff_eqn_exerc_3">
             x^3 y''' + x^2 y'' - 2xy' + 2y =0
-          </men>
+          </men>.
         </p>
         <p>
           <ol label="(a)">

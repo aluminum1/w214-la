@@ -887,8 +887,8 @@
           <p>
             Wys dat <m>y_1</m> en <m>y_2</m> elemente van <m>V</m> is, waar
             <me>
-              y_1(x) = 2x^2 - 1, \quad y_2(x) = x\sqrt{1-x^2}.
-            </me>
+              y_1(x) = 2x^2 - 1, \quad y_2(x) = x\sqrt{1-x^2}
+            </me>.
           </p>
         </li>
         <li>
@@ -907,6 +907,86 @@
         </li>
       </ol>
     </statement>
+    <hint>
+      <p>
+        Vir (a), neem elkee van die funksies <m>y_1,y_2</m>,
+        differensieer hulle om <m>y_1', y_2', y_1'', y_2''</m> te vind en
+        vervang hulle in <xref ref="diff_eqn_exerc_2"/> om te kyk of dit geld.
+      </p>
+      <p>
+        Vir (b), kyk of jy <xref ref="cor-dimension-of-ode-solutions" /> kan toepas.
+      </p>
+      <p>
+        Vir (c), bereken <m>y_1(1/2)</m>, <m>y_1'(1/2)</m>, <m>y_2(1/2)</m> en <m>y_2'(1/2)</m>
+        en probeer <m>y</m> skryf as 'n lineêre kombinasie van <m>y_1</m> en <m>y_2</m>.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        <ol label="(a)">
+          <li>
+            Ons het
+            <md>
+              <mrow>
+                y_1(x) = 2x^2 - 1 \amp\amp y_1'(x)=4x\amp\amp y_1''(x) = 4
+              </mrow>
+            </md>
+            en dus is
+            <md>
+              <mrow> (1-x^2)y_1^{''} - xy_1' +  4y_1 \amp (1-x^2)(4) -x(4x)+4(2x^2-1)</mrow>
+              <mrow> \amp 0</mrow>
+            </md>,
+            so <m>y_1</m> bevredig die vergelyking en is dus 'n oplossing.
+            Verder is
+            <md>
+              <mrow>
+                y_2(x) \amp= x\sqrt{1-x^2} \amp y_2'(x)=\sqrt{1-x^2}-\frac{x^2}{\sqrt{1-x^2}}=\frac{1-2x^2}{\sqrt{1-x^2}}
+              </mrow>
+            </md>
+            <md>
+              <mrow>
+                y_2^{''} \amp = \frac{-4x}{\sqrt{1-x^2}}+(1-2x^2)(-2x)(-1/2)\frac{1}{(1-x^2)^{3/2}}
+              </mrow>
+              <mrow>
+                \amp = \frac{2x^3-3x}{(1-x^2)^{3/2}}
+              </mrow>
+            </md>
+            en dus is
+            <md>
+              <mrow> (1-x^2)y_2^{''} - xy_2' +  4y_2 \amp (1-x^2)\frac{2x^3-3x}{(1-x^2)^{3/2}} -x\frac{1-2x^2}{\sqrt{1-x^2}}+4x\sqrt{1-x^2}</mrow>
+              <mrow>\amp = \frac{2x^3-3x}{\sqrt{1-x^2}}-\frac{x-2x^2}{\sqrt{1-x^2}} + \frac{4x(1-x^2)}{\sqrt{1-x^2}}</mrow>
+              <mrow> \amp 0</mrow>
+            </md>,
+            so <m>y_2</m> bevredig die vergelyking en is dus 'n oplossing.
+          </li>
+          <li>
+            Hierdie differensiaalvergelyking is 'n
+            tweede-orde homogene differensiaalvergelyking,
+            en dus is <xref ref="cor-dimension-of-ode-solutions" /> van toepassing.
+            Dit sê dat die oplossingsversameling 'n vektorruimte met dimensie 2 is.
+          </li>
+          <li>
+            Ons bereken dat
+            <md>
+              <mrow> y_1(1/2) \amp = -1/2 ,\amp y_1'(1/2) \amp = 2  </mrow>
+              <mrow> y_2(1/2) \amp = \sqrt{3}/4 ,\amp y_2'(1/2) \amp = \frac{1/2}{\sqrt{3/4}} = \frac{\sqrt{3}}{3} </mrow>
+            </md>.
+            Aangesien die vektore <m>y_1,y_2</m> 'n basis vorm vir die vektorruimte van oplossings, moet ons <m>y</m> as 'n lineêr kombinasie
+            <me> y =c_1y_1 + c_2y_2</me> kan skryf.
+            In daardie geval sal
+            <md>
+              <mrow>y(1/2) \amp c_1y_1(1/2)+c_2y_2(1/2) \amp y'(1/2) = c_1y_1'(1/2) + c_2y_2'(1/2)</mrow>
+              <intertext>met ander woorde</intertext>
+              <mrow> 1 \amp =c_1(-1/2)+c_2(2) \amp 0=c_1\frac{\sqrt{3}}{4}+c_2\frac{\sqrt{3}}{3}</mrow>
+            </md>.
+            Hierdie stelsel het die oplossing <m>c_1=-1/2</m> en <m>c_2=3/8</m>.
+            (Die maklikste is om eers die tweede een te vermenigvuldig met <m>\sqrt{3}</m>.)
+            Dus is
+            <me> [y]_{\basis B} = \begin{bmatrix}-1/2\\ 3/8\end{bmatrix}</me>.
+          </li>
+        </ol>
+      </p>
+    </solution>
     </exercise>
 
    <exercise>

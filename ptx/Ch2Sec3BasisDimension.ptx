@@ -677,7 +677,7 @@
         Instead, we are interested in the following Linear Algebra <em>consequence</em> of <xref ref="diff_eqn_exist_unique"/>.
       </p>
 
-      <corollary>
+      <corollary xml:id="cor-dimension-of-ode-solutions">
         <title>Dimension of space of solutions to a homogenous linear ODE of order <m>n</m></title>
         <statement>
           <p>
