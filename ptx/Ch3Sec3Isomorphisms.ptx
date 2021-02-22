@@ -5,8 +5,8 @@
   <p>
     Suppose you have two sets,
     <me>
-      A = \{ \mbox{star} , \mbox{heart} , \mbox{square}  \}  \mbox{and}
-      B = \left\{ \bigstar  , \heartsuit , \blacksquare  \right\}
+      A = \{ \mbox{bird} , \mbox{eye} , \mbox{cross}  \}  \mbox{ and }
+      B = \left\{ \ChBird  , \ChEye , \ChCross  \right\}
     </me>.
   </p>
 
@@ -21,14 +21,14 @@
     We could define two maps, say
     <md>
       <mrow>S: A \amp \rightarrow B</mrow>
-      <mrow>\mbox{star}  \amp \mapsto \bigstar</mrow>
-      <mrow>\mbox{heart}  \amp \mapsto \heartsuit</mrow>
-      <mrow>\mbox{square}  \amp \mapsto \blacksquare</mrow>
+      <mrow>\mbox{bird}  \amp \mapsto \ChBird</mrow>
+      <mrow>\mbox{eye}  \amp \mapsto \ChEye</mrow>
+      <mrow>\mbox{cross}  \amp \mapsto \ChCross</mrow>
       <intertext>and</intertext>
       <mrow>T : B \amp \rightarrow A</mrow>
-      <mrow>\bigstar  \amp  \mapsto \mbox{star}</mrow>
-      <mrow>\heartsuit  \amp  \mapsto \mbox{heart}</mrow>
-      <mrow>\blacksquare  \amp  \mapsto \mbox{square}  </mrow>
+      <mrow>\ChBird  \amp  \mapsto \mbox{bird}</mrow>
+      <mrow>\ChEye  \amp  \mapsto \mbox{eye}</mrow>
+      <mrow>\ChCross  \amp  \mapsto \mbox{cross}  </mrow>
     </md>.
   </p>
 

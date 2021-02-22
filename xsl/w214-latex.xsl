@@ -246,4 +246,18 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 </xsl:template>
 
 
+<!-- The Chinese characters in UTF font work in the html version, but require a package in the LaTeX version. The adaptations are made below.
+Since these are aapended at the top of the user defined macros
+-->
+<xsl:variable name="latex-packages">
+  <xsl:text>\usepackage{CJKutf8}%&#xa;</xsl:text>
+  <xsl:text>\newcommand{\ChBird}{\begin{CJK}{UTF8}{gbsn} \text{鸟} \end{CJK}}%&#xa;</xsl:text>
+  <xsl:text>\newcommand{\ChEye}{\begin{CJK}{UTF8}{gbsn} \text{眼} \end{CJK}}%&#xa;</xsl:text>
+  <xsl:text>\newcommand{\ChCross}{\begin{CJK}{UTF8}{gbsn} \text{叉} \end{CJK}}%&#xa;</xsl:text>
+</xsl:variable>
+
+
+
+
+
 </xsl:stylesheet>

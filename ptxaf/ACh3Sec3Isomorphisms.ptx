@@ -5,8 +5,8 @@
   <p>
     Veronderstel jy het twee versamelings,
     <me>
-      A = \{ \mbox{ster} , \mbox{hart} , \mbox{vierkant}  \}  \mbox{en}
-      B = \left\{ \bigstar  , \heartsuit , \blacksquare  \right\}
+      A = \{ \mbox{voël} , \mbox{oog} , \mbox{kruis}  \}  \mbox{ en }
+      B = \left\{ \ChBird  , \ChEye , \ChCross  \right\}
     </me>.
   </p>
 
@@ -21,14 +21,14 @@
     Ons kan twee afbeeldings definieer, byvoorbeeld
     <md>
       <mrow>S: A \amp \rightarrow B</mrow>
-      <mrow>\mbox{ster}  \amp \mapsto \bigstar</mrow>
-      <mrow>\mbox{hart}  \amp \mapsto \heartsuit</mrow>
-      <mrow>\mbox{vierkant}  \amp \mapsto \blacksquare</mrow>
-      <intertext>en</intertext>
+      <mrow>\mbox{voël}  \amp \mapsto \ChBird</mrow>
+      <mrow>\mbox{oog}  \amp \mapsto \ChEye</mrow>
+      <mrow>\mbox{kruis}  \amp \mapsto \ChCross</mrow>
+      <intertext>and</intertext>
       <mrow>T : B \amp \rightarrow A</mrow>
-      <mrow>\bigstar  \amp  \mapsto \mbox{ster}</mrow>
-      <mrow>\heartsuit  \amp  \mapsto \mbox{hart}</mrow>
-      <mrow>\blacksquare  \amp  \mapsto \mbox{vierkant}  </mrow>
+      <mrow>\ChBird  \amp  \mapsto \mbox{voël}</mrow>
+      <mrow>\ChEye  \amp  \mapsto \mbox{oog}</mrow>
+      <mrow>\ChCross  \amp  \mapsto \mbox{kruis}  </mrow>
     </md>.
   </p>
 
@@ -67,10 +67,10 @@
     jy is reg, maar is dit nie nuttig om 'n
     eksplisiete Sjinees-na-Afrikaanse afbeelding <m>T</m> te hê nie?
     In boekwinkels word woordeboeke in pare geskep, in 'n enkele volume.
-    Buitendien, as mens die Afrikaanse woord vir <c>BIRD</c>
+    Buitendien, as mens die Afrikaanse woord vir <c>OOG</c>
     wil opsoek, sal dit lastig wees
     om deur die hele Afrikaans-na-Sjinese woordeboek te werk,
-    om die Afrikaanse  woord vir <c>BIRD</c> te vind!
+    om die Afrikaanse  woord vir <c>OOG</c> te vind!
   </p>
 
   <p>
