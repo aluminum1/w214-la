@@ -56,10 +56,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 </xsl:template>
 
 <!-- EXAMPLE-LIKE: "example", "question", "problem" -->
-<!-- Default tcolorbox, but with tricolor titles    -->
-<!-- Each just slightly different                   -->
 
-<!-- Example styling from CLP -->
 <xsl:template match="example" mode="tcb-style">
     <xsl:text>
       blanker,
@@ -77,56 +74,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
       borderline west={0.4mm}{0pt}{primaryColor},
       borderline north={0.4mm}{0pt}{primaryColor},
       after upper = {\hfill \(\blacksquare\)},
-    </xsl:text>
-</xsl:template>
-
-<xsl:template match="question" mode="tcb-style">
-    <xsl:text>
-      colback=white, colframe=blue, colbacktitle=white, coltitle=blue,
-        enhanced,
-        breakable,
-        attach boxed title to top left={xshift=7mm, yshift*=-\tcboxedtitleheight/2},
-        frame hidden,
-        overlay unbroken={
-        \draw[blue, thick, square-, rounded corners] ([yshift=-3ex]interior.north west)--(interior.north west)--(title);
-        \draw[blue,thick, -square, rounded corners] (title)--(interior.north east)--([yshift=-3ex]interior.north east);
-        \draw[blue,thick, square-square, rounded corners] ([yshift=3ex]interior.south west)--(interior.south west)--(interior.south east)--([yshift=3ex]interior.south east);
-        },
-        overlay first={
-          \draw[blue,thick, square-, rounded corners] ([yshift=-3ex]interior.north west)--(interior.north west)--(title);
-          \draw[blue,thick, -square, rounded corners] (title)--(interior.north east)--([yshift=-3ex]interior.north east);
-          },
-        overlay middle={},
-        overlay last={
-          \node[blue, draw, thick, rectangle, rounded corners] (repeatTitle) at ([xshift=-12ex]interior.south east) {\textbf{Example~\thetcbcounter}};
-          \draw[blue, thick, square-, rounded corners] ([yshift=3ex]interior.south west)--(interior.south west)--(repeatTitle);
-          \draw[blue, thick, -square,rounded corners] (repeatTitle)--(interior.south east)--([yshift=3ex]interior.south east);
-          },
-    </xsl:text>
-</xsl:template>
-
-<xsl:template match="problem" mode="tcb-style">
-    <xsl:text>
-      colback=white, colframe=red, colbacktitle=white, coltitle=red,
-        enhanced,
-        breakable,
-        attach boxed title to top left={xshift=7mm, yshift*=-\tcboxedtitleheight/2},
-        frame hidden,
-        overlay unbroken={
-        \draw[red, thick, |-, rounded corners] ([yshift=-3ex]interior.north west)--(interior.north west)--(title);
-        \draw[red,thick, -|, rounded corners] (title)--(interior.north east)--([yshift=-3ex]interior.north east);
-        \draw[red,thick, |-|, rounded corners] ([yshift=3ex]interior.south west)--(interior.south west)--(interior.south east)--([yshift=3ex]interior.south east);
-        },
-        overlay first={
-          \draw[red,thick, |-, rounded corners] ([yshift=-3ex]interior.north west)--(interior.north west)--(title);
-          \draw[red,thick, -|, rounded corners] (title)--(interior.north east)--([yshift=-3ex]interior.north east);
-          },
-        overlay middle={},
-        overlay last={
-          \node[red, draw, thick, rectangle, rounded corners] (repeatTitle) at ([xshift=-12ex]interior.south east) {\textbf{Example~\thetcbcounter}};
-          \draw[red, thick, |-, rounded corners] ([yshift=3ex]interior.south west)--(interior.south west)--(repeatTitle);
-          \draw[red, thick, -|,rounded corners] (repeatTitle)--(interior.south east)--([yshift=3ex]interior.south east);
-          },
     </xsl:text>
 </xsl:template>
 
@@ -211,13 +158,12 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 <xsl:param name="exercise.inline.solution" select="'no'" />
 
 <xsl:param name="exercise.inline.answer" select="'no'" />
-<!--
-  TODO: Set geometry parameter to a4page instead of default letter
--->
 
+<!--
+  Write down the url of a GeoGebra activity, allowing line breaks so that the full url can be read (for a print version). This requires the xurl package loaded in the main ptx file.
+-->
 <xsl:template match="interactive[@geogebra]" mode="static-caption">
     <xsl:choose>
-        <!-- author-supplied override -->
         <xsl:when test="caption">
             <xsl:apply-templates select="caption" />
         </xsl:when>
@@ -229,7 +175,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     </xsl:choose>
 </xsl:template>
 
-
+<!--
+  Create the QR code of the url that links to the GeoGebra activity hosted on geogebra.org. I think the original creates the link to a page where the activity is embedded using the html output. In that case a baseurl needs to be set first. For now this adaptation is preferable to us.
+-->
 <xsl:template match="*" mode="static-qr">
     <xsl:choose>
         <xsl:when test="not(@geogebra = '')">
@@ -241,6 +189,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     </xsl:choose>
 </xsl:template>
 
+<!--
+  Without this, the compiler creates an "empty" QR code for the jsxgraph activity, due to the previous adaptation, which is of course senseless. This ensures that no QR code is created.
+-->
 <xsl:template match="interactive[@platform='jsxgraph']" mode="static-qr">
   <xsl:text>{}</xsl:text>
 </xsl:template>
@@ -256,7 +207,7 @@ Since these are aapended at the top of the user defined macros
   <xsl:text>\newcommand{\ChCross}{\begin{CJK}{UTF8}{gbsn} \text{叉} \end{CJK}}%&#xa;</xsl:text>
 </xsl:variable>
 
-
+<xsl:param name="latex.geometry" select="'a4paper'"/>
 
 
 

@@ -68,8 +68,9 @@
 
   <proof>
     <title> Proof of <xref ref="prop_eigenvalue" /></title>
+    <case>
+      <title>(<xref ref="prop_eigenvalue-1" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-2" text="local"/>)</title>
     <p>
-      (<xref ref="prop_eigenvalue-1" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-2" text="local"/>).
       Suppose <m>\lambda</m> is an eigenvalue of <m>T</m>.
       <md>
         <mrow>\amp \therefore \text{There exists a nonzero } \ve{v} \in V \text{ such that } T(\ve{v}) = \lambda \ve{v}.</mrow>
@@ -85,9 +86,11 @@
       so <m>\lambda \id_V - T</m> is not injective,
       by <xref ref="injective-kernel-lemma"></xref>.
     </p>
+  </case>
 
+  <case>
+    <title>(<xref ref="prop_eigenvalue-2" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-1" text="local"/>)</title>
     <p>
-      (<xref ref="prop_eigenvalue-2" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-1" text="local"/>).
       Suppose <m>\lambda \id_V - T</m> is not injective.
       <md>
         <mrow>\amp  \therefore \Ker(\lambda \id_V - T) \neq \{\ve{0} \} \amp \amp  (\text{by }<xref ref="injective-kernel-lemma">Lemma</xref>)</mrow>
@@ -96,6 +99,7 @@
         <mrow>\amp  \text{That is, } T(\ve{v}) = \lambda \ve{v},\text{ so }\lambda\text{ is an eigenvalue of }T.</mrow>
       </md>
     </p>
+  </case>
 
     <p>
       Clearly (<xref ref="prop_eigenvalue-2" text="local"/>) <m>\Leftrightarrow</m> (<xref ref="prop_eigenvalue-3" text="local"/>)

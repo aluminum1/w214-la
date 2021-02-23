@@ -68,8 +68,9 @@
 
   <proof>
     <title> Bewys van <xref ref="prop_eigenvalue" /></title>
+    <case>
+      <title>(<xref ref="prop_eigenvalue-1" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-2" text="local"/>)</title>
     <p>
-      (<xref ref="prop_eigenvalue-1" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-2" text="local"/>).
       Veronderstel <m>\lambda</m> is 'n eiewaarde van <m>T</m>.
       <md>
         <mrow>\amp \therefore \text{Daar bestaan 'n nie-nul } \ve{v} \in V,\text{ sodat } T(\ve{v}) = \lambda \ve{v}.</mrow>
@@ -85,9 +86,11 @@
       <m>T - \lambda \id_V</m> is nie injektief nie,
       volgens <xref ref="injective-kernel-lemma">Lemma</xref>.
     </p>
+  </case>
 
+  <case>
+    <title>(<xref ref="prop_eigenvalue-2" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-1" text="local"/>)</title>
     <p>
-      (<xref ref="prop_eigenvalue-2" text="local"/>) <m>\Rightarrow</m> (<xref ref="prop_eigenvalue-1" text="local"/>).
       Veronderstel <m>T - \lambda \id_V</m> is nie injektief nie.
       <md>
         <mrow>\amp  \therefore \Ker(T - \lambda \id_V) \neq \{\ve{0} \} \amp \amp (\text{deur }<xref ref="injective-kernel-lemma"></xref>)</mrow>
@@ -96,6 +99,7 @@
         <mrow>\amp  \text{Dit is, } T(\ve{v}) = \lambda \ve{v},\text{ so }\lambda\text{ is 'n eiewaarde van } T.</mrow>
       </md>
     </p>
+    </case>
 
     <p>
       Duidelik het ons (<xref ref="prop_eigenvalue-2" text="local"/>) <m>\Leftrightarrow</m> (<xref ref="prop_eigenvalue-3" text="local"/>)

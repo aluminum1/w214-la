@@ -26,7 +26,7 @@
     </iframe>
 </xsl:template>
 
-
+<xsl:param name="exercise.divisional.solution" select="'no'" />
 
 
 </xsl:stylesheet>

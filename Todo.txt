@@ -5,7 +5,10 @@ To do list:
   - brand-gray: #8c979a, RGB(96,34,59)
   - brand-gold: #967140, RGB(150,113,64)
 - Write Python script to change link to Mathjax to the local one on SunLearn and the links to the pretext css files to local versions. Make sure they are available locally, and build in a test for updates. Make sure to test it! Robert Beezer discourages this in the guides. But maybe this can be done in the latex xsl file!
+
+
 - Titles for examples? and Exercises?
+- Throughout there are some figures with <caption> tags, but no text. But I think this is ok.
 
 
 - Can the first two lemmas in 1.5 be written using more words? And many others...
@@ -17,7 +20,6 @@ To do list:
 
 Consistency and technique:
 - Make sure all <proofs> are inside the <theorem> (etc.) tags and not outside (?) (low priority)
-- Decide on using => and <= in proofs: Inside a <proof> you can use a <case> with attribute <case direction="forward"> or <case direction="backward">. Then this can be controlled from the publisher file.
 
 
 Add solutions:
@@ -59,4 +61,4 @@ Use??
 	  		<exercise width="50%" />
 		</sidebyside>
 
-- Throughout there are some figures with <caption> tags, but no text. But I think this is ok.
+
