@@ -1537,9 +1537,45 @@
         Laat <m>V</m> 'n eindig-dimensionele vektorruimte wees. Laat <m>U</m> 'n deelruimte van <m>V</m> wees. Toon aan dat daar  'n lineêre afbeelding <m>T: V \to V</m> bestaan met <m>\Ker T = U</m>.
       </p>
     </statement>
+    <hint>
+      <p>
+        Onthou dat enige basis van 'n deelruimte van 'n eindig-dimensionele vektorruimte uitgebrei kan word tot 'n basis vir die groter vektorruimte.
+      </p>
+    </hint>
     <solution>
       <p>
-        To do.
+        Laat <m>\basis B = \{\ve b_1,\ldots, \ve b_m\}</m> 'n basis vir <m>U</m> wees.
+        Dan kan ons dit uitbrei tot 'n basis
+        <me> \basis C = \{\ve b_1,\ldots, \ve b_m, \ve c_{1},\ldots, \ve c_n\}</me>
+        vir <m>V</m>.
+        Nou kan ons 'n lineêre afbeelding <m>T:V\to V</m> as volg op die basis <m>\basis C</m> definieer:
+        <me> T(\ve b_i) = \ve 0_V \quad\text{vir alle }i</me>
+        <me> T(\ve c_i) = \ve c_i\quad\text{vir alle }i</me>.
+        Kies nou 'n willekeurige vektor <m>\ve v \in V</m>.
+        Dit kan op 'n unieke wyse as 'n lineêre kombinasie
+        <me> \ve v = k_1\ve b_1+\cdots +k_m\ve b_m + \ell_1\ve c_1+\cdots + \ell_n \ve c_n</me> geskryf word.
+        Dan is
+        <me> T(\ve v) = k_1T(\ve b_1)+\cdots + k_m T(\ve b_m) + \ell_1 T(\ve c_1) + \cdots + \ell_n T(\ve c_n)</me>.
+        Elkeen van die terme <m>k_iT(\ve b_i) = \ve 0_V</m>, terwyl elkeen van die terme <m>\ell_i \ve{c}_i = \ell_i\ve{c}_i</m>, uit ons definisie van <m>T</m>.
+        Dus is
+        <me> T(\ve v) = \ell_1\ve c_1+\cdots + \ell_n \ve c_n</me>.
+      </p>
+      <p>
+        Nou kan ons wys dat die kern van <m>T</m> gelyk is aan <m>U</m>.
+        As <m>\ve v\in U</m>, dan is <m>\ve v</m> van die vorm <m> k_1\ve b_1 +\cdots + k_m\ve b_m</m>, met ander woorde al die <m>\ell_i = 0</m>.
+        Dit volg uit die feit dat so 'n voorstelling van <m>\ve v</m> uniek is vir enige gegewe basis.
+        Dus is <m>T(\ve v) = \ve 0_V</m> en dus is <m>\ve v\in \Ker(T)</m>.
+        Wat ons dus sover bewys het is dat <m>U\subset \Ker(T)</m>.
+      </p>
+      <p>
+        Veronderstel nou dat <m>T(\ve{v}) = \ve 0_V</m>. Dus is <m>\ell_i = 0</m> vir alle <m>i</m>.
+        Maar dit beteken dat
+        <me> \ve v = k_1\ve b_1+\cdots + k_m\ve b_m + 0\ve c_1+\cdots + 0\ve c_n</me>,
+        met ander woorde <m>\ve v</m> is in <m>U</m>. Dit bewys dat <m>\Ker(T)\subset U</m> en saam met die vorige paragraaf lei ons af dat <m>\Ker(T) = U</m>.
+      </p>
+      <p>
+        Ons moes bewys dat daar 'n lineêre afbeelding <m>T</m> bestaan waarvoor <m>\Ker(T) = U</m>.
+        Ons het so 'n lineêre afbeelding gekonstrueer en dus gewys dat dit bestaan.
       </p>
     </solution>
   </exercise>
@@ -1549,13 +1585,47 @@
       <p>
         Beskou die funksie <m>F:\mathbb{R}^3 \to \mathbb{R}^2</m> gedefineer deur
         <me>
-          F(x,y,z)=(x^2 + y^2, xy).
-        </me>
+          F(x,y,z)=(x^2 + y^2, xy)
+        </me>.
         Beskou nou <m>DF_p</m>, die Jakobiaan matriks van <m>F</m> by die punt <m>p = (1,2)</m>. Bepaal <m>\Ker (DF_p)</m> en <m>\Be (DF_p)</m> en dus bepaal ook <m>\Nhg(DF_p)</m> en <m>\Rang(DF_p)</m>.
       </p>
+      <p>
+        Vir watter punte <m>P</m> sou die nulheidsgraad nie-nul wees?
+      </p>
     </statement>
+    <hint>
+      <title>Wat is die Jakobiaan?</title>
+      <p>
+        Gegee 'n multi-veranderlike funksie <m>F:\mathbb{R}^n\to \mathbb{R}^m</m>,
+        gegee deur komponente <m>f_1,\ldots, f_m: \mathbb{R}^n\to \mathbb{R}</m>, definieer ons die <term>Jakobiaan van <m>F</m></term> as die matriks van parsiële afgeleides:
+        <me>
+          DF = \begin{bmatrix} \frac{\partial f_1}{\partial x_1}\amp \frac{\partial f_1}{\partial x_2} \amp \cdots \amp \frac{\partial f_1}{\partial x_n}\\
+          \frac{\partial f_2}{\partial x_1}\amp \frac{\partial f_2}{\partial x_2} \amp \cdots \amp \frac{\partial f_2}{\partial x_n}\\
+          \vdots \amp \amp \amp \vdots\\
+          \frac{\partial f_m}{\partial x_1}\amp \frac{\partial f_m}{\partial x_2} \amp \cdots \amp \frac{\partial f_m}{\partial x_n}
+          \end{bmatrix}
+        </me>.
+        Die Jakobiaan <m>DF_P</m> <em>by die punt <m>P\in\mathbb{R}^n</m></em> word dan verkry deur die <m>mn</m> inskrywings van hierdie matriks (wat almal funksies <m>\mathbb{R}^n\to \mathbb{R}</m> is) by die punt <m>P</m> uit te werk.
+        Dus, in hierdie probleem is
+        <me>
+          DF = \begin{bmatrix} \frac{\partial x^2+y^2}{\partial x}\amp \frac{\partial x^2+y^2}{\partial y} \\
+          \frac{\partial xy}{\partial x} \amp \frac{\partial xy}{\partial y}
+          \end{bmatrix}
+        </me>.
+      </p>
+    </hint>
     <solution>
       <p>
+        Ons bereken dat
+        <me> DF = \begin{bmatrix} 2x\amp 2y\\ y\amp x\end{bmatrix}</me>
+        en as ons dit uitwerk by <m>P=(1,2)</m> kry ons
+        <me> DF_P = \begin{bmatrix} 2\amp 4\\ 2\amp 1\end{bmatrix}</me>.
+        Die twee kolomvektore is lineêr onafhanklik en dus is die rang gelyk aan 2 en die nulheidsgraad gelyk aan 0.
+      </p>
+      <p>
+        Om 'n nulheidsgraad groter as 0 te kry, moet die twee kolomvektore <m>\begin{bmatrix} 2x\amp 2y\end{bmatrix}</m> en <m>\begin{bmatrix}y\amp x\end{bmatrix}</m> lineêr afhanklik wees.
+        Dit gebeur as en slegs as die matriks <m>\begin{bmatrix} 2x\amp 2y\\ y\amp x\end{bmatrix}</m> nie inverteerbaar is nie.
+        Sy determinant is <m>2x^2-2y^2</m>, so dit gebeur as en slegs as <m>x^2-y^2=0</m>, en dit gebeur as en slegs as <m>x=y</m> of <m>x=-y</m>.
       </p>
     </solution>
   </exercise>

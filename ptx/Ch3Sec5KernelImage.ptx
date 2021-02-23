@@ -1537,9 +1537,45 @@
         Let <m>V</m> be a finite-dimensional vector space. Let <m>U</m> be a subspace of <m>V</m>. Show that there exists a linear map <m>T: V \to V</m> such that <m>\Ker T = U</m>.
       </p>
     </statement>
+    <hint>
+      <p>
+        Remember that any basis of a subspace of a finite-dimensional vector space can be extended to a basis of the larger space.
+      </p>
+    </hint>
     <solution>
       <p>
-        To do.
+        Let <m>\basis B = \{\ve b_1,\ldots, \ve b_m\}</m> be a basis for <m>U</m>.
+        Then we can expand it to a basis
+        <me> \basis C = \{\ve b_1,\ldots, \ve b_m, \ve c_{1},\ldots, \ve c_n\}</me>
+        for <m>V</m>.
+        Now we can define a linear map <m>T:V\to V</m> on the basis <m>\basis C</m> as follows:
+        <me> T(\ve b_i) = \ve 0_V \quad\text{for all }i</me>
+        <me> T(\ve c_i) = \ve c_i\quad\text{for all }i</me>.
+        Now choose an arbitrary vector <m>\ve v \in V</m>.
+        It can be written in a unique way as a linear ombination
+        <me> \ve v = k_1\ve b_1+\cdots +k_m\ve b_m + \ell_1\ve c_1+\cdots + \ell_n \ve c_n</me>.
+        Then
+        <me> T(\ve v) = k_1T(\ve b_1)+\cdots + k_m T(\ve b_m) + \ell_1 T(\ve c_1) + \cdots + \ell_n T(\ve c_n)</me>.
+        From our definition of <m>T</m>, each of the terms <m>k_iT(\ve b_i) = \ve 0_V</m>, while each of the terms <m>\ell_i \ve{c}_i = \ell_i\ve{c}_i</m>.
+        Thus
+        <me> T(\ve v) = \ell_1\ve c_1+\cdots + \ell_n \ve c_n</me>.
+      </p>
+      <p>
+        Now we can show that the kernel of <m>T</m> equals <m>U</m>.
+        If <m>\ve v\in U</m>, then <m>\ve v</m> is of the form <m> k_1\ve b_1 +\cdots + k_m\ve b_m</m>, in other words all <m>\ell_i = 0</m>.
+        This follows from the fact that such a representation of <m>\ve v</m> is unique for a given basis.
+        Thus <m>T(\ve v) = \ve 0_V</m> and thus <m>\ve v\in \Ker(T)</m>.
+        What we have shown so far is that <m>U\subset \Ker(T)</m>.
+      </p>
+      <p>
+        Now suppose that <m>T(\ve{v}) = \ve 0_V</m>. Thus <m>\ell_i = 0</m> for all <m>i</m>.
+        But this means that
+        <me> \ve v = k_1\ve b_1+\cdots + k_m\ve b_m + 0\ve c_1+\cdots + 0\ve c_n</me>,
+         <m>\ve v</m> is in <m>U</m>. This proves that <m>\Ker(T)\subset U</m>, which, together with the previous paragraph, implies that <m>\Ker(T) = U</m>.
+      </p>
+      <p>
+        We needed to show that there exists a linear map <m>T</m> for which <m>\Ker(T) = U</m>.
+        We have constructed such a linear map and thus showed that it exists.
       </p>
     </solution>
   </exercise>
@@ -1549,13 +1585,47 @@
       <p>
         Consider the function <m>F:\R^2 \to \R^2</m> defined by
         <me>
-          F(x,y)=(x^2 + y^2, xy).
-        </me>
+          F(x,y)=(x^2 + y^2, xy)
+        </me>.
         Consider now the <m>DF_p</m>, the Jacobian matrix of <m>F</m> at the point <m>p = (1,2)</m>. Find <m>\Ker (DF_p)</m> and <m>\Im (DF_p)</m> and subsequently find <m>\Nullity(DF_p)</m> and <m>\Rank(DF_p)</m>.
       </p>
+      <p>
+        For which points <m>P</m> would the nullity be non-zero?
+      </p>
     </statement>
+    <hint>
+      <title>What is the Jacobian?</title>
+      <p>
+        Given a multi-variable function <m>F:\mathbb{R}^n\to \mathbb{R}^m</m>,
+        given by components <m>f_1,\ldots, f_m: \mathbb{R}^n\to \mathbb{R}</m>, we define the <term>Jacobian of <m>F</m></term> as the matrix of partial derivatives:
+        <me>
+          DF = \begin{bmatrix} \frac{\partial f_1}{\partial x_1}\amp \frac{\partial f_1}{\partial x_2} \amp \cdots \amp \frac{\partial f_1}{\partial x_n}\\
+          \frac{\partial f_2}{\partial x_1}\amp \frac{\partial f_2}{\partial x_2} \amp \cdots \amp \frac{\partial f_2}{\partial x_n}\\
+          \vdots \amp \amp \amp \vdots\\
+          \frac{\partial f_m}{\partial x_1}\amp \frac{\partial f_m}{\partial x_2} \amp \cdots \amp \frac{\partial f_m}{\partial x_n}
+          \end{bmatrix}
+        </me>.
+        The Jacobian <m>DF_P</m> <em>at a point <m>P\in\mathbb{R}^n</m></em> is then obtained, by evaluating the <m>mn</m> entries of this matrix (all of which are functions <m>\mathbb{R}^n\to \mathbb{R}</m>) at the point <m>P</m>.
+        Thus, in this problem
+        <me>
+          DF = \begin{bmatrix} \frac{\partial x^2+y^2}{\partial x}\amp \frac{\partial x^2+y^2}{\partial y} \\
+          \frac{\partial xy}{\partial x} \amp \frac{\partial xy}{\partial y}
+          \end{bmatrix}
+        </me>.
+      </p>
+    </hint>
     <solution>
       <p>
+        We compute
+        <me> DF = \begin{bmatrix} 2x\amp 2y\\ y\amp x\end{bmatrix}</me>
+        and if we evaluate this at <m>P=(1,2)</m> we get
+        <me> DF_P = \begin{bmatrix} 2\amp 4\\ 2\amp 1\end{bmatrix}</me>.
+        The two column vectors are linearly independent and thus the rank is 2 and the nullity is 0.
+      </p>
+      <p>
+        To get a nullity greater than 0, the two column vectors <m>\begin{bmatrix} 2x\amp 2y\end{bmatrix}</m> and <m>\begin{bmatrix}y\amp x\end{bmatrix}</m> must be linearly dependent.
+        This happens if and only if the matrix <m>\begin{bmatrix} 2x\amp 2y\\ y\amp x\end{bmatrix}</m> is not invertible.
+        Its determinant is <m>2x^2-2y^2</m>, so that happens if and only if <m>x^2-y^2=0</m>, and that happens if and only if <m>x=y</m> or <m>x=-y</m>.
       </p>
     </solution>
   </exercise>
