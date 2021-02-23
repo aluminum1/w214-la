@@ -33,17 +33,18 @@
       </p>
     </statement>
   <proof>
+  <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Veronderstel dat <m>T : V \rightarrow W</m> een-tot-een is.
       Ons weet reeds van een element in <m>\Ker(T)</m>, naamlik
       <m>\ve{0}_V</m>, aangesien <m>T(\ve{0}_V) = \ve{0}_W</m>, want <m>T</m> is lineêr.
       Aangesien <m>T</m> een-tot-een is,
       moet dit die enigste element in <m>\Ker(T)</m>  wees.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Veronderstel nou <m>\Ker(T) = \{\ve{0}_V\}</m> en dat
       <me>
         T(\ve{v}) = T(\ve{v}')
@@ -57,6 +58,7 @@
       met ander woorde, <m>\ve{v} = \ve{v}'</m>,
       wat is wat ons wou wys.
     </p>
+  </case>
   </proof>
 </lemma>
 
@@ -77,8 +79,8 @@
       </p>
     </statement>
   <proof>
+  <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Veronderstel <m>T</m> is injektief.
  <md>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp (<xref ref="injective-kernel-lemma"/>) </mrow>
@@ -91,9 +93,10 @@
     <p>
       Daarom is <m>T</m> surjektief.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Veronderstel <m>T</m> is surjektief.
       <md>
         <mrow>\amp \therefore \Be(T) = V</mrow>
@@ -103,6 +106,7 @@
         <mrow>\amp \therefore T \text{ is injektief. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
       </md>
     </p>
+  </case>
   </proof>
 </lemma>
 
@@ -113,8 +117,8 @@
       </p>
     </statement>
   <proof>
+  <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Veronderstel dat <m>V</m> en <m>W</m> isomorf is.
       Dan bestaan daar 'n paar lineêre afbeeldings <m>T : V\rightleftarrows W : S</m> sodat
       <m>T\circ S = \id_W</m> en <m>S \circ T = \id_C</m>.
@@ -137,9 +141,10 @@
         <mrow>\amp = \ve{w}</mrow>
       </md>.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Veronderstel dat daar 'n lineêre afbeelding
       <m>T : V\rightarrow W</m> bestaan wat injektief en surjektief is.
       Ons wil wys dat daar 'n lineêre afbeelding <m>S : W \rightarrow V</m> bestaan sodat
@@ -188,6 +193,7 @@
     <p>
       Gevolglik is <m>S</m> lineêr, wat die bewys voltooi.
     </p>
+  </case>
   </proof>
 </proposition>
 

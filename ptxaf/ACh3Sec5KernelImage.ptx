@@ -1434,23 +1434,6 @@
       </p>
 
       <p>
-        As jy my glo, dan is die prentjie soos volg:
-      </p>
-<!--  This image should already be elsewhere - maybe link to it to for a knowl? (Can't have an image inside a blockquote!)
-      <figure>
-        <caption></caption>
-        <image>
-          <latex-image>
-            <![CDATA[\begin{tikzpicture}\draw (0,0) - - (1,2) - - (3,2) - - (2,0) - - (0,0);
-            \draw (1.5, 1) - - (1.5,3.5) node[right] {\(\Ker{C}\)};
-            \draw (1.5, -0.1) - - (1.5, -2);
-            \node at (3.3, 1) {\(\Im(C)\)};
-            \draw[very thick, red, ->] (1.5,1) - - (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
-          </latex-image>
-        </image>
-      </figure>
--->
-      <p>
         Kom ons bewys vergelyking <xref ref="image-of-C" />.
         Per definisie is die beeld van <m>C</m> die deelruimte van <m>\mathbb{R}^3</m> wat bestaan uit alle
         vektore <m>\ve{w}</m> van die vorm <m>\ve{w} = \ve{a} \times \ve{v}</m> vir

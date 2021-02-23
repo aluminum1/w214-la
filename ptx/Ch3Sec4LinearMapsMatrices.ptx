@@ -335,8 +335,8 @@
   </corollary>
 
   <proof>
+  <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Suppose the linear map <m>T</m> is an isomorphism.
       This means there exists a linear map <m>S : W \rightarrow V</m> such that
       <me>
@@ -365,9 +365,10 @@
         [T]^{-1}_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{C}}
       </me>.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Suppose the matrix <m>[T] \equiv [T]_{\basis{C} \leftarrow \basis{B}}</m> is invertible.
       Define the linear map
       <me>
@@ -397,6 +398,7 @@
       Therefore the linear map <m>T</m> is an isomorphism,
       with inverse map <m>T^{-1} = S</m>.
     </p>
+  </case>
   </proof>
 
   <p>

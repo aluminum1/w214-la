@@ -189,8 +189,8 @@
   </theorem>
 
   <proof>
+  <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Veronderstel <m>V</m> en <m>W</m> is isomorf, d.m.v.
       'n paar lineêre afbeeldings <m>S : V \rightleftarrows W : T</m>.
       Laat <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m> 'n basis vir <m>V</m> wees.
@@ -225,9 +225,10 @@
       <m>\Dim V = \text{aantal vektore in }\basis{B}</m> = <m>n</m>, terwyl <m>\Dim W =
       \text{aantal vektore in }\basis{C}  = m</m>.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Veronderstel <m>\Dim V = \Dim W</m>.
       Laat <m>\ve{e}_1, \ldots, \ve{e}_m</m> 'n basis vir <m>V</m> wees,
       en laat <m>\ve{f}_1, \ldots, \ve{f}_m</m> 'n basis vir <m>W</m> wees.
@@ -247,6 +248,7 @@
     <p>
       Duidelik het ons <m>T \circ S = \id_V</m> en <m>S \circ T = \id_W</m>.
     </p>
+  </case>
   </proof>
 
   <example>

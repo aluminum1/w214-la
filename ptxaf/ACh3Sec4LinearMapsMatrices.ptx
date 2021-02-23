@@ -335,8 +335,8 @@
   </corollary>
 
   <proof>
+  <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Veronderstel die lineêre afbeelding <m>T</m> is 'n isomorfisme.
       Dit beteken dat bestaan 'n lineêre afbeelding <m>S :  W \rightarrow V</m> bestaan sodat
       <me>
@@ -365,9 +365,10 @@
         [T]^{-1}_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{C}}
       </me>.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Veronderstel die matriks <m>[T] \equiv [T]_{\basis{C} \leftarrow \basis{B}}</m> is inverteerbaar.
       Definieer die lineêre afbeelding
       <me>
@@ -397,6 +398,7 @@
       Daarom is die lineêre afbeelding <m>T</m> 'n
       isomorfisme, met inverse <m>T^{-1} = S</m>.
     </p>
+  </case>
   </proof>
 
   <p>

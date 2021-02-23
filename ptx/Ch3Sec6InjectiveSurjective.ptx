@@ -33,17 +33,18 @@
       </p>
     </statement>
   <proof>
+  <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Suppose <m>T : V \rightarrow W</m> is one-to-one.
       We already know one element in <m>\Ker(T)</m>, namely <m>\ve{0}_V</m>,
       since <m>T(\ve{0}_V) = \ve{0}_W</m> as <m>T</m> is linear.
       Since <m>T</m> is one-to-one,
       this must be the only element in <m>\Ker(T)</m>.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Suppose <m>\Ker(T) = \{\ve{0}_V\}</m> and that
       <me>
         T(\ve{v}) = T(\ve{v}')
@@ -57,6 +58,7 @@
       in other words, <m>\ve{v} = \ve{v}'</m>,
       which is what we wanted to show.
     </p>
+  </case>
   </proof>
 </lemma>
 
@@ -77,8 +79,8 @@
       </p>
     </statement>
   <proof>
+    <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Suppose <m>T</m> is injective.
       <md>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp (<xref ref="injective-kernel-lemma"/>) </mrow>
@@ -91,9 +93,10 @@
     <p>
       Hence <m>T</m> is surjective.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Suppose <m>T</m> is surjective.
       <md>
         <mrow>\amp \therefore \Im(T) = V</mrow>
@@ -103,6 +106,7 @@
         <mrow>\amp \therefore T \text{ is injective. }   \amp \amp  (<xref ref="inj-surj"/>)</mrow>
       </md>
     </p>
+  </case>
   </proof>
 </lemma>
 
@@ -113,8 +117,8 @@
       </p>
     </statement>
   <proof>
+  <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Suppose <m>V</m> and <m>W</m> are isomorphic.
       That is, there exists a pair of linear maps <m>T : V\rightleftarrows W : S</m> such that
       <m>T \circ S = \id_W</m> and <m>S \circ T = \id_C</m>.
@@ -137,9 +141,10 @@
         <mrow>\amp = \ve{w}</mrow>
       </md>.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Suppose that there exists a linear map
       <m>T : V \rightarrow W</m> which is injective and surjective.
       We will show that there exists a linear map <m>S : W \rightarrow V</m> such that
@@ -188,6 +193,7 @@
     <p>
       Hence <m>S</m> is linear, which completes the proof.
     </p>
+  </case>
   </proof>
 </proposition>
 

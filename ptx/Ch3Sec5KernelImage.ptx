@@ -1434,23 +1434,6 @@
       </p>
 
       <p>
-        If you believe me, then the picture is as follows:
-      </p>
-<!--  This image should already be elsewhere - maybe link to it to for a knowl? (Can't have an image inside a blockquote!)
-      <figure>
-        <caption></caption>
-        <image>
-          <latex-image>
-            <![CDATA[\begin{tikzpicture}\draw (0,0) - - (1,2) - - (3,2) - - (2,0) - - (0,0);
-            \draw (1.5, 1) - - (1.5,3.5) node[right] {\(\Ker{C}\)};
-            \draw (1.5, -0.1) - - (1.5, -2);
-            \node at (3.3, 1) {\(\Im(C)\)};
-            \draw[very thick, red, ->] (1.5,1) - - (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
-          </latex-image>
-        </image>
-      </figure>
--->
-      <p>
         Let me prove equation <xref ref="image-of-C" />.
         By definition, the image of <m>C</m> is the subspace of
         <m>\mathbb{R}^3</m> consisting of all vectors <m>\ve{w}</m> of the form

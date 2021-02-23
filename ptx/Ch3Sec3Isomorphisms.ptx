@@ -189,8 +189,8 @@
   </theorem>
 
   <proof>
+    <case direction="forward">
     <p>
-      <m>\Rightarrow</m>.
       Suppose <m>V</m> and <m>W</m> are isomorphic,
       via a pair of linear maps <m>S : V \rightleftarrows W : T</m>.
       Let <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m> be a basis for <m>V</m>.
@@ -225,9 +225,10 @@
       so <m>\Dim V = \text{number of vectors in }\basis{B}</m> = <m>m</m>,
       while <m>\Dim W = \text{number of vectors in }\basis{C}  = m</m>.
     </p>
+  </case>
 
+  <case direction="backward">
     <p>
-      <m>\Leftarrow</m>.
       Suppose <m>\Dim V = \Dim W</m>.
       Let <m>\ve{e}_1, \ldots, \ve{e}_m</m> be a basis for <m>V</m>,
       and let <m>\ve{f}_1, \ldots, \ve{f}_m</m> be a basis for <m>W</m>.
@@ -247,6 +248,7 @@
     <p>
       Clearly we have <m>T \circ S = \id_V</m> and <m>S \circ T = \id_W</m>.
     </p>
+  </case>
   </proof>
 
   <example>
