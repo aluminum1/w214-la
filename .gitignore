@@ -291,3 +291,7 @@ Vagrantfile
 
 # shortcut files
 *.lnk
+
+# preview files for GeoGebra activities
+# In principle these could change, but we don't want to bother too much updating these with Git.
+/images/*
