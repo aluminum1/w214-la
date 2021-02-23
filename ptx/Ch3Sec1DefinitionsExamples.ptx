@@ -43,7 +43,9 @@
     <statement>
       <p>
         Let <m>V</m> and <m>W</m> be vector spaces.
-        A <term>linear map</term> from <m>V</m> to <m>W</m> is a function <m>T : V \rightarrow W</m> satisfying:
+        A <term>linear map</term>
+        (also called a <term>linear transformation</term>)
+        from <m>V</m> to <m>W</m> is a function <m>T : V \rightarrow W</m> satisfying:
 
         <ul>
           <li>
@@ -63,12 +65,17 @@
     </statement>
   </definition>
 
-  <note>
-    <p>
-      Another name for a linear map is a
-      <em>linear transformation</em>.
-    </p>
-  </note>
+  <p>
+    The case where <m>V=W</m> is exceptional enough that we give a special name for a linear map in that case.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A linear map <m>T</m> from a vector space <m>V</m> to itself is called a <term>linear operator</term>.
+      </p>
+    </statement>
+  </definition>
 
 </subsection>
 

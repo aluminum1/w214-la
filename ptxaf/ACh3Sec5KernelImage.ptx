@@ -412,9 +412,6 @@
             \amp\text{ waar } (a_0, a_1, a_2, b_2 \in \mathbb{R}) \Big\}
           </mrow>
         </md>.
-        <me>
-          \Ker(I) = \left\{ \text{} \\ (a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}), \text{ waar } (a_0, a_1, a_2, b_2 \in\mathbb{R}). \right\}
-        </me>
       </p>
 
       <p>
@@ -1141,25 +1138,105 @@
         <md>
           <mrow> C : \Vect_2(\mathbb{R}^2) \amp \rightarrow \Poly_1[x,y]</mrow>
           <mrow> (P,Q) \amp \mapsto \frac{\partial Q}{\partial y} - \frac{\partial P}{\partial x}</mrow>
-        </md>
+        </md>.
         Bonus vraag: Watter soort vektorvelde is in die kern van <m>C</m>?
       </p>
     </statement>
+    <solution>
+      <p>
+        Ons werk eers die werking van <m>C</m> uit op die 12 basiselemente van <m>\Vect_2(\mathbb{R}^2)</m>:
+        <md>
+          <mrow>
+            C(1,0) \amp = 0 \amp
+            C(0,1) \amp = 0 \amp
+            C(x,0) \amp = -1\amp
+            C(0,x) \amp = 0
+          </mrow>
+          <mrow>
+            C(y,0) \amp = 0\amp
+            C(0,y) \amp = 1\amp
+            C(x^2,0) \amp = -2x\amp
+            C(0,x^2) \amp = 0
+          </mrow>
+          <mrow>
+            C(xy,0) \amp = -y\amp
+            C(0,xy) \amp = x\amp
+            C(y^2,0) \amp = 0\amp
+            C(0,y^2) \amp = 2y
+          </mrow>
+        </md>.
+        Dus kan ons onmiddelik sê dat die beeld van <m>C</m> onderspan word deur die polinome <m>-1, 1, -2x, -y, x, 2y</m>.
+        Deur die lys te sif, sien ons dat dit ook onderspan word deur <m>1,-2x,-y</m>.
+        Dus is <m>\Dim\Im C = 3</m>.
+      </p>
+      <p>
+        Dui die basiselemente hier bo aan met die simbole <m>\ve b_1,\ldots, \ve b_{12}</m>.
+        (Gaan eers regs, dan af, so <m>\ve b_3 = (x,0)</m>.)
+        Dan is
+        <me>C(c_1\ve b_1+c_2\ve b_2+\cdots +c_{12}\ve b_{12}) = (-c_3+c_6)+(-2c_7+c_{10})x + (-c_9+2c_{12})y</me>.
+        Hieruit sien ons dat ons nege van die skalare <m>c_i</m> willekeurig kan kies (<m>c_1, c_2, c_4, c_5, c_8, c_{11}</m> en byvoorbeeld <m>c_3,c_7,c_9</m>) en dan sal die ander 3 uniek daarui bepaal word.
+        Dus is <m>\Dim \Ker C = 9</m> en die Rang-Nulheidsgraadstelling geld.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="exercise-RankNullity-group-last">
     <statement>
-      <p>(Poole 6.5.12) Die afbeelding
+      <p> Die afbeelding
         <md>
           <mrow>T : \Mat_{2,2} \amp \rightarrow \Mat_{2,2} </mrow>
           <mrow> \mat{A} \amp \mapsto \mat{A} \mat{B} - \mat{B} \mat{A}</mrow>
         </md>
         waar
         <me>
-          \mat{B} = \begin{bmatrix} 1 \amp -1 \\ -1 \amp 1 \end{bmatrix}
+          \mat{B} = \begin{bmatrix} 1 \amp 2 \\ -1 \amp 3 \end{bmatrix}
         </me>
       </p>
     </statement>
+    <solution>
+      <p>
+        Laat <m>\mat{A} = \begin{bmatrix} x\amp y\\ z\amp w\end{bmatrix}</m>.
+        Dan is
+        <me> \mat{A}\mat{B} = \begin{bmatrix}x-y\amp 2x+3y \\ z-w\amp 2z+3w \end{bmatrix}\quad\text{en} \quad \mat{B}\mat{A} = \begin{bmatrix} x+2z\amp y+2w\\ -x+3z\amp -y+3w\end{bmatrix}</me>
+        en dus is
+        <me> T\left(\begin{bmatrix} x\amp y\\z \amp w\end{bmatrix}\right) = \begin{bmatrix} -y-2z\amp 2x+2y-2w\\ x-2z-w\amp 2z+y\end{bmatrix}</me>.
+      </p>
+      <p>
+        Aangesien die vektore
+        <me> \mat{E}_{11},\mat{E}_{12},\mat{E}_{21},\mat{E}_{22}</me>
+        (met byvoorbeeld <m> \mat{E}_{21} = \begin{bmatrix} 0\amp 1\\0\amp 0\end{bmatrix})</m>
+        die definisieversameling <m>\Mat_{2,2}</m> onderspan,
+        sal hul beelde
+        <md>
+          <mrow>
+            T(\mat{E}_{11}) \amp = \begin{bmatrix}0 \amp  2\\ 1\amp 0\end{bmatrix},\amp
+            T(\mat{E}_{12}) \amp = \begin{bmatrix}-1\amp 2\\0\amp 1\end{bmatrix},
+          </mrow>
+          <mrow>
+            T(\mat{E}_{21}) \amp = \begin{bmatrix}-2\amp 0\\ -2\amp 2\end{bmatrix},\amp
+            T(\mat{E}_{22}) \amp = \begin{bmatrix}0\amp -2\\ -1\amp 0\end{bmatrix}
+          </mrow>
+        </md>
+        die beeld <m>\Im(T)</m> onderspan.
+        As ons hierdie lys sif, bly ons egter slegs met die eerste twee oor en dus is <m>\Dim(\Im T) = 2</m>.
+      </p>
+      <p>
+        Veronderstel nou dat
+        <me> \mat{A} = \begin{bmatrix} a\amp b\\ c\amp d\end{bmatrix} \in\Ker(T)</me>.
+        Dan is
+        <me>a\begin{bmatrix}0 \amp  2\\ 1\amp 0\end{bmatrix}+b\begin{bmatrix}-1\amp 2\\0\amp 1\end{bmatrix}+c\begin{bmatrix}-2\amp 0\\ -2\amp 2\end{bmatrix}+d\begin{bmatrix}0\amp -2\\ -1\amp 0\end{bmatrix} = \begin{bmatrix}0\amp 0\\ 0\amp 0\end{bmatrix}</me>
+        wat die volgende stelsel tot gevolg het:
+        <md>
+          <mrow>-b -2c \amp = 0</mrow>
+          <mrow>2a+2b-2d \amp = 0</mrow>
+          <mrow>a-2c-d\amp = 0</mrow>
+          <mrow>b+2c \amp 0</mrow>
+        </md>.
+        Na ry-reduksie sien ons dat <m>c,d</m> as vrye veranderlikes beskou kan word; en dan is
+        <me> b = -2c\quad\text{en}\quad a = 2c+d</me>.
+        Dit beteken dat <m>\Dim(\Ker(T)) = 2</m> en dus geld die Rang-Nulheidsgraadstelling in hierdie voorbeeld.
+      </p>
+    </solution>
   </exercise>
 </exercisegroup>
 
@@ -1419,6 +1496,38 @@
         </me>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Ons kan die afbeelding eksplisiet neerskryf as
+        <md>
+          <mrow>
+            T(\amp c_1+c_2x+c_3y+c_4z+c_5x^2+c_6y^2+c_7z^2+c_8xy+c_9xz+c_{10}yz)
+          </mrow>
+          <mrow>
+          = \amp  c_1 + (c_2+c_3+c_4)x + (c_5+c_6+c_7+c_8+c_9+c_{10})x^2
+          </mrow>
+        </md>.
+        Die beeld is dus die hele <m>\Poly_2</m>, want enige polinoom <m>a+bx+cx^2</m> is die beeld van die polinoom <m>a+bx+cx^2\in \Poly_2[x,y,z]</m>.
+        Die kern is die oplossingsversameling van die stelsel
+        <md>
+          <mrow> c_1 \amp = 0</mrow>
+          <mrow> c_2+c_3+c_4 \amp 0</mrow>
+          <mrow> c_5+c_6+c_7+c_8+c_9+c_{10} \amp 0</mrow>
+        </md>.
+        Dus is
+        <md>
+          <mrow>
+            \Ker(T) = \{(-c_3-c_4)x\amp+c_3y+c_4z+(-c_6-c_7-c_8-c_9-c_{10})x^2+
+          </mrow>
+          <mrow>
+            \amp c_6y^2+c_7z^2+c_8xy+c_9xz+c_{10}yz\mid c_i\in\mathbb{R}\}
+          </mrow>
+        </md>.
+        Ons sou ook 'n basis kon gee:
+        <me> \{ -x+y, -x+z, -x^2+y^2, -x^2+z^2, -x^2+xy, -x^2+xz, -x^2+yz\}</me>
+        Dan kan ons duidelik sien dat <m>\Dim \Ker(T) = 7</m>.
+      </p>
+    </solution>
   </exercise>
 
 

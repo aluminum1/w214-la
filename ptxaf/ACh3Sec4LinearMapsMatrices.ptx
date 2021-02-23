@@ -26,6 +26,17 @@
     </p>
   </exercise>
 
+  <insight>
+    <p>
+      In die geval van 'n lineêre operator <m>T:V\to V</m>,
+      is dit moontlik om twee verskillende basisse <m>\basis B</m> en <m>\basis C</m> vir dieselfde vektorruimte te kies
+      (sien byvoorbeeld <xref ref="change-of-basis-as-matrix"/>);
+      en <xref ref="matrix_of_linear_map_defn"/> sal steeds sin maak.
+      Dit is egter ook moontlik (en selfs meer algemeen; sien byvoorbeeld <xref ref="matrix-in-different-basis"/>) om dieselfde basis vir <m>V</m> as definisieversameling en teikenversameling te gebruik.
+      As <m>V</m> en <m>W</m> nie dieselfde ruimte is nie, dan kan <m>\basis B</m> en <m>\basis C</m> natuurlik nie dieselfde wees nie!
+    </p>
+  </insight>
+
   <example xml:id="first_example_matrix_lin_map">
     <title>
       Matriks van 'n Lineêre Afbeelding
@@ -257,14 +268,14 @@
     die standaard basis vir <m>\Col_n</m> wees.
     Dan kan die <m>i</m>de kolom van <m>A</m> verkry word deur <m>A</m> met <m>\mat{e}_i</m> te vermenigvuldig:
     <men xml:id="fact-about-columns">
-      i\text{de} \text{ column of } \mat A  = A \mat{e}_i
+      i\text{-ste} \text{ kolom van } \mat A  = A \mat{e}_i
     </men>.
   </p>
 
   <exercise xml:id="fact_about_columns_of_matrix">
     <statement>
       <p>
-        Bevestig dit!
+        Bevestig <xref ref="fact-about-columns" />!
       </p>
     </statement>
   </exercise>
@@ -285,7 +296,7 @@
         Dan,
         <me>
           [T \circ S]_{\basis{D} \leftarrow \basis{B}} = [T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}
-        </me>
+        </me>,
         waar die regterkant die matriksproduk van
         <m>[T]_{\basis{D} \leftarrow \basis{C}}</m> en <m>[S]_{\basis{C} \leftarrow \basis{B}}</m> is.
       </p>
@@ -715,6 +726,73 @@
         </me>
       </p>
     </statement>
+    <hint>
+      <p>
+        Jy moet <m>[\mat{A}]_{\basis B}</m>, <m>[S]_{\basis C\leftarrow\basis B}</m> en <m>[S(\mat{A})]_{\basis C}</m> bereken en bevestig dat
+        <me> [S(\mat{A})]_{\basis C} = [S]_{\basis C\leftarrow\basis B}[\mat{A}]_{\basis B}</me>.
+      </p>
+    </hint>
+    <answer>
+      <p>
+        <md>
+          <mrow> S(\mat{A}) \amp = \begin{bmatrix} 0 \amp 0\\ 1\amp 0\end{bmatrix}</mrow>
+          <mrow> [\mat{A}]_{\basis B} \amp = \begin{bmatrix} 0\\ -1\\ 1\\ 0\end{bmatrix} </mrow>
+          <mrow> [S(\mat{A}]_{\basis C} \amp = \begin{bmatrix} -1\\ 2\\-1\\ 2 \end{bmatrix} </mrow>
+          <mrow> [S]_{\basis C\leftarrow \basis B} \amp = \begin{bmatrix}
+            2  \amp 1  \amp 0 \amp 0\\
+            -3 \amp -2 \amp 0 \amp 0\\
+            2  \amp 2  \amp 1 \amp 0\\
+            -2 \amp -2 \amp 0 \amp 1
+          \end{bmatrix}</mrow>
+        </md>.
+      </p>
+    </answer>
+    <solution>
+      <p>
+        Die maklikste om te bereken is <m>S(\mat{A}) = \mat{A}^T = \begin{bmatrix} 0\amp 0\\1\amp 0\end{bmatrix}</m>.
+      </p>
+      <p>
+        Nou kan ons <m>[\mat{A}]_{\basis B}</m> bereken.
+        Kom ons stel
+        <me>[\mat{A}]_{\basis B} = \begin{bmatrix} a\\b\\c\\d\end{bmatrix}</me>.
+        Dit beteken dat
+        <me>\mat{A} = a \mat{M}_1 + b\mat{M}_2 +c\mat{M}_3 +d \mat{M}_4</me>.
+        As ons nou elkeen van die vier inskrywings links en regs gelyk aan mekaar stel, kry ons die stelsel
+        <md>
+          <mrow> 0 \amp = a + b + c </mrow>
+          <mrow> 1 \amp = a + c + d</mrow>
+          <mrow> 0 \amp = 2a + b + c + d</mrow>
+          <mrow> 0 \amp = 3a + b + c + d</mrow>
+        </md>.
+        Dit het die oplossing <m>a=0, b=-1, c=1, d=0</m> en dus is
+        <me> [\mat{A}]_{\basis B} = \begin{bmatrix} 0\\-1\\1\\0\end{bmatrix}</me>.
+        Ons doen dieselfde met <m>S(\mat{A})</m> en kry dat
+        <me> [S\mat{A}]_{\basis C} = \begin{bmatrix} -1\\2\\-1\\2 \end{bmatrix}</me>.
+      </p>
+      <p>
+        Om die matriks vir <m>S</m> te kry, moet ons die afbeelding <m>S</m> op elkeen van die basiselemente <m>\mat{M}_1, \mat{M}_2, \mat{M}_3, \mat{M}_4</m> toepas en dan die antwoord as 'n lineêre kombinasie van daardie selfde basiselemente skryf (omdat <m>\basis B = \basis C</m>).
+        Daardie lineêre kombinasies beskryf dan die koördindaatvektore
+        <me>[S(\mat{M}_1)]_{\basis C}, [S(\mat{M}_2)]_{\basis C}, [S(\mat{M}_3)]_{\basis C}, [S(\mat{M}_4)]_{\basis C}</me>
+        wat die kolomme van <m>[S]_{\basis C\leftarrow\basis B}</m> vorm. Ons kry
+        <me>[S]_{\basis C\leftarrow\basis B}=\begin{bmatrix}
+            2  \amp 1  \amp 0 \amp 0\\
+            -3 \amp -2 \amp 0 \amp 0\\
+            2  \amp 2  \amp 1 \amp 0\\
+            -2 \amp -2 \amp 0 \amp 1
+          \end{bmatrix}</me>.
+          Laastens bevestig ons net dat die produk
+          <me>\begin{bmatrix}
+            2  \amp 1  \amp 0 \amp 0\\
+            -3 \amp -2 \amp 0 \amp 0\\
+            2  \amp 2  \amp 1 \amp 0\\
+            -2 \amp -2 \amp 0 \amp 1
+          \end{bmatrix}\begin{bmatrix} 0\\ -1\\ 1\\ 0\end{bmatrix}
+        </me>
+        gelyk is aan
+        <me>\begin{bmatrix} -1\\ 2\\-1\\ 2 \end{bmatrix}</me>,
+        wat inderdaad die geval is.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>

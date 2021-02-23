@@ -43,7 +43,9 @@
     <statement>
       <p>
         Laat <m>V</m> en <m>W</m> vektorruimtes wees.
-        'n <term>lineêre afbeelding</term> van <m>V</m> na <m>W</m> is 'n funksie <m>T : V \rightarrow W</m> wat die volgende bevredig:
+        'n <term>lineêre afbeelding</term>
+        (ook soms <term>lineêre transformasie</term> genoem)
+        van <m>V</m> na <m>W</m> is 'n funksie <m>T : V \rightarrow W</m> wat die volgende bevredig:
 
         <ul>
           <li>
@@ -63,12 +65,17 @@
     </statement>
   </definition>
 
-  <note>
-    <p>
-      'n Ander naam vir 'n lineêre afbeelding is 'n
-      <em>lineêre transformasie</em>.
-    </p>
-  </note>
+  <p>
+    Die geval waar <m>V=W</m> is uitsonderlik genoeg dat ons 'n spesiale naam vir 'n lineêre afbeelding in daardie situasie gee.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        'n Lineêre afbeelding <m>T</m> van 'n vektorruimte <m>V</m> na ditself word 'n <term>lineêre operator</term> genoem.
+      </p>
+    </statement>
+  </definition>
 
 </subsection>
 
