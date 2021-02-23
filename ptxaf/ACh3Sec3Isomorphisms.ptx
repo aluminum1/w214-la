@@ -24,7 +24,7 @@
       <mrow>\mbox{voël}  \amp \mapsto \ChBird</mrow>
       <mrow>\mbox{oog}  \amp \mapsto \ChEye</mrow>
       <mrow>\mbox{kruis}  \amp \mapsto \ChCross</mrow>
-      <intertext>and</intertext>
+      <intertext>en</intertext>
       <mrow>T : B \amp \rightarrow A</mrow>
       <mrow>\ChBird  \amp  \mapsto \mbox{voël}</mrow>
       <mrow>\ChEye  \amp  \mapsto \mbox{oog}</mrow>
@@ -462,6 +462,16 @@
         Indien nie,   bewys dat hulle nie isomorf is nie.
       </p>
     </statement>
+    <hint>
+      <p>
+        Bereken die dimensies van <m>V</m> en <m>W</m>.
+      </p>
+    </hint>
+    <answer>
+      <p>
+        Hulle is isomorf.
+      </p>
+    </answer>
     <solution>
       <p>
         <m>V</m> bestaan uit alle vektore <m>(x,y,z,w)</m> wat die lineêre vergelykings
@@ -477,8 +487,8 @@
         Nou kyk ons na <m>W</m>. Laat <m>p(x) = ax^2 + bx +c</m>. Vir <m> p(x) </m> om in <m> W</m> te wees, moet <m> p(x)</m> die volgendde vergelyking bevredig:
 
         <me>
-          \int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
-        </me>
+          \int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0
+        </me>.
         Dus, vir enige keuse van <m> a </m> en <m> b </m>, word <m> c </m> uniek daaruit bepaal. Dus is <m>W</m> 'n 2-dimensionele deelruimte.
       </p>
 
@@ -563,6 +573,34 @@
         As hulle nie is nie, bewys dat hulle nie is nie.
       </p>
     </statement>
+    <answer>
+      <p>
+        Hulle is isomorf.
+      </p>
+    </answer>
+    <solution>
+      <p>
+        Die ruimte <m>V</m> is 3-dimensioneel.
+        Dit bestaan uit die vektore <m>(v_1,v_2,v_3,v_4)</m> wat die vergelyking
+        <me> 1\cdot v_1-1\cdot v_2+2\cdot v_3 +1\cdot v_4 = 0</me> bevredig.
+        Ons kan enige drie van die inskrywings willekeurig kies, en dan sal die vierde uniek daaruit bepaal word.
+      </p>
+      <p>
+        Die ruimte <m>\Poly_1[x,y]</m> is ook 3-dimensioneel, omdat dit deur die drie lineêr onafhanklike elemente <m>1,x,y</m> onderspan word.
+      </p>
+      <p>
+        Om 'n eksplisiete isomorfisme neer te skryf, kan ons enige basis vir <m>V</m> afbeeld op 'n basis vir <m>\Poly_1[x,y]</m>.
+        Ons het reeds 'n basis <m>\bopen 1,x,y\bclose</m> vir <m>\Poly_1[x,y]</m>,
+        so ons met net nog 'n basis vir <m>V</m> kry.
+        Een opsie is
+        <me> \bopen (1,0,0,-1), (0,1,0,1),(0,0,1,-2)\bclose</me>,
+        omdat dit lineêr onafhanklik is en <m>V</m> 3-dimensioneel is.
+      </p>
+      <p>
+        Eindelike kan ons die isomorfisme <m>T:V\to \Poly_1[x,y]</m> definieer deur
+        <me> T((1,0,0,-1))=1,\quad T((0,1,0,1)) = x, \quad T(0,0,1,-2)=y</me>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -570,7 +608,7 @@
       <p>
         Is die volgende vektorruimtes isomorf?
         <md>
-          <mrow> V_1 = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \}, \text{ waar} </mrow>
+          <mrow> V_1 = \{ \ve{p} \in \Poly_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \}, \text{ waar} </mrow>
           <mrow>
           D = \{ (x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \}
           </mrow>
@@ -580,6 +618,21 @@
         </me>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Ons bereken eers elkeen se dimensie.
+        Kom ons begin met <m>V_2</m>.
+        'n Tipiese element in <m>V_2</m> is 'n vektor <m>\ve{V}=(P(x,y),Q(x,y))</m> waarvan die twee inskrywings <m>P(x,y)</m> en <m>Q(x,y)</m> polinome in <m>x</m> en <m>y</m> van graad kleiner of gelyk aan 2 is.
+        Die vektorruimte <m>\Poly_2[x,y]</m> het 'n basis wat bestaan uit <m>1,x,y,x^2,xy,y^2</m> en is dus 6-dimensioneel.
+        Aangesien <m>V_2</m> twee sulke komponente het, is dit 12-dimensioneel.
+      </p>
+      <p>
+        Aan die ander kant, is <m>V_1</m> 'n deelruimte van <m>\Poly_3[x,y]</m>, wat 'n basis van die elemente <m>1,x,y,x^2,xy,y^2,x^3,x^2y,xy^2,y^3</m> het.
+        Dus is <m>\Dim \Poly_3[x,y] = 10</m> en dus is
+        <m> \Dim V_1 \le  10</m>.
+        Dus kan die twee vektorruimtes nie gelyke dimensie hê nie en <m>V_1\not\cong V_2</m>.
+      </p>
+    </solution>
   </exercise>
 
 

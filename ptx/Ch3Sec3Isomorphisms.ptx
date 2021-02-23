@@ -462,6 +462,16 @@
         If not, prove that they are not isomorphic.
       </p>
     </statement>
+    <hint>
+      <p>
+        Compute the dimensions of <m>V</m> and <m>W</m>.
+      </p>
+    </hint>
+    <answer>
+      <p>
+        They are isomorphic.
+      </p>
+    </answer>
     <solution>
       <p>
         <m>V</m> consists of all vectors <m>(x,y,z,w)</m> satisyfing the linear equations
@@ -477,8 +487,8 @@
         Now on to <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
 
         <me>
-          \int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
-        </me>
+          \int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0
+        </me>.
         Thus, for any choice of <m> a </m> and <m> b </m>, <m> c </m> is uniquely determined. Hence <m>W</m> is a 2 dimensional subspace.
       </p>
 
@@ -563,6 +573,34 @@
         If not, prove that they are not isomorphic.
       </p>
     </statement>
+    <answer>
+      <p>
+        They are isomorphic.
+      </p>
+    </answer>
+    <solution>
+      <p>
+        The space <m>V</m> is 3-dimensional.
+        Indeed it consists of vectors <m>(v_1,v_2,v_3,v_4)</m> satisfying the equation
+        <me> 1\cdot v_1-1\cdot v_2+2\cdot v_3 +1\cdot v_4 = 0</me>.
+        We can choose any three of them arbitrarily and then the fourth will be determined from the other three.
+      </p>
+      <p>
+        The space <m>\Poly_1[x,y]</m> is also 3-dimensional, because it is spanned by the linearly independent elements <m>1,x,y</m>.
+      </p>
+      <p>
+        To write down an explicit map, we can map any basis for <m>V</m> to any basis of <m>\Poly_1[x,y]</m>.
+        We already have a basis <m>\bopen 1,x,y\bclose</m> for <m>\Poly_1[x,y]</m>,
+        so it remains to find a basis for <m>V</m>.
+        One option is
+        <me> \bopen (1,0,0,-1), (0,1,0,1),(0,0,1,-2)\bclose</me>,
+        since it is linearly independent and <m>V</m> is 3-dimensional.
+      </p>
+      <p>
+        Finally, we can define the isomorphism <m>T:V\to \Poly_1[x,y]</m> by
+        <me> T((1,0,0,-1))=1,\quad T((0,1,0,1)) = x, \quad T(0,0,1,-2)=y</me>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -570,7 +608,7 @@
       <p>
         Are the following vector spaces isomorphic?
         <md>
-          <mrow> V_1 = \{ \ve{p} \in \mathbb{Poly}_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \}, \text{ where} </mrow>
+          <mrow> V_1 = \{ \ve{p} \in \Poly_3[x,y] : \iint_{D} p \, dA  \cdot \ve{v} = 0 \}, \text{ where} </mrow>
           <mrow>
           D = \{ (x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \}
           </mrow>
@@ -580,6 +618,21 @@
         </me>.
       </p>
     </statement>
+    <solution>
+      <p>
+        We first compute the dimension of each vector space.
+        Let us start with <m>V_2</m>.
+        A typical element in <m>V_2</m> is a vector <m>\ve{V}=(P(x,y),Q(x,y))</m> where the two entries <m>P(x,y)</m> and <m>Q(x,y)</m> are polynomials in  <m>x</m> and <m>y</m> of degree less than or equal to 2.
+        The vector space <m>\Poly_2[x,y]</m> has a basis consisting of the polynomials <m>1,x,y,x^2,xy,y^2</m> and is therefore 6-dimensional.
+        Since <m>V_2</m> has two such components, it is 12-dimensional.
+      </p>
+      <p>
+        On the other hand,  <m>V_1</m> is a subspace of <m>\Poly_3[x,y]</m>, which has a basis consisting of <m>1,x,y,x^2,xy,y^2,x^3,x^2y,xy^2,y^3</m>.
+        Thus <m>\Dim \Poly_3[x,y] = 10</m> and therefore
+        <m> \Dim V_1 \le  10</m>.
+        The the two vector spaces cannot have equals dimensions, and we conclude that <m>V_1\not\cong V_2</m>.
+      </p>
+    </solution>
   </exercise>
 
 
