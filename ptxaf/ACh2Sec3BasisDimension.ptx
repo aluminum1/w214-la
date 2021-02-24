@@ -398,13 +398,44 @@
           Laat nou <m>X</m> 'n willekeurige eindige versameling wees.
           Beskou die versameling funksies
           <me>
-             \basis{B} = \bopen f_a : \, a \in X \bclose
+             \basis{B} = \bopen \ve f_a : \, a \in X \bclose
           </me>.
         </p>
         <p>
           Wys dat <m>\basis{B}</m> 'n basis vir <m>\Fun(X)</m> is.
         </p>
       </statement>
+      <solution>
+          <p>
+            Eers wys ons dat die versameling <m>\basis B</m> lineêr onafhanklik is.
+            Veronderstel dat daar 'n lineêre verband
+            <me> \sum_{a\in X} c_a \ve f_a = \ve 0</me> bestaan het.
+            Let op dat die <m>\ve 0</m> aan die regterkant die 0 funksie op <m>X</m> aandui.
+            Aangesien albei kante funksies is, kan ons beide by 'n willekeurige element <m>b\in X</m>uitwerk.
+            Ons kry
+            <me> \sum_{a\in X}c_a \ve f_a(b) = \ve 0(b)</me>.
+            Die linkerkant het net een term wat nie nul is nie <mdash /> die een wat ooreenstem met die geval <m>a=b</m>.
+            Dus is die linkerkant gelyk aan
+            <me> c_b \cdot 1 = c_b</me>.
+            Die regterkant is per definisie gelyk aan 0,
+            so ons lei af dat <m>c_b=0</m>.
+            Ons kan dit vir elke keuse van <m>b\in X</m> doen, en dus is al die skalare <m>c_b = 0</m>.
+          </p>
+          <p>
+            Nou wys ons dat 'n willekeurige funksie <m>\ve f</m> as 'n lineêre kombinasie van die funksies <m>\ve f_a</m> geskryf kan word.
+            Veronderstel dat
+            <me> \sum_{a\in X}c_a \ve f_a = \ve f</me>
+            so 'n lineêre kombinasie was.
+            Deur by <m>b</m> uit te werk, kry ons dan
+            <me> c_b = \ve f(b)</me>.
+            So die enigste moontlike lineêre kombinasie wat kan werk is
+            <me> \sum_{a\in X} \ve f(a)\ve f_a</me>.
+            Let hier op dat <m>\ve f(a)</m> 'n skalaar is, terwyl <m>\ve f_a</m> 'n funksie is, so die skalaarproduk <m>\ve f(a)\ve f_a</m> is ook 'n funksie.
+            Om te wys dat hierdie funksie wel gelyk is aan <m>\ve f</m>, moet ons wys dat vir enige <m>b\in X</m> geld
+            <me> \ve f(b) = \sum_{a\in X} \ve f(a)\ve f_a(b)</me>.
+            Maar die enigste term wat tot die regterkant bydra is wanneer <m>a=b</m>, so dit is gelyk aan <m>\ve f(b)\cdot 1</m>.
+          </p>
+        </solution>
     </exercise>
 
     <example>

@@ -398,13 +398,44 @@
             Now let <m>X</m> be an arbitrary finite set.
             Consider the collection of functions
             <me>
-             \basis{B} = \bopen f_a : \, a \in X \bclose
+             \basis{B} = \bopen \ve f_a : \, a \in X \bclose
             </me>.
           </p>
           <p>
             Show that <m>\basis{B}</m> is a basis for <m>\Fun(X)</m>.
           </p>
         </statement>
+        <solution>
+          <p>
+            First we show that the set <m>\basis B</m> is linearly independent.
+            Assume that there was some linear relation
+            <me> \sum_{a\in X} c_a \ve f_a = \ve 0</me>.
+            Note that the <m>\ve 0</m> on the right hand-side refers to the 0 function on <m>X</m>.
+            Since both sides represent functions, we can evaluate both of them at an arbitrary element <m>b\in X</m>.
+            We get
+            <me> \sum_{a\in X}c_a \ve f_a(b) = \ve 0(b)</me>.
+            The left hand-side has only one term that is non-zero <mdash /> the one corresponding to the case <m>a=b</m>.
+            Thus, the left hand-side equals
+            <me> c_b \cdot 1 = c_b</me>.
+            The right hand-side equals 0 by definition,
+            so we conclude that <m>c_b=0</m>.
+            We can do this for every choice of <m>b\in X</m>, and thus all of the scalars <m>c_b = 0</m>.
+          </p>
+          <p>
+            Now we show that we can represent an arbitrary function <m>\ve f</m> as a linear combination of the functions <m>\ve f_a</m>.
+            Suppose that
+            <me> \sum_{a\in X}c_a \ve f_a = \ve f</me>
+            was such a linear combination.
+            Then, by evaluating at <m>b</m>, we get
+            <me> c_b = \ve f(b)</me>.
+            So the only possible linear combination that can work is
+            <me> \sum_{a\in X} \ve f(a)\ve f_a</me>.
+            Note here that <m>\ve f(a)</m> is a scalar, while <m>\ve f_a</m> is a function, so the scalar product <m>\ve f(a)\ve f_a</m> is also a function.
+            To show that this function is indeed equal to <m>\ve f</m>, we need to show that for any <m>b\in X</m> we have
+            <me> \ve f(b) = \sum_{a\in X} \ve f(a)\ve f_a(b)</me>.
+            But the only term on the right hand-side that contributes is when <m>a=b</m>, so it equals <m>\ve f(b)\cdot 1</m>.
+          </p>
+        </solution>
       </exercise>
 
     <example>
