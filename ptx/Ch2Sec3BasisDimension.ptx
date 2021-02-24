@@ -1685,7 +1685,8 @@
             </li>
 
             <li><p>
-              Read through <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Use SageMath to plot a graph of <m>y_1, y_2, y_3</m> on the interval <m>[0,10]</m> .</p>
+              Read through <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Use SageMath to plot a graph of <m>y_1, y_2, y_3</m> on the interval <m>[0,10]</m> .
+              Use a step size of <m> \Delta x = 0.5</m>.</p>
               <sage>
                 <input>
                 </input>

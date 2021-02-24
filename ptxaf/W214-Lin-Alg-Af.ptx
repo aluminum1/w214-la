@@ -66,6 +66,9 @@
 \let \Im \relax
 \DeclareMathOperator{\Im}{Im}
 
+% There are some overfull hboxes due to LaTeX not knowing Afrikaans hyphenations:
+\hyphenation{vek-tor-ruim-tes}
+
 </macros>
 
 

@@ -8,7 +8,7 @@
   </p>
 
     <p>
-      <alert>Ons is op die punt om on eerste formele bewys in die kursus te doen!</alert>
+      <alert>Ons gaan nou ons eerste formele bewys in die kursus doen!</alert>
     </p>
 
   <p> Ons eerste hulpstelling wys dat die nulvektor <m>\ve{0} </m> die <em>unieke</em> vektor in <m>V</m> is wat soos'n nulvektor werk. Meer presies:</p>
@@ -149,7 +149,6 @@
     </case>
     <case direction="forward" >
     <p>
-      <alert>Bewys van <m>\Rightarrow</m>)</alert>.
       Veronderstel dat <m>k \smul \ve{v} = \ve{0}</m>.
       Daar is twee moontlikhede:
       óf <m>k = 0</m>, óf <m>k \neq 0</m>.
@@ -159,7 +158,7 @@
       <md>
         <mrow>k \smul \ve{v} \amp  = \ve{0}</mrow>
         <mrow>\therefore  \frac{1}{k} \smul (k \smul \ve{v})  \amp  = \frac{1}{k} \smul \ve{0} \amp \amp  \text{(Vermenigvuldig beide kante met \(\frac{1}{k}\))}</mrow>
-        <mrow>\therefore \left(\frac{1}{k} k\right) \smul \ve{v} \amp = \ve{0} \amp \amp (<xref ref="R6" text="title" />\text{ aan LK. Gebruik } <xref ref="mult_by_zero_ex" text="global">Oefening</xref> \text{ aan RK.)}</mrow>
+        <mrow>\therefore \left(\frac{1}{k} k\right) \smul \ve{v} \amp = \ve{0} \amp \amp (<xref ref="R6" text="title" />\text{ aan LK; } <xref ref="mult_by_zero_ex" text="global">Oefening</xref> \text{ aan RK.)}</mrow>
         <mrow>\therefore 1 \smul \ve{v} \amp = \ve{0} \amp \amp  \text{(gebruik \(\frac{1}{k} k = 1\))}</mrow>
         <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  (<xref ref="R7" text="title" />)</mrow>
       </md>
@@ -192,7 +191,7 @@
           <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \text{(gebruik R2 aan LK)}</mrow>
           <mrow>\therefore  \ve{0} + 7 \smul \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp (<xref ref="add_inv" text="global">Lemma</xref> \text{ aan LK)}</mrow>
           <mrow>\therefore  7 \smul \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \text{(R3a aan LK)}</mrow>
-          <mrow>\therefore  \frac{1}{7} \smul (7 \cdot \ve{x}) \amp  = \frac{1}{7} \smul (-\ve{v} + \ve{w}) \amp \amp  \text{(skalaarvermenigvuldig aan beide kante met }\frac{1}{7})</mrow>
+          <mrow>\therefore  \frac{1}{7} \smul (7 \cdot \ve{x}) \amp  = \frac{1}{7} \smul (-\ve{v} + \ve{w}) \amp \amp  \text{(skal.verm. beide kante met }\frac{1}{7})</mrow>
           <mrow>\therefore  (\frac{1}{7} 7) \cdot   \ve{x} \amp  = \frac{1}{7} \smul (-\ve{v} + \ve{w}) \amp \amp  \text{(gebruik R6 aan LK)}</mrow>
           <mrow>\therefore  1 \cdot \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} + \ve{w})  \amp \amp  \text{(vermenigvuldig }\frac{1}{7}\text{ met 7)}</mrow>
           <mrow>\therefore  \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} + \ve{w}) \amp \amp \text{(R7)}</mrow>

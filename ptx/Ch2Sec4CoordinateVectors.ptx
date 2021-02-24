@@ -989,58 +989,6 @@
     </solution>
     </exercise>
 
-    <exercise>
-      <statement>
-        <p>
-          Let <m>V</m> be the vector space of solutions to the differential equation
-          <men xml:id="diff_eqn_exerc_3">
-            x^3 y''' + x^2 y'' - 2xy' + 2y =0
-          </men>.
-        </p>
-        <p>
-          <ol label="(a)">
-            <li>
-              Without performing any explicit calculations, determine the dimension of <m>V</m>.
-            </li>
-
-            <li><p>
-              Using Sage, find a basis for <m>V</m>, if you're unsure of the syntax, look at the examples in <xref ref = "Ch2Sec3BasisDimension"/>. Show explicitly (by hand!) that each basis element does indeed satisfy <xref ref = "diff_eqn_exerc_3"/>.</p>
-              <sage>
-                <input>
-                </input>
-              </sage>
-            </li>
-
-            <li>
-              Find that unique function <m>y_1</m> that is a solution to <xref ref = "diff_eqn_exerc_3"/> subject to the initial conditions
-              <me>
-                y_1(1) = 1 \quad y_1'(1) = 0 \quad y_1''(1) = 0
-              </me>.
-            </li>
-
-             <li>
-              Find that unique function <m>y_2</m> that is a solution to <xref ref = "diff_eqn_exerc_3"/> subject to the initial conditions
-              <me>
-                y_2(1) = 0 \quad y_2'(1) = 1 \quad y_2''(1) = 0
-              </me>.
-            </li>
-
-            <li>
-              Does the function <m> y_3 = y_1 + y_2 </m> also solve <xref ref = "diff_eqn_exerc_3"/>? By <xref ref = "diff_eqn_exist_unique"/>, <m>y_3</m> is the unique solution to an initial value problem involving <xref ref = "diff_eqn_exerc_3"/> <mdash/> what are those initial conditions?
-            </li>
-
-            <li><p>
-              Read through <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Plot <m>y_1, y_2, y_3</m> (you don't need to plot them on the same set of axes) on the interval <m>x = [0,10]</m> with a step size of <m> \Delta x = 0.5</m>. Sketch the results.</p>
-              <sage>
-                <input>
-                </input>
-              </sage>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-
   </exercises>
 
 

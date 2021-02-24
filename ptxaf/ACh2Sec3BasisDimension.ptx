@@ -1685,7 +1685,8 @@
             </li>
 
             <li><p>
-              Lees deur <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Gebruik SageMath om 'n grafiek van <m>y_1, y_2, y_3</m> te teken op die interval <m>[0,10]</m>.</p>
+              Lees deur <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Gebruik SageMath om 'n grafiek van <m>y_1, y_2, y_3</m> te teken op die interval <m>[0,10]</m>.
+              Gebruik 'n stapgrootte van <m> \Delta x = 0.5</m>.</p>
               <sage>
                 <input>
                 </input>

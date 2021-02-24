@@ -989,58 +989,6 @@
     </solution>
     </exercise>
 
-   <exercise>
-      <statement>
-        <p>
-          Laat <m>V</m> die vektorruimte van oplossings tot die differensiaalvergelyking
-          <men xml:id="diff_eqn_exerc_3">
-            x^3 y''' + x^2 y'' - 2xy' + 2y =0
-          </men> wees.
-        </p>
-        <p>
-          <ol label="(a)">
-            <li>
-              Bereken die dimensie van <m>V</m> sonder om enige eksplisiete berekeninge te doen.
-            </li>
-
-            <li><p>
-              Gebruik SageMath om 'n basis vir <m>V</m> te vind. As jy onseker oor die sintaks is, kyk na die voorbeelde in <xref ref = "ACh2Sec3BasisDimension"/>. Wys eksplisiet (met die hand) dat elke basiselement werklik <xref ref = "diff_eqn_exerc_3"/> bevredig.</p>
-              <sage>
-                <input>
-                </input>
-              </sage>
-            </li>
-
-            <li>
-              Vind die unieke funksie <m>y_1</m> wat 'n oplossing vir <xref ref = "diff_eqn_exerc_3"/> is wat die beginvoorwaardes
-              <me>
-                y_1(1) = 1 \quad y_1'(1) = 0 \quad y_1''(1) = 0
-              </me> bevredig.
-            </li>
-
-             <li>
-              Vind die unieke funksie <m>y_2</m> wat 'n oplossing vir <xref ref = "diff_eqn_exerc_3"/> is wat die beginvoorwaardes
-              <me>
-                y_2(1) = 0 \quad y_2'(1) = 1 \quad y_2''(1) = 0
-              </me> bevredig.
-            </li>
-
-            <li>
-              Is die funksie <m> y_3 = y_1 + y_2 </m> ook 'n oplossing vir <xref ref = "diff_eqn_exerc_3"/>? Uit <xref ref = "diff_eqn_exist_unique"/>, is <m>y_3</m> die unieke oplossing vir 'n beginvoorwaardeprobleem wat <xref ref = "diff_eqn_exerc_3"/> behels <mdash /> wat is daardie beginvoorwaardes?
-            </li>
-
-            <li><p>
-              Lees deur <url href="http://doc.sagemath.org/html/en/reference/plotting/sage/plot/plot.html"> 2D Plotting in Sage </url>. Plot <m>y_1, y_2, y_3</m> (jy hoef hulle nie op dieselfde assestelsel te plot nie)op die interval <m>x = [0,10]</m> met 'n stapgrootte van <m> \Delta x = 0.5</m>. Skets die resultate.</p>
-              <sage>
-                <input>
-                </input>
-              </sage>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-
 </exercises>
 
 

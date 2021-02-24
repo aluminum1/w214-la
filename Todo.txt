@@ -23,7 +23,8 @@ Consistency and technique:
 
 
 Add solutions:
-- Many in Ch3Sec1
+- Many in Ch3Sec1 and Ch2Sec5 and Ch2Sec3?
+- Ch1Sec3 and Ch1Sec4 have some that ask to check that a set is a vector space. Not really keen on them...
 
 
 Afrikaans:
@@ -36,7 +37,7 @@ I would like to add
 - link exercises or groups of exercises to these learning outcomes.
 - longer paragraphs, especially in introductions (sections can also have <conclusion>s and <references> to other reading and/or Youtube Videos).
 - overspecified or underspecified problems
-- more problems (e.g. <fillin characters=10 /> for fill in questions, like terminology)
+- more problems (e.g. <fillin characters="10" /> for fill in questions, like terminology)
 - solutions
 
 Ideas for problems and examples:
