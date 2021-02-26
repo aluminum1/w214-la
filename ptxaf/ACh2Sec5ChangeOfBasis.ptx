@@ -420,6 +420,88 @@
           </ol>
         </p>
       </statement>
+      <answer>
+        <p>
+          <me> \mat{P}_{\basis C\leftarrow \basis B } = \begin{bmatrix}
+            1/2 \amp 1/2\amp 1\amp 1/2\\
+            1/2 \amp 1/2\amp 0\amp -1/2\\
+            1/2 \amp -1/2\amp 1\amp -1/2\\
+            -1/2\amp 1/2\amp 0\amp -1/2
+          \end{bmatrix}
+          </me>
+          <me> \mat{P}_{\basis B\leftarrow \basis C} = \begin{bmatrix}
+            0   \amp 1    \amp 0    \amp -1  \\
+            1/2 \amp 1/2  \amp -1/2 \amp 1/2 \\
+            1/2 \amp -1/2 \amp 1/2  \amp 1/2 \\
+            1/2 \amp -1/2 \amp -1/2 \amp -1/2
+          \end{bmatrix}
+          </me>
+          <me>
+            [\mat{A}]_{\basis B} = \begin{bmatrix} 3/2 \\ -1/2 \\ 7/2 \\ -1/2 \end{bmatrix}
+          </me>
+          <me>
+            [\mat{A}]_{\basis C} = \begin{bmatrix} 0 \\ -3/2  \\ 5/2 \\ -1/2 \end{bmatrix}
+          </me>
+        </p>
+      </answer>
+      <solution>
+        <p>
+          Die matriks <m>\mat{P}_{\basis C\leftarrow \basis B}</m> word gedefinieer om die kolomme
+          <me> [\mat{B}_1]_{\basis C}, [\mat{B}_2]_{\basis C}, [\mat{B}_3]_{\basis C}, [\mat{B}_4]_{\basis C}</me> te hê.
+          Om byvoorbeeld <m>[\mat{B}_1]_{\basis C}</m> te bereken, stel ons
+          <me> [\mat{B}_1]_{\basis C} = \begin{bmatrix} a\\b\\c\\d \end{bmatrix}</me>
+          en los ons op vir <m>a,b,c,d</m>.
+          Daardie vergelyking is ekwivalent aan
+          <me> \mat{B}_1 = a\mat{C}_1+b\mat{C}_2+c\mat{C}_3+d\mat{C}_4</me>.
+          As ons nou elkeen van die vier inskrywings aan die linkerkant gelyk stel aan die ooreenkomstige inskrywing aan die regterkant, kry ons die stelsel
+          <md>
+            <mrow>1 \amp = a+b</mrow>
+            <mrow>0 \amp = a-b</mrow>
+            <mrow>0 \amp = c+d</mrow>
+            <mrow>1 \amp = c-d</mrow>
+          </md>.
+          Dit het die oplossing
+          <md> <mrow> a=b=c=1/2\amp\amp d=-1/2</mrow></md>
+          en dus is
+          <me> [\mat{B}_1]_{\basis C} = \begin{bmatrix} 1/2 \\1/2 \\1/2 \\ -1/2 \end{bmatrix}</me>.
+        </p>
+        <p>
+          Soortgelyk, as ons <m>[\mat{B}_2]_{\basis C}</m> wil bereken, moet ons die stelsel
+          <md>
+            <mrow>1 \amp = a+b</mrow>
+            <mrow>0 \amp = a-b</mrow>
+            <mrow>0 \amp = c+d</mrow>
+            <mrow>-1 \amp = c-d</mrow>
+          </md> oplos.
+          Dit het die oplossing
+          <md> <mrow> a=b=d=1/2\amp\amp c=-1/2</mrow></md>
+          en dus is
+          <me> [\mat{B}_1]_{\basis C} = \begin{bmatrix} 1/2 \\1/2 \\-1/2 \\ 1/2 \end{bmatrix}</me>.
+        </p>
+        <p>
+          Op dieselfde wyse kry ons
+          <me> [\mat{B}_3]_{\basis C} = \begin{bmatrix} 1 \\0 \\1 \\ 0 \end{bmatrix}\quad\text{en}\quad [\mat{B}_1]_{\basis C} = \begin{bmatrix} 1/2 \\-1/2 \\-1/2 \\ -1/2 \end{bmatrix}</me>.
+          As ons dit saam sit, kry ons
+          <me> \mat{P}_{\basis C\leftarrow \basis B} = \begin{bmatrix}
+            1/2 \amp 1/2\amp 1\amp 1/2\\
+            1/2 \amp 1/2\amp 0\amp -1/2\\
+            1/2 \amp -1/2\amp 1\amp -1/2\\
+            -1/2\amp 1/2\amp 0\amp -1/2
+          \end{bmatrix}</me>
+        </p>
+        <p>
+          Om <m>\mat{P}_{\basis B\leftarrow \basis C}</m> te bereken, moet ons elkeen van die matrikse <m>\mat{C}_1,\ldots, \mat{C}_4</m> se koördinaatvektore m.b.t. <m>\basis B</m> uitwerk.
+          Dit volg dieselfde prosedure as hier bo, behalwe dat die stelsels anders lyk.
+          Die resultaat is
+          <me> \mat{P}_{\basis B\leftarrow \basis C} = \begin{bmatrix}
+            0   \amp 1    \amp 0    \amp -1  \\
+            1/2 \amp 1/2  \amp -1/2 \amp 1/2 \\
+            1/2 \amp -1/2 \amp 1/2  \amp 1/2 \\
+            1/2 \amp -1/2 \amp -1/2 \amp -1/2
+          \end{bmatrix}
+          </me>.
+        </p>
+      </solution>
     </exercise>
 
   <exercise>
@@ -440,12 +522,96 @@
       </ol>
       </p>
     </statement>
+    <answer>
+      <p>
+        <ol label="a">
+          <li>
+            <me> \mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} 11\amp 30 \\ 7\amp 19\end{bmatrix} </me>
+          </li>
+          <li>
+            <me> \mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} -19 \amp 35 \\ 7 \amp -11 \end{bmatix}</me>
+          </li>
+          <li>
+            <me> \mat{P}_{\basis B'\leftarrow\basis B} = \begin{bmatrix} 3\amp 0\amp 8 \\ -17\amp 4\amp -43 \\ -1\amp 1\amp -2\end{bmatrix}</me>
+          </li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <ol label="a">
+          <li>
+            Ons moet die koördinaatvektore van <m>(1,3)</m> en <m>(3,8)</m> met betrekking tot <m>\basis B'</m> uitwerk.
+            Kom ons stel
+            <me> [(1,3)]_{\basis B'} = \begin{bmatrix} a\\b \end{bmatrix}</me>.
+            Dit beteken dat
+            <me> (1,3) = a(2,-1) + b(-3,2)</me>
+            wat lei tot die stelsel
+            <md>
+              <mrow> 1\amp = 2a - 3b</mrow>
+              <mrow> 3\amp = -a+2b</mrow>
+            </md>
+            met die oplossing <m>a=11</m>, <m>b=7</m>. Soortgelyk, stel ons nou
+            <me>[(3,8)]_{\basis B'} = \begin{bmatrix} a\\b \end{bmatrix}</me>
+            wat lei tot die stelsel
+            <md>
+              <mrow> 3\amp = 2a - 3b</mrow>
+              <mrow> 8\amp = -a+2b</mrow>
+            </md>
+            en die oplossing <m>a=30</m>, <m>b=19</m>. Dus is
+            <me> \mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} 11\amp 30 \\ 7\amp 19\end{bmatrix} </me>.
+          </li>
+          <li>
+            Soortgelyk aan (a), wil ons die vektore <m>(2,-1)</m> en <m>(-3,2)</m> skryf as lineêre kombinasies van die basiselemente <m>(1,3)</m>, <m>(3,8)</m> van <m>\basis B'</m>. Stel eers
+            <me>[(2,-1)]_{\basis B'} = \begin{bmatrix} a\\b \end{bmatrix}</me>,
+            met ander woorde
+            <md>
+              <mrow>2\amp = a+3b</mrow>
+              <mrow>-1\amp = 3a+8b</mrow>
+            </md>
+            met die oplossing <m>a=-19</m>, <m>b=7</m>. Dus is
+            <me> [(2,-1)] = \begin{bmatrix} -19 \\ 7 \end{bmatrix}</me>.
+            Op soortgelyke wyse vind ons dat
+            <me>[(-3,2)] = \begin{bmatrix} 35 \\ -11 \end{bmatrix}</me>.
+            Dus is
+            <me> \mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} -19 \amp 35 \\ 7 \amp -11 \end{bmatix}</me>.
+          </li>
+          <li>
+            Ons moet elkeen van <m>x</m>, <m>2x^2-x+3</m> en <m>x^2+2x+2</m> skryf as 'n lineêre kombinasie van die vorm
+            <me> a(1+5x^2)+b(x^2)+c(3-x-2x^2)</me>.
+            Vir <m>x</m> lei dit tot die stelsel
+            <md>
+              <mrow>0 \amp = a+3c</mrow>
+              <mrow>1 \amp = -c</mrow>
+              <mrow>0 \amp = 5a+b-2c</mrow>
+            </md>
+            met die oplossing <m>a=3</m>, <m>b=-17</m>, <m>c=-1</m>.
+            Vir <m>2x^2-x+3</m> lei dit tot die stelsel
+            <md>
+              <mrow>3 \amp = a+3c</mrow>
+              <mrow>-1 \amp = -c</mrow>
+              <mrow>2 \amp = 5a+b-2c</mrow>
+            </md>
+            met die oplossing <m>a=0</m>, <m>b=4</m>, <m>c=1</m>.
+            Vir <m>x^2+2x+2</m> lei dit tot die stelsel
+            <md>
+              <mrow>2 \amp = a+3c</mrow>
+              <mrow>2 \amp = -c</mrow>
+              <mrow>1 \amp = 5a+b-2c</mrow>
+            </md>
+            met die oplossing <m>a=8</m>, <m>b=-43</m>, <m>c=-2</m>.
+            Dus is
+            <me> \mat{P}_{\basis B'\leftarrow\basis B} = \begin{bmatrix} 3\amp 0\amp 8 \\ -17\amp 4\amp -43 \\ -1\amp 1\amp -2\end{bmatrix}</me>.
+          </li>
+        </ol>
+      </p>
+    </solution>
   </exercise>
 
     <exercise>
       <statement>
         <p>
-          Bereken die basisomskakelingmatriks
+          Bereken die basisomskakelingsmatriks
           <m>\mat{P}_{\basis{B} \leftarrow \basis{S}}</m> van die standaardbasis
           <me>
             \basis{S} = \left\{ 1, \cos x, \sin x, \cos 2x, \sin 2x \right\}
@@ -456,6 +622,24 @@
           </me>.
         </p>
       </statement>
+      <hint>
+        <p>
+          <m>\cos (2x) = 2\cos^2 x -1</m> en <m>\sin (2x) = 2\sin x\cos x</m>.
+        </p>
+      </hint>
+      <answer>
+        <p>
+          <me>\mat{P}_{\basis{B} \leftarrow \basis{S}} =
+          \begin{bmatrix}
+            1 \amp 0 \amp 0 \amp -1 \amp 0\\
+            0 \amp 1 \amp 0 \amp 0 \amp  0\\
+            0 \amp 0 \amp 1 \amp 0 \amp  0\\
+            0 \amp 0 \amp 0 \amp 2 \amp  0\\
+            0 \amp 0 \amp 0 \amp 0 \amp  2
+          \end{bmatrix}
+          </me>
+        </p>
+      </answer>
     </exercise>
 
   <exercise>
@@ -569,34 +753,104 @@
       </p></li>
     </ol>
     </statement>
+    <hint>
+      <p>
+        Skryf <m>\ve w</m> as lineêre kombinasies van die vektore <m>\ve b_1, \ve b_2</m> (vir (a)) en van <m>\ve c_1,\ve c_2</m> (vir (b).
+        Skryf dan die vektore <m>\ve b_1,\ve b_2</m> as lineêre kombinasies van <m>\ve c_1,\ve c_2</m> (vir (c)).
+      </p>
+    </hint>
+    <answer>
+      <p>
+        <ol label="a" cols="3">
+          <li>
+            <m>[\ve w]_{\basis B} = \cvector{1\\-1}</m>
+          </li>
+          <li>
+            <m>[\ve w]_{\basis B} = \cvector{1\\-2}</m>
+          </li>
+          <li>
+            <m>\mat{P}_{\basis C\leftarrow \basis B} =
+              \begin{bmatrix} 1.5 \amp 0.5\\ -0.5 \amp 1.5 \end{bmatrix}
+            </m>
+          </li>
+        </ol>
+      </p>
+    </answer>
   </exercise>
 
   <exercise>
     <statement>
       <p>
-        In elkeen van die volgende probleme, word daar een koördinaatvektor en 'n bassisomskakelingsmatriks gegee en word jy gevra om die ander koördinaatvektor te vind:
+        In elkeen van die volgende probleme, word daar een koördinaatvektor en 'n basisomskakelingsmatriks gegee en word jy gevra om die ander koördinaatvektor te vind:
       <ol label="(a)">
         <li>
           Laat <m>V=\Row_2</m>,
           <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 3\amp 2\\1\amp 2\end{bmatrix}</m> en
-          <m>[v]_{\basis{B}}=\begin{bmatrix}1\\-2 \end{bmatrix}</m>.
-          Vind <m>[v]_{\basis{B}'}</m>.
+          <m>[\ve v]_{\basis{B}}=\begin{bmatrix}1\\-2 \end{bmatrix}</m>.
+          Vind <m>[\ve v]_{\basis{B}'}</m>.
         </li>
         <li>
           Laat <m>V=\Row_3</m>,
           <m>P_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 3\amp 2\amp 1\\1\amp 2\amp 2\\2\amp 0\amp 1\end{bmatrix}</m> en
-          <m>[v]_{\basis{B}}=\begin{bmatrix}1\\-2\\-1 \end{bmatrix}</m>.
-          Vind <m>[v]_{\basis{B}'}</m>.
+          <m>[\ve v]_{\basis{B}}=\begin{bmatrix}1\\-2\\-1 \end{bmatrix}</m>.
+          Vind <m>[\ve v]_{\basis{B}'}</m>.
         </li>
         <li>
           Laat <m>V=\Row_2</m>,
           <m>\mat{P}_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 2 \amp 2\\1\amp 2\end{bmatrix}</m>
-          en <m>[v]_{\basis{B}'}=\begin{bmatrix}1\\-2 \end{bmatrix}</m>.
-          Vind <m>[v]_{\basis{B}}</m>.
+          en <m>[\ve v]_{\basis{B}'}=\begin{bmatrix}1\\-2 \end{bmatrix}</m>.
+          Vind <m>[\ve v]_{\basis{B}}</m>.
         </li>
       </ol>
       </p>
     </statement>
+    <answer>
+      <p>
+        <ol label="a" cols="3">
+          <li> <m>\begin{bmatrix}-1 \\ -3\end{bmatrix}</m></li>
+          <li><m>\begin{bmatrix}-2 \\ -5 \\ 1\end{bmatrix}</m></li>
+          <li><m>\begin{bmatrix} 3\\ -5/2\end{bmatrix}</m></li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <ol label="a">
+          <li>
+            Uit <xref ref="change-of-basis-thm" /> kry ons
+            <md>
+              <mrow>
+              [\ve v]_{\basis B'} \amp = \mat{P}_{\basis B'\leftarrow \basis B}[\ve v]_{\basis B}</mrow>
+              <mrow>
+              \amp = \begin{bmatrix} 3\amp 2\\1\amp 2\end{bmatrix}\begin{bmatrix}1\\-2 \end{bmatrix}
+              = \begin{bmatrix}-1 \\ -3\end{bmatrix} </mrow>
+            </md>
+          </li>
+          <li>
+            Weereens, uit <xref ref="change-of-basis-thm" /> kry ons
+            <md>
+              <mrow>
+              [\ve v]_{\basis B'} \amp = \mat{P}_{\basis B'\leftarrow \basis B}[\ve v]_{\basis B}</mrow>
+              <mrow>
+              \amp = \begin{bmatrix} 3\amp 2\amp 1\\1\amp 2\amp 2\\2\amp 0\amp 1\end{bmatrix}\begin{bmatrix}1\\-2\\-1  \end{bmatrix}
+              = \begin{bmatrix}-2 \\ -5 \\ 1\end{bmatrix} </mrow>
+            </md>
+          </li>
+          <li>
+            Hierdie keer moet ons bietjie meer versigtig wees. Ons sal weer <xref ref="change-of-basis-thm" /> toepas, maar hierdie keer gee dit
+            <me> \begin{bmatrix}1\\-2 \end{bmatrix} =  \begin{bmatrix} 2 \amp 2\\1\amp 2\end{bmatrix} [\ve v]_{\basis B}</me>.
+            Ons kan dus nie net matriksvermenigvuldiging toepas nie.
+            Ons moet eers die inverse van
+            <me>\mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} 2 \amp 2\\1\amp 2\end{bmatrix}</me> kry.
+            Die inverse is
+            <me> \frac{1}{2}\begin{bmatrix} 2\amp -2\\ -1\amp 2\end{bmatrix} = \begin{bmatrix} 1\amp -1\\ -1/2 \amp 1\end{bmatrix}</me>
+            en dus is
+            <me> [\ve v]_{\basis B} = \begin{bmatrix} 1\amp -1\\ -1/2 \amp 1\end{bmatrix}\begin{bmatrix}1\\-2 \end{bmatrix} = \begin{bmatrix} 3\\ -5/2\end{bmatrix}</me>.
+            <em>Opvolg vraag</em>: Sal hierdie metode altyd werk? Met ander woorde is die matriks <m>\mat{P}_{\basis B'\leftarrow\basis B}</m> altyd inverteerbaar?
+          </li>
+        </ol>
+      </p>
+    </solution>
   </exercise>
 
 <exercise>
@@ -614,6 +868,10 @@
       </me>
     </p>
   </statement>
+  <solution>
+    <p>
+    </p>
+  </solution>
 </exercise>
 
   <exercise>
