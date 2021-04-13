@@ -529,7 +529,7 @@
             <me> \mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} 11\amp 30 \\ 7\amp 19\end{bmatrix} </me>
           </li>
           <li>
-            <me> \mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} -19 \amp 35 \\ 7 \amp -11 \end{bmatix}</me>
+            <me> \mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} -19 \amp 35 \\ 7 \amp -11 \end{bmatrix}</me>
           </li>
           <li>
             <me> \mat{P}_{\basis B'\leftarrow\basis B} = \begin{bmatrix} 3\amp 0\amp 8 \\ -17\amp 4\amp -43 \\ -1\amp 1\amp -2\end{bmatrix}</me>
@@ -574,7 +574,7 @@
             Similarly, we find that
             <me>[(-3,2)] = \begin{bmatrix} 35 \\ -11 \end{bmatrix}</me>.
             Thus
-            <me> \mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} -19 \amp 35 \\ 7 \amp -11 \end{bmatix}</me>.
+            <me> \mat{P}_{\basis B'\leftarrow \basis B} = \begin{bmatrix} -19 \amp 35 \\ 7 \amp -11 \end{bmatrix}</me>.
           </li>
           <li>
             We need to write each of <m>x</m>, <m>2x^2-x+3</m> and <m>x^2+2x+2</m> as a linear combination of the form
@@ -862,12 +862,30 @@
         <mrow> \mathcal B = \bopen (2,1,1) , (1,1,1), (0,2,1) \bclose </mrow>
         <mrow> \mathcal C= \bopen (1,2,3),(0,1,0),(1,0,1) \bclose</mrow>
       </md>.
-      Compute <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}, \mat{P}_{\basis{B} \leftarrow \basis{A}}, \mat{P}_{\basis{C} \leftarrow \basis{A}}</m> and verify the equation
+      Compute <m>\mat{P}_{\basis{A} \leftarrow \basis{B}}, \mat{P}_{\basis{A} \leftarrow \basis{C}}, \mat{P}_{\basis{B} \leftarrow \basis{C}}</m> and verify the equation
       <me>
-        \mat{P}_{\basis{C} \leftarrow \basis{B}}  \mat{P}_{\basis{B} \leftarrow \basis{A}} =  \mat{P}_{\basis{C} \leftarrow \basis{A}}.
+        \mat{P}_{\basis{A} \leftarrow \basis{B}}  \mat{P}_{\basis{B} \leftarrow \basis{C}} =  \mat{P}_{\basis{A} \leftarrow \basis{C}}.
       </me>
     </p>
   </statement>
+  <!-- TO BE TRANSLATED AND COMPLETED!!
+  <solution>
+    <p>
+      Die twee matrikse <m>\mat{P}_{\basis{A} \leftarrow \basis{B}}</m> en <m>\mat{P}_{\basis{A} \leftarrow \basis{C}}</m> is maklik om neer te skryf omdat 'n mens onmiddellik die elemente van <m>\basis B</m> en <m>\basis C</m> kan skryf as lineêre kombinasies van die elemente van <m>\basis A</m>:
+      <me> \mat{P}_{\basis{A} \leftarrow \basis{B}} =
+      \begin{bmatrix}
+        2\amp 1\amp 0 \\
+        1\amp 1\amp 2 \\
+        1\amp 1\ampm 1
+      \end{bmatrix}\qquad \mat{P}_{\basis{A} \leftarrow \basis{C}} =
+      \begin{bmatrix}
+        1\amp 0\amp 1\\
+        2\amp 1\amp 0\\
+        3\amp 0\amp 1
+      \end{bmatrix}
+      </me>
+    </p>
+  </solution> -->
 </exercise>
 
   <exercise>
@@ -946,6 +964,9 @@
 
  </exercises>
 
+<solutions inline="statement answer solution">
+  <title> Answers and solutions to Checkpoints in this section</title>
+</solutions>
 
 </section>
 

@@ -1269,7 +1269,7 @@
 
 <exercises xml:id="ch2sec3exercises">
 
-    <exercise xml:id="exercise_for_new_basis">
+    <exercise xml:id="exercise_for_new_basis-2">
       <statement>
         <p>
           Sif die lys vektore
@@ -1699,7 +1699,9 @@
 
   </exercises>
 
-
+<solutions inline="statement answer solution">
+  <title> Antwoorde en Oplossings vir Kontrolepunte in hierdie afdeling</title>
+</solutions>
 
 </section>
 

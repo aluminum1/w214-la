@@ -162,7 +162,7 @@
 
           <li xml:id="lin_comb_other_vec">
             <em>(Lineêre kombinasie van ander vektore)</em>
-            Een van die vektore in the lys <m>\basis{B}</m> is 'n lineêre kombinasie van die ander vektore in <m>\basis{B}</m>.
+            Een van die vektore in die lys <m>\basis{B}</m> is 'n lineêre kombinasie van die ander vektore in <m>\basis{B}</m>.
           </li>
 
           <li xml:id="lin_comb_prec_vec">
@@ -539,7 +539,7 @@
     </solution>
   </exercise>
 
-  <exercise xml:id="exercise-span-omission">
+  <exercise xml:id="exercise-span-addition">
     <statement>
       <p>
         Laat <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> 'n lys vektore in 'n vektorruimte  <m>V</m> wees. Veronderstel dat <m>\basis{S}</m> vir <m>V</m> onderspan. Veronderstel dat <m>w</m> 'n ander vektor in <m>V</m> is. Bewys dat die lys vektore <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> ook vir <m>V</m> onderspan.
@@ -642,7 +642,7 @@
 </exercises>
 
 <solutions inline="statement answer solution">
-  <title> Answers and solutions to Checkpoints in this section</title>
+  <title> Antwoorde en Oplossings vir Kontrolepunte in hierdie afdeling</title>
 </solutions>
 
 </section>

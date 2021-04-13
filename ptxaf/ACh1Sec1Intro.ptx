@@ -460,7 +460,7 @@
         om 'n nuwe element <m>k \cdot \ve{a} \in A</m> te kry deur
         elke komponent van <m>\ve{a}</m> met <m>k</m> te vermenigvuldig:
         <me>
-          \underset{\substack{\text{Multiplying a} \\ \text{vector by a scalar}}}{ \underbrace{k .(a_1, \, a_2)}_{}}\ :=\ \ \underset{\substack{\text{Muliplying two} \\ \text{numbers together}}}{\big(\underbrace{k a_1}_{}\ , \ \underbrace{k a_2}_{}\big)}
+          \underset{\substack{\text{Vermenigvuldig 'n} \\ \text{vektor met 'n skalaar}}}{ \underbrace{k .(a_1, \, a_2)}_{}}\ :=\ \ \underset{\substack{\text{Vermenigvuldig twee} \\ \text{getalle met mekaar}}}{\big(\underbrace{k a_1}_{}\ , \ \underbrace{k a_2}_{}\big)}
         </me>
       </p>
 
@@ -660,6 +660,10 @@
       Kan jy ander reëls identifiseer wat vir al drie versamelings geld?
     </p>
   </subsection>
+
+<solutions inline="statement answer solution">
+  <title> Antwoorde en Oplossings vir Kontrolepunte in hierdie afdeling</title>
+</solutions>
 
 </section>
 

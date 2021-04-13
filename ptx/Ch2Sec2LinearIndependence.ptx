@@ -539,7 +539,7 @@
     </solution>
   </exercise>
 
-  <exercise xml:id="exercise-span-omission">
+  <exercise xml:id="exercise-span-addition">
     <statement>
       <p>
         Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.

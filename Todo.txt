@@ -1,5 +1,7 @@
 To do list:
 
+- Move sifting one section forward to Linear Independence, so that students get hands-on experience with doing that before they need to grapple with the Steinitz Replacement Theorem.
+
 - Do we want to use the Stellenbosch University Brand Colors? If so, here they are
   - brand-maroon: #60223b, RGB(140, 151, 154)
   - brand-gray: #8c979a, RGB(96,34,59)
@@ -9,6 +11,7 @@ To do list:
 
 - Titles for examples? and Exercises?
 - Throughout there are some figures with <caption> tags, but no text. But I think this is ok.
+- Break up solutions to multi-part questions into multiple <solution>s so that if a students wants to view one, they don't automatically open all?
 
 
 - Can the first two lemmas in 1.5 be written using more words? And many others...

@@ -160,8 +160,8 @@
 
     <solution>
       <p>
-        The statement is not true! For example, let <m> \ve p(x) = x + 1 </m>.
-        Then
+        Die bewering is nie waar nie! Laat byvoorbeeld <m> \ve p(x) = x + 1 </m>.
+        Dan is
         <me>
           (A \circ D)(x + 1)  = A(1) = x \neq x + 1.
         </me>
@@ -226,7 +226,9 @@
   </exercise>
 </exercises>
 
-
+<solutions inline="statement answer solution">
+  <title> Antwoorde en Oplossings vir Kontrolepunte in hierdie afdeling</title>
+</solutions>
 
 </section>
 

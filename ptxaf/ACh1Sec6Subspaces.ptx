@@ -125,7 +125,7 @@
         <m>\mathbb{R}^2</m> is 'n deelruimte van <m>\mathbb{R}^2</m>:
       </p>
     <figure xml:id="line-through-origin-R2-example">
-      <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
+      <caption>'n Lyn deur die oorsprong in <m>\mathbb{R}^2</m>.</caption>
       <image width="40%">
         <latex-image>
           <![CDATA[\begin{tikzpicture}
@@ -685,10 +685,10 @@
      </statement>
     </exercise>
 
-    <p>So, by <xref ref="subspace_lem" text="type-global"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
+    <p>So, deur <xref ref="subspace_lem" text="type-global"/>, lei ons af dat <em>die versameling oplossings vir 'n homogene differensiaalvergelyking 'n vektorruimte is</em>.</p>
 
     <example xml:id="first_example_2nd_order_ode_cont">
-      <title>Vervlging van <xref ref="first_example_2nd_order_ode" /></title>
+      <title>Vervolging van <xref ref="first_example_2nd_order_ode" /></title>
       <statement>
         <p> Beskou weer die differensiaalvergelyking van  <xref ref="first_example_2nd_order_ode" />. Ons het gesien dat
         <me>
@@ -758,7 +758,7 @@
     <example> <title>Uitwerk van die algemene oplossing van 'n differensiaalvergelyking m.b.v. SageMath</title>
       <statement>
       <p>
-      Let us use SageMath to find the general solution of the following ordinary differential equation
+      Kom ons gebruik SageMath om die algemene oplossing vir die volgende gewone differensiaalvergelyking te vind:
       <men xml:id="explicit_diff_eq">
     y^{\prime \prime} + 2y^\prime + y = 0.
       </men>
@@ -963,6 +963,9 @@
 </exercisegroup>
 </exercises>
 
+<solutions inline="statement answer solution">
+  <title> Antwoorde en Oplossings vir Kontrolepunte in hierdie afdeling</title>
+</solutions>
 
 
 </section>
