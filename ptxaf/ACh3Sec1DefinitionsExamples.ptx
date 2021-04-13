@@ -1309,6 +1309,16 @@
       Is <m>T</m> 'n lineêre afbeelding? Bewys jou antwoord.
     </p>
   </statement>
+  <solution>
+    <p>
+      Ja. Veronderstel dat <m>f,g</m> twee funksies in <m>V</m> is.
+      Ons moet bevestig dat
+      <me>T(f+g)=(f+g)(1) = f(1)+g(1) = T(f)+T(g)</me>.
+      Maar dit is hoe optelling van funksies in <m>V</m> gedefinieer is.
+      Soortgelyk is <m>T(cf) = (cf)(1) = c(f(1)) = cT(f)</m> per definisie.
+      Dus is <m>T</m> lineêr.
+    </p>
+  </solution>
   </exercise>
 
   <exercise>
@@ -1627,12 +1637,60 @@
     </solution>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="ex:dimension-of-dual">
     <statement>
       <p>
         As <m>V </m> 'n eindig-dimensionele vektorruimte is, vind 'n basis vir <m> \mathcal L(V , \mathbb R) </m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Laat <m>v_1,v_2,\ldots, v_n</m> 'n basis vir <m>V</m> wees.
+        Ons beweer dat die volgende versameling 'n basis vir <m>\mathcal L(V,\mathbb R)</m> vorm:
+        <me> T_1,\ldots, T_n</me>,
+        waar vir enige <m>i\in\{1,2,\ldots, n\}</m> ons
+        <me> T_i(v_j) = \begin{cases} 1 \amp \text{if }i=j\\ 0 \amp \text{if }i\ne j</me> definieer.
+        (So <m>T_3(v_3) = 1</m>, maar <m>T_2(v_1) = 0</m>, ens.)
+        Ons moet bevestig dat dit lineêr onafhanklik is en dat dit vir <m> \mathcal L(V,\mathbb{R})</m> onderspan.
+      </p>
+      <p>
+        Eerstens, om lineêr onafhanklikheid te bewys, veronderstel ons dat daar 'n lineêre verband
+        <me> c_1T_1 + c_2T_2 + \cdots + c_nT_n = 0</me> bestaan.
+        Hier is die nul aan die regterkant die nulvektor in <m>\mathcal{L}(V,\mathbb{R})</m>, met ander woorde die nul-funksie.
+        Dit beteken dat as ons die linerkant by enige <m>v_i</m> uitwerk, moet ons nul kry (omdat die regterkant, die nul-funksie, op nul moet uitwerk).
+        Maar
+        <md>
+          <mrow> (c_1T_1+c_2T_2+\cdots +c_nT_n(v_i) \amp = c_1T_1(v_i) + c_2T(v_i) + \cdots + c_nT_n(v_i) </mrow>
+          <mrow> \amp = c_iT_i(v_i) </mrow>
+          <mrow> \amp = c_i </mrow>
+        </md>,
+        aangesien al die terme <m>T_j(v_i)</m> met <m>i\ne j</m> nul is en <m>T_i(v_i) = 1</m>.
+        Hierdie berekening wys dat die linkerkant op <m>c_i</m> uitwerk, terwyl die regterkant op 0 moet uitwerk
+        Dus is <m>c_i=0</m>.
+        Maar hierdie argument is op enige <m>i</m> van toepassing, so <m>c_1=c_2=\cdots = c_n=0</m>.
+        Dit voltooi die bewys van lineêr onafhanklikheid.
+      </p>
+      <p>
+        Om te bewys dat die vektore <m>T_1,\ldots, T_n</m> vir <m>\mathcal{L}(V,\mathbb{R})</m> onderspan, moet ons wys dat enige lineêre afbeelding <m>T</m>as 'n lineêre kombinasie van hulle geskryf kan word.
+        Uit <xref ref="defining_linear_map_on_basis"/> word enige lineêre afbeelding bepaal deur sy waardes op
+        <me> T(v_1), T(v_2), \ldots, T(v_n)</me>.
+        Aangesien die teikenversameling van <m>T</m> die versameling <m>\mathbb{R}</m> is, is hulle almal reële getalle.
+        Kom ons gebruik die simbole
+        <me> d_1=T(v_1), d_2=T(v_2), \ldots, d_n=T(v_n)</me>
+        vir die waardes van <m>T</m> by elkeen van die vektore <m>v_1,\ldots, v_n</m>.
+        Ons beweer dan dat
+        <me> T = d_1T_1+d_2T_2 + \cdots + d_nT_n</me>.
+        Om hierdie gelykheid van lineêre afbeeldings te wys, is dit genoeg om te wys dat hulle dieselfde waardes gee as ons hulle by <m>v_1,v_2,\ldots, v_n</m> uitwerk.
+        (Dit is weer 'n toepassing van <xref ref="defining_linear_map_on_basis"/>.)
+        Maar, dit word deur die volgende berekening bevestig:
+        <md>
+          <mrow> (d_1T_1+d_2T_2+\cdots + d_nT_n)(v_i) \amp = d_1T_1(v_i) + \cdots + d_nT(v_i)</mrow>
+          <mrow>  \amp = d_iT_i(v_i)</mrow>
+          <mrow>  \amp = d_i </mrow>
+          <mrow> \amp = T(v_i)</mrow>
+        </md>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -1647,6 +1705,23 @@
         as 'n enkele voorwerp te dink wat as die inset vir die afbeelding <m>\phi_{\ve v}</m> gebruik kan word.
       </p>
     </statement>
+    <solution>
+      <p>
+        Laat <m>\ve T, \ve S\in \mathcal{L}(V,\mathbb{R})</m>.
+        <md>
+          <mrow> \varphi_{\ve v}(T+S) \amp = (T+S)(\ve v)\amp \text{Defn. van }\varphi_{\ve v}</mrow>
+          <mrow> \amp = T(\ve v) + S(\ve v)\amp \text{Defn. van }T+S</mrow>
+          <mrow> \amp = \varphi_{\ve v}(T) + \varphi_{\ve v}(S)</mrow>
+        </md>.
+        Soortgelyk is
+        <md>
+          <mrow> \varphi_{\ve v}(cT) \amp = (cT)(\ve v)</mrow>
+          <mrow> \amp = c\cdot T(\ve v)</mrow>
+          <mrow> \amp = c\varphi_{\ve v}(T)</mrow>
+        </md>,
+        so <m>\varphi_{\ve v}</m> is lineêr.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -1668,6 +1743,28 @@
         Bonus: As <m>V</m> eindig-dimensioneel is, bewys dat <m>\Phi</m> 'n isomorfisme is (<xref ref="def-isomorphism" />).
       </p>
     </statement>
+    <solution>
+      <p>
+        Ons moet wys dat <m>\Phi(\ve v+\ve w) = \Phi(\ve v) + \Phi(\ve w)</m>, met ander woorde dat <m>\varphi_{\ve v + \ve w} = \varphi_{\ve v} + \varphi_{\ve w}</m>.
+        Aangesien beide van hulle funksies is, gaan ons wys dat hulle gelyk is deur te wys dat dit dieselfde antwoord gee, maak nie saak waar ons hulle uitwerk nie.
+        Laat <m>T\in W</m> willekeurig wees.
+        Dan is
+        <md>
+          <mrow> \varphi_{\ve v+\ve w}(T) \amp = T(\ve v+\ve w)</mrow>
+          <mrow> \amp = T(\ve v) + T(\ve w)\amp T\text{ is lineêr}</mrow>
+          <mrow> \amp = \varphi_{\ve v}(T) + \varphi_{\ve w}(T)</mrow>
+        </md>.
+        'n Soortgelyke berekening kan gedoen word om te wys dat <m>\varphi_{c\ve v} = c\varphi_{\ve v}</m>.
+      </p>
+      <p>
+        Om te wys dat  <m>\Phi</m> 'n isomorfisme is, wys ons dat  <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim V</m> en dat <m>\Phi</m> injektief is (sien <xref ref="ACh3Sec6InjectiveSurjective" />).
+        Deur <xref ref="ex:dimension-of-dual"/> op <m>V</m> toe te pas, kry ons <m>\Dim W = \Dim V</m> en deur dit op <m>W</m> toe te pas, kry ons <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim W</m>, wat ons eerste punt bewys.
+        Om te wys dat <m>\Phi</m> injektief is, veronderstel dat <m>\Phi(\ve v)</m> vir 'n sekere <m>\ve v\in V</m> die nul-funksie op <m>W</m> is.
+        Dit beteken dat vir enige lineêre afbeelding <m>T</m>, het ons <m>\varphi_{\ve v} = T(\ve v) = 0</m>.
+        Maar as <m>V</m> nie die nul vektorruimte is nie, kan ons altdy ten minste een lineêre afbeelding definieer wat nie nul is by <m>\ve v</m> nie.
+        Dit is omdat ons 'n basis vir <m>V</m> kan kies waarvan <m>\ve v</m> 'n element is en dan vir <m>T</m> definieer deur sy waardes op hierdie basis te spesifiseer, en seker te maak dat <m>T(\ve v) \ne 0</m>.
+      </p>
+    </solution>
   </exercise>
 
 </exercisegroup>

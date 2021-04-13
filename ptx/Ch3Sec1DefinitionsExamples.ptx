@@ -1309,6 +1309,16 @@
       Is <m>T</m> a linear map? Prove your assertion.
     </p>
   </statement>
+  <solution>
+    <p>
+      Yes. Suppose that <m>f,g</m> are two functions in <m>V</m>.
+      We need to verify that
+      <me>T(f+g)=(f+g)(1) = f(1)+g(1) = T(f)+T(g)</me>.
+      But this is addition of functions in <m>V</m> is defined.
+      Similarly, <m>T(cf) = (cf)(1) = c(f(1)) = cT(f)</m> by definition.
+      Thus, <m>T</m> is linear.
+    </p>
+  </solution>
   </exercise>
 
   <exercise>
@@ -1627,12 +1637,60 @@
     </solution>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="ex:dimension-of-dual">
     <statement>
       <p>
         If <m>V </m> is a finite dimensional vector space, find a basis for <m> \mathcal L(V , \mathbb R) </m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Let <m>v_1,v_2,\ldots, v_n</m> be a basis for <m>V</m>.
+        We claim that the following set forms a basis for <m>\mathcal L(V,\mathbb R)</m>:
+        <me> T_1,\ldots, T_n</me>,
+        where for any <m>i\in\{1,2,\ldots, n\}</m> we define
+        <me> T_i(v_j) = \begin{cases} 1 \amp \text{if }i=j\\ 0 \amp \text{if }i\ne j</me>.
+        (So <m>T_3(v_3) = 1</m>, but <m>T_2(v_1) = 0</m>, etc.)
+        We need to check that it is linearly independent and that it spans <m> \mathcal L(V,\mathbb{R})</m>.
+      </p>
+      <p>
+        First, to prove linear independence, suppose that there is some linear relation
+        <me> c_1T_1 + c_2T_2 + \cdots + c_nT_n = 0</me>.
+        Here, the zero on the right, is the zero vector in <m>\mathcal{L}(V,\mathbb{R})</m>, in other words, the zero function.
+        That means that if we evaluate the left hand-side at any <m>v_i</m>, we should get zero (since the right hand-side, the zero function, must evaluate to zero).
+        But
+        <md>
+          <mrow> (c_1T_1+c_2T_2+\cdots +c_nT_n(v_i) \amp = c_1T_1(v_i) + c_2T(v_i) + \cdots + c_nT_n(v_i) </mrow>
+          <mrow> \amp = c_iT_i(v_i) </mrow>
+          <mrow> \amp = c_i </mrow>
+        </md>,
+        since all the terms <m>T_j(v_i)</m> with <m>i\ne j</m> are zero and <m>T_i(v_i) = 1</m>.
+        This calculatation shows that the left hand-side evaluates to <m>c_i</m>, while the right hand-side must evaluate to 0.
+        Thus <m>c_i=0</m>.
+        But this argument applies to all <m>i</m>, so <m>c_1=c_2=\cdots = c_n=0</m>.
+        This finishes the proof of linear independence.
+      </p>
+      <p>
+        To prove that the vectors <m>T_1,\ldots, T_n</m> span <m>\mathcal{L}(V,\mathbb{R})</m>, we need to show that any linear map <m>T</m> can be written as a linear combination of them.
+        By <xref ref="defining_linear_map_on_basis"/> any linear map is determined by the values of
+        <me> T(v_1), T(v_2), \ldots, T(v_n)</me>.
+        Since the codomain of <m>T</m> is <m>\mathbb{R}</m>, these are all real numbers.
+        Let us use the symbols
+        <me> d_1=T(v_1), d_2=T(v_2), \ldots, d_n=T(v_n)</me>
+        for the values of <m>T</m> at each of the vectors <m>v_1,\ldots, v_n</m>.
+        We then claim that
+        <me> T = d_1T_1+d_2T_2 + \cdots + d_nT_n</me>.
+        To show this equality of linear maps, it is enough to show that they give the same values when evaluated at <m>v_1,v_2,\ldots, v_n</m>.
+        (This is another application of <xref ref="defining_linear_map_on_basis"/>.)
+        But, this is verified by the computation
+        <md>
+          <mrow> (d_1T_1+d_2T_2+\cdots + d_nT_n)(v_i) \amp = d_1T_1(v_i) + \cdots + d_nT(v_i)</mrow>
+          <mrow>  \amp = d_iT_i(v_i)</mrow>
+          <mrow>  \amp = d_i </mrow>
+          <mrow> \amp = T(v_i)</mrow>
+        </md>.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -1647,10 +1705,27 @@
         as a single object that can be used as the input to this map <m>\phi_{\ve v}</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Let <m>\ve T, \ve S\in \mathcal{L}(V,\mathbb{R})</m>.
+        <md>
+          <mrow> \varphi_{\ve v}(T+S) \amp = (T+S)(\ve v)\amp \text{Defn. of }\varphi_{\ve v}</mrow>
+          <mrow> \amp = T(\ve v) + S(\ve v)\amp \text{Defn. of }T+S</mrow>
+          <mrow> \amp = \varphi_{\ve v}(T) + \varphi_{\ve v}(S)</mrow>
+        </md>.
+        Similarly
+        <md>
+          <mrow> \varphi_{\ve v}(cT) \amp = (cT)(\ve v)</mrow>
+          <mrow> \amp = c\cdot T(\ve v)</mrow>
+          <mrow> \amp = c\varphi_{\ve v}(T)</mrow>
+        </md>,
+        so <m>\varphi_{\ve v}</m> is linear.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
-    <title> Not for the faint-hearted</title>
+    <title> Challenge!</title>
     <statement>
       <p>
         Again, let <m>V</m> be a vector space.
@@ -1668,6 +1743,28 @@
         Bonus: If <m>V</m> is finite-dimensional, prove that <m>\Phi</m> is an isomorphism (<xref ref="def-isomorphism" />).
       </p>
     </statement>
+    <solution>
+      <p>
+        We need to show that <m>\Phi(\ve v+\ve w) = \Phi(\ve v) + \Phi(\ve w)</m>, in other words that <m>\varphi_{\ve v + \ve w} = \varphi_{\ve v} + \varphi_{\ve w}</m>.
+        Since both of these are functions, we show that they are equal, by showing that wherever we evaluate them, we get the same answer.
+        Let <m>T\in W</m> be arbitrary.
+        Then
+        <md>
+          <mrow> \varphi_{\ve v+\ve w}(T) \amp = T(\ve v+\ve w)</mrow>
+          <mrow> \amp = T(\ve v) + T(\ve w)\amp T\text{ is linear}</mrow>
+          <mrow> \amp = \varphi_{\ve v}(T) + \varphi_{\ve w}(T)</mrow>
+        </md>.
+        A similar computation can be done to show that <m>\varphi_{c\ve v} = c\varphi_{\ve v}</m>.
+      </p>
+      <p>
+        To show that <m>\Phi</m> is an isomorphism, we show that <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim V</m> and that <m>\Phi</m> is injective (see <xref ref="ACh3Sec6InjectiveSurjective" />).
+        By applying <xref ref="ex:dimension-of-dual"/> to <m>V</m> we have <m>\Dim W = \Dim V</m> and by applying it to <m>W</m> we have <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim W</m>, which proved our first point.
+        To show that <m>\Phi</m> is injective, assume that <m>\Phi(\ve v)</m> is the zero function on <m>W</m> for some <m>\ve v\in V</m>.
+        This means that for any linear map <m>T</m>, we have <m>\varphi_{\ve v} = T(\ve v) = 0</m>.
+        But if <m>V</m> is not the zero vector space, we can always define at least one linear map that is not zero at <m>\ve v</m>.
+        This is because, we can choose some basis for <m>V</m> that has <m>\ve v</m> as one of its elements and define <m>T</m> by specifying its values on this basis, making sure that <m>T(\ve v) \ne 0</m>.
+      </p>
+    </solution>
   </exercise>
 
 </exercisegroup>

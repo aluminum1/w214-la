@@ -1,6 +1,6 @@
 To do list:
 
-- Move sifting one section forward to Linear Independence, so that students get hands-on experience with doing that before they need to grapple with the Steinitz Replacement Theorem.
+
 
 - Do we want to use the Stellenbosch University Brand Colors? If so, here they are
   - brand-maroon: #60223b, RGB(140, 151, 154)
@@ -15,6 +15,7 @@ To do list:
 
 
 - Can the first two lemmas in 1.5 be written using more words? And many others...
+- Move sifting one section forward to Linear Independence, so that students get hands-on experience with doing that before they need to grapple with the Steinitz Replacement Theorem.
 - Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
 - First person to first person plural? (I to we)
 - Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.
