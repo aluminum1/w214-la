@@ -1649,7 +1649,7 @@
         Ons beweer dat die volgende versameling 'n basis vir <m>\mathcal L(V,\mathbb R)</m> vorm:
         <me> T_1,\ldots, T_n</me>,
         waar vir enige <m>i\in\{1,2,\ldots, n\}</m> ons
-        <me> T_i(v_j) = \begin{cases} 1 \amp \text{if }i=j\\ 0 \amp \text{if }i\ne j</me> definieer.
+        <me> T_i(v_j) = \begin{cases} 1 \amp \text{if }i=j\\ 0 \amp \text{if }i\ne j \end{cases}</me> definieer.
         (So <m>T_3(v_3) = 1</m>, maar <m>T_2(v_1) = 0</m>, ens.)
         Ons moet bevestig dat dit lineêr onafhanklik is en dat dit vir <m> \mathcal L(V,\mathbb{R})</m> onderspan.
       </p>

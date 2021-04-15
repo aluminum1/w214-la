@@ -116,7 +116,7 @@
 
       solve([a1 - 3*a2 + a3 - a4 == -1,
             a2 + a3 + a4 == 0,
-            a1 + a3 - a4 == 1],
+            a1 + a3 + a4 == 1],
             [a1, a2, a3, a4])
       </input>
 
@@ -125,7 +125,8 @@
       Op my rekenaar is die uitset:
     </p>
 
-    <p> <c> [[a1 == 2*r1 + 2/3, a2 == (2/3), a3 == -r1 + 1/3, a4 == r1]] </c> </p>
+    <p> <c> [[a1 == -2/3*r1 + 5/3, a2 == -2/3*r1 + 2/3, a3 == -1/3*r1 - 2/3, a4 == r1]]
+ </c> </p>
 
     <p>
       Hier moet <c>r1</c> en <c>r2</c> as vrye parameters interpreteer word. Ek gaan hulle <m>s</m> en <m>t</m> noem, want dis wat ons gewoonlik gebruik! Dus het die stelsel <xref first="sim_lin_eqns_second_span_1ex" last="sim_lin_eqns_second_span_4ex"/>  <em>oneindig</em> baie oplossings, geparametriseer deur twee vrye veranderlikes <m>s</m> en <m>t</m>. In besonder bestaan daar <em>ten minste een</em> oplossing. Byvoorbeeld, as ons <m>s=2</m> en <m>t = 1</m> neem (heeltemal lukrake keuse!), kry ons die volgende oplossing:

@@ -1649,7 +1649,7 @@
         We claim that the following set forms a basis for <m>\mathcal L(V,\mathbb R)</m>:
         <me> T_1,\ldots, T_n</me>,
         where for any <m>i\in\{1,2,\ldots, n\}</m> we define
-        <me> T_i(v_j) = \begin{cases} 1 \amp \text{if }i=j\\ 0 \amp \text{if }i\ne j</me>.
+        <me> T_i(v_j) = \begin{cases} 1 \amp \text{if }i=j\\ 0 \amp \text{if }i\ne j \end{cases}</me>.
         (So <m>T_3(v_3) = 1</m>, but <m>T_2(v_1) = 0</m>, etc.)
         We need to check that it is linearly independent and that it spans <m> \mathcal L(V,\mathbb{R})</m>.
       </p>
