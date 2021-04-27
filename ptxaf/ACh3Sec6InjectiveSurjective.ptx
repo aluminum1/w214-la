@@ -2,6 +2,14 @@
 
 <section xml:id="ACh3Sec6InjectiveSurjective">
   <title>Injektiewe en surjektiewe lineêre afbeeldings</title>
+
+  <objectives>
+    <ul>
+      <li>Vind maniere om injektiwiteit en surjektiwiteit in terme van rang en nulheidsgraad te studeer.</li>
+      <li>Vind verwantskap tussen injektiwiteit en surjektiwiteit met isomorfismes.</li>
+    </ul>
+  </objectives>
+
   <definition>
     <statement>
       <p>

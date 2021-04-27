@@ -2,6 +2,14 @@
 
 <section xml:id="Ch2Sec2LinearIndependence">
   <title>Linear independence</title>
+
+  <objectives>
+    <ul>
+      <li>When can we remove a vector from a list and still span the same vector space as the original list?</li>
+      <li>Learn the <em>sifting algorithm</em> to remove vectors that do not add to the span.</li>
+    </ul>
+  </objectives>
+
   <definition xml:id="defn_of_linear_ind">
     <statement>
       <p>

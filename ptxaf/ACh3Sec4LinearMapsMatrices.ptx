@@ -2,6 +2,14 @@
 
 <section xml:id="ACh3Sec4LinearMapsMatrices">
   <title>Lineêre afbeeldings en matrikse</title>
+
+  <objectives>
+    <ul>
+      <li>Vind 'n manier om 'n lineêre afbeelding op 'n effektiewe manier voor te stel.</li>
+      <li>Vind verbande tussen die matrikse wat ooreenstem met saamgesteldes en inverses van lineêre afbeeldings.</li>
+    </ul>
+  </objectives>
+
   <definition xml:id="matrix_of_linear_map_defn">
     <statement>
       <p>

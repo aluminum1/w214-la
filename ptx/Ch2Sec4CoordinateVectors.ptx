@@ -1,8 +1,12 @@
 <section xml:id="Ch2Sec4CoordinateVectors">
   <title>Coordinate vectors</title>
-    <p>
-      There is a more direct way to think about a basis of a vector space.
-    </p>
+
+    <objectives>
+      <ul>
+        <li>Relate any vector in any vector space (no matter what its elements are) with a column vector in some <m>\mathbb{R}^n</m>.</li>
+      </ul>
+    </objectives>
+
 <!--
     <figure>
       <caption>Video recording for <xref ref="prop_bases_give_coordinates"/> and proof.</caption>
@@ -141,7 +145,7 @@
         be a basis for a vector space <m>V</m>, and let <m>\ve{v} \in V</m>.
         Write
         <me>
-          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + \ve{a}_n \ve{b}_n \,
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n
         </me>.
       </p>
 

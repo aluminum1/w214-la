@@ -1,8 +1,12 @@
 <section xml:id="ACh2Sec4CoordinateVectors">
   <title>Koördinaatvektore</title>
-    <p>
-      Daar is 'n meer direkte manier om oor 'n basis te dink.
-    </p>
+
+    <objectives>
+      <ul>
+        <li>Gee 'n verwantskap tussen enige vektor in enige vektorruimte (maak nie saak hoe sy elemente lyk nie) en 'n kolomvektor in <m>\mathbb{R}^n</m>.</li>
+      </ul>
+    </objectives>
+
 <!--
     <figure>
       <caption>Video recording for <xref ref="prop_bases_give_coordinates"/> and proof.</caption>
@@ -141,7 +145,7 @@
         'n basis vir vektorruimte <m>V</m> wees, en laat <m>\ve{v}\in V</m>.
         Skryf
         <me>
-          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + \ve{a}_n \ve{b}_n
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n
         </me>.
       </p>
 

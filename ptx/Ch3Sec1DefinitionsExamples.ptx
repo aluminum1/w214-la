@@ -3,6 +3,13 @@
 <section xml:id="Ch3Sec1DefinitionsExamples">
   <title>Definitions and Examples</title>
 
+  <objectives>
+    <ul>
+      <li>Define linear maps, a way of translating information between two vector spaces.</li>
+      <li>Discuss many examples of linear maps.</li>
+    </ul>
+  </objectives>
+
 <subsection>
   <title>Definition of a linear map</title>
 <!--
@@ -1637,7 +1644,7 @@
     </solution>
   </exercise>
 
-  <exercise xml:id="ex:dimension-of-dual">
+  <exercise xml:id="ex-dimension-of-dual">
     <statement>
       <p>
         If <m>V </m> is a finite dimensional vector space, find a basis for <m> \mathcal L(V , \mathbb R) </m>.
@@ -1757,8 +1764,8 @@
         A similar computation can be done to show that <m>\varphi_{c\ve v} = c\varphi_{\ve v}</m>.
       </p>
       <p>
-        To show that <m>\Phi</m> is an isomorphism, we show that <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim V</m> and that <m>\Phi</m> is injective (see <xref ref="ACh3Sec6InjectiveSurjective" />).
-        By applying <xref ref="ex:dimension-of-dual"/> to <m>V</m> we have <m>\Dim W = \Dim V</m> and by applying it to <m>W</m> we have <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim W</m>, which proved our first point.
+        To show that <m>\Phi</m> is an isomorphism, we show that <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim V</m> and that <m>\Phi</m> is injective (see <xref ref="Ch3Sec6InjectiveSurjective" />).
+        By applying <xref ref="ex-dimension-of-dual"/> to <m>V</m> we have <m>\Dim W = \Dim V</m> and by applying it to <m>W</m> we have <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim W</m>, which proved our first point.
         To show that <m>\Phi</m> is injective, assume that <m>\Phi(\ve v)</m> is the zero function on <m>W</m> for some <m>\ve v\in V</m>.
         This means that for any linear map <m>T</m>, we have <m>\varphi_{\ve v} = T(\ve v) = 0</m>.
         But if <m>V</m> is not the zero vector space, we can always define at least one linear map that is not zero at <m>\ve v</m>.

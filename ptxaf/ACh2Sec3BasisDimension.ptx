@@ -1,5 +1,14 @@
 <section xml:id="ACh2Sec3BasisDimension">
   <title>Basis en dimensie</title>
+
+  <objectives>
+    <ul>
+      <li>Definieer die begrip van dimensie om 'n manier te gee om die <em>grootte</em> van 'n vektorruimte te studeer.</li>
+      <li>Studeer 'n paar stellings wat bevestig dat hierdie definisie saamstem met hoe ons dimensie intuitief verstaan.</li>
+      <li>Gee 'n algoritme om basisse vir sekere vektorruimtes te bereken.</li>
+    </ul>
+  </objectives>
+
   <introduction>
     <p>
       In hierdie afdeling introduseer ons die begrippe van:

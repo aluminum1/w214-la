@@ -2,6 +2,14 @@
 
 <section xml:id="ACh2Sec2LinearIndependence">
   <title>Lineêre onafhanklikheid</title>
+
+  <objectives>
+    <ul>
+      <li>Wanneer kan ons 'n vektor uit 'n lys verwyder en nogsteeds dieselfde vektorruimte onderspan as die oorspronklike lys?</li>
+      <li>Leer van die <em>sif-algoritme</em> om vektore te verwyder wat nie tot die span bydra nie.</li>
+    </ul>
+  </objectives>
+
   <definition xml:id="defn_of_linear_ind">
     <statement>
       <p>

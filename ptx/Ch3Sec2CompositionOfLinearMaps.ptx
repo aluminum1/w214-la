@@ -2,6 +2,14 @@
 
 <section xml:id="Ch3Sec2CompositionOfLinearMaps">
   <title>Composition of linear maps</title>
+
+  <objectives>
+    <ul>
+      <li>Reminder of what composite functions are.</li>
+      <li>How to compute the composite of two linear maps.</li>
+    </ul>
+  </objectives>
+
   <definition>
     <statement>
       <p>

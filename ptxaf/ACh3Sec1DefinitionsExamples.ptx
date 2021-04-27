@@ -3,6 +3,13 @@
 <section xml:id="ACh3Sec1DefinitionsExamples">
   <title>Definisie en Voorbeelde</title>
 
+  <objectives>
+    <ul>
+      <li>Definieer lineêre afbeeldings, 'n manier om inligting tussen twee vektorruimtes te vertaal.</li>
+      <li>Bespreek baie voorbeelde van lineêre afbeeldings.</li>
+    </ul>
+  </objectives>
+
 <subsection>
   <title>Definisie van 'n lineêre afbeelding</title>
 <!--
@@ -1637,7 +1644,7 @@
     </solution>
   </exercise>
 
-  <exercise xml:id="ex:dimension-of-dual">
+  <exercise xml:id="ex-dimension-of-dual">
     <statement>
       <p>
         As <m>V </m> 'n eindig-dimensionele vektorruimte is, vind 'n basis vir <m> \mathcal L(V , \mathbb R) </m>.
@@ -1758,7 +1765,7 @@
       </p>
       <p>
         Om te wys dat  <m>\Phi</m> 'n isomorfisme is, wys ons dat  <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim V</m> en dat <m>\Phi</m> injektief is (sien <xref ref="ACh3Sec6InjectiveSurjective" />).
-        Deur <xref ref="ex:dimension-of-dual"/> op <m>V</m> toe te pas, kry ons <m>\Dim W = \Dim V</m> en deur dit op <m>W</m> toe te pas, kry ons <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim W</m>, wat ons eerste punt bewys.
+        Deur <xref ref="ex-dimension-of-dual"/> op <m>V</m> toe te pas, kry ons <m>\Dim W = \Dim V</m> en deur dit op <m>W</m> toe te pas, kry ons <m>\Dim \mathcal{L}(W,\mathbb{R}) = \Dim W</m>, wat ons eerste punt bewys.
         Om te wys dat <m>\Phi</m> injektief is, veronderstel dat <m>\Phi(\ve v)</m> vir 'n sekere <m>\ve v\in V</m> die nul-funksie op <m>W</m> is.
         Dit beteken dat vir enige lineêre afbeelding <m>T</m>, het ons <m>\varphi_{\ve v} = T(\ve v) = 0</m>.
         Maar as <m>V</m> nie die nul vektorruimte is nie, kan ons altdy ten minste een lineêre afbeelding definieer wat nie nul is by <m>\ve v</m> nie.

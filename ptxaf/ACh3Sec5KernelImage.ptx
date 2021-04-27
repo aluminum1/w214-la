@@ -3,6 +3,14 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ACh3Sec5KernelRange">
   <title>Kern en Beeld 'n Lineêre Afbeelding</title>
 
+  <objectives>
+    <ul>
+      <li>Veralgemeen die begrippe van wortel en waardeversameling na lineêre afbeeldings en wys dat elkeen 'n vektorruimte definieer.</li>
+      <li>Kry konkrete strategieë om die kern en beeld van 'n lineêre afbeelding te bereken.</li>
+      <li>Die Rang-Nulheidsgraadstelling en toepassings.</li>
+    </ul>
+  </objectives>
+
   <subsection>
   <title> Kern en Beeld vir Willekeurige Lineêre Afbeeldings</title>
 

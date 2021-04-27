@@ -2,6 +2,14 @@
 
 <section xml:id="Ch3Sec4LinearMapsMatrices">
   <title>Linear maps and matrices</title>
+
+  <objectives>
+    <ul>
+      <li>Find a way to represent a linear map efficiently.</li>
+      <li>Find relations between the matrices associated to composites and inverses of linear maps.</li>
+    </ul>
+  </objectives>
+
   <definition xml:id="matrix_of_linear_map_defn">
     <statement>
       <p>

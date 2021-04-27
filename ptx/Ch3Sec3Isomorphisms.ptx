@@ -2,6 +2,13 @@
 
 <section xml:id="Ch3Sec3Isomorphisms">
   <title>Isomorphisms of vector spaces</title>
+
+  <objectives>
+    <ul>
+      <li>When is a linear map <em>invertible</em>?</li>
+    </ul>
+  </objectives>
+
   <p>
     Suppose you have two sets,
     <me>

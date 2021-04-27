@@ -1,13 +1,20 @@
 <section xml:id="ACh2Sec5ChangeOfBasis">
   <title>Basisverandering</title>
-    <introduction><p></p>
+
+  <objectives>
+    <ul>
+      <li>Hoe verander die koördinaatvektor wanneer ons 'n ander basis gebruik om dit te bereken?</li>
+    </ul>
+  </objectives>
+
 <!--
+  <introduction>
     <figure>
         <caption>Video recording for <xref ref="Ch2Sec5ChangeOfBasis"/>.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec15ChangeOfBasis.mp4" width="70%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
     </figure>
+  </introduction>
 -->
-</introduction>
 
   <subsection>
     <title>Koördinaatvektore verskil in verskillende basisse</title>

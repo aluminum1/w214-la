@@ -2,6 +2,14 @@
 
 <section xml:id="Ch3Sec6InjectiveSurjective">
   <title>Injective and surjective linear maps</title>
+
+  <objectives>
+    <ul>
+      <li>Find ways to study injectivity and surjectivity in terms of rank and nullity.</li>
+      <li>Relate injectivity and surjectivity to isomorphisms.</li>
+    </ul>
+  </objectives>
+
   <definition>
     <statement>
       <p>

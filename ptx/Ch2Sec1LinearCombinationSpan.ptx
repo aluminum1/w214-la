@@ -2,9 +2,13 @@
 
 <section xml:id="Ch2Sec1LinearCombinationSpan">
   <title>Linear combinations and span</title>
-  <p>
-    We start with some basic definitions.
-  </p>
+
+  <objectives>
+    <ul>
+      <li>Starting with a few vectors in a vector space, what others can you make by using only these few vectors, addition and scalar multiplication?</li>
+      <li>What can we say about the set containing all vectors that can be formed in this way?</li>
+    </ul>
+  </objectives>
 
   <definition>
     <statement>

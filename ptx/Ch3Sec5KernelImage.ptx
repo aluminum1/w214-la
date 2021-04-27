@@ -3,6 +3,14 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch3Sec5KernelRange">
   <title>Kernel and Image of a Linear Map</title>
 
+  <objectives>
+    <ul>
+      <li>Generalise the notions of roots and range of a function to linear maps and show that each defines a vector space.</li>
+      <li>Obtain conrete strategies to compute the kernel and range of a linear map.</li>
+      <li>Tha Rank Nullity Theorem and applications.</li>
+    </ul>
+  </objectives>
+
   <subsection>
   <title> Kernel and Image for Arbitrary Linear Maps</title>
 

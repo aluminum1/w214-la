@@ -1,13 +1,20 @@
 <section xml:id="Ch2Sec5ChangeOfBasis">
   <title>Change of basis</title>
-  <introduction><p></p>
+
+  <objectives>
+    <ul>
+      <li>How does the coordinate vector change if we use a different basis to compute it?</li>
+    </ul>
+  </objectives>
+
 <!--
+  <introduction>
     <figure>
         <caption>Video recording for <xref ref="Ch2Sec5ChangeOfBasis"/>.</caption>
         <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec15ChangeOfBasis.mp4" width="70%" preview="../latex/images/preview-doc-cam.jpg" onerror="this.src='Default.jpg'" />
     </figure>
+  </introduction>
 -->
-</introduction>
 
   <subsection>
     <title>Coordinate vectors are different in different bases</title>

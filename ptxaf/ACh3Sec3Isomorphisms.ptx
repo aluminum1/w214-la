@@ -2,6 +2,13 @@
 
 <section xml:id="ACh3Sec3Isomorphisms">
   <title>Isomorfismes van vektorruimtes</title>
+
+  <objectives>
+    <ul>
+      <li>Wanneer is 'n lineêre afbeelding <em>inverteerbaar</em>?</li>
+    </ul>
+  </objectives>
+
   <p>
     Veronderstel jy het twee versamelings,
     <me>

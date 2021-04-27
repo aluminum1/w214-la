@@ -1,6 +1,16 @@
 <section xml:id="Ch2Sec3BasisDimension">
   <title>Basis and dimension</title>
+
+  <objectives>
+    <ul>
+      <li>Define the notion of dimension to give some way to study the <em>size</em> of a vector space.</li>
+      <li>Study some theorems that confirm that this definition agrees with our intuitive understanding of dimension.</li>
+      <li>Provide algorithms to compute bases for certain vector spaces.</li>
+    </ul>
+  </objectives>
+
   <introduction>
+
     <p>
       In this section we introduce the notions of:
       <ul>

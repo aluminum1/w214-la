@@ -2,9 +2,13 @@
 
 <section xml:id="ACh2Sec1LineereKombinasieSpan">
   <title>Lineêre kombinasies en span</title>
-  <p>
-    Ons begin met 'n paar basiese definisies.
-  </p>
+
+  <objectives>
+    <ul>
+      <li>Deur met 'n paar vektore in 'n vektorruimte te begin, watter ander vektore kan ons maak deur slegs daardie paar vektore, optelling en skalaarvermenigvuldiging te gebruik?</li>
+      <li>Wat kan ons sê oor die versameling wat alle vektore bevat wat op hierdie manier gevorm kan word?</li>
+    </ul>
+  </objectives>
 
   <definition>
     <statement>

@@ -1,54 +1,55 @@
 To do list:
 
+HIGH PRIORITY
+- More material in Eigenvalues and Eigenvectors sections
+- Add the row reduction algorithm for the sifting process in 2.3.5 (or 2.2 wherever it ends up)
+- In 2.1 add Theorem that the span is a vector space.
+- Add algorithm to determine basis in 2.3
+- Prop 2.2.8 technically has to mention the case where n=1 and the vector is the zero vector.
+- Move sifting one section forward to Linear Independence, so that students get hands-on experience with doing that before they need to grapple with the Steinitz Replacement Theorem.
+- Add key questions and topics at the start of each section and revision bullet points at the end.
+   -  4.1 If the matrix for a linear map depends on the basis chosen, it is natural that matrices w.r.t some bases will be easier to work with than others. How simple can the matrix be?
+   -  4.1 If we start with a unit vector and repeatedly apply T and renormalize, where can we end up? And by how much do we need to normalize?
+- Add learning outcomes to the start of each section of exercises
+- Break up solutions to multi-part questions into multiple <solution>s so that if a students wants to view one, they don't automatically open all?
+- Solutions in Ch2Sec5
+- Solutions in  Ch1Sec3 and Ch1Sec4 have some that ask to check that a set is a vector space. Not really keen on them...
 
 
+MEDIUM PRIORITY
+- - Can the first two lemmas in 1.5 be written using more words? And many others...
+- Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
+- Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.
+- Check that all of the following translations are consistent: verify -> bevestig, nagaan?
+- longer paragraphs, especially in introductions (sections can also have <conclusion>s and <references> to other reading and/or Youtube Videos).
+- overspecified or underspecified problems
+- more problems (e.g. <fillin characters="10" /> for fill in questions, like terminology)
+- - Sometimes go back and show how new "technology" can help you better understand previous problems.
+
+
+PUBLISHER ISSUES:
 - Do we want to use the Stellenbosch University Brand Colors? If so, here they are
   - brand-maroon: #60223b, RGB(140, 151, 154)
   - brand-gray: #8c979a, RGB(96,34,59)
   - brand-gold: #967140, RGB(150,113,64)
 - Write Python script to change link to Mathjax to the local one on SunLearn and the links to the pretext css files to local versions. Make sure they are available locally, and build in a test for updates. Make sure to test it! Robert Beezer discourages this in the guides. But maybe this can be done in the latex xsl file!
+- Decide whether to un-knowl Examples, but to break them up into <statement> and <solution> so that the page isn't too large upon loading.
 
 
-- Titles for examples? and Exercises?
-- Throughout there are some figures with <caption> tags, but no text. But I think this is ok.
-- Break up solutions to multi-part questions into multiple <solution>s so that if a students wants to view one, they don't automatically open all?
-
-
-- Can the first two lemmas in 1.5 be written using more words? And many others...
-- Move sifting one section forward to Linear Independence, so that students get hands-on experience with doing that before they need to grapple with the Steinitz Replacement Theorem.
-- Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
+LO PRIORITY OR UNNECESSARY
 - First person to first person plural? (I to we)
-- Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.
 - Create index? And index of notation?
 - Ch2Sec4 (in a few places actually) I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
-
-Consistency and technique:
 - Make sure all <proofs> are inside the <theorem> (etc.) tags and not outside (?) (low priority)
 
 
-Add solutions:
-- Many in Ch2Sec5
-- Ch1Sec3 and Ch1Sec4 have some that ask to check that a set is a vector space. Not really keen on them...
 
-
-Afrikaans:
-- Check that all of the following translations are consistent:
-  - verify -> bevestig, nagaan?
-
-
-I would like to add
-- learning outcomes for each section; or maybe only the exercises for each section
-- link exercises or groups of exercises to these learning outcomes.
-- longer paragraphs, especially in introductions (sections can also have <conclusion>s and <references> to other reading and/or Youtube Videos).
-- overspecified or underspecified problems
-- more problems (e.g. <fillin characters="10" /> for fill in questions, like terminology)
-- solutions
 
 Ideas for problems and examples:
 - Claim: Let T:V to W. Show: If T(v1) and T(v2) are linearly independent, show that v1 and v2 are -  already in !
 - Application: Show that sin x and cos x are lin. ind. by using the linear map T:Func to R^2 defined by T(f) = (f(0),f(pi/2)).
 - Rank-Nullity Theorem to show the rank theorem from 144: #free + #non-0 rows = #columns
-- Sometimes go back and show how new "technology" can help you better understand previous problems.
+
 
 Use??
 - <objective>?
