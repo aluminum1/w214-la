@@ -179,12 +179,30 @@
   <definition>
     <statement>
       <p>
+        Laat <m>V</m> 'n vektorruimte wees en laat <m>S\subset V</m> 'n versameling wees wat bestaan uit vektore in <m>V</m>.
+        Die <term>span van <m>S</m></term> is die versameling wat alle lineêre kombinasies in <m>S</m> bevat, m.a.w.
+        <me> \spn(\ve{v}_1,\ve{v}_2,\ldots, \ve{v}_n) = \{c_1\ve{v}_1+\cdots+c_n\ve{v}_n \mid c_i\in \mathbb{R}\}</me>.
+      </p>
+      <p>
         Ons sê dat die lys vektore
         <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2,\ldots, \ve{v}_n \bclose</m> in 'n vektorruimte <m>V</m> vir <term><m>V</m> onderspan</term> as elke
         vektor <m>\ve{v} \in V</m> 'n lineêre kombinasie van die vektore uit <m>\basis{B}</m> is.
       </p>
     </statement>
   </definition>
+
+  <insight>
+    <p>
+      Hierdie is twee effens verskillende beginsels wat amper dieselfde klink.
+      Let op dat die <q>span van 'n versameling <m>S</m></q> 'n <em>versameling</em> is.
+      Aan die ander kant, om te sê dat 'n versameling <q>vir <m>V</m> onderspan</q> is 'n eienskap van die versameling.
+      Die eerste word gebruik as 'n selfstandige naamwoord en die tweede as 'n werkwoord.
+    </p>
+    <p>
+      Daar is egter 'n verband tussen die twee beginsels.
+      Om te sê dat die versameling <m>S</m> 'n vektorruimte <m>V</m> onderspan is ekwivalent daaraan om te sê dat die span van <m>S</m> gelyk is aan <m>V</m>.
+    </p>
+  </insight>
 
   <example>
     <statement>
@@ -348,6 +366,73 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
         </p>
       </solution>
   </exercise>
+
+  <p>
+    Ons het 'n paar voorbeelde gesien waar 'n versameling 'n vektorruimte onderspan.
+    In daardie gevalle was die span van die vektore altyd gelyk aan die hele vektorruimte.
+    Maar hoe kan die span van 'n versameling vektore oor die algemeen lyk?
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        As <m>V=\mathbb{R}^3</m>, dan kan die span van 'n versameling met een vektor óf die nulruimte (as die vektor die nulvektor is) óf 'n lyn wees wat bestaan uit al die skalaarveelvoude van daardie vektor.
+      </p>
+      <p>
+        Die span van twee vektore kan 'n lyn wees (as die een 'n skalaarveelvoud van die ander is) of 'n vlak wees.
+      </p>
+      <p>
+        Oor die algemeen kan die span van 'n versameling vektore in <m>\mathbb{R}^3</m> enige van die volgende wees:
+        <ul>
+          <li>die nulruimte <m>\{0_V\}</m></li>
+          <li>'n lyn</li>
+          <li>'n vlak'</li>
+          <li>die hele <m>\mathbb{R}^3</m>.</li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <proposition>
+    <statement>
+      <p>
+        As <m>V</m> 'n vektorruimte is en <m>S</m> 'n deelversameling van vektore in <m>V</m> is, dan is die span van <m>S</m> 'n deelruimte van <m>V</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Om 'n vektorruimmte te wees, moet <m>V</m> geslote wees onder optelling en skalaarvermenigvuldiging.
+        En elke element in die span van <m>S</m> is 'n lineêre kombinasie van die elemente in <m>V</m>.
+        Dus is <m>\spn(S)</m> ten minste 'n deelversameling van <m>V</m>.
+      </p>
+      <p>
+        Om te wys dat dit 'n deelruimte is, moet ons wys dat dit ook geslote is onder optelling en skalaarvermenigvuldiging.
+        Dit volg amper onmiddellik. Laat <m>S=\{\ve{v}_1,\ldots, \ve{v}_n\}</m>.
+        As
+        <me>a_1\ve{v}_1+\cdots+a_n\ve{v}_n\text{ en }b_1\ve{v}_1+\cdots+b_n\ve{v}_n</me>
+        twee lineêre kombinasies van elemente in <m>S</m> is, dan is hul som
+        <me>(a_1+b_1)\ve{v}_1+\cdots+(a_n+b_n)\ve{v_n}</me>
+        ook 'n lineêre kombinasie van elemente in <m>S</m>.
+        Op soortgelyke wyse is 'n skalaarproduk van 'n lineêre kombinasie van elemente in <m>S</m> ook 'n lineêre kombinasie van elemente in <m>S</m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <insight>
+    <p>
+      Dit gee vir ons nog 'n manier om vektorruimtes te definieer.
+      Voorheen het ons dikwels vektorruimtes as deelruimte gedefinieer soos, bv.
+      <me> V = \{(x,y,z)\in\mathbb{R}^3\mid x+y-z=0\}</me>.
+      Dit is gedefinieer as die deelruimte van <m>\mathbb{R}^3</m> wat bestaan uit al die vektore <m>(x,y,z)</m> wat <m>x+y-z=0</m> bevredig.
+      'n Alternatief is om 'n vektorruimte as 'n deelruimte wat bestaan uit al die vektore wat as 'n lineêre kombinasie van 'n paar ander vektore geskryf kan word, bv.
+      <me> W = \spn((1,0,1), (0,1,1))</me>,
+      wat 'n ander manier is om
+      <me> W = \{(x,y,z)\in\mathbb{R}^3\mid \exists s,t\in\mathbb{R}, (x,y,z) = s(1,0,1)+t(0,1,1)\}</me> te skryf.
+      Dit blyk dat <m>V</m> en <m>W</m> uit presies dieselfde vektore bestaan.
+      Hulle is gelyk as versamelings, en aangesien hulle hul bewerkings (optelling en skalaarvermenigvuldiging) kry vanaf dieselfde <m>\mathbb{R}^3</m>, is hulle ook dieselfde vektorruimte.
+      Die manier waarop ons <m>V</m> hierbo gedefinieer het, behoort jou te herinner aan die algemene vorm van 'n vlak in <m>\mathbb{R}^3</m>, terwyl die manier waarop ons <m>W</m> gedefinieer het, jou aan die vektorvorm van dieselfde vlak behoort te herinner.
+    </p>
+  </insight>
 
 <p>
   Die volgende Lemma gee 'n gerieflike metode om te kontrolleer of 'n gegewe lys vektore <m>\basis{C}</m> 'n vektorruimte <m>V</m> onderspan, as jy alreeds weet dat 'n sekere ander lys <m>\basis{B}</m> vir <m>V</m> onderspan.
@@ -575,6 +660,14 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
         Vergelyking <xref ref="exercise-span-omission-3"/> wys dat ons <m>\ve{v}</m> as 'n lineêre kombninasie van die vektore uit <m>\basis{T}</m> kan skryf. Dus sal <m>\basis{T}</m> vir <m>V</m> onderspan.
       </p>
     </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>V</m> 'n vektorruimte wees en laat <m>B=\{b_1,\ldots, b_n\}</m> en <m>C = \{c_1,\ldots, c_n\}</m> twee deelversamelings van <m>V</m> wees. As <m>B</m> 'n deelversameling van <m>\spn(C)</m> is, bewys dat <m>\spn(B)</m> 'n deelruimte van <m>\spn(C)</m> is. (Dit is 'n veralgemening van <xref ref="spanning_check_thm"/>.)
+      </p>
+    </statement>
   </exercise>
 
 </exercises>

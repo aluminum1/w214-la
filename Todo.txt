@@ -3,28 +3,29 @@ To do list:
 HIGH PRIORITY
 - More material in Eigenvalues and Eigenvectors sections
 - Add the row reduction algorithm for the sifting process in 2.3.5 (or 2.2 wherever it ends up)
-- In 2.1 add Theorem that the span is a vector space.
 - Add algorithm to determine basis in 2.3
-- Prop 2.2.8 technically has to mention the case where n=1 and the vector is the zero vector.
 - Move sifting one section forward to Linear Independence, so that students get hands-on experience with doing that before they need to grapple with the Steinitz Replacement Theorem.
-- Add key questions and topics at the start of each section and revision bullet points at the end.
-   -  4.1 If the matrix for a linear map depends on the basis chosen, it is natural that matrices w.r.t some bases will be easier to work with than others. How simple can the matrix be?
-   -  4.1 If we start with a unit vector and repeatedly apply T and renormalize, where can we end up? And by how much do we need to normalize?
 - Add learning outcomes to the start of each section of exercises
 - Break up solutions to multi-part questions into multiple <solution>s so that if a students wants to view one, they don't automatically open all?
 - Solutions in Ch2Sec5
+- Solution Ch2Sec1 last one.
 - Solutions in  Ch1Sec3 and Ch1Sec4 have some that ask to check that a set is a vector space. Not really keen on them...
+- Add <warning>s for common mistakes:
+  - when students check whether a list of vectors spans {(x,y,z)| x+y-z=0}, they often just check whether the basis vectors satisfy the equation. Give an example where this argument fails with one vector in a 2-dimensional space.
+- Add <reading-question>s that probe understanding of proofs, e.g.:
+  - For Prop 2.2.8 where we use the set {i|c_i\ne 0}, ask questions like "If (c1,c2,c3)=(0,2,0), what is that set?" and "Give an example of a set where {i|c_i\ne 0} = 1."
+- In 3.3 add example(s) and exercises of how to compute inverse of a linear map.
+- Think about the ordering of exercises in each section.
 
 
 MEDIUM PRIORITY
-- - Can the first two lemmas in 1.5 be written using more words? And many others...
+- Can the first two lemmas in 1.5 be written using more words? And many others...
 - Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
 - Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.
-- Check that all of the following translations are consistent: verify -> bevestig, nagaan?
 - longer paragraphs, especially in introductions (sections can also have <conclusion>s and <references> to other reading and/or Youtube Videos).
 - overspecified or underspecified problems
 - more problems (e.g. <fillin characters="10" /> for fill in questions, like terminology)
-- - Sometimes go back and show how new "technology" can help you better understand previous problems.
+- Sometimes go back and show how new "technology" can help you better understand previous problems.
 
 
 PUBLISHER ISSUES:
@@ -36,11 +37,11 @@ PUBLISHER ISSUES:
 - Decide whether to un-knowl Examples, but to break them up into <statement> and <solution> so that the page isn't too large upon loading.
 
 
-LO PRIORITY OR UNNECESSARY
+LOW PRIORITY OR UNNECESSARY
 - First person to first person plural? (I to we)
 - Create index? And index of notation?
 - Ch2Sec4 (in a few places actually) I commented out video on line 7. One issue with a link to a video on SunLearn is that the link will break from year to year.
-- Make sure all <proofs> are inside the <theorem> (etc.) tags and not outside (?) (low priority)
+- Make sure all <proofs> are inside the <theorem> (etc.) tags and not outside (?)
 
 
 
@@ -67,4 +68,17 @@ Use??
 	  		<exercise width="50%" />
 		</sidebyside>
 
+List of PreTeXt environments that can go inside a section:
+  "theorem", "proposition", "lemma", "corollary", "claim", "conjecture", "fact", "question", "proof",
+
+  "definition", "assumption", "axiom", "hypothesis", "principle",
+
+  "remark", "convention", "insight", "warning", "aside", "biographical", "historical", "observation", "note", "blockquote",
+
+  "activity", "exploration", "investigation", "project", "problem",
+
+  "assemblage"
+  "commentary"
+
+"algorithm",  "computation", "demonstration", "fragment", "heuristic", "identity", "technology",
 

@@ -2,10 +2,13 @@
 
 <section xml:id="ACh4Sec2Eigenvectors">
   <title>Eievektore</title>
-  <p>
-    In die vorige afdeling het ons opp eiewaardes gefokus.
-    Nou gaan ons eievektore bestudeer.
-  </p>
+
+  <objectives>
+    <ul>
+      <li>Bereken die eievektore wat ooreenstem met 'n gegewe eiewaarde.</li>
+      <li>Bereken die eieruimte en sy dimensie vir elke eiewaarde.</li>
+    </ul>
+  </objectives>
 
   <definition>
     <statement>

@@ -304,6 +304,50 @@
       </p>
     </solution>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        For each of the following matrices <m>A</m>, consider the linear map <m>T_A</m> defined by <m>T_A(\ve v) = A\ve v</m>.
+        In each case say what the domain and codomain are and whether it is injective, surjective and/or an isomorphism:
+        <ol cols="2">
+          <li><m>\begin{bmatrix} 1\amp 1\amp 0\amp 0\\ 0\amp 0\amp 1\amp 0\end{bmatrix}</m></li>
+          <li><m>\begin{bmatrix} 0\amp 0\\ 0\amp 0\\ 0\amp 0\end{bmatrix}</m></li>
+          <li><m>\begin{bmatrix} 2\amp 3\\ 1\amp 2\\ 4\amp 1\end{bmatrix}</m></li>
+          <li><m>\begin{bmatrix} 1\amp 1\amp 1\\ 1\amp 2\amp 0\\ 2\amp 3\amp 4\end{bmatrix}</m></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <title>(a)</title>
+      <p>
+        The map goes from <m>\mathbb{R}^4</m> to <m>\mathbb{R}^2</m>.
+        It is surjective (rank equals 2 equals dimension of codomain), but not injective (nullity equals 2).
+      </p>
+    </solution>
+    <solution>
+      <title>(b)</title>
+      <p>
+        The map goes from <m>\mathbb{R}^2</m> to <m>\mathbb{R}^3</m>.
+        It is neither surjective (rank equals 0), nor injective (nullity equals 2).
+      </p>
+    </solution>
+    <solution>
+      <title>(c)</title>
+      <p>
+        The map goes from <m>\mathbb{R}^2</m> to <m>\mathbb{R}^3</m>.
+        It is injective (rank is 2, so nullity is 0), but not surjective (rank equals 2).
+        In fact a map from a 2-dimensional vector space to a 3-dimensional vector space can never be surjective.
+      </p>
+    </solution>
+    <solution>
+      <title>(d)</title>
+      <p>
+        The map goes from <m>\mathbb{R}^3</m> to <m>\mathbb{R}^3</m>.
+        It is surjective (rank equals 3), and injective (nullity equals 0) and hence also an isomorphism.
+      </p>
+    </solution>
+  </exercise>
 </exercises>
 
 <solutions inline="statement answer solution">

@@ -1585,7 +1585,7 @@
       </p>
     </statement>
     <hint>
-      <title>What is the Jacobian?</title>
+      <title>(What is the Jacobian?)</title>
       <p>
         Given a multi-variable function <m>F:\mathbb{R}^n\to \mathbb{R}^m</m>,
         given by components <m>f_1,\ldots, f_m: \mathbb{R}^n\to \mathbb{R}</m>, we define the <term>Jacobian of <m>F</m></term> as the matrix of partial derivatives:
@@ -1624,6 +1624,65 @@
   <exercise>
     <statement>
       <p>
+        In each of the following, <m>A</m> is a matrix and <m>R</m> is its reduced row echelon form.
+        Write down bases for the row space, column space and null space of <m>A</m>.
+        <ol>
+          <li><m>A = \begin{bmatrix}
+            1\amp -1\amp 1\amp 2\amp 1\\
+            3\amp 1\amp -1\amp 2\amp -1\\
+            2\amp 2\amp -2\amp 4\amp 2
+          \end{bmatrix}</m>,
+          <m>R = \begin{bmatrix}
+            1\amp 0\amp 0\amp 0\amp -1\\
+            0\amp 1\amp -1\amp 0\amp 0\\
+            0\amp 0\amp 0\amp 1\amp 1
+          \end{bmatrix}</m></li>
+          <li><m>A = \begin{bmatrix}
+            1\amp 1\amp 2\\
+            2\amp 2\amp 1\\
+            4\amp 4\amp 1\\
+            -1\amp -1\amp 5\\
+            3\amp 3\amp 1
+          \end{bmatrix}</m>,
+          <m>R = \begin{bmatrix}
+            1\amp 1\amp 0\\
+            0\amp 0\amp 1\\
+            0\amp 0\amp 0\\
+            0\amp 0\amp 0\\
+            0\amp 0\amp 0
+          \end{bmatrix}</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <title>(a)</title>
+      <p>
+        Row space: <m>[1,0,0,0,-1], [0,1,-1,0,0], [0,0,0,1,1]</m>
+      </p>
+      <p>
+        Column space: <m>\begin{bmatrix} 1\\3\\2\end{bmatrix}, \begin{bmatrix} -1\\1\\2\end{bmatrix}, \begin{bmatrix} 2\\2\\4\end{bmatrix}</m> (note that this is also what you would get if you sifted the columns of <m>A</m>)
+      </p>
+      <p>
+        Null space: <m>\begin{bmatrix} 0\\1\\1\\0\\0\end{bmatrix}, \begin{bmatrix} 1\\0\\0\\-1\\1\end{bmatrix}</m>
+      </p>
+    </answer>
+    <answer>
+      <title>(b)</title>
+      <p>
+        Row space: <m>[1,1,0], [0,0,1]</m>
+      </p>
+      <p>
+        Column space: <m>\begin{bmatrix}1\\2\\3\\-1\\3\end{bmatrix}, \begin{bmatrix}2\\1\\1\\5\\1\end{bmatrix}</m>
+      </p>
+      <p>
+        Null space: <m>\begin{bmatrix} -1\\1\\0\end{bmatrix}</m>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
         Let <m>T:U\to V</m> and <m>S:V\to W</m> be two linear maps. Show that if <m>Im(T)</m> is a subspace of <m>Ker(S)</m>, then the composite map <m>S\circ T</m> is the zero map (i.e. it maps every input vector of <m>U</m> to the zero vector in <m>W</m>).
       </p>
     </statement>
@@ -1646,6 +1705,48 @@
       </p>
       <p>
         It is possible for <m>\Ker(S\circ T)</m> to be strictly larger than <m>Ker(T)</m>. The simplest example is the extreme case where <m>T</m> is the identity map on <m>U=V</m> and <m>S</m> is the zero map to any vector space. Then the kernel of <m>T</m> contains only the zero vector, but the kernel of <m>S\circ T</m> contains all the vectors in <m>V</m>. So, actually for this to be a valid example, we need to specify that <m>V</m> is not the zero vector space.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove that if <m>A</m> is an invertible matrix, then its columns form a basis for <m>\mathbb{R}^n</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        It is enough to prove either that the column space of <m>A</m> equals <m>\mathbb{R}^n</m> or that its null space equals the zero subspace of <m>\mathbb{R}^n</m>.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        Since <m>A</m> is invertible, the equation <m>A\ve{x} = \ve{0}</m> has only one solution, namely <m>\ve{x} = \ve{0}</m>.
+        This is equivalent to saying that the null space of <m>A</m> consists of only the zero vector.
+        That means that the rank of <m>A</m> (seen as a linear map from <m>\mathbb{R}^n</m> to itself) equals <m>n-0</m> (dimension of domain minus nullity).
+        Thus, the column space is an <m>n</m>-dimensional subspace of <m>\mathbb{R}^n</m>, and hence equal to <m>\mathbb{R}^m</m>.
+        Thus, the columns of <m>A</m> span <m>\mathbb{R}^n</m> and since there are <m>n</m> columns, they form a basis.
+      </p>
+    </solution>
+    <solution>
+      <p>
+        Alternatively, you could start by noting that if <m>A</m> is invertible, then any equation of the form <m>A\ve{x}=\ve{b}</m> has the solution <m>\ve{x}=A^{-1}\ve{b}</m>.
+        Thus, any <m>\ve{b}</m> is in the column space, so the columns of <m>A</m> span <m>\mathbb{R}^n</m>.
+        We finish the proof in the same way as in the other solution.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove that if <m>B</m> is an invertible matrix, then <m>BA</m> has the same row space and null space as <m>A</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This follows from <xref ref="lem_row_operations_dont_change_span"/> by noting that <m>B</m> can be written as a product of elementary matrices and multiplication by an elementary matrix on the left amounts to an elementary row operation.
       </p>
     </solution>
   </exercise>

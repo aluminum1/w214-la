@@ -179,12 +179,30 @@
   <definition>
     <statement>
       <p>
+        Let <m>V</m> be a vector space and let <m>S\subset V</m> be a set containing vectors from <m>V</m>.
+        The <term>span of <m>S</m></term> is the set containing all linear combinations of the vectors in <m>S</m>, i.e.
+        <me> \spn(\ve{v}_1,\ve{v}_2,\ldots, \ve{v}_n) = \{c_1\ve{v}_1+\cdots+c_n\ve{v}_n \mid c_i\in \mathbb{R}\}</me>.
+      </p>
+      <p>
         We say that a list of vectors
         <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n \bclose </m> in a vector space <m>V</m> <term>spans</term>
         <m>V</m> if every vector <m>\ve{v} \in V</m> is a linear combination of the vectors from <m>\basis{B}</m>.
       </p>
     </statement>
   </definition>
+
+  <insight>
+    <p>
+      These are two slightly different notions, both called <em>span</em>.
+      Note that the <q>span of a set <m>S</m></q> is a <em>set</em>.
+      On the other hand, saying that a set <q>spans <m>V</m></q> is a property of the set.
+      The first is used as a noun and the second as a verb.
+    </p>
+    <p>
+      But there is some relation betwee the two notions.
+      Saying that a set <m>S</m> spans a vector space <m>V</m> is equivalent to saying that the span of <m>S</m> is equal to <m>V</m>.
+    </p>
+  </insight>
 
   <example>
     <statement>
@@ -348,6 +366,73 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
         </p>
       </solution>
     </exercise>
+
+  <p>
+    We have seen a few examples where a set of vectors span a vector space.
+    In those cases, the span of those vectors is always equal to the whole vector space.
+    But what could the span of a set of vectors look like in general?
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        If <m>V=\mathbb{R}^3</m>, then the span of a set of one vector can be either the zero subspace (if the vector is the zero vector) or a line consisting of all scalar multiples of that vector.
+      </p>
+      <p>
+        The span of two vectors could be a line (if the one is a scalar multiple of the other) or a plane.
+      </p>
+      <p>
+        In general, the span of a set of vectors in <m>\mathbb{R}^3</m> is one of the following:
+        <ul>
+          <li>the zero subspace <m>\{0_V\}</m></li>
+          <li>a line</li>
+          <li>a plane</li>
+          <li>all of <m>\mathbb{R}^3</m>.</li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <proposition>
+    <statement>
+      <p>
+        If <m>V</m> is a vector space and <m>S</m> is a subset of vectors in <m>V</m>, then the span of <m>S</m> is a subspace of <m>V</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        To be a vector space, <m>V</m> is closed under addition and scalar multiplication.
+        And each element in the span of <m>S</m> is a linear combination of the elements in <m>V</m>.
+        So, <m>\spn(S)</m> must at least be a subset of <m>V</m>.
+      </p>
+      <p>
+        To show that it is a subspace, we need to show that it is also closed under addition and scalar mutliplication.
+        This is almost immediate. Let <m>S=\{\ve{v}_1,\ldots, \ve{v}_n\}</m>.
+        If
+        <me>a_1\ve{v}_1+\cdots+a_n\ve{v}_n\text{ and }b_1\ve{v}_1+\cdots+b_n\ve{v}_n</me>
+        are two linear combinations of elements in <m>S</m>, then their sum
+        <me>(a_1+b_1)\ve{v}_1+\cdots+(a_n+b_n)\ve{v_n}</me>
+        is also a linear combination of elements in <m>S</m>.
+        Similarly, a scalar product of a linear combination of elements in <m>S</m> is again a linear combination of elements in <m>S</m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <insight>
+    <p>
+      This gives us another way of defining vector spaces.
+      Before, we often specified vector spaces as subspaces of another vector space, e.g.
+      <me> V = \{(x,y,z)\in\mathbb{R}^3\mid x+y-z=0\}</me>.
+      This is defined as the subspace of <m>\mathbb{R}^3</m> consisting of all the vectors <m>(x,y,z)</m> that satisfy <m>x+y-z=0</m>.
+      An alternative is to define a vector space as a subspace of those vectors that can be written as a linear combination of some other vectors, e.g.
+      <me> W = \spn((1,0,1), (0,1,1))</me>,
+      which is another way of writing
+      <me> W = \{(x,y,z)\in\mathbb{R}^3\mid \exists s,t\in\mathbb{R}, (x,y,z) = s(1,0,1)+t(0,1,1)\}</me>.
+      It turns out that <m>V</m> and <m>W</m> consist of exactly the same set of vectors.
+      They are equal as sets, and since they inherit their operations (addition and scalar multiplication) from the same <m>\mathbb{R}^3</m>, they are the same vector space.
+      The way we defined <m>V</m> above should remind you of the general form of a plan in <m>\mathbb{R}^3</m>, while the way we defined <m>W</m> should remind you of the vector form of that same plane.
+    </p>
+  </insight>
 
 <p>
   The next Lemma provides a very convenient method for checking whether a given list of vectors <m>\basis{C}</m> spans a vector space <m>V</m> if one already knows that some other list <m>\basis{B}</m> spans <m>V</m>.
@@ -575,6 +660,14 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
         Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{T}</m>. Hence <m>\basis{T}</m> spans <m>V</m>.
       </p>
     </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>V</m> be a vector space and let <m>B=\{b_1,\ldots, b_n\}</m> and <m>C = \{c_1,\ldots, c_n\}</m> be two subsets of <m>V</m>. If <m>B</m> is a subset of <m>\spn(C)</m>, show that <m>\spn(B)</m> is a subspace of <m>\spn(C)</m>. (This is a generalisation of <xref ref="spanning_check_thm"/>.)
+      </p>
+    </statement>
   </exercise>
 
 </exercises>

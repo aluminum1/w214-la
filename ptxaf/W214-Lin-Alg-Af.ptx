@@ -65,6 +65,7 @@
 %% Override standard "calligraphic" imaginary macro in TeX
 \let \Im \relax
 \DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\spn}{span} % \span is already defined in LaTeX kernel
 
 % There are some overfull hboxes due to LaTeX not knowing Afrikaans hyphenations:
 \hyphenation{vek-tor-ruim-tes}
@@ -116,15 +117,15 @@
 -->
 
       <solutions
-        divisional = "hint answer"
-        project = "hint answer"
+        divisional = "statement hint answer"
+        project = "statement hint answer"
         scope="W214-Lin-Alg-Af">
         <title>Wenke en antwoorde vir oefeninge</title>
       </solutions>
 
       <solutions
-        divisional = "solution"
-        project = "solution"
+        divisional = "statement solution"
+        project = "statement solution"
         scope="W214-Lin-Alg-Af">
         <title>
           Oplossings vir oefeninge

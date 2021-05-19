@@ -151,7 +151,7 @@
       <p>
         Then,
         <md>
-          <mrow>[\ve{v}]_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
+          <mrow>[T(\ve{v})]_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
           <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  (T \text{ is linear)}</mrow>
           <mrow>\amp = a_1 [T(\ve{b}_1)]_\basis{C} + \cdots + a_n [T(\ve{b}_m)]_\basis{C}  \amp \amp  (<xref ref = "lin_of_coord_vectors" />)</mrow>
          <mrow> \amp =  \begin{bmatrix} \bigg[ T(\ve b_1) \bigg]_\basis{C} \amp \bigg[T(\ve b_2) \bigg]_\basis{C} \amp \cdots \amp \bigg[ T(\ve b_m) \bigg]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
@@ -485,7 +485,7 @@
         <me>
           [T]_{\basis{C} \leftarrow \basis{C}} = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P
         </me>
-        where <m>P \equiv P_{\basis{B} \leftarrow \basis{C}}</m>.
+        where <m>P \equiv \mat{P}_{\basis{B} \leftarrow \basis{C}}</m>.
       </p>
     </statement>
     <proof>
@@ -527,7 +527,7 @@
     <exercise>
       <statement>
         <p>
-          Let <m>T</m> be the same map as in (a),
+          Let <m>T:\Row_3\to \Row_2</m> be <m>T(x,y,z) = (2x+y,x-y-z)</m> again,
           but now use the bases
           <m>\basis{B}=\bopen (2,1,0),(1,2,1), (3,2,1)\bclose</m> and
           <m>\basis{B}'=\bopen(1,1),(1,0)\bclose</m>.
@@ -626,7 +626,7 @@
           <li>
             Compute <m>[S]_{\basis{B} \leftarrow \basis{C}}</m>, where <m>\basis{B}</m> is the following basis for <m>\Trig_2</m>:
             <me>
-              \basis{B} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin^2 x \bclose
+              \basis{B} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin x\cos x \bclose
             </me>
           </li>
         </ol>
@@ -946,6 +946,67 @@
         In this example, the second matrix does not look that much simpler than the first.
         But for larger matrices, there is a big advantage in getting a matrix in diagonal form.
         It makes it much easier to compute powers of this matrix, the determinant, and many other things.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Perform a change of basis to change the matrix for a linear operator from one basis to the other:
+        <ol>
+          <li>If <m>[T]_{\basis B} = \begin{bmatrix} 2\amp 3\\ 1\amp 1\end{bmatrix}</m> and <m>\mat{P}_{\basis B\leftarrow \basis B'}=\begin{bmatrix} 1\amp 1\\0\amp 1\end{bmatrix}</m>, find <m>[T]_{\basis B'}</m>.</li>
+          <li>If <m>[T]_{\basis B} = \begin{bmatrix} 4\amp 1\\ 2\amp 3\end{bmatrix}</m> and <m>\mat{P}_{\basis B'\leftarrow \basis B}=\begin{bmatrix} 1\amp 2\\2\amp 3\end{bmatrix}</m>, find <m>[T]_{\basis B}</m>.</li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <ol>
+          <li><m>\begin{bmatrix} 1\amp3 \\ 1\amp2 \end{bmatrix}</m></li>
+          <li><m>\begin{bmatrix} -3\amp2\\ 2\amp-1 \end{bmatrix}</m></li>
+        </ol>
+      </p>
+    </answer>
+    <solution>
+      <title>(a)</title>
+      <p>
+        <m>[T]_{\mathcal{B}'} = \mat{P}_{\mathcal{B}\leftarrow\mathcal{B}'}^{-1} [T]_{\mathcal{B}}\mat{P}_{\mathcal{B}\leftarrow \mathcal{B}'} = \begin{bmatrix} 1\amp-1\\0\amp1\end{bmatrix}\begin{bmatrix} 2\amp3\\1\amp1 \end{bmatrix} \begin{bmatrix} 1\amp1\\0\amp1\end{bmatrix} = \begin{bmatrix} 1\amp3 \\ 1\amp2 \end{bmatrix}</m>
+      </p>
+    </solution>
+    <solution>
+      <title>(b)</title>
+      <p>
+        <m>[T]_{\mathcal{B}'} = \mat{P}_{\mathcal{B}'\leftarrow\mathcal{B}}[T]_{\mathcal{B}}\mat{P}_{\mathcal{B}'\leftarrow \mathcal{B}}^{-1} = \begin{bmatrix} 1\amp2\\2\amp3 \end{bmatrix} \begin{bmatrix} 4\amp1\\2\amp3 \end{bmatrix} \begin{bmatrix} -3\amp2\\ 2\amp-1 \end{bmatrix}</m>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>T:\mathbb{R}^3\to\mathbb{R}^3</m> be the linear map defined by
+        <me> T\left(\begin{bmatrix}x\\y\\z\end{bmatrix}\right) = \begin{bmatrix} 5x-5y-3z\\3y\\6x-13y-4z\end{bmatrix}</me>.
+        Let <m>\basis B</m> be the standard basis and let <m>\basis B'</m> be the basis
+        <me> b-1=\begin{bmatrix}1\\1\\-1\end{bmatrix}, b_2=\begin{bmatrix} 1\\0\\1 \end{bmatrix}, b_3=\begin{bmatrix} 1\\0\\2\end{bmatrix}</me>.
+        Calculate <m>[T]_{\basis B}</m>, then calculate <m>\mat{P}_{\basis B\leftarrow \basis B'}</m> and <m>\mat{P}_{\basis B'\leftarrow \basis B}</m>, and then calculate <m>[T]_{\basis B'}</m> from those matrices.
+        Confirm your answer by evaluating <m>T(b_1), T(b_2), T(b_3)</m> from the definition of <m>T</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We have
+        <me>[T]_{\mathcal{B}} = \begin{bmatrix} 5\amp-5\amp-3\\ 0\amp3\amp0\\ 6\amp-13\amp-4  \end{bmatrix}</me>
+        and
+        <me> \mat{P}_{\mathcal{B}\leftarrow \mathcal{B}'} = \begin{bmatrix} 1\amp1\amp1\\1\amp0\amp0\\ -1\amp1\amp2 \end{bmatrix}</me>,
+        so
+        <me>[T]_{\mathcal{B}'} = \mat{P}_{\mathcal{B}\leftarrow \mathcal{B}'}^{-1}[T]_{\mathcal{B}} \mat{P}_{\mathcal{B}\leftarrow \mathcal{B}'} = \begin{bmatrix} 0\amp1\amp0\\ 2\amp-3\amp-1\\ -1\amp2\amp1\end{bmatrix}\begin{bmatrix} 5\amp-5\amp-3\\ 0\amp3\amp0\\ 6\amp-13\amp-4  \end{bmatrix}\begin{bmatrix} 1\amp1\amp1\\1\amp0\amp0\\ -1\amp1\amp2 \end{bmatrix} = \begin{bmatrix} 3\amp0\amp0\\ 0\amp2\amp0\\ 0\amp0\amp-1\end{bmatrix}</me>
+      </p>
+      <p>
+        Then
+        <me> T\left(\begin{bmatrix}1\\1\\-1\end{bmatrix}\right) = \begin{bmatrix} 5-5+3\\ 3\\6-13+4\end{bmatrix} = 3\begin{bmatrix}1\\1\\-1\end{bmatrix}</me>,
+        <me>T\left(\begin{bmatrix}1\\0\\1\end{bmatrix}\right) = \begin{bmatrix} 5-3\\ 0\\6-4\end{bmatrix} = 2\begin{bmatrix}1\\0\\1\end{bmatrix}</me>,
+        <me>T\left(\begin{bmatrix}1\\0\\2\end{bmatrix}\right) = \begin{bmatrix} 5-6\\ 0\\6-8\end{bmatrix} = (-1)\begin{bmatrix}1\\0\\2\end{bmatrix}</me>,
       </p>
     </solution>
   </exercise>

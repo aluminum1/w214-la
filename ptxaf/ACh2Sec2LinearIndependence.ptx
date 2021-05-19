@@ -155,14 +155,15 @@
   </example>
 
   <p>
-    Hier is twee meer maniere om hoe van lineêre afhanklike lyste vektore te dink.
+    Hier is nog twee maniere om aan lineêr afhanklike lyste van twee of meer vektore te dink.
+    'n Lys wat slegs een vektor bevat is lineêr afhanklik as en slegs as dit die nul vektor is.
   </p>
 
   <proposition xml:id="lin_dependence_prop">
     <title>Ekwivalente voorwaardes vir lineêre afhanklikheid</title>
     <statement>
       <p>
-        Laat <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> ;n lys vektore in 'n vektorruimte <m>V</m> wees.
+        Laat <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> 'n lys van <m>n\ge 2</m> vektore in 'n vektorruimte <m>V</m> wees.
         Die volgende bewerings is ekwivalent:
         <ol label="(a)">
           <li xml:id="defn_lin_dep"> Die lys vektore <m>\basis{B}</m> is lineêr afhanklik.

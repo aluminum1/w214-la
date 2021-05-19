@@ -91,11 +91,11 @@
       </men>.
     </p>
 
-   <sidebyside widths="45% 45%">
+   <sidebyside>
       <figure xml:id="w_in_b_basis">
       <caption> <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m></caption>
 
-      <image>
+      <image  width="45%">
         <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=0.5]
           \clip (-5,-2) rectangle (4,3.5);
@@ -124,7 +124,7 @@
 
   <figure xml:id="w_in_c_basis">
     <caption> <m>\ve{w} = \ve{c}_1 - 3 \ve{c}_2</m> </caption>
-      <image>
+      <image width="45%">
         <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=0.5]
           \clip (-5,-2) rectangle (4,3.5);

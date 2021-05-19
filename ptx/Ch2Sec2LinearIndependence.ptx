@@ -155,14 +155,15 @@
   </example>
 
   <p>
-    Here are two more ways to think about linearly dependent lists of vectors.
+    Here are two more ways to think about linearly dependent lists of two or more vectors.
+    A list with one vector is linearly dependent if and only if the vector is the zero vector.
   </p>
 
   <proposition xml:id="lin_dependence_prop">
     <title>Equivalent Formulations of Linear Dependence</title>
     <statement>
       <p>
-        Let <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> be a list of vectors in a vector space <m>V</m>.
+        Let <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> be a list of <m>n\ge 2</m> vectors in a vector space <m>V</m>.
         The following statements are equivalent:
         <ol label="(a)">
           <li xml:id="defn_lin_dep"> The list of vectors <m>\basis{B}</m> is linearly dependent.

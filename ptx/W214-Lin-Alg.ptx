@@ -65,6 +65,8 @@
 %% Override standard "calligraphic" imaginary macro in TeX
 \let \Im \relax
 \DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\spn}{span} % \span is already defined in LaTeX kernel
+
 
 </macros>
 
@@ -114,15 +116,15 @@
 
 
       <solutions
-        project = "hint answer"
-        divisional = "hint answer"
+        project = "statement hint answer"
+        divisional = "statement hint answer"
         scope="w214-lin-alg">
         <title>Hints and answers to exercises</title>
       </solutions>
 
       <solutions
-        project = "solution"
-        divisional = "solution"
+        project = "statement solution"
+        divisional = "statement solution"
         scope="w214-lin-alg">
         <title>
           Solutions to exercises

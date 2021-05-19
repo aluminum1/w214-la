@@ -304,6 +304,50 @@
       </p>
     </solution>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Vir elkeen van die volgende matrikse <m>A</m>, beskou die lineêre afbeelding <m>T_A</m> gedefinieer deur <m>T_A(\ve v) = A\ve v</m>.
+        In elke geval, sê wat die definisieversameling en teikenversameling is en of die afbeelding injektief, surjektief en/of 'n isomorfisme is:
+        <ol cols="2">
+          <li><m>\begin{bmatrix} 1\amp 1\amp 0\amp 0\\ 0\amp 0\amp 1\amp 0\end{bmatrix}</m></li>
+          <li><m>\begin{bmatrix} 0\amp 0\\ 0\amp 0\\ 0\amp 0\end{bmatrix}</m></li>
+          <li><m>\begin{bmatrix} 2\amp 3\\ 1\amp 2\\ 4\amp 1\end{bmatrix}</m></li>
+          <li><m>\begin{bmatrix} 1\amp 1\amp 1\\ 1\amp 2\amp 0\\ 2\amp 3\amp 4\end{bmatrix}</m></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <title>(a)</title>
+      <p>
+        Die afbeelding gaan van <m>\mathbb{R}^4</m> na <m>\mathbb{R}^2</m>.
+        Dit is surjektief (rang is gelyk aan 2 wat gelyk is aan die dimensie van die teiken), maar nie injektief nie (nulheidsgraad is 2).
+      </p>
+    </solution>
+    <solution>
+      <title>(b)</title>
+      <p>
+        Die afbeelding gaan van <m>\mathbb{R}^2</m> na <m>\mathbb{R}^3</m>.
+        Dit is nie surjektief (rang is 0), of injektief nie (nulheidsgraad is 2).
+      </p>
+    </solution>
+    <solution>
+      <title>(c)</title>
+      <p>
+        Die afbeelding gaan van <m>\mathbb{R}^2</m> na <m>\mathbb{R}^3</m>.
+        Dit is injektief (rang is 2, so nulheidsgraad is 0), maar nie surjektief nie (rang is 2).
+        'n Afbeelding van 'n 2-dimensionele ruimte na 'n 3-dimensionele ruimte kan nooi surjektief wees nie.
+      </p>
+    </solution>
+    <solution>
+      <title>(d)</title>
+      <p>
+        Die afbeelding gaan van <m>\mathbb{R}^3</m> na <m>\mathbb{R}^3</m>.
+        Dit is surjektief (rang is 3), en injektief (nulheidsgraad is 2) en dus ook 'n isomorfisme.
+      </p>
+    </solution>
+  </exercise>
 </exercises>
 
 <solutions inline="statement answer solution">

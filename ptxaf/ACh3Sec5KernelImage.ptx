@@ -1585,7 +1585,7 @@
       </p>
     </statement>
     <hint>
-      <title>Wat is die Jakobiaan?</title>
+      <title>(Wat is die Jakobiaan?)</title>
       <p>
         Gegee 'n multi-veranderlike funksie <m>F:\mathbb{R}^n\to \mathbb{R}^m</m>,
         gegee deur komponente <m>f_1,\ldots, f_m: \mathbb{R}^n\to \mathbb{R}</m>, definieer ons die <term>Jakobiaan van <m>F</m></term> as die matriks van parsiële afgeleides:
@@ -1624,6 +1624,65 @@
   <exercise>
     <statement>
       <p>
+        In elkeen van die volgende is <m>A</m> 'n matriks en <m>R</m> sy gereduseerde rytrapvorm.
+        Skryf basisse neer vir die ryruimte, kolomruimte en nulruimte van <m>A</m>.
+        <ol>
+          <li><m>A = \begin{bmatrix}
+            1\amp -1\amp 1\amp 2\amp 1\\
+            3\amp 1\amp -1\amp 2\amp -1\\
+            2\amp 2\amp -2\amp 4\amp 2
+          \end{bmatrix}</m>,
+          <m>R = \begin{bmatrix}
+            1\amp 0\amp 0\amp 0\amp -1\\
+            0\amp 1\amp -1\amp 0\amp 0\\
+            0\amp 0\amp 0\amp 1\amp 1
+          \end{bmatrix}</m></li>
+          <li><m>A = \begin{bmatrix}
+            1\amp 1\amp 2\\
+            2\amp 2\amp 1\\
+            4\amp 4\amp 1\\
+            -1\amp -1\amp 5\\
+            3\amp 3\amp 1
+          \end{bmatrix}</m>,
+          <m>R = \begin{bmatrix}
+            1\amp 1\amp 0\\
+            0\amp 0\amp 1\\
+            0\amp 0\amp 0\\
+            0\amp 0\amp 0\\
+            0\amp 0\amp 0
+          \end{bmatrix}</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <title>(a)</title>
+      <p>
+        Ryruimte: <m>[1,0,0,0,-1], [0,1,-1,0,0], [0,0,0,1,1]</m>
+      </p>
+      <p>
+        Kolomruimte: <m>\begin{bmatrix} 1\\3\\2\end{bmatrix}, \begin{bmatrix} -1\\1\\2\end{bmatrix}, \begin{bmatrix} 2\\2\\4\end{bmatrix}</m> (let op dat dit dieselfde is as wat jy sou kry as jy die kolomme van <m>A</m> gesf het)
+      </p>
+      <p>
+        Nulruimte: <m>\begin{bmatrix} 0\\1\\1\\0\\0\end{bmatrix}, \begin{bmatrix} 1\\0\\0\\-1\\1\end{bmatrix}</m>
+      </p>
+    </answer>
+    <answer>
+      <title>(b)</title>
+      <p>
+        Ryruimte: <m>[1,1,0], [0,0,1]</m>
+      </p>
+      <p>
+        Kolomruimte: <m>\begin{bmatrix}1\\2\\3\\-1\\3\end{bmatrix}, \begin{bmatrix}2\\1\\1\\5\\1\end{bmatrix}</m>
+      </p>
+      <p>
+        Nulruimte: <m>\begin{bmatrix} -1\\1\\0\end{bmatrix}</m>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
         Laat <m>T:U\to V</m> en<m>S:V\to W</m> twee lineere afbeeldings wees. Wys dat indien <m>Im(T)</m> 'n deelruimte van <m>Ker(S)</m> is, dan is die saamgestelde afbeelding <m>S\circ T</m> die nulafbeelding (m.a.w. dit beeld elke insetvektor van <m>U</m> af op die nulvektor in <m>W</m>).
       </p>
     </statement>
@@ -1646,6 +1705,48 @@
       </p>
       <p>
         Dit is moontlik vir <m>\Ker(S\circ T)</m> om streng groter as <m>Ker(T)</m> te wees. Die eenvoudigste voorbeeld is die ekstreemgeval waar <m>T</m> die identiteistafbeelding op <m>U=V</m> is en <m>S</m> die nulafbeelding na enige vektorruimte is. Dan bevat die kern van <m>T</m> slegs die nulvektor, maar die kern van <m>S\circ T</m> bevat al die vektore in <m>V</m>. So, vir dit om 'n geldige voorbeeld te wees, moet ons eintlik nog verder spesifiseer dat <m>V</m> nie die nul-vektorruimte is nie.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Bewys dat as <m>A</m> 'n inverteerbare matriks is, dan vorm sy kolomme 'n bassis vir <m>\mathbb{R}^n</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Dit sal genoeg wees om óf te bewys dat die kolomruimte van <m>A</m> gelyk is aan <m>\mathbb{R}^n</m> óf dat sy mulruimte gelyk is aan die nul-deelruimte van <m>\mathbb{R}^n</m>.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        Aangesien <m>A</m> inverteerbaar is, het die vergelyking <m>A\ve{x} = \ve{0}</m> slegs een oplossing, naamlik <m>\ve{x} = \ve{0}</m>.
+        Dit is ekwivalent daaraan om te sê dat die nulruimte van <m>A</m> uit slegs die nulvektor bestaan.
+        Dit beteken dat die rang van <m>A</m> (gesien as 'n lineêre afbeelding van <m>\mathbb{R}^n</m> na ditself) gelyk is aan <m>n-0</m> (dimensie van definisieversameling minus nulheidsgraad).
+        Dus is die kolomruimte 'n <m>n</m>-dimensionele deelruimte van <m>\mathbb{R}^n</m>, en dus gelyk aan <m>\mathbb{R}^m</m>.
+        Dus onderspan die kolomme van <m>A</m> vir <m>\mathbb{R}^n</m> en aangesien daar <m>n</m> kolomme is, vorm hulle 'n basis.
+      </p>
+    </solution>
+    <solution>
+      <p>
+        Alternatiewelik, kon jy begin deur op te let dat as <m>A</m> inverteerbaar is, dan het enige vergelyking van die vorm <m>A\ve{x}=\ve{b}</m> die oplossing <m>\ve{x}=A^{-1}\ve{b}</m>.
+        Dus is alle <m>\ve{b}</m> in die kolomruimte, so die kolomme van <m>A</m> onderspan vir <m>\mathbb{R}^n</m>.
+        Die bewys sluit dan in dieselfde manier af as in die ander oplossing.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Bewys dat as <m>B</m> 'n inverteerbare matriks is, dan het <m>BA</m> dieselfde ryruimte en nulruimte as <m>A</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Dit volg uit <xref ref="lem_row_operations_dont_change_span"/> as ons oplet dat <m>B</m> as 'n produk van elementêre matrikse geskryf kan word en dat vermenigvuldiging met 'n elementêre matriks aan die linkerkant ooreenstem met 'n elementêre rybewerking.
       </p>
     </solution>
   </exercise>

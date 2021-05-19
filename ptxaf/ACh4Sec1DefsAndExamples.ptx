@@ -2,6 +2,15 @@
 
 <section xml:id="ACh4Sec1DefsAndExamples">
   <title>Eiewaardes</title>
+
+  <objectives>
+    <ul>
+      <li>As die matriks vir 'n lineêre operator afhang van die basis wat ons kies, is dit natuurlik dat die basis met betrekking tot een basis makliker gaan wees om mee te werk as die matriks met betrekking tot 'n ander basis. Hoe eenvoudig kan ons oor die algemeen hierdie matriks maak?</li>
+      <li>Vind 'n manier om die lys eiewaardes van 'n lineêre operator te bereken.</li>
+      <li>Wys dat hierdie metode nie afhang van die basis waarmee jy kies om te begin nie.</li>
+    </ul>
+  </objectives>
+
   <definition>
     <statement>
       <p>
@@ -108,6 +117,11 @@
     </p>
   </proof>
 
+  <example>
+    <p>
+    </p>
+  </example>
+
   <p>
     Daar is 'n eenvoudige toets om te sien wanneer 'n
     <em>matriks</em> <m>A</m> inverteerbaar
@@ -170,6 +184,11 @@
   </proof>
 </lemma>
 
+  <example>
+    <p>
+    </p>
+  </example>
+
   <p>
     Nou dat ons weet hoe om die determinant van 'n lineêre operator te
     definieer, kan ons die volgende definisie gee.
@@ -196,6 +215,11 @@
       Meer hieroor volg later.
     </p>
   </note>
+
+  <example>
+    <p>
+    </p>
+  </example>
 
   <p>
     Om op te som, sien ons dat <m>\lambda</m> 'n eiewaarde van 'n lineêre operator <m>T</m> is as en slegs as <m>\lambda</m> 'n wortel van die karakteristieke polinoom van <m>T</m> is.
@@ -340,8 +364,7 @@
   <exercise>
     <statement>
       <p>
-        Bevestig dit.
-        Met ander woorde, gaan na dat 'n
+        Bevestig  dat 'n
         <m>n \times n</m>-matriks <m>\mat{A}</m>,
         <m>[T_{\mat{A}}]_{\basis{B} \leftarrow \basis{B}} = \mat{A}</m>.
       </p>

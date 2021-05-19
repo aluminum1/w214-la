@@ -2,10 +2,13 @@
 
 <section xml:id="Ch4Sec2Eigenvectors">
   <title>Eigenvectors</title>
-  <p>
-    In the previous section we focused on eigenvalues.
-    Now we turn our focus to eigenvectors.
-  </p>
+
+  <objectives>
+    <ul>
+      <li>Calculate the eigenvectors associated to a given eigenvalue.</li>
+      <li>Calculate the eigenspace and its dimension for each eigenvalue.</li>
+    </ul>
+  </objectives>
 
   <definition>
     <statement>
