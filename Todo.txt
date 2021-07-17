@@ -12,13 +12,22 @@ HIGH PRIORITY
 - Solutions in  Ch1Sec3 and Ch1Sec4 have some that ask to check that a set is a vector space. Not really keen on them...
 - Add <warning>s for common mistakes:
   - when students check whether a list of vectors spans {(x,y,z)| x+y-z=0}, they often just check whether the basis vectors satisfy the equation. Give an example where this argument fails with one vector in a 2-dimensional space.
+  - when writing down the matrix for a linear map it is easy to fall into the habit of just "writing down coefficients". One possibility is to define a map like T(x,y,z) = (x+y-z, 2x+y-2z, y-x-z), where the x and y in the last entry are deliberately switched. In this case, simply writing down coeffients from left to right doesn't work.
+  - when computing a basis, you need to make sure that the answer contains elements from the original set.
 - Add <reading-question>s that probe understanding of proofs, e.g.:
   - For Prop 2.2.8 where we use the set {i|c_i\ne 0}, ask questions like "If (c1,c2,c3)=(0,2,0), what is that set?" and "Give an example of a set where {i|c_i\ne 0} = 1."
 - In 3.3 add example(s) and exercises of how to compute inverse of a linear map.
 - Think about the ordering of exercises in each section.
+- In 3.4, split off a bit on Linear Operators and Change of Basis? and add examples of changing basis.
+- Examples of linear maps that connect to Advanced Calculus
+   - Linear approximation of 2-var function
+   - Partial derivatives and directional derivatives
+   - The Total Derivative?
+- In the proof of Rank-Nullity Theorem, the phrases (D spans Im(T) and D linearly independent are confusing because they might seem like truths and not "need to be proved")
 
 
 MEDIUM PRIORITY
+- In 2.1, the last theorem is abstract. Add an example or reading-exercise with a small case (m=2, n=3)
 - Can the first two lemmas in 1.5 be written using more words? And many others...
 - Decide whether to move Steinitz Exchange Lemma to section on bases where it can be explained that its relevance is to show that two bases have the same size.
 - Reconsider the use of the homemade symbol \bopen \bclose. I prefer normal parentheses (). Then the convention in Ch2Sec4 line 165 needs reconsidering too.

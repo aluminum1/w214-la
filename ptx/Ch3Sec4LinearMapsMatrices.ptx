@@ -537,15 +537,15 @@
       </statement>
       <answer>
         <p>
-          <m> [T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1 \amp -4 \amp 0 \\ 4 \amp 8 \amp 8 \end{bmatrix} </m>
+          <m> [T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1 \amp -2 \amp 0 \\ 4 \amp 6 \amp 8 \end{bmatrix} </m>
         </p>
       </answer>
       <solution>
         <p>
-          Now <m>T((2,1,0)) = (5,1)</m>, <m>T((1,2,3)) = (4, -4)</m> and <m>T((3,2,1)) = (8,0)</m>.
+          Now <m>T((2,1,0)) = (5,1)</m>, <m>T((1,2,1)) = (4,-2)</m> and <m>T((3,2,1)) = (8,0)</m>.
           We need to write each of these as a linear combination of <m>(1,1)</m> and <m>(1,0)</m>.
-          We have <m>(5,1) = 1(1,1)+4(1,0)</m>, and <m>(4,-4) = -4(1,1) + 8(1,0)</m> and <m>(8,0) = 0(1,1)+8(1,0)</m>. Thus
-          <me> [T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1 \amp -4 \amp 0 \\ 4 \amp 8 \amp 8 \end{bmatrix} </me>
+          We have <m>(5,1) = 1(1,1)+4(1,0)</m>, and <m>(4,-2) = -2(1,1) + 6(1,0)</m> and <m>(8,0) = 0(1,1)+8(1,0)</m>. Thus
+          <me> [T]_{\basis{B}'\leftarrow \basis{B}} = \begin{bmatrix} 1 \amp -2 \amp 0 \\ 4 \amp 6 \amp 8 \end{bmatrix} </me>
         </p>
       </solution>
     </exercise>
@@ -702,11 +702,16 @@
   <exercise>
     <statement>
       <p>
-        Let <m>T:\Row_2\to \Row_3</m> with bases <m>(1,1),(1,-1)</m> and <m>(1,0,1), (1,-1,0), (0,1,1)</m> with associated matrix
-        <me> \begin{bmatrix} 1\amp -1\\0\amp 1\\1\amp 0 \end{bmatrix} </me>
-        Write down the value of <m>T(x,y)</m>.
+        Let <m>T:\Row_2\to \Row_3</m> with bases <m>\basis B = \bopen(1,1),(1,-1)\bclose</m> and <m>\basis B' = \bopen(1,0,1), (1,-1,0), (0,1,1)\bclose</m> with associated matrix
+        <me> [T]_{\basis B'\leftarrow \basis B} = \begin{bmatrix} 1\amp -1\\0\amp 1\\1\amp 0 \end{bmatrix} </me>.
+        Calculate the value of <m>T(x,y)</m>.
       </p>
     </statement>
+    <answer>
+      <p>
+        <m>\left(\frac{x+y}{2}, y, \frac{x+3y}{2}\right)</m>
+      </p>
+    </answer>
   <solution>
     <p>
       The given information means that
@@ -716,6 +721,29 @@
       and <m>T(0,1) = T(1,1)-T(1,0)=\left(\frac{1}{2},1,\frac{3}{2}\right)</m>
       and thus
       <me> T(x,y) = xT(1,0)+yT(0,1) = \left( \frac{x+y}{2},y,\frac{x+3y}{2} \right)</me>.
+    </p>
+  </solution>
+  <solution>
+    <p>
+      In the same way as in the first solution we get <m>T(1,1)=(1,1,2)</m> and <m>T(1,-1) = (0,-1,-1)</m>.
+      Since
+      <me> (x,y) = \frac{x+y}{2}(1,1) + \frac{x-y}{s}(1,-1) </me>,
+      we have
+      <me> [(x,y)]_{\basis B} = \begin{bmatrix}\frac{x+y}{2}\\ \frac{x-y}{2}\end{bmatrix}</me>.
+      We now apply <xref ref="lin-map-in-matrix-theorem"/> to find the coordinate vector
+      <md>
+        <mrow>
+          [T(x,y)]_{\basis B'} \amp = [T]_{\basis B'\leftarrow \basis B}[(x,y)]_{\basis B}
+        </mrow>
+        <mrow> \amp = \begin{bmatrix} 1\amp -1\\0\amp 1\\1\amp 0 \end{bmatrix}\begin{bmatrix}\frac{x+y}{2}\\ \frac{x-y}{2}\end{bmatrix}</mrow>
+        <mrow> \amp = \begin{bmatrix} y\\ \frac{x-y}{2}\\ \frac{x+y}{2}\end{bmatrix}
+        </mrow>
+      </md>.
+      Now we can compute
+      <md>
+        <mrow> T(x,y) \amp = y(1,0,1)+\frac{x-y}{2}(1,-1,0)+\frac{x+y}{2}(0,1,1)</mrow>
+        <mrow> \amp = \left(\frac{x+y}{2}, y, \frac{x+3y}{2}\right)</mrow>
+      </md>.
     </p>
   </solution>
   </exercise>

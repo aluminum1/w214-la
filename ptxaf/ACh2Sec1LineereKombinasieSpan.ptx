@@ -463,6 +463,40 @@ Ons sou ook byvoorbeeld <m>t = 1</m> kon neem. Dan sou ons oplossing
     Dus het ons <m>\ve{v}</m> as 'n lineêre kombinasie van die vektore in <m>\basis{C}</m> uitgebeeld. Dus sal <m>\basis{C}</m> vir <m>V</m> onderspan.
   </p>
 </proof>
+<!-- Vertaal, maar miskien moet dit eers "reading questions" word
+<assemblage>
+  <title>Opsomming</title>
+  <p>
+    <ul>
+      <li>
+        A linear combination of the vectors <m>\ve{v}_1,\ldots, \ve{v_n}</m> is a vector of the form
+        <me> c_1\ve{v_1}+\cdots + c_n\ve{v_n}</me>.
+      </li>
+      <li>
+        The set containing all linear combinations of a set of vectors <m>S = \{\ve{v}_1,\ldots, \ve{v}_n\}</m> is called the span of <m>S</m>.
+      </li>
+      <li>
+        The span of a set of vectors is always a vector space. In fact, this is one of the two most common ways to express a vector space.
+      </li>
+      <li>
+        If every vector in <m>V</m> is in the span of <m>S</m>, then we say that <m>S</m> spans <m>V</m>.
+      </li>
+      <li>
+        To determine whether a set <m>S</m> spans a vector space <m>V</m>, take an arbitrary vector <m>v\in V</m>, set up the equation
+        <me> v = c_1\ve{v}_1+\cdots + c_n\ve{v}_n</me>,
+        and turn this into a system of linear equations in the variables <m>c_1,\ldots, c_n</m>.
+        <ul>
+          <li>
+            If the system always has a solution, then <m>S</m> spans <m>V</m>.
+          </li>
+          <li>
+            If there is some choice of <m>v</m> for which the system does not have a solution, then <m>S</m> does not span <m>V</m>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </p>
+</assemblage> -->
 
   <exercises>
   <exercise>

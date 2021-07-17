@@ -430,7 +430,7 @@
       <p>
         Die karakteristieke polinoom van <m>A</m> is
         <me>
-          \det (\lambda I - A) = \det \cmatrix{ \lambda - 1 \amp  3 \\ \lambda + 2 \amp  2} = \lambda^2 - 3\lambda + 8.
+          \det (\lambda I - A) = \det \cmatrix{ \lambda - 1 \amp  -3 \\  2 \amp  \lambda - 2} = \lambda^2 - 3\lambda + 8.
         </me>
       </p>
 
